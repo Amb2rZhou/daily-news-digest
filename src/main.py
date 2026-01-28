@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Main script for daily news digest.
-Fetches news using Claude API and sends email.
+Fetches news using NewsAPI + Claude and sends email.
 """
 
 import os
@@ -17,8 +17,13 @@ def main():
     print()
 
     # Check required environment variables
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
+    newsapi_key = os.environ.get("NEWSAPI_KEY")
+    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
+
+    if not newsapi_key:
+        print("❌ Error: NEWSAPI_KEY not set")
+        sys.exit(1)
+    if not anthropic_key:
         print("❌ Error: ANTHROPIC_API_KEY not set")
         sys.exit(1)
 
@@ -27,7 +32,7 @@ def main():
     topic = os.environ.get("NEWS_TOPIC", "AI/科技")
     max_items = int(os.environ.get("NEWS_MAX_ITEMS", "10"))
 
-    news_data = fetch_news(api_key, topic=topic, max_items=max_items)
+    news_data = fetch_news(newsapi_key, anthropic_key, topic=topic, max_items=max_items)
 
     if news_data.get("error"):
         print(f"⚠️ Warning: {news_data['error']}")
