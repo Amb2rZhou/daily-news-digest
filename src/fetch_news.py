@@ -12,18 +12,69 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # AI/Tech RSS feeds from authoritative sources
 RSS_FEEDS = [
-    # English sources
+    # ===== AI/科技专业媒体 (英文) =====
     "https://techcrunch.com/feed/",
     "https://www.theverge.com/rss/index.xml",
     "https://feeds.arstechnica.com/arstechnica/technology-lab",
     "https://www.wired.com/feed/rss",
     "https://venturebeat.com/feed/",
-    "https://feeds.feedburner.com/TechCrunch/artificial-intelligence",
     "https://www.technologyreview.com/feed/",
-    # Chinese sources
+    "https://feeds.feedburner.com/TechCrunch/artificial-intelligence",
+    # AI 公司官方博客
+    "https://openai.com/blog/rss.xml",
+    "https://blog.google/technology/ai/rss/",
+    "https://ai.meta.com/blog/rss/",
+    "https://www.anthropic.com/rss.xml",
+    # 技术社区
+    "https://hnrss.org/frontpage",  # Hacker News
+    "https://www.reddit.com/r/MachineLearning/.rss",
+    "https://www.reddit.com/r/artificial/.rss",
+
+    # ===== 中文科技媒体 =====
     "https://36kr.com/feed",
-    "https://www.jiqizhixin.com/rss",
-    "https://www.leiphone.com/feed",
+    "https://www.jiqizhixin.com/rss",  # 机器之心
+    "https://www.leiphone.com/feed",   # 雷锋网
+    "https://www.huxiu.com/rss/0.xml", # 虎嗅
+    "https://www.tmtpost.com/feed",    # 钛媒体
+    "https://www.pingwest.com/feed",   # PingWest品玩
+    "https://www.ifanr.com/feed",      # 爱范儿
+    "https://sspai.com/feed",          # 少数派
+    "https://www.geekpark.net/rss",    # 极客公园
+
+    # ===== 国际主流媒体科技频道 =====
+    "https://feeds.reuters.com/reuters/technologyNews",
+    "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "http://rss.cnn.com/rss/cnn_tech.rss",
+    "https://www.cnbc.com/id/19854910/device/rss/rss.html",  # CNBC Tech
+    "https://feeds.bloomberg.com/technology/news.rss",
+    "https://www.ft.com/technology?format=rss",  # Financial Times Tech
+
+    # ===== B站 UP主 (通过 RSSHub) =====
+    "https://rsshub.app/bilibili/user/video/612932327",   # 老石谈芯 (硬件/芯片)
+    "https://rsshub.app/bilibili/user/video/266765166",   # 漫士沉思录 (AI/数学科普)
+    "https://rsshub.app/bilibili/user/video/517221395",   # ZOMI酱 (AI系统/框架)
+    "https://rsshub.app/bilibili/user/video/504715181",   # 王木头学科学 (深度学习)
+
+    # ===== 播客 (通过 RSSHub 或官方 RSS) =====
+    "https://rsshub.app/ximalaya/album/51487187",         # 硅谷101
+    "https://rsshub.app/ximalaya/album/29161862",         # OnBoard!
+    "https://rsshub.app/ximalaya/album/3558668",          # 42章经
+
+    # ===== 技术博客/Newsletter =====
+    "https://github.blog/feed/",                          # GitHub Blog
+    "https://a16z.com/feed/",                             # a16z (Andreessen Horowitz)
+
+    # ===== 微信公众号 =====
+    # 微信没有官方 RSS，需要使用第三方服务：
+    # - WeRSS (https://werss.app) - 付费，稳定
+    # - feeddd (https://feeddd.org) - 开源
+    # - RSSHub WeChat route (需要自建)
+    #
+    # 待添加的公众号列表（需要获取 RSS 链接后取消注释）：
+    # 新闻类：腾讯研究院、AGI Hunt、夕小瑶科技说
+    # 技术类：腾讯科技、腾讯技术工程、Web3天空之城、老刘说NLP
+    # 应用类：founder park、AI炼金术、十字路口crossing、归藏的AI工具箱、
+    #        白鲸出海、晚点LatePost、宝玉AI、海外独角兽
 ]
 
 def get_time_window(send_hour: int = 18) -> tuple[str, str]:
