@@ -64,17 +64,26 @@ RSS_FEEDS = [
     "https://github.blog/feed/",                          # GitHub Blog
     "https://a16z.com/feed/",                             # a16z (Andreessen Horowitz)
 
-    # ===== 微信公众号 =====
-    # 微信没有官方 RSS，需要使用第三方服务：
-    # - WeRSS (https://werss.app) - 付费，稳定
-    # - feeddd (https://feeddd.org) - 开源
-    # - RSSHub WeChat route (需要自建)
+    # ===== 微信公众号 (通过第三方 RSS 服务) =====
+    # -- 已找到 RSS 的公众号 --
+    "https://wechat2rss.xlab.app/feed/a1cd365aa14ed7d64cabfc8aa086da40ecaba34d.xml",  # 夕小瑶科技说
+    "https://wechat2rss.xlab.app/feed/9685937b45fe9c7a526dbc32e4f24ba879a65b9a.xml",  # 腾讯技术工程
+    "https://feed.hamibot.com/api/feeds/6131b5301269c358aa0dec25",  # 白鲸出海
+    "https://feed.hamibot.com/api/feeds/6121d8a451e2511a8279faaf",  # 晚点LatePost
+    "https://feed.hamibot.com/api/feeds/613570931269c358aa0f0cca",  # 海外独角兽
+
+    # ===== 独立博客/网站 =====
+    "https://baoyu.io/feed.xml",                                    # 宝玉AI
+    "https://www.latepost.com/rss",                                 # 晚点LatePost官网
+
+    # ===== 待添加的公众号 =====
+    # 以下公众号暂无公开 RSS，需要通过 WeWe RSS (基于微信读书) 自建获取：
+    # https://github.com/cooderl/wewe-rss
     #
-    # 待添加的公众号列表（需要获取 RSS 链接后取消注释）：
-    # 新闻类：腾讯研究院、AGI Hunt、夕小瑶科技说
-    # 技术类：腾讯科技、腾讯技术工程、Web3天空之城、老刘说NLP
-    # 应用类：founder park、AI炼金术、十字路口crossing、归藏的AI工具箱、
-    #        白鲸出海、晚点LatePost、宝玉AI、海外独角兽
+    # 腾讯研究院、AGI Hunt、腾讯科技、Web3天空之城、老刘说NLP、
+    # founder park、AI炼金术、十字路口crossing、归藏的AI工具箱
+    #
+    # 获取到 RSS 链接后，在此处添加即可。
 ]
 
 def get_time_window(send_hour: int = 18) -> tuple[str, str]:
