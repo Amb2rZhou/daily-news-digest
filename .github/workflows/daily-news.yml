@@ -11,6 +11,7 @@ on:
 jobs:
   send-news:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -20,6 +21,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
@@ -27,6 +29,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run news digest
+        id: digest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SMTP_HOST: smtp.qq.com
@@ -40,3 +43,21 @@ jobs:
         run: |
           cd src
           python main.py
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          SMTP_HOST: smtp.qq.com
+          SMTP_PORT: '587'
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+        run: |
+          cd src
+          python -c "
+          from send_email import send_email
+          send_email(
+              subject='[FAILED] Daily News Digest - ${{ github.run_id }}',
+              body='<h3>News Digest 运行失败</h3><p>Run ID: <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">${{ github.run_id }}</a></p><p>请检查 Actions 日志。</p>'
+          )
+          "
