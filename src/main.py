@@ -8,7 +8,7 @@ import os
 import sys
 from datetime import datetime
 
-from fetch_news import fetch_news, format_email_body
+from fetch_news import fetch_news, format_email_html
 from send_email import send_email
 
 def main():
@@ -33,19 +33,25 @@ def main():
     if news_data.get("error"):
         print(f"⚠️ Warning: {news_data['error']}")
 
-    news_count = len(news_data.get("news", []))
-    print(f"✅ 获取到 {news_count} 条新闻")
+    categories = news_data.get("categories", [])
+    total_news = sum(len(c.get("news", [])) for c in categories)
+    print(f"✅ 获取到 {total_news} 条新闻，分 {len(categories)} 个类别")
+
+    # Print category stats
+    if categories:
+        print()
+        print("📊 分类统计:")
+        for cat in categories:
+            icon = cat.get("icon", "📰")
+            name = cat.get("name", "")
+            count = len(cat.get("news", []))
+            print(f"   {icon} {name}: {count} 条")
     print()
 
     # Format email
-    email_body = format_email_body(news_data)
+    email_body = format_email_html(news_data)
     email_subject = f"AI/科技新闻日报 - {news_data['date']}"
-
-    # Print preview
-    print("📧 邮件预览:")
-    print("-" * 40)
-    print(email_body)
-    print("-" * 40)
+    print(f"📧 HTML 邮件已生成 ({len(email_body)} bytes)")
     print()
 
     # Send email

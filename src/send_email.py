@@ -47,7 +47,7 @@ def send_email(
     msg['From'] = formataddr((str(Header(sender_name, 'utf-8')), sender))
     msg['To'] = ', '.join(recipients)
     msg['Subject'] = Header(subject, 'utf-8')
-    msg.attach(MIMEText(body, 'plain', 'utf-8'))
+    msg.attach(MIMEText(body, 'html', 'utf-8'))
 
     try:
         server = smtplib.SMTP(smtp_host, smtp_port)
