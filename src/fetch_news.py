@@ -7,6 +7,7 @@ import anthropic
 import feedparser
 import json
 import os
+import requests
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -109,7 +110,13 @@ def parse_feed(feed_url: str, hours_ago: int = 24) -> list[dict]:
     cutoff_time = datetime.now() - timedelta(hours=hours_ago)
 
     try:
-        feed = feedparser.parse(feed_url)
+        # Use requests to fetch content first (handles SSL better than feedparser's urllib)
+        try:
+            resp = requests.get(feed_url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+            resp.raise_for_status()
+            feed = feedparser.parse(resp.content)
+        except requests.RequestException:
+            feed = feedparser.parse(feed_url)
         source_name = feed.feed.get("title", feed_url)
 
         for entry in feed.entries[:20]:  # Limit entries per feed
