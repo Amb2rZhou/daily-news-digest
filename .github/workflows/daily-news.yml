@@ -44,14 +44,14 @@ jobs:
           cd src
           python main.py
 
-      - name: Notify on failure
+      - name: Notify admin on failure
         if: failure()
         env:
           SMTP_HOST: smtp.qq.com
           SMTP_PORT: '587'
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          EMAIL_RECIPIENTS: ${{ secrets.ADMIN_EMAIL }}
         run: |
           cd src
           python -c "
