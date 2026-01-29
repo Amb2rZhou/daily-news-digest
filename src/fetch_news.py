@@ -181,6 +181,8 @@ URL: {article.get('url', '')}
 3. 按重要性排序（全球影响 > 行业影响 > 区域影响）
 4. 为每条新闻写一个简短的中文摘要（1-2句话）
 
+重要：摘要和标题中不要使用双引号，用单引号或其他标点代替。
+
 新闻列表：
 {articles_text}
 
@@ -196,7 +198,7 @@ URL: {article.get('url', '')}
   ]
 }}
 
-只返回 JSON，不要其他文字。"""
+只返回合法的 JSON，不要其他文字。确保所有字符串中的双引号用单引号替换。"""
 
     try:
         response = client.messages.create(
@@ -212,7 +214,28 @@ URL: {article.get('url', '')}
         end_idx = response_text.rfind('}') + 1
         if start_idx != -1 and end_idx > start_idx:
             json_str = response_text[start_idx:end_idx]
-            result = json.loads(json_str)
+            try:
+                result = json.loads(json_str)
+            except json.JSONDecodeError:
+                # Fix common JSON issues: unescaped quotes in values
+                import re
+                # Remove control characters
+                json_str = re.sub(r'[\x00-\x1f\x7f]', ' ', json_str)
+                # Try fixing unescaped double quotes inside string values
+                # by replacing problematic patterns
+                json_str = json_str.replace('\\"', '"')  # normalize
+                # Attempt line-by-line fix for values containing quotes
+                lines = json_str.split('\n')
+                fixed_lines = []
+                for line in lines:
+                    # Match JSON key-value pairs and escape inner quotes
+                    m = re.match(r'^(\s*"(?:title|summary|source|url)":\s*")(.*)(",?\s*)$', line)
+                    if m:
+                        value = m.group(2).replace('"', "'")
+                        line = m.group(1) + value + m.group(3)
+                    fixed_lines.append(line)
+                json_str = '\n'.join(fixed_lines)
+                result = json.loads(json_str)
             return result.get("news", [])
     except Exception as e:
         print(f"  Error: Failed to summarize news: {e}")
