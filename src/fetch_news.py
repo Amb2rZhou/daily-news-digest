@@ -76,14 +76,16 @@ RSS_FEEDS = [
     "https://baoyu.io/feed.xml",                                    # 宝玉AI
     "https://www.latepost.com/rss",                                 # 晚点LatePost官网
 
-    # ===== 待添加的公众号 =====
-    # 以下公众号暂无公开 RSS，需要通过 WeWe RSS (基于微信读书) 自建获取：
-    # https://github.com/cooderl/wewe-rss
-    #
-    # 腾讯研究院、AGI Hunt、腾讯科技、Web3天空之城、老刘说NLP、
-    # founder park、AI炼金术、十字路口crossing、归藏的AI工具箱
-    #
-    # 获取到 RSS 链接后，在此处添加即可。
+    # ===== 微信公众号 (通过 WeWe RSS 自建) =====
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_2399148061.rss",  # 腾讯研究院
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3087832081.rss",  # AGI Hunt
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_2756372660.rss",  # 腾讯科技
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3218535860.rss",  # Web3天空之城
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3012772922.rss",  # 老刘说NLP
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3895742803.rss",  # Founder Park
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3199175120.rss",  # AI炼金术
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3010319264.rss",  # 十字路口Crossing
+    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3540975510.rss",  # 歸藏的AI工具箱
 ]
 
 def get_time_window(send_hour: int = 18) -> tuple[str, str]:
