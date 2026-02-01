@@ -3,10 +3,12 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
-import Review from './pages/Review'
+import Sources from './pages/Sources'
+import Recipients from './pages/Recipients'
 import Settings from './pages/Settings'
+import History from './pages/History'
 import { getStoredAuth } from './lib/auth'
-import { configure, isConfigured, getUser } from './lib/github'
+import { configure, getUser } from './lib/github'
 
 export default function App() {
   const [authed, setAuthed] = useState(false)
@@ -48,8 +50,10 @@ export default function App() {
       <main style={{ flex: 1, padding: '24px 32px', maxWidth: 960, margin: '0 auto' }}>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/review" element={<Review />} />
+          <Route path="/sources" element={<Sources />} />
+          <Route path="/recipients" element={<Recipients />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/history" element={<History />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>

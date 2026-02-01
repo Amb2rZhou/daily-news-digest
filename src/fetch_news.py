@@ -12,83 +12,38 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# AI/Tech RSS feeds from authoritative sources
-RSS_FEEDS = [
-    # ===== AI/科技专业媒体 (英文) =====
+# Fallback RSS feeds (used when settings.json has no rss_feeds)
+DEFAULT_RSS_FEEDS = [
     "https://techcrunch.com/feed/",
     "https://www.theverge.com/rss/index.xml",
     "https://feeds.arstechnica.com/arstechnica/technology-lab",
     "https://www.wired.com/feed/rss",
     "https://venturebeat.com/feed/",
     "https://www.technologyreview.com/feed/",
-    "https://feeds.feedburner.com/TechCrunch/artificial-intelligence",
-    # AI 公司官方博客
     "https://openai.com/blog/rss.xml",
     "https://blog.google/technology/ai/rss/",
     "https://ai.meta.com/blog/rss/",
     "https://www.anthropic.com/rss.xml",
-    # 技术社区
-    "https://hnrss.org/frontpage",  # Hacker News
+    "https://hnrss.org/frontpage",
     "https://www.reddit.com/r/MachineLearning/.rss",
-    "https://www.reddit.com/r/artificial/.rss",
-
-    # ===== 中文科技媒体 =====
     "https://36kr.com/feed",
-    "https://www.jiqizhixin.com/rss",  # 机器之心
-    "https://www.leiphone.com/feed",   # 雷锋网
-    "https://www.huxiu.com/rss/0.xml", # 虎嗅
-    "https://www.tmtpost.com/feed",    # 钛媒体
-    "https://www.pingwest.com/feed",   # PingWest品玩
-    "https://www.ifanr.com/feed",      # 爱范儿
-    "https://sspai.com/feed",          # 少数派
-    "https://www.geekpark.net/rss",    # 极客公园
-
-    # ===== 国际主流媒体科技频道 =====
-    "https://feeds.reuters.com/reuters/technologyNews",
-    "https://feeds.bbci.co.uk/news/technology/rss.xml",
-    "http://rss.cnn.com/rss/cnn_tech.rss",
-    "https://www.cnbc.com/id/19854910/device/rss/rss.html",  # CNBC Tech
-    "https://feeds.bloomberg.com/technology/news.rss",
-    "https://www.ft.com/technology?format=rss",  # Financial Times Tech
-
-    # ===== B站 UP主 (通过 RSSHub) =====
-    "https://rsshub.app/bilibili/user/video/612932327",   # 老石谈芯 (硬件/芯片)
-    "https://rsshub.app/bilibili/user/video/266765166",   # 漫士沉思录 (AI/数学科普)
-    "https://rsshub.app/bilibili/user/video/517221395",   # ZOMI酱 (AI系统/框架)
-    "https://rsshub.app/bilibili/user/video/504715181",   # 王木头学科学 (深度学习)
-
-    # ===== 播客 (通过 RSSHub 或官方 RSS) =====
-    "https://rsshub.app/ximalaya/album/51487187",         # 硅谷101
-    "https://rsshub.app/ximalaya/album/29161862",         # OnBoard!
-    "https://rsshub.app/ximalaya/album/3558668",          # 42章经
-
-    # ===== 技术博客/Newsletter =====
-    "https://github.blog/feed/",                          # GitHub Blog
-    "https://a16z.com/feed/",                             # a16z (Andreessen Horowitz)
-
-    # ===== 微信公众号 (通过第三方 RSS 服务) =====
-    # -- 已找到 RSS 的公众号 --
-    "https://wechat2rss.xlab.app/feed/a1cd365aa14ed7d64cabfc8aa086da40ecaba34d.xml",  # 夕小瑶科技说
-    "https://wechat2rss.xlab.app/feed/9685937b45fe9c7a526dbc32e4f24ba879a65b9a.xml",  # 腾讯技术工程
-    "https://feed.hamibot.com/api/feeds/6131b5301269c358aa0dec25",  # 白鲸出海
-    "https://feed.hamibot.com/api/feeds/6121d8a451e2511a8279faaf",  # 晚点LatePost
-    "https://feed.hamibot.com/api/feeds/613570931269c358aa0f0cca",  # 海外独角兽
-
-    # ===== 独立博客/网站 =====
-    "https://baoyu.io/feed.xml",                                    # 宝玉AI
-    "https://www.latepost.com/rss",                                 # 晚点LatePost官网
-
-    # ===== 微信公众号 (通过 WeWe RSS 自建) =====
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_2399148061.rss",  # 腾讯研究院
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3087832081.rss",  # AGI Hunt
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_2756372660.rss",  # 腾讯科技
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3218535860.rss",  # Web3天空之城
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3012772922.rss",  # 老刘说NLP
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3895742803.rss",  # Founder Park
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3199175120.rss",  # AI炼金术
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3010319264.rss",  # 十字路口Crossing
-    "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3540975510.rss",  # 歸藏的AI工具箱
+    "https://www.jiqizhixin.com/rss",
+    "https://www.huxiu.com/rss/0.xml",
+    "https://www.tmtpost.com/feed",
+    "https://www.pingwest.com/feed",
+    "https://www.geekpark.net/rss",
+    "https://github.blog/feed/",
+    "https://a16z.com/feed/",
 ]
+
+def get_rss_feeds(settings: dict = None) -> list[str]:
+    """Get RSS feed URLs from settings (enabled only), with fallback to defaults."""
+    if settings is None:
+        settings = load_settings()
+    rss_feeds = settings.get("rss_feeds", [])
+    if rss_feeds:
+        return [f["url"] for f in rss_feeds if f.get("enabled", True)]
+    return DEFAULT_RSS_FEEDS
 
 # Default config path (relative to project root)
 CONFIG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "settings.json")
@@ -222,12 +177,14 @@ def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
 
     return articles
 
-def fetch_raw_news(cutoff: datetime = None) -> list[dict]:
+def fetch_raw_news(cutoff: datetime = None, settings: dict = None) -> list[dict]:
     """Fetch raw news from multiple RSS feeds in parallel."""
     all_articles = []
+    feed_urls = get_rss_feeds(settings)
+    print(f"  - Using {len(feed_urls)} RSS feeds")
 
     with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = {executor.submit(parse_feed, url, cutoff): url for url in RSS_FEEDS}
+        futures = {executor.submit(parse_feed, url, cutoff): url for url in feed_urls}
 
         for future in as_completed(futures):
             try:
@@ -355,7 +312,7 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
     cutoff = get_cutoff_time(settings)
 
     print("  - Fetching news from RSS feeds...")
-    raw_articles = fetch_raw_news(cutoff=cutoff)
+    raw_articles = fetch_raw_news(cutoff=cutoff, settings=settings)
     print(f"  - Got {len(raw_articles)} raw articles")
 
     if not raw_articles:

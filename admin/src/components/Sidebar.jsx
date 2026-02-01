@@ -1,11 +1,14 @@
 import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { clearAuth } from '../lib/auth'
+import { getStoredAuth } from '../lib/auth'
 
 const navItems = [
   { to: '/', label: '仪表盘', icon: '📊' },
-  { to: '/review', label: '新闻审核', icon: '📰' },
+  { to: '/sources', label: '新闻源管理', icon: '📡' },
+  { to: '/recipients', label: '收件人管理', icon: '📬' },
   { to: '/settings', label: '设置', icon: '⚙️' },
+  { to: '/history', label: '发送历史', icon: '📋' },
 ]
 
 const linkStyle = (isActive) => ({
@@ -23,11 +26,16 @@ const linkStyle = (isActive) => ({
 
 export default function Sidebar({ user }) {
   const navigate = useNavigate()
+  const stored = getStoredAuth()
 
   const logout = () => {
     clearAuth()
     window.location.reload()
   }
+
+  const wikiUrl = stored.owner && stored.repo
+    ? `https://github.com/${stored.owner}/${stored.repo}/wiki`
+    : 'https://github.com'
 
   return (
     <aside style={{
@@ -44,7 +52,7 @@ export default function Sidebar({ user }) {
 
       <nav style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 4 }}>
         {navItems.map((item) => (
-          <NavLink key={item.to} to={item.to} end style={({ isActive }) => linkStyle(isActive)}>
+          <NavLink key={item.to} to={item.to} end={item.to === '/'} style={({ isActive }) => linkStyle(isActive)}>
             <span>{item.icon}</span>
             <span>{item.label}</span>
           </NavLink>
@@ -52,7 +60,7 @@ export default function Sidebar({ user }) {
 
         <div style={{ marginTop: 12, padding: '0 16px' }}>
           <a
-            href="https://github.com"
+            href={wikiUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'var(--text2)', fontSize: 14, padding: '8px 0' }}

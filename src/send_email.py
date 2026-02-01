@@ -4,11 +4,26 @@ Send news digest email via SMTP.
 """
 
 import smtplib
+import json
 import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
 from email.utils import formataddr
+
+# Default config path (relative to project root)
+CONFIG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "settings.json")
+
+def _load_recipients_from_config() -> list[str]:
+    """Load enabled recipients from config/settings.json."""
+    config_path = os.environ.get("SETTINGS_PATH", CONFIG_PATH)
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            settings = json.load(f)
+        recipients = settings.get("recipients", [])
+        return [r["email"] for r in recipients if r.get("enabled", True) and r.get("email")]
+    except (FileNotFoundError, json.JSONDecodeError, KeyError):
+        return []
 
 def send_email(
     subject: str,
@@ -29,8 +44,12 @@ def send_email(
     username = username or os.environ.get("SMTP_USERNAME")
     password = password or os.environ.get("SMTP_PASSWORD")
     sender = sender or os.environ.get("SMTP_SENDER") or username
-    recipients_str = os.environ.get("EMAIL_RECIPIENTS", "")
-    recipients = recipients or [r.strip() for r in recipients_str.split(",") if r.strip()]
+    # Recipients priority: param > config file > env var
+    if not recipients:
+        recipients = _load_recipients_from_config()
+    if not recipients:
+        recipients_str = os.environ.get("EMAIL_RECIPIENTS", "")
+        recipients = [r.strip() for r in recipients_str.split(",") if r.strip()]
 
     if not all([smtp_host, smtp_port, username, password, sender, recipients]):
         print("Error: Missing required email configuration")

@@ -7,15 +7,12 @@ const card = {
   marginBottom: 20,
 }
 
-const CATEGORY_OPTIONS = ['产品发布', '巨头动向', '技术进展', '行业观察', '投融资']
-
 export default function Settings() {
   const [settings, setSettings] = useState(null)
   const [sha, setSha] = useState(null)
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
 
-  // Temp fields for list inputs
   const [newBlacklistKw, setNewBlacklistKw] = useState('')
   const [newBlacklistSrc, setNewBlacklistSrc] = useState('')
   const [newWhitelistKw, setNewWhitelistKw] = useState('')
@@ -91,7 +88,7 @@ export default function Settings() {
       setSha(result.content.sha)
 
       // Also update workflow cron if send_hour changed
-      const utcHour = (settings.send_hour - 8 + 24) % 24 // Asia/Shanghai = UTC+8
+      const utcHour = (settings.send_hour - 8 + 24) % 24
       const newCron = `0 ${utcHour} * * *`
       try {
         await updateWorkflowCron(newCron)
@@ -208,7 +205,6 @@ export default function Settings() {
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>过滤规则</h2>
 
-        {/* Blacklist keywords */}
         <FilterList
           label="黑名单关键词"
           items={settings.filters?.blacklist_keywords || []}
@@ -218,7 +214,6 @@ export default function Settings() {
           onRemove={(idx) => removeFromList('blacklist_keywords', idx)}
         />
 
-        {/* Blacklist sources */}
         <FilterList
           label="黑名单来源"
           items={settings.filters?.blacklist_sources || []}
@@ -228,7 +223,6 @@ export default function Settings() {
           onRemove={(idx) => removeFromList('blacklist_sources', idx)}
         />
 
-        {/* Whitelist keywords */}
         <FilterList
           label="白名单关键词"
           items={settings.filters?.whitelist_keywords || []}
@@ -238,7 +232,6 @@ export default function Settings() {
           onRemove={(idx) => removeFromList('whitelist_keywords', idx)}
         />
 
-        {/* Whitelist sources */}
         <FilterList
           label="白名单来源"
           items={settings.filters?.whitelist_sources || []}

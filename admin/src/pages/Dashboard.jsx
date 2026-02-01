@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { readFile, listFiles, triggerWorkflow, getWorkflowRuns } from '../lib/github'
+import { readFile, listFiles, getWorkflowRuns } from '../lib/github'
 
 const card = {
   background: 'var(--card)', borderRadius: 'var(--radius)',
@@ -7,29 +7,29 @@ const card = {
 }
 
 export default function Dashboard() {
-  const [draft, setDraft] = useState(null)
+  const [settings, setSettings] = useState(null)
   const [runs, setRuns] = useState([])
   const [recentDrafts, setRecentDrafts] = useState([])
   const [loading, setLoading] = useState(true)
-  const [triggering, setTriggering] = useState(null)
 
   useEffect(() => { load() }, [])
 
   async function load() {
     setLoading(true)
     try {
-      // Load today's draft
-      const today = new Date().toLocaleDateString('sv-SE') // YYYY-MM-DD
-      const todayFile = await readFile(`config/drafts/${today}.json`)
-      if (todayFile) setDraft(JSON.parse(todayFile.content))
+      // Load settings
+      const settingsFile = await readFile('config/settings.json')
+      if (settingsFile) setSettings(JSON.parse(settingsFile.content))
 
       // Load recent drafts list
-      const files = await listFiles('config/drafts')
-      const sorted = files
-        .filter(f => f.name.endsWith('.json'))
-        .sort((a, b) => b.name.localeCompare(a.name))
-        .slice(0, 7)
-      setRecentDrafts(sorted)
+      try {
+        const files = await listFiles('config/drafts')
+        const sorted = files
+          .filter(f => f.name.endsWith('.json'))
+          .sort((a, b) => b.name.localeCompare(a.name))
+          .slice(0, 7)
+        setRecentDrafts(sorted)
+      } catch { /* drafts dir may not exist */ }
 
       // Load workflow runs
       try {
@@ -46,26 +46,6 @@ export default function Dashboard() {
     setLoading(false)
   }
 
-  async function trigger(workflow) {
-    setTriggering(workflow)
-    try {
-      await triggerWorkflow(workflow)
-      alert('Workflow 已触发')
-    } catch (e) {
-      alert('触发失败: ' + e.message)
-    }
-    setTriggering(null)
-  }
-
-  const statusBadge = (status) => {
-    const map = {
-      pending_review: { bg: '#fef3c7', color: '#d97706', label: '待审核' },
-      sent: { bg: '#d1fae5', color: '#059669', label: '已发送' },
-    }
-    const s = map[status] || { bg: '#f3f4f6', color: '#6b7280', label: status || '未知' }
-    return <span style={{ background: s.bg, color: s.color, padding: '2px 10px', borderRadius: 12, fontSize: 12, fontWeight: 500 }}>{s.label}</span>
-  }
-
   const runStatusBadge = (status, conclusion) => {
     if (status === 'completed') {
       if (conclusion === 'success') return <span style={{ color: 'var(--success)', fontSize: 12 }}>成功</span>
@@ -76,51 +56,97 @@ export default function Dashboard() {
 
   if (loading) return <p style={{ color: 'var(--text2)' }}>加载中...</p>
 
-  const totalNews = draft ? (draft.categories || []).reduce((n, c) => n + (c.news || []).length, 0) : 0
+  const feeds = settings?.rss_feeds || []
+  const enabledFeeds = feeds.filter(f => f.enabled)
+  const recipients = settings?.recipients || []
+  const enabledRecipients = recipients.filter(r => r.enabled)
 
   return (
     <div>
       <h1 style={{ fontSize: 22, marginBottom: 24 }}>仪表盘</h1>
 
-      {/* Stats row */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 16, marginBottom: 24 }}>
+      {/* Config summary cards */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16, marginBottom: 24 }}>
         <div style={card}>
-          <div style={{ fontSize: 13, color: 'var(--text2)' }}>今日新闻</div>
-          <div style={{ fontSize: 28, fontWeight: 700 }}>{totalNews}</div>
+          <div style={{ fontSize: 13, color: 'var(--text2)' }}>发送时间</div>
+          <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
+            {String(settings?.send_hour ?? 18).padStart(2, '0')}:00
+          </div>
+          <div style={{ fontSize: 12, color: 'var(--text3)' }}>{settings?.timezone || 'Asia/Shanghai'}</div>
         </div>
         <div style={card}>
-          <div style={{ fontSize: 13, color: 'var(--text2)' }}>今日状态</div>
-          <div style={{ marginTop: 8 }}>{draft ? statusBadge(draft.status) : <span style={{ color: 'var(--text3)' }}>无草稿</span>}</div>
+          <div style={{ fontSize: 13, color: 'var(--text2)' }}>新闻条数</div>
+          <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>{settings?.max_news_items ?? 10}</div>
+          <div style={{ fontSize: 12, color: 'var(--text3)' }}>每日最大</div>
         </div>
         <div style={card}>
-          <div style={{ fontSize: 13, color: 'var(--text2)' }}>近 7 天</div>
-          <div style={{ fontSize: 28, fontWeight: 700 }}>{recentDrafts.length}</div>
+          <div style={{ fontSize: 13, color: 'var(--text2)' }}>新闻源</div>
+          <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
+            {enabledFeeds.length}<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text3)' }}>/{feeds.length}</span>
+          </div>
+          <div style={{ fontSize: 12, color: 'var(--text3)' }}>启用/总数</div>
+        </div>
+        <div style={card}>
+          <div style={{ fontSize: 13, color: 'var(--text2)' }}>收件人</div>
+          <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
+            {enabledRecipients.length}<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text3)' }}>/{recipients.length}</span>
+          </div>
+          <div style={{ fontSize: 12, color: 'var(--text3)' }}>启用/总数</div>
         </div>
       </div>
 
-      {/* Quick actions */}
+      {/* Source health overview */}
       <div style={{ ...card, marginBottom: 24 }}>
-        <h2 style={{ fontSize: 16, marginBottom: 12 }}>快捷操作</h2>
-        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <button
-            onClick={() => trigger('fetch-news.yml')}
-            disabled={!!triggering}
-            style={{ padding: '8px 20px', background: 'var(--primary)', color: '#fff', border: 'none', borderRadius: 6, fontWeight: 500 }}
-          >
-            {triggering === 'fetch-news.yml' ? '触发中...' : '手动抓取新闻'}
-          </button>
-          <button
-            onClick={() => trigger('send-email.yml')}
-            disabled={!!triggering}
-            style={{ padding: '8px 20px', background: 'var(--success)', color: '#fff', border: 'none', borderRadius: 6, fontWeight: 500 }}
-          >
-            {triggering === 'send-email.yml' ? '触发中...' : '立即发送邮件'}
-          </button>
-        </div>
+        <h2 style={{ fontSize: 16, marginBottom: 12 }}>源健康概览</h2>
+        {feeds.length === 0 ? (
+          <p style={{ color: 'var(--text3)', fontSize: 14 }}>暂未配置新闻源</p>
+        ) : (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            {(() => {
+              const groups = {}
+              feeds.forEach(f => {
+                const g = f.group || '未分组'
+                if (!groups[g]) groups[g] = { total: 0, enabled: 0 }
+                groups[g].total++
+                if (f.enabled) groups[g].enabled++
+              })
+              return Object.entries(groups).map(([group, stats]) => (
+                <div key={group} style={{
+                  padding: '8px 14px', borderRadius: 8, border: '1px solid var(--border)',
+                  background: stats.enabled === stats.total ? '#f0fdf4' : stats.enabled === 0 ? '#fef2f2' : '#fffbeb',
+                  fontSize: 13,
+                }}>
+                  <span style={{ fontWeight: 500 }}>{group}</span>
+                  <span style={{ color: 'var(--text2)', marginLeft: 8 }}>{stats.enabled}/{stats.total}</span>
+                </div>
+              ))
+            })()}
+          </div>
+        )}
       </div>
 
-      {/* Recent runs */}
-      <div style={{ ...card }}>
+      {/* Recent send records */}
+      <div style={{ ...card, marginBottom: 24 }}>
+        <h2 style={{ fontSize: 16, marginBottom: 12 }}>最近发送记录</h2>
+        {recentDrafts.length === 0 ? (
+          <p style={{ color: 'var(--text3)', fontSize: 14 }}>暂无草稿记录</p>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            {recentDrafts.map(f => (
+              <div key={f.name} style={{
+                display: 'flex', alignItems: 'center', gap: 12,
+                padding: '8px 12px', background: '#f9fafb', borderRadius: 6,
+                border: '1px solid var(--border)', fontSize: 13,
+              }}>
+                <span style={{ fontWeight: 500 }}>{f.name.replace('.json', '')}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Recent workflow runs */}
+      <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 12 }}>最近运行记录</h2>
         {runs.length === 0 ? (
           <p style={{ color: 'var(--text3)', fontSize: 14 }}>暂无运行记录</p>
