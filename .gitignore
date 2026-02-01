@@ -15,6 +15,10 @@ ENV/
 # Config with secrets
 config/email_config.json
 
+# Admin UI
+admin/node_modules/
+admin/dist/
+
 # OS
 .DS_Store
 Thumbs.db

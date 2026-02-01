@@ -8,7 +8,8 @@ import feedparser
 import json
 import os
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # AI/Tech RSS feeds from authoritative sources
@@ -89,25 +90,103 @@ RSS_FEEDS = [
     "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3540975510.rss",  # 歸藏的AI工具箱
 ]
 
-def get_time_window(send_hour: int = 18) -> tuple[str, str]:
-    """Calculate the news time window based on send time."""
-    now = datetime.now()
-    end_time = now.replace(hour=send_hour, minute=0, second=0, microsecond=0)
+# Default config path (relative to project root)
+CONFIG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "settings.json")
 
-    if now.hour < send_hour:
-        end_time = end_time - timedelta(days=1)
+def load_settings() -> dict:
+    """Load settings from config/settings.json."""
+    defaults = {
+        "send_hour": 18,
+        "timezone": "Asia/Shanghai",
+        "max_news_items": 10,
+        "news_topic": "AI",
+        "categories_order": ["产品发布", "巨头动向", "技术进展", "行业观察", "投融资"],
+        "filters": {
+            "blacklist_keywords": [],
+            "blacklist_sources": [],
+            "whitelist_keywords": [],
+            "whitelist_sources": []
+        }
+    }
+    config_path = os.environ.get("SETTINGS_PATH", CONFIG_PATH)
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            settings = json.load(f)
+        # Merge with defaults for any missing keys
+        for k, v in defaults.items():
+            settings.setdefault(k, v)
+        return settings
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"  Warning: Could not load settings from {config_path}: {e}")
+        return defaults
+
+CATEGORY_ICONS = {
+    "产品发布": "🚀",
+    "巨头动向": "🏢",
+    "技术进展": "🔬",
+    "行业观察": "📊",
+    "投融资": "💰",
+}
+
+def get_categories(settings: dict = None) -> list[dict]:
+    """Get ordered category list from settings."""
+    if settings is None:
+        settings = load_settings()
+    order = settings.get("categories_order", list(CATEGORY_ICONS.keys()))
+    return [{"name": name, "icon": CATEGORY_ICONS.get(name, "📰")} for name in order if name in CATEGORY_ICONS]
+
+def get_time_window(settings: dict = None) -> tuple[str, str]:
+    """Calculate the news time window based on send time in configured timezone.
+
+    Returns the window: yesterday send_hour:00:00 ~ today send_hour:00:00 - 1 second,
+    in the configured timezone (default Asia/Shanghai).
+    """
+    if settings is None:
+        settings = load_settings()
+    send_hour = settings.get("send_hour", 18)
+    tz_name = settings.get("timezone", "Asia/Shanghai")
+    tz = ZoneInfo(tz_name)
+
+    now = datetime.now(tz)
+    # Today's send time in the configured timezone
+    today_send = now.replace(hour=send_hour, minute=0, second=0, microsecond=0)
+
+    # If we haven't reached send time yet, the window ends at yesterday's send time
+    if now < today_send:
+        end_time = today_send - timedelta(days=1)
+    else:
+        end_time = today_send
 
     start_time = end_time - timedelta(days=1)
 
     return (
         start_time.strftime("%Y-%m-%d %H:%M"),
-        (end_time - timedelta(minutes=1)).strftime("%Y-%m-%d %H:%M")
+        (end_time - timedelta(seconds=1)).strftime("%Y-%m-%d %H:%M")
     )
 
-def parse_feed(feed_url: str, hours_ago: int = 24) -> list[dict]:
+def get_cutoff_time(settings: dict = None) -> datetime:
+    """Get the cutoff time for filtering articles, timezone-aware."""
+    if settings is None:
+        settings = load_settings()
+    tz_name = settings.get("timezone", "Asia/Shanghai")
+    tz = ZoneInfo(tz_name)
+    send_hour = settings.get("send_hour", 18)
+
+    now = datetime.now(tz)
+    today_send = now.replace(hour=send_hour, minute=0, second=0, microsecond=0)
+
+    if now < today_send:
+        # Window starts from 2 days ago at send_hour
+        return (today_send - timedelta(days=2)).replace(tzinfo=None)
+    else:
+        # Window starts from yesterday at send_hour
+        return (today_send - timedelta(days=1)).replace(tzinfo=None)
+
+def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
     """Parse a single RSS feed and return recent articles."""
     articles = []
-    cutoff_time = datetime.now() - timedelta(hours=hours_ago)
+    if cutoff is None:
+        cutoff = datetime.now() - timedelta(hours=24)
 
     try:
         # Use requests to fetch content first (handles SSL better than feedparser's urllib)
@@ -128,7 +207,7 @@ def parse_feed(feed_url: str, hours_ago: int = 24) -> list[dict]:
                 published = datetime(*entry.updated_parsed[:6])
 
             # Skip if too old or no date
-            if published and published < cutoff_time:
+            if published and published < cutoff:
                 continue
 
             articles.append({
@@ -143,12 +222,12 @@ def parse_feed(feed_url: str, hours_ago: int = 24) -> list[dict]:
 
     return articles
 
-def fetch_raw_news(hours_ago: int = 24) -> list[dict]:
+def fetch_raw_news(cutoff: datetime = None) -> list[dict]:
     """Fetch raw news from multiple RSS feeds in parallel."""
     all_articles = []
 
     with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = {executor.submit(parse_feed, url, hours_ago): url for url in RSS_FEEDS}
+        futures = {executor.submit(parse_feed, url, cutoff): url for url in RSS_FEEDS}
 
         for future in as_completed(futures):
             try:
@@ -162,21 +241,16 @@ def fetch_raw_news(hours_ago: int = 24) -> list[dict]:
 
     return all_articles
 
-CATEGORIES = [
-    {"name": "技术进展", "icon": "🔬"},
-    {"name": "产品发布", "icon": "🚀"},
-    {"name": "投融资", "icon": "💰"},
-    {"name": "巨头动向", "icon": "🏢"},
-    {"name": "行业观察", "icon": "📊"},
-    {"name": "开源与开发者", "icon": "👨‍💻"},
-]
-
-def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_items: int = 10) -> list[dict]:
+def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_items: int = 10, settings: dict = None) -> list[dict]:
     """Use Claude to summarize, categorize, and select top news."""
 
     if not articles:
         return []
 
+    if settings is None:
+        settings = load_settings()
+
+    categories = get_categories(settings)
     client = anthropic.Anthropic(api_key=anthropic_key)
 
     # Prepare articles for Claude
@@ -192,15 +266,17 @@ Description: {article.get('description', '')}
 URL: {article.get('url', '')}
 """
 
-    category_names = "、".join(c["name"] for c in CATEGORIES)
+    category_names = "、".join(c["name"] for c in categories)
     category_json_example = json.dumps(
-        [{"name": c["name"], "icon": c["icon"], "news": [{"title": "...", "summary": "...", "source": "...", "url": "..."}]} for c in CATEGORIES[:2]],
+        [{"name": c["name"], "icon": c["icon"], "news": [{"title": "...", "summary": "...", "source": "...", "url": "..."}]} for c in categories[:2]],
         ensure_ascii=False, indent=4
     )
 
+    icon_mapping = " ".join(f'{c["name"]}:{c["icon"]}' for c in categories)
+
     prompt = f"""以下是最近24小时内从多个来源抓取的新闻列表。请帮我：
 
-1. **严格筛选**：只保留与 AI（人工智能）直接相关的新闻（最多 {max_items} 条）
+1. **严格筛选**：只保留与 AI（人工智能）直接相关的新闻
    - 必须包含的：AI 模型发布/更新、AI 公司动态、AI 融资、AI 产品、AI 政策法规、AI 应用落地、大模型、机器学习、深度学习、AIGC、AGI、机器人、自动驾驶等
    - 必须排除的：与 AI 无关的普通科技新闻（如手机发布、游戏、电商促销、社交媒体八卦、纯硬件评测等）
    - 边界情况：如果一条新闻主要讲某科技公司但核心内容与 AI 无关，应排除
@@ -211,7 +287,8 @@ URL: {article.get('url', '')}
    - 每条新闻只归入一个最匹配的类别
    - 没有对应新闻的类别不要输出
 
-重要：摘要和标题中不要使用双引号，用单引号或其他标点代替。
+**重要**：总共最多选 {max_items} 条最值得看的新闻（不是每个分类 {max_items} 条），在这些新闻中归类排列。
+摘要和标题中不要使用双引号，用单引号或其他标点代替。
 
 新闻列表：
 {articles_text}
@@ -223,7 +300,7 @@ URL: {article.get('url', '')}
 
 注意：
 - 只返回有新闻的类别
-- icon 必须与类别对应（技术进展:🔬 产品发布:🚀 投融资:💰 巨头动向:🏢 行业观察:📊 开源与开发者:👨‍💻）
+- icon 必须与类别对应（{icon_mapping}）
 - 只返回合法的 JSON，不要其他文字
 - 确保所有字符串中的双引号用单引号替换"""
 
@@ -265,14 +342,20 @@ URL: {article.get('url', '')}
 
     return []
 
-def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10) -> dict:
+def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None) -> dict:
     """Fetch and process news."""
 
-    today = datetime.now().strftime("%Y-%m-%d")
-    start_time, end_time = get_time_window(18)
+    if settings is None:
+        settings = load_settings()
+
+    tz_name = settings.get("timezone", "Asia/Shanghai")
+    tz = ZoneInfo(tz_name)
+    today = datetime.now(tz).strftime("%Y-%m-%d")
+    start_time, end_time = get_time_window(settings)
+    cutoff = get_cutoff_time(settings)
 
     print("  - Fetching news from RSS feeds...")
-    raw_articles = fetch_raw_news(hours_ago=24)
+    raw_articles = fetch_raw_news(cutoff=cutoff)
     print(f"  - Got {len(raw_articles)} raw articles")
 
     if not raw_articles:
@@ -284,7 +367,7 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
         }
 
     print("  - Summarizing with Claude...")
-    categories = summarize_news_with_claude(anthropic_key, raw_articles, max_items)
+    categories = summarize_news_with_claude(anthropic_key, raw_articles, max_items, settings)
     total = sum(len(c.get("news", [])) for c in categories)
     print(f"  - Selected {total} top news in {len(categories)} categories")
 
@@ -294,30 +377,83 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
         "categories": categories
     }
 
-def format_email_html(news_data: dict) -> str:
-    """Format news data into a beautiful HTML email."""
+def save_draft(news_data: dict, settings: dict = None) -> str:
+    """Save news data as a draft JSON file. Returns the draft file path."""
+    if settings is None:
+        settings = load_settings()
+
+    date = news_data.get("date", datetime.now().strftime("%Y-%m-%d"))
+    drafts_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "drafts")
+    os.makedirs(drafts_dir, exist_ok=True)
+
+    draft_path = os.path.join(drafts_dir, f"{date}.json")
+    draft_data = {
+        **news_data,
+        "status": "pending_review",
+        "created_at": datetime.now(ZoneInfo(settings.get("timezone", "Asia/Shanghai"))).isoformat(),
+    }
+
+    with open(draft_path, "w", encoding="utf-8") as f:
+        json.dump(draft_data, f, ensure_ascii=False, indent=2)
+
+    print(f"  - Draft saved to {draft_path}")
+    return draft_path
+
+def load_draft(date: str = None) -> dict | None:
+    """Load a draft by date. If no date given, use today."""
+    if date is None:
+        settings = load_settings()
+        tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
+        date = datetime.now(tz).strftime("%Y-%m-%d")
+
+    drafts_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "drafts")
+    draft_path = os.path.join(drafts_dir, f"{date}.json")
+
+    try:
+        with open(draft_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+
+def format_email_html(news_data: dict, settings: dict = None) -> str:
+    """Format news data into a beautiful HTML email.
+
+    Categories are rendered in the fixed order from settings.
+    """
+    if settings is None:
+        settings = load_settings()
+
     date = news_data.get("date", "")
     time_window = news_data.get("time_window", "")
-    categories = news_data.get("categories", [])
+    raw_categories = news_data.get("categories", [])
+
+    # Build a lookup from category name to category data
+    cat_lookup = {cat.get("name"): cat for cat in raw_categories}
+
+    # Render in the fixed order from settings
+    ordered_names = settings.get("categories_order", list(CATEGORY_ICONS.keys()))
 
     # Build category sections
     sections_html = ""
-    if not categories:
-        sections_html = '<tr><td style="padding:20px 30px;color:#666;font-size:16px;">今日暂无重要新闻。</td></tr>'
-    else:
-        for cat in categories:
-            icon = cat.get("icon", "📰")
-            name = cat.get("name", "")
-            news_items = cat.get("news", [])
+    has_news = False
+    for cat_name in ordered_names:
+        cat = cat_lookup.get(cat_name)
+        if not cat:
+            continue
+        news_items = cat.get("news", [])
+        if not news_items:
+            continue
+        has_news = True
+        icon = CATEGORY_ICONS.get(cat_name, cat.get("icon", "📰"))
 
-            cards_html = ""
-            for item in news_items:
-                title = item.get("title", "")
-                summary = item.get("summary", "")
-                source = item.get("source", "")
-                url = item.get("url", "#")
+        cards_html = ""
+        for item in news_items:
+            title = item.get("title", "")
+            summary = item.get("summary", "")
+            source = item.get("source", "")
+            url = item.get("url", "#")
 
-                cards_html += f'''<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
+            cards_html += f'''<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
 <tr><td style="background:#ffffff;border-radius:8px;border:1px solid #e8e8e8;padding:16px 20px;">
   <a href="{url}" style="color:#1a1a2e;text-decoration:none;font-size:15px;font-weight:600;line-height:1.4;display:block;" target="_blank">{title}</a>
   <p style="color:#555;font-size:14px;line-height:1.6;margin:8px 0 10px 0;">{summary}</p>
@@ -325,10 +461,13 @@ def format_email_html(news_data: dict) -> str:
 </td></tr>
 </table>'''
 
-            sections_html += f'''<tr><td style="padding:24px 30px 8px 30px;">
-  <h2 style="margin:0 0 16px 0;font-size:18px;color:#1a1a2e;font-weight:700;">{icon} {name}</h2>
+        sections_html += f'''<tr><td style="padding:24px 30px 8px 30px;">
+  <h2 style="margin:0 0 16px 0;font-size:18px;color:#1a1a2e;font-weight:700;">{icon} {cat_name}</h2>
   {cards_html}
 </td></tr>'''
+
+    if not has_news:
+        sections_html = '<tr><td style="padding:20px 30px;color:#666;font-size:16px;">今日暂无重要新闻。</td></tr>'
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">

@@ -1,0 +1,13 @@
+{
+  "send_hour": 18,
+  "timezone": "Asia/Shanghai",
+  "max_news_items": 10,
+  "news_topic": "AI",
+  "categories_order": ["产品发布", "巨头动向", "技术进展", "行业观察", "投融资"],
+  "filters": {
+    "blacklist_keywords": [],
+    "blacklist_sources": [],
+    "whitelist_keywords": [],
+    "whitelist_sources": []
+  }
+}
