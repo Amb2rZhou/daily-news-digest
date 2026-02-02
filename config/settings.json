@@ -1,6 +1,6 @@
 {
-  "send_hour": 18,
-  "send_minute": 0,
+  "send_hour": 10,
+  "send_minute": 41,
   "timezone": "Asia/Shanghai",
   "max_news_items": 10,
   "categories_order": [
