@@ -38,18 +38,20 @@ export default function Sources() {
     setLoading(false)
   }
 
-  async function save(updatedSettings) {
+  async function save(updatedSettings, { silent = false, message = 'Update RSS feeds via admin UI' } = {}) {
     setSaving(true)
     try {
       const content = JSON.stringify(updatedSettings, null, 2) + '\n'
-      const result = await writeFile('config/settings.json', content, 'Update RSS feeds via admin UI', sha)
+      const result = await writeFile('config/settings.json', content, message, sha)
       setSha(result.content.sha)
       setSettings(updatedSettings)
-      alert('已保存')
+      if (!silent) alert('已保存')
     } catch (e) {
       alert('保存失败: ' + e.message)
+      throw e
+    } finally {
+      setSaving(false)
     }
-    setSaving(false)
   }
 
   function toggleFeed(idx) {
@@ -141,12 +143,13 @@ export default function Sources() {
       updated.rss_feeds = currentFeeds.filter(f => !removedUrls.has(f.url))
       // Add new feeds
       updated.rss_feeds = [...updated.rss_feeds, ...newFeeds]
-      setSettings(updated)
 
+      // Auto-save to GitHub
       const parts = []
       if (newFeeds.length > 0) parts.push(`新增 ${newFeeds.length} 个源`)
       if (removedUrls.size > 0) parts.push(`移除 ${removedUrls.size} 个源`)
-      alert(`同步完成：${parts.join('，')}。请点击「保存更改」提交。`)
+      await save(updated, { silent: true, message: `Sync WeWe RSS: ${parts.join(', ')}` })
+      alert(`同步完成：${parts.join('，')}，已自动保存。`)
     } catch (e) {
       alert('同步失败: ' + e.message)
     }
