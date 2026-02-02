@@ -6,11 +6,14 @@ const card = {
   border: '1px solid var(--border)', padding: 20, boxShadow: 'var(--shadow)',
 }
 
+const WEWE_RSS_BASE = 'https://amb2rzhou.zeabur.app'
+
 export default function Dashboard() {
   const [settings, setSettings] = useState(null)
   const [runs, setRuns] = useState([])
   const [recentDrafts, setRecentDrafts] = useState([])
   const [loading, setLoading] = useState(true)
+  const [weweStatus, setWeweStatus] = useState(null) // { ok, lastSync, feedCount }
 
   useEffect(() => { load() }, [])
 
@@ -30,6 +33,24 @@ export default function Dashboard() {
           .slice(0, 7)
         setRecentDrafts(sorted)
       } catch { /* drafts dir may not exist */ }
+
+      // Check WeWe RSS login status
+      try {
+        const res = await fetch(`${WEWE_RSS_BASE}/feeds`)
+        if (res.ok) {
+          const feeds = await res.json()
+          if (feeds.length > 0) {
+            const latestSync = Math.max(...feeds.map(f => f.syncTime || 0))
+            const hoursSince = (Date.now() / 1000 - latestSync) / 3600
+            setWeweStatus({
+              ok: hoursSince < 12,
+              lastSync: latestSync > 0 ? new Date(latestSync * 1000) : null,
+              feedCount: feeds.length,
+              hoursSince: Math.round(hoursSince),
+            })
+          }
+        }
+      } catch { /* WeWe RSS may be unreachable */ }
 
       // Load workflow runs
       try {
@@ -65,12 +86,53 @@ export default function Dashboard() {
     <div>
       <h1 style={{ fontSize: 22, marginBottom: 24 }}>仪表盘</h1>
 
+      {/* WeWe RSS login status alert */}
+      {weweStatus && !weweStatus.ok && (
+        <div style={{
+          padding: '12px 16px', marginBottom: 16, borderRadius: 8,
+          background: '#fef2f2', border: '1px solid #fecaca',
+          display: 'flex', alignItems: 'center', gap: 12,
+        }}>
+          <span style={{ fontSize: 20 }}>&#9888;</span>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontWeight: 600, fontSize: 14, color: '#991b1b' }}>
+              WeWe RSS 登录可能已失效
+            </div>
+            <div style={{ fontSize: 12, color: '#b91c1c', marginTop: 2 }}>
+              最后同步于 {weweStatus.lastSync ? weweStatus.lastSync.toLocaleString('zh-CN') : '未知'}
+              （已超过 {weweStatus.hoursSince} 小时），公众号新闻可能无法抓取。
+            </div>
+          </div>
+          <a
+            href={`${WEWE_RSS_BASE}/dash/feeds`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              padding: '6px 14px', background: '#dc2626', color: '#fff',
+              borderRadius: 6, fontSize: 13, fontWeight: 500, textDecoration: 'none', whiteSpace: 'nowrap',
+            }}
+          >
+            去重新登录
+          </a>
+        </div>
+      )}
+      {weweStatus && weweStatus.ok && (
+        <div style={{
+          padding: '12px 16px', marginBottom: 16, borderRadius: 8,
+          background: '#f0fdf4', border: '1px solid #bbf7d0',
+          display: 'flex', alignItems: 'center', gap: 12, fontSize: 13, color: '#166534',
+        }}>
+          <span style={{ fontSize: 16 }}>&#10003;</span>
+          WeWe RSS 运行正常 — 共 {weweStatus.feedCount} 个源，最后同步于 {weweStatus.lastSync?.toLocaleString('zh-CN')}
+        </div>
+      )}
+
       {/* Config summary cards */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16, marginBottom: 24 }}>
         <div style={card}>
           <div style={{ fontSize: 13, color: 'var(--text2)' }}>发送时间</div>
           <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
-            {String(settings?.send_hour ?? 18).padStart(2, '0')}:00
+            {String(settings?.send_hour ?? 18).padStart(2, '0')}:{String(settings?.send_minute ?? 0).padStart(2, '0')}
           </div>
           <div style={{ fontSize: 12, color: 'var(--text3)' }}>{settings?.timezone || 'Asia/Shanghai'}</div>
         </div>
