@@ -407,7 +407,7 @@ def save_draft(news_data: dict, settings: dict = None) -> str:
     print(f"  - Draft saved to {draft_path}")
     return draft_path
 
-def load_draft(date: str = None) -> dict | None:
+def load_draft(date: str = None):
     """Load a draft by date. If no date given, use today."""
     if date is None:
         settings = load_settings()
