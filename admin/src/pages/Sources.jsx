@@ -187,6 +187,16 @@ export default function Sources() {
                   ({groupEnabled}/{groupFeeds.length})
                 </span>
               </h2>
+              {group === 'WeWe RSS' && (
+                <a
+                  href="https://amb2rzhou.zeabur.app/dash/feeds"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ padding: '4px 10px', background: '#dbeafe', color: '#2563eb', border: 'none', borderRadius: 4, fontSize: 12, textDecoration: 'none' }}
+                >
+                  管理公众号源
+                </a>
+              )}
               <button
                 onClick={() => toggleGroup(group, true)}
                 style={{ padding: '4px 10px', background: '#d1fae5', color: '#059669', border: 'none', borderRadius: 4, fontSize: 12 }}

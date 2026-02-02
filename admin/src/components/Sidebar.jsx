@@ -67,14 +67,6 @@ export default function Sidebar({ user }) {
           >
             📖 Wiki 文档
           </a>
-          <a
-            href="https://amb2rzhou.zeabur.app/dash/feeds"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'var(--text2)', fontSize: 14, padding: '8px 0' }}
-          >
-            📢 WeWe RSS 管理
-          </a>
         </div>
       </nav>
 
