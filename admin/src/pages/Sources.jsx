@@ -7,11 +7,14 @@ const card = {
   marginBottom: 20,
 }
 
+const WEWE_RSS_BASE = 'https://amb2rzhou.zeabur.app'
+
 export default function Sources() {
   const [settings, setSettings] = useState(null)
   const [sha, setSha] = useState(null)
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
+  const [syncing, setSyncing] = useState(false)
   const [collapsed, setCollapsed] = useState({})
 
   // New source form
@@ -88,6 +91,66 @@ export default function Sources() {
 
   function toggleCollapse(group) {
     setCollapsed(prev => ({ ...prev, [group]: !prev[group] }))
+  }
+
+  async function syncWeWeRSS() {
+    setSyncing(true)
+    try {
+      const res = await fetch(`${WEWE_RSS_BASE}/feeds`)
+      if (!res.ok) throw new Error(`WeWe RSS API error: ${res.status}`)
+      const remoteFeeds = await res.json()
+
+      const currentFeeds = settings.rss_feeds || []
+      const currentUrls = new Set(currentFeeds.map(f => f.url))
+
+      // Build set of remote WeWe RSS URLs for cleanup
+      const remoteUrlSet = new Set(
+        remoteFeeds.map(f => `${WEWE_RSS_BASE}/feeds/${f.id}.rss`)
+      )
+
+      // Find new feeds to add
+      const newFeeds = []
+      for (const feed of remoteFeeds) {
+        const rssUrl = `${WEWE_RSS_BASE}/feeds/${feed.id}.rss`
+        if (!currentUrls.has(rssUrl)) {
+          newFeeds.push({
+            url: rssUrl,
+            name: feed.name,
+            group: 'WeWe RSS',
+            enabled: true,
+          })
+        }
+      }
+
+      // Find removed feeds (in local WeWe RSS group but not in remote)
+      const removedUrls = new Set()
+      currentFeeds.forEach(f => {
+        if (f.group === 'WeWe RSS' && f.url.startsWith(WEWE_RSS_BASE) && !remoteUrlSet.has(f.url)) {
+          removedUrls.add(f.url)
+        }
+      })
+
+      if (newFeeds.length === 0 && removedUrls.size === 0) {
+        alert('已是最新，无需同步')
+        setSyncing(false)
+        return
+      }
+
+      const updated = { ...settings }
+      // Remove deleted feeds
+      updated.rss_feeds = currentFeeds.filter(f => !removedUrls.has(f.url))
+      // Add new feeds
+      updated.rss_feeds = [...updated.rss_feeds, ...newFeeds]
+      setSettings(updated)
+
+      const parts = []
+      if (newFeeds.length > 0) parts.push(`新增 ${newFeeds.length} 个源`)
+      if (removedUrls.size > 0) parts.push(`移除 ${removedUrls.size} 个源`)
+      alert(`同步完成：${parts.join('，')}。请点击「保存更改」提交。`)
+    } catch (e) {
+      alert('同步失败: ' + e.message)
+    }
+    setSyncing(false)
   }
 
   if (loading) return <p style={{ color: 'var(--text2)' }}>加载中...</p>
@@ -188,14 +251,23 @@ export default function Sources() {
                 </span>
               </h2>
               {group === 'WeWe RSS' && (
-                <a
-                  href="https://amb2rzhou.zeabur.app/dash/feeds"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ padding: '4px 10px', background: '#dbeafe', color: '#2563eb', border: 'none', borderRadius: 4, fontSize: 12, textDecoration: 'none' }}
-                >
-                  管理公众号源
-                </a>
+                <>
+                  <button
+                    onClick={syncWeWeRSS}
+                    disabled={syncing}
+                    style={{ padding: '4px 10px', background: '#e0e7ff', color: '#4338ca', border: 'none', borderRadius: 4, fontSize: 12 }}
+                  >
+                    {syncing ? '同步中...' : '同步订阅'}
+                  </button>
+                  <a
+                    href={`${WEWE_RSS_BASE}/dash/feeds`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ padding: '4px 10px', background: '#dbeafe', color: '#2563eb', border: 'none', borderRadius: 4, fontSize: 12, textDecoration: 'none' }}
+                  >
+                    管理公众号源
+                  </a>
+                </>
               )}
               <button
                 onClick={() => toggleGroup(group, true)}
