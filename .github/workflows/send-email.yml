@@ -9,6 +9,9 @@ on:
         required: false
         type: string
 
+permissions:
+  contents: write
+
 jobs:
   send-email:
     runs-on: ubuntu-latest
