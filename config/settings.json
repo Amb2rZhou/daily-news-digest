@@ -340,6 +340,60 @@
       "name": "歸藏的AI工具箱",
       "group": "WeWe RSS",
       "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3934419561.rss",
+      "name": "赛博禅心",
+      "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3930654829.rss",
+      "name": "CSDN",
+      "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3075486737.rss",
+      "name": "白鲸出海",
+      "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3236757533.rss",
+      "name": "量子位",
+      "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_2392024520.rss",
+      "name": "APPSO",
+      "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3271041950.rss",
+      "name": "新智元",
+      "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3073282833.rss",
+      "name": "机器之心",
+      "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3223096120.rss",
+      "name": "数字生命卡兹克",
+      "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3941633310.rss",
+      "name": "PaperAgent",
+      "group": "WeWe RSS",
+      "enabled": true
     }
   ],
   "recipients": [
