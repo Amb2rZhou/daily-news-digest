@@ -7,6 +7,27 @@ const card = {
   marginBottom: 20,
 }
 
+const TIMEZONE_OPTIONS = [
+  { value: 'Asia/Shanghai', label: '中国标准时间 (UTC+8)' },
+  { value: 'Asia/Tokyo', label: '日本标准时间 (UTC+9)' },
+  { value: 'Asia/Singapore', label: '新加坡时间 (UTC+8)' },
+  { value: 'Asia/Hong_Kong', label: '香港时间 (UTC+8)' },
+  { value: 'Asia/Taipei', label: '台北时间 (UTC+8)' },
+  { value: 'Asia/Seoul', label: '韩国标准时间 (UTC+9)' },
+  { value: 'Asia/Kolkata', label: '印度标准时间 (UTC+5:30)' },
+  { value: 'Asia/Dubai', label: '海湾标准时间 (UTC+4)' },
+  { value: 'Europe/London', label: '英国时间 (UTC+0/+1)' },
+  { value: 'Europe/Paris', label: '中欧时间 (UTC+1/+2)' },
+  { value: 'Europe/Berlin', label: '德国时间 (UTC+1/+2)' },
+  { value: 'Europe/Moscow', label: '莫斯科时间 (UTC+3)' },
+  { value: 'America/New_York', label: '美东时间 (UTC-5/-4)' },
+  { value: 'America/Chicago', label: '美中时间 (UTC-6/-5)' },
+  { value: 'America/Denver', label: '美山地时间 (UTC-7/-6)' },
+  { value: 'America/Los_Angeles', label: '美西时间 (UTC-8/-7)' },
+  { value: 'Pacific/Auckland', label: '新西兰时间 (UTC+12/+13)' },
+  { value: 'Australia/Sydney', label: '澳东时间 (UTC+10/+11)' },
+]
+
 export default function Settings() {
   const [settings, setSettings] = useState(null)
   const [sha, setSha] = useState(null)
@@ -87,9 +108,11 @@ export default function Settings() {
       )
       setSha(result.content.sha)
 
-      // Also update workflow cron if send_hour changed
-      const utcHour = (settings.send_hour - 8 + 24) % 24
-      const newCron = `0 ${utcHour} * * *`
+      // Also update workflow cron
+      const sendHour = settings.send_hour ?? 18
+      const sendMinute = settings.send_minute ?? 0
+      const utcHour = (sendHour - 8 + 24) % 24
+      const newCron = `${sendMinute} ${utcHour} * * *`
       try {
         await updateWorkflowCron(newCron)
       } catch (e) {
@@ -125,16 +148,17 @@ export default function Settings() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
           <label>
-            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>发送时间（北京时间）</span>
-            <select
-              value={settings.send_hour}
-              onChange={(e) => update('send_hour', parseInt(e.target.value))}
+            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>发送时间</span>
+            <input
+              type="time"
+              value={`${String(settings.send_hour ?? 18).padStart(2, '0')}:${String(settings.send_minute ?? 0).padStart(2, '0')}`}
+              onChange={(e) => {
+                const [h, m] = e.target.value.split(':').map(Number)
+                update('send_hour', h)
+                update('send_minute', m)
+              }}
               style={{ width: '100%' }}
-            >
-              {Array.from({ length: 24 }, (_, i) => (
-                <option key={i} value={i}>{String(i).padStart(2, '0')}:00</option>
-              ))}
-            </select>
+            />
           </label>
 
           <label>
@@ -149,24 +173,20 @@ export default function Settings() {
             />
           </label>
 
-          <label>
-            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>新闻主题</span>
-            <input
-              type="text"
-              value={settings.news_topic}
-              onChange={(e) => update('news_topic', e.target.value)}
-              style={{ width: '100%' }}
-            />
-          </label>
-
-          <label>
+          <label style={{ gridColumn: '1 / -1' }}>
             <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>时区</span>
-            <input
-              type="text"
+            <select
               value={settings.timezone}
               onChange={(e) => update('timezone', e.target.value)}
               style={{ width: '100%' }}
-            />
+            >
+              {TIMEZONE_OPTIONS.map(tz => (
+                <option key={tz.value} value={tz.value}>{tz.label}</option>
+              ))}
+              {!TIMEZONE_OPTIONS.some(tz => tz.value === settings.timezone) && (
+                <option value={settings.timezone}>{settings.timezone}</option>
+              )}
+            </select>
           </label>
         </div>
       </div>

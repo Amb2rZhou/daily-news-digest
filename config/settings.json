@@ -1,8 +1,8 @@
 {
   "send_hour": 18,
+  "send_minute": 0,
   "timezone": "Asia/Shanghai",
   "max_news_items": 10,
-  "news_topic": "AI",
   "categories_order": [
     "产品发布",
     "巨头动向",

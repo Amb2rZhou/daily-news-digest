@@ -52,9 +52,9 @@ def load_settings() -> dict:
     """Load settings from config/settings.json."""
     defaults = {
         "send_hour": 18,
+        "send_minute": 0,
         "timezone": "Asia/Shanghai",
         "max_news_items": 10,
-        "news_topic": "AI",
         "categories_order": ["产品发布", "巨头动向", "技术进展", "行业观察", "投融资"],
         "filters": {
             "blacklist_keywords": [],
@@ -99,12 +99,13 @@ def get_time_window(settings: dict = None) -> tuple[str, str]:
     if settings is None:
         settings = load_settings()
     send_hour = settings.get("send_hour", 18)
+    send_minute = settings.get("send_minute", 0)
     tz_name = settings.get("timezone", "Asia/Shanghai")
     tz = ZoneInfo(tz_name)
 
     now = datetime.now(tz)
     # Today's send time in the configured timezone
-    today_send = now.replace(hour=send_hour, minute=0, second=0, microsecond=0)
+    today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
 
     # If we haven't reached send time yet, the window ends at yesterday's send time
     if now < today_send:
@@ -126,9 +127,10 @@ def get_cutoff_time(settings: dict = None) -> datetime:
     tz_name = settings.get("timezone", "Asia/Shanghai")
     tz = ZoneInfo(tz_name)
     send_hour = settings.get("send_hour", 18)
+    send_minute = settings.get("send_minute", 0)
 
     now = datetime.now(tz)
-    today_send = now.replace(hour=send_hour, minute=0, second=0, microsecond=0)
+    today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
 
     if now < today_send:
         # Window starts from 2 days ago at send_hour
@@ -197,6 +199,51 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None) -> list[dict]
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
     return all_articles
+
+def apply_filters(articles: list[dict], settings: dict = None) -> list[dict]:
+    """Apply blacklist/whitelist filters from settings to articles."""
+    if settings is None:
+        settings = load_settings()
+    filters = settings.get("filters", {})
+    blacklist_kw = [kw.lower() for kw in filters.get("blacklist_keywords", [])]
+    blacklist_src = [src.lower() for src in filters.get("blacklist_sources", [])]
+    whitelist_kw = [kw.lower() for kw in filters.get("whitelist_keywords", [])]
+    whitelist_src = [src.lower() for src in filters.get("whitelist_sources", [])]
+
+    if not any([blacklist_kw, blacklist_src, whitelist_kw, whitelist_src]):
+        return articles
+
+    filtered = []
+    for article in articles:
+        title = (article.get("title", "") or "").lower()
+        desc = (article.get("description", "") or "").lower()
+        source = (article.get("source", "") or "").lower()
+        text = title + " " + desc
+
+        # Blacklist: skip if matches
+        if any(kw in text for kw in blacklist_kw):
+            continue
+        if any(src in source for src in blacklist_src):
+            continue
+
+        filtered.append(article)
+
+    # Whitelist: boost matching articles to the front
+    if whitelist_kw or whitelist_src:
+        boosted = []
+        normal = []
+        for article in filtered:
+            title = (article.get("title", "") or "").lower()
+            desc = (article.get("description", "") or "").lower()
+            source = (article.get("source", "") or "").lower()
+            text = title + " " + desc
+            if any(kw in text for kw in whitelist_kw) or any(src in source for src in whitelist_src):
+                boosted.append(article)
+            else:
+                normal.append(article)
+        filtered = boosted + normal
+
+    return filtered
 
 def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_items: int = 10, settings: dict = None) -> list[dict]:
     """Use Claude to summarize, categorize, and select top news."""
@@ -314,6 +361,10 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
     print("  - Fetching news from RSS feeds...")
     raw_articles = fetch_raw_news(cutoff=cutoff, settings=settings)
     print(f"  - Got {len(raw_articles)} raw articles")
+
+    # Apply blacklist/whitelist filters
+    raw_articles = apply_filters(raw_articles, settings)
+    print(f"  - After filtering: {len(raw_articles)} articles")
 
     if not raw_articles:
         return {
