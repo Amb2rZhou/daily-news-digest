@@ -406,6 +406,11 @@
       "email": "zhouzhile2002@outlook.com",
       "name": "我自己",
       "enabled": true
+    },
+    {
+      "email": "zhouzhile@xiaohongshu.com",
+      "name": "粥红书账号",
+      "enabled": true
     }
   ]
 }
