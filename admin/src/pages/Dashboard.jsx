@@ -233,46 +233,6 @@ export default function Dashboard() {
     setAiLoading(false)
   }
 
-  // Delete draft and re-fetch
-  async function handleRefetch() {
-    if (!latestDraft || !draftSha) return
-    if (!confirm('确定要删除当前草稿并重新抓取吗？')) return
-
-    setRefetching(true)
-    try {
-      // Delete the draft file
-      await deleteFile(
-        `config/drafts/${latestDraft.name}`,
-        `Delete draft ${latestDraft.name} for re-fetch`,
-        draftSha
-      )
-
-      // Clear local state
-      setLatestDraft(null)
-      setDraftSha(null)
-
-      // Trigger fetch workflow
-      await triggerWorkflow('fetch-news.yml')
-
-      // Start polling for new draft
-      let elapsed = 0
-      if (pollRef.current) clearInterval(pollRef.current)
-      pollRef.current = setInterval(async () => {
-        elapsed += 10
-        await load()
-        if (elapsed >= 120) {
-          clearInterval(pollRef.current)
-          pollRef.current = null
-        }
-      }, 10000)
-
-      alert('草稿已删除，正在重新抓取...')
-    } catch (e) {
-      alert('操作失败: ' + e.message)
-    }
-    setRefetching(false)
-  }
-
   const stored = getStoredAuth()
 
   const runStatusBadge = (status, conclusion) => {
@@ -331,14 +291,35 @@ export default function Dashboard() {
       {/* Workflow trigger buttons */}
       <div style={{ display: 'flex', gap: 12, marginBottom: 24 }}>
         <button
-          onClick={() => handleTrigger('fetch-news.yml', 'fetch')}
-          disabled={triggerStatus.fetch === 'loading'}
+          onClick={async () => {
+            if (latestDraft && draftSha) {
+              // 有草稿，先删除再抓取
+              if (!confirm('确定要删除当前草稿并重新抓取吗？')) return
+              setRefetching(true)
+              try {
+                await deleteFile(
+                  `config/drafts/${latestDraft.name}`,
+                  `Delete draft ${latestDraft.name} for re-fetch`,
+                  draftSha
+                )
+                setLatestDraft(null)
+                setDraftSha(null)
+              } catch (e) {
+                alert('删除草稿失败: ' + e.message)
+                setRefetching(false)
+                return
+              }
+              setRefetching(false)
+            }
+            handleTrigger('fetch-news.yml', 'fetch')
+          }}
+          disabled={triggerStatus.fetch === 'loading' || refetching}
           style={{
             ...btnPrimary, background: '#2563eb', color: '#fff',
-            opacity: triggerStatus.fetch === 'loading' ? 0.6 : 1,
+            opacity: (triggerStatus.fetch === 'loading' || refetching) ? 0.6 : 1,
           }}
         >
-          {triggerBtnLabel('fetch', '抓取新闻')}
+          {refetching ? '删除中...' : triggerBtnLabel('fetch', latestDraft ? '重新抓取' : '抓取新闻')}
         </button>
         <button
           onClick={() => handleTrigger('send-email.yml', 'send')}
@@ -576,23 +557,6 @@ export default function Dashboard() {
             >
               预览邮件
             </button>
-            {isEditable && (
-              <button
-                onClick={handleRefetch}
-                disabled={refetching}
-                style={{
-                  ...btnPrimary,
-                  background: 'transparent',
-                  color: '#dc2626',
-                  border: '1px solid #dc2626',
-                  padding: '6px 16px',
-                  fontSize: 13,
-                  opacity: refetching ? 0.6 : 1,
-                }}
-              >
-                {refetching ? '删除中...' : '🔄 重新抓取'}
-              </button>
-            )}
           </div>
 
           {isEditable && <>
