@@ -211,19 +211,30 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     # Collect articles grouped by source
     articles_by_source = {}
 
+    failed_feeds = []
+    empty_feeds = []
+
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = {executor.submit(parse_feed, url, cutoff): url for url in feed_urls}
 
         for future in as_completed(futures):
+            url = futures[future]
             try:
                 articles = future.result()
+                if not articles:
+                    empty_feeds.append(url)
                 for article in articles:
                     source = article.get("source", "unknown")
                     if source not in articles_by_source:
                         articles_by_source[source] = []
                     articles_by_source[source].append(article)
             except Exception as e:
-                print(f"  Warning: Feed error: {e}")
+                failed_feeds.append((url, str(e)))
+
+    if failed_feeds:
+        print(f"  - Failed feeds ({len(failed_feeds)}): {[f[0].split('/')[-1][:30] for f in failed_feeds[:5]]}")
+    if empty_feeds:
+        print(f"  - Empty feeds ({len(empty_feeds)}): {[f.split('/')[-1][:30] for f in empty_feeds[:10]]}")
 
     # Limit articles per source and merge
     for source, articles in articles_by_source.items():
