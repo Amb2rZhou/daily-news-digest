@@ -179,11 +179,20 @@ def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
 
     return articles
 
-def fetch_raw_news(cutoff: datetime = None, settings: dict = None) -> list[dict]:
-    """Fetch raw news from multiple RSS feeds in parallel."""
+def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_source: int = 3) -> list[dict]:
+    """Fetch raw news from multiple RSS feeds in parallel.
+
+    Args:
+        cutoff: Only include articles published after this time
+        settings: Settings dict
+        max_per_source: Maximum articles to keep per source (ensures diversity)
+    """
     all_articles = []
     feed_urls = get_rss_feeds(settings)
     print(f"  - Using {len(feed_urls)} RSS feeds")
+
+    # Collect articles grouped by source
+    articles_by_source = {}
 
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = {executor.submit(parse_feed, url, cutoff): url for url in feed_urls}
@@ -191,12 +200,25 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None) -> list[dict]
         for future in as_completed(futures):
             try:
                 articles = future.result()
-                all_articles.extend(articles)
+                for article in articles:
+                    source = article.get("source", "unknown")
+                    if source not in articles_by_source:
+                        articles_by_source[source] = []
+                    articles_by_source[source].append(article)
             except Exception as e:
                 print(f"  Warning: Feed error: {e}")
 
-    # Sort by published time (newest first)
+    # Limit articles per source and merge
+    for source, articles in articles_by_source.items():
+        # Sort by published time within source
+        articles.sort(key=lambda x: x.get("published", ""), reverse=True)
+        # Take only top N per source
+        all_articles.extend(articles[:max_per_source])
+
+    # Sort all by published time (newest first)
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
+
+    print(f"  - Sources with articles: {len(articles_by_source)}")
 
     return all_articles
 
@@ -259,7 +281,7 @@ def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_ite
 
     # Prepare articles for Claude
     articles_text = ""
-    for i, article in enumerate(articles[:50], 1):  # Limit to 50 articles
+    for i, article in enumerate(articles[:120], 1):  # Limit to 120 articles for diversity
         articles_text += f"""
 ---
 Article {i}:
