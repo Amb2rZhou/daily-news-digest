@@ -7,6 +7,7 @@ import Sources from './pages/Sources'
 import Recipients from './pages/Recipients'
 import Settings from './pages/Settings'
 import History from './pages/History'
+import Secrets from './pages/Secrets'
 import { getStoredAuth } from './lib/auth'
 import { configure, getUser } from './lib/github'
 
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/recipients" element={<Recipients />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/history" element={<History />} />
+          <Route path="/secrets" element={<Secrets />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>

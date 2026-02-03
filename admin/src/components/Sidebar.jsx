@@ -9,6 +9,7 @@ const navItems = [
   { to: '/recipients', label: '收件人管理', icon: '📬' },
   { to: '/settings', label: '设置', icon: '⚙️' },
   { to: '/history', label: '发送历史', icon: '📋' },
+  { to: '/secrets', label: '密钥管理', icon: '🔑' },
 ]
 
 const linkStyle = (isActive) => ({

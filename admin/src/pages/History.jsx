@@ -29,6 +29,16 @@ export default function History() {
         .sort((a, b) => b.name.localeCompare(a.name))
         .slice(0, 7)
       setDrafts(sorted)
+
+      // Pre-load all draft data for status display
+      const dataMap = {}
+      await Promise.all(sorted.map(async (f) => {
+        try {
+          const file = await readFile(`config/drafts/${f.name}`)
+          if (file) dataMap[f.name.replace('.json', '')] = JSON.parse(file.content)
+        } catch { /* ignore */ }
+      }))
+      setDraftData(dataMap)
     } catch (e) {
       console.error('Load drafts error:', e)
     }
@@ -57,9 +67,10 @@ export default function History() {
 
   const statusBadge = (status) => {
     const map = {
-      pending_review: { bg: '#fef3c7', color: '#d97706', label: '待发送' },
+      pending_review: { bg: '#fef3c7', color: '#d97706', label: '待审核' },
       approved: { bg: '#dbeafe', color: '#2563eb', label: '已审核' },
       sent: { bg: '#d1fae5', color: '#059669', label: '已发送' },
+      rejected: { bg: '#fee2e2', color: '#dc2626', label: '已拒绝' },
     }
     const s = map[status] || { bg: '#f3f4f6', color: '#6b7280', label: status || '未知' }
     return <span style={{ background: s.bg, color: s.color, padding: '2px 10px', borderRadius: 12, fontSize: 12, fontWeight: 500 }}>{s.label}</span>

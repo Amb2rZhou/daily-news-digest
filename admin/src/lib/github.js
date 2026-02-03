@@ -111,6 +111,44 @@ export async function readWorkflowCron(workflowFile = 'fetch-news.yml') {
   return match ? match[1] : null
 }
 
+/** List repository action secrets (names only, values are write-only) */
+export async function listSecrets() {
+  const res = await fetch(
+    `${API}/repos/${_owner}/${_repo}/actions/secrets`,
+    { headers: headers() }
+  )
+  if (!res.ok) throw new Error(`GitHub API error: ${res.status}`)
+  const data = await res.json()
+  return data.secrets || []
+}
+
+/** Get the repository public key for encrypting secrets */
+export async function getPublicKey() {
+  const res = await fetch(
+    `${API}/repos/${_owner}/${_repo}/actions/secrets/public-key`,
+    { headers: headers() }
+  )
+  if (!res.ok) throw new Error(`GitHub API error: ${res.status}`)
+  return res.json()
+}
+
+/** Create or update a repository secret (value must be encrypted) */
+export async function setSecret(name, encryptedValue, keyId) {
+  const res = await fetch(
+    `${API}/repos/${_owner}/${_repo}/actions/secrets/${name}`,
+    {
+      method: 'PUT',
+      headers: headers(),
+      body: JSON.stringify({ encrypted_value: encryptedValue, key_id: keyId }),
+    }
+  )
+  if (!res.ok) {
+    const err = await res.text()
+    throw new Error(`Set secret failed: ${res.status} - ${err}`)
+  }
+  return true
+}
+
 /** Update the cron schedule in a workflow file */
 export async function updateWorkflowCron(newCron, workflowFile = 'fetch-news.yml') {
   const path = `.github/workflows/${workflowFile}`

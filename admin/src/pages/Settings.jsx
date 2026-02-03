@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { readFile, writeFile, updateWorkflowCron } from '../lib/github'
+import { getAnthropicKey, setAnthropicKey, hasAnthropicKey } from '../lib/claude'
 
 const card = {
   background: 'var(--card)', borderRadius: 'var(--radius)',
@@ -38,6 +39,8 @@ export default function Settings() {
   const [newBlacklistSrc, setNewBlacklistSrc] = useState('')
   const [newWhitelistKw, setNewWhitelistKw] = useState('')
   const [newWhitelistSrc, setNewWhitelistSrc] = useState('')
+  const [apiKey, setApiKey] = useState(() => getAnthropicKey())
+  const [apiKeySaved, setApiKeySaved] = useState(() => hasAnthropicKey())
 
   useEffect(() => { load() }, [])
 
@@ -260,6 +263,57 @@ export default function Settings() {
           onAdd={() => addToList('whitelist_sources', newWhitelistSrc, setNewWhitelistSrc)}
           onRemove={(idx) => removeFromList('whitelist_sources', idx)}
         />
+      </div>
+
+      {/* Anthropic API Key */}
+      <div style={card}>
+        <h2 style={{ fontSize: 16, marginBottom: 16 }}>AI 辅助设置</h2>
+        <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 8 }}>Anthropic API Key</div>
+        <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 8 }}>
+          设置后可在添加新闻时使用 AI 自动生成摘要。Key 仅存储在浏览器本地。
+        </div>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <input
+            type="password"
+            value={apiKey}
+            onChange={e => { setApiKey(e.target.value); setApiKeySaved(false) }}
+            placeholder="sk-ant-..."
+            style={{ flex: 1 }}
+          />
+          <button
+            onClick={() => {
+              setAnthropicKey(apiKey)
+              setApiKeySaved(true)
+            }}
+            style={{
+              padding: '6px 16px', background: 'var(--primary-light)', color: 'var(--primary)',
+              border: 'none', borderRadius: 6, fontSize: 13, cursor: 'pointer',
+            }}
+          >
+            保存
+          </button>
+          {apiKey && (
+            <button
+              onClick={() => {
+                setApiKey('')
+                setAnthropicKey('')
+                setApiKeySaved(false)
+              }}
+              style={{
+                padding: '6px 16px', background: '#fee2e2', color: '#dc2626',
+                border: 'none', borderRadius: 6, fontSize: 13, cursor: 'pointer',
+              }}
+            >
+              清除
+            </button>
+          )}
+        </div>
+        {apiKeySaved && apiKey && (
+          <div style={{ fontSize: 12, color: 'var(--success)', marginTop: 6 }}>API Key 已保存</div>
+        )}
+        {!apiKey && (
+          <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 6 }}>未设置</div>
+        )}
       </div>
     </div>
   )
