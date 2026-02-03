@@ -25,9 +25,8 @@ def format_webhook_markdown(news_data: dict) -> str:
     """Format draft JSON into markdown message for webhook."""
     date = news_data.get("date", "")
     categories = news_data.get("categories", [])
-    time_window = news_data.get("time_window", "")
 
-    lines = [f"AI/科技新闻日报 - {date}", ""]
+    lines = [f"## AI/科技新闻日报 - {date}"]
 
     total_news = 0
     for cat in categories:
@@ -37,18 +36,19 @@ def format_webhook_markdown(news_data: dict) -> str:
         if not news_items:
             continue
 
-        lines.append(f'<font color="warning">{icon} {name}</font>')
+        lines.append(f'### <font color="warning">{icon} {name}</font>')
         for item in news_items:
             title = item.get("title", "")
             summary = item.get("summary", "")
-            source = item.get("source", "")
-            lines.append(f">{title} — {summary}")
-            lines.append(f">来源: {source}")
-            lines.append(">")
+            url = item.get("url", "")
+            # 标题加粗 + 摘要 + 原文链接
+            if summary:
+                lines.append(f"**{title}**\n{summary}\n[查看原文]({url})")
+            else:
+                lines.append(f"**{title}**\n[查看原文]({url})")
             total_news += 1
-        lines.append("")
 
-    lines.append(f"共 {total_news} 条新闻 | 时间窗口: {time_window}")
+    lines.append(f"\n<font color=\"comment\">共 {total_news} 条新闻</font>")
 
     return "\n".join(lines)
 
