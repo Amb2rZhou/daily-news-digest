@@ -160,3 +160,20 @@ export async function updateWorkflowCron(newCron, workflowFile = 'fetch-news.yml
   )
   return writeFile(path, updated, `Update cron schedule to ${newCron}`, file.sha)
 }
+
+/** Delete a file from the repo */
+export async function deleteFile(path, message, sha) {
+  const res = await fetch(
+    `${API}/repos/${_owner}/${_repo}/contents/${path}`,
+    {
+      method: 'DELETE',
+      headers: headers(),
+      body: JSON.stringify({ message, sha }),
+    }
+  )
+  if (!res.ok) {
+    const err = await res.json()
+    throw new Error(`GitHub API error: ${res.status} - ${err.message}`)
+  }
+  return res.json()
+}

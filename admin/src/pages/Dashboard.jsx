@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
-import { readFile, writeFile, listFiles, getWorkflowRuns, triggerWorkflow } from '../lib/github'
+import { readFile, writeFile, listFiles, getWorkflowRuns, triggerWorkflow, deleteFile } from '../lib/github'
 import { getStoredAuth } from '../lib/auth'
 import { hasAnthropicKey, generateSummary } from '../lib/claude'
 import { generateEmailHtml } from '../lib/emailTemplate'
@@ -38,6 +38,7 @@ export default function Dashboard() {
   const [showAddNews, setShowAddNews] = useState(false)
   const [addForm, setAddForm] = useState({ url: '', title: '', summary: '', source: '', category: '' })
   const [aiLoading, setAiLoading] = useState(false)
+  const [refetching, setRefetching] = useState(false)
   const pollRef = useRef(null)
 
   useEffect(() => { load() }, [])
@@ -230,6 +231,46 @@ export default function Dashboard() {
       alert('AI 摘要生成失败: ' + e.message)
     }
     setAiLoading(false)
+  }
+
+  // Delete draft and re-fetch
+  async function handleRefetch() {
+    if (!latestDraft || !draftSha) return
+    if (!confirm('确定要删除当前草稿并重新抓取吗？')) return
+
+    setRefetching(true)
+    try {
+      // Delete the draft file
+      await deleteFile(
+        `config/drafts/${latestDraft.name}`,
+        `Delete draft ${latestDraft.name} for re-fetch`,
+        draftSha
+      )
+
+      // Clear local state
+      setLatestDraft(null)
+      setDraftSha(null)
+
+      // Trigger fetch workflow
+      await triggerWorkflow('fetch-news.yml')
+
+      // Start polling for new draft
+      let elapsed = 0
+      if (pollRef.current) clearInterval(pollRef.current)
+      pollRef.current = setInterval(async () => {
+        elapsed += 10
+        await load()
+        if (elapsed >= 120) {
+          clearInterval(pollRef.current)
+          pollRef.current = null
+        }
+      }, 10000)
+
+      alert('草稿已删除，正在重新抓取...')
+    } catch (e) {
+      alert('操作失败: ' + e.message)
+    }
+    setRefetching(false)
   }
 
   const stored = getStoredAuth()
@@ -535,6 +576,23 @@ export default function Dashboard() {
             >
               预览邮件
             </button>
+            {isEditable && (
+              <button
+                onClick={handleRefetch}
+                disabled={refetching}
+                style={{
+                  ...btnPrimary,
+                  background: 'transparent',
+                  color: '#dc2626',
+                  border: '1px solid #dc2626',
+                  padding: '6px 16px',
+                  fontSize: 13,
+                  opacity: refetching ? 0.6 : 1,
+                }}
+              >
+                {refetching ? '删除中...' : '🔄 重新抓取'}
+              </button>
+            )}
           </div>
 
           {isEditable && <>
