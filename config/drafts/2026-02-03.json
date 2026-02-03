@@ -1,0 +1,92 @@
+{
+  "date": "2026-02-03",
+  "time_window": "2026-02-01 17:30 ~ 2026-02-02 17:29",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "百度智能云推出OpenClaw限时免费一键部署服务",
+          "summary": "百度智能云上线OpenClaw一键部署服务并开启限时免费体验，开发者可快速部署智能体产品并接入文心、DeepSeek、Qwen等主流大模型。",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3667102358184576?f=rss"
+        },
+        {
+          "title": "国产版Ollama来了，Clawdbot终于不只属于Mac和英伟达",
+          "summary": "国产版Ollama发布，让Clawdbot不再局限于Mac和英伟达平台，扩大了AI模型部署的适用范围。",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-03-4"
+        },
+        {
+          "title": "Soul App开源实时数字人生成模型SoulX-FlashTalk",
+          "summary": "Soul App开源SoulX-FlashTalk实时数字人生成模型，重新定义'实时在线交互'体验。",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-03-2"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "SpaceX并购xAI，马斯克宣布新公司估值1.25万亿美元",
+          "summary": "马斯克宣布SpaceX已收购其AI公司xAI，合并后的新公司估值达到1.25万亿美元，这是马斯克'垂直整合'战略的又一重要举措。",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/cq6vnrye06po?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "OpenAI资源转向ChatGPT改进引发高级员工离职",
+          "summary": "这家估值5000亿美元的公司正将资源从长期研究转向改进其旗舰聊天机器人ChatGPT，导致高级员工离职。",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/e581b7a4-455c-48e6-a87c-c39bb9c62a12"
+        },
+        {
+          "title": "SoftBank子公司与Intel合作开发AI下一代存储技术",
+          "summary": "软银子公司与英特尔签署合作协议，共同商业化AI应用的'下一代存储技术'。",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/02/03/softbank-subsidiary-saimemory-intel-ai-memory-z-angle-program.html"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "全球304个中文大模型实测：ReLE凭70%降本方案破解评估困局",
+          "summary": "最新研究对全球304个中文大模型进行实测，发现没有'全能王者'，ReLE方案以70%成本优化破解评估难题。",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-03"
+        },
+        {
+          "title": "DAU破亿后，豆包成为美术馆官方AI讲解员",
+          "summary": "字节跳动旗下豆包与上海浦东美术馆合作，成为卢浮宫和毕加索展的官方AI讲解员，这是AI产品首次担任美术馆官方讲解工具。",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3661841941013126?f=rss"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "上交+清华团队端侧AI公司辛米尔完成连续两轮过亿融资",
+          "summary": "端侧AI企业辛米尔完成亿元A轮及A+轮融资，服务苹果、比亚迪、宁德时代等客户，专注感算一体技术和全栈式AI解决方案。",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3666915646218885?f=rss"
+        },
+        {
+          "title": "AI通胀来了？42起亿级以上融资创纪录",
+          "summary": "智谱、MiniMax上市，阶跃星辰获超50亿元融资创纪录，42起亿级以上AI融资显示资金加速向头部集中。",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7864513.html"
+        }
+      ]
+    }
+  ],
+  "status": "pending_review",
+  "created_at": "2026-02-03T13:10:45.758331+08:00"
+}
