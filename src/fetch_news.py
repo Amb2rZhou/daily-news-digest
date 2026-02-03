@@ -236,6 +236,10 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
     print(f"  - Sources with articles: {len(articles_by_source)}")
+    # Show top sources by article count
+    source_counts = [(src, len(arts)) for src, arts in articles_by_source.items()]
+    source_counts.sort(key=lambda x: -x[1])
+    print(f"  - Top sources: {source_counts[:10]}")
 
     return all_articles
 
