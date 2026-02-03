@@ -94,9 +94,14 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
+          IS_MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
           cd src
-          python main.py fetch
+          if [ "$IS_MANUAL" = "true" ]; then
+            python main.py fetch --manual
+          else
+            python main.py fetch
+          fi
 
       - name: Commit draft to repo
         if: steps.pre_check.outputs.skip != 'true'

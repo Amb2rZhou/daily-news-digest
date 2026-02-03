@@ -19,8 +19,14 @@ from send_email import send_email
 from send_webhook import send_webhook
 
 
-def run_fetch(settings: dict) -> int:
-    """Fetch news and save as draft."""
+def run_fetch(settings: dict, manual: bool = False) -> int:
+    """Fetch news and save as draft.
+
+    Args:
+        settings: Configuration dict
+        manual: If True, use current time as window end (manual trigger)
+                If False, use scheduled send time as window end (auto trigger)
+    """
     anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
     if not anthropic_key:
         print("Error: ANTHROPIC_API_KEY not set")
@@ -29,8 +35,8 @@ def run_fetch(settings: dict) -> int:
     topic = settings.get("news_topic", "AI")
     max_items = settings.get("max_news_items", 10)
 
-    print("Fetching news...")
-    news_data = fetch_news(anthropic_key, topic=topic, max_items=max_items, settings=settings)
+    print(f"Fetching news... (manual={manual})")
+    news_data = fetch_news(anthropic_key, topic=topic, max_items=max_items, settings=settings, manual=manual)
 
     if news_data.get("error"):
         print(f"Warning: {news_data['error']}")
@@ -185,10 +191,18 @@ def main():
     else:
         mode = os.environ.get("RUN_MODE", "full")
 
-    date_arg = sys.argv[2] if len(sys.argv) > 2 else None
+    # Check for --manual flag
+    manual_flag = "--manual" in sys.argv
+
+    # Get date arg (skip --manual)
+    date_arg = None
+    for arg in sys.argv[2:]:
+        if arg != "--manual":
+            date_arg = arg
+            break
 
     if mode == "fetch":
-        exit_code = run_fetch(settings)
+        exit_code = run_fetch(settings, manual=manual_flag)
     elif mode == "send":
         exit_code = run_send(settings, date_arg)
     elif mode == "webhook":

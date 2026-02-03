@@ -90,11 +90,16 @@ def get_categories(settings: dict = None) -> list[dict]:
     order = settings.get("categories_order", list(CATEGORY_ICONS.keys()))
     return [{"name": name, "icon": CATEGORY_ICONS.get(name, "📰")} for name in order if name in CATEGORY_ICONS]
 
-def get_time_window(settings: dict = None) -> tuple[str, str]:
-    """Calculate the news time window based on send time in configured timezone.
+def get_time_window(settings: dict = None, manual: bool = False) -> tuple[str, str]:
+    """Calculate the news time window.
 
-    Returns the window: yesterday send_hour:00:00 ~ today send_hour:00:00 - 1 second,
-    in the configured timezone (default Asia/Shanghai).
+    Args:
+        settings: Configuration dict
+        manual: If True, window ends at current time (for manual trigger)
+                If False, window ends at scheduled send time (for auto trigger)
+
+    Returns:
+        Tuple of (start_time, end_time) as formatted strings
     """
     if settings is None:
         settings = load_settings()
@@ -104,14 +109,17 @@ def get_time_window(settings: dict = None) -> tuple[str, str]:
     tz = ZoneInfo(tz_name)
 
     now = datetime.now(tz)
-    # Today's send time in the configured timezone
-    today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
 
-    # If we haven't reached send time yet, the window ends at yesterday's send time
-    if now < today_send:
-        end_time = today_send - timedelta(days=1)
+    if manual:
+        # Manual trigger: window ends at current time
+        end_time = now
     else:
-        end_time = today_send
+        # Auto trigger: window ends at scheduled send time
+        today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
+        if now < today_send:
+            end_time = today_send - timedelta(days=1)
+        else:
+            end_time = today_send
 
     start_time = end_time - timedelta(days=1)
 
@@ -120,8 +128,14 @@ def get_time_window(settings: dict = None) -> tuple[str, str]:
         (end_time - timedelta(seconds=1)).strftime("%Y-%m-%d %H:%M")
     )
 
-def get_cutoff_time(settings: dict = None) -> datetime:
-    """Get the cutoff time for filtering articles, timezone-aware."""
+def get_cutoff_time(settings: dict = None, manual: bool = False) -> datetime:
+    """Get the cutoff time for filtering articles.
+
+    Args:
+        settings: Configuration dict
+        manual: If True, cutoff is 24h before now (for manual trigger)
+                If False, cutoff is 24h before scheduled send time (for auto trigger)
+    """
     if settings is None:
         settings = load_settings()
     tz_name = settings.get("timezone", "Asia/Shanghai")
@@ -130,14 +144,17 @@ def get_cutoff_time(settings: dict = None) -> datetime:
     send_minute = settings.get("send_minute", 0)
 
     now = datetime.now(tz)
-    today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
 
-    if now < today_send:
-        # Window starts from 2 days ago at send_hour
-        return (today_send - timedelta(days=2)).replace(tzinfo=None)
+    if manual:
+        # Manual trigger: 24h before now
+        return (now - timedelta(days=1)).replace(tzinfo=None)
     else:
-        # Window starts from yesterday at send_hour
-        return (today_send - timedelta(days=1)).replace(tzinfo=None)
+        # Auto trigger: 24h before scheduled send time
+        today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
+        if now < today_send:
+            return (today_send - timedelta(days=2)).replace(tzinfo=None)
+        else:
+            return (today_send - timedelta(days=1)).replace(tzinfo=None)
 
 def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
     """Parse a single RSS feed and return recent articles."""
@@ -368,8 +385,16 @@ URL: {article.get('url', '')}
 
     return []
 
-def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None) -> dict:
-    """Fetch and process news."""
+def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False) -> dict:
+    """Fetch and process news.
+
+    Args:
+        anthropic_key: API key for Claude
+        topic: News topic
+        max_items: Maximum news items to return
+        settings: Configuration dict
+        manual: If True, use current time as window end (manual trigger)
+    """
 
     if settings is None:
         settings = load_settings()
@@ -377,8 +402,10 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
     tz_name = settings.get("timezone", "Asia/Shanghai")
     tz = ZoneInfo(tz_name)
     today = datetime.now(tz).strftime("%Y-%m-%d")
-    start_time, end_time = get_time_window(settings)
-    cutoff = get_cutoff_time(settings)
+    start_time, end_time = get_time_window(settings, manual=manual)
+    cutoff = get_cutoff_time(settings, manual=manual)
+
+    print(f"  - Time window: {start_time} ~ {end_time}")
 
     print("  - Fetching news from RSS feeds...")
     raw_articles = fetch_raw_news(cutoff=cutoff, settings=settings)
