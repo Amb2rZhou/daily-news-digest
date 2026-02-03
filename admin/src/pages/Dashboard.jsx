@@ -309,12 +309,22 @@ export default function Dashboard() {
         >
           {triggerBtnLabel('send', '发送邮件')}
         </button>
-        {(triggerStatus.fetch === 'success' || triggerStatus.send === 'success') && (
+        <button
+          onClick={() => handleTrigger('send-webhook.yml', 'webhook')}
+          disabled={triggerStatus.webhook === 'loading'}
+          style={{
+            ...btnPrimary, background: '#ea580c', color: '#fff',
+            opacity: triggerStatus.webhook === 'loading' ? 0.6 : 1,
+          }}
+        >
+          {triggerBtnLabel('webhook', '推送群聊')}
+        </button>
+        {(triggerStatus.fetch === 'success' || triggerStatus.send === 'success' || triggerStatus.webhook === 'success') && (
           <span style={{ fontSize: 13, color: 'var(--success)', alignSelf: 'center' }}>
             Workflow 已触发，运行记录将自动刷新
           </span>
         )}
-        {(triggerStatus.fetch === 'error' || triggerStatus.send === 'error') && (
+        {(triggerStatus.fetch === 'error' || triggerStatus.send === 'error' || triggerStatus.webhook === 'error') && (
           <span style={{ fontSize: 13, color: 'var(--danger)', alignSelf: 'center' }}>
             触发失败，请检查 Token 权限
           </span>

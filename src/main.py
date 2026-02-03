@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
 Main script for daily news digest.
-Supports two modes:
-  - fetch: Fetch news, save as draft (for review)
-  - send:  Read draft and send email
+Supports modes:
+  - fetch:   Fetch news, save as draft (for review)
+  - send:    Read draft and send email
+  - webhook: Read draft and send webhook only (no email)
   - (default): Fetch + send in one step (legacy behavior)
 """
 
@@ -146,6 +147,29 @@ def run_full(settings: dict) -> int:
         return 1
 
 
+def run_webhook(settings: dict, date: str = None) -> int:
+    """Read draft and send webhook only (no email, no status change)."""
+    draft = load_draft(date)
+    if not draft:
+        tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
+        today = date or datetime.now(tz).strftime("%Y-%m-%d")
+        print(f"Error: No draft found for {today}")
+        return 1
+
+    print("Sending webhook...")
+    try:
+        wh_ok = send_webhook(draft, settings)
+        if wh_ok:
+            print("Webhook sent successfully!")
+            return 0
+        else:
+            print("Webhook send failed")
+            return 1
+    except Exception as e:
+        print(f"Webhook error: {e}")
+        return 1
+
+
 def main():
     settings = load_settings()
     tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
@@ -167,6 +191,8 @@ def main():
         exit_code = run_fetch(settings)
     elif mode == "send":
         exit_code = run_send(settings, date_arg)
+    elif mode == "webhook":
+        exit_code = run_webhook(settings, date_arg)
     else:
         exit_code = run_full(settings)
 

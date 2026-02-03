@@ -1,0 +1,37 @@
+name: Send Webhook
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Draft date to send (YYYY-MM-DD, defaults to today)'
+        required: false
+        type: string
+
+jobs:
+  send-webhook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Send webhook from draft
+        env:
+          WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
+          SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
+        run: |
+          cd src
+          python main.py webhook ${{ inputs.date }}
