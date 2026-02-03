@@ -91,6 +91,12 @@ def send_webhook(news_data: dict, settings: dict = None) -> bool:
         with urllib.request.urlopen(req, timeout=30) as resp:
             result = json.loads(resp.read().decode("utf-8"))
             print(f"Webhook response: {result}")
+            # Check API error code (0 = success)
+            errcode = result.get("errcode", 0)
+            if errcode != 0:
+                errmsg = result.get("errmsg", "unknown error")
+                print(f"Webhook API error: {errcode} - {errmsg}")
+                return False
             return True
     except urllib.error.HTTPError as e:
         print(f"Webhook HTTP error: {e.code} {e.reason}")

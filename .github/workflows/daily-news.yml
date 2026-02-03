@@ -1,11 +1,11 @@
 name: Daily News Digest
 
 on:
-  # 每天 UTC 10:00 运行 (北京时间 18:00)
+  # 每小时运行，由脚本检查是否到达设定时间
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 * * * *'
 
-  # 允许手动触发
+  # 允许手动触发（跳过时间检查）
   workflow_dispatch:
 
 jobs:
@@ -17,18 +17,48 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check scheduled time
+        id: time_check
+        env:
+          IS_MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          # Read settings
+          SEND_HOUR=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('send_hour', 17))")
+          TZ=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('timezone', 'Asia/Shanghai'))")
+
+          # Get current hour in configured timezone
+          CURRENT_HOUR=$(TZ="$TZ" date +%H | sed 's/^0//')
+
+          echo "Settings: send at hour ${SEND_HOUR}, timezone ${TZ}"
+          echo "Current hour: ${CURRENT_HOUR}"
+
+          # Check if it's time to run (or manual trigger)
+          if [ "$IS_MANUAL" = "true" ]; then
+            echo "Manual trigger, proceeding..."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          elif [ "$CURRENT_HOUR" = "$SEND_HOUR" ]; then
+            echo "Scheduled time matched, proceeding..."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Not scheduled time, skipping..."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Python
+        if: steps.time_check.outputs.skip == 'false'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
       - name: Install dependencies
+        if: steps.time_check.outputs.skip == 'false'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run news digest
+        if: steps.time_check.outputs.skip == 'false'
         id: digest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -45,7 +75,7 @@ jobs:
           python main.py
 
       - name: Notify admin on failure
-        if: failure()
+        if: failure() && steps.time_check.outputs.skip == 'false'
         env:
           SMTP_HOST: smtp.qq.com
           SMTP_PORT: '587'

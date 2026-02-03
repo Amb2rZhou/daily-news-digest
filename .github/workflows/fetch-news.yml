@@ -1,11 +1,11 @@
 name: Fetch News
 
 on:
-  # 每天 UTC 10:00 运行 (北京时间 18:00)
+  # 每小时运行，由脚本检查是否到达设定时间
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 * * * *'
 
-  # 允许手动触发
+  # 允许手动触发（跳过时间检查）
   workflow_dispatch:
 
 permissions:
@@ -20,16 +20,55 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check if draft already exists
+      - name: Check scheduled time and draft status
         id: pre_check
+        env:
+          SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
+          IS_MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          DATE=$(date -u -d '+8 hours' +%Y-%m-%d)
+          # Read settings
+          SEND_HOUR=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('send_hour', 17))")
+          SEND_MINUTE=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('send_minute', 30))")
+          TZ=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('timezone', 'Asia/Shanghai'))")
+
+          # Calculate fetch hour (30 minutes before send time)
+          if [ "$SEND_MINUTE" -lt 30 ]; then
+            FETCH_HOUR=$((SEND_HOUR - 1))
+            if [ "$FETCH_HOUR" -lt 0 ]; then
+              FETCH_HOUR=23
+            fi
+          else
+            FETCH_HOUR=$SEND_HOUR
+          fi
+
+          # Get current hour in configured timezone
+          CURRENT_HOUR=$(TZ="$TZ" date +%H | sed 's/^0//')
+
+          echo "Settings: send at ${SEND_HOUR}:${SEND_MINUTE}, fetch at hour ${FETCH_HOUR}"
+          echo "Current hour in ${TZ}: ${CURRENT_HOUR}"
+
+          # Check if it's time to run (or manual trigger)
+          if [ "$IS_MANUAL" = "true" ]; then
+            echo "Manual trigger, proceeding..."
+            TIME_OK="true"
+          elif [ "$CURRENT_HOUR" = "$FETCH_HOUR" ]; then
+            echo "Scheduled time matched, proceeding..."
+            TIME_OK="true"
+          else
+            echo "Not scheduled time, skipping..."
+            TIME_OK="false"
+          fi
+
+          # Check if draft already exists
+          DATE=$(TZ="$TZ" date +%Y-%m-%d)
           DRAFT="config/drafts/${DATE}.json"
           if [ -f "$DRAFT" ]; then
-            echo "exists=true" >> "$GITHUB_OUTPUT"
             echo "Draft already exists for ${DATE}, skipping fetch"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          elif [ "$TIME_OK" = "false" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
           else
-            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Set up Python
