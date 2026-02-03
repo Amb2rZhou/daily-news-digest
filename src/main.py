@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 
 from fetch_news import fetch_news, format_email_html, save_draft, load_draft, load_settings
 from send_email import send_email
+from send_webhook import send_webhook
 
 
 def run_fetch(settings: dict) -> int:
@@ -71,6 +72,17 @@ def run_send(settings: dict, date: str = None) -> int:
     if success:
         # Update draft status
         save_draft(draft, settings)
+
+        # Send webhook notification
+        if settings.get("webhook_enabled", False):
+            print("Sending webhook...")
+            try:
+                wh_ok = send_webhook(draft, settings)
+                if not wh_ok:
+                    print("Warning: Webhook send failed")
+            except Exception as e:
+                print(f"Warning: Webhook error: {e}")
+
         print("Done!")
         return 0
     else:
@@ -117,6 +129,16 @@ def run_full(settings: dict) -> int:
     success = send_email(subject=email_subject, body=email_body)
 
     if success:
+        # Send webhook notification
+        if settings.get("webhook_enabled", False):
+            print("Sending webhook...")
+            try:
+                wh_ok = send_webhook(news_data, settings)
+                if not wh_ok:
+                    print("Warning: Webhook send failed")
+            except Exception as e:
+                print(f"Warning: Webhook error: {e}")
+
         print("Done!")
         return 0
     else:

@@ -3,6 +3,8 @@
   "send_minute": 30,
   "timezone": "Asia/Shanghai",
   "max_news_items": 10,
+  "webhook_enabled": true,
+  "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
   "categories_order": [
     "产品发布",
     "巨头动向",
