@@ -265,6 +265,34 @@ export default function Settings() {
         />
       </div>
 
+      {/* Webhook settings */}
+      <div style={card}>
+        <h2 style={{ fontSize: 16, marginBottom: 16 }}>Webhook 推送</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <input
+              type="checkbox"
+              checked={settings.webhook_enabled ?? false}
+              onChange={(e) => update('webhook_enabled', e.target.checked)}
+            />
+            <span style={{ fontSize: 13, fontWeight: 500 }}>启用 Webhook 群聊推送</span>
+          </label>
+          <label style={{ gridColumn: '1 / -1' }}>
+            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>Webhook URL Base</span>
+            <input
+              type="text"
+              value={settings.webhook_url_base ?? ''}
+              onChange={(e) => update('webhook_url_base', e.target.value)}
+              placeholder="https://redcity-open.xiaohongshu.com/api/robot/webhook/send"
+              style={{ width: '100%' }}
+            />
+            <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 4, display: 'block' }}>
+              完整 URL = base + ?key= + WEBHOOK_KEY (密钥在「密钥管理」页设置)
+            </span>
+          </label>
+        </div>
+      </div>
+
       {/* Anthropic API Key */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>AI 辅助设置</h2>
