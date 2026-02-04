@@ -36,10 +36,9 @@ def format_webhook_markdown(news_data: dict) -> str:
         if not news_items:
             continue
 
-        # 分类标题（RedCity 标题会转为加粗显示）
-        lines.append("")
+        # 分类标题（用分隔线制造视觉间隔）
+        lines.append("───────────────")
         lines.append(f"## {icon} {name}")
-        lines.append("")
 
         for item in news_items:
             title = item.get("title", "")
