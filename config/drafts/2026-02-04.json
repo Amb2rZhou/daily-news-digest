@@ -1,0 +1,116 @@
+{
+  "date": "2026-02-04",
+  "time_window": "2026-02-03 15:25 ~ 2026-02-04 15:25",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Oura智能戒指专利暗示AR眼镜新品，将健康数据可视化",
+          "summary": "Oura新专利显示其正在开发AR眼镜产品，可与智能戒指协同工作，将心率、体温等健康数据直接显示在用户视野中，无需掏出手机查看。",
+          "comment": "当健康监测从被动查看变为主动呈现时，我们是否已经准备好让AI成为我们身体状态的'第六感'？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544677.html"
+        },
+        {
+          "title": "AI运动眼镜企业影辰科技获红杉、高瓴Pre-A轮融资",
+          "summary": "由前大疆产品经理创立的影辰科技完成Pre-A轮融资，专注AI拍摄眼镜产品，主打4K高清画质与运动场景适配，着力解决散热与续航瓶颈。",
+          "comment": "当AI眼镜从概念走向细分场景落地时，运动拍摄会成为智能眼镜的突破口吗？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544676.html"
+        },
+        {
+          "title": "夸克、乐奇Rokid等AI眼镜首次接入支付宝集福",
+          "summary": "2026年支付宝集福活动首次上线智能穿戴设备扫福功能，用户佩戴AI眼镜可通过'看一下'配合'说一句'完成扫福、集卡等全流程操作。",
+          "comment": "当传统节日习俗与最新科技融合时，这是否预示着智能眼镜正在从极客产品走向大众消费？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3668669251117959?f=rss"
+        },
+        {
+          "title": "ORamaVR医疗XR平台获450万美元种子轮融资",
+          "summary": "计算医疗扩展现实解决方案提供商ORamaVR完成450万美元融资，其CMXR平台结合AI、医学知识和沉浸式技术，可使医疗技能提升32%，手术错误减少80%。",
+          "comment": "当VR技术能显著提升医疗培训效果时，传统的医学教育模式是否面临根本性变革？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544678.html"
+        },
+        {
+          "title": "歌尔股份AI眼镜代工市占率超60%，2026年收入有望破200亿",
+          "summary": "全球智能硬件代工龙头歌尔股份在AI眼镜代工领域全球市场占有率已稳定超过60%，预计2026年相关收入将突破200亿元。",
+          "comment": "当一家代工企业在新兴领域占据如此高的份额时，这是否反映了AI眼镜市场即将迎来爆发式增长？",
+          "source": "93913",
+          "url": "https://www.93913.com/118962.html"
+        },
+        {
+          "title": "镜识科技发布Bolt人形机器人，峰值速度达10m/s",
+          "summary": "浙江大学联合镜识科技发布首款峰值速度达10m/s的全尺寸人形机器人Bolt，逼近人类极限速度，主要面向物流安防等应用场景。",
+          "comment": "当人形机器人的运动能力开始接近甚至超越人类时，我们该如何重新定义'机器助手'的边界？",
+          "source": "93913",
+          "url": "https://www.93913.com/118979.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "谷歌Project Genie世界模型开放，可生成多样化交互环境",
+          "summary": "谷歌Genie 3世界模型现已向美国AI Ultra订阅用户开放，这是一款能生成多样化交互环境的通用世界模型，可模拟环境动态并预测演变过程。",
+          "comment": "当AI能够创造出完整的虚拟世界时，现实与虚拟的边界是否将彻底模糊？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544682.html"
+        },
+        {
+          "title": "Kimi K2.5带来'蜂群时刻'，多Agent协作完成复杂任务",
+          "summary": "月之暗面发布的Kimi K2.5展现了多Agent协作能力，可以唤起一群智能体协同完成复杂任务，展现了AI从单体向群体智能进化的趋势。",
+          "comment": "当AI开始像蜂群一样协作时，这种集体智能是否会催生出我们无法预料的能力涌现？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1653557?utm_source=rss&utm_medium=rss&utm_campaign="
+        },
+        {
+          "title": "Apple在Xcode 26.3中集成Claude和Codex，推进'代理编程'",
+          "summary": "苹果发布Xcode 26.3重大更新，集成Anthropic的Claude Agent和OpenAI的Codex，让AI代理获得前所未有的应用构建控制权，标志着'代理编程'时代到来。",
+          "comment": "当AI代理开始自主编写代码时，程序员的角色是否将从'编码者'转变为'AI训练师'？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/apple-integrates-anthropics-claude-and-openais-codex-into-xcode-26-3-in-push"
+        },
+        {
+          "title": "Anthropic AI工具引发股市大跌，软件板块蒸发2850亿美元",
+          "summary": "Anthropic发布的新AI自动化工具引发股市恐慌，软件、金融服务和资产管理板块出现2850亿美元的大规模抛售，投资者担忧AI对传统行业的冲击。",
+          "comment": "当AI工具的发布就能引发千亿美元的市场震荡时，我们是否低估了技术进步对经济生态的重塑速度？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/videos/2026-02-04/anthropic-ai-tool-sparks-stocks-selloff-video"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "SpaceX以2500亿美元收购xAI，布局AI卫星业务",
+          "summary": "马斯克旗下SpaceX宣布以2500亿美元收购其AI公司xAI，计划开创太空AI卫星的新领域，这将是科技史上最大规模的收购交易之一。",
+          "comment": "当地球上最富有的人将AI送上太空时，这是否意味着下一轮技术革命将在轨道上展开？",
+          "source": "EE Times",
+          "url": "https://www.eetimes.com/spacex-acquires-xai-for-250-billion/"
+        },
+        {
+          "title": "AMD暗示微软下一代Xbox将于2027年发布",
+          "summary": "AMD CEO透露微软下一代Xbox主机的开发进展顺利，搭载AMD定制SoC芯片，有望于2027年发布，这比预期时间略有推迟。",
+          "comment": "当游戏主机的更新周期开始延长时，这是否反映了硬件创新正在遇到物理极限？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/news/873490/microsoft-next-gen-xbox-console-2027-date-amd"
+        },
+        {
+          "title": "Pinterest CEO解雇制作裁员追踪工具的员工",
+          "summary": "当员工试图追踪公司裁员情况却被解雇时，企业透明度与管理权威之间的平衡点在哪里？",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/cn0k670n0ydo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "status": "pending_review",
+  "created_at": "2026-02-04T15:31:34.758458+08:00"
+}
