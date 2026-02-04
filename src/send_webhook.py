@@ -36,9 +36,11 @@ def format_webhook_markdown(news_data: dict) -> str:
         if not news_items:
             continue
 
-        # 分类标题
-        lines.append(f"\n## {icon} {name}")
-        lines.append("")  # 空行
+        # 分类标题（与主标题间隔两行，字号比正文大）
+        lines.append("")
+        lines.append("")
+        lines.append(f'### <font size="4">{icon} {name}</font>')
+        lines.append("")
 
         for item in news_items:
             title = item.get("title", "")
