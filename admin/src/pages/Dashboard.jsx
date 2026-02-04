@@ -62,7 +62,19 @@ export default function Dashboard() {
           .filter(f => f.name.endsWith('.json'))
           .sort((a, b) => b.name.localeCompare(a.name))
           .slice(0, 7)
-        setRecentDrafts(sorted)
+
+        // 加载所有草稿内容以显示状态
+        const draftsWithData = await Promise.all(sorted.map(async (f) => {
+          try {
+            const file = await readFile(`config/drafts/${f.name}`)
+            if (file) {
+              const data = JSON.parse(file.content)
+              return { name: f.name, status: data.status, newsCount: (data.categories || []).reduce((n, c) => n + (c.news || []).length, 0) }
+            }
+          } catch {}
+          return { name: f.name }
+        }))
+        setRecentDrafts(draftsWithData)
 
         if (sorted.length > 0) {
           const latestFile = await readFile(`config/drafts/${sorted[0].name}`)
@@ -471,6 +483,8 @@ export default function Dashboard() {
                 border: '1px solid var(--border)', fontSize: 13,
               }}>
                 <span style={{ fontWeight: 500 }}>{f.name.replace('.json', '')}</span>
+                {f.status && statusBadge(f.status)}
+                {f.newsCount != null && <span style={{ color: 'var(--text3)', fontSize: 12 }}>{f.newsCount} 条</span>}
               </div>
             ))}
           </div>

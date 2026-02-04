@@ -8,6 +8,9 @@ const card = {
 }
 
 const CATEGORY_ICONS = {
+  // 聚焦模式
+  '智能硬件': '🥽', 'AI技术与产品': '🤖', '巨头动向与行业观察': '🏢',
+  // 泛AI模式
   '产品发布': '🚀', '巨头动向': '🏢', '技术进展': '🔬',
   '行业观察': '📊', '投融资': '💰',
 }
@@ -27,7 +30,7 @@ export default function History() {
       const sorted = files
         .filter(f => f.name.endsWith('.json'))
         .sort((a, b) => b.name.localeCompare(a.name))
-        .slice(0, 7)
+        .slice(0, 30)  // 保留最近 30 天
       setDrafts(sorted)
 
       // Pre-load all draft data for status display
@@ -129,6 +132,9 @@ export default function History() {
                           <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 2 }}>{item.source}</div>
                           {item.summary && (
                             <p style={{ fontSize: 13, color: 'var(--text2)', marginTop: 6, lineHeight: 1.5 }}>{item.summary}</p>
+                          )}
+                          {item.comment && (
+                            <p style={{ fontSize: 12, color: '#7c3aed', marginTop: 4, fontStyle: 'italic' }}>{item.comment}</p>
                           )}
                         </div>
                       ))}
