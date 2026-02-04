@@ -327,7 +327,7 @@ def apply_filters(articles: list[dict], settings: dict = None) -> list[dict]:
 
     return filtered
 
-def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_names: str, category_json_example: str, icon_mapping: str, custom_prompt: str = None) -> str:
+def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_names: str, category_json_example: str, icon_mapping: str, custom_prompt: str = None, paywalled_sources: str = "") -> str:
     """Generate the Claude prompt based on topic mode or custom prompt.
 
     If custom_prompt is provided, it will be used directly with variable substitution:
@@ -336,6 +336,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
     - {category_names} - Category names joined by 、
     - {category_json_example} - Example JSON structure
     - {icon_mapping} - Icon mapping string
+    - {paywalled_sources} - Comma-separated list of paywalled source names
     """
 
     if custom_prompt:
@@ -346,7 +347,8 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
                 max_items=max_items,
                 category_names=category_names,
                 category_json_example=category_json_example,
-                icon_mapping=icon_mapping
+                icon_mapping=icon_mapping,
+                paywalled_sources=paywalled_sources
             )
         except KeyError as e:
             print(f"  Warning: Custom prompt has invalid variable {e}, falling back to mode-based prompt")
@@ -380,6 +382,12 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 智能硬件相关新闻优先收录，即使看起来不那么重大也要保留
 - 去重：相同事件只保留最权威来源
 - 每个分类内按重要性排序
+
+**付费墙处理**（重要）：
+以下来源是付费墙媒体：{paywalled_sources}
+- 如果某条重要新闻来自付费墙源，请在新闻列表中寻找覆盖相同事件的免费源
+- 找到后，使用免费源的 URL，但可以综合两个来源的信息写摘要
+- 如果找不到免费替代，可以保留付费源但在 source 字段标注「(付费墙)」
 
 **输出要求**：
 - 为每条新闻写一个简短的中文摘要（1-2句话）
@@ -508,7 +516,16 @@ URL: {article.get('url', '')}
 
     icon_mapping = " ".join(f'{c["name"]}:{c["icon"]}' for c in categories)
 
-    prompt = get_prompt_for_mode(topic_mode, articles_text, max_items, category_names, category_json_example, icon_mapping, custom_prompt)
+    # 获取付费墙源名称
+    rss_feeds = settings.get("rss_feeds", [])
+    paywalled_sources = ", ".join(
+        feed.get("name", "") for feed in rss_feeds
+        if feed.get("paywalled", False) and feed.get("enabled", True)
+    )
+    if paywalled_sources:
+        print(f"  - Paywalled sources: {paywalled_sources}")
+
+    prompt = get_prompt_for_mode(topic_mode, articles_text, max_items, category_names, category_json_example, icon_mapping, custom_prompt, paywalled_sources)
 
     try:
         response = client.messages.create(

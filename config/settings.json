@@ -186,13 +186,15 @@
       "url": "https://feeds.bloomberg.com/technology/news.rss",
       "name": "Bloomberg Tech",
       "group": "国际主流媒体",
-      "enabled": true
+      "enabled": true,
+      "paywalled": true
     },
     {
       "url": "https://www.ft.com/technology?format=rss",
       "name": "Financial Times Tech",
       "group": "国际主流媒体",
-      "enabled": true
+      "enabled": true,
+      "paywalled": true
     },
     {
       "url": "https://rsshub.app/bilibili/user/video/612932327",
