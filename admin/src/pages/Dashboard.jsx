@@ -737,6 +737,15 @@ export default function Dashboard() {
                           </p>
                         )
                       )}
+                      {item.comment && (
+                        <p style={{
+                          fontSize: 12, color: '#059669', marginTop: 6, lineHeight: 1.5,
+                          padding: '6px 10px', background: '#ecfdf5', borderRadius: 6,
+                          borderLeft: '3px solid #10b981',
+                        }}>
+                          <span style={{ fontWeight: 500 }}>💡 </span>{item.comment}
+                        </p>
+                      )}
                       {!isEditing && !item.summary && (
                         <button
                           onClick={() => { setEditingNews({ catIdx, newsIdx }); setEditSummary('') }}
