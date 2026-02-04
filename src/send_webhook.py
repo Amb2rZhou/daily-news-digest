@@ -53,9 +53,9 @@ def format_webhook_markdown(news_data: dict) -> str:
             if summary:
                 lines.append(f"> {summary}")
 
-            # 思考问题（去掉emoji，用引用格式）
+            # 思考问题（绿色，不斜体）
             if comment:
-                lines.append(f"> *{comment}*")
+                lines.append(f'> <font color="green">{comment}</font>')
 
             # 链接
             lines.append(f"[阅读原文]({url})")
