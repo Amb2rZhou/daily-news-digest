@@ -76,6 +76,11 @@ def load_settings() -> dict:
         return defaults
 
 CATEGORY_ICONS = {
+    # 聚焦模式的 3 个分类
+    "智能硬件": "🥽",
+    "AI技术与产品": "🤖",
+    "巨头动向与行业观察": "🏢",
+    # 泛 AI 模式的 5 个分类（保留兼容）
     "产品发布": "🚀",
     "巨头动向": "🏢",
     "技术进展": "🔬",
@@ -324,24 +329,39 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
             print(f"  Warning: Custom prompt has invalid variable {e}, falling back to mode-based prompt")
 
     if mode == "focused":
-        # 聚焦模式：智能硬件 + AI技术产品 + 巨头动向
+        # 聚焦模式：3 个主题分类，智能硬件最高优先级
         return f"""以下是最近24小时内从多个来源抓取的新闻列表。请帮我筛选和整理。
 
-**聚焦领域**（只关注以下三个方向）：
-1. **智能硬件**：AR/VR/MR/XR、智能眼镜、智能穿戴设备、空间计算、头显设备、脑机接口等
-2. **AI 技术及产品进展**：模型能力提升（推理、多模态、长上下文等）、新产品形态（AI Agent、AI 硬件、AI 应用）、新范式（端侧AI、开源模型、AI基础设施）
-3. **巨头动向和行业观察**：大公司战略布局、重要人事变动、行业趋势分析、政策法规影响
+**分类规则**（严格按以下 3 个分类组织新闻）：
+
+1. **🥽 智能硬件**【最高优先级】
+   - AR/VR/MR/XR 设备、智能眼镜（Meta Ray-Ban、Apple Vision Pro、XREAL、Rokid 等）
+   - 智能穿戴设备（智能手表、智能戒指、耳机等）
+   - 空间计算、头显设备、脑机接口
+   - 机器人（人形机器人、服务机器人、工业机器人）
+   - AI 硬件（AI PC、AI 手机、AI 芯片等）
+   - ⚠️ 这是我最关注的领域，请优先筛选，尽可能多收录
+
+2. **🤖 AI技术与产品**
+   - 模型能力提升：推理能力、多模态、长上下文、Agent 能力等
+   - 新产品形态：AI Agent、AI 编程工具、AI 创作工具、AI 应用
+   - 新范式：端侧 AI、开源模型、AI 基础设施、训练/推理优化
+
+3. **🏢 巨头动向与行业观察**
+   - 大公司战略布局、重要人事变动、并购收购
+   - 行业趋势分析、政策法规影响
+   - 重大投融资事件
 
 **筛选要求**：
-- 严格按照上述三个方向筛选，不相关的新闻直接排除
+- 严格按上述 3 个分类筛选，不相关的新闻直接排除
+- 智能硬件相关新闻优先收录，即使看起来不那么重大也要保留
 - 去重：相同事件只保留最权威来源
-- 按重要性排序（全球影响 > 行业影响 > 区域影响）
+- 每个分类内按重要性排序
 
 **输出要求**：
 - 为每条新闻写一个简短的中文摘要（1-2句话）
 - **重要**：为每条新闻添加一句 comment，内容是你的评价或基于该信息对未来的合理推演
-- 将新闻按以下类别分组：{category_names}
-- 总共最多选 {max_items} 条新闻
+- 总共最多选 {max_items} 条新闻，但智能硬件分类不受此限制，有多少收多少
 
 新闻列表：
 {articles_text}
@@ -350,27 +370,37 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 {{
   "categories": [
     {{
-      "name": "类别名",
-      "icon": "emoji",
-      "news": [
-        {{
-          "title": "新闻标题",
-          "summary": "1-2句摘要",
-          "comment": "评价或未来推演",
-          "source": "来源",
-          "url": "链接"
-        }}
-      ]
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [...]
+    }},
+    {{
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [...]
+    }},
+    {{
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [...]
     }}
   ]
 }}
 
+每条 news 的结构：
+{{
+  "title": "新闻标题",
+  "summary": "1-2句中文摘要",
+  "comment": "你的评价或未来推演",
+  "source": "来源",
+  "url": "链接"
+}}
+
 注意：
-- 只返回有新闻的类别
-- icon 必须与类别对应（{icon_mapping}）
+- 分类顺序必须是：智能硬件 → AI技术与产品 → 巨头动向与行业观察
+- 只返回有新闻的分类
 - 只返回合法的 JSON，不要其他文字
-- 确保所有字符串中的双引号用单引号替换
-- comment 字段必须有内容，是你对这条新闻的洞察"""
+- 确保所有字符串中的双引号用单引号替换"""
 
     else:
         # 泛 AI 模式（默认）
@@ -414,10 +444,19 @@ def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_ite
     if settings is None:
         settings = load_settings()
 
-    categories = get_categories(settings)
     topic_mode = settings.get("topic_mode", "broad")  # "broad" or "focused"
     custom_prompt = settings.get("custom_prompt", "")  # User-defined custom prompt
     client = anthropic.Anthropic(api_key=anthropic_key)
+
+    # 聚焦模式使用专门的 3 个分类
+    if topic_mode == "focused" and not custom_prompt:
+        categories = [
+            {"name": "智能硬件", "icon": "🥽"},
+            {"name": "AI技术与产品", "icon": "🤖"},
+            {"name": "巨头动向与行业观察", "icon": "🏢"},
+        ]
+    else:
+        categories = get_categories(settings)
 
     if custom_prompt:
         print(f"  - Using custom prompt ({len(custom_prompt)} chars)")
@@ -575,7 +614,7 @@ def load_draft(date: str = None):
 def format_email_html(news_data: dict, settings: dict = None) -> str:
     """Format news data into a beautiful HTML email.
 
-    Categories are rendered in the fixed order from settings.
+    Categories are rendered in the order from the draft (聚焦模式的顺序由 Claude 返回).
     """
     if settings is None:
         settings = load_settings()
@@ -584,19 +623,11 @@ def format_email_html(news_data: dict, settings: dict = None) -> str:
     time_window = news_data.get("time_window", "")
     raw_categories = news_data.get("categories", [])
 
-    # Build a lookup from category name to category data
-    cat_lookup = {cat.get("name"): cat for cat in raw_categories}
-
-    # Render in the fixed order from settings
-    ordered_names = settings.get("categories_order", list(CATEGORY_ICONS.keys()))
-
-    # Build category sections
+    # Build category sections - 直接按草稿中的顺序显示
     sections_html = ""
     has_news = False
-    for cat_name in ordered_names:
-        cat = cat_lookup.get(cat_name)
-        if not cat:
-            continue
+    for cat in raw_categories:
+        cat_name = cat.get("name", "")
         news_items = cat.get("news", [])
         if not news_items:
             continue

@@ -1,4 +1,7 @@
 const CATEGORY_ICONS = {
+  // 聚焦模式 3 分类
+  '智能硬件': '🥽', 'AI技术与产品': '🤖', '巨头动向与行业观察': '🏢',
+  // 泛 AI 模式 5 分类
   '产品发布': '🚀', '巨头动向': '🏢', '技术进展': '🔬',
   '行业观察': '📊', '投融资': '💰',
 }
@@ -8,17 +11,12 @@ export function generateEmailHtml(draft, settings) {
   const timeWindow = draft.time_window || ''
   const rawCategories = draft.categories || []
 
-  const catLookup = {}
-  rawCategories.forEach(cat => { catLookup[cat.name] = cat })
-
-  const orderedNames = settings?.categories_order || Object.keys(CATEGORY_ICONS)
-
+  // 直接按草稿中的分类顺序显示（聚焦模式的顺序由 Claude 返回）
   let sectionsHtml = ''
   let hasNews = false
 
-  for (const catName of orderedNames) {
-    const cat = catLookup[catName]
-    if (!cat) continue
+  for (const cat of rawCategories) {
+    const catName = cat.name || ''
     const newsItems = cat.news || []
     if (newsItems.length === 0) continue
     hasNews = true
@@ -28,13 +26,19 @@ export function generateEmailHtml(draft, settings) {
     for (const item of newsItems) {
       const title = escapeHtml(item.title || '')
       const summary = escapeHtml(item.summary || '')
+      const comment = escapeHtml(item.comment || '')
       const source = escapeHtml(item.source || '')
       const url = escapeHtml(item.url || '#')
+
+      const commentHtml = comment
+        ? `<p style="color:#059669;font-size:13px;line-height:1.5;margin:8px 0 10px 0;padding:8px 12px;background:#ecfdf5;border-radius:6px;">💡 ${comment}</p>`
+        : ''
 
       cardsHtml += `<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
 <tr><td style="background:#ffffff;border-radius:8px;border:1px solid #e8e8e8;padding:16px 20px;">
   <a href="${url}" style="color:#1a1a2e;text-decoration:none;font-size:15px;font-weight:600;line-height:1.4;display:block;" target="_blank">${title}</a>
   <p style="color:#555;font-size:14px;line-height:1.6;margin:8px 0 10px 0;">${summary}</p>
+  ${commentHtml}
   <span style="display:inline-block;background:#eef2ff;color:#4f46e5;font-size:12px;padding:2px 10px;border-radius:12px;">${source}</span>
 </td></tr>
 </table>`

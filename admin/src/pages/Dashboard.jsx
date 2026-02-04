@@ -12,6 +12,9 @@ const card = {
 const WEWE_RSS_BASE = 'https://amb2rzhou.zeabur.app'
 
 const CATEGORY_ICONS = {
+  // 聚焦模式 3 分类
+  '智能硬件': '🥽', 'AI技术与产品': '🤖', '巨头动向与行业观察': '🏢',
+  // 泛 AI 模式 5 分类
   '产品发布': '🚀', '巨头动向': '🏢', '技术进展': '🔬',
   '行业观察': '📊', '投融资': '💰',
 }
