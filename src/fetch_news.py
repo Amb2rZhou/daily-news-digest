@@ -386,7 +386,13 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 去重：相同事件只保留最权威来源
 - 每个分类内按重要性排序
 
-**付费墙处理**（重要）：
+**来源权威性优先**（重要）：
+权威来源列表：IEEE Spectrum, The Verge, TechCrunch, Wired, Ars Technica, Tom's Hardware, AnandTech, EE Times, The Robot Report, 9to5Mac, 9to5Google, Reuters, BBC, Bloomberg, CNBC, 机器之心, 36氪, 量子位
+- 如果某条新闻来自小众来源（如 UploadVR, Road to VR, VRFocus, AR Post, MIXED, 6DOF Reviews, XR Today, 93913, VR陀螺, 青亭网, 87870 等），请检查新闻列表中是否有权威来源报道了相同事件
+- 如果找到权威来源的报道，优先使用权威来源的 URL，但可以综合多个来源的信息写摘要
+- 如果没有找到权威替代，可以使用原来源
+
+**付费墙处理**：
 以下来源是付费墙媒体：{paywalled_sources}
 - 如果某条重要新闻来自付费墙源，请在新闻列表中寻找覆盖相同事件的免费源
 - 找到后，使用免费源的 URL，但可以综合两个来源的信息写摘要
