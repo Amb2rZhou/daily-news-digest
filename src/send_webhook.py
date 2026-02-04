@@ -40,12 +40,16 @@ def format_webhook_markdown(news_data: dict) -> str:
         for item in news_items:
             title = item.get("title", "")
             summary = item.get("summary", "")
+            comment = item.get("comment", "")
             url = item.get("url", "")
-            # 标题加粗 + 摘要 + 原文链接
+            # 标题加粗 + 摘要 + AI评论 + 原文链接
             if summary:
-                lines.append(f"**{title}**\n{summary}\n[查看原文]({url})")
+                lines.append(f"**{title}**\n{summary}")
             else:
-                lines.append(f"**{title}**\n[查看原文]({url})")
+                lines.append(f"**{title}**")
+            if comment:
+                lines.append(f"<font color=\"info\">💡 {comment}</font>")
+            lines.append(f"[查看原文]({url})")
             total_news += 1
 
     lines.append(f"\n<font color=\"comment\">共 {total_news} 条新闻</font>")

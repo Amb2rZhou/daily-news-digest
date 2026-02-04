@@ -194,6 +194,61 @@ export default function Settings() {
         </div>
       </div>
 
+      {/* Topic Mode */}
+      <div style={card}>
+        <h2 style={{ fontSize: 16, marginBottom: 16 }}>主题模式</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <label style={{
+            display: 'flex', alignItems: 'flex-start', gap: 12, padding: 16,
+            background: settings.topic_mode === 'broad' ? '#eef2ff' : '#f9fafb',
+            border: settings.topic_mode === 'broad' ? '2px solid #6366f1' : '1px solid var(--border)',
+            borderRadius: 8, cursor: 'pointer',
+          }}>
+            <input
+              type="radio"
+              name="topic_mode"
+              value="broad"
+              checked={settings.topic_mode === 'broad' || !settings.topic_mode}
+              onChange={() => update('topic_mode', 'broad')}
+              style={{ marginTop: 2 }}
+            />
+            <div>
+              <div style={{ fontWeight: 600, fontSize: 14 }}>泛 AI 模式</div>
+              <div style={{ fontSize: 12, color: 'var(--text2)', marginTop: 4 }}>
+                覆盖 AI 全领域：模型发布、公司动态、融资、产品、政策、应用落地、机器人、自动驾驶等
+              </div>
+            </div>
+          </label>
+          <label style={{
+            display: 'flex', alignItems: 'flex-start', gap: 12, padding: 16,
+            background: settings.topic_mode === 'focused' ? '#fef3c7' : '#f9fafb',
+            border: settings.topic_mode === 'focused' ? '2px solid #d97706' : '1px solid var(--border)',
+            borderRadius: 8, cursor: 'pointer',
+          }}>
+            <input
+              type="radio"
+              name="topic_mode"
+              value="focused"
+              checked={settings.topic_mode === 'focused'}
+              onChange={() => update('topic_mode', 'focused')}
+              style={{ marginTop: 2 }}
+            />
+            <div>
+              <div style={{ fontWeight: 600, fontSize: 14 }}>🎯 聚焦模式</div>
+              <div style={{ fontSize: 12, color: 'var(--text2)', marginTop: 4 }}>
+                重点关注三个方向：<br/>
+                • 智能硬件（AR/VR/MR/XR、智能穿戴、空间计算）<br/>
+                • AI 技术及产品进展（模型能力、新产品形态、新范式）<br/>
+                • 巨头动向和行业观察
+              </div>
+              <div style={{ fontSize: 12, color: '#d97706', marginTop: 8, fontWeight: 500 }}>
+                ✨ 每条新闻附带 AI 评论/未来推演
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
       {/* Category order */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>分类排序</h2>

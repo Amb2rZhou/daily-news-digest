@@ -299,40 +299,61 @@ def apply_filters(articles: list[dict], settings: dict = None) -> list[dict]:
 
     return filtered
 
-def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_items: int = 10, settings: dict = None) -> list[dict]:
-    """Use Claude to summarize, categorize, and select top news."""
+def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_names: str, category_json_example: str, icon_mapping: str) -> str:
+    """Generate the Claude prompt based on topic mode."""
 
-    if not articles:
-        return []
+    if mode == "focused":
+        # 聚焦模式：智能硬件 + AI技术产品 + 巨头动向
+        return f"""以下是最近24小时内从多个来源抓取的新闻列表。请帮我筛选和整理。
 
-    if settings is None:
-        settings = load_settings()
+**聚焦领域**（只关注以下三个方向）：
+1. **智能硬件**：AR/VR/MR/XR、智能眼镜、智能穿戴设备、空间计算、头显设备、脑机接口等
+2. **AI 技术及产品进展**：模型能力提升（推理、多模态、长上下文等）、新产品形态（AI Agent、AI 硬件、AI 应用）、新范式（端侧AI、开源模型、AI基础设施）
+3. **巨头动向和行业观察**：大公司战略布局、重要人事变动、行业趋势分析、政策法规影响
 
-    categories = get_categories(settings)
-    client = anthropic.Anthropic(api_key=anthropic_key)
+**筛选要求**：
+- 严格按照上述三个方向筛选，不相关的新闻直接排除
+- 去重：相同事件只保留最权威来源
+- 按重要性排序（全球影响 > 行业影响 > 区域影响）
 
-    # Prepare articles for Claude
-    articles_text = ""
-    for i, article in enumerate(articles[:120], 1):  # Limit to 120 articles for diversity
-        articles_text += f"""
----
-Article {i}:
-Title: {article.get('title', '')}
-Source: {article.get('source', '')}
-Published: {article.get('published', '')}
-Description: {article.get('description', '')}
-URL: {article.get('url', '')}
-"""
+**输出要求**：
+- 为每条新闻写一个简短的中文摘要（1-2句话）
+- **重要**：为每条新闻添加一句 comment，内容是你的评价或基于该信息对未来的合理推演
+- 将新闻按以下类别分组：{category_names}
+- 总共最多选 {max_items} 条新闻
 
-    category_names = "、".join(c["name"] for c in categories)
-    category_json_example = json.dumps(
-        [{"name": c["name"], "icon": c["icon"], "news": [{"title": "...", "summary": "...", "source": "...", "url": "..."}]} for c in categories[:2]],
-        ensure_ascii=False, indent=4
-    )
+新闻列表：
+{articles_text}
 
-    icon_mapping = " ".join(f'{c["name"]}:{c["icon"]}' for c in categories)
+请以 JSON 格式返回，结构如下：
+{{
+  "categories": [
+    {{
+      "name": "类别名",
+      "icon": "emoji",
+      "news": [
+        {{
+          "title": "新闻标题",
+          "summary": "1-2句摘要",
+          "comment": "评价或未来推演",
+          "source": "来源",
+          "url": "链接"
+        }}
+      ]
+    }}
+  ]
+}}
 
-    prompt = f"""以下是最近24小时内从多个来源抓取的新闻列表。请帮我：
+注意：
+- 只返回有新闻的类别
+- icon 必须与类别对应（{icon_mapping}）
+- 只返回合法的 JSON，不要其他文字
+- 确保所有字符串中的双引号用单引号替换
+- comment 字段必须有内容，是你对这条新闻的洞察"""
+
+    else:
+        # 泛 AI 模式（默认）
+        return f"""以下是最近24小时内从多个来源抓取的新闻列表。请帮我：
 
 1. **严格筛选**：只保留与 AI（人工智能）直接相关的新闻
    - 必须包含的：AI 模型发布/更新、AI 公司动态、AI 融资、AI 产品、AI 政策法规、AI 应用落地、大模型、机器学习、深度学习、AIGC、AGI、机器人、自动驾驶等
@@ -361,6 +382,45 @@ URL: {article.get('url', '')}
 - icon 必须与类别对应（{icon_mapping}）
 - 只返回合法的 JSON，不要其他文字
 - 确保所有字符串中的双引号用单引号替换"""
+
+
+def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_items: int = 10, settings: dict = None) -> list[dict]:
+    """Use Claude to summarize, categorize, and select top news."""
+
+    if not articles:
+        return []
+
+    if settings is None:
+        settings = load_settings()
+
+    categories = get_categories(settings)
+    topic_mode = settings.get("topic_mode", "broad")  # "broad" or "focused"
+    client = anthropic.Anthropic(api_key=anthropic_key)
+
+    print(f"  - Topic mode: {topic_mode}")
+
+    # Prepare articles for Claude
+    articles_text = ""
+    for i, article in enumerate(articles[:120], 1):  # Limit to 120 articles for diversity
+        articles_text += f"""
+---
+Article {i}:
+Title: {article.get('title', '')}
+Source: {article.get('source', '')}
+Published: {article.get('published', '')}
+Description: {article.get('description', '')}
+URL: {article.get('url', '')}
+"""
+
+    category_names = "、".join(c["name"] for c in categories)
+    category_json_example = json.dumps(
+        [{"name": c["name"], "icon": c["icon"], "news": [{"title": "...", "summary": "...", "source": "...", "url": "..."}]} for c in categories[:2]],
+        ensure_ascii=False, indent=4
+    )
+
+    icon_mapping = " ".join(f'{c["name"]}:{c["icon"]}' for c in categories)
+
+    prompt = get_prompt_for_mode(topic_mode, articles_text, max_items, category_names, category_json_example, icon_mapping)
 
     try:
         response = client.messages.create(
@@ -522,13 +582,19 @@ def format_email_html(news_data: dict, settings: dict = None) -> str:
         for item in news_items:
             title = item.get("title", "")
             summary = item.get("summary", "")
+            comment = item.get("comment", "")
             source = item.get("source", "")
             url = item.get("url", "#")
+
+            comment_html = ""
+            if comment:
+                comment_html = f'<p style="color:#059669;font-size:13px;line-height:1.5;margin:8px 0 10px 0;padding:8px 12px;background:#ecfdf5;border-radius:6px;">💡 {comment}</p>'
 
             cards_html += f'''<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
 <tr><td style="background:#ffffff;border-radius:8px;border:1px solid #e8e8e8;padding:16px 20px;">
   <a href="{url}" style="color:#1a1a2e;text-decoration:none;font-size:15px;font-weight:600;line-height:1.4;display:block;" target="_blank">{title}</a>
   <p style="color:#555;font-size:14px;line-height:1.6;margin:8px 0 10px 0;">{summary}</p>
+  {comment_html}
   <span style="display:inline-block;background:#eef2ff;color:#4f46e5;font-size:12px;padding:2px 10px;border-radius:12px;">{source}</span>
 </td></tr>
 </table>'''

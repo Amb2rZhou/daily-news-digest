@@ -3,6 +3,7 @@
   "send_minute": 30,
   "timezone": "Asia/Shanghai",
   "max_news_items": 10,
+  "topic_mode": "focused",
   "webhook_enabled": true,
   "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
   "categories_order": [
