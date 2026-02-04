@@ -388,9 +388,10 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 
 **来源权威性优先**（重要）：
 权威来源列表：IEEE Spectrum, The Verge, TechCrunch, Wired, Ars Technica, Tom's Hardware, AnandTech, EE Times, The Robot Report, 9to5Mac, 9to5Google, Reuters, BBC, Bloomberg, CNBC, 机器之心, 36氪, 量子位
-- 如果某条新闻来自小众来源（如 UploadVR, Road to VR, VRFocus, AR Post, MIXED, 6DOF Reviews, XR Today, 93913, VR陀螺, 青亭网, 87870 等），请检查新闻列表中是否有权威来源报道了相同事件
-- 如果找到权威来源的报道，优先使用权威来源的 URL，但可以综合多个来源的信息写摘要
-- 如果没有找到权威替代，可以使用原来源
+- 如果某条新闻来自小众来源（如 UploadVR, Road to VR, VRFocus, AR Post, MIXED, 6DOF Reviews, XR Today, 93913, VR陀螺, 青亭网, 87870 等），请检查新闻列表中是否有权威来源报道了**完全相同的事件**
+- 只有当你**确定**两篇文章报道的是同一事件时，才使用权威来源的 URL
+- ⚠️ 关键：如果使用了某个来源的 URL，摘要必须准确反映该 URL 文章的内容，不能出现摘要和链接内容不符的情况
+- 如果不确定是否是同一事件，或者权威来源的报道角度明显不同，保留原来源
 
 **付费墙处理**：
 以下来源是付费墙媒体：{paywalled_sources}
