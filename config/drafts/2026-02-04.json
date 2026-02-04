@@ -1,0 +1,117 @@
+{
+  "date": "2026-02-04",
+  "time_window": "2026-02-03 15:05 ~ 2026-02-04 15:05",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Oura智能戒指专利曝光AR眼镜计划，将与戒指协同显示健康数据",
+          "summary": "Oura Health专利文件显示正在开发AR眼镜，可与智能戒指协同工作，通过增强现实将心率、体温等健康数据直接显示在用户视野中。",
+          "comment": "当健康监测从被动查看转向主动提醒，智能戒指+AR眼镜的组合是否会重新定义个人健康管理？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544677.html"
+        },
+        {
+          "title": "ORamaVR获450万美元融资，推进医疗XR平台发展",
+          "summary": "医疗XR解决方案提供商ORamaVR完成450万美元种子轮融资，其CMXR平台结合AI、医学知识和沉浸式技术，临床验证显示可使医疗技能提升32%。",
+          "comment": "当VR培训能减少80%的医疗错误时，传统医学教育模式是否面临根本性变革？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544678.html"
+        },
+        {
+          "title": "AI运动眼镜企业影辰科技完成Pre-A轮融资",
+          "summary": "由原大疆Mavic 3产品经理创立的影辰科技完成Pre-A轮融资，红杉中国、高瓴创投参投，主攻4K AI拍摄眼镜，专注运动场景应用。",
+          "comment": "当运动拍摄从手持设备转向眼镜形态，这是否预示着第一人称视角将成为内容创作的新标准？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544676.html"
+        },
+        {
+          "title": "NBC联手Ross Video为2026冬奥会提供VR、AR转播服务",
+          "summary": "NBC体育频道选择Ross Video的Rocket Surgery为2026年米兰-科尔蒂纳冬奥会提供虚拟现实和增强现实转播技术，双方已合作10年。",
+          "comment": "当体育转播全面拥抱XR技术时，观众的观赛体验将如何从'看比赛'转变为'身临其境'？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544681.html"
+        },
+        {
+          "title": "歌尔股份AI眼镜代工市占率超60%，2026年收入有望突破200亿",
+          "summary": "全球智能硬件代工龙头歌尔股份在AI眼镜代工领域全球市场占有率已稳定超过60%，预计2026年相关收入将突破200亿元。",
+          "comment": "当一家代工厂商能占据AI眼镜市场60%份额时，这是否意味着智能眼镜即将迎来爆发式增长？",
+          "source": "93913",
+          "url": "https://www.93913.com/118962.html"
+        },
+        {
+          "title": "镜识科技发布10m/s峰值速度人形机器人Bolt",
+          "summary": "浙江大学杭州国际科创中心联合镜识科技发布首款峰值速度达10m/s的全尺寸人形机器人Bolt，速度逼近人类极限，面向物流安防等场景。",
+          "comment": "当人形机器人的移动速度接近人类极限时，它们是否已具备在复杂环境中替代人类执行任务的基础能力？",
+          "source": "93913",
+          "url": "https://www.93913.com/118979.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "谷歌Project Genie世界模型开放，可生成多样化交互环境",
+          "summary": "谷歌Genie 3是一款通用世界模型，现已通过Project Genie向美国AI Ultra订阅用户开放，用户可描述环境让AI生成可交互的游戏环境。",
+          "comment": "当AI能够根据文字描述生成完整的交互世界时，游戏开发的门槛是否会降至普通用户水平？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544682.html"
+        },
+        {
+          "title": "Apple在Xcode 26.3中集成Claude和Codex，推进'代理式编程'",
+          "summary": "苹果在Xcode 26.3中集成Anthropic的Claude和OpenAI的Codex，支持代理式编程，让AI代理能够在应用构建过程中拥有前所未有的控制权。",
+          "comment": "当AI代理能够自主控制应用开发流程时，程序员的角色是否将从代码编写者转变为AI指导者？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/apple-integrates-anthropics-claude-and-openais-codex-into-xcode-26-3-in-push"
+        },
+        {
+          "title": "Anthropic AI自动化工具引发股市恐慌，软件股暴跌2850亿美元",
+          "summary": "Anthropic发布的新AI自动化工具引发投资者担忧，导致软件、金融服务和资产管理等行业股票大幅下跌，市值蒸发2850亿美元。",
+          "comment": "当AI工具能够自动化执行复杂商业任务时，哪些传统行业将首先面临根本性重构？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/videos/2026-02-04/anthropic-ai-tool-sparks-stocks-selloff-video"
+        },
+        {
+          "title": "Kimi K2.5带来'蜂群时刻'，多Agent协同完成复杂任务",
+          "summary": "月之暗面发布的Kimi K2.5模型引入多Agent协同机制，用户可以召唤一群智能体共同完成复杂任务，实现更高效的AI协作。",
+          "comment": "当AI从单打独斗进化为集体智能时，人机协作的边界将如何重新定义？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1653557?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "SpaceX以2500亿美元收购xAI，布局AI卫星业务",
+          "summary": "马斯克的SpaceX宣布以2500亿美元收购xAI，旨在开拓太空AI卫星领域，将人工智能技术与航天业务深度整合。",
+          "comment": "当AI与太空技术结合时，这是否意味着下一代计算基础设施将从地面转向轨道？",
+          "source": "EE Times",
+          "url": "https://www.eetimes.com/spacex-acquires-xai-for-250-billion/"
+        },
+        {
+          "title": "AMD暗示微软下一代Xbox将于2027年发布",
+          "summary": "AMD CEO透露与微软合作开发的下一代Xbox主机进展顺利，搭载定制AMD芯片的新Xbox有望在2027年发布。",
+          "comment": "当游戏主机开发周期延长至7-8年时，硬件创新是否正在让位于服务和内容生态的竞争？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/news/873490/microsoft-next-gen-xbox-console-2027-date-amd"
+        },
+        {
+          "title": "Nvidia与OpenAI千亿美元投资计划告吹",
+          "summary": "五个月前宣布的Nvidia对OpenAI 1000亿美元投资计划未能落实，两家AI巨头的合作计划破裂引发市场信心动摇。",
+          "comment": "当AI领域最大的芯片供应商与最知名的模型公司合作破裂时，这是否预示着AI产业链正在重新洗牌？",
+          "source": "Ars Technica",
+          "url": "https://arstechnica.com/information-technology/2026/02/five-months-later-nvidias-100-billion-openai-investment-plan-has-fizzled-out/"
+        }
+      ]
+    }
+  ],
+  "status": "pending_review",
+  "created_at": "2026-02-04T15:10:45.231873+08:00"
+}
