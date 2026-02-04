@@ -439,6 +439,84 @@
       "name": "VR陀螺",
       "group": "智能硬件",
       "enabled": true
+    },
+    {
+      "url": "https://www.vrfocus.com/feed/",
+      "name": "VRFocus",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://arpost.co/feed/",
+      "name": "AR Post",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://mixed-news.com/en/feed/",
+      "name": "MIXED",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://6dofreviews.com/feed/",
+      "name": "6DOF Reviews",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://spectrum.ieee.org/feeds/topic/robotics",
+      "name": "IEEE Spectrum Robotics",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.robotics247.com/rss/rss.xml",
+      "name": "Robotics 24/7",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.tomshardware.com/feeds/all",
+      "name": "Tom's Hardware",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.anandtech.com/rss/",
+      "name": "AnandTech",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.eetimes.com/feed/",
+      "name": "EE Times",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://9to5mac.com/feed/",
+      "name": "9to5Mac",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://9to5google.com/feed/",
+      "name": "9to5Google",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.7tin.cn/feed/",
+      "name": "青亭网",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.87870.com/feed/",
+      "name": "87870",
+      "group": "智能硬件",
+      "enabled": true
     }
   ],
   "recipients": [
