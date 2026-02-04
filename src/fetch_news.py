@@ -201,13 +201,14 @@ def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
 
     return articles
 
-def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_source: int = 3) -> list[dict]:
+def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_source: int = 3, hardware_unlimited: bool = False) -> list[dict]:
     """Fetch raw news from multiple RSS feeds in parallel.
 
     Args:
         cutoff: Only include articles published after this time
         settings: Settings dict
         max_per_source: Maximum articles to keep per source (ensures diversity)
+        hardware_unlimited: If True, smart hardware sources are not limited (only for focused mode)
     """
     if settings is None:
         settings = load_settings()
@@ -216,13 +217,14 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     feed_urls = get_rss_feeds(settings)
     print(f"  - Using {len(feed_urls)} RSS feeds")
 
-    # 获取智能硬件源的名称列表（这些源不受 max_per_source 限制）
-    rss_feeds = settings.get("rss_feeds", [])
+    # 获取智能硬件源的名称列表（仅聚焦模式下不受限制）
     hardware_sources = set()
-    for feed in rss_feeds:
-        if feed.get("group") == "智能硬件" and feed.get("enabled", True):
-            hardware_sources.add(feed.get("name", ""))
-    print(f"  - Smart hardware sources (no limit): {list(hardware_sources)}")
+    if hardware_unlimited:
+        rss_feeds = settings.get("rss_feeds", [])
+        for feed in rss_feeds:
+            if feed.get("group") == "智能硬件" and feed.get("enabled", True):
+                hardware_sources.add(feed.get("name", ""))
+        print(f"  - Smart hardware sources (no limit): {list(hardware_sources)}")
 
     # Collect articles grouped by source
     articles_by_source = {}
@@ -253,17 +255,17 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
         print(f"  - Empty feeds ({len(empty_feeds)}): {[f.split('/')[-1][:30] for f in empty_feeds[:10]]}")
 
     # Limit articles per source and merge
-    # 智能硬件源不受限制，其他源最多 max_per_source 篇
+    # 聚焦模式：智能硬件源不受限制；泛AI模式：所有源均受限制
     hardware_article_count = 0
     for source, articles in articles_by_source.items():
         # Sort by published time within source
         articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
-        # 检查是否是智能硬件源（通过源名称匹配）
-        is_hardware = any(hw_name in source for hw_name in hardware_sources if hw_name)
+        # 检查是否是智能硬件源（仅聚焦模式下生效）
+        is_hardware = hardware_unlimited and any(hw_name in source for hw_name in hardware_sources if hw_name)
 
         if is_hardware:
-            # 智能硬件源：全部保留
+            # 智能硬件源：全部保留（仅聚焦模式）
             all_articles.extend(articles)
             hardware_article_count += len(articles)
         else:
@@ -274,7 +276,8 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
     print(f"  - Sources with articles: {len(articles_by_source)}")
-    print(f"  - Smart hardware articles (unlimited): {hardware_article_count}")
+    if hardware_unlimited:
+        print(f"  - Smart hardware articles (unlimited): {hardware_article_count}")
     # Show top sources by article count
     source_counts = [(src, len(arts)) for src, arts in articles_by_source.items()]
     source_counts.sort(key=lambda x: -x[1])
@@ -587,8 +590,12 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
 
     print(f"  - Time window: {start_time} ~ {end_time}")
 
+    # 聚焦模式下，智能硬件源不受数量限制
+    topic_mode = settings.get("topic_mode", "broad")
+    hardware_unlimited = (topic_mode == "focused")
+
     print("  - Fetching news from RSS feeds...")
-    raw_articles = fetch_raw_news(cutoff=cutoff, settings=settings)
+    raw_articles = fetch_raw_news(cutoff=cutoff, settings=settings, hardware_unlimited=hardware_unlimited)
     print(f"  - Got {len(raw_articles)} raw articles")
 
     # Apply blacklist/whitelist filters
