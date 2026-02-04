@@ -397,6 +397,48 @@
       "name": "PaperAgent",
       "group": "WeWe RSS",
       "enabled": true
+    },
+    {
+      "url": "https://uploadvr.com/feed/",
+      "name": "UploadVR",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.roadtovr.com/feed/",
+      "name": "Road to VR",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.therobotreport.com/feed/",
+      "name": "The Robot Report",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.wareable.com/feed/",
+      "name": "Wareable",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.xrtoday.com/feed/",
+      "name": "XR Today",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.93913.com/feed/",
+      "name": "93913",
+      "group": "智能硬件",
+      "enabled": true
+    },
+    {
+      "url": "https://www.vrtuoluo.cn/feed",
+      "name": "VR陀螺",
+      "group": "智能硬件",
+      "enabled": true
     }
   ],
   "recipients": [

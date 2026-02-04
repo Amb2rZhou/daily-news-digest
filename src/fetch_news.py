@@ -209,9 +209,20 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
         settings: Settings dict
         max_per_source: Maximum articles to keep per source (ensures diversity)
     """
+    if settings is None:
+        settings = load_settings()
+
     all_articles = []
     feed_urls = get_rss_feeds(settings)
     print(f"  - Using {len(feed_urls)} RSS feeds")
+
+    # 获取智能硬件源的名称列表（这些源不受 max_per_source 限制）
+    rss_feeds = settings.get("rss_feeds", [])
+    hardware_sources = set()
+    for feed in rss_feeds:
+        if feed.get("group") == "智能硬件" and feed.get("enabled", True):
+            hardware_sources.add(feed.get("name", ""))
+    print(f"  - Smart hardware sources (no limit): {list(hardware_sources)}")
 
     # Collect articles grouped by source
     articles_by_source = {}
@@ -242,16 +253,28 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
         print(f"  - Empty feeds ({len(empty_feeds)}): {[f.split('/')[-1][:30] for f in empty_feeds[:10]]}")
 
     # Limit articles per source and merge
+    # 智能硬件源不受限制，其他源最多 max_per_source 篇
+    hardware_article_count = 0
     for source, articles in articles_by_source.items():
         # Sort by published time within source
         articles.sort(key=lambda x: x.get("published", ""), reverse=True)
-        # Take only top N per source
-        all_articles.extend(articles[:max_per_source])
+
+        # 检查是否是智能硬件源（通过源名称匹配）
+        is_hardware = any(hw_name in source for hw_name in hardware_sources if hw_name)
+
+        if is_hardware:
+            # 智能硬件源：全部保留
+            all_articles.extend(articles)
+            hardware_article_count += len(articles)
+        else:
+            # 其他源：限制数量
+            all_articles.extend(articles[:max_per_source])
 
     # Sort all by published time (newest first)
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
     print(f"  - Sources with articles: {len(articles_by_source)}")
+    print(f"  - Smart hardware articles (unlimited): {hardware_article_count}")
     # Show top sources by article count
     source_counts = [(src, len(arts)) for src, arts in articles_by_source.items()]
     source_counts.sort(key=lambda x: -x[1])
