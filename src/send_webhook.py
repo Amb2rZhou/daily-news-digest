@@ -36,10 +36,9 @@ def format_webhook_markdown(news_data: dict) -> str:
         if not news_items:
             continue
 
-        # 分类标题（与主标题间隔两行，字号比正文大）
+        # 分类标题（RedCity 标题会转为加粗显示）
         lines.append("")
-        lines.append("")
-        lines.append(f'### <font size="4">{icon} {name}</font>')
+        lines.append(f"## {icon} {name}")
         lines.append("")
 
         for item in news_items:
@@ -57,7 +56,7 @@ def format_webhook_markdown(news_data: dict) -> str:
 
             # 思考问题（绿色，不斜体）
             if comment:
-                lines.append(f'> <font color="green">{comment}</font>')
+                lines.append(f'> <font color="info">{comment}</font>')
 
             # 链接
             lines.append(f"[阅读原文]({url})")
