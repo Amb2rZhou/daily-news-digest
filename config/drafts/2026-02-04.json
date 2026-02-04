@@ -1,0 +1,117 @@
+{
+  "date": "2026-02-04",
+  "time_window": "2026-02-03 14:23 ~ 2026-02-04 14:23",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Oura的专利暗示了一种能够可视化健康数据的AI眼镜",
+          "summary": "Oura Health申请专利显示，其智能戒指将与AR眼镜协同工作，直接在用户视线中显示健康数据，包括心率、体温、睡眠分数等生物识别信息。",
+          "comment": "当健康数据能够实时显示在眼前时，我们是否会变得过度关注身体指标而忽略真实的感受？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544677.html"
+        },
+        {
+          "title": "AI运动眼镜企业影辰科技完成Pre-A轮融资，红杉、高瓴参投",
+          "summary": "由前大疆Mavic 3产品经理创立的影辰科技完成Pre-A轮融资，专注AI拍摄眼镜，主打4K高清画质与运动场景适配，致力解决散热与续航瓶颈。",
+          "comment": "AI拍摄眼镜能否真正解决运动记录的痛点，还是会成为又一个昙花一现的智能硬件？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544676.html"
+        },
+        {
+          "title": "歌尔股份AI眼镜代工市占率稳居60%+，2026年相关收入有望突破200亿元",
+          "summary": "全球智能硬件代工龙头歌尔股份在AI眼镜代工领域市占率超过60%，预计2026年相关收入将突破200亿元，显示AI眼镜市场正快速增长。",
+          "comment": "代工巨头的收入预期是否预示着AI眼镜即将迎来真正的消费级爆发？",
+          "source": "93913",
+          "url": "https://www.93913.com/118962.html"
+        },
+        {
+          "title": "镜识科技发布Bolt人形机器人，10m/s峰值速度逼近人类",
+          "summary": "浙江大学联合镜识科技发布首款峰值速度达10m/s的全尺寸人形机器人Bolt，为物流安防等场景提供技术底座。",
+          "comment": "当人形机器人的移动速度接近人类极限时，我们是否已经为与它们共享物理空间做好准备？",
+          "source": "93913",
+          "url": "https://www.93913.com/118979.html"
+        },
+        {
+          "title": "Meta携手Peacock探索VR观赛新模式，赋能2026米兰-科尔蒂纳冬奥会",
+          "summary": "Meta计划联合美国流媒体平台Peacock，为Quest头显用户打造2026年米兰-科尔蒂纳冬奥会专属沉浸式观赛体验。",
+          "comment": "VR观赛能否真正替代传统电视转播，还是只会成为小众用户的尝鲜体验？",
+          "source": "93913",
+          "url": "https://www.93913.com/118975.html"
+        },
+        {
+          "title": "Fitbit创始人推出家庭健康分享应用Luffu",
+          "summary": "Fitbit联合创始人James Park和Eric Friedman推出新的家庭健康应用Luffu，未来还将扩展到硬件设备领域。",
+          "comment": "在隐私日益重要的时代，家庭成员之间分享健康数据会成为新的社交方式还是新的负担？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/03/fitbit-creators-launch-luffu-a-new-app-for-family-health-sharing/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Kimi K2.5带来了一个'蜂群时刻'",
+          "summary": "Kimi K2.5推出多Agent协作功能，用户可以召唤一群AI助手来完成复杂任务，展现了AI协作的新可能性。",
+          "comment": "当AI开始像蜂群一样协作时，人类在复杂任务中的独特价值还剩下什么？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1653557?utm_source=rss&utm_medium=rss&utm_campaign="
+        },
+        {
+          "title": "不止发红包，AI开始雇人打工了：时薪上千元，2万人抢着给AI当'肉身'",
+          "summary": "AI开始通过'租个人'网站雇佣真人执行现实世界任务，时薪高达上千元，显示AI与人类协作出现新模式。",
+          "comment": "当AI需要'雇佣'人类来完成任务时，这是AI局限性的体现还是人机协作的新范式？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1654161?utm_source=rss&utm_medium=rss&utm_campaign="
+        },
+        {
+          "title": "Apple集成Anthropic Claude和OpenAI Codex到Xcode 26.3，推进'智能编程'",
+          "summary": "Apple在Xcode 26.3中集成Claude Agent和Codex，支持智能编程功能，AI助手可直接参与应用开发过程。",
+          "comment": "当AI可以自主编写代码时，程序员的核心竞争力是否会从编码技能转向问题定义能力？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/apple-integrates-anthropics-claude-and-openais-codex-into-xcode-26-3-in-push"
+        },
+        {
+          "title": "Gemini'屏幕自动化'功能将为Android用户下单、叫车",
+          "summary": "Google正在开发Gemini屏幕自动化功能，AI助手将能够直接在Android设备上执行下单、预订等操作。",
+          "comment": "当AI可以代替我们在屏幕上执行各种操作时，我们是否正在失去对数字生活的直接控制权？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/03/gemini-screen-automation-insight/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "SpaceX以2500亿美元收购xAI",
+          "summary": "马斯克旗下的SpaceX收购xAI，交易价值2500亿美元，旨在开拓太空AI卫星业务。",
+          "comment": "这起巨额收购是否标志着太空商业化和AI技术融合的新时代即将到来？",
+          "source": "EE Times",
+          "url": "https://www.eetimes.com/spacex-acquires-xai-for-250-billion/"
+        },
+        {
+          "title": "AMD暗示微软下一代Xbox可能在2027年发布",
+          "summary": "AMD CEO透露，采用AMD定制芯片的微软下一代Xbox主机开发进展顺利，支持2027年发布。",
+          "comment": "下一代游戏主机的发布周期是否会因为AI和云游戏技术的发展而发生根本性变化？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/news/873490/microsoft-next-gen-xbox-console-2027-date-amd"
+        },
+        {
+          "title": "Pinterest CEO因员工创建裁员追踪工具而解雇相关员工",
+          "summary": "Pinterest CEO Bill Ready严厉批评并解雇了创建内部裁员追踪工具的员工，称其为'阻挠主义者'。",
+          "comment": "企业管理层与员工在透明度问题上的分歧是否反映了科技公司文化的深层变化？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/03/pinterest-ceo-puts-staffers-on-blast-who-created-tool-to-track-layoffs.html"
+        }
+      ]
+    }
+  ],
+  "status": "pending_review",
+  "created_at": "2026-02-04T14:29:07.279038+08:00"
+}
