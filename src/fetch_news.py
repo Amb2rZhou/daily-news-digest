@@ -641,7 +641,33 @@ def save_draft(news_data: dict, settings: dict = None) -> str:
         json.dump(draft_data, f, ensure_ascii=False, indent=2)
 
     print(f"  - Draft saved to {draft_path}")
+
+    # 清理 30 天前的旧草稿
+    cleanup_old_drafts(drafts_dir, days=30)
+
     return draft_path
+
+
+def cleanup_old_drafts(drafts_dir: str, days: int = 30):
+    """Delete draft files older than specified days."""
+    cutoff_date = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    deleted = []
+
+    try:
+        for filename in os.listdir(drafts_dir):
+            if not filename.endswith('.json'):
+                continue
+            # 文件名格式: YYYY-MM-DD.json
+            file_date = filename.replace('.json', '')
+            if file_date < cutoff_date:
+                filepath = os.path.join(drafts_dir, filename)
+                os.remove(filepath)
+                deleted.append(filename)
+    except Exception as e:
+        print(f"  Warning: Failed to cleanup old drafts: {e}")
+
+    if deleted:
+        print(f"  - Cleaned up {len(deleted)} old drafts: {deleted}")
 
 def load_draft(date: str = None):
     """Load a draft by date. If no date given, use today."""
