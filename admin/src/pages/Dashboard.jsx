@@ -742,11 +742,11 @@ export default function Dashboard() {
                       )}
                       {item.comment && (
                         <p style={{
-                          fontSize: 12, color: '#059669', marginTop: 6, lineHeight: 1.5,
-                          padding: '6px 10px', background: '#ecfdf5', borderRadius: 6,
-                          borderLeft: '3px solid #10b981',
+                          fontSize: 12, color: '#7c3aed', marginTop: 6, lineHeight: 1.5,
+                          padding: '6px 10px', background: '#f5f3ff', borderRadius: 6,
+                          borderLeft: '3px solid #8b5cf6',
                         }}>
-                          <span style={{ fontWeight: 500 }}>💡 </span>{item.comment}
+                          <span style={{ fontWeight: 500 }}>🤔 </span>{item.comment}
                         </p>
                       )}
                       {!isEditing && !item.summary && (

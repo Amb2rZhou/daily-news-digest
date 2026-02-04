@@ -360,7 +360,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 
 **输出要求**：
 - 为每条新闻写一个简短的中文摘要（1-2句话）
-- **重要**：为每条新闻添加一句 comment，内容是你的评价或基于该信息对未来的合理推演
+- **重要**：为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾），引导读者深入思考这条新闻的意义、影响或未来可能性
 - 总共最多选 {max_items} 条新闻，但智能硬件分类不受此限制，有多少收多少
 
 新闻列表：
@@ -391,7 +391,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 {{
   "title": "新闻标题",
   "summary": "1-2句中文摘要",
-  "comment": "你的评价或未来推演",
+  "comment": "一个启发思考的问题？",
   "source": "来源",
   "url": "链接"
 }}
@@ -400,7 +400,8 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 分类顺序必须是：智能硬件 → AI技术与产品 → 巨头动向与行业观察
 - 只返回有新闻的分类
 - 只返回合法的 JSON，不要其他文字
-- 确保所有字符串中的双引号用单引号替换"""
+- 确保所有字符串中的双引号用单引号替换
+- comment 必须是问句（以？结尾），例如：「这是否意味着 AR 眼镜将取代手机成为下一个计算平台？」"""
 
     else:
         # 泛 AI 模式（默认）
@@ -644,7 +645,7 @@ def format_email_html(news_data: dict, settings: dict = None) -> str:
 
             comment_html = ""
             if comment:
-                comment_html = f'<p style="color:#059669;font-size:13px;line-height:1.5;margin:8px 0 10px 0;padding:8px 12px;background:#ecfdf5;border-radius:6px;">💡 {comment}</p>'
+                comment_html = f'<p style="color:#7c3aed;font-size:13px;line-height:1.5;margin:8px 0 10px 0;padding:8px 12px;background:#f5f3ff;border-radius:6px;">🤔 {comment}</p>'
 
             cards_html += f'''<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
 <tr><td style="background:#ffffff;border-radius:8px;border:1px solid #e8e8e8;padding:16px 20px;">

@@ -48,7 +48,7 @@ def format_webhook_markdown(news_data: dict) -> str:
             else:
                 lines.append(f"**{title}**")
             if comment:
-                lines.append(f"<font color=\"info\">💡 {comment}</font>")
+                lines.append(f"<font color=\"info\">🤔 {comment}</font>")
             lines.append(f"[查看原文]({url})")
             total_news += 1
 

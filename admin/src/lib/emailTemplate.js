@@ -31,7 +31,7 @@ export function generateEmailHtml(draft, settings) {
       const url = escapeHtml(item.url || '#')
 
       const commentHtml = comment
-        ? `<p style="color:#059669;font-size:13px;line-height:1.5;margin:8px 0 10px 0;padding:8px 12px;background:#ecfdf5;border-radius:6px;">💡 ${comment}</p>`
+        ? `<p style="color:#7c3aed;font-size:13px;line-height:1.5;margin:8px 0 10px 0;padding:8px 12px;background:#f5f3ff;border-radius:6px;">🤔 ${comment}</p>`
         : ''
 
       cardsHtml += `<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
