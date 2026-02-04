@@ -299,8 +299,29 @@ def apply_filters(articles: list[dict], settings: dict = None) -> list[dict]:
 
     return filtered
 
-def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_names: str, category_json_example: str, icon_mapping: str) -> str:
-    """Generate the Claude prompt based on topic mode."""
+def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_names: str, category_json_example: str, icon_mapping: str, custom_prompt: str = None) -> str:
+    """Generate the Claude prompt based on topic mode or custom prompt.
+
+    If custom_prompt is provided, it will be used directly with variable substitution:
+    - {articles_text} - The news articles text
+    - {max_items} - Maximum number of news items
+    - {category_names} - Category names joined by 、
+    - {category_json_example} - Example JSON structure
+    - {icon_mapping} - Icon mapping string
+    """
+
+    if custom_prompt:
+        # Use custom prompt with variable substitution
+        try:
+            return custom_prompt.format(
+                articles_text=articles_text,
+                max_items=max_items,
+                category_names=category_names,
+                category_json_example=category_json_example,
+                icon_mapping=icon_mapping
+            )
+        except KeyError as e:
+            print(f"  Warning: Custom prompt has invalid variable {e}, falling back to mode-based prompt")
 
     if mode == "focused":
         # 聚焦模式：智能硬件 + AI技术产品 + 巨头动向
@@ -395,9 +416,13 @@ def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_ite
 
     categories = get_categories(settings)
     topic_mode = settings.get("topic_mode", "broad")  # "broad" or "focused"
+    custom_prompt = settings.get("custom_prompt", "")  # User-defined custom prompt
     client = anthropic.Anthropic(api_key=anthropic_key)
 
-    print(f"  - Topic mode: {topic_mode}")
+    if custom_prompt:
+        print(f"  - Using custom prompt ({len(custom_prompt)} chars)")
+    else:
+        print(f"  - Topic mode: {topic_mode}")
 
     # Prepare articles for Claude
     articles_text = ""
@@ -420,7 +445,7 @@ URL: {article.get('url', '')}
 
     icon_mapping = " ".join(f'{c["name"]}:{c["icon"]}' for c in categories)
 
-    prompt = get_prompt_for_mode(topic_mode, articles_text, max_items, category_names, category_json_example, icon_mapping)
+    prompt = get_prompt_for_mode(topic_mode, articles_text, max_items, category_names, category_json_example, icon_mapping, custom_prompt)
 
     try:
         response = client.messages.create(

@@ -249,6 +249,100 @@ export default function Settings() {
         </div>
       </div>
 
+      {/* Custom Prompt */}
+      <div style={card}>
+        <h2 style={{ fontSize: 16, marginBottom: 8 }}>自定义 Prompt</h2>
+        <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 12 }}>
+          高级选项：直接输入自定义 Prompt 控制 AI 筛选逻辑。留空则使用上方主题模式的默认 Prompt。
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+            <input
+              type="checkbox"
+              checked={!!settings.custom_prompt}
+              onChange={(e) => {
+                if (e.target.checked) {
+                  update('custom_prompt', `以下是最近24小时内从多个来源抓取的新闻列表。请帮我筛选和整理。
+
+**你的筛选要求写在这里**
+
+新闻列表：
+{articles_text}
+
+请以 JSON 格式返回，最多选 {max_items} 条新闻，结构如下：
+{{
+  "categories": [
+    {{
+      "name": "类别名",
+      "icon": "emoji",
+      "news": [
+        {{
+          "title": "新闻标题",
+          "summary": "1-2句摘要",
+          "source": "来源",
+          "url": "链接"
+        }}
+      ]
+    }}
+  ]
+}}
+
+可用类别：{category_names}
+icon 映射：{icon_mapping}
+只返回合法的 JSON，不要其他文字。`)
+                } else {
+                  update('custom_prompt', '')
+                }
+              }}
+            />
+            <span style={{ fontSize: 13, fontWeight: 500 }}>启用自定义 Prompt</span>
+          </label>
+          {settings.custom_prompt && (
+            <span style={{ fontSize: 12, color: '#d97706', fontWeight: 500 }}>
+              ⚠️ 自定义 Prompt 优先于主题模式
+            </span>
+          )}
+        </div>
+
+        {settings.custom_prompt && (
+          <>
+            <textarea
+              value={settings.custom_prompt}
+              onChange={(e) => update('custom_prompt', e.target.value)}
+              placeholder="输入自定义 Prompt..."
+              style={{
+                width: '100%',
+                minHeight: 300,
+                fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, monospace',
+                fontSize: 13,
+                lineHeight: 1.5,
+                padding: 12,
+                borderRadius: 6,
+                border: '1px solid var(--border)',
+                resize: 'vertical',
+              }}
+            />
+            <div style={{
+              marginTop: 12, padding: 12, background: '#f0f9ff', borderRadius: 6,
+              border: '1px solid #bae6fd', fontSize: 12, color: '#0369a1',
+            }}>
+              <strong>可用变量：</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: 20 }}>
+                <li><code>{'{articles_text}'}</code> - 新闻文章列表</li>
+                <li><code>{'{max_items}'}</code> - 最大新闻条数</li>
+                <li><code>{'{category_names}'}</code> - 分类名称（用、连接）</li>
+                <li><code>{'{icon_mapping}'}</code> - 分类图标映射</li>
+                <li><code>{'{category_json_example}'}</code> - JSON 结构示例</li>
+              </ul>
+              <div style={{ marginTop: 8, color: '#64748b' }}>
+                提示：确保 Prompt 要求返回合法的 JSON 格式，否则解析会失败。
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+
       {/* Category order */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>分类排序</h2>
