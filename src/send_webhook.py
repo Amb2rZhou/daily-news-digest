@@ -26,7 +26,7 @@ def format_webhook_markdown(news_data: dict) -> str:
     date = news_data.get("date", "")
     categories = news_data.get("categories", [])
 
-    lines = [f"## AI/科技新闻日报 - {date}"]
+    lines = [f"# 科技日报 {date}"]
 
     total_news = 0
     for cat in categories:
@@ -36,23 +36,34 @@ def format_webhook_markdown(news_data: dict) -> str:
         if not news_items:
             continue
 
-        lines.append(f'### <font color="warning">{icon} {name}</font>')
+        # 分类标题
+        lines.append(f"\n## {icon} {name}")
+        lines.append("")  # 空行
+
         for item in news_items:
             title = item.get("title", "")
             summary = item.get("summary", "")
             comment = item.get("comment", "")
             url = item.get("url", "")
-            # 标题加粗 + 摘要 + AI评论 + 原文链接
+
+            # 标题
+            lines.append(f"**{title}**")
+
+            # 摘要
             if summary:
-                lines.append(f"**{title}**\n{summary}")
-            else:
-                lines.append(f"**{title}**")
+                lines.append(f"> {summary}")
+
+            # 思考问题（去掉emoji，用引用格式）
             if comment:
-                lines.append(f"<font color=\"info\">🤔 {comment}</font>")
-            lines.append(f"[查看原文]({url})")
+                lines.append(f"> *{comment}*")
+
+            # 链接
+            lines.append(f"[阅读原文]({url})")
+            lines.append("")  # 条目间空行
+
             total_news += 1
 
-    lines.append(f"\n<font color=\"comment\">共 {total_news} 条新闻</font>")
+    lines.append(f"---\n共 {total_news} 条")
 
     return "\n".join(lines)
 
