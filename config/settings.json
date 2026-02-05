@@ -32,6 +32,17 @@
       "topic_mode": "broad",
       "max_news_items": 10,
       "webhook_url_base": ""
+    },
+    {
+      "id": "ch_ml9b9t9s",
+      "type": "webhook",
+      "name": "ai-interactive群",
+      "enabled": true,
+      "send_hour": 10,
+      "send_minute": 0,
+      "topic_mode": "focused",
+      "max_news_items": 10,
+      "webhook_url_base": ""
     }
   ],
   "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
