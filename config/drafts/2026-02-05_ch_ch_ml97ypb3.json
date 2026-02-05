@@ -1,0 +1,107 @@
+{
+  "date": "2026-02-05",
+  "time_window": "2026-02-04 16:58 ~ 2026-02-05 16:58",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Mistral发布Voxtral Transcribe 2开源语音模型",
+          "summary": "可在设备端运行的语音转文字模型，转录速度更快、准确性更高，且成本仅为几分钱。",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/mistral-drops-voxtral-transcribe-2-an-open-source-speech-model-that-runs-on"
+        },
+        {
+          "title": "Google正式发布Pixel 10a",
+          "summary": "采用完全平整的摄像头设计，将于2月18日开启预订。",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/04/pixel-10a-announcement/"
+        },
+        {
+          "title": "Oakley Meta Vanguard智能眼镜登陆印度",
+          "summary": "AI运动眼镜配备12MP摄像头，支持3K视频拍摄，Meta AI适配印地语，售价约579美元。",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544685.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Alphabet第四季度营收超1000亿美元",
+          "summary": "年度营收首次突破4000亿美元，同比增长15%，云业务和YouTube持续增长。",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/04/alphabet-q4-2025-earnings/"
+        },
+        {
+          "title": "苹果库克盛赞'视觉智能'功能",
+          "summary": "称其为Apple Intelligence最受欢迎功能之一，预计该功能未来可能登陆智能眼镜。",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544686.html"
+        },
+        {
+          "title": "达索系统与英伟达合作打造AI虚拟孪生平台",
+          "summary": "建立长期战略合作伙伴关系，整合虚拟孪生技术与AI基础设施，为跨行业关键任务AI建立共享工业架构。",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544689.html"
+        },
+        {
+          "title": "GitHub推出Agent HQ支持Claude和Codex",
+          "summary": "Claude和OpenAI Codex现已在GitHub和VS Code上线公开预览版，需要Copilot Pro+或企业版订阅。",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "CMU提出最大似然强化学习方法",
+          "summary": "研究表明当前强化学习方法远未达到最优，提出新的最大似然强化学习框架。",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-05-11"
+        },
+        {
+          "title": "陈天桥与邓亚峰合作推出EverMemOS",
+          "summary": "为AI打造'不失忆大脑'，发布云服务并启动8万美元全球竞赛，多项基准刷新SOTA。",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7867785.html"
+        },
+        {
+          "title": "IBM与Synopsys携手开发1.4nm芯片技术",
+          "summary": "采用超快热建模技术，向1.4纳米制程节点迈进。",
+          "source": "EE Times",
+          "url": "https://www.eetimes.com/ibm-synopsys-move-toward-1-4-nm-node-with-heat-modeling-tech/"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "生数科技完成超6亿元A+轮融资",
+          "summary": "视频大模型领军者，旗下Vidu在国际权威测试中排名中国第一、全球第二，超越Sora等竞品。",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/VKeAaSlQojxPXh1N.html"
+        },
+        {
+          "title": "Bedrock Robotics获2.7亿美元B轮融资",
+          "summary": "用于扩大自主建筑机器人车队规模，开发无人操作挖掘机解决劳动力短缺问题。",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/bedrock-robotics-270m-series-b-paves-way-operator-less-excavators/"
+        }
+      ]
+    }
+  ],
+  "status": "pending_review",
+  "created_at": "2026-02-05T17:01:57.434616+08:00",
+  "channel_id": "ch_ml97ypb3",
+  "channel_name": "午休2小时",
+  "topic_mode": "broad"
+}

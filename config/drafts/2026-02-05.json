@@ -1,0 +1,98 @@
+{
+  "date": "2026-02-05",
+  "time_window": "2026-02-04 16:58 ~ 2026-02-05 16:58",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Google announces Pixel 10a with completely flat camera, pre-order Feb 18",
+          "summary": "谷歌正式发布Pixel 10a，采用全新平面相机设计，2月18日开启预订。",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/04/pixel-10a-announcement/"
+        },
+        {
+          "title": "Mistral drops Voxtral Transcribe 2, an open-source speech model that runs on-device for pennies",
+          "summary": "Mistral AI发布Voxtral Transcribe 2开源语音模型，可在设备本地运行，成本极低且转录速度快。",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/mistral-drops-voxtral-transcribe-2-an-open-source-speech-model-that-runs-on"
+        },
+        {
+          "title": "Oakley Meta Vanguard登陆印度市场",
+          "summary": "AI运动眼镜Oakley Meta Vanguard在印度开售，配备12MP摄像头支持3K视频拍摄，Meta AI适配印地语。",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544685.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "两周搓出的 Claude Cowork，让硅谷一夜蒸发 2 万亿，AI 真要杀死软件？",
+          "summary": "Anthropic的Claude Cowork引发硅谷巨震，AI工具可能颠覆传统软件行业，引发对AI替代现有软件的担忧。",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1654127?utm_source=rss&utm_medium=rss&utm_campaign="
+        },
+        {
+          "title": "达索系统与英伟达宣布将合作打造AI虚拟孪生平台",
+          "summary": "达索系统与英伟达建立战略合作，整合虚拟孪生技术与AI基础设施，建立行业世界模型并在3DEXPERIENCE平台上提供AI助手。",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544689.html"
+        },
+        {
+          "title": "库克盛赞'视觉智能'，苹果 AI 核心功能或登陆智能眼镜",
+          "summary": "苹果CEO库克在财报会议上重点表扬视觉智能功能，这一Apple Intelligence核心功能未来可能应用于智能眼镜等设备。",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544686.html"
+        },
+        {
+          "title": "Google's annual revenue tops $400 billion for the first time",
+          "summary": "谷歌母公司Alphabet年收入首次突破4000亿美元，云业务和YouTube持续增长，同比增长15%。",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/news/874161/google-400-billion-revenue-q4-2025-earnings"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "强化学习远不是最优，CMU刚刚提出最大似然强化学习",
+          "summary": "卡内基梅隆大学提出最大似然强化学习新方法，挑战传统强化学习范式，为AI训练带来新思路。",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-05-11"
+        },
+        {
+          "title": "陈天桥联手邓亚峰，为AI装上'不失忆大脑'，8万美元大赛引爆生态",
+          "summary": "EverMind发布EverMemOS云服务，解决AI记忆问题，同时推出8万美元全球赛事推动技术发展。",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7867785.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "中国第一，全球第二，视频大模型领军者生数科技完成超 6 亿元A+轮融资",
+          "summary": "生数科技完成超6亿元A+轮融资，旗下Vidu Q3在全球视频大模型排名中国第一、全球第二，超越OpenAI Sora。",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/VKeAaSlQojxPXh1N.html"
+        },
+        {
+          "title": "Bedrock Robotics' $270M Series B paves the way for operator-less excavators",
+          "summary": "建筑机器人公司Bedrock Robotics完成2.7亿美元B轮融资，推动无人驾驶挖掘机规模化部署。",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/bedrock-robotics-270m-series-b-paves-way-operator-less-excavators/"
+        }
+      ]
+    }
+  ],
+  "status": "pending_review",
+  "created_at": "2026-02-05T17:01:28.619845+08:00"
+}
