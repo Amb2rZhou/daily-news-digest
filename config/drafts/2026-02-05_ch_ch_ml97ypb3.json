@@ -1,31 +1,24 @@
 {
   "date": "2026-02-05",
-  "time_window": "2026-02-04 18:12 ~ 2026-02-05 18:12",
+  "time_window": "2026-02-04 18:58 ~ 2026-02-05 18:58",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "CRAFT: thinking agent for image generation and edit",
-          "summary": "一家基础设施初创公司发布了CRAFT思考代理，专门用于大规模图像生成和编辑应用。",
-          "comment": "AI代理在创意生产中的'思考'能力，是否会重新定义设计师和创作者的工作边界？",
-          "source": "Machine Learning",
-          "url": "https://www.reddit.com/r/MachineLearning/comments/1qwhhqa/r_craft_thinking_agent_for_image_generation_and/"
-        },
-        {
-          "title": "Mistral发布Voxtral Transcribe 2开源语音模型",
-          "summary": "Mistral AI发布两款语音转文字模型，可在智能手机或笔记本电脑上完全离线运行，转录速度更快、准确性更高且成本极低。",
-          "comment": "开源语音模型的本地化运行，是否会打破大厂在语音AI领域的垄断格局？",
+          "title": "Mistral发布Voxtral Transcribe 2开源语音转文本模型",
+          "summary": "法国AI公司Mistral发布新的开源语音转文本模型，可在手机和笔记本电脑上本地运行，转录速度更快且成本仅为几分钱。",
+          "comment": "开源语音模型的本地化运行是否会重新定义AI服务的成本结构和隐私标准？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/technology/mistral-drops-voxtral-transcribe-2-an-open-source-speech-model-that-runs-on"
         },
         {
-          "title": "贾跃亭发布三款机器人产品",
-          "summary": "贾跃亭在春节前发布了三款机器人产品，延续其一贯的科技创新风格。",
-          "comment": "在AI和机器人成为风口的当下，贾跃亭的新产品能否真正落地还是又一次'画饼'？",
-          "source": "爱范儿",
-          "url": "https://www.ifanr.com/1654297?utm_source=rss&utm_medium=rss&utm_campaign="
+          "title": "Kilo CLI 1.0发布支持500+模型的开源代码工具",
+          "summary": "远程AI编程初创公司Kilo发布1.0版本命令行工具，支持超过500个模型，为开发者提供开源的编程辅助环境。",
+          "comment": "支持多模型的开发工具是否会打破开发者对单一AI平台的依赖？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/kilo-cli-1-0-brings-open-source-vibe-coding-to-your-terminal-with-support"
         }
       ]
     },
@@ -35,31 +28,31 @@
       "news": [
         {
           "title": "达索系统与英伟达合作打造AI虚拟孪生平台",
-          "summary": "双方建立长期战略合作关系，整合达索系统的虚拟孪生技术与英伟达的AI基础设施，为跨行业关键任务人工智能建立共享工业架构。",
-          "comment": "虚拟孪生技术与AI的深度融合，会如何改变制造业和工业4.0的发展轨迹？",
+          "summary": "达索系统与英伟达宣布建立长期战略合作，整合虚拟孪生技术与AI基础设施，在3DEXPERIENCE平台上建立经科学验证的行业世界模型。",
+          "comment": "工业元宇宙与AI的深度融合会如何改变传统制造业的数字化转型路径？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544689.html"
         },
         {
-          "title": "库克盛赞'视觉智能'，苹果AI核心功能或登陆智能眼镜",
-          "summary": "蒂姆·库克在财报电话会议上特别表扬了Apple Intelligence的'视觉智能'功能，这是目前最受用户欢迎的功能之一。",
-          "comment": "苹果将视觉智能从iPhone扩展到智能眼镜，是否预示着下一代计算平台的到来？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544686.html"
-        },
-        {
-          "title": "Google年收入首次突破4000亿美元",
-          "summary": "Alphabet公司2025年第四季度财报显示，Google年收入首次超过4000亿美元，同比增长15%，云业务和YouTube持续增长。",
-          "comment": "Google收入突破历史新高背后，AI业务的贡献究竟有多大？",
+          "title": "Alphabet年收入首次突破4000亿美元",
+          "summary": "谷歌母公司Alphabet在Q4 2025财报中宣布年收入达到4000亿美元，同比增长15%，云业务和YouTube持续增长。",
+          "comment": "科技巨头收入规模的持续扩张是否意味着AI投资回报开始显现？",
           "source": "The Verge",
           "url": "https://www.theverge.com/news/874161/google-400-billion-revenue-q4-2025-earnings"
         },
         {
-          "title": "Anthropic发布Claude Legal Plugin引发软件股大跌",
-          "summary": "美国AI初创公司Anthropic发布的Claude Legal Plugin工具引发软件巨头股价集体下跌。",
-          "comment": "AI工具对传统软件行业的冲击究竟会有多深远，这是创新还是颠覆？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7867924.html"
+          "title": "库克盛赞'视觉智能'功能，暗示将登陆智能眼镜",
+          "summary": "苹果CEO库克在财报会议上特别表扬Apple Intelligence的视觉智能功能，称其为最受用户欢迎的AI功能之一。",
+          "comment": "苹果将AI能力从手机扩展到智能眼镜，是否预示着下一代计算平台的竞争焦点？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544686.html"
+        },
+        {
+          "title": "OpenAI发布ChatGPT医疗健康应用案例",
+          "summary": "OpenAI分享了一个家庭如何使用ChatGPT帮助准备癌症治疗决策的案例，展示AI在医疗咨询中的辅助作用。",
+          "comment": "AI在医疗决策中的角色边界应该如何界定，才能既发挥价值又避免风险？",
+          "source": "OpenAI News",
+          "url": "https://openai.com/index/navigating-health-questions"
         }
       ]
     },
@@ -68,11 +61,38 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "CMU提出最大似然强化学习",
-          "summary": "卡内基梅隆大学研究团队提出新的强化学习方法，认为传统强化学习远不是最优解决方案。",
-          "comment": "这种新的强化学习范式是否会成为下一代AI训练的主流方法？",
+          "title": "MIT解析AI领域最容易被误解的图表",
+          "summary": "MIT Technology Review深度解析了AI社区中一个经常被误解的重要图表，帮助理解AI模型评估的真实含义。",
+          "comment": "AI评估标准的误解是否正在影响整个行业对AI能力的正确判断？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/05/1132254/this-is-the-most-misunderstood-graph-in-ai/"
+        },
+        {
+          "title": "CMU提出最大似然强化学习新方法",
+          "summary": "卡内基梅隆大学研究团队提出了最大似然强化学习方法，认为传统强化学习远非最优解决方案。",
+          "comment": "强化学习理论的根本性革新是否会重塑AI智能体的训练范式？",
           "source": "机器之心",
           "url": "https://www.jiqizhixin.com/articles/2026-02-05-11"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "硅谷向左腾讯向右：AI社交的三种形态分化",
+          "summary": "从硅谷的Character.ai到腾讯的元宝派，AI社交正在分化为逃避式、在场式和无人式三种不同形态。",
+          "comment": "AI社交的不同发展路径反映了东西方用户对人机关系的哪些本质差异？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7867966.html"
+        },
+        {
+          "title": "好莱坞面临AI疲劳，相关内容遭遇观众冷遇",
+          "summary": "过去一年中，关于AI的娱乐内容或使用AI制作的内容在观众中反响平淡，好莱坞开始面临AI疲劳问题。",
+          "comment": "娱乐行业的AI疲劳是否预示着公众对AI技术的新鲜感正在消退？",
+          "source": "WIRED",
+          "url": "https://www.wired.com/story/hollywood-is-losing-audiences-to-ai-fatigue/"
         }
       ]
     },
@@ -82,30 +102,23 @@
       "news": [
         {
           "title": "生数科技完成超6亿元A+轮融资",
-          "summary": "视频大模型领军企业生数科技宣布完成超6亿元A+轮融资，其多模态大模型Vidu在全球排名第二、中国第一。",
-          "comment": "视频生成大模型赛道的激烈竞争中，技术领先能否转化为商业成功？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/VKeAaSlQojxPXh1N.html"
+          "summary": "视频大模型领军企业生数科技完成超6亿元A+轮融资，在中国排名第一、全球排名第二。",
+          "comment": "视频生成AI的巨额融资是否表明这一赛道已进入商业化加速期？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-05-8"
         },
         {
-          "title": "Bedrock Robotics完成2.7亿美元B轮融资",
-          "summary": "建筑机器人公司Bedrock Robotics获得2.7亿美元B轮融资，致力于打造无操作员挖掘机，应对建筑行业劳动力短缺问题。",
-          "comment": "建筑机器人的大规模商业化是否会彻底改变传统建筑行业的生产方式？",
+          "title": "Bedrock Robotics获2.7亿美元B轮融资",
+          "summary": "自主建筑机器人公司Bedrock Robotics完成2.7亿美元B轮融资，用于扩大无人操作挖掘机队规模。",
+          "comment": "建筑机器人的大规模融资是否意味着传统建筑业的自动化革命即将到来？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/bedrock-robotics-270m-series-b-paves-way-operator-less-excavators/"
-        },
-        {
-          "title": "健麾信息拟7371万元收购AI应用公司博科国信38%股权",
-          "summary": "健麾信息公告称将收购AI应用公司博科国信38%股权，交易完成后将持有标的公司70%股权。",
-          "comment": "传统企业通过并购进入AI赛道，是否能够成功实现数字化转型？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3670246008464007?f=rss"
         }
       ]
     }
   ],
-  "status": "sent",
-  "created_at": "2026-02-05T18:53:14.916156+08:00",
+  "status": "pending_review",
+  "created_at": "2026-02-05T19:04:45.488393+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
