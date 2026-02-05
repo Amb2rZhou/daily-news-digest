@@ -130,11 +130,14 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
     print(f"  - Channels to fetch: {[ch.get('name', ch.get('id')) for ch in channels]}")
     print(f"  - Unique modes needed: {all_modes}")
 
-    # Use the earliest channel as reference for time window
+    # Use the earliest channel as reference for time window and topic_mode
     ref_channel = channels[0]
+    ref_mode = ref_channel.get("topic_mode", "broad")
+    # Pass topic_mode at top-level so summarize_news_with_claude picks it up
+    ref_settings = {**settings, "topic_mode": ref_mode}
     news_data = fetch_news(
         anthropic_key, topic=topic, max_items=max_items,
-        settings=settings, manual=manual, hardware_unlimited=hardware_unlimited,
+        settings=ref_settings, manual=manual, hardware_unlimited=hardware_unlimited,
         channel=ref_channel,
     )
 
@@ -153,8 +156,7 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
             count = len(cat.get("news", []))
             print(f"   {icon} {name}: {count}")
 
-    # Cache Claude results by topic_mode
-    ref_mode = ref_channel.get("topic_mode", "broad")
+    # Cache Claude results by topic_mode (ref_mode set above)
     mode_results = {ref_mode: categories}
 
     # Process each channel
@@ -458,13 +460,15 @@ def run_full(settings: dict) -> int:
         return 1
 
     topic = settings.get("news_topic", "AI")
-    # Use email channel's max_items
+    # Use email channel's max_items and topic_mode
     channels = settings.get("channels", [])
     email_ch = next((ch for ch in channels if ch.get("type") == "email"), {})
     max_items = email_ch.get("max_news_items", settings.get("max_news_items", 10))
+    email_mode = email_ch.get("topic_mode", settings.get("topic_mode", "broad"))
+    full_settings = {**settings, "topic_mode": email_mode}
 
     print("Fetching news...")
-    news_data = fetch_news(anthropic_key, topic=topic, max_items=max_items, settings=settings)
+    news_data = fetch_news(anthropic_key, topic=topic, max_items=max_items, settings=full_settings)
 
     if news_data.get("error"):
         print(f"Warning: {news_data['error']}")
