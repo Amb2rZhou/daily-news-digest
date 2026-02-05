@@ -42,7 +42,7 @@
       "send_minute": 0,
       "topic_mode": "focused",
       "max_news_items": 10,
-      "webhook_url_base": "27a7b0b5-319a-483e-b4a1-bc009ae11240"
+      "webhook_url_base": ""
     }
   ],
   "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
