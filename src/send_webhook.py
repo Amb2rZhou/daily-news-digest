@@ -68,20 +68,41 @@ def format_webhook_markdown(news_data: dict) -> str:
     return "\n".join(lines)
 
 
-def send_webhook(news_data: dict, settings: dict = None) -> bool:
-    """POST markdown message to RedCity webhook. Returns True on success."""
+def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -> bool:
+    """POST markdown message to RedCity webhook. Returns True on success.
+
+    Args:
+        news_data: Draft data with categories
+        settings: Global settings dict
+        channel: Optional channel config dict. When provided, uses the channel's
+                 webhook_key_env and webhook_url_base (falling back to global).
+                 When None, uses legacy WEBHOOK_KEY env var.
+    """
     if settings is None:
         settings = _load_settings()
 
-    webhook_key = os.environ.get("WEBHOOK_KEY")
-    if not webhook_key:
-        print("Warning: WEBHOOK_KEY not set, skipping webhook")
-        return False
+    # Determine webhook key env var name
+    if channel:
+        key_env = channel.get("webhook_key_env", "WEBHOOK_KEY")
+        webhook_key = os.environ.get(key_env)
+        if not webhook_key:
+            print(f"Warning: {key_env} not set, skipping webhook for channel '{channel.get('id', '?')}'")
+            return False
+        # Channel URL base takes priority, then global
+        url_base = channel.get("webhook_url_base", "").strip() or settings.get(
+            "webhook_url_base",
+            "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
+        )
+    else:
+        webhook_key = os.environ.get("WEBHOOK_KEY")
+        if not webhook_key:
+            print("Warning: WEBHOOK_KEY not set, skipping webhook")
+            return False
+        url_base = settings.get(
+            "webhook_url_base",
+            "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
+        )
 
-    url_base = settings.get(
-        "webhook_url_base",
-        "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
-    )
     url = f"{url_base}?key={webhook_key}"
 
     content = format_webhook_markdown(news_data)

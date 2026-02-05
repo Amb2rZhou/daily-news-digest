@@ -28,7 +28,7 @@ export default function History() {
     try {
       const files = await listFiles('config/drafts')
       const sorted = files
-        .filter(f => f.name.endsWith('.json'))
+        .filter(f => f.name.endsWith('.json') && !f.name.includes('_ch_'))
         .sort((a, b) => b.name.localeCompare(a.name))
         .slice(0, 30)  // 保留最近 30 天
       setDrafts(sorted)

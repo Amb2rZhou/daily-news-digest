@@ -414,31 +414,151 @@ icon 映射：{icon_mapping}
         />
       </div>
 
-      {/* Webhook settings */}
+      {/* Webhook channel settings */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>Webhook 推送</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-          <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <input
-              type="checkbox"
-              checked={settings.webhook_enabled ?? false}
-              onChange={(e) => update('webhook_enabled', e.target.checked)}
-            />
-            <span style={{ fontSize: 13, fontWeight: 500 }}>启用 Webhook 群聊推送</span>
-          </label>
-          <label style={{ gridColumn: '1 / -1' }}>
-            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>Webhook URL Base</span>
-            <input
-              type="text"
-              value={settings.webhook_url_base ?? ''}
-              onChange={(e) => update('webhook_url_base', e.target.value)}
-              placeholder="https://redcity-open.xiaohongshu.com/api/robot/webhook/send"
-              style={{ width: '100%' }}
-            />
-            <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 4, display: 'block' }}>
-              完整 URL = base + ?key= + WEBHOOK_KEY (密钥在「密钥管理」页设置)
-            </span>
-          </label>
+
+        {/* Global webhook URL base */}
+        <label style={{ display: 'block', marginBottom: 20 }}>
+          <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>全局 Webhook URL Base</span>
+          <input
+            type="text"
+            value={settings.webhook_url_base ?? ''}
+            onChange={(e) => update('webhook_url_base', e.target.value)}
+            placeholder="https://redcity-open.xiaohongshu.com/api/robot/webhook/send"
+            style={{ width: '100%' }}
+          />
+          <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 4, display: 'block' }}>
+            各频道可覆盖此 URL，留空时使用全局值
+          </span>
+        </label>
+
+        {/* Channel list */}
+        <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 12 }}>推送频道</div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {(settings.webhook_channels || []).map((ch, idx) => (
+            <div key={ch.id || idx} style={{
+              padding: 16, borderRadius: 8, border: '1px solid var(--border)',
+              background: ch.enabled ? '#f0fdf4' : '#f9fafb',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <input
+                    type="checkbox"
+                    checked={ch.enabled ?? false}
+                    onChange={(e) => {
+                      const channels = [...(settings.webhook_channels || [])]
+                      channels[idx] = { ...channels[idx], enabled: e.target.checked }
+                      update('webhook_channels', channels)
+                    }}
+                  />
+                  <span style={{ fontWeight: 600, fontSize: 14 }}>{ch.name || ch.id}</span>
+                </label>
+                <span style={{ fontSize: 12, color: 'var(--text3)' }}>ID: {ch.id}</span>
+                <div style={{ flex: 1 }} />
+                <button
+                  onClick={() => {
+                    if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？`)) return
+                    const channels = [...(settings.webhook_channels || [])]
+                    channels.splice(idx, 1)
+                    update('webhook_channels', channels)
+                  }}
+                  style={{
+                    background: 'none', border: 'none', cursor: 'pointer',
+                    color: '#dc2626', fontSize: 14, padding: '2px 6px',
+                  }}
+                >
+                  删除
+                </button>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <label>
+                  <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道名称</span>
+                  <input
+                    type="text"
+                    value={ch.name || ''}
+                    onChange={(e) => {
+                      const channels = [...(settings.webhook_channels || [])]
+                      channels[idx] = { ...channels[idx], name: e.target.value }
+                      update('webhook_channels', channels)
+                    }}
+                    placeholder="群名称"
+                    style={{ width: '100%' }}
+                  />
+                </label>
+                <label>
+                  <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>主题模式</span>
+                  <select
+                    value={ch.topic_mode || 'broad'}
+                    onChange={(e) => {
+                      const channels = [...(settings.webhook_channels || [])]
+                      channels[idx] = { ...channels[idx], topic_mode: e.target.value }
+                      update('webhook_channels', channels)
+                    }}
+                    style={{ width: '100%' }}
+                  >
+                    <option value="broad">泛 AI 模式</option>
+                    <option value="focused">聚焦模式</option>
+                  </select>
+                </label>
+                <label>
+                  <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>Webhook Key 环境变量名</span>
+                  <input
+                    type="text"
+                    value={ch.webhook_key_env || ''}
+                    onChange={(e) => {
+                      const channels = [...(settings.webhook_channels || [])]
+                      channels[idx] = { ...channels[idx], webhook_key_env: e.target.value }
+                      update('webhook_channels', channels)
+                    }}
+                    placeholder="WEBHOOK_KEY"
+                    style={{ width: '100%' }}
+                  />
+                </label>
+                <label>
+                  <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道 Webhook URL Base（可选）</span>
+                  <input
+                    type="text"
+                    value={ch.webhook_url_base || ''}
+                    onChange={(e) => {
+                      const channels = [...(settings.webhook_channels || [])]
+                      channels[idx] = { ...channels[idx], webhook_url_base: e.target.value }
+                      update('webhook_channels', channels)
+                    }}
+                    placeholder="留空使用全局 URL"
+                    style={{ width: '100%' }}
+                  />
+                </label>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => {
+            const channels = [...(settings.webhook_channels || [])]
+            const newId = `ch_${Date.now().toString(36)}`
+            channels.push({
+              id: newId,
+              name: '',
+              enabled: false,
+              topic_mode: 'broad',
+              webhook_url_base: '',
+              webhook_key_env: 'WEBHOOK_KEY',
+            })
+            update('webhook_channels', channels)
+          }}
+          style={{
+            marginTop: 12, padding: '8px 20px', background: 'var(--primary-light)',
+            color: 'var(--primary)', border: '1px dashed var(--primary)',
+            borderRadius: 6, fontSize: 13, cursor: 'pointer', fontWeight: 500,
+          }}
+        >
+          + 添加频道
+        </button>
+
+        <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 12 }}>
+          注意：新增频道需要同步在 GitHub Actions 工作流中添加对应的 Secret 环境变量引用。
         </div>
       </div>
 

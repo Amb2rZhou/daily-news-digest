@@ -49,7 +49,11 @@ def get_rss_feeds(settings: dict = None) -> list[str]:
 CONFIG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "settings.json")
 
 def load_settings() -> dict:
-    """Load settings from config/settings.json."""
+    """Load settings from config/settings.json.
+
+    Backward-compatible: if webhook_channels is missing but webhook_enabled
+    exists, auto-migrate to a single default channel.
+    """
     defaults = {
         "send_hour": 18,
         "send_minute": 0,
@@ -70,6 +74,21 @@ def load_settings() -> dict:
         # Merge with defaults for any missing keys
         for k, v in defaults.items():
             settings.setdefault(k, v)
+
+        # Backward-compatible migration: webhook_enabled -> webhook_channels
+        if "webhook_channels" not in settings:
+            if settings.get("webhook_enabled", False):
+                settings["webhook_channels"] = [{
+                    "id": "default",
+                    "name": "默认群",
+                    "enabled": True,
+                    "topic_mode": settings.get("topic_mode", "broad"),
+                    "webhook_url_base": "",
+                    "webhook_key_env": "WEBHOOK_KEY",
+                }]
+            else:
+                settings["webhook_channels"] = []
+
         return settings
     except (FileNotFoundError, json.JSONDecodeError) as e:
         print(f"  Warning: Could not load settings from {config_path}: {e}")
@@ -575,7 +594,7 @@ URL: {article.get('url', '')}
 
     return []
 
-def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False) -> dict:
+def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False, hardware_unlimited: bool = None) -> dict:
     """Fetch and process news.
 
     Args:
@@ -584,6 +603,9 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
         max_items: Maximum news items to return
         settings: Configuration dict
         manual: If True, use current time as window end (manual trigger)
+        hardware_unlimited: Override for hardware source limiting. If None, auto-detect from topic_mode.
+
+    Returns dict with categories and _raw_articles (for multi-channel reuse).
     """
 
     if settings is None:
@@ -598,8 +620,9 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
     print(f"  - Time window: {start_time} ~ {end_time}")
 
     # 聚焦模式下，智能硬件源不受数量限制
-    topic_mode = settings.get("topic_mode", "broad")
-    hardware_unlimited = (topic_mode == "focused")
+    if hardware_unlimited is None:
+        topic_mode = settings.get("topic_mode", "broad")
+        hardware_unlimited = (topic_mode == "focused")
 
     print("  - Fetching news from RSS feeds...")
     raw_articles = fetch_raw_news(cutoff=cutoff, settings=settings, hardware_unlimited=hardware_unlimited)
@@ -614,6 +637,7 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
             "date": today,
             "time_window": f"{start_time} ~ {end_time}",
             "categories": [],
+            "_raw_articles": [],
             "error": "No articles fetched from RSS feeds"
         }
 
@@ -625,11 +649,20 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
     return {
         "date": today,
         "time_window": f"{start_time} ~ {end_time}",
-        "categories": categories
+        "categories": categories,
+        "_raw_articles": raw_articles,
     }
 
-def save_draft(news_data: dict, settings: dict = None) -> str:
-    """Save news data as a draft JSON file. Returns the draft file path."""
+def save_draft(news_data: dict, settings: dict = None, channel_id: str = None) -> str:
+    """Save news data as a draft JSON file.
+
+    Args:
+        news_data: The news data dict (categories, date, etc.)
+        settings: Configuration dict
+        channel_id: If set, saves as a channel-specific draft (YYYY-MM-DD_ch_<id>.json)
+
+    Returns the draft file path.
+    """
     if settings is None:
         settings = load_settings()
 
@@ -637,12 +670,30 @@ def save_draft(news_data: dict, settings: dict = None) -> str:
     drafts_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "drafts")
     os.makedirs(drafts_dir, exist_ok=True)
 
-    draft_path = os.path.join(drafts_dir, f"{date}.json")
+    if channel_id:
+        filename = f"{date}_ch_{channel_id}.json"
+    else:
+        filename = f"{date}.json"
+    draft_path = os.path.join(drafts_dir, filename)
+
+    # Filter out internal fields like _raw_articles
+    clean_data = {k: v for k, v in news_data.items() if not k.startswith("_")}
+
     draft_data = {
-        **news_data,
-        "status": "pending_review",
+        **clean_data,
+        "status": news_data.get("status", "pending_review"),
         "created_at": datetime.now(ZoneInfo(settings.get("timezone", "Asia/Shanghai"))).isoformat(),
     }
+
+    # Add channel metadata for channel drafts
+    if channel_id:
+        draft_data["channel_id"] = channel_id
+        # Find channel config to store name and topic_mode
+        for ch in settings.get("webhook_channels", []):
+            if ch.get("id") == channel_id:
+                draft_data["channel_name"] = ch.get("name", "")
+                draft_data["topic_mode"] = ch.get("topic_mode", "broad")
+                break
 
     with open(draft_path, "w", encoding="utf-8") as f:
         json.dump(draft_data, f, ensure_ascii=False, indent=2)
@@ -656,7 +707,10 @@ def save_draft(news_data: dict, settings: dict = None) -> str:
 
 
 def cleanup_old_drafts(drafts_dir: str, days: int = 30):
-    """Delete draft files older than specified days."""
+    """Delete draft files older than specified days.
+
+    Handles both YYYY-MM-DD.json and YYYY-MM-DD_ch_<id>.json formats.
+    """
     cutoff_date = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
     deleted = []
 
@@ -664,9 +718,11 @@ def cleanup_old_drafts(drafts_dir: str, days: int = 30):
         for filename in os.listdir(drafts_dir):
             if not filename.endswith('.json'):
                 continue
-            # 文件名格式: YYYY-MM-DD.json
-            file_date = filename.replace('.json', '')
-            if file_date < cutoff_date:
+            # Extract date from filename: YYYY-MM-DD.json or YYYY-MM-DD_ch_xxx.json
+            base = filename.replace('.json', '')
+            # Date is always the first 10 chars (YYYY-MM-DD)
+            file_date = base[:10]
+            if len(file_date) == 10 and file_date < cutoff_date:
                 filepath = os.path.join(drafts_dir, filename)
                 os.remove(filepath)
                 deleted.append(filename)
@@ -676,15 +732,27 @@ def cleanup_old_drafts(drafts_dir: str, days: int = 30):
     if deleted:
         print(f"  - Cleaned up {len(deleted)} old drafts: {deleted}")
 
-def load_draft(date: str = None):
-    """Load a draft by date. If no date given, use today."""
+def load_draft(date: str = None, channel_id: str = None):
+    """Load a draft by date and optional channel_id.
+
+    Args:
+        date: Date string (YYYY-MM-DD). Defaults to today.
+        channel_id: If set, loads the channel-specific draft.
+
+    Returns the draft data dict, or None if not found.
+    """
     if date is None:
         settings = load_settings()
         tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
         date = datetime.now(tz).strftime("%Y-%m-%d")
 
     drafts_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "drafts")
-    draft_path = os.path.join(drafts_dir, f"{date}.json")
+
+    if channel_id:
+        filename = f"{date}_ch_{channel_id}.json"
+    else:
+        filename = f"{date}.json"
+    draft_path = os.path.join(drafts_dir, filename)
 
     try:
         with open(draft_path, "r", encoding="utf-8") as f:

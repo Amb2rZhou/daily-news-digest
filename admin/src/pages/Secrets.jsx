@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { listSecrets, getPublicKey, setSecret } from '../lib/github'
+import { listSecrets, getPublicKey, setSecret, readFile } from '../lib/github'
 import nacl from 'tweetnacl'
 import { decodeBase64, encodeBase64, decodeUTF8 } from 'tweetnacl-util'
 
@@ -8,13 +8,12 @@ const card = {
   border: '1px solid var(--border)', padding: 20, boxShadow: 'var(--shadow)',
 }
 
-const SECRET_DEFS = [
+const BASE_SECRET_DEFS = [
   { name: 'ANTHROPIC_API_KEY', label: 'Claude API 密钥', desc: '用于调用 Claude API 生成新闻摘要', type: 'password' },
   { name: 'SMTP_USERNAME', label: '发件邮箱地址', desc: 'SMTP 发件人邮箱', type: 'text' },
   { name: 'SMTP_PASSWORD', label: '邮箱授权码', desc: 'SMTP 邮箱授权码或应用密码', type: 'password' },
   { name: 'EMAIL_RECIPIENTS', label: '收件人邮箱', desc: '邮件收件人，多个邮箱用英文逗号分隔', type: 'text' },
   { name: 'ADMIN_EMAIL', label: '管理员通知邮箱', desc: '接收系统通知的管理员邮箱', type: 'text' },
-  { name: 'WEBHOOK_KEY', label: 'Webhook 密钥', desc: 'RedCity 群聊机器人 webhook key', type: 'password' },
 ]
 
 function encryptSecret(publicKey, secretValue) {
@@ -30,6 +29,7 @@ export default function Secrets() {
   const [values, setValues] = useState({})
   const [updating, setUpdating] = useState({})
   const [messages, setMessages] = useState({})
+  const [secretDefs, setSecretDefs] = useState([...BASE_SECRET_DEFS, { name: 'WEBHOOK_KEY', label: 'Webhook 密钥', desc: 'RedCity 群聊机器人 webhook key', type: 'password' }])
 
   useEffect(() => { load() }, [])
 
@@ -38,6 +38,44 @@ export default function Secrets() {
     try {
       const secrets = await listSecrets()
       setExistingSecrets(new Set(secrets.map(s => s.name)))
+
+      // Load settings to get webhook channels and generate dynamic secret defs
+      try {
+        const settingsFile = await readFile('config/settings.json')
+        if (settingsFile) {
+          const settings = JSON.parse(settingsFile.content)
+          const channels = settings.webhook_channels || []
+          const webhookDefs = []
+          const seenKeys = new Set()
+
+          if (channels.length > 0) {
+            for (const ch of channels) {
+              const keyEnv = ch.webhook_key_env || 'WEBHOOK_KEY'
+              if (!seenKeys.has(keyEnv)) {
+                seenKeys.add(keyEnv)
+                webhookDefs.push({
+                  name: keyEnv,
+                  label: `Webhook 密钥 (${ch.name || ch.id})`,
+                  desc: `频道「${ch.name || ch.id}」的 webhook key`,
+                  type: 'password',
+                })
+              }
+            }
+          } else {
+            // No channels, show default WEBHOOK_KEY
+            webhookDefs.push({
+              name: 'WEBHOOK_KEY',
+              label: 'Webhook 密钥',
+              desc: 'RedCity 群聊机器人 webhook key',
+              type: 'password',
+            })
+          }
+
+          setSecretDefs([...BASE_SECRET_DEFS, ...webhookDefs])
+        }
+      } catch {
+        // Settings load failed, keep default
+      }
     } catch (e) {
       console.error('Load secrets error:', e)
     }
@@ -75,7 +113,7 @@ export default function Secrets() {
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-        {SECRET_DEFS.map(def => {
+        {secretDefs.map(def => {
           const isSet = existingSecrets.has(def.name)
           const msg = messages[def.name]
           return (

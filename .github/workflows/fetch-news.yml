@@ -124,6 +124,7 @@ jobs:
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
           WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
+          WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src
@@ -186,6 +187,7 @@ jobs:
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
           WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
+          WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src

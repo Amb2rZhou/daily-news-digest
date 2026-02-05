@@ -4,7 +4,16 @@
   "timezone": "Asia/Shanghai",
   "max_news_items": 10,
   "topic_mode": "focused",
-  "webhook_enabled": true,
+  "webhook_channels": [
+    {
+      "id": "default",
+      "name": "默认群",
+      "enabled": true,
+      "topic_mode": "focused",
+      "webhook_url_base": "",
+      "webhook_key_env": "WEBHOOK_KEY"
+    }
+  ],
   "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
   "categories_order": [
     "产品发布",

@@ -44,6 +44,10 @@ export default function Dashboard() {
   const [refetching, setRefetching] = useState(false)
   const pollRef = useRef(null)
 
+  // Multi-channel state
+  const [activeTab, setActiveTab] = useState('email')
+  const [channelDrafts, setChannelDrafts] = useState({}) // { channelId: { data, sha } }
+
   useEffect(() => { load() }, [])
 
   useEffect(() => {
@@ -54,17 +58,22 @@ export default function Dashboard() {
     setLoading(true)
     try {
       const settingsFile = await readFile('config/settings.json')
-      if (settingsFile) setSettings(JSON.parse(settingsFile.content))
+      let parsedSettings = null
+      if (settingsFile) {
+        parsedSettings = JSON.parse(settingsFile.content)
+        setSettings(parsedSettings)
+      }
 
       try {
         const files = await listFiles('config/drafts')
-        const sorted = files
-          .filter(f => f.name.endsWith('.json'))
+        // Filter out channel drafts for the recent drafts list (email only)
+        const emailDrafts = files
+          .filter(f => f.name.endsWith('.json') && !f.name.includes('_ch_'))
           .sort((a, b) => b.name.localeCompare(a.name))
           .slice(0, 7)
 
         // 加载所有草稿内容以显示状态
-        const draftsWithData = await Promise.all(sorted.map(async (f) => {
+        const draftsWithData = await Promise.all(emailDrafts.map(async (f) => {
           try {
             const file = await readFile(`config/drafts/${f.name}`)
             if (file) {
@@ -76,11 +85,30 @@ export default function Dashboard() {
         }))
         setRecentDrafts(draftsWithData)
 
-        if (sorted.length > 0) {
-          const latestFile = await readFile(`config/drafts/${sorted[0].name}`)
+        if (emailDrafts.length > 0) {
+          const latestFile = await readFile(`config/drafts/${emailDrafts[0].name}`)
           if (latestFile) {
-            setLatestDraft({ name: sorted[0].name, ...JSON.parse(latestFile.content) })
+            setLatestDraft({ name: emailDrafts[0].name, ...JSON.parse(latestFile.content) })
             setDraftSha(latestFile.sha)
+          }
+        }
+
+        // Load channel drafts
+        if (parsedSettings) {
+          const channels = (parsedSettings.webhook_channels || []).filter(c => c.enabled)
+          const today = emailDrafts.length > 0 ? emailDrafts[0].name.replace('.json', '') : null
+          if (today && channels.length > 0) {
+            const chDrafts = {}
+            await Promise.all(channels.map(async (ch) => {
+              const chFileName = `${today}_ch_${ch.id}.json`
+              try {
+                const file = await readFile(`config/drafts/${chFileName}`)
+                if (file) {
+                  chDrafts[ch.id] = { data: { name: chFileName, ...JSON.parse(file.content) }, sha: file.sha }
+                }
+              } catch { /* channel draft may not exist */ }
+            }))
+            setChannelDrafts(chDrafts)
           }
         }
       } catch { /* drafts dir may not exist */ }
@@ -145,61 +173,91 @@ export default function Dashboard() {
     }
   }, [])
 
-  // Save draft back to GitHub
-  async function saveDraft(updatedDraft) {
-    if (!latestDraft || !draftSha) return
+  // Save draft back to GitHub (for email or channel)
+  async function saveDraft(updatedDraft, channelId = null) {
     setSaving(true)
     try {
       const { name, ...data } = updatedDraft
       const content = JSON.stringify(data, null, 2) + '\n'
-      const result = await writeFile(
-        `config/drafts/${name}`,
-        content,
-        `Update draft ${name} via admin UI`,
-        draftSha
-      )
-      setDraftSha(result.content.sha)
-      setLatestDraft(updatedDraft)
+
+      if (channelId) {
+        const chInfo = channelDrafts[channelId]
+        if (!chInfo) { setSaving(false); return }
+        const result = await writeFile(
+          `config/drafts/${name}`,
+          content,
+          `Update channel draft ${name} via admin UI`,
+          chInfo.sha
+        )
+        setChannelDrafts(prev => ({
+          ...prev,
+          [channelId]: { data: updatedDraft, sha: result.content.sha }
+        }))
+      } else {
+        if (!latestDraft || !draftSha) { setSaving(false); return }
+        const result = await writeFile(
+          `config/drafts/${name}`,
+          content,
+          `Update draft ${name} via admin UI`,
+          draftSha
+        )
+        setDraftSha(result.content.sha)
+        setLatestDraft(updatedDraft)
+      }
     } catch (e) {
       alert('保存失败: ' + e.message)
     }
     setSaving(false)
   }
 
+  // Get the active draft based on current tab
+  function getActiveDraft() {
+    if (activeTab === 'email') return latestDraft
+    const chInfo = channelDrafts[activeTab]
+    return chInfo?.data || null
+  }
+
   // Review actions
   async function handleApprove() {
-    if (!latestDraft) return
-    await saveDraft({ ...latestDraft, status: 'approved' })
+    const draft = getActiveDraft()
+    if (!draft) return
+    const channelId = activeTab === 'email' ? null : activeTab
+    await saveDraft({ ...draft, status: 'approved' }, channelId)
   }
 
   async function handleReject() {
-    if (!latestDraft) return
-    await saveDraft({ ...latestDraft, status: 'rejected' })
+    const draft = getActiveDraft()
+    if (!draft) return
+    const channelId = activeTab === 'email' ? null : activeTab
+    await saveDraft({ ...draft, status: 'rejected' }, channelId)
   }
 
   // Delete a news item
   async function handleDeleteNews(catIdx, newsIdx) {
-    if (!latestDraft) return
-    const categories = [...latestDraft.categories]
+    const draft = getActiveDraft()
+    if (!draft) return
+    const categories = [...draft.categories]
     const cat = { ...categories[catIdx], news: [...categories[catIdx].news] }
     cat.news.splice(newsIdx, 1)
-    // Remove empty categories
     if (cat.news.length === 0) {
       categories.splice(catIdx, 1)
     } else {
       categories[catIdx] = cat
     }
-    await saveDraft({ ...latestDraft, categories })
+    const channelId = activeTab === 'email' ? null : activeTab
+    await saveDraft({ ...draft, categories }, channelId)
   }
 
   // Save edited summary
   async function handleSaveSummary(catIdx, newsIdx) {
-    if (!latestDraft) return
-    const categories = [...latestDraft.categories]
+    const draft = getActiveDraft()
+    if (!draft) return
+    const categories = [...draft.categories]
     const cat = { ...categories[catIdx], news: [...categories[catIdx].news] }
     cat.news[newsIdx] = { ...cat.news[newsIdx], summary: editSummary }
     categories[catIdx] = cat
-    await saveDraft({ ...latestDraft, categories })
+    const channelId = activeTab === 'email' ? null : activeTab
+    await saveDraft({ ...draft, categories }, channelId)
     setEditingNews(null)
   }
 
@@ -209,7 +267,8 @@ export default function Dashboard() {
       alert('标题和分类为必填项')
       return
     }
-    if (!latestDraft) return
+    const draft = getActiveDraft()
+    if (!draft) return
 
     const newItem = {
       title: addForm.title.trim(),
@@ -218,7 +277,7 @@ export default function Dashboard() {
       source: addForm.source.trim(),
     }
 
-    const categories = [...latestDraft.categories]
+    const categories = [...draft.categories]
     const catIdx = categories.findIndex(c => c.name === addForm.category)
     if (catIdx >= 0) {
       const cat = { ...categories[catIdx], news: [...categories[catIdx].news, newItem] }
@@ -227,7 +286,8 @@ export default function Dashboard() {
       categories.push({ name: addForm.category, news: [newItem] })
     }
 
-    await saveDraft({ ...latestDraft, categories })
+    const channelId = activeTab === 'email' ? null : activeTab
+    await saveDraft({ ...draft, categories }, channelId)
     setAddForm({ url: '', title: '', summary: '', source: '', category: '' })
     setShowAddNews(false)
   }
@@ -289,6 +349,18 @@ export default function Dashboard() {
     return <span style={{ background: s.bg, color: s.color, padding: '2px 10px', borderRadius: 12, fontSize: 12, fontWeight: 500 }}>{s.label}</span>
   }
 
+  // Status dot for tab
+  const statusDot = (status) => {
+    const colorMap = {
+      pending_review: '#d97706',
+      approved: '#2563eb',
+      sent: '#059669',
+      rejected: '#dc2626',
+    }
+    const color = colorMap[status] || '#9ca3af'
+    return <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: color, marginLeft: 6 }} />
+  }
+
   if (loading) return <p style={{ color: 'var(--text2)' }}>加载中...</p>
 
   const feeds = settings?.rss_feeds || []
@@ -296,6 +368,11 @@ export default function Dashboard() {
   const recipients = settings?.recipients || []
   const enabledRecipients = recipients.filter(r => r.enabled)
   const categoryOptions = settings?.categories_order || Object.keys(CATEGORY_ICONS)
+  const enabledChannels = (settings?.webhook_channels || []).filter(c => c.enabled)
+
+  // Get the currently active draft
+  const activeDraft = getActiveDraft()
+  const activeChannelName = activeTab === 'email' ? null : enabledChannels.find(c => c.id === activeTab)?.name
 
   return (
     <div>
@@ -354,7 +431,7 @@ export default function Dashboard() {
             opacity: triggerStatus.webhook === 'loading' ? 0.6 : 1,
           }}
         >
-          {triggerBtnLabel('webhook', '推送群聊')}
+          {triggerBtnLabel('webhook', activeTab !== 'email' && activeChannelName ? `推送到 ${activeChannelName}` : '推送全部群聊')}
         </button>
         {(triggerStatus.fetch === 'success' || triggerStatus.send === 'success' || triggerStatus.webhook === 'success') && (
           <span style={{ fontSize: 13, color: 'var(--success)', alignSelf: 'center' }}>
@@ -469,7 +546,7 @@ export default function Dashboard() {
         )}
       </div>
 
-      {/* Recent send records */}
+      {/* Recent send records (email only) */}
       <div style={{ ...card, marginBottom: 24 }}>
         <h2 style={{ fontSize: 16, marginBottom: 12 }}>最近发送记录</h2>
         {recentDrafts.length === 0 ? (
@@ -536,21 +613,66 @@ export default function Dashboard() {
         )}
       </div>
 
-      {/* Latest news preview */}
-      {latestDraft && (() => {
-        const isDone = latestDraft.status === 'sent' || latestDraft.status === 'rejected'
+      {/* Tab bar for email + channels */}
+      {(latestDraft || Object.keys(channelDrafts).length > 0) && (
+        <div style={{ display: 'flex', gap: 4, marginBottom: 0, borderBottom: '2px solid var(--border)', paddingBottom: 0 }}>
+          <button
+            onClick={() => setActiveTab('email')}
+            style={{
+              padding: '10px 20px', border: 'none', cursor: 'pointer',
+              fontSize: 14, fontWeight: activeTab === 'email' ? 600 : 400,
+              background: activeTab === 'email' ? 'var(--card)' : 'transparent',
+              borderBottom: activeTab === 'email' ? '2px solid var(--primary)' : '2px solid transparent',
+              marginBottom: -2, borderRadius: '8px 8px 0 0',
+              color: activeTab === 'email' ? 'var(--text)' : 'var(--text2)',
+              display: 'flex', alignItems: 'center',
+            }}
+          >
+            邮件草稿
+            {latestDraft && statusDot(latestDraft.status)}
+          </button>
+          {enabledChannels.map(ch => {
+            const chDraft = channelDrafts[ch.id]?.data
+            return (
+              <button
+                key={ch.id}
+                onClick={() => setActiveTab(ch.id)}
+                style={{
+                  padding: '10px 20px', border: 'none', cursor: 'pointer',
+                  fontSize: 14, fontWeight: activeTab === ch.id ? 600 : 400,
+                  background: activeTab === ch.id ? 'var(--card)' : 'transparent',
+                  borderBottom: activeTab === ch.id ? '2px solid #ea580c' : '2px solid transparent',
+                  marginBottom: -2, borderRadius: '8px 8px 0 0',
+                  color: activeTab === ch.id ? 'var(--text)' : 'var(--text2)',
+                  display: 'flex', alignItems: 'center',
+                }}
+              >
+                {ch.name || ch.id}
+                {chDraft && statusDot(chDraft.status)}
+              </button>
+            )
+          })}
+        </div>
+      )}
+
+      {/* Draft preview area (shared UI, data driven by activeTab) */}
+      {activeDraft && (() => {
+        const isDone = activeDraft.status === 'sent' || activeDraft.status === 'rejected'
         const isEditable = !isDone
         return (
         <div style={card}>
           {/* Review action bar */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: isDone ? 0 : 16, flexWrap: 'wrap' }}>
-            <h2 style={{ fontSize: 16, margin: 0 }}>最新新闻预览</h2>
-            {statusBadge(latestDraft.status)}
-            <span style={{ fontSize: 12, color: 'var(--text3)' }}>{latestDraft.name.replace('.json', '')}</span>
-            {latestDraft.time_window && <span style={{ fontSize: 12, color: 'var(--text3)' }}>{latestDraft.time_window}</span>}
+            <h2 style={{ fontSize: 16, margin: 0 }}>
+              {activeTab === 'email' ? '最新新闻预览' : `频道预览 - ${activeChannelName || activeTab}`}
+            </h2>
+            {statusBadge(activeDraft.status)}
+            <span style={{ fontSize: 12, color: 'var(--text3)' }}>{activeDraft.name?.replace('.json', '')}</span>
+            {activeDraft.time_window && <span style={{ fontSize: 12, color: 'var(--text3)' }}>{activeDraft.time_window}</span>}
+            {activeDraft.topic_mode && <span style={{ fontSize: 11, color: '#6366f1', background: '#eef2ff', padding: '2px 8px', borderRadius: 4 }}>{activeDraft.topic_mode}</span>}
             <div style={{ flex: 1 }} />
             {saving && <span style={{ fontSize: 12, color: 'var(--text2)' }}>保存中...</span>}
-            {latestDraft.status === 'pending_review' && (
+            {activeDraft.status === 'pending_review' && (
               <>
                 <button
                   onClick={handleApprove}
@@ -568,12 +690,14 @@ export default function Dashboard() {
                 </button>
               </>
             )}
-            <button
-              onClick={() => setShowEmailPreview(true)}
-              style={{ ...btnPrimary, background: '#6366f1', color: '#fff', padding: '6px 16px', fontSize: 13 }}
-            >
-              预览邮件
-            </button>
+            {activeTab === 'email' && (
+              <button
+                onClick={() => setShowEmailPreview(true)}
+                style={{ ...btnPrimary, background: '#6366f1', color: '#fff', padding: '6px 16px', fontSize: 13 }}
+              >
+                预览邮件
+              </button>
+            )}
           </div>
 
           {isEditable && <>
@@ -682,7 +806,7 @@ export default function Dashboard() {
           </>}
 
           {/* News categories */}
-          {isEditable && (latestDraft.categories || []).map((cat, catIdx) => {
+          {isEditable && (activeDraft.categories || []).map((cat, catIdx) => {
             const catKey = cat.name || catIdx
             const isExpanded = draftExpanded[catKey]
             return (
@@ -780,12 +904,20 @@ export default function Dashboard() {
               </div>
             )
           })}
-          {isEditable && (!latestDraft.categories || latestDraft.categories.length === 0) && (
+          {isEditable && (!activeDraft.categories || activeDraft.categories.length === 0) && (
             <p style={{ color: 'var(--text3)', fontSize: 14 }}>该草稿暂无新闻内容</p>
           )}
         </div>
         )
       })()}
+
+      {/* No draft message for active tab */}
+      {!activeDraft && activeTab !== 'email' && (
+        <div style={{ ...card, textAlign: 'center', padding: 40, color: 'var(--text2)' }}>
+          <p style={{ fontSize: 14 }}>频道「{activeChannelName || activeTab}」暂无草稿</p>
+          <p style={{ fontSize: 12, color: 'var(--text3)' }}>请先运行「抓取新闻」生成草稿</p>
+        </div>
+      )}
 
       {/* Email preview modal */}
       {showEmailPreview && latestDraft && (
