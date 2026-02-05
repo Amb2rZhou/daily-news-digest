@@ -97,14 +97,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 先拉最新代码（草稿还在工作区未暂存，不会冲突）
+          git pull origin main
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Add news draft for $(TZ=Asia/Shanghai date +%Y-%m-%d)"
-          # -X theirs keeps newly generated drafts when remote has older versions
-          git pull --rebase -X theirs origin main || {
-            echo "Rebase failed, falling back to merge..."
-            git rebase --abort 2>/dev/null || true
-            git pull --no-rebase -X ours origin main
-          }
           git push
 
       # 测试模式：抓取后立即发送
@@ -127,12 +123,9 @@ jobs:
       - name: Commit sent status (test mode)
         if: steps.pre_check.outputs.skip != 'true' && inputs.auto_send == true
         run: |
+          git pull origin main
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Mark draft as sent (test mode)"
-          git pull --rebase -X theirs origin main || {
-            git rebase --abort 2>/dev/null || true
-            git pull --no-rebase -X ours origin main
-          }
           git push
 
       - name: Notify admin on failure
