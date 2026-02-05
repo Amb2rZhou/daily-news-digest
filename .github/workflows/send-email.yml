@@ -45,7 +45,6 @@ jobs:
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
           WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
-          WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src
