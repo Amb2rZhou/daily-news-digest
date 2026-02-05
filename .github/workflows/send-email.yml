@@ -1,4 +1,4 @@
-name: Send Email
+name: Send Channel
 
 on:
   # 手动触发（从 Admin UI 或 GitHub Actions）

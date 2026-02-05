@@ -80,17 +80,18 @@ def _get_webhook_key(channel: dict = None) -> str | None:
 
     if webhook_keys_raw:
         try:
-            keys = json.loads(webhook_keys_raw)
+            keys = json.loads(webhook_keys_raw.strip())
             if channel_id and channel_id in keys:
-                return keys[channel_id]
+                return keys[channel_id].strip()
             # If only one key in the dict, use it as fallback
             if len(keys) == 1:
-                return next(iter(keys.values()))
+                return next(iter(keys.values())).strip()
         except (json.JSONDecodeError, TypeError):
             print("Warning: WEBHOOK_KEYS is not valid JSON, falling back to WEBHOOK_KEY")
 
     # Legacy fallback
-    return os.environ.get("WEBHOOK_KEY")
+    key = os.environ.get("WEBHOOK_KEY")
+    return key.strip() if key else key
 
 
 def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -> bool:
