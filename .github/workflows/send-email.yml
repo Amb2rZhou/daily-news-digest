@@ -1,15 +1,15 @@
 name: Send Email
 
 on:
-  # 每小时运行，检查是否到达发送时间
-  schedule:
-    - cron: '0 * * * *'
-
   # 手动触发（从 Admin UI 或 GitHub Actions）
   workflow_dispatch:
     inputs:
       date:
         description: 'Draft date to send (YYYY-MM-DD, defaults to today)'
+        required: false
+        type: string
+      channel_id:
+        description: 'Channel ID to send (leave empty for all enabled channels)'
         required: false
         type: string
 
@@ -25,74 +25,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check scheduled time and draft status
-        id: check
-        env:
-          IS_MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
-        run: |
-          # Read settings
-          SEND_HOUR=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('send_hour', 17))")
-          SEND_MINUTE=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('send_minute', 30))")
-          TZ=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('timezone', 'Asia/Shanghai'))")
-
-          # Get current time in configured timezone
-          CURRENT_HOUR=$(TZ="$TZ" date +%H | sed 's/^0//')
-          CURRENT_MINUTE=$(TZ="$TZ" date +%M | sed 's/^0//')
-
-          echo "Settings: send at ${SEND_HOUR}:${SEND_MINUTE}, timezone ${TZ}"
-          echo "Current time: ${CURRENT_HOUR}:${CURRENT_MINUTE}"
-
-          # Manual trigger always proceeds
-          if [ "$IS_MANUAL" = "true" ]; then
-            echo "Manual trigger, proceeding..."
-            echo "skip=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          # Check if it's send time (same hour, minute >= send_minute)
-          if [ "$CURRENT_HOUR" = "$SEND_HOUR" ] && [ "$CURRENT_MINUTE" -ge "$SEND_MINUTE" ]; then
-            echo "Send time reached, checking draft..."
-          else
-            echo "Not send time yet, skipping..."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          # Check if draft exists and is pending_review
-          DATE=$(TZ="$TZ" date +%Y-%m-%d)
-          DRAFT="config/drafts/${DATE}.json"
-          if [ ! -f "$DRAFT" ]; then
-            echo "No draft for ${DATE}, skipping..."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          STATUS=$(python3 -c "import json; print(json.load(open('$DRAFT')).get('status',''))")
-          echo "Draft status: ${STATUS}"
-
-          if [ "$STATUS" = "pending_review" ] || [ "$STATUS" = "approved" ]; then
-            echo "Draft ready to send"
-            echo "skip=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "Draft already sent or rejected, skipping..."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Set up Python
-        if: steps.check.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
       - name: Install dependencies
-        if: steps.check.outputs.skip != 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Send email from draft
-        if: steps.check.outputs.skip != 'true'
+      - name: Send from draft
         env:
           SMTP_HOST: smtp.qq.com
           SMTP_PORT: 587
@@ -100,15 +44,21 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
-          WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src
-          python main.py send ${{ inputs.date }}
+          ARGS="send"
+          if [ -n "${{ inputs.date }}" ]; then
+            ARGS="$ARGS ${{ inputs.date }}"
+          fi
+          if [ -n "${{ inputs.channel_id }}" ]; then
+            ARGS="$ARGS --channel ${{ inputs.channel_id }}"
+          fi
+          python main.py $ARGS
 
       - name: Commit draft status update
-        if: steps.check.outputs.skip != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -118,7 +68,7 @@ jobs:
           git push
 
       - name: Notify admin on failure
-        if: failure() && steps.check.outputs.skip != 'true'
+        if: failure()
         env:
           SMTP_HOST: smtp.qq.com
           SMTP_PORT: '587'
@@ -130,7 +80,7 @@ jobs:
           python -c "
           from send_email import send_email
           send_email(
-              subject='[FAILED] Send Email - ${{ github.run_id }}',
-              body='<h3>Email 发送失败</h3><p>Run ID: <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">${{ github.run_id }}</a></p><p>请检查 Actions 日志。</p>'
+              subject='[FAILED] Send - ${{ github.run_id }}',
+              body='<h3>发送失败</h3><p>Run ID: <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">${{ github.run_id }}</a></p><p>请检查 Actions 日志。</p>'
           )
           "

@@ -68,36 +68,58 @@ def format_webhook_markdown(news_data: dict) -> str:
     return "\n".join(lines)
 
 
+def _get_webhook_key(channel: dict = None) -> str | None:
+    """Resolve webhook key for the given channel.
+
+    Resolution order:
+    1. WEBHOOK_KEYS env var (JSON dict keyed by channel id)
+    2. Fallback to WEBHOOK_KEY env var (legacy single-key)
+    """
+    webhook_keys_raw = os.environ.get("WEBHOOK_KEYS")
+    channel_id = channel.get("id") if channel else None
+
+    if webhook_keys_raw:
+        try:
+            keys = json.loads(webhook_keys_raw)
+            if channel_id and channel_id in keys:
+                return keys[channel_id]
+            # If only one key in the dict, use it as fallback
+            if len(keys) == 1:
+                return next(iter(keys.values()))
+        except (json.JSONDecodeError, TypeError):
+            print("Warning: WEBHOOK_KEYS is not valid JSON, falling back to WEBHOOK_KEY")
+
+    # Legacy fallback
+    return os.environ.get("WEBHOOK_KEY")
+
+
 def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -> bool:
     """POST markdown message to RedCity webhook. Returns True on success.
 
     Args:
         news_data: Draft data with categories
         settings: Global settings dict
-        channel: Optional channel config dict. When provided, uses the channel's
-                 webhook_key_env and webhook_url_base (falling back to global).
+        channel: Optional channel config dict. When provided, resolves webhook
+                 key from WEBHOOK_KEYS JSON env var by channel id, and uses
+                 the channel's webhook_url_base (falling back to global).
                  When None, uses legacy WEBHOOK_KEY env var.
     """
     if settings is None:
         settings = _load_settings()
 
-    # Determine webhook key env var name
+    webhook_key = _get_webhook_key(channel)
+    if not webhook_key:
+        ch_label = channel.get("id", "?") if channel else "default"
+        print(f"Warning: No webhook key found for channel '{ch_label}', skipping webhook")
+        return False
+
+    # Channel URL base takes priority, then global
     if channel:
-        key_env = channel.get("webhook_key_env", "WEBHOOK_KEY")
-        webhook_key = os.environ.get(key_env)
-        if not webhook_key:
-            print(f"Warning: {key_env} not set, skipping webhook for channel '{channel.get('id', '?')}'")
-            return False
-        # Channel URL base takes priority, then global
         url_base = channel.get("webhook_url_base", "").strip() or settings.get(
             "webhook_url_base",
             "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
         )
     else:
-        webhook_key = os.environ.get("WEBHOOK_KEY")
-        if not webhook_key:
-            print("Warning: WEBHOOK_KEY not set, skipping webhook")
-            return False
         url_base = settings.get(
             "webhook_url_base",
             "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",

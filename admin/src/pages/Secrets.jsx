@@ -14,6 +14,7 @@ const BASE_SECRET_DEFS = [
   { name: 'SMTP_PASSWORD', label: '邮箱授权码', desc: 'SMTP 邮箱授权码或应用密码', type: 'password' },
   { name: 'EMAIL_RECIPIENTS', label: '收件人邮箱', desc: '邮件收件人，多个邮箱用英文逗号分隔', type: 'text' },
   { name: 'ADMIN_EMAIL', label: '管理员通知邮箱', desc: '接收系统通知的管理员邮箱', type: 'text' },
+  { name: 'WEBHOOK_KEYS', label: 'Webhook 密钥 (JSON)', desc: '所有 Webhook 频道的密钥，JSON 格式：{"频道ID": "key值", ...}', type: 'password' },
 ]
 
 function encryptSecret(publicKey, secretValue) {
@@ -29,7 +30,7 @@ export default function Secrets() {
   const [values, setValues] = useState({})
   const [updating, setUpdating] = useState({})
   const [messages, setMessages] = useState({})
-  const [secretDefs, setSecretDefs] = useState([...BASE_SECRET_DEFS, { name: 'WEBHOOK_KEY', label: 'Webhook 密钥', desc: 'RedCity 群聊机器人 webhook key', type: 'password' }])
+  const [webhookChannelIds, setWebhookChannelIds] = useState([])
 
   useEffect(() => { load() }, [])
 
@@ -39,42 +40,19 @@ export default function Secrets() {
       const secrets = await listSecrets()
       setExistingSecrets(new Set(secrets.map(s => s.name)))
 
-      // Load settings to get webhook channels and generate dynamic secret defs
+      // Load settings to get webhook channel ids for helper text
       try {
         const settingsFile = await readFile('config/settings.json')
         if (settingsFile) {
           const settings = JSON.parse(settingsFile.content)
-          const channels = settings.webhook_channels || []
-          const webhookDefs = []
-          const seenKeys = new Set()
-
-          if (channels.length > 0) {
-            for (const ch of channels) {
-              const keyEnv = ch.webhook_key_env || 'WEBHOOK_KEY'
-              if (!seenKeys.has(keyEnv)) {
-                seenKeys.add(keyEnv)
-                webhookDefs.push({
-                  name: keyEnv,
-                  label: `Webhook 密钥 (${ch.name || ch.id})`,
-                  desc: `频道「${ch.name || ch.id}」的 webhook key`,
-                  type: 'password',
-                })
-              }
-            }
-          } else {
-            // No channels, show default WEBHOOK_KEY
-            webhookDefs.push({
-              name: 'WEBHOOK_KEY',
-              label: 'Webhook 密钥',
-              desc: 'RedCity 群聊机器人 webhook key',
-              type: 'password',
-            })
-          }
-
-          setSecretDefs([...BASE_SECRET_DEFS, ...webhookDefs])
+          const channels = settings.channels || []
+          const webhookIds = channels
+            .filter(ch => ch.type === 'webhook')
+            .map(ch => ch.id)
+          setWebhookChannelIds(webhookIds)
         }
       } catch {
-        // Settings load failed, keep default
+        // Settings load failed
       }
     } catch (e) {
       console.error('Load secrets error:', e)
@@ -113,9 +91,10 @@ export default function Secrets() {
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-        {secretDefs.map(def => {
+        {BASE_SECRET_DEFS.map(def => {
           const isSet = existingSecrets.has(def.name)
           const msg = messages[def.name]
+          const isWebhookKeys = def.name === 'WEBHOOK_KEYS'
           return (
             <div key={def.name} style={card}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
@@ -129,6 +108,24 @@ export default function Secrets() {
                 </span>
               </div>
               <div style={{ fontSize: 13, color: 'var(--text2)', marginBottom: 12 }}>{def.desc}</div>
+
+              {/* WEBHOOK_KEYS helper */}
+              {isWebhookKeys && webhookChannelIds.length > 0 && (
+                <div style={{
+                  padding: 12, marginBottom: 12, borderRadius: 6,
+                  background: '#f0f9ff', border: '1px solid #bae6fd',
+                  fontSize: 12, color: '#0369a1',
+                }}>
+                  <strong>当前 Webhook 频道 ID：</strong>
+                  <span style={{ fontFamily: 'monospace' }}>
+                    {webhookChannelIds.join(', ')}
+                  </span>
+                  <div style={{ marginTop: 6, color: '#64748b' }}>
+                    格式示例：{`{"${webhookChannelIds[0]}": "your_key_here"${webhookChannelIds.length > 1 ? `, "${webhookChannelIds[1]}": "another_key"` : ''}}`}
+                  </div>
+                </div>
+              )}
+
               <div style={{ display: 'flex', gap: 8 }}>
                 <input
                   type={def.type}

@@ -1,17 +1,26 @@
 {
-  "send_hour": 17,
-  "send_minute": 30,
   "timezone": "Asia/Shanghai",
-  "max_news_items": 10,
-  "topic_mode": "focused",
-  "webhook_channels": [
+  "channels": [
+    {
+      "id": "email",
+      "type": "email",
+      "name": "邮件",
+      "enabled": true,
+      "send_hour": 17,
+      "send_minute": 30,
+      "topic_mode": "focused",
+      "max_news_items": 10
+    },
     {
       "id": "default",
+      "type": "webhook",
       "name": "默认群",
       "enabled": true,
+      "send_hour": 17,
+      "send_minute": 30,
       "topic_mode": "focused",
-      "webhook_url_base": "",
-      "webhook_key_env": "WEBHOOK_KEY"
+      "max_news_items": 10,
+      "webhook_url_base": ""
     }
   ],
   "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",

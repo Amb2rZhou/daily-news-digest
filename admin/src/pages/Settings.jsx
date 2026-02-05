@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { readFile, writeFile, updateWorkflowCron } from '../lib/github'
+import { readFile, writeFile } from '../lib/github'
 import { getAnthropicKey, setAnthropicKey, hasAnthropicKey } from '../lib/claude'
 
 const card = {
@@ -98,6 +98,18 @@ export default function Settings() {
     update('categories_order', order)
   }
 
+  function updateChannel(idx, updates) {
+    setSettings(prev => {
+      const channels = [...(prev.channels || [])]
+      channels[idx] = { ...channels[idx], ...(typeof updates === 'object' && !Array.isArray(updates) ? updates : {}) }
+      return { ...prev, channels }
+    })
+  }
+
+  function updateChannelField(idx, key, value) {
+    updateChannel(idx, { [key]: value })
+  }
+
   async function save() {
     if (!settings) return
     setSaving(true)
@@ -110,18 +122,6 @@ export default function Settings() {
         sha
       )
       setSha(result.content.sha)
-
-      // Also update workflow cron
-      const sendHour = settings.send_hour ?? 18
-      const sendMinute = settings.send_minute ?? 0
-      const utcHour = (sendHour - 8 + 24) % 24
-      const newCron = `${sendMinute} ${utcHour} * * *`
-      try {
-        await updateWorkflowCron(newCron)
-      } catch (e) {
-        console.warn('Could not update workflow cron:', e)
-      }
-
       alert('设置已保存')
     } catch (e) {
       alert('保存失败: ' + e.message)
@@ -131,6 +131,8 @@ export default function Settings() {
 
   if (loading) return <p style={{ color: 'var(--text2)' }}>加载中...</p>
   if (!settings) return <p style={{ color: 'var(--text2)' }}>无法加载设置</p>
+
+  const channels = settings.channels || []
 
   return (
     <div>
@@ -145,115 +147,31 @@ export default function Settings() {
         </button>
       </div>
 
-      {/* Basic settings */}
+      {/* Basic settings - timezone only */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>基本设置</h2>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-          <label>
-            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>发送时间</span>
-            <input
-              type="time"
-              value={`${String(settings.send_hour ?? 18).padStart(2, '0')}:${String(settings.send_minute ?? 0).padStart(2, '0')}`}
-              onChange={(e) => {
-                const [h, m] = e.target.value.split(':').map(Number)
-                update('send_hour', h)
-                update('send_minute', m)
-              }}
-              style={{ width: '100%' }}
-            />
-          </label>
-
-          <label>
-            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>最大新闻条数</span>
-            <input
-              type="number"
-              min={1}
-              max={30}
-              value={settings.max_news_items}
-              onChange={(e) => update('max_news_items', parseInt(e.target.value) || 10)}
-              style={{ width: '100%' }}
-            />
-          </label>
-
-          <label style={{ gridColumn: '1 / -1' }}>
-            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>时区</span>
-            <select
-              value={settings.timezone}
-              onChange={(e) => update('timezone', e.target.value)}
-              style={{ width: '100%' }}
-            >
-              {TIMEZONE_OPTIONS.map(tz => (
-                <option key={tz.value} value={tz.value}>{tz.label}</option>
-              ))}
-              {!TIMEZONE_OPTIONS.some(tz => tz.value === settings.timezone) && (
-                <option value={settings.timezone}>{settings.timezone}</option>
-              )}
-            </select>
-          </label>
-        </div>
-      </div>
-
-      {/* Topic Mode */}
-      <div style={card}>
-        <h2 style={{ fontSize: 16, marginBottom: 16 }}>主题模式</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <label style={{
-            display: 'flex', alignItems: 'flex-start', gap: 12, padding: 16,
-            background: settings.topic_mode === 'broad' ? '#eef2ff' : '#f9fafb',
-            border: settings.topic_mode === 'broad' ? '2px solid #6366f1' : '1px solid var(--border)',
-            borderRadius: 8, cursor: 'pointer',
-          }}>
-            <input
-              type="radio"
-              name="topic_mode"
-              value="broad"
-              checked={settings.topic_mode === 'broad' || !settings.topic_mode}
-              onChange={() => update('topic_mode', 'broad')}
-              style={{ marginTop: 2 }}
-            />
-            <div>
-              <div style={{ fontWeight: 600, fontSize: 14 }}>泛 AI 模式</div>
-              <div style={{ fontSize: 12, color: 'var(--text2)', marginTop: 4 }}>
-                覆盖 AI 全领域：模型发布、公司动态、融资、产品、政策、应用落地、机器人、自动驾驶等
-              </div>
-            </div>
-          </label>
-          <label style={{
-            display: 'flex', alignItems: 'flex-start', gap: 12, padding: 16,
-            background: settings.topic_mode === 'focused' ? '#fef3c7' : '#f9fafb',
-            border: settings.topic_mode === 'focused' ? '2px solid #d97706' : '1px solid var(--border)',
-            borderRadius: 8, cursor: 'pointer',
-          }}>
-            <input
-              type="radio"
-              name="topic_mode"
-              value="focused"
-              checked={settings.topic_mode === 'focused'}
-              onChange={() => update('topic_mode', 'focused')}
-              style={{ marginTop: 2 }}
-            />
-            <div>
-              <div style={{ fontWeight: 600, fontSize: 14 }}>🎯 聚焦模式</div>
-              <div style={{ fontSize: 12, color: 'var(--text2)', marginTop: 4 }}>
-                重点关注三个方向：<br/>
-                • 智能硬件（AR/VR/MR/XR、智能穿戴、空间计算）<br/>
-                • AI 技术及产品进展（模型能力、新产品形态、新范式）<br/>
-                • 巨头动向和行业观察
-              </div>
-              <div style={{ fontSize: 12, color: '#d97706', marginTop: 8, fontWeight: 500 }}>
-                ✨ 每条新闻附带 AI 评论/未来推演
-              </div>
-            </div>
-          </label>
-        </div>
+        <label>
+          <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>时区</span>
+          <select
+            value={settings.timezone}
+            onChange={(e) => update('timezone', e.target.value)}
+            style={{ width: '100%' }}
+          >
+            {TIMEZONE_OPTIONS.map(tz => (
+              <option key={tz.value} value={tz.value}>{tz.label}</option>
+            ))}
+            {!TIMEZONE_OPTIONS.some(tz => tz.value === settings.timezone) && (
+              <option value={settings.timezone}>{settings.timezone}</option>
+            )}
+          </select>
+        </label>
       </div>
 
       {/* Custom Prompt */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 8 }}>自定义 Prompt</h2>
         <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 12 }}>
-          高级选项：直接输入自定义 Prompt 控制 AI 筛选逻辑。留空则使用上方主题模式的默认 Prompt。
+          高级选项：直接输入自定义 Prompt 控制 AI 筛选逻辑。留空则使用各频道的主题模式默认 Prompt。
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
@@ -414,9 +332,9 @@ icon 映射：{icon_mapping}
         />
       </div>
 
-      {/* Webhook channel settings */}
+      {/* Channel Management */}
       <div style={card}>
-        <h2 style={{ fontSize: 16, marginBottom: 16 }}>Webhook 推送</h2>
+        <h2 style={{ fontSize: 16, marginBottom: 16 }}>频道管理</h2>
 
         {/* Global webhook URL base */}
         <label style={{ display: 'block', marginBottom: 20 }}>
@@ -429,124 +347,134 @@ icon 映射：{icon_mapping}
             style={{ width: '100%' }}
           />
           <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 4, display: 'block' }}>
-            各频道可覆盖此 URL，留空时使用全局值
+            Webhook 频道可覆盖此 URL，留空时使用全局值
           </span>
         </label>
 
         {/* Channel list */}
-        <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 12 }}>推送频道</div>
+        <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 12 }}>频道列表</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {(settings.webhook_channels || []).map((ch, idx) => (
-            <div key={ch.id || idx} style={{
-              padding: 16, borderRadius: 8, border: '1px solid var(--border)',
-              background: ch.enabled ? '#f0fdf4' : '#f9fafb',
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <input
-                    type="checkbox"
-                    checked={ch.enabled ?? false}
-                    onChange={(e) => {
-                      const channels = [...(settings.webhook_channels || [])]
-                      channels[idx] = { ...channels[idx], enabled: e.target.checked }
-                      update('webhook_channels', channels)
-                    }}
-                  />
-                  <span style={{ fontWeight: 600, fontSize: 14 }}>{ch.name || ch.id}</span>
-                </label>
-                <span style={{ fontSize: 12, color: 'var(--text3)' }}>ID: {ch.id}</span>
-                <div style={{ flex: 1 }} />
-                <button
-                  onClick={() => {
-                    if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？`)) return
-                    const channels = [...(settings.webhook_channels || [])]
-                    channels.splice(idx, 1)
-                    update('webhook_channels', channels)
-                  }}
-                  style={{
-                    background: 'none', border: 'none', cursor: 'pointer',
-                    color: '#dc2626', fontSize: 14, padding: '2px 6px',
-                  }}
-                >
-                  删除
-                </button>
+          {channels.map((ch, idx) => {
+            const isEmail = ch.type === 'email'
+            return (
+              <div key={ch.id || idx} style={{
+                padding: 16, borderRadius: 8, border: '1px solid var(--border)',
+                background: ch.enabled ? (isEmail ? '#eff6ff' : '#f0fdf4') : '#f9fafb',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <input
+                      type="checkbox"
+                      checked={ch.enabled ?? false}
+                      onChange={(e) => updateChannelField(idx, 'enabled', e.target.checked)}
+                    />
+                    <span style={{ fontWeight: 600, fontSize: 14 }}>{ch.name || ch.id}</span>
+                  </label>
+                  <span style={{
+                    fontSize: 11, padding: '2px 8px', borderRadius: 4, fontWeight: 500,
+                    background: isEmail ? '#dbeafe' : '#dcfce7',
+                    color: isEmail ? '#1d4ed8' : '#166534',
+                  }}>
+                    {isEmail ? '邮件' : 'Webhook'}
+                  </span>
+                  <span style={{ fontSize: 12, color: 'var(--text3)' }}>ID: {ch.id}</span>
+                  <div style={{ flex: 1 }} />
+                  {!isEmail && (
+                    <button
+                      onClick={() => {
+                        if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？`)) return
+                        const newChannels = [...channels]
+                        newChannels.splice(idx, 1)
+                        update('channels', newChannels)
+                      }}
+                      style={{
+                        background: 'none', border: 'none', cursor: 'pointer',
+                        color: '#dc2626', fontSize: 14, padding: '2px 6px',
+                      }}
+                    >
+                      删除
+                    </button>
+                  )}
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                  <label>
+                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道名称</span>
+                    <input
+                      type="text"
+                      value={ch.name || ''}
+                      onChange={(e) => updateChannelField(idx, 'name', e.target.value)}
+                      placeholder="频道名称"
+                      style={{ width: '100%' }}
+                    />
+                  </label>
+                  <label>
+                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>发送时间</span>
+                    <input
+                      type="time"
+                      value={`${String(ch.send_hour ?? 18).padStart(2, '0')}:${String(ch.send_minute ?? 0).padStart(2, '0')}`}
+                      onChange={(e) => {
+                        const [h, m] = e.target.value.split(':').map(Number)
+                        updateChannel(idx, { send_hour: h, send_minute: m })
+                      }}
+                      style={{ width: '100%' }}
+                    />
+                  </label>
+                  <label>
+                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>主题模式</span>
+                    <select
+                      value={ch.topic_mode || 'broad'}
+                      onChange={(e) => updateChannelField(idx, 'topic_mode', e.target.value)}
+                      style={{ width: '100%' }}
+                    >
+                      <option value="broad">泛 AI 模式</option>
+                      <option value="focused">聚焦模式</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>最大新闻条数</span>
+                    <input
+                      type="number"
+                      min={1}
+                      max={30}
+                      value={ch.max_news_items ?? 10}
+                      onChange={(e) => updateChannelField(idx, 'max_news_items', parseInt(e.target.value) || 10)}
+                      style={{ width: '100%' }}
+                    />
+                  </label>
+                  {!isEmail && (
+                    <label style={{ gridColumn: '1 / -1' }}>
+                      <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道 Webhook URL Base（可选）</span>
+                      <input
+                        type="text"
+                        value={ch.webhook_url_base || ''}
+                        onChange={(e) => updateChannelField(idx, 'webhook_url_base', e.target.value)}
+                        placeholder="留空使用全局 URL"
+                        style={{ width: '100%' }}
+                      />
+                    </label>
+                  )}
+                </div>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-                <label>
-                  <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道名称</span>
-                  <input
-                    type="text"
-                    value={ch.name || ''}
-                    onChange={(e) => {
-                      const channels = [...(settings.webhook_channels || [])]
-                      channels[idx] = { ...channels[idx], name: e.target.value }
-                      update('webhook_channels', channels)
-                    }}
-                    placeholder="群名称"
-                    style={{ width: '100%' }}
-                  />
-                </label>
-                <label>
-                  <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>主题模式</span>
-                  <select
-                    value={ch.topic_mode || 'broad'}
-                    onChange={(e) => {
-                      const channels = [...(settings.webhook_channels || [])]
-                      channels[idx] = { ...channels[idx], topic_mode: e.target.value }
-                      update('webhook_channels', channels)
-                    }}
-                    style={{ width: '100%' }}
-                  >
-                    <option value="broad">泛 AI 模式</option>
-                    <option value="focused">聚焦模式</option>
-                  </select>
-                </label>
-                <label>
-                  <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>Webhook Key 环境变量名</span>
-                  <input
-                    type="text"
-                    value={ch.webhook_key_env || ''}
-                    onChange={(e) => {
-                      const channels = [...(settings.webhook_channels || [])]
-                      channels[idx] = { ...channels[idx], webhook_key_env: e.target.value }
-                      update('webhook_channels', channels)
-                    }}
-                    placeholder="WEBHOOK_KEY"
-                    style={{ width: '100%' }}
-                  />
-                </label>
-                <label>
-                  <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道 Webhook URL Base（可选）</span>
-                  <input
-                    type="text"
-                    value={ch.webhook_url_base || ''}
-                    onChange={(e) => {
-                      const channels = [...(settings.webhook_channels || [])]
-                      channels[idx] = { ...channels[idx], webhook_url_base: e.target.value }
-                      update('webhook_channels', channels)
-                    }}
-                    placeholder="留空使用全局 URL"
-                    style={{ width: '100%' }}
-                  />
-                </label>
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         <button
           onClick={() => {
-            const channels = [...(settings.webhook_channels || [])]
+            const newChannels = [...channels]
             const newId = `ch_${Date.now().toString(36)}`
-            channels.push({
+            newChannels.push({
               id: newId,
+              type: 'webhook',
               name: '',
               enabled: false,
+              send_hour: 12,
+              send_minute: 0,
               topic_mode: 'broad',
+              max_news_items: 10,
               webhook_url_base: '',
-              webhook_key_env: 'WEBHOOK_KEY',
             })
-            update('webhook_channels', channels)
+            update('channels', newChannels)
           }}
           style={{
             marginTop: 12, padding: '8px 20px', background: 'var(--primary-light)',
@@ -558,7 +486,7 @@ icon 映射：{icon_mapping}
         </button>
 
         <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 12 }}>
-          注意：新增频道需要同步在 GitHub Actions 工作流中添加对应的 Secret 环境变量引用。
+          添加新频道后，请在「密钥管理」页面更新 WEBHOOK_KEYS，将新频道 ID 对应的 key 加入 JSON。
         </div>
       </div>
 

@@ -51,14 +51,15 @@ CONFIG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 def load_settings() -> dict:
     """Load settings from config/settings.json.
 
-    Backward-compatible: if webhook_channels is missing but webhook_enabled
-    exists, auto-migrate to a single default channel.
+    Backward-compatible: auto-migrates old formats to the new unified
+    ``channels`` array.  Supports three legacy shapes:
+
+    1. ``webhook_channels`` present (no ``channels``)  → convert
+    2. ``webhook_enabled`` present (no ``webhook_channels``, no ``channels``) → convert
+    3. Only top-level ``send_hour``/``send_minute``/``topic_mode``/``max_news_items`` → convert
     """
     defaults = {
-        "send_hour": 18,
-        "send_minute": 0,
         "timezone": "Asia/Shanghai",
-        "max_news_items": 10,
         "categories_order": ["产品发布", "巨头动向", "技术进展", "行业观察", "投融资"],
         "filters": {
             "blacklist_keywords": [],
@@ -75,19 +76,55 @@ def load_settings() -> dict:
         for k, v in defaults.items():
             settings.setdefault(k, v)
 
-        # Backward-compatible migration: webhook_enabled -> webhook_channels
-        if "webhook_channels" not in settings:
-            if settings.get("webhook_enabled", False):
-                settings["webhook_channels"] = [{
+        # --- Backward-compatible migration to unified channels ---
+        if "channels" not in settings:
+            send_hour = settings.get("send_hour", 18)
+            send_minute = settings.get("send_minute", 0)
+            topic_mode = settings.get("topic_mode", "broad")
+            max_items = settings.get("max_news_items", 10)
+
+            channels = []
+
+            # Email channel (always present)
+            channels.append({
+                "id": "email",
+                "type": "email",
+                "name": "邮件",
+                "enabled": True,
+                "send_hour": send_hour,
+                "send_minute": send_minute,
+                "topic_mode": topic_mode,
+                "max_news_items": max_items,
+            })
+
+            # Migrate webhook_channels or webhook_enabled
+            if "webhook_channels" in settings:
+                for ch in settings["webhook_channels"]:
+                    channels.append({
+                        "id": ch.get("id", "default"),
+                        "type": "webhook",
+                        "name": ch.get("name", "默认群"),
+                        "enabled": ch.get("enabled", False),
+                        "send_hour": send_hour,
+                        "send_minute": send_minute,
+                        "topic_mode": ch.get("topic_mode", topic_mode),
+                        "max_news_items": max_items,
+                        "webhook_url_base": ch.get("webhook_url_base", ""),
+                    })
+            elif settings.get("webhook_enabled", False):
+                channels.append({
                     "id": "default",
+                    "type": "webhook",
                     "name": "默认群",
                     "enabled": True,
-                    "topic_mode": settings.get("topic_mode", "broad"),
+                    "send_hour": send_hour,
+                    "send_minute": send_minute,
+                    "topic_mode": topic_mode,
+                    "max_news_items": max_items,
                     "webhook_url_base": "",
-                    "webhook_key_env": "WEBHOOK_KEY",
-                }]
-            else:
-                settings["webhook_channels"] = []
+                })
+
+            settings["channels"] = channels
 
         return settings
     except (FileNotFoundError, json.JSONDecodeError) as e:
@@ -114,21 +151,31 @@ def get_categories(settings: dict = None) -> list[dict]:
     order = settings.get("categories_order", list(CATEGORY_ICONS.keys()))
     return [{"name": name, "icon": CATEGORY_ICONS.get(name, "📰")} for name in order if name in CATEGORY_ICONS]
 
-def get_time_window(settings: dict = None, manual: bool = False) -> tuple[str, str]:
+def get_time_window(settings: dict = None, manual: bool = False, channel: dict = None) -> tuple[str, str]:
     """Calculate the news time window.
 
     Args:
         settings: Configuration dict
         manual: If True, window ends at current time (for manual trigger)
                 If False, window ends at scheduled send time (for auto trigger)
+        channel: Optional channel dict – uses its send_hour/send_minute if given.
 
     Returns:
         Tuple of (start_time, end_time) as formatted strings
     """
     if settings is None:
         settings = load_settings()
-    send_hour = settings.get("send_hour", 18)
-    send_minute = settings.get("send_minute", 0)
+
+    if channel:
+        send_hour = channel.get("send_hour", 18)
+        send_minute = channel.get("send_minute", 0)
+    else:
+        # Fallback: use the first channel's time, or defaults
+        channels = settings.get("channels", [])
+        first = channels[0] if channels else {}
+        send_hour = first.get("send_hour", settings.get("send_hour", 18))
+        send_minute = first.get("send_minute", settings.get("send_minute", 0))
+
     tz_name = settings.get("timezone", "Asia/Shanghai")
     tz = ZoneInfo(tz_name)
 
@@ -152,20 +199,28 @@ def get_time_window(settings: dict = None, manual: bool = False) -> tuple[str, s
         (end_time - timedelta(seconds=1)).strftime("%Y-%m-%d %H:%M")
     )
 
-def get_cutoff_time(settings: dict = None, manual: bool = False) -> datetime:
+def get_cutoff_time(settings: dict = None, manual: bool = False, channel: dict = None) -> datetime:
     """Get the cutoff time for filtering articles.
 
     Args:
         settings: Configuration dict
         manual: If True, cutoff is 24h before now (for manual trigger)
                 If False, cutoff is 24h before scheduled send time (for auto trigger)
+        channel: Optional channel dict – uses its send_hour/send_minute if given.
     """
     if settings is None:
         settings = load_settings()
     tz_name = settings.get("timezone", "Asia/Shanghai")
     tz = ZoneInfo(tz_name)
-    send_hour = settings.get("send_hour", 18)
-    send_minute = settings.get("send_minute", 0)
+
+    if channel:
+        send_hour = channel.get("send_hour", 18)
+        send_minute = channel.get("send_minute", 0)
+    else:
+        channels = settings.get("channels", [])
+        first = channels[0] if channels else {}
+        send_hour = first.get("send_hour", settings.get("send_hour", 18))
+        send_minute = first.get("send_minute", settings.get("send_minute", 0))
 
     now = datetime.now(tz)
 
@@ -594,7 +649,7 @@ URL: {article.get('url', '')}
 
     return []
 
-def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False, hardware_unlimited: bool = None) -> dict:
+def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False, hardware_unlimited: bool = None, channel: dict = None) -> dict:
     """Fetch and process news.
 
     Args:
@@ -604,6 +659,7 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
         settings: Configuration dict
         manual: If True, use current time as window end (manual trigger)
         hardware_unlimited: Override for hardware source limiting. If None, auto-detect from topic_mode.
+        channel: Optional channel dict for time window calculation.
 
     Returns dict with categories and _raw_articles (for multi-channel reuse).
     """
@@ -614,8 +670,8 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
     tz_name = settings.get("timezone", "Asia/Shanghai")
     tz = ZoneInfo(tz_name)
     today = datetime.now(tz).strftime("%Y-%m-%d")
-    start_time, end_time = get_time_window(settings, manual=manual)
-    cutoff = get_cutoff_time(settings, manual=manual)
+    start_time, end_time = get_time_window(settings, manual=manual, channel=channel)
+    cutoff = get_cutoff_time(settings, manual=manual, channel=channel)
 
     print(f"  - Time window: {start_time} ~ {end_time}")
 
@@ -689,7 +745,8 @@ def save_draft(news_data: dict, settings: dict = None, channel_id: str = None) -
     if channel_id:
         draft_data["channel_id"] = channel_id
         # Find channel config to store name and topic_mode
-        for ch in settings.get("webhook_channels", []):
+        all_channels = settings.get("channels", settings.get("webhook_channels", []))
+        for ch in all_channels:
             if ch.get("id") == channel_id:
                 draft_data["channel_name"] = ch.get("name", "")
                 draft_data["topic_mode"] = ch.get("topic_mode", "broad")

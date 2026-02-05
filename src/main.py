@@ -2,9 +2,10 @@
 """
 Main script for daily news digest.
 Supports modes:
-  - fetch:   Fetch news, save as draft (for review)
-  - send:    Read draft and send email
-  - webhook: Read draft and send webhook only (no email)
+  - fetch:     Fetch news, save as draft (for review)
+  - send:      Read draft and send (email/webhook by channel type)
+  - auto-send: Hourly cron – check each channel's send_time and send if due
+  - webhook:   Read draft and send webhook only (no email, no status change)
   - (default): Fetch + send in one step (legacy behavior)
 """
 
@@ -22,51 +23,125 @@ from send_email import send_email
 from send_webhook import send_webhook
 
 
-def run_fetch(settings: dict, manual: bool = False) -> int:
-    """Fetch news and save as draft for email + each webhook channel.
+# ---------------------------------------------------------------------------
+# Helper: channel selectors
+# ---------------------------------------------------------------------------
+
+def get_enabled_channels(settings: dict) -> list[dict]:
+    """Return all enabled channels from settings."""
+    return [ch for ch in settings.get("channels", []) if ch.get("enabled", False)]
+
+
+def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
+    """Return channels whose fetch_hour matches ``now.hour``.
+
+    fetch_hour = (send_hour - 1) % 24
+    """
+    result = []
+    for ch in get_enabled_channels(settings):
+        send_hour = ch.get("send_hour", 18)
+        fetch_hour = (send_hour - 1) % 24
+        if now.hour == fetch_hour:
+            result.append(ch)
+    return result
+
+
+def get_channels_to_send(settings: dict, now: datetime) -> list[dict]:
+    """Return channels where current time >= send_time and draft is sendable."""
+    result = []
+    tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
+    today = now.strftime("%Y-%m-%d")
+
+    for ch in get_enabled_channels(settings):
+        send_hour = ch.get("send_hour", 18)
+        send_minute = ch.get("send_minute", 0)
+
+        # Check if it's send time
+        send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
+        if now < send_time:
+            continue
+
+        # Check draft status
+        ch_id = ch.get("id", "unknown")
+        if ch.get("type") == "email":
+            draft = load_draft(today)
+        else:
+            draft = load_draft(today, channel_id=ch_id)
+
+        if not draft:
+            continue
+
+        status = draft.get("status", "pending_review")
+        if status in ("sent", "rejected"):
+            continue
+
+        result.append(ch)
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Mode: fetch
+# ---------------------------------------------------------------------------
+
+def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = None) -> int:
+    """Fetch news and save as draft for each channel that needs fetching.
 
     Steps:
-    1. RSS fetch once
-    2. Collect all needed topic_modes (email + channels), deduplicate
-    3. Call Claude once per unique mode
-    4. Save email draft + per-channel drafts (reuse results for same mode)
+    1. Determine which channels need fetching
+    2. RSS fetch once
+    3. Collect unique topic_modes, call Claude once per mode
+    4. Save per-channel drafts (email draft = YYYY-MM-DD.json)
     """
     anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
     if not anthropic_key:
         print("Error: ANTHROPIC_API_KEY not set")
         return 1
 
+    tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
+    now = datetime.now(tz)
+
+    # Determine channels to fetch
+    if manual:
+        channels = get_enabled_channels(settings)
+    elif channel_ids:
+        all_ch = {ch["id"]: ch for ch in settings.get("channels", [])}
+        channels = [all_ch[cid] for cid in channel_ids if cid in all_ch]
+    else:
+        channels = get_channels_to_fetch(settings, now)
+
+    if not channels:
+        print("No channels need fetching at this time")
+        return 0
+
     topic = settings.get("news_topic", "AI")
-    max_items = settings.get("max_news_items", 10)
-    email_topic_mode = settings.get("topic_mode", "broad")
 
-    # Collect all needed topic_modes
-    channels = settings.get("webhook_channels", [])
-    enabled_channels = [ch for ch in channels if ch.get("enabled", False)]
-
-    all_modes = {email_topic_mode}
-    for ch in enabled_channels:
+    # Collect all needed topic_modes and max_items
+    all_modes = set()
+    for ch in channels:
         all_modes.add(ch.get("topic_mode", "broad"))
 
     # If any mode is focused, enable hardware_unlimited for RSS fetch
     hardware_unlimited = "focused" in all_modes
 
+    # Use the largest max_news_items across channels for the initial Claude call
+    max_items = max(ch.get("max_news_items", 10) for ch in channels)
+
     print(f"Fetching news... (manual={manual})")
-    print(f"  - Email topic_mode: {email_topic_mode}")
-    print(f"  - Enabled channels: {len(enabled_channels)}")
+    print(f"  - Channels to fetch: {[ch.get('name', ch.get('id')) for ch in channels]}")
     print(f"  - Unique modes needed: {all_modes}")
 
-    # Fetch news for the email's topic_mode (RSS fetch happens here once)
+    # Use the earliest channel as reference for time window
+    ref_channel = channels[0]
     news_data = fetch_news(
         anthropic_key, topic=topic, max_items=max_items,
         settings=settings, manual=manual, hardware_unlimited=hardware_unlimited,
+        channel=ref_channel,
     )
 
     if news_data.get("error"):
         print(f"Warning: {news_data['error']}")
 
     raw_articles = news_data.get("_raw_articles", [])
-
     categories = news_data.get("categories", [])
     total_news = sum(len(c.get("news", [])) for c in categories)
     print(f"Got {total_news} news items in {len(categories)} categories")
@@ -78,217 +153,219 @@ def run_fetch(settings: dict, manual: bool = False) -> int:
             count = len(cat.get("news", []))
             print(f"   {icon} {name}: {count}")
 
-    # Save email draft
-    draft_path = save_draft(news_data, settings)
-    print(f"Email draft saved: {draft_path}")
+    # Cache Claude results by topic_mode
+    ref_mode = ref_channel.get("topic_mode", "broad")
+    mode_results = {ref_mode: categories}
 
-    # Cache of Claude results by topic_mode (email mode already done)
-    mode_results = {email_topic_mode: categories}
-
-    # Process each enabled channel
-    for ch in enabled_channels:
+    # Process each channel
+    for ch in channels:
         ch_id = ch.get("id", "unknown")
         ch_mode = ch.get("topic_mode", "broad")
         ch_name = ch.get("name", ch_id)
+        ch_max = ch.get("max_news_items", 10)
         print(f"\n--- Channel: {ch_name} (id={ch_id}, mode={ch_mode}) ---")
 
         if ch_mode in mode_results:
-            # Reuse existing Claude result
             ch_categories = mode_results[ch_mode]
             print(f"  Reusing {ch_mode} mode result ({sum(len(c.get('news', [])) for c in ch_categories)} items)")
         else:
-            # Need a separate Claude call for this mode
             if not raw_articles:
                 print(f"  No raw articles available, skipping Claude call")
                 ch_categories = []
             else:
                 print(f"  Calling Claude for {ch_mode} mode...")
-                # Create a temporary settings copy with this mode
                 ch_settings = {**settings, "topic_mode": ch_mode}
                 ch_categories = summarize_news_with_claude(
-                    anthropic_key, raw_articles, max_items, ch_settings,
+                    anthropic_key, raw_articles, ch_max, ch_settings,
                 )
                 total = sum(len(c.get("news", [])) for c in ch_categories)
                 print(f"  Got {total} items for {ch_mode} mode")
             mode_results[ch_mode] = ch_categories
 
-        # Build channel draft data
+        # Build draft data
         ch_draft = {
             "date": news_data.get("date"),
             "time_window": news_data.get("time_window"),
             "categories": ch_categories,
         }
-        ch_draft_path = save_draft(ch_draft, settings, channel_id=ch_id)
-        print(f"  Channel draft saved: {ch_draft_path}")
+
+        # Email channel: save as YYYY-MM-DD.json (no channel_id suffix)
+        if ch.get("type") == "email":
+            draft_path = save_draft(ch_draft, settings)
+        else:
+            draft_path = save_draft(ch_draft, settings, channel_id=ch_id)
+        print(f"  Draft saved: {draft_path}")
 
     return 0
 
 
-def run_send(settings: dict, date: str = None) -> int:
-    """Read draft and send email, then send all enabled channel webhooks."""
-    draft = load_draft(date)
-    if not draft:
-        tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
-        today = date or datetime.now(tz).strftime("%Y-%m-%d")
-        print(f"Error: No draft found for {today}")
-        return 1
+# ---------------------------------------------------------------------------
+# Mode: auto-send (hourly cron)
+# ---------------------------------------------------------------------------
 
-    # Mark draft as sent
-    draft["status"] = "sent"
+def run_auto_send(settings: dict) -> int:
+    """Check each channel's send_time and send if due.
 
-    email_body = format_email_html(draft, settings)
-    email_subject = f"AI/科技新闻日报 - {draft['date']}"
-    print(f"HTML email generated ({len(email_body)} bytes)")
+    Called by auto-send.yml hourly cron.
+    """
+    tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
+    now = datetime.now(tz)
+    today = now.strftime("%Y-%m-%d")
 
-    print("Sending email...")
-    success = send_email(subject=email_subject, body=email_body)
+    channels = get_channels_to_send(settings, now)
 
-    if success:
-        # Update draft status
-        save_draft(draft, settings)
-
-        # Send webhook for each enabled channel
-        channels = settings.get("webhook_channels", [])
-        enabled_channels = [ch for ch in channels if ch.get("enabled", False)]
-
-        if enabled_channels:
-            _send_all_channels(settings, date or draft.get("date"), enabled_channels)
-        elif settings.get("webhook_enabled", False):
-            # Legacy fallback: no webhook_channels but webhook_enabled is set
-            print("Sending webhook (legacy mode)...")
-            try:
-                wh_ok = send_webhook(draft, settings)
-                if not wh_ok:
-                    print("Warning: Webhook send failed")
-            except Exception as e:
-                print(f"Warning: Webhook error: {e}")
-
-        print("Done!")
+    if not channels:
+        print("No channels ready to send at this time")
         return 0
-    else:
-        print("Email send failed")
-        return 1
 
-
-def run_full(settings: dict) -> int:
-    """Legacy mode: fetch + send in one step."""
-    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not anthropic_key:
-        print("Error: ANTHROPIC_API_KEY not set")
-        return 1
-
-    topic = settings.get("news_topic", "AI")
-    max_items = settings.get("max_news_items", 10)
-
-    print("Fetching news...")
-    news_data = fetch_news(anthropic_key, topic=topic, max_items=max_items, settings=settings)
-
-    if news_data.get("error"):
-        print(f"Warning: {news_data['error']}")
-
-    categories = news_data.get("categories", [])
-    total_news = sum(len(c.get("news", [])) for c in categories)
-    print(f"Got {total_news} news items in {len(categories)} categories")
-
-    if categories:
-        for cat in categories:
-            icon = cat.get("icon", "")
-            name = cat.get("name", "")
-            count = len(cat.get("news", []))
-            print(f"   {icon} {name}: {count}")
-
-    # Save draft
-    save_draft(news_data, settings)
-
-    # Format and send
-    email_body = format_email_html(news_data, settings)
-    email_subject = f"AI/科技新闻日报 - {news_data['date']}"
-    print(f"HTML email generated ({len(email_body)} bytes)")
-
-    print("Sending email...")
-    success = send_email(subject=email_subject, body=email_body)
-
-    if success:
-        # Send webhook for each enabled channel
-        channels = settings.get("webhook_channels", [])
-        enabled_channels = [ch for ch in channels if ch.get("enabled", False)]
-
-        if enabled_channels:
-            for ch in enabled_channels:
-                ch_name = ch.get("name", ch.get("id", "?"))
-                print(f"Sending webhook to {ch_name}...")
-                try:
-                    wh_ok = send_webhook(news_data, settings, channel=ch)
-                    if not wh_ok:
-                        print(f"Warning: Webhook send failed for {ch_name}")
-                except Exception as e:
-                    print(f"Warning: Webhook error for {ch_name}: {e}")
-        elif settings.get("webhook_enabled", False):
-            print("Sending webhook (legacy)...")
-            try:
-                wh_ok = send_webhook(news_data, settings)
-                if not wh_ok:
-                    print("Warning: Webhook send failed")
-            except Exception as e:
-                print(f"Warning: Webhook error: {e}")
-
-        print("Done!")
-        return 0
-    else:
-        print("Email send failed")
-        return 1
-
-
-def _send_all_channels(settings: dict, date: str, channels: list) -> None:
-    """Send webhook for each enabled channel using their respective drafts."""
+    any_failed = False
     for ch in channels:
         ch_id = ch.get("id", "unknown")
+        ch_type = ch.get("type", "webhook")
         ch_name = ch.get("name", ch_id)
 
-        ch_draft = load_draft(date, channel_id=ch_id)
-        if not ch_draft:
-            # Fall back to email draft if no channel-specific draft
-            ch_draft = load_draft(date)
-            if not ch_draft:
-                print(f"Warning: No draft found for channel {ch_name}, skipping")
-                continue
+        # Load draft
+        if ch_type == "email":
+            draft = load_draft(today)
+        else:
+            draft = load_draft(today, channel_id=ch_id)
+            if not draft:
+                # Fall back to email draft
+                draft = load_draft(today)
 
-        status = ch_draft.get("status", "pending_review")
+        if not draft:
+            print(f"Warning: No draft found for channel {ch_name}, skipping")
+            continue
+
+        status = draft.get("status", "pending_review")
+        if status in ("sent", "rejected"):
+            print(f"Channel {ch_name}: draft already {status}, skipping")
+            continue
+
+        print(f"Sending to {ch_name} (type={ch_type})...")
+
+        if ch_type == "email":
+            email_body = format_email_html(draft, settings)
+            email_subject = f"AI/科技新闻日报 - {draft.get('date', today)}"
+            success = send_email(subject=email_subject, body=email_body)
+            if success:
+                draft["status"] = "sent"
+                save_draft(draft, settings)
+                print(f"Channel {ch_name}: email sent successfully")
+            else:
+                print(f"Channel {ch_name}: email send failed")
+                any_failed = True
+        else:
+            try:
+                wh_ok = send_webhook(draft, settings, channel=ch)
+                if wh_ok:
+                    draft["status"] = "sent"
+                    if ch_id == "email":
+                        save_draft(draft, settings)
+                    else:
+                        save_draft(draft, settings, channel_id=ch_id)
+                    print(f"Channel {ch_name}: webhook sent successfully")
+                else:
+                    print(f"Channel {ch_name}: webhook send failed")
+                    any_failed = True
+            except Exception as e:
+                print(f"Channel {ch_name}: webhook error: {e}")
+                any_failed = True
+
+    return 1 if any_failed else 0
+
+
+# ---------------------------------------------------------------------------
+# Mode: send (manual)
+# ---------------------------------------------------------------------------
+
+def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
+    """Manually send specified channel(s).
+
+    If channel_id is given, send that channel only.
+    Otherwise send all enabled channels.
+    """
+    tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
+    today = date or datetime.now(tz).strftime("%Y-%m-%d")
+
+    channels = settings.get("channels", [])
+    enabled = [ch for ch in channels if ch.get("enabled", False)]
+
+    if channel_id:
+        target = [ch for ch in channels if ch.get("id") == channel_id]
+        if not target:
+            print(f"Error: Channel '{channel_id}' not found in settings")
+            return 1
+        enabled = target
+
+    any_failed = False
+    for ch in enabled:
+        ch_id = ch.get("id", "unknown")
+        ch_type = ch.get("type", "webhook")
+        ch_name = ch.get("name", ch_id)
+
+        # Load draft
+        if ch_type == "email":
+            draft = load_draft(today)
+        else:
+            draft = load_draft(today, channel_id=ch_id)
+            if not draft:
+                draft = load_draft(today)
+
+        if not draft:
+            print(f"Warning: No draft found for {ch_name} on {today}, skipping")
+            any_failed = True
+            continue
+
+        status = draft.get("status", "pending_review")
         if status == "rejected":
             print(f"Channel {ch_name}: draft rejected, skipping")
             continue
 
-        print(f"Sending webhook to {ch_name}...")
-        try:
-            wh_ok = send_webhook(ch_draft, settings, channel=ch)
-            if wh_ok:
-                # Update channel draft status
-                ch_draft["status"] = "sent"
-                save_draft(ch_draft, settings, channel_id=ch_id)
-                print(f"Channel {ch_name}: sent successfully")
-            else:
-                print(f"Warning: Webhook send failed for {ch_name}")
-        except Exception as e:
-            print(f"Warning: Webhook error for {ch_name}: {e}")
+        print(f"Sending to {ch_name} (type={ch_type})...")
 
+        if ch_type == "email":
+            email_body = format_email_html(draft, settings)
+            email_subject = f"AI/科技新闻日报 - {draft.get('date', today)}"
+            success = send_email(subject=email_subject, body=email_body)
+            if success:
+                draft["status"] = "sent"
+                save_draft(draft, settings)
+                print(f"Channel {ch_name}: email sent successfully")
+            else:
+                print(f"Channel {ch_name}: email send failed")
+                any_failed = True
+        else:
+            try:
+                wh_ok = send_webhook(draft, settings, channel=ch)
+                if wh_ok:
+                    draft["status"] = "sent"
+                    save_draft(draft, settings, channel_id=ch_id)
+                    print(f"Channel {ch_name}: webhook sent successfully")
+                else:
+                    print(f"Channel {ch_name}: webhook send failed")
+                    any_failed = True
+            except Exception as e:
+                print(f"Channel {ch_name}: webhook error: {e}")
+                any_failed = True
+
+    return 1 if any_failed else 0
+
+
+# ---------------------------------------------------------------------------
+# Mode: webhook only (manual, no status change)
+# ---------------------------------------------------------------------------
 
 def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int:
-    """Read draft and send webhook only (no email, no status change).
-
-    Args:
-        settings: Configuration dict
-        date: Optional date string
-        channel_id: If specified, only send to this channel. Otherwise send to all enabled.
-    """
+    """Read draft and send webhook only (no email, no status change)."""
     tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
     if date is None:
         date = datetime.now(tz).strftime("%Y-%m-%d")
 
-    channels = settings.get("webhook_channels", [])
-    enabled_channels = [ch for ch in channels if ch.get("enabled", False)]
+    channels = settings.get("channels", [])
+    webhook_channels = [ch for ch in channels if ch.get("type") == "webhook" and ch.get("enabled", False)]
 
     if channel_id:
-        # Send to specific channel only
         ch = next((c for c in channels if c.get("id") == channel_id), None)
         if not ch:
             print(f"Error: Channel '{channel_id}' not found in settings")
@@ -296,7 +373,6 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
 
         ch_draft = load_draft(date, channel_id=channel_id)
         if not ch_draft:
-            # Fall back to email draft
             ch_draft = load_draft(date)
         if not ch_draft:
             print(f"Error: No draft found for {date} (channel={channel_id})")
@@ -316,10 +392,9 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
             print(f"Webhook error for {ch_name}: {e}")
             return 1
 
-    elif enabled_channels:
-        # Send to all enabled channels
+    elif webhook_channels:
         any_failed = False
-        for ch in enabled_channels:
+        for ch in webhook_channels:
             ch_id_val = ch.get("id", "unknown")
             ch_name = ch.get("name", ch_id_val)
 
@@ -351,7 +426,7 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
         return 1 if any_failed else 0
 
     else:
-        # Legacy fallback: no channels defined
+        # Legacy fallback
         draft = load_draft(date)
         if not draft:
             print(f"Error: No draft found for {date}")
@@ -370,6 +445,72 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
             print(f"Webhook error: {e}")
             return 1
 
+
+# ---------------------------------------------------------------------------
+# Mode: full (legacy)
+# ---------------------------------------------------------------------------
+
+def run_full(settings: dict) -> int:
+    """Legacy mode: fetch + send in one step."""
+    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not anthropic_key:
+        print("Error: ANTHROPIC_API_KEY not set")
+        return 1
+
+    topic = settings.get("news_topic", "AI")
+    # Use email channel's max_items
+    channels = settings.get("channels", [])
+    email_ch = next((ch for ch in channels if ch.get("type") == "email"), {})
+    max_items = email_ch.get("max_news_items", settings.get("max_news_items", 10))
+
+    print("Fetching news...")
+    news_data = fetch_news(anthropic_key, topic=topic, max_items=max_items, settings=settings)
+
+    if news_data.get("error"):
+        print(f"Warning: {news_data['error']}")
+
+    categories = news_data.get("categories", [])
+    total_news = sum(len(c.get("news", [])) for c in categories)
+    print(f"Got {total_news} news items in {len(categories)} categories")
+
+    if categories:
+        for cat in categories:
+            icon = cat.get("icon", "")
+            name = cat.get("name", "")
+            count = len(cat.get("news", []))
+            print(f"   {icon} {name}: {count}")
+
+    save_draft(news_data, settings)
+
+    email_body = format_email_html(news_data, settings)
+    email_subject = f"AI/科技新闻日报 - {news_data['date']}"
+    print(f"HTML email generated ({len(email_body)} bytes)")
+
+    print("Sending email...")
+    success = send_email(subject=email_subject, body=email_body)
+
+    if success:
+        webhook_channels = [ch for ch in channels if ch.get("type") == "webhook" and ch.get("enabled", False)]
+        for ch in webhook_channels:
+            ch_name = ch.get("name", ch.get("id", "?"))
+            print(f"Sending webhook to {ch_name}...")
+            try:
+                wh_ok = send_webhook(news_data, settings, channel=ch)
+                if not wh_ok:
+                    print(f"Warning: Webhook send failed for {ch_name}")
+            except Exception as e:
+                print(f"Warning: Webhook error for {ch_name}: {e}")
+
+        print("Done!")
+        return 0
+    else:
+        print("Email send failed")
+        return 1
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
 
 def main():
     settings = load_settings()
@@ -408,7 +549,9 @@ def main():
     if mode == "fetch":
         exit_code = run_fetch(settings, manual=manual_flag)
     elif mode == "send":
-        exit_code = run_send(settings, date_arg)
+        exit_code = run_send(settings, date_arg, channel_id=channel_id)
+    elif mode == "auto-send":
+        exit_code = run_auto_send(settings)
     elif mode == "webhook":
         exit_code = run_webhook(settings, date_arg, channel_id=channel_id)
     else:

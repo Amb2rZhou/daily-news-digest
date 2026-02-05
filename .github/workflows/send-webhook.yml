@@ -34,8 +34,8 @@ jobs:
 
       - name: Send webhook from draft
         env:
+          WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
-          WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src

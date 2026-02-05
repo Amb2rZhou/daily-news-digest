@@ -1,7 +1,7 @@
 name: Fetch News
 
 on:
-  # 每小时运行，由脚本检查是否到达设定时间
+  # 每小时运行，由脚本检查哪些频道需要 fetch
   schedule:
     - cron: '0 * * * *'
 
@@ -20,57 +20,46 @@ permissions:
 jobs:
   fetch-news:
     runs-on: ubuntu-latest
-    timeout-minutes: 45  # 抓取 ~10min + 等待 30min + 发送 ~5min
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check scheduled time and draft status
+      - name: Check if any channel needs fetching
         id: pre_check
         env:
           IS_MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          # Read settings
-          SEND_HOUR=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('send_hour', 17))")
-          SEND_MINUTE=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('send_minute', 30))")
-          TZ=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('timezone', 'Asia/Shanghai'))")
-
-          # Calculate fetch hour (30 minutes before send time)
-          if [ "$SEND_MINUTE" -lt 30 ]; then
-            FETCH_HOUR=$((SEND_HOUR - 1))
-            if [ "$FETCH_HOUR" -lt 0 ]; then
-              FETCH_HOUR=23
-            fi
-          else
-            FETCH_HOUR=$SEND_HOUR
-          fi
-
-          # Get current hour in configured timezone
-          CURRENT_HOUR=$(TZ="$TZ" date +%H | sed 's/^0//')
-
-          echo "Settings: send at ${SEND_HOUR}:${SEND_MINUTE}, fetch at hour ${FETCH_HOUR}"
-          echo "Current hour in ${TZ}: ${CURRENT_HOUR}"
-
-          # Check if it's time to run (or manual trigger)
           if [ "$IS_MANUAL" = "true" ]; then
             echo "Manual trigger, proceeding..."
-            TIME_OK="true"
-          elif [ "$CURRENT_HOUR" = "$FETCH_HOUR" ]; then
-            echo "Scheduled time matched, proceeding..."
-            TIME_OK="true"
-          else
-            echo "Not scheduled time, skipping..."
-            TIME_OK="false"
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
 
-          # Check if draft already exists
-          DATE=$(TZ="$TZ" date +%Y-%m-%d)
-          DRAFT="config/drafts/${DATE}.json"
-          if [ -f "$DRAFT" ]; then
-            echo "Draft already exists for ${DATE}, skipping fetch"
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-          elif [ "$TIME_OK" = "false" ]; then
+          # Check if any channel's fetch_hour matches current hour
+          NEEDS_FETCH=$(python3 -c "
+          import json
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          s = json.load(open('config/settings.json'))
+          tz = ZoneInfo(s.get('timezone', 'Asia/Shanghai'))
+          now = datetime.now(tz)
+          channels = s.get('channels', [])
+          need = False
+          for ch in channels:
+              if not ch.get('enabled', False):
+                  continue
+              fetch_hour = (ch.get('send_hour', 18) - 1) % 24
+              if now.hour == fetch_hour:
+                  need = True
+                  break
+          print('true' if need else 'false')
+          ")
+
+          echo "Needs fetch: $NEEDS_FETCH"
+          if [ "$NEEDS_FETCH" = "false" ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
@@ -123,8 +112,8 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
-          WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src
@@ -135,71 +124,6 @@ jobs:
         run: |
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Mark draft as sent (test mode)"
-          git pull --rebase origin main || true
-          git push
-
-      # 正常模式：等待 30 分钟审核窗口后自动发送
-      - name: Wait for review window (30 min)
-        if: steps.pre_check.outputs.skip != 'true' && inputs.auto_send != true
-        run: |
-          echo "Waiting 30 minutes for manual review..."
-          echo "You can approve/reject the draft in Admin UI during this time."
-          echo "If no action is taken, email + webhook will be sent automatically."
-          sleep 1800
-
-      - name: Pull latest changes after review window
-        if: steps.pre_check.outputs.skip != 'true' && inputs.auto_send != true
-        run: |
-          git pull origin main
-
-      - name: Check draft status after review
-        if: steps.pre_check.outputs.skip != 'true' && inputs.auto_send != true
-        id: post_review
-        run: |
-          TZ=$(python3 -c "import json; print(json.load(open('config/settings.json')).get('timezone', 'Asia/Shanghai'))")
-          DATE=$(TZ="$TZ" date +%Y-%m-%d)
-          DRAFT="config/drafts/${DATE}.json"
-
-          if [ ! -f "$DRAFT" ]; then
-            echo "Draft not found, skipping send"
-            echo "skip_send=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          STATUS=$(python3 -c "import json; print(json.load(open('$DRAFT')).get('status',''))")
-          echo "Draft status after review: ${STATUS}"
-
-          if [ "$STATUS" = "sent" ] || [ "$STATUS" = "rejected" ]; then
-            echo "Draft already processed (${STATUS}), skipping send"
-            echo "skip_send=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Draft ready to send"
-            echo "skip_send=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Auto-send after review window
-        if: steps.pre_check.outputs.skip != 'true' && inputs.auto_send != true && steps.post_review.outputs.skip_send != 'true'
-        env:
-          SMTP_HOST: smtp.qq.com
-          SMTP_PORT: 587
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
-          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
-          WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
-          WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
-          SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
-        run: |
-          cd src
-          python main.py send
-
-      - name: Commit sent status after auto-send
-        if: steps.pre_check.outputs.skip != 'true' && inputs.auto_send != true && steps.post_review.outputs.skip_send != 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config/drafts/
-          git diff --cached --quiet || git commit -m "Mark draft as sent (auto-send after review)"
           git pull --rebase origin main || true
           git push
 

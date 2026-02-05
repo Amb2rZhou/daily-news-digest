@@ -1,0 +1,138 @@
+name: Auto Send
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  auto-send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check if any channel is ready to send
+        id: pre_check
+        run: |
+          NEEDS_SEND=$(python3 -c "
+          import json
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          s = json.load(open('config/settings.json'))
+          tz = ZoneInfo(s.get('timezone', 'Asia/Shanghai'))
+          now = datetime.now(tz)
+          today = now.strftime('%Y-%m-%d')
+          channels = s.get('channels', [])
+          need = False
+
+          for ch in channels:
+              if not ch.get('enabled', False):
+                  continue
+              send_hour = ch.get('send_hour', 18)
+              send_minute = ch.get('send_minute', 0)
+              send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
+              if now < send_time:
+                  continue
+
+              # Check if draft exists and is sendable
+              ch_id = ch.get('id', 'unknown')
+              import os
+              drafts_dir = 'config/drafts'
+              if ch.get('type') == 'email':
+                  fname = f'{today}.json'
+              else:
+                  fname = f'{today}_ch_{ch_id}.json'
+              fpath = os.path.join(drafts_dir, fname)
+
+              if not os.path.exists(fpath):
+                  # Try email draft as fallback for webhook
+                  if ch.get('type') != 'email':
+                      fpath = os.path.join(drafts_dir, f'{today}.json')
+                      if not os.path.exists(fpath):
+                          continue
+                  else:
+                      continue
+
+              try:
+                  draft = json.load(open(fpath))
+                  status = draft.get('status', 'pending_review')
+                  if status not in ('sent', 'rejected'):
+                      need = True
+                      break
+              except:
+                  pass
+
+          print('true' if need else 'false')
+          ")
+
+          echo "Needs send: $NEEDS_SEND"
+          if [ "$NEEDS_SEND" = "false" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.pre_check.outputs.skip != 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        if: steps.pre_check.outputs.skip != 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Auto-send channels
+        if: steps.pre_check.outputs.skip != 'true'
+        env:
+          SMTP_HOST: smtp.qq.com
+          SMTP_PORT: 587
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
+          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
+          WEBHOOK_KEY: ${{ secrets.WEBHOOK_KEY }}
+          SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
+        run: |
+          cd src
+          python main.py auto-send
+
+      - name: Commit draft status
+        if: steps.pre_check.outputs.skip != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config/drafts/
+          git diff --cached --quiet || git commit -m "Mark drafts as sent (auto-send)"
+          git pull --rebase origin main || true
+          git push
+
+      - name: Notify admin on failure
+        if: failure() && steps.pre_check.outputs.skip != 'true'
+        env:
+          SMTP_HOST: smtp.qq.com
+          SMTP_PORT: '587'
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_RECIPIENTS: ${{ secrets.ADMIN_EMAIL }}
+        run: |
+          cd src
+          python -c "
+          from send_email import send_email
+          send_email(
+              subject='[FAILED] Auto Send - ${{ github.run_id }}',
+              body='<h3>Auto Send 运行失败</h3><p>Run ID: <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">${{ github.run_id }}</a></p><p>请检查 Actions 日志。</p>'
+          )
+          "

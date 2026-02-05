@@ -95,7 +95,7 @@ export default function Dashboard() {
 
         // Load channel drafts
         if (parsedSettings) {
-          const channels = (parsedSettings.webhook_channels || []).filter(c => c.enabled)
+          const channels = (parsedSettings.channels || []).filter(c => c.enabled && c.type !== 'email')
           const today = emailDrafts.length > 0 ? emailDrafts[0].name.replace('.json', '') : null
           if (today && channels.length > 0) {
             const chDrafts = {}
@@ -141,17 +141,22 @@ export default function Dashboard() {
     try {
       const fetchRuns = await getWorkflowRuns('fetch-news.yml', 5)
       const sendRuns = await getWorkflowRuns('send-email.yml', 5)
+      let autoSendRuns = { workflow_runs: [] }
+      try {
+        autoSendRuns = await getWorkflowRuns('auto-send.yml', 5)
+      } catch { /* auto-send workflow may not exist yet */ }
       setRuns([
         ...(fetchRuns.workflow_runs || []).map(r => ({ ...r, type: 'fetch' })),
         ...(sendRuns.workflow_runs || []).map(r => ({ ...r, type: 'send' })),
+        ...(autoSendRuns.workflow_runs || []).map(r => ({ ...r, type: 'auto-send' })),
       ].sort((a, b) => new Date(b.created_at) - new Date(a.created_at)).slice(0, 10))
     } catch { /* workflow may not exist yet */ }
   }
 
-  const handleTrigger = useCallback(async (workflowFile, key) => {
+  const handleTrigger = useCallback(async (workflowFile, key, inputs = {}) => {
     setTriggerStatus(prev => ({ ...prev, [key]: 'loading' }))
     try {
-      await triggerWorkflow(workflowFile)
+      await triggerWorkflow(workflowFile, 'main', inputs)
       setTriggerStatus(prev => ({ ...prev, [key]: 'success' }))
 
       let elapsed = 0
@@ -368,7 +373,7 @@ export default function Dashboard() {
   const recipients = settings?.recipients || []
   const enabledRecipients = recipients.filter(r => r.enabled)
   const categoryOptions = settings?.categories_order || Object.keys(CATEGORY_ICONS)
-  const enabledChannels = (settings?.webhook_channels || []).filter(c => c.enabled)
+  const enabledChannels = (settings?.channels || []).filter(c => c.enabled && c.type !== 'email')
 
   // Get the currently active draft
   const activeDraft = getActiveDraft()
@@ -414,24 +419,20 @@ export default function Dashboard() {
           {refetching ? '删除中...' : triggerBtnLabel('fetch', latestDraft ? '重新抓取' : '抓取新闻')}
         </button>
         <button
-          onClick={() => handleTrigger('send-email.yml', 'send')}
+          onClick={() => {
+            if (activeTab === 'email') {
+              handleTrigger('send-email.yml', 'send', { channel_id: 'email' })
+            } else {
+              handleTrigger('send-email.yml', 'send', { channel_id: activeTab })
+            }
+          }}
           disabled={triggerStatus.send === 'loading'}
           style={{
             ...btnPrimary, background: '#059669', color: '#fff',
             opacity: triggerStatus.send === 'loading' ? 0.6 : 1,
           }}
         >
-          {triggerBtnLabel('send', '发送邮件')}
-        </button>
-        <button
-          onClick={() => handleTrigger('send-webhook.yml', 'webhook')}
-          disabled={triggerStatus.webhook === 'loading'}
-          style={{
-            ...btnPrimary, background: '#ea580c', color: '#fff',
-            opacity: triggerStatus.webhook === 'loading' ? 0.6 : 1,
-          }}
-        >
-          {triggerBtnLabel('webhook', activeTab !== 'email' && activeChannelName ? `推送到 ${activeChannelName}` : '推送全部群聊')}
+          {triggerBtnLabel('send', activeTab === 'email' ? '发送邮件' : `发送 ${activeChannelName || activeTab}`)}
         </button>
         {(triggerStatus.fetch === 'success' || triggerStatus.send === 'success' || triggerStatus.webhook === 'success') && (
           <span style={{ fontSize: 13, color: 'var(--success)', alignSelf: 'center' }}>
@@ -487,34 +488,48 @@ export default function Dashboard() {
       )}
 
       {/* Config summary cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16, marginBottom: 24 }}>
-        <div style={card}>
-          <div style={{ fontSize: 13, color: 'var(--text2)' }}>发送时间</div>
-          <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
-            {String(settings?.send_hour ?? 18).padStart(2, '0')}:{String(settings?.send_minute ?? 0).padStart(2, '0')}
+      {(() => {
+        // Find the active channel for displaying send_time and max_items
+        const allChannels = settings?.channels || []
+        const activeChannel = activeTab === 'email'
+          ? allChannels.find(c => c.type === 'email')
+          : allChannels.find(c => c.id === activeTab)
+        const chSendHour = activeChannel?.send_hour ?? 18
+        const chSendMinute = activeChannel?.send_minute ?? 0
+        const chMaxItems = activeChannel?.max_news_items ?? 10
+        const chName = activeChannel?.name || (activeTab === 'email' ? '邮件' : activeTab)
+
+        return (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16, marginBottom: 24 }}>
+            <div style={card}>
+              <div style={{ fontSize: 13, color: 'var(--text2)' }}>发送时间 ({chName})</div>
+              <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
+                {String(chSendHour).padStart(2, '0')}:{String(chSendMinute).padStart(2, '0')}
+              </div>
+              <div style={{ fontSize: 12, color: 'var(--text3)' }}>{settings?.timezone || 'Asia/Shanghai'}</div>
+            </div>
+            <div style={card}>
+              <div style={{ fontSize: 13, color: 'var(--text2)' }}>新闻条数 ({chName})</div>
+              <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>{chMaxItems}</div>
+              <div style={{ fontSize: 12, color: 'var(--text3)' }}>每日最大</div>
+            </div>
+            <div style={card}>
+              <div style={{ fontSize: 13, color: 'var(--text2)' }}>新闻源</div>
+              <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
+                {enabledFeeds.length}<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text3)' }}>/{feeds.length}</span>
+              </div>
+              <div style={{ fontSize: 12, color: 'var(--text3)' }}>启用/总数</div>
+            </div>
+            <div style={card}>
+              <div style={{ fontSize: 13, color: 'var(--text2)' }}>收件人</div>
+              <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
+                {enabledRecipients.length}<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text3)' }}>/{recipients.length}</span>
+              </div>
+              <div style={{ fontSize: 12, color: 'var(--text3)' }}>启用/总数</div>
+            </div>
           </div>
-          <div style={{ fontSize: 12, color: 'var(--text3)' }}>{settings?.timezone || 'Asia/Shanghai'}</div>
-        </div>
-        <div style={card}>
-          <div style={{ fontSize: 13, color: 'var(--text2)' }}>新闻条数</div>
-          <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>{settings?.max_news_items ?? 10}</div>
-          <div style={{ fontSize: 12, color: 'var(--text3)' }}>每日最大</div>
-        </div>
-        <div style={card}>
-          <div style={{ fontSize: 13, color: 'var(--text2)' }}>新闻源</div>
-          <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
-            {enabledFeeds.length}<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text3)' }}>/{feeds.length}</span>
-          </div>
-          <div style={{ fontSize: 12, color: 'var(--text3)' }}>启用/总数</div>
-        </div>
-        <div style={card}>
-          <div style={{ fontSize: 13, color: 'var(--text2)' }}>收件人</div>
-          <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
-            {enabledRecipients.length}<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text3)' }}>/{recipients.length}</span>
-          </div>
-          <div style={{ fontSize: 12, color: 'var(--text3)' }}>启用/总数</div>
-        </div>
-      </div>
+        )
+      })()}
 
       {/* Source health overview */}
       <div style={{ ...card, marginBottom: 24 }}>
@@ -598,8 +613,8 @@ export default function Dashboard() {
                   onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                 >
                   <td style={{ padding: '8px 4px' }}>
-                    <span style={{ background: r.type === 'fetch' ? '#dbeafe' : '#d1fae5', padding: '2px 8px', borderRadius: 4, fontSize: 11 }}>
-                      {r.type === 'fetch' ? '抓取' : '发送'}
+                    <span style={{ background: r.type === 'fetch' ? '#dbeafe' : r.type === 'auto-send' ? '#fef3c7' : '#d1fae5', padding: '2px 8px', borderRadius: 4, fontSize: 11 }}>
+                      {r.type === 'fetch' ? '抓取' : r.type === 'auto-send' ? '自动发送' : '发送'}
                     </span>
                   </td>
                   <td style={{ padding: '8px 4px' }}>{runStatusBadge(r.status, r.conclusion)}</td>
