@@ -14,11 +14,22 @@
     {
       "id": "default",
       "type": "webhook",
-      "name": "默认群",
+      "name": "2人测试群",
       "enabled": true,
       "send_hour": 17,
       "send_minute": 30,
       "topic_mode": "focused",
+      "max_news_items": 10,
+      "webhook_url_base": ""
+    },
+    {
+      "id": "ch_ml97ypb3",
+      "type": "webhook",
+      "name": "午休2小时",
+      "enabled": true,
+      "send_hour": 12,
+      "send_minute": 0,
+      "topic_mode": "broad",
       "max_news_items": 10,
       "webhook_url_base": ""
     }
