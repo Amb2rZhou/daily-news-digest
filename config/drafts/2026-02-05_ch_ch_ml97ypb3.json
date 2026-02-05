@@ -1,28 +1,31 @@
 {
   "date": "2026-02-05",
-  "time_window": "2026-02-04 16:58 ~ 2026-02-05 16:58",
+  "time_window": "2026-02-04 17:27 ~ 2026-02-05 17:27",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "Mistral发布Voxtral Transcribe 2开源语音模型",
-          "summary": "可在设备端运行的语音转文字模型，转录速度更快、准确性更高，且成本仅为几分钱。",
+          "title": "生数科技发布Vidu Q3，全球视频大模型排名第二",
+          "summary": "生数科技宣布其多模态大模型Vidu Q3在国际权威AI基准测试中排名中国第一、全球第二，超越Runway Gen-4.5和OpenAI Sora 2。",
+          "comment": "当中国的视频大模型开始领跑全球，这是否预示着AI视频生成领域的竞争格局正在发生根本性转变？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-05-8"
+        },
+        {
+          "title": "Mistral发布Voxtral Transcribe 2，支持设备端语音转文本",
+          "summary": "Mistral AI发布开源语音转文本模型Voxtral Transcribe 2，可在智能手机或笔记本电脑上完全离线运行，转录成本仅为传统方案的零头。",
+          "comment": "当语音AI能够完全脱离云端在本地运行时，这将如何重新定义隐私保护和AI应用的边界？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/technology/mistral-drops-voxtral-transcribe-2-an-open-source-speech-model-that-runs-on"
         },
         {
-          "title": "Google正式发布Pixel 10a",
-          "summary": "采用完全平整的摄像头设计，将于2月18日开启预订。",
-          "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/04/pixel-10a-announcement/"
-        },
-        {
-          "title": "Oakley Meta Vanguard智能眼镜登陆印度",
-          "summary": "AI运动眼镜配备12MP摄像头，支持3K视频拍摄，Meta AI适配印地语，售价约579美元。",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544685.html"
+          "title": "贾跃亭发布三款机器人产品",
+          "summary": "人在美国的贾跃亭抢在春晚前发布了三款机器人产品，继续其在科技领域的布局。",
+          "comment": "贾跃亭从汽车转向机器人，这种跨领域的频繁转换是创新驱动还是资本游戏？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1654297?utm_source=rss&utm_medium=rss&utm_campaign="
         }
       ]
     },
@@ -31,28 +34,25 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Alphabet第四季度营收超1000亿美元",
-          "summary": "年度营收首次突破4000亿美元，同比增长15%，云业务和YouTube持续增长。",
-          "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/04/alphabet-q4-2025-earnings/"
-        },
-        {
-          "title": "苹果库克盛赞'视觉智能'功能",
-          "summary": "称其为Apple Intelligence最受欢迎功能之一，预计该功能未来可能登陆智能眼镜。",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544686.html"
-        },
-        {
           "title": "达索系统与英伟达合作打造AI虚拟孪生平台",
-          "summary": "建立长期战略合作伙伴关系，整合虚拟孪生技术与AI基础设施，为跨行业关键任务AI建立共享工业架构。",
+          "summary": "达索系统与英伟达建立战略合作，整合虚拟孪生技术与AI基础设施，为跨行业关键任务人工智能建立共享工业架构。",
+          "comment": "当工业巨头与AI芯片巨头联手时，这是否意味着制造业的数字化转型将迎来质的飞跃？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544689.html"
         },
         {
-          "title": "GitHub推出Agent HQ支持Claude和Codex",
-          "summary": "Claude和OpenAI Codex现已在GitHub和VS Code上线公开预览版，需要Copilot Pro+或企业版订阅。",
-          "source": "GitHub Blog",
-          "url": "https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/"
+          "title": "Google年收入首次突破4000亿美元",
+          "summary": "Alphabet公布Q4财报显示年收入首次超过4000亿美元，同比增长15%，云业务和YouTube持续增长是主要驱动力。",
+          "comment": "Google收入破4000亿美元背后，AI投资的巨额成本与收益之间的平衡点在哪里？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/news/874161/google-400-billion-revenue-q4-2025-earnings"
+        },
+        {
+          "title": "库克盛赞'视觉智能'功能，或将登陆苹果智能眼镜",
+          "summary": "苹果CEO库克在财报会上特别表扬了Apple Intelligence的'视觉智能'功能，称其为最受用户欢迎的功能之一，暗示未来可能应用于智能眼镜。",
+          "comment": "苹果押注视觉智能是否预示着下一代计算平台的交互方式将从触控转向视觉理解？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544686.html"
         }
       ]
     },
@@ -61,22 +61,38 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "CMU提出最大似然强化学习方法",
-          "summary": "研究表明当前强化学习方法远未达到最优，提出新的最大似然强化学习框架。",
+          "title": "CMU提出最大似然强化学习，挑战传统强化学习方法",
+          "summary": "卡内基梅隆大学研究人员提出最大似然强化学习方法，声称传统强化学习远非最优解决方案。",
+          "comment": "当学术界开始质疑强化学习的根本假设时，这是否意味着AI训练范式需要重新思考？",
           "source": "机器之心",
           "url": "https://www.jiqizhixin.com/articles/2026-02-05-11"
         },
         {
-          "title": "陈天桥与邓亚峰合作推出EverMemOS",
-          "summary": "为AI打造'不失忆大脑'，发布云服务并启动8万美元全球竞赛，多项基准刷新SOTA。",
+          "title": "陈天桥联手邓亚峰为AI装上'不失忆大脑'",
+          "summary": "EverMind发布EverMemOS云服务，旨在解决AI模型的记忆问题，并启动8万美元全球赛事推动技术发展。",
+          "comment": "AI记忆问题的解决是否会成为通向AGI的关键突破点，还是只是技术优化的一小步？",
           "source": "钛媒体",
           "url": "https://www.tmtpost.com/7867785.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Claude广告引发AI行业商业化模式之争",
+          "summary": "Anthropic通过超级碗广告表态反对AI聊天机器人植入广告，Sam Altman对此表示强烈不满，引发行业关于AI商业化的激烈讨论。",
+          "comment": "AI公司在商业化与用户体验之间的选择，会不会决定这个行业的未来走向？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/04/sam-altman-got-exceptionally-testy-over-claude-super-bowl-ads/"
         },
         {
-          "title": "IBM与Synopsys携手开发1.4nm芯片技术",
-          "summary": "采用超快热建模技术，向1.4纳米制程节点迈进。",
-          "source": "EE Times",
-          "url": "https://www.eetimes.com/ibm-synopsys-move-toward-1-4-nm-node-with-heat-modeling-tech/"
+          "title": "AI春节红包大战下沉县城市场",
+          "summary": "腾讯、阿里、百度、字节等公司纷纷在县城市场投放AI红包，试图通过春节营销推广AI产品，但用户接受度仍待观察。",
+          "comment": "AI公司砸钱下沉县城，这种'红包+AI'的组合能否真正打开下沉市场的大门？",
+          "source": "虎嗅网",
+          "url": "http://www.huxiu.com/article/4832467.html?f=wangzhan"
         }
       ]
     },
@@ -86,21 +102,23 @@
       "news": [
         {
           "title": "生数科技完成超6亿元A+轮融资",
-          "summary": "视频大模型领军者，旗下Vidu在国际权威测试中排名中国第一、全球第二，超越Sora等竞品。",
+          "summary": "视频大模型公司生数科技完成超6亿元A+轮融资，由中关村科学城公司和星连资本领投，万兴科技等多家上市公司战略投资。",
+          "comment": "生数科技6亿融资背后，视频大模型赛道的估值泡沫到了什么程度？",
           "source": "雷峰网",
           "url": "https://www.leiphone.com/category/industrynews/VKeAaSlQojxPXh1N.html"
         },
         {
-          "title": "Bedrock Robotics获2.7亿美元B轮融资",
-          "summary": "用于扩大自主建筑机器人车队规模，开发无人操作挖掘机解决劳动力短缺问题。",
+          "title": "Bedrock Robotics获得2.7亿美元B轮融资",
+          "summary": "自动驾驶建筑设备公司Bedrock Robotics完成2.7亿美元B轮融资，将用于扩大无人操作挖掘机的商业部署规模。",
+          "comment": "建筑机器人获得巨额融资，是否预示着传统建筑行业即将迎来自动化革命？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/bedrock-robotics-270m-series-b-paves-way-operator-less-excavators/"
         }
       ]
     }
   ],
-  "status": "rejected",
-  "created_at": "2026-02-05T17:01:57.434616+08:00",
+  "status": "pending_review",
+  "created_at": "2026-02-05T17:34:07.231751+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
