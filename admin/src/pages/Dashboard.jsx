@@ -228,6 +228,8 @@ export default function Dashboard() {
     if (!draft) return
     const channelId = activeTab === 'email' ? null : activeTab
     await saveDraft({ ...draft, status: 'approved' }, channelId)
+    // 批准后自动触发发送工作流
+    handleTrigger('send-email.yml', 'send', { channel_id: activeTab })
   }
 
   async function handleReject() {
