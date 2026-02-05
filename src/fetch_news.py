@@ -529,7 +529,8 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 2. 去重：相同事件的多篇报道只保留一条（保留最权威来源）
 3. 按重要性排序（全球影响 > 行业影响 > 区域影响）
 4. 为每条新闻写一个简短的中文摘要（1-2句话）
-5. 将新闻按以下类别分组：{category_names}
+5. **重要**：为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾），引导读者深入思考这条新闻的意义、影响或未来可能性
+6. 将新闻按以下类别分组：{category_names}
    - 每条新闻只归入一个最匹配的类别
    - 没有对应新闻的类别不要输出
 
@@ -547,6 +548,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 注意：
 - 只返回有新闻的类别
 - icon 必须与类别对应（{icon_mapping}）
+- 每条 news 必须包含 comment 字段（启发思考的问句，以？结尾）
 - 只返回合法的 JSON，不要其他文字
 - 确保所有字符串中的双引号用单引号替换"""
 
@@ -594,7 +596,7 @@ URL: {article.get('url', '')}
 
     category_names = "、".join(c["name"] for c in categories)
     category_json_example = json.dumps(
-        [{"name": c["name"], "icon": c["icon"], "news": [{"title": "...", "summary": "...", "source": "...", "url": "..."}]} for c in categories[:2]],
+        [{"name": c["name"], "icon": c["icon"], "news": [{"title": "...", "summary": "...", "comment": "一个启发思考的问题？", "source": "...", "url": "..."}]} for c in categories[:2]],
         ensure_ascii=False, indent=4
     )
 
