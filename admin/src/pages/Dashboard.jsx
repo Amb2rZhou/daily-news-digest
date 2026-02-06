@@ -616,7 +616,7 @@ export default function Dashboard() {
                 >
                   <td style={{ padding: '8px 4px' }}>
                     <span style={{ background: r.type === 'fetch' ? '#dbeafe' : r.type === 'auto-send' ? '#fef3c7' : '#d1fae5', padding: '2px 8px', borderRadius: 4, fontSize: 11 }}>
-                      {r.type === 'fetch' ? '抓取' : r.type === 'auto-send' ? '自动发送' : '发送'}
+                      {r.type === 'fetch' ? '抓取检查' : r.type === 'auto-send' ? '发送检查' : '手动发送'}
                     </span>
                   </td>
                   <td style={{ padding: '8px 4px' }}>{runStatusBadge(r.status, r.conclusion)}</td>
