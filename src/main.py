@@ -273,17 +273,6 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
             if truncated_count < original_count:
                 print(f"  Truncated to {truncated_count} items for this channel (max={ch_max})")
 
-        # Check if existing draft should be preserved (manual mode)
-        if manual:
-            today = now.strftime("%Y-%m-%d")
-            if ch.get("type") == "email":
-                existing = load_draft(today)
-            else:
-                existing = load_draft(today, channel_id=ch_id)
-            if existing and existing.get("status") in ("sent", "rejected"):
-                print(f"  Skipping: existing draft is '{existing['status']}', not overwriting")
-                continue
-
         # Build draft data
         ch_draft = {
             "date": news_data.get("date"),
