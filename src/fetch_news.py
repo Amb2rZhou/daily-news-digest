@@ -304,7 +304,11 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     articles_by_source = {}
 
     failed_feeds = []
+    timeout_feeds = []
     empty_feeds = []
+
+    import time
+    rss_start = time.time()
 
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = {executor.submit(parse_feed, url, cutoff): url for url in feed_urls}
@@ -321,12 +325,19 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
                         articles_by_source[source] = []
                     articles_by_source[source].append(article)
             except Exception as e:
-                failed_feeds.append((url, str(e)))
+                err_str = str(e).lower()
+                if 'timeout' in err_str or 'timed out' in err_str:
+                    timeout_feeds.append(url)
+                else:
+                    failed_feeds.append((url, str(e)))
 
+    rss_elapsed = time.time() - rss_start
+    print(f"  - RSS 抓取耗时: {rss_elapsed:.1f}s")
+    print(f"  - 成功: {len(feed_urls) - len(failed_feeds) - len(timeout_feeds) - len(empty_feeds)}, 空: {len(empty_feeds)}, 超时: {len(timeout_feeds)}, 失败: {len(failed_feeds)}")
+    if timeout_feeds:
+        print(f"  - 超时源: {[u.split('/')[-1][:25] for u in timeout_feeds[:5]]}")
     if failed_feeds:
-        print(f"  - Failed feeds ({len(failed_feeds)}): {[f[0].split('/')[-1][:30] for f in failed_feeds[:5]]}")
-    if empty_feeds:
-        print(f"  - Empty feeds ({len(empty_feeds)}): {[f.split('/')[-1][:30] for f in empty_feeds[:10]]}")
+        print(f"  - 失败源: {[f[0].split('/')[-1][:25] for f in failed_feeds[:5]]}")
 
     # Limit articles per source and merge
     # 聚焦模式：智能硬件源不受限制；泛AI模式：所有源均受限制
@@ -613,12 +624,16 @@ URL: {article.get('url', '')}
 
     prompt = get_prompt_for_mode(topic_mode, articles_text, max_items, category_names, category_json_example, icon_mapping, custom_prompt, paywalled_sources)
 
+    import time
+    claude_start = time.time()
     try:
         response = client.messages.create(
             model="claude-sonnet-4-20250514",
             max_tokens=4096,
             messages=[{"role": "user", "content": prompt}]
         )
+        claude_elapsed = time.time() - claude_start
+        print(f"  - Claude API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
 
         response_text = response.content[0].text
 
