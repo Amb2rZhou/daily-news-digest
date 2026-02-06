@@ -44,9 +44,7 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
-          # Legacy: JSON format for backward compatibility
-          WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
-          # New: slot-based keys (use webhook_key_slot in channel config)
+          # Slot-based webhook keys
           WEBHOOK_KEY_1: ${{ secrets.WEBHOOK_KEY_1 }}
           WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
           WEBHOOK_KEY_3: ${{ secrets.WEBHOOK_KEY_3 }}

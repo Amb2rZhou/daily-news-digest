@@ -70,40 +70,24 @@ def format_webhook_markdown(news_data: dict) -> str:
 
 
 def _get_webhook_key(channel: dict = None) -> Optional[str]:
-    """Resolve webhook key for the given channel.
+    """Resolve webhook key for the given channel via slot-based secrets.
 
-    Resolution order:
-    1. webhook_key_slot in channel config -> WEBHOOK_KEY_{slot} env var
-    2. WEBHOOK_KEYS env var (JSON dict keyed by channel id)
-    3. Fallback to WEBHOOK_KEY env var (legacy single-key)
+    Each channel must have webhook_key_slot configured, mapping to WEBHOOK_KEY_{slot} env var.
     """
-    channel_id = channel.get("id") if channel else None
+    if not channel:
+        return None
 
-    # 1. Check slot-based key (new method)
-    if channel:
-        slot = channel.get("webhook_key_slot")
-        if slot:
-            key = os.environ.get(f"WEBHOOK_KEY_{slot}")
-            if key:
-                return key.strip()
-            print(f"Warning: webhook_key_slot={slot} configured but WEBHOOK_KEY_{slot} not set")
+    slot = channel.get("webhook_key_slot")
+    if not slot:
+        print(f"Warning: Channel '{channel.get('id', '?')}' has no webhook_key_slot configured")
+        return None
 
-    # 2. Check WEBHOOK_KEYS JSON (current method)
-    webhook_keys_raw = os.environ.get("WEBHOOK_KEYS")
-    if webhook_keys_raw:
-        try:
-            keys = json.loads(webhook_keys_raw.strip())
-            if channel_id and channel_id in keys:
-                return keys[channel_id].strip()
-            # If only one key in the dict, use it as fallback
-            if len(keys) == 1:
-                return next(iter(keys.values())).strip()
-        except (json.JSONDecodeError, TypeError):
-            print("Warning: WEBHOOK_KEYS is not valid JSON, falling back to WEBHOOK_KEY")
+    key = os.environ.get(f"WEBHOOK_KEY_{slot}")
+    if key:
+        return key.strip()
 
-    # 3. Legacy fallback
-    key = os.environ.get("WEBHOOK_KEY")
-    return key.strip() if key else key
+    print(f"Warning: webhook_key_slot={slot} configured but WEBHOOK_KEY_{slot} not set")
+    return None
 
 
 def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -> bool:
@@ -112,10 +96,7 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
     Args:
         news_data: Draft data with categories
         settings: Global settings dict
-        channel: Optional channel config dict. When provided, resolves webhook
-                 key from WEBHOOK_KEYS JSON env var by channel id, and uses
-                 the channel's webhook_url_base (falling back to global).
-                 When None, uses legacy WEBHOOK_KEY env var.
+        channel: Channel config dict with webhook_key_slot for key resolution.
     """
     if settings is None:
         settings = _load_settings()

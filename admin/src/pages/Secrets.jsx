@@ -17,8 +17,6 @@ const BASE_SECRET_DEFS = [
   { name: 'ADMIN_EMAIL', label: '管理员通知邮箱', desc: '接收系统通知的管理员邮箱', type: 'text' },
 ]
 
-const LEGACY_WEBHOOK_SECRET = { name: 'WEBHOOK_KEYS', label: 'Webhook 密钥 (旧方式)', desc: 'JSON 格式：{"频道ID": "key值", ...}。如果频道配置了槽位，则使用新方式。', type: 'password' }
-
 // Generate slot-based secrets
 const SLOT_SECRETS = [...Array(20)].map((_, i) => ({
   name: `WEBHOOK_KEY_${i + 1}`,
@@ -41,7 +39,6 @@ export default function Secrets() {
   const [values, setValues] = useState({})
   const [updating, setUpdating] = useState({})
   const [messages, setMessages] = useState({})
-  const [webhookChannelIds, setWebhookChannelIds] = useState([])
   const [usedSlots, setUsedSlots] = useState(new Set())
   const [channelSlotMap, setChannelSlotMap] = useState({})
 
@@ -60,7 +57,6 @@ export default function Secrets() {
           const settings = JSON.parse(settingsFile.content)
           const channels = settings.channels || []
           const webhookChannels = channels.filter(ch => ch.type === 'webhook')
-          setWebhookChannelIds(webhookChannels.map(ch => ch.id))
 
           // Track which slots are in use
           const slots = new Set()
@@ -202,8 +198,7 @@ export default function Secrets() {
         background: '#f0fdf4', border: '1px solid #86efac',
         fontSize: 13,
       }}>
-        <strong style={{ color: '#166534' }}>推荐：使用槽位方式（新）</strong>
-        <div style={{ marginTop: 8, color: '#15803d' }}>
+        <div style={{ color: '#15803d' }}>
           1. 在「设置」页面为频道选择一个槽位（如槽位 1）<br />
           2. 在这里设置对应的 WEBHOOK_KEY_1<br />
           3. 添加新频道时只需设置新的槽位，不影响已有频道
@@ -213,33 +208,6 @@ export default function Secrets() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 24 }}>
         {visibleSlotSecrets.map(def => renderSecretCard(def))}
       </div>
-
-      {/* Legacy webhook keys */}
-      <details style={{ marginBottom: 16 }}>
-        <summary style={{ cursor: 'pointer', fontSize: 14, color: 'var(--text2)', marginBottom: 12 }}>
-          旧方式：WEBHOOK_KEYS JSON（点击展开）
-        </summary>
-        <div style={{ marginTop: 12 }}>
-          {renderSecretCard(LEGACY_WEBHOOK_SECRET, webhookChannelIds.length > 0 && (
-            <div style={{
-              padding: 12, marginBottom: 12, borderRadius: 6,
-              background: '#fefce8', border: '1px solid #fde047',
-              fontSize: 12, color: '#854d0e',
-            }}>
-              <strong>当前 Webhook 频道 ID：</strong>
-              <span style={{ fontFamily: 'monospace' }}>
-                {webhookChannelIds.join(', ')}
-              </span>
-              <div style={{ marginTop: 6, color: '#a16207' }}>
-                格式示例：{`{"${webhookChannelIds[0] || 'channel_id'}": "your_key_here"}`}
-              </div>
-              <div style={{ marginTop: 6, color: '#a16207' }}>
-                注意：如果频道配置了槽位，则优先使用槽位方式，忽略此 JSON 中的值。
-              </div>
-            </div>
-          ))}
-        </div>
-      </details>
     </div>
   )
 }

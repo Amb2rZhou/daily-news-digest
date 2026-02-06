@@ -495,24 +495,8 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
         return 1 if any_failed else 0
 
     else:
-        # Legacy fallback
-        draft = load_draft(date)
-        if not draft:
-            print(f"Error: No draft found for {date}")
-            return 1
-
-        print("Sending webhook...")
-        try:
-            wh_ok = send_webhook(draft, settings)
-            if wh_ok:
-                print("Webhook sent successfully!")
-                return 0
-            else:
-                print("Webhook send failed")
-                return 1
-        except Exception as e:
-            print(f"Webhook error: {e}")
-            return 1
+        print("No webhook channels found")
+        return 1
 
 
 # ---------------------------------------------------------------------------
