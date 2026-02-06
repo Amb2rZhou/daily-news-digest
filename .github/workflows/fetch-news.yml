@@ -37,24 +37,49 @@ jobs:
             exit 0
           fi
 
-          # Check if any channel's fetch_hour matches current hour
+          # Check if any channel needs fetching:
+          # - Draft doesn't exist for today
+          # - Current time >= send_time - 30 minutes
           NEEDS_FETCH=$(python3 -c "
           import json
-          from datetime import datetime
+          import os
+          from datetime import datetime, timedelta
           from zoneinfo import ZoneInfo
 
           s = json.load(open('config/settings.json'))
           tz = ZoneInfo(s.get('timezone', 'Asia/Shanghai'))
           now = datetime.now(tz)
+          today = now.strftime('%Y-%m-%d')
           channels = s.get('channels', [])
           need = False
+
           for ch in channels:
               if not ch.get('enabled', False):
                   continue
-              fetch_hour = (ch.get('send_hour', 18) - 1) % 24
-              if now.hour == fetch_hour:
+              ch_id = ch.get('id', 'unknown')
+              send_hour = ch.get('send_hour', 18)
+              send_minute = ch.get('send_minute', 0)
+
+              # Calculate fetch_time = send_time - 30 minutes
+              send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
+              fetch_time = send_time - timedelta(minutes=30)
+
+              # Check if draft exists
+              if ch.get('type') == 'email':
+                  draft_path = f'config/drafts/{today}.json'
+              else:
+                  draft_path = f'config/drafts/{today}_ch_{ch_id}.json'
+
+              draft_exists = os.path.exists(draft_path)
+
+              # Need fetch if: no draft yet AND current time >= fetch_time
+              if not draft_exists and now >= fetch_time:
+                  print(f'Channel {ch_id}: needs fetch (send={send_hour}:{send_minute:02d}, no draft)', file=__import__('sys').stderr)
                   need = True
                   break
+              elif draft_exists:
+                  print(f'Channel {ch_id}: draft exists, skip', file=__import__('sys').stderr)
+
           print('true' if need else 'false')
           ")
 

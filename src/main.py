@@ -33,16 +33,37 @@ def get_enabled_channels(settings: dict) -> list[dict]:
 
 
 def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
-    """Return channels whose fetch_hour matches ``now.hour``.
+    """Return channels that need fetching.
 
-    fetch_hour = (send_hour - 1) % 24
+    A channel needs fetching if:
+    - Draft doesn't exist for today
+    - Current time >= send_time - 30 minutes
     """
+    from datetime import timedelta
+    from fetch_news import load_draft
+
     result = []
+    today = now.strftime("%Y-%m-%d")
+
     for ch in get_enabled_channels(settings):
+        ch_id = ch.get("id", "unknown")
         send_hour = ch.get("send_hour", 18)
-        fetch_hour = (send_hour - 1) % 24
-        if now.hour == fetch_hour:
+        send_minute = ch.get("send_minute", 0)
+
+        # Calculate fetch_time = send_time - 30 minutes
+        send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
+        fetch_time = send_time - timedelta(minutes=30)
+
+        # Check if draft exists
+        if ch.get("type") == "email":
+            draft = load_draft(today)
+        else:
+            draft = load_draft(today, channel_id=ch_id)
+
+        # Need fetch if: no draft yet AND current time >= fetch_time
+        if draft is None and now >= fetch_time:
             result.append(ch)
+
     return result
 
 
