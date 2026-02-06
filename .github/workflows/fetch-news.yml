@@ -1,9 +1,9 @@
 name: Fetch News
 
 on:
-  # 每小时运行，由脚本检查哪些频道需要 fetch
+  # 每半小时运行，由脚本检查哪些频道需要 fetch
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/30 * * * *'
 
   # 手动触发，可选立即发送（测试模式）
   workflow_dispatch:

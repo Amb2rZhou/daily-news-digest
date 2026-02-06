@@ -1,8 +1,9 @@
 name: Auto Send
 
 on:
+  # 每半小时运行，检查哪些频道需要发送
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/30 * * * *'
 
   workflow_dispatch: {}
 
