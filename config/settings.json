@@ -20,7 +20,8 @@
       "send_minute": 0,
       "topic_mode": "focused",
       "max_news_items": 10,
-      "webhook_url_base": ""
+      "webhook_url_base": "",
+      "webhook_key_slot": 1
     },
     {
       "id": "ch_ml97ypb3",
