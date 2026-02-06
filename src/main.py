@@ -247,14 +247,11 @@ def run_auto_send(settings: dict) -> int:
         ch_type = ch.get("type", "webhook")
         ch_name = ch.get("name", ch_id)
 
-        # Load draft
+        # Load draft (no fallback - each channel uses its own draft only)
         if ch_type == "email":
             draft = load_draft(today)
         else:
             draft = load_draft(today, channel_id=ch_id)
-            if not draft:
-                # Fall back to email draft
-                draft = load_draft(today)
 
         if not draft:
             print(f"Warning: No draft found for channel {ch_name}, skipping")
@@ -327,13 +324,11 @@ def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
         ch_type = ch.get("type", "webhook")
         ch_name = ch.get("name", ch_id)
 
-        # Load draft
+        # Load draft (no fallback - each channel uses its own draft only)
         if ch_type == "email":
             draft = load_draft(today)
         else:
             draft = load_draft(today, channel_id=ch_id)
-            if not draft:
-                draft = load_draft(today)
 
         if not draft:
             print(f"Warning: No draft found for {ch_name} on {today}, skipping")
@@ -396,8 +391,6 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
 
         ch_draft = load_draft(date, channel_id=channel_id)
         if not ch_draft:
-            ch_draft = load_draft(date)
-        if not ch_draft:
             print(f"Error: No draft found for {date} (channel={channel_id})")
             return 1
 
@@ -422,8 +415,6 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
             ch_name = ch.get("name", ch_id_val)
 
             ch_draft = load_draft(date, channel_id=ch_id_val)
-            if not ch_draft:
-                ch_draft = load_draft(date)
             if not ch_draft:
                 print(f"Warning: No draft found for {ch_name}, skipping")
                 any_failed = True

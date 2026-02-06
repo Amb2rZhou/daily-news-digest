@@ -54,13 +54,8 @@ jobs:
               fpath = os.path.join(drafts_dir, fname)
 
               if not os.path.exists(fpath):
-                  # Try email draft as fallback for webhook
-                  if ch.get('type') != 'email':
-                      fpath = os.path.join(drafts_dir, f'{today}.json')
-                      if not os.path.exists(fpath):
-                          continue
-                  else:
-                      continue
+                  # No fallback - each channel must have its own draft
+                  continue
 
               try:
                   draft = json.load(open(fpath))
