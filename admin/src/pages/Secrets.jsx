@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { listSecrets, getPublicKey, setSecret, readFile } from '../lib/github'
 import nacl from 'tweetnacl'
+import sealedbox from 'tweetnacl-sealedbox-js'
 import { decodeBase64, encodeBase64, decodeUTF8 } from 'tweetnacl-util'
 
 const card = {
@@ -30,7 +31,7 @@ const SLOT_SECRETS = [...Array(20)].map((_, i) => ({
 function encryptSecret(publicKey, secretValue) {
   const keyBytes = decodeBase64(publicKey)
   const messageBytes = decodeUTF8(secretValue)
-  const encrypted = nacl.box.seal(messageBytes, keyBytes)
+  const encrypted = sealedbox.seal(messageBytes, keyBytes)
   return encodeBase64(encrypted)
 }
 

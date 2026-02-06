@@ -57,9 +57,9 @@ def get_enabled_channels(settings: dict) -> list[dict]:
 def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
     """Return channels that need fetching.
 
-    A channel needs fetching if:
-    - Draft doesn't exist for today
-    - Current time >= send_time - 30 minutes
+    A channel needs fetching if current time >= fetch_time AND:
+    - Draft doesn't exist for today, OR
+    - Draft is stale (pending_review and created > 2 hours ago)
     """
     from datetime import timedelta
     from fetch_news import load_draft
@@ -76,15 +76,29 @@ def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
         send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
         fetch_time = send_time - timedelta(minutes=30)
 
+        if now < fetch_time:
+            continue
+
         # Check if draft exists
         if ch.get("type") == "email":
             draft = load_draft(today)
         else:
             draft = load_draft(today, channel_id=ch_id)
 
-        # Need fetch if: no draft yet AND current time >= fetch_time
-        if draft is None and now >= fetch_time:
+        if draft is None:
             result.append(ch)
+        else:
+            # Draft exists: check if stale (unreviewed and > 2 hours old)
+            status = draft.get("status", "pending_review")
+            created_at = draft.get("created_at", "")
+            if status == "pending_review" and created_at:
+                try:
+                    created = datetime.fromisoformat(created_at)
+                    hours_old = (now - created).total_seconds() / 3600
+                    if hours_old > 2:
+                        result.append(ch)
+                except (ValueError, TypeError):
+                    pass
 
     return result
 

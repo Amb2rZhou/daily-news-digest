@@ -185,12 +185,9 @@ def get_time_window(settings: dict = None, manual: bool = False, channel: dict =
         # Manual trigger: window ends at current time
         end_time = now
     else:
-        # Auto trigger: window ends at scheduled send time
-        today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-        if now < today_send:
-            end_time = today_send - timedelta(days=1)
-        else:
-            end_time = today_send
+        # Auto trigger: window ends at today's scheduled send time
+        # Fetch always happens shortly before send_time, so use today's send_time
+        end_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
 
     start_time = end_time - timedelta(days=1)
 
@@ -228,12 +225,9 @@ def get_cutoff_time(settings: dict = None, manual: bool = False, channel: dict =
         # Manual trigger: 24h before now
         return (now - timedelta(days=1)).replace(tzinfo=None)
     else:
-        # Auto trigger: 24h before scheduled send time
+        # Auto trigger: 24h before today's scheduled send time
         today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-        if now < today_send:
-            return (today_send - timedelta(days=2)).replace(tzinfo=None)
-        else:
-            return (today_send - timedelta(days=1)).replace(tzinfo=None)
+        return (today_send - timedelta(days=1)).replace(tzinfo=None)
 
 def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
     """Parse a single RSS feed and return recent articles."""

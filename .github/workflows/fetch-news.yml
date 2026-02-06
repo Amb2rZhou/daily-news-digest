@@ -78,7 +78,25 @@ jobs:
                   need = True
                   break
               elif draft_exists:
-                  print(f'Channel {ch_id}: draft exists, skip', file=__import__('sys').stderr)
+                  # Check if draft is stale: unreviewed and created > 2 hours ago
+                  try:
+                      with open(draft_path) as f:
+                          draft = json.load(f)
+                      status = draft.get('status', 'pending_review')
+                      created_at = draft.get('created_at', '')
+                      if status == 'pending_review' and created_at and now >= fetch_time:
+                          created = datetime.fromisoformat(created_at)
+                          hours_old = (now - created).total_seconds() / 3600
+                          if hours_old > 2:
+                              print(f'Channel {ch_id}: draft is {hours_old:.1f}h old and unreviewed, re-fetch', file=__import__('sys').stderr)
+                              need = True
+                              break
+                          else:
+                              print(f'Channel {ch_id}: draft exists ({hours_old:.1f}h old), skip', file=__import__('sys').stderr)
+                      else:
+                          print(f'Channel {ch_id}: draft exists (status={status}), skip', file=__import__('sys').stderr)
+                  except Exception:
+                      print(f'Channel {ch_id}: draft exists, skip', file=__import__('sys').stderr)
 
           print('true' if need else 'false')
           ")
