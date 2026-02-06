@@ -7,6 +7,7 @@ import json
 import os
 import urllib.request
 import urllib.error
+from typing import Optional
 
 # Default config path (relative to project root)
 CONFIG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "settings.json")
@@ -68,7 +69,7 @@ def format_webhook_markdown(news_data: dict) -> str:
     return "\n".join(lines)
 
 
-def _get_webhook_key(channel: dict = None) -> str | None:
+def _get_webhook_key(channel: dict = None) -> Optional[str]:
     """Resolve webhook key for the given channel.
 
     Resolution order:

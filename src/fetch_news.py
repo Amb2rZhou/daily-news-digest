@@ -649,6 +649,11 @@ URL: {article.get('url', '')}
                 return result.get("categories", [])
             except json.JSONDecodeError as first_error:
                 print(f"  - JSON parse error (attempting fix): {first_error}")
+                # Debug: show the problematic area
+                error_pos = first_error.pos if hasattr(first_error, 'pos') else 0
+                start_show = max(0, error_pos - 100)
+                end_show = min(len(json_str), error_pos + 100)
+                print(f"  - Error context (pos {error_pos}): ...{json_str[start_show:end_show]}...")
 
             # Fix common JSON issues
             import re
