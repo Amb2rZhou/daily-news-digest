@@ -576,16 +576,16 @@ icon 映射：{icon_mapping}
             {/* Import existing keys */}
             <div style={{ marginBottom: 16 }}>
               <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 6, color: '#854d0e' }}>
-                1. 导入现有 Keys（可选）
+                1. 导入已保存的 Keys（可选）
               </div>
               <div style={{ fontSize: 11, color: '#a16207', marginBottom: 6 }}>
-                从 GitHub Secrets 复制现有的 WEBHOOK_KEYS 粘贴到这里，自动填充到各频道
+                如果你之前保存过 WEBHOOK_KEYS JSON（如在密码管理器中），粘贴到这里自动填充
               </div>
               <input
                 type="text"
                 value={importJson}
                 onChange={(e) => importWebhookKeys(e.target.value)}
-                placeholder='粘贴现有的 WEBHOOK_KEYS，如 {"ch_xxx": "key123", ...}'
+                placeholder='粘贴已保存的 JSON，如 {"ch_xxx": "key123", ...}'
                 style={{ width: '100%', fontFamily: 'monospace', fontSize: 12 }}
               />
               {importError && (
@@ -603,7 +603,7 @@ icon 映射：{icon_mapping}
             </div>
 
             <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 6, marginTop: 16, color: '#854d0e' }}>
-              3. 生成新的 WEBHOOK_KEYS
+              3. 生成并保存
             </div>
             <button
               onClick={generateWebhookKeysJson}
@@ -637,9 +637,13 @@ icon 映射：{icon_mapping}
                     {keysCopied ? '已复制!' : '复制'}
                   </button>
                 </div>
-                {Object.keys(JSON.parse(generatedKeysJson)).length === 0 && (
+                {Object.keys(JSON.parse(generatedKeysJson)).length === 0 ? (
                   <div style={{ fontSize: 12, color: '#dc2626', marginTop: 8 }}>
                     没有已启用的 Webhook 频道填写了 Key
+                  </div>
+                ) : (
+                  <div style={{ fontSize: 11, color: '#a16207', marginTop: 8 }}>
+                    💡 建议同时保存到密码管理器，下次可直接导入
                   </div>
                 )}
               </div>
