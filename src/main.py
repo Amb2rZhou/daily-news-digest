@@ -131,11 +131,14 @@ def get_channels_to_send(settings: dict, now: datetime) -> list[dict]:
         if status in ("sent", "rejected"):
             continue
 
+        source = draft.get("source", "scheduled")
+
         if status == "approved":
-            # Approved: send immediately, no time restriction
+            # Approved: send immediately, no time restriction, any source
             result.append(ch)
-        elif status == "pending_review":
-            # Pending: only send within [send_time, send_time + 2h]
+        elif status == "pending_review" and source != "manual":
+            # Scheduled pending: send within [send_time, send_time + 2h]
+            # Manual pending: never auto-send (must approve first)
             send_hour = ch.get("send_hour", 18)
             send_minute = ch.get("send_minute", 0)
             send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
@@ -270,11 +273,23 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
             if truncated_count < original_count:
                 print(f"  Truncated to {truncated_count} items for this channel (max={ch_max})")
 
+        # Check if existing draft should be preserved (manual mode)
+        if manual:
+            today = now.strftime("%Y-%m-%d")
+            if ch.get("type") == "email":
+                existing = load_draft(today)
+            else:
+                existing = load_draft(today, channel_id=ch_id)
+            if existing and existing.get("status") in ("sent", "rejected"):
+                print(f"  Skipping: existing draft is '{existing['status']}', not overwriting")
+                continue
+
         # Build draft data
         ch_draft = {
             "date": news_data.get("date"),
             "time_window": news_data.get("time_window"),
             "categories": ch_categories,
+            "source": "manual" if manual else "scheduled",
         }
 
         # Email channel: save as YYYY-MM-DD.json (no channel_id suffix)

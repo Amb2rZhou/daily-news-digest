@@ -55,13 +55,16 @@ jobs:
                   if status in ('sent', 'rejected'):
                       continue
 
+                  source = draft.get('source', 'scheduled')
+
                   if status == 'approved':
-                      # Approved: send ASAP
+                      # Approved: send ASAP, any source
                       need = True
                       break
 
-                  if status == 'pending_review':
-                      # Pending: only within [send_time, send_time + 2h]
+                  if status == 'pending_review' and source != 'manual':
+                      # Scheduled pending: within [send_time, send_time + 2h]
+                      # Manual pending: never auto-send
                       send_hour = ch.get('send_hour', 18)
                       send_minute = ch.get('send_minute', 0)
                       send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)

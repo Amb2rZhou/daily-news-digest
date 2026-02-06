@@ -814,6 +814,7 @@ def save_draft(news_data: dict, settings: dict = None, channel_id: str = None) -
     draft_data = {
         **clean_data,
         "status": news_data.get("status", "pending_review"),
+        "source": news_data.get("source", "scheduled"),
         "created_at": datetime.now(ZoneInfo(settings.get("timezone", "Asia/Shanghai"))).isoformat(),
     }
 
