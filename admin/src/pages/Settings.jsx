@@ -42,16 +42,12 @@ export default function Settings() {
   const [apiKey, setApiKey] = useState(() => getAnthropicKey())
   const [apiKeySaved, setApiKeySaved] = useState(() => hasAnthropicKey())
 
-  // Webhook keys (stored in localStorage, not in settings.json)
-  const [webhookKeys, setWebhookKeys] = useState(() => {
-    try {
-      return JSON.parse(localStorage.getItem('webhookKeys') || '{}')
-    } catch {
-      return {}
-    }
-  })
+  // Webhook keys (in-memory only, not persisted)
+  const [webhookKeys, setWebhookKeys] = useState({})
   const [generatedKeysJson, setGeneratedKeysJson] = useState('')
   const [keysCopied, setKeysCopied] = useState(false)
+  const [importJson, setImportJson] = useState('')
+  const [importError, setImportError] = useState('')
 
   useEffect(() => { load() }, [])
 
@@ -125,9 +121,27 @@ export default function Settings() {
     const newKeys = { ...webhookKeys, [channelId]: key }
     if (!key) delete newKeys[channelId]
     setWebhookKeys(newKeys)
-    localStorage.setItem('webhookKeys', JSON.stringify(newKeys))
     setGeneratedKeysJson('')
     setKeysCopied(false)
+  }
+
+  function importWebhookKeys(jsonStr) {
+    setImportJson(jsonStr)
+    setImportError('')
+    if (!jsonStr.trim()) {
+      return
+    }
+    try {
+      const parsed = JSON.parse(jsonStr.trim())
+      if (typeof parsed !== 'object' || Array.isArray(parsed)) {
+        setImportError('格式错误：需要 JSON 对象')
+        return
+      }
+      setWebhookKeys(parsed)
+      setGeneratedKeysJson('')
+    } catch (e) {
+      setImportError('JSON 解析失败: ' + e.message)
+    }
   }
 
   function generateWebhookKeysJson() {
@@ -501,14 +515,14 @@ icon 映射：{icon_mapping}
                         <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>
                           Webhook Key
                           <span style={{ fontWeight: 400, color: 'var(--text3)', marginLeft: 8 }}>
-                            （仅存浏览器本地，用于生成 WEBHOOK_KEYS）
+                            （仅在内存中，刷新页面即清除）
                           </span>
                         </span>
                         <input
                           type="password"
                           value={webhookKeys[ch.id] || ''}
                           onChange={(e) => updateWebhookKey(ch.id, e.target.value)}
-                          placeholder="输入此频道的 webhook key..."
+                          placeholder="从下方导入或手动输入..."
                           style={{ width: '100%' }}
                         />
                       </label>
@@ -546,17 +560,50 @@ icon 映射：{icon_mapping}
           + 添加频道
         </button>
 
-        {/* Generate WEBHOOK_KEYS JSON */}
+        {/* Webhook Keys Manager */}
         {channels.some(ch => ch.type === 'webhook') && (
           <div style={{
             marginTop: 20, padding: 16, background: '#fefce8', borderRadius: 8,
             border: '1px solid #fde047',
           }}>
             <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 8, color: '#854d0e' }}>
-              生成 WEBHOOK_KEYS
+              Webhook Keys 管理
             </div>
             <div style={{ fontSize: 12, color: '#a16207', marginBottom: 12 }}>
-              在上方为每个 Webhook 频道填写 Key 后，点击下方按钮生成 JSON，然后复制到 GitHub Secrets 的 WEBHOOK_KEYS 中。
+              Keys 仅在页面内存中临时保存，刷新页面即清除，不会存储到任何地方。
+            </div>
+
+            {/* Import existing keys */}
+            <div style={{ marginBottom: 16 }}>
+              <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 6, color: '#854d0e' }}>
+                1. 导入现有 Keys（可选）
+              </div>
+              <div style={{ fontSize: 11, color: '#a16207', marginBottom: 6 }}>
+                从 GitHub Secrets 复制现有的 WEBHOOK_KEYS 粘贴到这里，自动填充到各频道
+              </div>
+              <input
+                type="text"
+                value={importJson}
+                onChange={(e) => importWebhookKeys(e.target.value)}
+                placeholder='粘贴现有的 WEBHOOK_KEYS，如 {"ch_xxx": "key123", ...}'
+                style={{ width: '100%', fontFamily: 'monospace', fontSize: 12 }}
+              />
+              {importError && (
+                <div style={{ fontSize: 11, color: '#dc2626', marginTop: 4 }}>{importError}</div>
+              )}
+              {!importError && Object.keys(webhookKeys).length > 0 && (
+                <div style={{ fontSize: 11, color: '#16a34a', marginTop: 4 }}>
+                  已导入 {Object.keys(webhookKeys).length} 个 key
+                </div>
+              )}
+            </div>
+
+            <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 6, color: '#854d0e' }}>
+              2. 在上方各频道卡片中查看/修改 Key
+            </div>
+
+            <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 6, marginTop: 16, color: '#854d0e' }}>
+              3. 生成新的 WEBHOOK_KEYS
             </div>
             <button
               onClick={generateWebhookKeysJson}
