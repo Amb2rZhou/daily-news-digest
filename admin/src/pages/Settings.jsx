@@ -501,7 +501,27 @@ icon 映射：{icon_mapping}
                   </label>
                   {!isEmail && (
                     <>
-                      <label style={{ gridColumn: '1 / -1' }}>
+                      <label>
+                        <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>
+                          Key 槽位
+                          <span style={{ fontWeight: 400, color: 'var(--text3)', marginLeft: 4 }}>
+                            (新方式)
+                          </span>
+                        </span>
+                        <select
+                          value={ch.webhook_key_slot || ''}
+                          onChange={(e) => updateChannelField(idx, 'webhook_key_slot', e.target.value ? parseInt(e.target.value) : null)}
+                          style={{ width: '100%' }}
+                        >
+                          <option value="">不使用（用旧 JSON 方式）</option>
+                          {[...Array(20)].map((_, i) => (
+                            <option key={i + 1} value={i + 1}>
+                              槽位 {i + 1} → WEBHOOK_KEY_{i + 1}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      <label>
                         <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道 Webhook URL Base（可选）</span>
                         <input
                           type="text"
@@ -515,7 +535,7 @@ icon 映射：{icon_mapping}
                         <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>
                           Webhook Key
                           <span style={{ fontWeight: 400, color: 'var(--text3)', marginLeft: 8 }}>
-                            （仅在内存中，刷新页面即清除）
+                            （旧方式：仅在内存中，用于生成 JSON）
                           </span>
                         </span>
                         <input

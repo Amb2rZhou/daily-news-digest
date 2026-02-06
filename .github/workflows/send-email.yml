@@ -44,7 +44,29 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          # Legacy: JSON format for backward compatibility
           WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
+          # New: slot-based keys (use webhook_key_slot in channel config)
+          WEBHOOK_KEY_1: ${{ secrets.WEBHOOK_KEY_1 }}
+          WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
+          WEBHOOK_KEY_3: ${{ secrets.WEBHOOK_KEY_3 }}
+          WEBHOOK_KEY_4: ${{ secrets.WEBHOOK_KEY_4 }}
+          WEBHOOK_KEY_5: ${{ secrets.WEBHOOK_KEY_5 }}
+          WEBHOOK_KEY_6: ${{ secrets.WEBHOOK_KEY_6 }}
+          WEBHOOK_KEY_7: ${{ secrets.WEBHOOK_KEY_7 }}
+          WEBHOOK_KEY_8: ${{ secrets.WEBHOOK_KEY_8 }}
+          WEBHOOK_KEY_9: ${{ secrets.WEBHOOK_KEY_9 }}
+          WEBHOOK_KEY_10: ${{ secrets.WEBHOOK_KEY_10 }}
+          WEBHOOK_KEY_11: ${{ secrets.WEBHOOK_KEY_11 }}
+          WEBHOOK_KEY_12: ${{ secrets.WEBHOOK_KEY_12 }}
+          WEBHOOK_KEY_13: ${{ secrets.WEBHOOK_KEY_13 }}
+          WEBHOOK_KEY_14: ${{ secrets.WEBHOOK_KEY_14 }}
+          WEBHOOK_KEY_15: ${{ secrets.WEBHOOK_KEY_15 }}
+          WEBHOOK_KEY_16: ${{ secrets.WEBHOOK_KEY_16 }}
+          WEBHOOK_KEY_17: ${{ secrets.WEBHOOK_KEY_17 }}
+          WEBHOOK_KEY_18: ${{ secrets.WEBHOOK_KEY_18 }}
+          WEBHOOK_KEY_19: ${{ secrets.WEBHOOK_KEY_19 }}
+          WEBHOOK_KEY_20: ${{ secrets.WEBHOOK_KEY_20 }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src
