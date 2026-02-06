@@ -20,7 +20,8 @@
       "send_minute": 0,
       "topic_mode": "focused",
       "max_news_items": 10,
-      "webhook_url_base": ""
+      "webhook_url_base": "",
+      "webhook_key_slot": 1
     },
     {
       "id": "ch_ml97ypb3",
@@ -31,7 +32,8 @@
       "send_minute": 0,
       "topic_mode": "broad",
       "max_news_items": 10,
-      "webhook_url_base": ""
+      "webhook_url_base": "",
+      "webhook_key_slot": 2
     },
     {
       "id": "ch_ml9b9t9s",
@@ -42,7 +44,8 @@
       "send_minute": 0,
       "topic_mode": "focused",
       "max_news_items": 10,
-      "webhook_url_base": ""
+      "webhook_url_base": "",
+      "webhook_key_slot": 3
     },
     {
       "id": "ch_mlajg7no",
