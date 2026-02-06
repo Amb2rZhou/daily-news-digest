@@ -43,6 +43,18 @@
       "topic_mode": "focused",
       "max_news_items": 10,
       "webhook_url_base": ""
+    },
+    {
+      "id": "ch_mlajg7no",
+      "type": "webhook",
+      "name": "2人测试群for部门",
+      "enabled": true,
+      "send_hour": 11,
+      "send_minute": 0,
+      "topic_mode": "broad",
+      "max_news_items": 10,
+      "webhook_url_base": "",
+      "webhook_key_slot": 4
     }
   ],
   "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
