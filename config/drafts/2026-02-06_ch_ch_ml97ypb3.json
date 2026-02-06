@@ -1,9 +1,173 @@
 {
   "date": "2026-02-06",
-  "time_window": "2026-02-05 11:33 ~ 2026-02-06 11:33",
-  "categories": [],
+  "time_window": "2026-02-05 11:40 ~ 2026-02-06 11:40",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Anthropic发布Claude Opus 4.6模型，具备更强自主性和专注力",
+          "summary": "Anthropic发布最新AI模型Claude Opus 4.6，仅在两个月内完成升级，提供更强的自主决策能力和任务专注力，支持AI Agent应用。",
+          "comment": "当Claude和GPT-5.3同日发布各自的Agent模型升级，这是否预示AI从'聊天助手'向'自主代理'的根本转变将如何改变知识工作的未来？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/05/anthropic-reveals-new-opus-4-6-model-with-more-autonomy-and-better-focus/"
+        },
+        {
+          "title": "OpenAI发布GPT-5.3-Codex，宣称最强代码生成Agent能力",
+          "summary": "OpenAI推出GPT-5.3-Codex模型，定位为迄今最强大的代码生成Agent，与Claude Opus 4.6同日发布引发业界关注。",
+          "comment": "两大AI巨头在同一天推出代码生成Agent，这场'代码战争'最终会让传统软件开发岗位消失还是催生新的职业机会？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openais-gpt-5-3-codex-drops-as-anthropic-upgrades-claude-ai-coding-wars-heat"
+        },
+        {
+          "title": "Mistral发布Voxtral Transcribe 2系列语音转文字模型",
+          "summary": "法国AI公司Mistral推出新一代语音转文字模型Voxtral Transcribe 2系列，提升语音识别能力。",
+          "comment": "开源语音模型的进步是否会动摇专有语音识别服务的市场地位？",
+          "source": "少数派",
+          "url": "https://sspai.com/post/106113"
+        },
+        {
+          "title": "苹果以16亿美元收购Q.ai，布局无声语音技术",
+          "summary": "苹果完成对AI初创公司Q.ai的16亿美元收购，该公司专注研发'无声语音'转文本技术，对AR眼镜开发至关重要。",
+          "comment": "无声语音技术的突破是否意味着苹果的AR眼镜已经找到了解决用户隐私和自然交互的关键钥匙？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119034.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Amazon宣布2026年资本支出达200亿美元，创纪录AI投资规模",
+          "summary": "Amazon宣布2026年资本支出将达200亿美元，远超华尔街预期的146.6亿美元，大部分用于数据中心和AI基础设施建设。",
+          "comment": "当大科技公司年度AI投资超过全球大多数国家科研预算时，这场'资本烧钱竞赛'最终的赢家会是谁，而被淘汰的会失去什么？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-06/how-much-is-big-tech-spending-on-ai-computing-a-staggering-650-billion-in-2026"
+        },
+        {
+          "title": "AWS创13个季度来最强增长，AI驱动云服务采用",
+          "summary": "AWS在Q4 2025实现13个季度以来最强的收入增长，AI需求的增长是推动云计算采用的主要动力。",
+          "comment": "当AWS的增长完全由AI驱动时，非AI相关的云服务企业还有生存空间吗？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/05/aws-revenue-continues-to-soar-as-cloud-demand-remains-high/"
+        },
+        {
+          "title": "Tim Cook宣布苹果将推出新产品类别和AI服务",
+          "summary": "苹果CEO Tim Cook在员工全体大会上透露，苹果正在开发由AI驱动的新产品类别和服务，展示公司对AI未来的战略布局。",
+          "comment": "苹果曾以'隐私'著称，今天却要用AI驱动新产品，这两者之间的矛盾该如何化解？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/05/tim-cook-teases-new-product-categories-and-services-enabled-by-ai/"
+        },
+        {
+          "title": "谷歌在超级碗投放Gemini广告'新家'主题",
+          "summary": "谷歌在即将举办的超级碗上推出Gemini应用广告，聚焦'新家'主题，展示AI助手在日常生活中的应用。",
+          "comment": "谷歌在超级碗投放AI广告而不是搜索引擎广告，是否意味着AI已经成为科技公司的新'招牌'？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/05/google-gemini-super-bowl/"
+        },
+        {
+          "title": "阿里巴巴统一大模型品牌为千问，启动30亿元免单活动",
+          "summary": "阿里巴巴将大模型品牌统一为千问，并推出千问APP启动30亿元免单活动，意图抢占春节AI应用市场。",
+          "comment": "阿里用30亿元补贴换取用户，这种烧钱换市场份额的策略在AI时代还能奏效多久？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-06-4"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Stanford/Nvidia/Together AI推出TTT-Discover，GPU优化性能超人类专家2倍",
+          "summary": "来自Stanford、Nvidia和Together AI的研究人员开发TTT-Discover技术，通过推理时训练发现新解决方案，成功将关键GPU核心优化至超人类专家2倍性能。",
+          "comment": "当AI可以在推理时自我优化，超越人类专家设计的芯片代码时，人类工程师的核心竞争力还剩什么？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/infrastructure/ttt-discover-optimizes-gpu-kernels-2x-faster-than-human-experts-by-training"
+        },
+        {
+          "title": "Stable-DiffCoder突破：扩散模型在代码生成领域取得新进展",
+          "summary": "Stable-DiffCoder项目证明扩散模型在代码生成任务上超越自回归模型，开启代码生成的新技术范式。",
+          "comment": "当扩散模型证明自己能胜任代码生成这样的逻辑密集任务时，我们对'大语言模型必然优于其他模型'的认知是否该被推翻？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-06-2"
+        },
+        {
+          "title": "Apple研究如何用设计师教导AI生成更好的UI界面",
+          "summary": "苹果发表研究论文，探索如何通过设计师的教导让生成AI模型创建更优质的UI界面，推进AIGC在应用开发中的应用。",
+          "comment": "当AI可以根据设计师的教导生成UI时，UI设计师是会被淘汰，还是会进化为'AI训练师'？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/05/designers-teach-ai-to-generate-better-ui-in-new-apple-study/"
+        },
+        {
+          "title": "华人团队MemBrain在Agent记忆领域实现多项SOTA突破",
+          "summary": "华人研究团队MemBrain在Agent记忆系统方面取得多项最先进成果，推进AI Agent的持久化记忆能力。",
+          "comment": "当AI Agent拥有持久化和可学习的记忆时，这是否距离'真正的AGI'又近了一步？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-06-3"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Reddit计划以AI搜索作为下一个增长机会",
+          "summary": "Reddit在Q4财报电话会中透露，计划将传统搜索与AI搜索合并，虽然搜索目前未获利，但认为这是一个巨大市场机会。",
+          "comment": "当Reddit这样的内容平台要用AI搜索重新定义其价值链时，搜索引擎公司的未来模式该如何重构？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/05/reddit-looks-to-ai-search-as-its-next-big-opportunity/"
+        },
+        {
+          "title": "AI Bot激增引发网络军备竞赛，发布商加强防守",
+          "summary": "互联网上AI机器人数量激增，导致网站发布商推出更激进的防护措施，形成AI爬虫与反爬虫的军备竞赛。",
+          "comment": "当网络变成AI与反AI机器人的战场时，普通互联网用户的体验和隐私将如何保障？",
+          "source": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/02/increase-of-ai-bots-on-the-internet-sparks-arms-race/"
+        },
+        {
+          "title": "全球首例'人机协同糖尿病门诊'在福州落地",
+          "summary": "福州成功实践全球首个投入实际运行的'人机协同糖尿病门诊'，标志AI从辅助诊断升级到赋能全流程慢性病管理。",
+          "comment": "当AI医助能够管理整个慢病流程时，传统医疗的商业模式是否需要被完全重塑？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119022.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "PallasAI完成数千万元人民币融资，有赞独家投资",
+          "summary": "AI Agent平台PallasAI获得有赞独家投资的数千万元人民币融资，这是其三个月内的第二笔融资，将用于技术升级和垂直行业解决方案。",
+          "comment": "AI Agent赛道融资不断，有赞这样的电商平台为何要独家投资PallasAI，背后的战略逻辑是什么？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3671264334176905?f=rss"
+        },
+        {
+          "title": "Sapiom融资1500万美元，为AI Agent提供金融层服务",
+          "summary": "获得Accel支持的创业公司Sapiom完成1500万美元融资，为AI Agent构建金融层，处理身份验证和微支付。",
+          "comment": "当AI Agent需要自主购买工具时，谁将控制这个新的金融生态，会成为下一个支付宝吗？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/05/sapiom-raises-15m-to-help-ai-agents-buy-their-own-tech-tools/"
+        },
+        {
+          "title": "Machina Labs融资1.24亿美元，建设大规模智能工厂",
+          "summary": "机器人初创公司Machina Labs获得1.24亿美元融资，用于在美国建设大规模智能工厂，可制造各类复杂金属结构。",
+          "comment": "当AI和机器人结合建立智能工厂时，传统制造业的就业机会会消失到什么程度？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/machina-labs-raises-124m-to-launch-large-scale-intelligent-u-s-factory/"
+        }
+      ]
+    }
+  ],
   "status": "pending_review",
-  "created_at": "2026-02-06T11:37:02.425609+08:00",
+  "created_at": "2026-02-06T11:45:29.737333+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
