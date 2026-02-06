@@ -37,14 +37,6 @@ jobs:
           for ch in channels:
               if not ch.get('enabled', False):
                   continue
-              send_hour = ch.get('send_hour', 18)
-              send_minute = ch.get('send_minute', 0)
-              send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-              send_deadline = send_time + timedelta(hours=2)
-
-              # Only within [send_time, send_time + 2h]
-              if now < send_time or now > send_deadline:
-                  continue
 
               ch_id = ch.get('id', 'unknown')
               if ch.get('type') == 'email':
@@ -59,9 +51,24 @@ jobs:
               try:
                   draft = json.load(open(fpath))
                   status = draft.get('status', 'pending_review')
-                  if status not in ('sent', 'rejected'):
+
+                  if status in ('sent', 'rejected'):
+                      continue
+
+                  if status == 'approved':
+                      # Approved: send ASAP
                       need = True
                       break
+
+                  if status == 'pending_review':
+                      # Pending: only within [send_time, send_time + 2h]
+                      send_hour = ch.get('send_hour', 18)
+                      send_minute = ch.get('send_minute', 0)
+                      send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
+                      send_deadline = send_time + timedelta(hours=2)
+                      if send_time <= now <= send_deadline:
+                          need = True
+                          break
               except:
                   pass
 
