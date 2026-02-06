@@ -42,13 +42,6 @@ export default function Settings() {
   const [apiKey, setApiKey] = useState(() => getAnthropicKey())
   const [apiKeySaved, setApiKeySaved] = useState(() => hasAnthropicKey())
 
-  // Webhook keys (in-memory only, not persisted)
-  const [webhookKeys, setWebhookKeys] = useState({})
-  const [generatedKeysJson, setGeneratedKeysJson] = useState('')
-  const [keysCopied, setKeysCopied] = useState(false)
-  const [importJson, setImportJson] = useState('')
-  const [importError, setImportError] = useState('')
-
   useEffect(() => { load() }, [])
 
   async function load() {
@@ -117,56 +110,6 @@ export default function Settings() {
     updateChannel(idx, { [key]: value })
   }
 
-  function updateWebhookKey(channelId, key) {
-    const newKeys = { ...webhookKeys, [channelId]: key }
-    if (!key) delete newKeys[channelId]
-    setWebhookKeys(newKeys)
-    setGeneratedKeysJson('')
-    setKeysCopied(false)
-  }
-
-  function importWebhookKeys(jsonStr) {
-    setImportJson(jsonStr)
-    setImportError('')
-    if (!jsonStr.trim()) {
-      return
-    }
-    try {
-      const parsed = JSON.parse(jsonStr.trim())
-      if (typeof parsed !== 'object' || Array.isArray(parsed)) {
-        setImportError('格式错误：需要 JSON 对象')
-        return
-      }
-      setWebhookKeys(parsed)
-      setGeneratedKeysJson('')
-    } catch (e) {
-      setImportError('JSON 解析失败: ' + e.message)
-    }
-  }
-
-  function generateWebhookKeysJson() {
-    const channels = settings?.channels || []
-    const webhookChannels = channels.filter(ch => ch.type === 'webhook' && ch.enabled)
-    const keysObj = {}
-    for (const ch of webhookChannels) {
-      if (webhookKeys[ch.id]) {
-        keysObj[ch.id] = webhookKeys[ch.id]
-      }
-    }
-    const json = JSON.stringify(keysObj)
-    setGeneratedKeysJson(json)
-    setKeysCopied(false)
-  }
-
-  async function copyKeysJson() {
-    try {
-      await navigator.clipboard.writeText(generatedKeysJson)
-      setKeysCopied(true)
-      setTimeout(() => setKeysCopied(false), 2000)
-    } catch {
-      alert('复制失败，请手动复制')
-    }
-  }
 
   async function save() {
     if (!settings) return
@@ -504,16 +447,13 @@ icon 映射：{icon_mapping}
                       <label>
                         <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>
                           Key 槽位
-                          <span style={{ fontWeight: 400, color: 'var(--text3)', marginLeft: 4 }}>
-                            (新方式)
-                          </span>
                         </span>
                         <select
                           value={ch.webhook_key_slot || ''}
                           onChange={(e) => updateChannelField(idx, 'webhook_key_slot', e.target.value ? parseInt(e.target.value) : null)}
                           style={{ width: '100%' }}
                         >
-                          <option value="">不使用（用旧 JSON 方式）</option>
+                          <option value="">未设置</option>
                           {[...Array(20)].map((_, i) => (
                             <option key={i + 1} value={i + 1}>
                               槽位 {i + 1} → WEBHOOK_KEY_{i + 1}
@@ -528,21 +468,6 @@ icon 映射：{icon_mapping}
                           value={ch.webhook_url_base || ''}
                           onChange={(e) => updateChannelField(idx, 'webhook_url_base', e.target.value)}
                           placeholder="留空使用全局 URL"
-                          style={{ width: '100%' }}
-                        />
-                      </label>
-                      <label style={{ gridColumn: '1 / -1' }}>
-                        <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>
-                          Webhook Key
-                          <span style={{ fontWeight: 400, color: 'var(--text3)', marginLeft: 8 }}>
-                            （旧方式：仅在内存中，用于生成 JSON）
-                          </span>
-                        </span>
-                        <input
-                          type="password"
-                          value={webhookKeys[ch.id] || ''}
-                          onChange={(e) => updateWebhookKey(ch.id, e.target.value)}
-                          placeholder="从下方导入或手动输入..."
                           style={{ width: '100%' }}
                         />
                       </label>
@@ -580,96 +505,6 @@ icon 映射：{icon_mapping}
           + 添加频道
         </button>
 
-        {/* Webhook Keys Manager */}
-        {channels.some(ch => ch.type === 'webhook') && (
-          <div style={{
-            marginTop: 20, padding: 16, background: '#fefce8', borderRadius: 8,
-            border: '1px solid #fde047',
-          }}>
-            <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 8, color: '#854d0e' }}>
-              Webhook Keys 管理
-            </div>
-            <div style={{ fontSize: 12, color: '#a16207', marginBottom: 12 }}>
-              Keys 仅在页面内存中临时保存，刷新页面即清除，不会存储到任何地方。
-            </div>
-
-            {/* Import existing keys */}
-            <div style={{ marginBottom: 16 }}>
-              <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 6, color: '#854d0e' }}>
-                1. 导入已保存的 Keys（可选）
-              </div>
-              <div style={{ fontSize: 11, color: '#a16207', marginBottom: 6 }}>
-                如果你之前保存过 WEBHOOK_KEYS JSON（如在密码管理器中），粘贴到这里自动填充
-              </div>
-              <input
-                type="text"
-                value={importJson}
-                onChange={(e) => importWebhookKeys(e.target.value)}
-                placeholder='粘贴已保存的 JSON，如 {"ch_xxx": "key123", ...}'
-                style={{ width: '100%', fontFamily: 'monospace', fontSize: 12 }}
-              />
-              {importError && (
-                <div style={{ fontSize: 11, color: '#dc2626', marginTop: 4 }}>{importError}</div>
-              )}
-              {!importError && Object.keys(webhookKeys).length > 0 && (
-                <div style={{ fontSize: 11, color: '#16a34a', marginTop: 4 }}>
-                  已导入 {Object.keys(webhookKeys).length} 个 key
-                </div>
-              )}
-            </div>
-
-            <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 6, color: '#854d0e' }}>
-              2. 在上方各频道卡片中查看/修改 Key
-            </div>
-
-            <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 6, marginTop: 16, color: '#854d0e' }}>
-              3. 生成并保存
-            </div>
-            <button
-              onClick={generateWebhookKeysJson}
-              style={{
-                padding: '8px 20px', background: '#facc15', color: '#713f12',
-                border: 'none', borderRadius: 6, fontSize: 13, cursor: 'pointer', fontWeight: 500,
-              }}
-            >
-              生成 WEBHOOK_KEYS JSON
-            </button>
-            {generatedKeysJson && (
-              <div style={{ marginTop: 12 }}>
-                <div style={{
-                  display: 'flex', alignItems: 'center', gap: 8,
-                  padding: 12, background: '#fff', borderRadius: 6, border: '1px solid #e5e7eb',
-                }}>
-                  <code style={{
-                    flex: 1, fontSize: 12, fontFamily: 'monospace',
-                    wordBreak: 'break-all', color: '#374151',
-                  }}>
-                    {generatedKeysJson}
-                  </code>
-                  <button
-                    onClick={copyKeysJson}
-                    style={{
-                      padding: '6px 12px', background: keysCopied ? '#22c55e' : '#3b82f6',
-                      color: '#fff', border: 'none', borderRadius: 4, fontSize: 12,
-                      cursor: 'pointer', whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {keysCopied ? '已复制!' : '复制'}
-                  </button>
-                </div>
-                {Object.keys(JSON.parse(generatedKeysJson)).length === 0 ? (
-                  <div style={{ fontSize: 12, color: '#dc2626', marginTop: 8 }}>
-                    没有已启用的 Webhook 频道填写了 Key
-                  </div>
-                ) : (
-                  <div style={{ fontSize: 11, color: '#a16207', marginTop: 8 }}>
-                    💡 建议同时保存到密码管理器，下次可直接导入
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        )}
       </div>
 
       {/* Anthropic API Key */}
