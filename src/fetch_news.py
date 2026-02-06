@@ -642,25 +642,78 @@ URL: {article.get('url', '')}
         end_idx = response_text.rfind('}') + 1
         if start_idx != -1 and end_idx > start_idx:
             json_str = response_text[start_idx:end_idx]
+
+            # Try parsing directly first
             try:
                 result = json.loads(json_str)
-            except json.JSONDecodeError:
-                # Fix common JSON issues: unescaped quotes in values
-                import re
-                # Remove control characters
-                json_str = re.sub(r'[\x00-\x1f\x7f]', ' ', json_str)
-                json_str = json_str.replace('\\"', '"')  # normalize
+                return result.get("categories", [])
+            except json.JSONDecodeError as first_error:
+                print(f"  - JSON parse error (attempting fix): {first_error}")
+
+            # Fix common JSON issues
+            import re
+
+            # Remove control characters
+            json_str = re.sub(r'[\x00-\x1f\x7f]', ' ', json_str)
+
+            # Fix unescaped quotes inside string values
+            # Match: "key": "value with "quotes" inside"
+            def fix_quotes_in_value(match):
+                key = match.group(1)
+                value = match.group(2)
+                # Replace inner quotes with single quotes
+                fixed_value = value.replace('"', "'")
+                return f'"{key}": "{fixed_value}"'
+
+            # Pattern for string fields
+            json_str = re.sub(
+                r'"(title|summary|comment|source|url|name|icon)"\s*:\s*"((?:[^"\\]|\\.)*)(?<!\\)"',
+                fix_quotes_in_value,
+                json_str
+            )
+
+            # Try again
+            try:
+                result = json.loads(json_str)
+                return result.get("categories", [])
+            except json.JSONDecodeError as second_error:
+                print(f"  - JSON fix attempt 1 failed: {second_error}")
+
+            # More aggressive fix: use ast.literal_eval style parsing
+            # Replace problematic patterns
+            json_str = re.sub(r',\s*}', '}', json_str)  # trailing comma before }
+            json_str = re.sub(r',\s*]', ']', json_str)  # trailing comma before ]
+
+            # Try with relaxed JSON parser
+            try:
+                # Try to extract just the categories array if full parse fails
+                cat_match = re.search(r'"categories"\s*:\s*(\[[\s\S]*\])', json_str)
+                if cat_match:
+                    categories_str = cat_match.group(1)
+                    # Clean up the categories string
+                    categories_str = re.sub(r',\s*}', '}', categories_str)
+                    categories_str = re.sub(r',\s*]', ']', categories_str)
+                    result = json.loads(categories_str)
+                    print(f"  - Recovered {len(result)} categories from partial JSON")
+                    return result
+            except Exception as third_error:
+                print(f"  - JSON fix attempt 2 failed: {third_error}")
+
+            # Last resort: try line by line reconstruction
+            try:
                 lines = json_str.split('\n')
                 fixed_lines = []
                 for line in lines:
-                    m = re.match(r'^(\s*"(?:title|summary|source|url|name|icon)":\s*")(.*)(",?\s*)$', line)
+                    m = re.match(r'^(\s*"(?:title|summary|comment|source|url|name|icon)":\s*")(.*)(",?\s*)$', line)
                     if m:
                         value = m.group(2).replace('"', "'")
                         line = m.group(1) + value + m.group(3)
                     fixed_lines.append(line)
                 json_str = '\n'.join(fixed_lines)
                 result = json.loads(json_str)
-            return result.get("categories", [])
+                return result.get("categories", [])
+            except Exception as final_error:
+                print(f"  - All JSON fix attempts failed: {final_error}")
     except Exception as e:
         print(f"  Error: Failed to summarize news: {e}")
 
