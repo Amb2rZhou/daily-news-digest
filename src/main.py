@@ -24,6 +24,28 @@ from send_webhook import send_webhook
 
 
 # ---------------------------------------------------------------------------
+# Helper: truncate categories to max_items
+# ---------------------------------------------------------------------------
+
+def truncate_categories(categories: list[dict], max_items: int) -> list[dict]:
+    """Truncate news in categories to max_items total, preserving category structure."""
+    import copy
+    result = []
+    count = 0
+    for cat in categories:
+        new_cat = copy.deepcopy(cat)
+        news = new_cat.get("news", [])
+        remaining = max_items - count
+        if remaining <= 0:
+            break
+        new_cat["news"] = news[:remaining]
+        count += len(new_cat["news"])
+        if new_cat["news"]:
+            result.append(new_cat)
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Helper: channel selectors
 # ---------------------------------------------------------------------------
 
@@ -136,16 +158,20 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
 
     topic = settings.get("news_topic", "AI")
 
-    # Collect all needed topic_modes and max_items
+    # Collect all needed topic_modes and compute max_items per mode
     all_modes = set()
+    max_items_by_mode = {}
     for ch in channels:
-        all_modes.add(ch.get("topic_mode", "broad"))
+        mode = ch.get("topic_mode", "broad")
+        all_modes.add(mode)
+        ch_max = ch.get("max_news_items", 10)
+        max_items_by_mode[mode] = max(max_items_by_mode.get(mode, 0), ch_max)
 
     # If any mode is focused, enable hardware_unlimited for RSS fetch
     hardware_unlimited = "focused" in all_modes
 
-    # Use the largest max_news_items across channels for the initial Claude call
-    max_items = max(ch.get("max_news_items", 10) for ch in channels)
+    # Use the largest max_news_items across ALL channels for the initial fetch
+    max_items = max(max_items_by_mode.values())
 
     print(f"Fetching news... (manual={manual})")
     print(f"  - Channels to fetch: {[ch.get('name', ch.get('id')) for ch in channels]}")
@@ -190,20 +216,35 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
 
         if ch_mode in mode_results:
             ch_categories = mode_results[ch_mode]
-            print(f"  Reusing {ch_mode} mode result ({sum(len(c.get('news', [])) for c in ch_categories)} items)")
+            original_count = sum(len(c.get('news', [])) for c in ch_categories)
+            print(f"  Reusing {ch_mode} mode result ({original_count} items)")
+            # Truncate to this channel's max_news_items
+            ch_categories = truncate_categories(ch_categories, ch_max)
+            truncated_count = sum(len(c.get('news', [])) for c in ch_categories)
+            if truncated_count < original_count:
+                print(f"  Truncated to {truncated_count} items (max={ch_max})")
         else:
             if not raw_articles:
                 print(f"  No raw articles available, skipping Claude call")
                 ch_categories = []
             else:
-                print(f"  Calling Claude for {ch_mode} mode...")
+                # Use the max_items for this mode (across all channels with this mode)
+                mode_max = max_items_by_mode.get(ch_mode, ch_max)
+                print(f"  Calling Claude for {ch_mode} mode (max={mode_max})...")
                 ch_settings = {**settings, "topic_mode": ch_mode}
                 ch_categories = summarize_news_with_claude(
-                    anthropic_key, raw_articles, ch_max, ch_settings,
+                    anthropic_key, raw_articles, mode_max, ch_settings,
                 )
                 total = sum(len(c.get("news", [])) for c in ch_categories)
                 print(f"  Got {total} items for {ch_mode} mode")
+            # Store full result for other channels to reuse
             mode_results[ch_mode] = ch_categories
+            # Truncate for this specific channel
+            original_count = sum(len(c.get("news", [])) for c in ch_categories)
+            ch_categories = truncate_categories(ch_categories, ch_max)
+            truncated_count = sum(len(c.get("news", [])) for c in ch_categories)
+            if truncated_count < original_count:
+                print(f"  Truncated to {truncated_count} items for this channel (max={ch_max})")
 
         # Build draft data
         ch_draft = {
