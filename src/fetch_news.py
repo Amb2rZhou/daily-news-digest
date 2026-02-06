@@ -626,9 +626,16 @@ URL: {article.get('url', '')}
 
     import time
     claude_start = time.time()
+
+    # Choose model based on topic_mode:
+    # - focused: use Sonnet for complex reasoning and reliable JSON
+    # - broad: use Haiku for speed
+    model = "claude-sonnet-4-20250514" if topic_mode == "focused" else "claude-haiku-4-5-20251001"
+    print(f"  - Using model: {model}")
+
     try:
         response = client.messages.create(
-            model="claude-haiku-4-5-20251001",
+            model=model,
             max_tokens=4096,
             messages=[{"role": "user", "content": prompt}]
         )
