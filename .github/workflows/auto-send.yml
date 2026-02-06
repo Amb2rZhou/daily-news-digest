@@ -23,8 +23,8 @@ jobs:
         id: pre_check
         run: |
           NEEDS_SEND=$(python3 -c "
-          import json
-          from datetime import datetime
+          import json, os
+          from datetime import datetime, timedelta
           from zoneinfo import ZoneInfo
 
           s = json.load(open('config/settings.json'))
@@ -40,21 +40,20 @@ jobs:
               send_hour = ch.get('send_hour', 18)
               send_minute = ch.get('send_minute', 0)
               send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-              if now < send_time:
+              send_deadline = send_time + timedelta(hours=2)
+
+              # Only within [send_time, send_time + 2h]
+              if now < send_time or now > send_deadline:
                   continue
 
-              # Check if draft exists and is sendable
               ch_id = ch.get('id', 'unknown')
-              import os
-              drafts_dir = 'config/drafts'
               if ch.get('type') == 'email':
                   fname = f'{today}.json'
               else:
                   fname = f'{today}_ch_{ch_id}.json'
-              fpath = os.path.join(drafts_dir, fname)
+              fpath = os.path.join('config/drafts', fname)
 
               if not os.path.exists(fpath):
-                  # No fallback - each channel must have its own draft
                   continue
 
               try:

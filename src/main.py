@@ -104,21 +104,29 @@ def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
 
 
 def get_channels_to_send(settings: dict, now: datetime) -> list[dict]:
-    """Return channels where current time >= send_time and draft is sendable."""
+    """Return channels ready for auto-send.
+
+    Conditions:
+    - Within [send_time, send_time + 2h] window
+    - Draft exists with status pending_review or approved
+    - Already sent or rejected drafts are skipped
+    """
+    from datetime import timedelta
+
     result = []
-    tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
     today = now.strftime("%Y-%m-%d")
 
     for ch in get_enabled_channels(settings):
         send_hour = ch.get("send_hour", 18)
         send_minute = ch.get("send_minute", 0)
 
-        # Check if it's send time
         send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-        if now < send_time:
+        send_deadline = send_time + timedelta(hours=2)
+
+        # Only send within [send_time, send_time + 2h]
+        if now < send_time or now > send_deadline:
             continue
 
-        # Check draft status
         ch_id = ch.get("id", "unknown")
         if ch.get("type") == "email":
             draft = load_draft(today)
