@@ -1,10 +1,10 @@
 {
   "date": "2026-02-07",
-  "time_window": "2026-02-06 09:56 ~ 2026-02-07 09:56",
+  "time_window": "2026-02-06 10:09 ~ 2026-02-07 10:09",
   "categories": [],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-07T09:59:04.833622+08:00",
+  "created_at": "2026-02-07T10:15:46.417067+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
