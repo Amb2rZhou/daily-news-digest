@@ -628,11 +628,14 @@ URL: {article.get('url', '')}
     try:
         response = client.messages.create(
             model=model,
-            max_tokens=4096,
+            max_tokens=8192,
             messages=[{"role": "user", "content": prompt}]
         )
         claude_elapsed = time.time() - claude_start
         print(f"  - Claude API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
+
+        if response.stop_reason == "max_tokens":
+            print(f"  - WARNING: Response was truncated (hit max_tokens limit)")
 
         response_text = response.content[0].text
 
