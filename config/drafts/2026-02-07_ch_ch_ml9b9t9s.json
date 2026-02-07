@@ -77,6 +77,17 @@
           "url": "https://www.wareable.com/samsung/samsung-galaxy-watch-9-ultra-2-imei-database-leak-model-numbers"
         }
       ]
+    },
+    {
+      "name": "投融资",
+      "news": [
+        {
+          "title": "Anthropic's More Than $20 Billion Funding to Close as Soon as Next Week",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-07/anthropic-s-more-than-20-billion-funding-to-close-as-soon-as-next-week",
+          "summary": "Anthropic即将完成超过20亿美元的融资轮次，预计下周内交割。这一融资规模创下AI创业公司新高。",
+          "source": "Bloomberg Technology"
+        }
+      ]
     }
   ],
   "source": "manual",
