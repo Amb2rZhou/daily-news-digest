@@ -621,10 +621,8 @@ URL: {article.get('url', '')}
     import time
     claude_start = time.time()
 
-    # Choose model based on topic_mode:
-    # - focused: use Sonnet for complex reasoning and reliable JSON
-    # - broad: use Haiku for speed
-    model = "claude-sonnet-4-20250514" if topic_mode == "focused" else "claude-haiku-4-5-20251001"
+    # Use Haiku for all modes – sufficient quality at ~1/10 the cost
+    model = "claude-haiku-4-5-20251001"
     print(f"  - Using model: {model}")
 
     try:
