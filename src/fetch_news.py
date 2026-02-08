@@ -640,12 +640,31 @@ def _parse_json_response(response_text: str):
             return None
 
 
+def _call_haiku(client, prompt: str, label: str) -> str:
+    """Call Claude Haiku and return response text. Returns None on failure."""
+    import time
+    try:
+        resp = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=8192,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        elapsed = time.time()
+        print(f"  - Haiku ({label}) stop_reason: {resp.stop_reason}")
+        if resp.stop_reason == "max_tokens":
+            print(f"  - WARNING: Response was truncated (hit max_tokens)")
+        return resp.content[0].text
+    except Exception as e:
+        print(f"  - Haiku ({label}) error: {e}")
+        return None
+
+
 def _focused_split_call(client, articles_text: str, max_items: int, paywalled_sources: str, settings: dict) -> list[dict]:
-    """Focused mode: two parallel MiniMax calls for hardware and AI/industry, then merge."""
+    """Focused mode: two parallel Haiku calls for hardware and AI/industry, then merge."""
     import time
     from concurrent.futures import ThreadPoolExecutor
 
-    print(f"  - Focused mode: splitting into 2 parallel calls (MiniMax M2.1)")
+    print(f"  - Focused mode: splitting into 2 parallel Haiku calls")
 
     prompt_hw = get_prompt_for_mode("focused_hardware", articles_text, max_items, "", "", "", None, paywalled_sources)
     prompt_ai = get_prompt_for_mode("focused_ai_industry", articles_text, max_items, "", "", "", None, paywalled_sources)
@@ -653,8 +672,8 @@ def _focused_split_call(client, articles_text: str, max_items: int, paywalled_so
     start = time.time()
 
     with ThreadPoolExecutor(max_workers=2) as executor:
-        future_hw = executor.submit(_call_minimax, prompt_hw, "智能硬件")
-        future_ai = executor.submit(_call_minimax, prompt_ai, "AI+行业")
+        future_hw = executor.submit(_call_haiku, client, prompt_hw, "智能硬件")
+        future_ai = executor.submit(_call_haiku, client, prompt_ai, "AI+行业")
         resp_hw = future_hw.result()
         resp_ai = future_ai.result()
 
