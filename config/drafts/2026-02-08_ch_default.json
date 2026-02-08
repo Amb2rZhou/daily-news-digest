@@ -1,29 +1,22 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 18:45 ~ 2026-02-08 18:45",
+  "time_window": "2026-02-07 18:54 ~ 2026-02-08 18:53",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "硅谷四巨头计划投入6500亿美元AI基础设施建设",
-          "summary": "硅谷科技巨头正在加大对AI基础设施的投资力度，计划投入6500亿美元用于AI芯片和数据中心建设。",
-          "comment": "这种规模的资本投入是否会导致AI硬件供应过剩，还是反映了真实的市场需求？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7871392.html"
+          "title": "Glassbreakers: Champions of Moss & Clay Hunt VR Are Quest's Horizon+ Monthly Games This February",
+          "summary": "Meta Quest平台2月份的Horizon+ Monthly Games包括策略游戏《Glassbreakers: Champions of Moss》和《Clay Hunt VR》，为VR用户提供精选内容。",
+          "comment": "VR游戏内容的策划和推荐机制如何影响用户的设备粘性和生态繁荣？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/glassbreakers-champions-of-moss-clay-hunt-vr-are-quests-horizon-monthly-games-this-february/"
         },
         {
-          "title": "SpaceX开发人工智能卫星和太空数据中心",
-          "summary": "据报道SpaceX正在奥斯汀和西雅图招聘工程师，以开发人工智能卫星和太空数据中心，马斯克确认此消息属实。",
-          "comment": "将AI芯片部署到太空中的卫星上，这会如何改变边缘计算和地球观测的格局？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3674491800937350?f=rss"
-        },
-        {
-          "title": "Khronos Group推进高斯泼溅技术在glTF 3D格式中的标准化集成",
-          "summary": "Khronos Group正推动将高斯泼溅（Gaussian Splatting）技术集成到广泛采用的glTF 3D格式中，并发布了整合的候选版本。",
-          "comment": "高斯泼溅作为AR/VR设备的核心渲染技术标准化，会如何加速空间计算设备的普及？",
+          "title": "Khronos Moves to Integrate Gaussian Splatting Into glTF 3D Format",
+          "summary": "Khronos Group正在推动将高斯溅射技术集成到广泛采用的glTF 3D格式中，以实现该技术的标准化。",
+          "comment": "将新兴的3D渲染技术标准化对AR/VR硬件生态的长期发展有什么意义？",
           "source": "UploadVR",
           "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
         }
@@ -35,30 +28,30 @@
       "news": [
         {
           "title": "ICLR 2026｜UIUC：一行代码彻底解决LLM推理的过度思考",
-          "summary": "UIUC研究团队提出一行代码的解决方案，可以解决大语言模型推理过程中的过度思考问题，提升推理效率。",
-          "comment": "当前LLM推理的性能瓶颈能否通过简洁的代码改进而非复杂的架构设计来解决？",
+          "summary": "UIUC研究团队提出解决LLM推理过度思考问题的方案，仅需一行代码即可实现推理优化。",
+          "comment": "如何在保持推理质量的前提下减少LLM的计算冗余，是否会成为推理效率优化的新方向？",
           "source": "机器之心",
           "url": "https://www.jiqizhixin.com/articles/2026-02-08"
         },
         {
           "title": "Benchmarking GGUF Quantization for LLaMA-3.2-1B: 68% Size Reduction with <0.4pp Accuracy Loss",
-          "summary": "研究表明通过GGUF量化技术，LLaMA-3.2-1B模型可以实现68%的大小压缩，精度损失不到0.4个百分点。",
-          "comment": "模型量化在保持精度的同时实现大幅压缩，这是否预示着端侧AI部署将迎来新的突破机遇？",
-          "source": "Machine Learning (Reddit)",
+          "summary": "研究者对LLaMA-3.2-1B模型进行GGUF量化基准测试，实现68%的模型大小压缩，精度损失不到0.4个百分点。",
+          "comment": "这种高效的模型量化方案是否能加速端侧AI的大规模部署？",
+          "source": "Reddit r/MachineLearning",
           "url": "https://www.reddit.com/r/MachineLearning/comments/1qz1kmq/n_benchmarking_gguf_quantization_for_llama321b_68/"
         },
         {
           "title": "Open-source quota monitor for AI coding APIs",
-          "summary": "开发者构建了开源工具onWatch，可实时监控Anthropic、Synthetic等多个AI API的使用配额和趋势，支持本地SQLite存储和Web仪表板。",
-          "comment": "随着AI API成本的持续增长，使用者对成本管理和预测工具的需求是否会催生新的基础设施产品品类？",
-          "source": "Artificial Intelligence (Reddit)",
+          "summary": "开发者构建了开源工具onWatch，可在单一仪表板追踪Anthropic、Synthetic等多个AI API服务商的配额使用趋势。",
+          "comment": "随着AI开发工具链的完善，开发者在API成本管理和优化方面会面临什么新的挑战？",
+          "source": "Reddit r/artificial",
           "url": "https://www.reddit.com/r/artificial/comments/1qz5aid/opensource_quota_monitor_for_ai_coding_apis/"
         },
         {
           "title": "LLMs as Language Compilers: Lessons from Fortran for the Future of Coding",
-          "summary": "研究探讨了将大语言模型视为编程语言编译器的角度，从Fortran的历史中汲取教训为未来编程的发展提供启示。",
-          "comment": "如果将LLM重新定位为编译器而非聊天工具，是否能更好地解决AI编程工具的可靠性和可预测性问题？",
-          "source": "Machine Learning (Hacker News)",
+          "summary": "研究探讨如何将LLM视为语言编译器，汲取Fortran历史经验来优化未来编程范式。",
+          "comment": "将LLM作为编译器的这种抽象方式，是否能帮助我们重新定义AI编程工具的核心能力？",
+          "source": "Hacker News",
           "url": "https://cyber-omelette.com/posts/the-abstraction-rises.html"
         }
       ]
@@ -68,32 +61,39 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Former Tumblr head Jeff D'Onofrio steps in as acting CEO at the Washington Post",
-          "summary": "前Tumblr CEO杰夫·德奥诺菲里奥在Will Lewis辞职后接任《华盛顿邮报》代理CEO，此前曾担任该报CFO。",
-          "comment": "传统媒体在经历战略调整后频繁更换领导层，这反映的是媒体行业转型的困境还是数字化重塑的必经之路？",
-          "source": "The Verge",
-          "url": "https://www.theverge.com/tech/875433/tumblr-jeff-donofrio-ceo-washington-post-layoffs"
-        },
-        {
-          "title": "Dorsey's Block Cutting Up to 10% of Staff in Efficiency Push",
-          "summary": "Jack Dorsey旗下的支付公司Block在业务重组期间计划裁员最多10%，以提高运营效率。",
-          "comment": "科技公司普遍采取的规模化裁员措施，是反映宏观经济环保压力还是AI自动化带来的结构性失业？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-07/dorsey-s-block-cutting-up-to-10-of-staff-in-efficiency-push"
+          "title": "硅谷狂投万亿美元，黄仁勋火上浇油：现在不烧，更待何时",
+          "summary": "硅谷四大巨头计划投入6500亿美元用于AI基础设施建设，反映出科技产业对AI的巨额投资热潮。",
+          "comment": "这波AI基础设施的万亿美元投资是否预示着新一轮的技术泡沫，还是真正的产业变革机遇？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7871392.html"
         },
         {
           "title": "Tech's AI Push Risks a Bond Market Blowback",
-          "summary": "科技巨头对AI的投资规模超出预期，信用市场投资者担忧此举可能带来债券市场风险。",
-          "comment": "AI投资热潮推高的企业债务水平，如果商业回报未能如期实现，是否会引发金融市场的系统性风险？",
+          "summary": "大科技公司对AI的投资力度超出投资者预期，引发债券市场担忧可能面临信用市场冲击。",
+          "comment": "科技巨头的激进AI投资策略是否会对金融市场稳定性造成长期风险？",
           "source": "Bloomberg Technology",
           "url": "https://www.bloomberg.com/news/articles/2026-02-07/tech-s-ai-push-risks-a-bond-blowback-amzn-googl-msft-orcl"
+        },
+        {
+          "title": "Nvidia CEO Says AI Capital Spending Is Appropriate, Sustainable",
+          "summary": "英伟达CEO为公司及行业的AI资本支出进行辩护，认为当前投资规模是合理且可持续的。",
+          "comment": "作为AI芯片产业链的核心公司，英伟达对投资规模的态度如何影响整个AI产业的融资预期？",
+          "source": "Reddit r/artificial",
+          "url": "https://www.reddit.com/r/artificial/comments/1qyx57y/nvidia_ceo_says_ai_capital_spending_is/"
+        },
+        {
+          "title": "India has changed its startup rules for deep tech",
+          "summary": "印度调整了深度科技创业公司的政策规则，以帮助更多AI等深度科技初创企业获得融资和长期发展。",
+          "comment": "新兴市场对深度科技创业的政策支持，是否会改变全球AI产业的竞争格局？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/07/india-has-changed-its-startup-rules-for-deep-tech/"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-08T18:47:26.836282+08:00",
+  "created_at": "2026-02-08T18:55:28.282024+08:00",
   "channel_id": "default",
   "channel_name": "2人测试群",
   "topic_mode": "focused"
