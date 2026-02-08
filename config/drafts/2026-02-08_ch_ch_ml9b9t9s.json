@@ -1,0 +1,88 @@
+{
+  "date": "2026-02-08",
+  "time_window": "2026-02-07 09:57 ~ 2026-02-08 09:57",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Snap拆分AR眼镜业务成立独立子公司，年内将推出消费级产品",
+          "summary": "Snapchat母公司Snap宣布将AR眼镜业务Specs拆分成全资独立子公司，并确认计划今年推出面向消费者的AR眼镜产品。",
+          "comment": "Snap将AR眼镜业务独立运营，是否预示着AR硬件市场已成熟到足以支撑专业化公司生存？",
+          "source": "93913",
+          "url": "https://www.93913.com/119055.html"
+        },
+        {
+          "title": "乐奇Rokid向冬奥会中国之家捐赠AI智能眼镜",
+          "summary": "国内AR领域领军企业乐奇Rokid向冬奥会·中国之家捐赠了一批自主研发的AI智能眼镜。",
+          "comment": "AI智能眼镜被应用于体育等大型活动，这能否帮助建立消费者对AR设备的信任和认知？",
+          "source": "93913",
+          "url": "https://www.93913.com/119059.html"
+        },
+        {
+          "title": "邯郸赵王城遗址公园启用MR技术，游客可穿越三千年见证古都重生",
+          "summary": "全球首个MR混合现实数字遗址公园在赵王城遗址落地，游客可通过MR技术实现穿越时空体验。",
+          "comment": "MR技术在文化遗产领域的落地应用，是否能开辟空间计算的新的商业场景和用户基数？",
+          "source": "93913",
+          "url": "https://www.93913.com/119057.html"
+        },
+        {
+          "title": "Khronos Group推进高斯泼溅技术标准化，拟整合入glTF 3D格式",
+          "summary": "Khronos Group提出将高斯泼溅技术集成到广泛应用的glTF 3D格式中，推动该技术的行业标准化。",
+          "comment": "将高斯泼溅标准化，是否能加速AR/VR内容的制作效率并降低创作门槛？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
+        },
+        {
+          "title": "VR游戏周报：获奖佳作《光之旅团》登陆PICO等新作上线",
+          "summary": "截至2月5日，PS VR2新增1款、PICO新增5款、Quest新增2款、Steam新增9款VR游戏，VR内容生态持续扩展。",
+          "comment": "VR游戏内容在各平台的稳定增长，是否表明VR游戏市场已走出早期探索期进入成熟阶段？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544699.html"
+        },
+        {
+          "title": "深圳龙岗AI玩具超级品类日启幕，30余家企业携200余款新品展出",
+          "summary": "龙岗AI玩具品类日展会汇集了国内主要AI玩具企业，展示200余款智能玩具新品。",
+          "comment": "AI玩具作为儿童端智能硬件的新方向，其快速增长能否成为家庭AI普及的新入口？",
+          "source": "93913",
+          "url": "https://www.93913.com/119063.html"
+        },
+        {
+          "title": "Valve重新审视Steam Deck相关产品发货和定价计划",
+          "summary": "受全球内存和存储供应短缺影响，Valve表示将重新审视Steam Frame和Steam Machine两款产品的发货计划和定价策略。",
+          "comment": "供应链瓶颈是否会延迟Valve进攻掌机市场的步伐，从而给予竞争对手追赶的机会？",
+          "source": "93913",
+          "url": "https://www.93913.com/119061.html"
+        },
+        {
+          "title": "2026全球人形机器人出货量将破5万台，中国成核心市场",
+          "summary": "预计2026年全球人形机器人出货量突破5万台，年同比增幅超700%，中国市场占据全球超五成份额。",
+          "comment": "人形机器人从实验室走向大规模量产，这是否预示着机器人即将进入各行业实用化阶段？",
+          "source": "93913",
+          "url": "https://www.93913.com/119067.html"
+        },
+        {
+          "title": "Target Darts Omni自动计分系统问世，网络飞镖对战迎新体验",
+          "summary": "Target Darts推出Omni自动计分系统，实现飞镖游戏的智能化计分和网络在线对战。",
+          "comment": "传统运动与智能硬件的结合，能否为竞技游戏领域创造新的交互范式和商业机会？",
+          "source": "WIRED",
+          "url": "https://www.wired.com/story/target-darts-omni-auto-scoring-system-rave/"
+        },
+        {
+          "title": "Hands-on：Kuxiu X55 Turbo无线充电器，让Qi2.2 25W快充更平价",
+          "summary": "Kuxiu推出X55 Turbo充电器，以更低价格提供Qi2.2 25W无线快充能力。",
+          "comment": "快充标准的快速平民化，是否能加速无线充电成为智能设备的主流充电方式？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/07/hands-on-this-charger-makes-fast-qi2-2-25w-wireless-charging-more-affordable-for-your-iphone/"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-08T10:00:42.237376+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
