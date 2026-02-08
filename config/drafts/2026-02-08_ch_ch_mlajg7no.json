@@ -1,24 +1,24 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 10:09 ~ 2026-02-08 10:09",
+  "time_window": "2026-02-07 10:36 ~ 2026-02-08 10:36",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "OpenAI推出GPT-5.3-Codex和Codex应用",
-          "summary": "OpenAI发布新一代代码模型GPT-5.3-Codex及其应用程序，为开发者提供更强大的代码生成和理解能力。",
-          "comment": "当代码生成模型的性能超越大多数开发者时，它会如何改变软件开发的未来职业生态？",
+          "title": "OpenAI推出GPT-5.3-Codex；Anthropic推出法律插件",
+          "summary": "OpenAI发布GPT-5.3-Codex模型，Anthropic推出法律领域专用插件，AI大模型应用范围不断扩展到专业领域。",
+          "comment": "当AI模型开始垂直深入专业领域如法律、编程时，会如何重塑这些行业的从业者结构？",
           "source": "钛媒体",
           "url": "https://www.tmtpost.com/7870592.html"
         },
         {
-          "title": "Humanoid推出KinetIQ框架实现机器人群组编排",
-          "summary": "Humanoid发布KinetIQ AI框架，可在工业和服务应用中协调多个机器人的协同工作。",
-          "comment": "一个统一的机器人编排框架是否会加速工业自动化从单机到群体协作的转变？",
-          "source": "The Robot Report",
-          "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
+          "title": "LocalGPT发布——Rust开发的本地AI助手",
+          "summary": "开发者在Rust中实现LocalGPT，编译成27MB单一二进制文件，支持离线持久化记忆和自主心跳任务。",
+          "comment": "当AI助手可以完全离线运行且编译体积极小，这对数据隐私和边缘计算意味着什么机遇？",
+          "source": "Hacker News",
+          "url": "https://github.com/localgpt-app/localgpt"
         }
       ]
     },
@@ -27,25 +27,32 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Elon Musk将SpaceX与xAI合并，估值达1.25万亿美元",
-          "summary": "Elon Musk宣布SpaceX与xAI完成合并，合并实体估值高达1.25万亿美元，推进其太阳能、机器人、芯片和AI的闭环战略。",
-          "comment": "当一个AI公司与太空公司合并时，这种跨领域整合最终会产生什么样的颠覆性应用？",
-          "source": "CNBC",
-          "url": "https://www.cnbc.com/2026/02/07/elon-musk-wants-to-be-a-trillionaire-how-spacex-xai-tesla-can-get-him-there.html"
+          "title": "Waymo完成160亿美元融资，联手DeepMind打造自动驾驶世界模型",
+          "summary": "Waymo融资160亿美元，与DeepMind合作基于Genie 3开发世界模型，让自动驾驶系统可模拟罕见场景。",
+          "comment": "自动驾驶通过AI世界模型来'脑补'罕见场景，是否能根本解决长尾问题导致的安全隐患？",
+          "source": "钛媒体、机器之心",
+          "url": "https://www.tmtpost.com/7870592.html"
         },
         {
-          "title": "Waymo完成160亿美元融资",
-          "summary": "自动驾驶公司Waymo成功融资160亿美元，为其大规模商业化部署提供充足的资金支持。",
-          "comment": "大额融资涌入自动驾驶领域，这是否预示着无人驾驶距离大规模落地已近在咫尺？",
+          "title": "甲骨文计划年内筹资至高500亿美元加码云业务投资",
+          "summary": "甲骨文宣布计划在年内筹资最高500亿美元，重点用于云计算业务的AI基础设施投资。",
+          "comment": "传统企业软件巨头甲骨文为何急于在AI基础设施上投入如此巨资，反映了什么市场焦虑？",
           "source": "钛媒体",
           "url": "https://www.tmtpost.com/7870592.html"
         },
         {
-          "title": "Anthropic发布法律插件",
-          "summary": "Anthropic推出法律领域专用插件，扩展Claude在法律文件分析和合规工作中的应用能力。",
-          "comment": "当AI开始专业化进入法律等高风险领域时，如何确保其输出的准确性和可追溯性？",
+          "title": "OpenAI为亚马逊定制化AI模型开发",
+          "summary": "OpenAI与亚马逊合作，为其云业务开发定制化的AI模型。",
+          "comment": "科技巨头之间的AI定制化合作会如何改变云计算市场的竞争格局？",
           "source": "钛媒体",
           "url": "https://www.tmtpost.com/7870592.html"
+        },
+        {
+          "title": "马斯克谈AI与能源的未来：货币将成为障碍",
+          "summary": "马斯克表示当太阳能、机器人、芯片、AI闭环完成后，传统货币反而会成为障碍，重要的只是能源输出和产量。",
+          "comment": "当能源和物理产量完全由AI和机器人掌控时，现有的经济体系和货币制度需要如何根本性重构？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3673994187924099?f=rss"
         }
       ]
     },
@@ -54,25 +61,18 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "Waymo与DeepMind合作打造自动驾驶世界模型",
-          "summary": "Waymo与DeepMind基于Genie 3框架开发世界模型，使自动驾驶系统能够预测和处理罕见的驾驶场景。",
-          "comment": "世界模型在自动驾驶中的应用会如何解决长尾问题，是否能真正提升系统的安全性？",
-          "source": "机器之心",
-          "url": "https://www.jiqizhixin.com/articles/2026-02-07-5"
-        },
-        {
-          "title": "Khronos Group将高斯溅射技术整合进glTF 3D格式标准",
-          "summary": "Khronos Group发布提议将高斯溅射技术标准化整合到广泛采用的glTF 3D格式中，推进3D内容创作的标准化。",
-          "comment": "高斯溅射作为NeRF替代方案的标准化，会如何加速AIGC在3D内容生成领域的普及？",
-          "source": "UploadVR",
-          "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
-        },
-        {
-          "title": "通研院提出人形机器人预训练与真机微调新范式",
-          "summary": "通研院在ICLR 2026发表研究，提出人形机器人的真机强化学习预训练与微调新方法，加速机器人学习效率。",
-          "comment": "从模拟到真实的机器人学习转移，这个新范式是否能让人形机器人更快获得实用技能？",
+          "title": "人形机器人真机强化学习新范式——ICLR 2026通研院论文",
+          "summary": "ICLR 2026发表新研究，提出人形机器人预训练与真机微调的新范式，推进强化学习在实体机器人上的应用。",
+          "comment": "从仿真环境到真实机器人的转移学习鸿沟如何弥合，会成为人形机器人大规模落地的关键瓶颈吗？",
           "source": "机器之心",
           "url": "https://www.jiqizhixin.com/articles/2026-02-07-4"
+        },
+        {
+          "title": "Humanoid推出KinetIQ框架——AI编排机器人舰队",
+          "summary": "Humanoid发布KinetIQ框架，用AI技术编排和协调工业及服务机器人舰队。",
+          "comment": "当机器人舰队由中央AI系统统一编排时，如何确保系统故障时的安全降级和局部自主能力？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
         }
       ]
     },
@@ -81,16 +81,16 @@
       "icon": "📊",
       "news": [
         {
-          "title": "2026全球人形机器人出货量预计破5万台，中国占超五成市场",
-          "summary": "据预测，2026年全球人形机器人出货量将超5万台，年同比增长超700%，中国市场销量达2.8万台，占全球50%以上份额。",
-          "comment": "人形机器人产业进入爆发阶段，中国市场的领先地位会如何影响全球AI机器人的技术路线？",
-          "source": "93913元宇宙与AI信息",
+          "title": "2026全球人形机器人出货量破5万台，中国占超五成市场",
+          "summary": "预计2026年全球人形机器人出货量突破5万台，年同比增幅超700%，中国市场销量达2.8万台，行业进入实用化阶段。",
+          "comment": "人形机器人从炫技走向实用，中国市场主导地位是否会改变全球机器人产业的话语权分布？",
+          "source": "93913",
           "url": "https://www.93913.com/119067.html"
         },
         {
-          "title": "中国生成式人工智能用户规模达6.02亿人",
-          "summary": "中国AIGC用户市场规模持续扩大，已达6.02亿人，反映出生成式AI技术的广泛应用和渗透。",
-          "comment": "当超六亿用户接触到AIGC技术时，这会如何改变内容创作、工作流程和教育方式的整体生态？",
+          "title": "中国生成式AI用户规模达6.02亿人",
+          "summary": "中国生成式人工智能用户规模已达6.02亿人，AIGC应用在消费端快速普及。",
+          "comment": "当AIGC用户规模达到如此庞大的程度，监管、伦理、就业等社会问题的矛盾会如何激化？",
           "source": "钛媒体",
           "url": "https://www.tmtpost.com/7870592.html"
         }
@@ -98,8 +98,8 @@
     }
   ],
   "source": "manual",
-  "status": "rejected",
-  "created_at": "2026-02-08T10:26:03.424828+08:00",
+  "status": "pending_review",
+  "created_at": "2026-02-08T10:42:49.937446+08:00",
   "channel_id": "ch_mlajg7no",
   "channel_name": "2人测试群for部门",
   "topic_mode": "broad"

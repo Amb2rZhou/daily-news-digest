@@ -1,87 +1,87 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 10:09 ~ 2026-02-08 10:09",
+  "time_window": "2026-02-07 10:36 ~ 2026-02-08 10:36",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "Snap拆分AR眼镜业务成立独立子公司，年内将推出消费级产品",
-          "summary": "Snapchat母公司Snap宣布将AR眼镜业务Specs拆分成立全资独立子公司，计划2024年推出面向消费者的AR眼镜产品，进行全面商业化布局。",
-          "comment": "独立子公司模式是否能让Snap的AR眼镜更快打入消费市场，挑战Meta Ray-Ban和苹果Vision Pro的地位？",
-          "source": "93913-元宇宙&AI信息与产业服务",
+          "title": "Snap拆分AR眼镜业务成立独立子公司，年内推出消费级产品",
+          "summary": "Snapchat母公司Snap宣布将AR眼镜业务Specs拆分成独立子公司Specs Inc.，并确认计划2026年推出消费级AR眼镜产品，为上市进行全面布局。",
+          "comment": "Snap独立拆分AR眼镜业务是否预示着AR硬件即将迎来消费级爆发的拐点？",
+          "source": "93913",
           "url": "https://www.93913.com/119055.html"
         },
         {
-          "title": "乐奇Rokid向冬奥会中国之家捐赠AI智能眼镜",
-          "summary": "国内AR领军企业乐奇Rokid向冬奥会·中国之家捐赠一批自主研发的AI智能眼镜，展示中国AI硬件产业的国际竞争力。",
-          "comment": "Rokid在国际舞台的露出是否标志着国产AI智能眼镜技术已接近国际水平？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119059.html"
-        },
-        {
-          "title": "Khronos推进高斯喷溅技术与glTF 3D格式标准化集成",
-          "summary": "Khronos Group提出将高斯喷溅（Gaussian Splatting）技术集成入广泛应用的glTF 3D格式的候选版本，推动3D渲染与空间计算的行业标准化。",
-          "comment": "高斯喷溅技术的标准化是否会加速AR/VR设备中实时3D渲染的普及？",
-          "source": "UploadVR",
-          "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
-        },
-        {
-          "title": "《光之旅团》等获奖VR作品登陆PICO，VR游戏生态持续繁荣",
-          "summary": "获奖佳作《光之旅团》等多款新游戏登陆PICO平台，Q平台VR内容突破969款，VR游戏市场保持活力增长。",
-          "comment": "随着优质内容的积累，PICO平台是否有机会成为中国VR游戏生态的主要承载者？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544699.html"
-        },
-        {
-          "title": "全球首创MR技术在邯郸赵王城遗址公园启用",
-          "summary": "邯郸市产业投资集团与武汉华创全息数字科技打造全球首个MR混合现实数字遗址公园，游客可穿越三千年见证古都重生。",
-          "comment": "MR技术在文化遗产领域的创新应用是否为中国空间计算产业开辟了新的商业化方向？",
-          "source": "93913-元宇宙&AI信息与产业服务",
+          "title": "邯郸赵王城遗址公园启用MR技术，全球首创数字遗址公园",
+          "summary": "邯郸赵王城遗址公园落地全球首个MR混合现实数字遗址公园，游客可通过MR技术穿越三千年历史，实现古都文化的创新展示。",
+          "comment": "MR技术在文化遗产保护和展示中的应用，会如何重新定义传统旅游和文化体验的未来？",
+          "source": "93913",
           "url": "https://www.93913.com/119057.html"
         },
         {
-          "title": "2026年全球人形机器人出货量预计破5万台，中国占比超50%",
-          "summary": "2026年全球人形机器人出货量预计突破5万台，年同比增幅超700%，中国市场销量达2.8万台，成为全球最大市场。",
-          "comment": "人形机器人在中国市场的爆发式增长是否预示着机器人产业化已从展示阶段迈入实用化阶段？",
-          "source": "93913-元宇宙&AI信息与产业服务",
+          "title": "乐奇Rokid向冬奥会中国之家捐赠AI智能眼镜",
+          "summary": "国内AR领军企业乐奇Rokid向冬奥会·中国之家捐赠了自主研发的AI智能眼镜，展示AR技术在体育赛事中的创新应用。",
+          "comment": "AI智能眼镜在大型体育赛事中的应用，将如何改变观众的观赛体验和赛事转播的未来形式？",
+          "source": "93913",
+          "url": "https://www.93913.com/119059.html"
+        },
+        {
+          "title": "Valve重新审视Steam Frame和Steam Machine发货及定价计划",
+          "summary": "Valve因全球内存与存储供应短缺，宣布将重新审视Steam Frame和Steam Machine两款产品的发货计划与定价策略。",
+          "comment": "供应链困境对Valve自有硬件产品的影响，会否改变其在掌机游戏市场的竞争策略？",
+          "source": "93913",
+          "url": "https://www.93913.com/119061.html"
+        },
+        {
+          "title": "深圳龙岗AI玩具超级品类日启幕，30余家企业推200余款新品",
+          "summary": "2月7-8日，龙岗AI玩具超级品类日举办，汇集30余家企业推出200余款AI智能玩具新品，展示AI赋能玩具产业的新方向。",
+          "comment": "AI智能玩具的大规模推出，是否预示着儿童智能硬件市场正在迎来一个快速扩张的时代？",
+          "source": "93913",
+          "url": "https://www.93913.com/119063.html"
+        },
+        {
+          "title": "2026全球人形机器人出货量预计突破5万台，中国成核心市场",
+          "summary": "2026年全球人形机器人出货量预计突破5万台，同比增幅超700%，其中中国销量达2.8万台，占全球超五成份额，行业进入实用化阶段。",
+          "comment": "人形机器人在中国市场占有超五成份额，这是否意味着中国正在成为全球机器人技术创新和应用的领导者？",
+          "source": "93913",
           "url": "https://www.93913.com/119067.html"
         },
         {
-          "title": "北美机器人订单2025年增长6.6%，非汽车客户订单领先",
-          "summary": "根据A3报告，2025年北美机器人订单增长6.6%，非汽车客户订单和协作机器人(cobots)增速领先。",
-          "comment": "协作机器人在非汽车行业的扩展是否预示着工业机器人市场向中小企业和服务机器人领域的转变？",
-          "source": "The Robot Report",
-          "url": "https://www.therobotreport.com/north-american-robot-orders-rise-by-6-6-percent-2025/"
+          "title": "M5 MacBook Air将是规格升级，但散热改进值得期待",
+          "summary": "苹果M5 MacBook Air计划进行规格升级，预计重点改进产品散热能力，这与苹果最近在iPad Pro和iPhone 17 Pro上的优化趋势一致。",
+          "comment": "散热能力成为苹果Silicon高性能设备的核心竞争点，这会如何影响无风扇设计的笔记本电脑的续航和性能表现？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/07/m5-macbook-air-one-feature-request-better-thermals/"
         },
         {
-          "title": "Intel Panther Lake手持设备芯片推迟至Q2 2026发布",
-          "summary": "Intel针对手持游戏的Panther Lake芯片（Core G3系列）推迟至Q2 2026发布，配备新的Arc B360和B380集成显卡。",
-          "comment": "Intel手持芯片的推迟是否反映出该公司在与AMD手持市场竞争中面临的技术难题？",
-          "source": "Latest from Tom's Hardware",
-          "url": "https://www.tomshardware.com/video-games/handheld-gaming/intel-panther-lake-handheld-chips-reportedly-delayed-until-q2-2026-alleged-core-g3-series-might-launch-alongside-new-arc-b360-and-arc-b380-igpus"
-        },
-        {
-          "title": "Humanoid推出KinetIQ框架，支持机器人群体编排",
-          "summary": "Humanoid推出KinetIQ AI框架，用于在工业和服务应用中编排和管理多个机器人协同工作。",
-          "comment": "机器人群体编排框架的出现是否意味着工业自动化正步入多机协同的新时代？",
-          "source": "The Robot Report",
-          "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
-        },
-        {
-          "title": "iPhone 18 Pro传闻摄像头升级，苹果继续优化影像能力",
-          "summary": "iPhone 18 Pro预计将在摄像头方面推出重大升级，延续苹果在影像技术上的持续投入和创新。",
-          "comment": "摄像头作为AI智能手机的核心传感器，升级是否预示着苹果在设备端AI能力的进一步增强？",
+          "title": "iPhone 18 Pro相机升级曝光，秋季发布会将重点展示",
+          "summary": "iPhone 18 Pro预计今年秋季推出，有望搭载多项相机升级方案，虽不如iPhone Fold激进但仍是重点创新方向。",
+          "comment": "在可折叠屏手机兴起的时代，传统旗舰机仍坚持相机升级作为核心卖点，这个策略还能维持多久的竞争力？",
           "source": "9to5Mac",
           "url": "https://9to5mac.com/2026/02/07/iphone-18-pro-rumored-camera-upgrades/"
+        },
+        {
+          "title": "Telegram Android重设计全面采用Liquid Glass设计语言",
+          "summary": "Telegram在Android平台推出大版本更新，UI全面采用Liquid Glass设计元素，呈现重大的视觉设计升级。",
+          "comment": "Liquid Glass设计语言的大规模应用，是否预示着现代应用UI设计向更流动、更玻璃化方向演进的趋势？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/07/telegram-for-android-redesign-goes-all-in-on-liquid-glass-rolling-out-now/"
+        },
+        {
+          "title": "WatchFit应用让Apple Watch支持自定义运动方案",
+          "summary": "WatchFit独立应用允许用户为Apple Watch创建和自定义运动训练方案，扩展了手表的健身功能灵活性。",
+          "comment": "第三方应用如何通过扩展Apple Watch的运动功能，来填补苹果官方应用的功能空缺和个性化需求？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/07/indie-app-spotlight-watchfit-lets-you-make-custom-workouts-for-your-apple-watch/"
         }
       ]
     }
   ],
   "source": "manual",
-  "status": "rejected",
-  "created_at": "2026-02-08T10:25:43.163533+08:00",
+  "status": "pending_review",
+  "created_at": "2026-02-08T10:42:28.771374+08:00",
   "channel_id": "default",
   "channel_name": "2人测试群",
   "topic_mode": "focused"
