@@ -27,9 +27,32 @@ from send_webhook import send_webhook
 # Helper: truncate categories to max_items
 # ---------------------------------------------------------------------------
 
-def truncate_categories(categories: list[dict], max_items: int) -> list[dict]:
-    """Truncate news in categories to max_items total, preserving category structure."""
+def truncate_categories(categories: list[dict], max_items: int, balanced: bool = False) -> list[dict]:
+    """Truncate news in categories to max_items total, preserving category structure.
+
+    If balanced=True (focused mode), non-first categories keep all their items,
+    and the first category (hardware) fills the remaining slots.
+    This ensures all categories have content.
+    """
     import copy
+    total = sum(len(c.get("news", [])) for c in categories)
+    if total <= max_items:
+        return copy.deepcopy(categories)
+
+    if balanced and len(categories) > 1:
+        # Keep all items from non-first categories, cap the first category
+        non_first_count = sum(len(c.get("news", [])) for c in categories[1:])
+        first_max = max(1, max_items - non_first_count)
+        result = []
+        for i, cat in enumerate(categories):
+            new_cat = copy.deepcopy(cat)
+            if i == 0:
+                new_cat["news"] = new_cat.get("news", [])[:first_max]
+            if new_cat.get("news"):
+                result.append(new_cat)
+        return result
+
+    # Default: sequential truncation
     result = []
     count = 0
     for cat in categories:
@@ -246,7 +269,7 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
             original_count = sum(len(c.get('news', [])) for c in ch_categories)
             print(f"  Reusing {ch_mode} mode result ({original_count} items)")
             # Truncate to this channel's max_news_items
-            ch_categories = truncate_categories(ch_categories, ch_max)
+            ch_categories = truncate_categories(ch_categories, ch_max, balanced=(ch_mode == "focused"))
             truncated_count = sum(len(c.get('news', [])) for c in ch_categories)
             if truncated_count < original_count:
                 print(f"  Truncated to {truncated_count} items (max={ch_max})")
@@ -268,7 +291,7 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
             mode_results[ch_mode] = ch_categories
             # Truncate for this specific channel
             original_count = sum(len(c.get("news", [])) for c in ch_categories)
-            ch_categories = truncate_categories(ch_categories, ch_max)
+            ch_categories = truncate_categories(ch_categories, ch_max, balanced=(ch_mode == "focused"))
             truncated_count = sum(len(c.get("news", [])) for c in ch_categories)
             if truncated_count < original_count:
                 print(f"  Truncated to {truncated_count} items for this channel (max={ch_max})")
