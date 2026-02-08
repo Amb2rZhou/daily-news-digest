@@ -631,23 +631,53 @@ URL: {article.get('url', '')}
     import time
     claude_start = time.time()
 
-    # Use Haiku for all modes – sufficient quality at ~1/10 the cost
-    model = "claude-haiku-4-5-20251001"
-    print(f"  - Using model: {model}")
+    # Focused mode uses MiniMax M2.1 for better instruction-following; Haiku for broad mode
+    use_minimax = topic_mode == "focused" and os.environ.get("MINIMAX_API_KEY")
+    response_text = None
+
+    if use_minimax:
+        from openai import OpenAI as OpenAIClient
+        minimax_client = OpenAIClient(
+            api_key=os.environ["MINIMAX_API_KEY"],
+            base_url="https://api.minimax.io/v1",
+        )
+        minimax_model = "MiniMax-M2.1"
+        print(f"  - Using model: {minimax_model} (MiniMax)")
+
+        try:
+            mm_response = minimax_client.chat.completions.create(
+                model=minimax_model,
+                max_tokens=8192,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            claude_elapsed = time.time() - claude_start
+            print(f"  - MiniMax API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
+            response_text = mm_response.choices[0].message.content
+            # Strip <think> tags if present
+            import re as _re
+            response_text = _re.sub(r'<think>[\s\S]*?</think>', '', response_text).strip()
+        except Exception as e:
+            print(f"  - MiniMax API error: {e}, falling back to Claude Haiku")
+            response_text = None
+
+    if response_text is None:
+        model = "claude-haiku-4-5-20251001"
+        print(f"  - Using model: {model}")
 
     try:
-        response = client.messages.create(
-            model=model,
-            max_tokens=8192,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        claude_elapsed = time.time() - claude_start
-        print(f"  - Claude API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
+        if response_text is None:
+            response = client.messages.create(
+                model=model,
+                max_tokens=8192,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            claude_elapsed = time.time() - claude_start
+            print(f"  - Claude API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
 
-        if response.stop_reason == "max_tokens":
-            print(f"  - WARNING: Response was truncated (hit max_tokens limit)")
+            if response.stop_reason == "max_tokens":
+                print(f"  - WARNING: Response was truncated (hit max_tokens limit)")
 
-        response_text = response.content[0].text
+            response_text = response.content[0].text
 
         # Extract JSON from response
         start_idx = response_text.find('{')
