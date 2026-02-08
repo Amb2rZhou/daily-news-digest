@@ -1,10 +1,87 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 11:09 ~ 2026-02-08 11:09",
-  "categories": [],
+  "time_window": "2026-02-07 11:29 ~ 2026-02-08 11:29",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "2026全球人形机器人出货量将破5万台 中国成核心市场行业告别炫技迈入实用化阶段",
+          "summary": "2026年全球人形机器人出货量预计突破5万台，年同比增幅超700%，其中中国市场销量将达2.8万台，占据全球超五成市场份额。",
+          "comment": "人形机器人从概念走向量产应用，中国市场主导是否会改变全球机器人产业格局？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119067.html"
+        },
+        {
+          "title": "专家：AI将推动机器人技术应用\"螺旋式上升\"",
+          "summary": "北京航空航天大学教授王田苗表示，AI大模型、软体技术、电子感官将赋予机器人理解力、安全性与感知力，推动机器人在工业、商业、家庭及危险环保中的应用。",
+          "comment": "AI与机器人的结合能否真正突破当前工业自动化的瓶颈？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3674090750272133?f=rss"
+        },
+        {
+          "title": "Snap拆分AR眼镜业务成立独立子公司 年内将推出消费级产品",
+          "summary": "Snap将旗下AR眼镜业务Specs拆分并成立全资独立子公司Specs Inc.，计划2024年推出面向消费者的AR眼镜产品。",
+          "comment": "AR眼镜独立化运营是否标志着消费级空间计算设备即将迎来爆发期？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119055.html"
+        },
+        {
+          "title": "科技赋能体育，乐奇Rokid向冬奥会中国之家捐赠AI智能眼镜",
+          "summary": "国内AR领军企业乐奇Rokid向冬奥会中国之家捐赠了一批自主研发的AI智能眼镜，用于体育赛事应用。",
+          "comment": "AI智能眼镜在体育场景中的应用能否成为大众认知的转折点？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119059.html"
+        },
+        {
+          "title": "Valve因全球内存存储短缺，重新审视Steam Frame与Steam Machine发货及定价计划",
+          "summary": "Valve受全球内存与存储供应短缺影响，将重新审视Steam Frame和Steam Machine两款硬件产品的发货计划及定价策略。",
+          "comment": "供应链危机如何影响游戏硬件厂商的产品发布节奏和市场策略？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119061.html"
+        },
+        {
+          "title": "全球首创！邯郸赵王城遗址公园启用MR技术，游客可穿越三千年见证古都重生",
+          "summary": "由邯郸市产业投资集团与武汉华创全息数字科技打造的全球首个MR混合现实数字遗址公园落地赵王城遗址，游客可通过MR设备穿越时光。",
+          "comment": "MR技术在文化遗产保护和体验中的应用是否将成为文旅产业的新风口？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119057.html"
+        },
+        {
+          "title": "深圳龙岗AI玩具超级品类日启幕 30余家企业携200余款新品打造智能玩乐盛宴",
+          "summary": "2026龙岗AI玩具超级品类日在深圳市龙岗区举办，30余家企业展示200余款AI智能玩具新品，展示AI硬件在消费级市场的应用。",
+          "comment": "AI玩具成为消费级智能硬件的新突破口，这是否预示着家庭场景AI硬件的爆发？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119063.html"
+        },
+        {
+          "title": "两部门联合发文：支持演出场所探索VR、AI，打造沉浸式演艺新空间",
+          "summary": "文化和旅游部与国家消防救援局联合发布通知，支持演出场所探索VR、AI等技术，打造沉浸式演艺体验新空间。",
+          "comment": "政策层面对VR/AI演艺应用的支持是否将推动硬件在文娱场景的规模化部署？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119072.html"
+        },
+        {
+          "title": "KinetIQ framework from Humanoid orchestrates robot fleets",
+          "summary": "Humanoid推出KinetIQ AI框架，用于协调机器人集群在工业和服务应用中的部署和运作。",
+          "comment": "机器人群体协调框架的成熟是否标志着工业机器人从单体向集群化演进？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
+        },
+        {
+          "title": "North American robot orders rise by 6.6% in 2025, reports A3",
+          "summary": "2025年北美机器人订单增长6.6%，非汽车行业客户订单领先，协作机器人获得更多关注。",
+          "comment": "机器人订单的持续增长如何反映AI和自动化技术在实际应用中的进展？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/north-american-robot-orders-rise-by-6-6-percent-2025/"
+        }
+      ]
+    }
+  ],
   "source": "manual",
-  "status": "rejected",
-  "created_at": "2026-02-08T11:11:52.042932+08:00",
+  "status": "pending_review",
+  "created_at": "2026-02-08T11:32:11.109936+08:00",
   "channel_id": "default",
   "channel_name": "2人测试群",
   "topic_mode": "focused"
