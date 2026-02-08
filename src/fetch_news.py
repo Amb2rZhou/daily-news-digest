@@ -436,62 +436,91 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
             print(f"  Warning: Custom prompt has invalid variable {e}, falling back to mode-based prompt")
 
     if mode == "focused":
-        # 聚焦模式：3 个主题分类，智能硬件最高优先级
-        return f"""以下是最近24小时内从多个来源抓取的新闻列表。请帮我筛选和整理。
+        # 聚焦模式：拆成两个独立 prompt，分别调用后合并
+        # 返回 None，由 summarize_news_with_claude 处理拆分调用
+        return None
 
-⚠️⚠️⚠️ **最重要的规则（违反即为失败）**：
-输出必须包含以下全部 3 个分类，每个分类至少 1 条新闻。如果某个分类为空，你的输出是无效的。
-- 🥽 智能硬件（可以最多）
-- 🤖 AI技术与产品（至少 2 条）
-- 🏢 巨头动向与行业观察（至少 1 条）
+    if mode == "focused_hardware":
+        return f"""以下是最近24小时内从多个来源抓取的新闻列表。请从中筛选出所有与**智能硬件**相关的新闻。
 
-**分类规则**（严格按以下 3 个分类组织新闻）：
-
-1. **🥽 智能硬件**【最高优先级】
-   - AR/VR/MR/XR 设备、智能眼镜（Meta Ray-Ban、Apple Vision Pro、XREAL、Rokid 等）
-   - 智能穿戴设备（智能手表、智能戒指、耳机等）
-   - 空间计算、头显设备、脑机接口
-   - 机器人（人形机器人、服务机器人、工业机器人）
-   - AI 硬件（AI PC、AI 手机、AI 芯片等）
-   - ⚠️ 这是我最关注的领域，请优先筛选，尽可能多收录
-
-2. **🤖 AI技术与产品**
-   - 模型能力提升：推理能力、多模态、长上下文、Agent 能力等
-   - 新产品形态：AI Agent、AI 编程工具、AI 创作工具、AI 应用
-   - 新范式：端侧 AI、开源模型、AI 基础设施、训练/推理优化
-
-3. **🏢 巨头动向与行业观察**
-   - 大公司战略布局、重要人事变动、并购收购
-   - 行业趋势分析、政策法规影响
-   - 重大投融资事件
+**智能硬件的范围**：
+- AR/VR/MR/XR 设备、智能眼镜（Meta Ray-Ban、Apple Vision Pro、XREAL、Rokid 等）
+- 智能穿戴设备（智能手表、智能戒指、耳机等）
+- 空间计算、头显设备、脑机接口
+- 机器人（人形机器人、服务机器人、工业机器人）
+- AI 硬件（AI PC、AI 手机、AI 芯片等）
 
 **筛选要求**：
-- 严格按上述 3 个分类筛选，不相关的新闻直接排除
-- 智能硬件相关新闻优先收录，即使看起来不那么重大也要保留
+- 尽可能多收录，只要与智能硬件相关都保留
 - 去重：相同事件只保留最权威来源
-- 每个分类内按重要性排序
+- 按重要性排序
+- 排除纯软件、纯互联网服务、与硬件无关的新闻
 
-**来源权威性优先**（重要）：
-权威来源列表：IEEE Spectrum, The Verge, TechCrunch, Wired, Ars Technica, Tom's Hardware, AnandTech, EE Times, The Robot Report, 9to5Mac, 9to5Google, Reuters, BBC, Bloomberg, CNBC, 机器之心, 36氪, 量子位
-- 如果某条新闻来自小众来源（如 UploadVR, Road to VR, VRFocus, AR Post, MIXED, 6DOF Reviews, XR Today, 93913, VR陀螺, 青亭网, 87870 等），请检查新闻列表中是否有权威来源报道了**完全相同的事件**
-- 只有当你**确定**两篇文章报道的是同一事件时，才使用权威来源的 URL
-- ⚠️ 关键：如果使用了某个来源的 URL，摘要必须准确反映该 URL 文章的内容，不能出现摘要和链接内容不符的情况
-- 如果不确定是否是同一事件，或者权威来源的报道角度明显不同，保留原来源
+**来源权威性优先**：
+- 如果某条新闻来自小众来源（如 UploadVR, 93913, VR陀螺 等），检查是否有权威来源（The Verge, TechCrunch, Wired 等）报道了完全相同的事件
+- 只有确定是同一事件时，才替换为权威来源 URL
+- ⚠️ 使用某个来源的 URL 时，摘要必须准确反映该 URL 文章的内容
 
 **付费墙处理**：
-以下来源是付费墙媒体：{paywalled_sources}
-- 如果某条重要新闻来自付费墙源，请在新闻列表中寻找覆盖相同事件的免费源
-- 找到后，使用免费源的 URL，但可以综合两个来源的信息写摘要
-- 如果找不到免费替代，可以保留付费源但在 source 字段标注「(付费墙)」
+付费墙媒体：{paywalled_sources}
+- 如有免费替代源报道相同事件，使用免费源 URL
 
 **输出要求**：
 - 为每条新闻写一个简短的中文摘要（1-2句话）
-- **重要**：为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾），引导读者深入思考这条新闻的意义、影响或未来可能性
-- 智能硬件分类：尽可能多收录，不设上限
-- AI技术与产品：至少 2 条
-- 巨头动向与行业观察：至少 1 条
-- 以上两个分类合计最多 {max_items} 条
-- ⚠️ 再次强调：3 个分类都必须有内容。只有智能硬件的输出是不合格的。
+- 为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾）
+
+新闻列表：
+{articles_text}
+
+请以 JSON 格式返回，结构如下：
+{{
+  "news": [
+    {{
+      "title": "新闻标题",
+      "summary": "1-2句中文摘要",
+      "comment": "一个启发思考的问题？",
+      "source": "来源",
+      "url": "链接"
+    }}
+  ]
+}}
+
+注意：
+- 只返回合法的 JSON，不要其他文字
+- 确保所有字符串中的双引号用单引号替换"""
+
+    if mode == "focused_ai_industry":
+        return f"""以下是最近24小时内从多个来源抓取的新闻列表。请从中筛选出与以下两个分类相关的新闻。
+
+**分类 1：🤖 AI技术与产品**
+- 模型能力提升：推理能力、多模态、长上下文、Agent 能力等
+- 新产品形态：AI Agent、AI 编程工具、AI 创作工具、AI 应用
+- 新范式：端侧 AI、开源模型、AI 基础设施、训练/推理优化
+
+**分类 2：🏢 巨头动向与行业观察**
+- 大公司战略布局、重要人事变动、并购收购
+- 行业趋势分析、政策法规影响
+- 重大投融资事件
+
+**筛选要求**：
+- 排除所有智能硬件相关新闻（AR/VR 设备、智能穿戴、机器人、AI 硬件等）
+- AI技术与产品：至少选 2 条
+- 巨头动向与行业观察：至少选 1 条
+- 两个分类合计最多 {max_items} 条
+- 去重：相同事件只保留最权威来源
+- 按重要性排序
+
+**来源权威性优先**：
+- 优先选择权威来源（The Verge, TechCrunch, Reuters, Bloomberg, 机器之心, 36氪 等）
+- ⚠️ 使用某个来源的 URL 时，摘要必须准确反映该 URL 文章的内容
+
+**付费墙处理**：
+付费墙媒体：{paywalled_sources}
+- 如有免费替代源报道相同事件，使用免费源 URL
+
+**输出要求**：
+- 为每条新闻写一个简短的中文摘要（1-2句话）
+- 为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾）
 
 新闻列表：
 {articles_text}
@@ -499,11 +528,6 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 请以 JSON 格式返回，结构如下：
 {{
   "categories": [
-    {{
-      "name": "智能硬件",
-      "icon": "🥽",
-      "news": [...]
-    }},
     {{
       "name": "AI技术与产品",
       "icon": "🤖",
@@ -527,11 +551,9 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 }}
 
 注意：
-- 分类顺序必须是：智能硬件 → AI技术与产品 → 巨头动向与行业观察
-- 必须返回全部 3 个分类，每个都有内容
+- 两个分类都必须有内容
 - 只返回合法的 JSON，不要其他文字
-- 确保所有字符串中的双引号用单引号替换
-- comment 必须是问句（以？结尾），例如：「这是否意味着 AR 眼镜将取代手机成为下一个计算平台？」"""
+- 确保所有字符串中的双引号用单引号替换"""
 
     else:
         # 泛 AI 模式（默认）
@@ -566,6 +588,103 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 每条 news 必须包含 comment 字段（启发思考的问句，以？结尾）
 - 只返回合法的 JSON，不要其他文字
 - 确保所有字符串中的双引号用单引号替换"""
+
+
+def _call_minimax(prompt: str, label: str) -> str:
+    """Call MiniMax M2.1 API and return response text. Returns None on failure."""
+    import time
+    import re
+    from openai import OpenAI as OpenAIClient
+
+    api_key = os.environ.get("MINIMAX_API_KEY")
+    if not api_key:
+        return None
+
+    client = OpenAIClient(api_key=api_key, base_url="https://api.minimax.io/v1")
+    start = time.time()
+    try:
+        resp = client.chat.completions.create(
+            model="MiniMax-M2.1",
+            max_tokens=8192,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        elapsed = time.time() - start
+        print(f"  - MiniMax ({label}) 耗时: {elapsed:.1f}s")
+        text = resp.choices[0].message.content
+        # Strip <think> tags if present
+        text = re.sub(r'<think>[\s\S]*?</think>', '', text).strip()
+        return text
+    except Exception as e:
+        print(f"  - MiniMax ({label}) error: {e}")
+        return None
+
+
+def _parse_json_response(response_text: str):
+    """Extract and parse JSON from model response text. Returns parsed dict or None."""
+    start_idx = response_text.find('{')
+    end_idx = response_text.rfind('}') + 1
+    if start_idx == -1 or end_idx <= start_idx:
+        return None
+    json_str = response_text[start_idx:end_idx]
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError:
+        import re
+        json_str = re.sub(r'[\x00-\x1f\x7f]', ' ', json_str)
+        json_str = re.sub(r',\s*}', '}', json_str)
+        json_str = re.sub(r',\s*]', ']', json_str)
+        try:
+            return json.loads(json_str)
+        except json.JSONDecodeError as e:
+            print(f"  - JSON parse error: {e}")
+            return None
+
+
+def _focused_split_call(client, articles_text: str, max_items: int, paywalled_sources: str, settings: dict) -> list[dict]:
+    """Focused mode: two parallel MiniMax calls for hardware and AI/industry, then merge."""
+    import time
+    from concurrent.futures import ThreadPoolExecutor
+
+    print(f"  - Focused mode: splitting into 2 parallel calls (MiniMax M2.1)")
+
+    prompt_hw = get_prompt_for_mode("focused_hardware", articles_text, max_items, "", "", "", None, paywalled_sources)
+    prompt_ai = get_prompt_for_mode("focused_ai_industry", articles_text, max_items, "", "", "", None, paywalled_sources)
+
+    start = time.time()
+
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        future_hw = executor.submit(_call_minimax, prompt_hw, "智能硬件")
+        future_ai = executor.submit(_call_minimax, prompt_ai, "AI+行业")
+        resp_hw = future_hw.result()
+        resp_ai = future_ai.result()
+
+    elapsed = time.time() - start
+    print(f"  - Focused split total 耗时: {elapsed:.1f}s")
+
+    categories = []
+
+    # Parse hardware result
+    if resp_hw:
+        parsed = _parse_json_response(resp_hw)
+        if parsed:
+            hw_news = parsed.get("news", [])
+            if hw_news:
+                categories.append({"name": "智能硬件", "icon": "🥽", "news": hw_news})
+                print(f"  - 🥽 智能硬件: {len(hw_news)} 条")
+
+    # Parse AI/industry result
+    if resp_ai:
+        parsed = _parse_json_response(resp_ai)
+        if parsed:
+            for cat in parsed.get("categories", []):
+                if cat.get("news"):
+                    categories.append(cat)
+                    print(f"  - {cat.get('icon', '')} {cat.get('name', '')}: {len(cat['news'])} 条")
+
+    if not categories:
+        print(f"  - WARNING: Both calls failed, returning empty")
+
+    return categories
 
 
 def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_items: int = 10, settings: dict = None) -> list[dict]:
@@ -631,53 +750,26 @@ URL: {article.get('url', '')}
     import time
     claude_start = time.time()
 
-    # Focused mode uses MiniMax M2.1 for better instruction-following; Haiku for broad mode
-    use_minimax = topic_mode == "focused" and os.environ.get("MINIMAX_API_KEY")
-    response_text = None
+    # Focused mode: split into 2 parallel calls (hardware + AI/industry)
+    if prompt is None and topic_mode == "focused":
+        return _focused_split_call(client, articles_text, max_items, paywalled_sources, settings)
 
-    if use_minimax:
-        from openai import OpenAI as OpenAIClient
-        minimax_client = OpenAIClient(
-            api_key=os.environ["MINIMAX_API_KEY"],
-            base_url="https://api.minimax.io/v1",
-        )
-        minimax_model = "MiniMax-M2.1"
-        print(f"  - Using model: {minimax_model} (MiniMax)")
-
-        try:
-            mm_response = minimax_client.chat.completions.create(
-                model=minimax_model,
-                max_tokens=8192,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            claude_elapsed = time.time() - claude_start
-            print(f"  - MiniMax API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
-            response_text = mm_response.choices[0].message.content
-            # Strip <think> tags if present
-            import re as _re
-            response_text = _re.sub(r'<think>[\s\S]*?</think>', '', response_text).strip()
-        except Exception as e:
-            print(f"  - MiniMax API error: {e}, falling back to Claude Haiku")
-            response_text = None
-
-    if response_text is None:
-        model = "claude-haiku-4-5-20251001"
-        print(f"  - Using model: {model}")
+    model = "claude-haiku-4-5-20251001"
+    print(f"  - Using model: {model}")
 
     try:
-        if response_text is None:
-            response = client.messages.create(
-                model=model,
-                max_tokens=8192,
-                messages=[{"role": "user", "content": prompt}]
-            )
-            claude_elapsed = time.time() - claude_start
-            print(f"  - Claude API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
+        response = client.messages.create(
+            model=model,
+            max_tokens=8192,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        claude_elapsed = time.time() - claude_start
+        print(f"  - Claude API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
 
-            if response.stop_reason == "max_tokens":
-                print(f"  - WARNING: Response was truncated (hit max_tokens limit)")
+        if response.stop_reason == "max_tokens":
+            print(f"  - WARNING: Response was truncated (hit max_tokens limit)")
 
-            response_text = response.content[0].text
+        response_text = response.content[0].text
 
         # Extract JSON from response
         start_idx = response_text.find('{')
