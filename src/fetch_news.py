@@ -660,22 +660,19 @@ def _call_haiku(client, prompt: str, label: str) -> str:
 
 
 def _focused_split_call(client, articles_text: str, max_items: int, paywalled_sources: str, settings: dict) -> list[dict]:
-    """Focused mode: two parallel Haiku calls for hardware and AI/industry, then merge."""
+    """Focused mode: two sequential Haiku calls for hardware and AI/industry, then merge."""
     import time
-    from concurrent.futures import ThreadPoolExecutor
 
-    print(f"  - Focused mode: splitting into 2 parallel Haiku calls")
+    print(f"  - Focused mode: 2 Haiku calls (hardware + AI/industry)")
 
     prompt_hw = get_prompt_for_mode("focused_hardware", articles_text, max_items, "", "", "", None, paywalled_sources)
     prompt_ai = get_prompt_for_mode("focused_ai_industry", articles_text, max_items, "", "", "", None, paywalled_sources)
 
     start = time.time()
 
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        future_hw = executor.submit(_call_haiku, client, prompt_hw, "智能硬件")
-        future_ai = executor.submit(_call_haiku, client, prompt_ai, "AI+行业")
-        resp_hw = future_hw.result()
-        resp_ai = future_ai.result()
+    # Sequential calls to avoid thread-safety issues with Anthropic client
+    resp_hw = _call_haiku(client, prompt_hw, "智能硬件")
+    resp_ai = _call_haiku(client, prompt_ai, "AI+行业")
 
     elapsed = time.time() - start
     print(f"  - Focused split total 耗时: {elapsed:.1f}s")
@@ -690,6 +687,12 @@ def _focused_split_call(client, articles_text: str, max_items: int, paywalled_so
             if hw_news:
                 categories.append({"name": "智能硬件", "icon": "🥽", "news": hw_news})
                 print(f"  - 🥽 智能硬件: {len(hw_news)} 条")
+            else:
+                print(f"  - 🥽 智能硬件: parsed OK but no 'news' key. Keys: {list(parsed.keys())}")
+        else:
+            print(f"  - 🥽 智能硬件: JSON parse failed. Response preview: {resp_hw[:200]}")
+    else:
+        print(f"  - 🥽 智能硬件: API call returned None")
 
     # Collect URLs from hardware for dedup
     seen_urls = set()
@@ -703,15 +706,28 @@ def _focused_split_call(client, articles_text: str, max_items: int, paywalled_so
     if resp_ai:
         parsed = _parse_json_response(resp_ai)
         if parsed:
-            for cat in parsed.get("categories", []):
-                deduped_news = [n for n in cat.get("news", []) if n.get("url", "") not in seen_urls]
+            ai_cats = parsed.get("categories", [])
+            print(f"  - AI+行业: parsed OK, {len(ai_cats)} categories. Keys: {list(parsed.keys())}")
+            for cat in ai_cats:
+                cat_name = cat.get("name", "?")
+                cat_news = cat.get("news", [])
+                deduped_news = [n for n in cat_news if n.get("url", "") not in seen_urls]
+                removed = len(cat_news) - len(deduped_news)
                 if deduped_news:
-                    cat["news"] = deduped_news
-                    categories.append(cat)
-                    print(f"  - {cat.get('icon', '')} {cat.get('name', '')}: {len(deduped_news)} 条")
-                    removed = len(cat.get("news", [])) - len(deduped_news)
+                    categories.append({"name": cat_name, "icon": cat.get("icon", ""), "news": deduped_news})
+                    msg = f"  - {cat.get('icon', '')} {cat_name}: {len(deduped_news)} 条"
                     if removed > 0:
-                        print(f"    (去重移除 {removed} 条与智能硬件重复的新闻)")
+                        msg += f" (去重移除 {removed} 条)"
+                    print(msg)
+                else:
+                    print(f"  - {cat.get('icon', '')} {cat_name}: 0 条 (all {len(cat_news)} deduped)")
+        else:
+            print(f"  - AI+行业: JSON parse failed. Response preview: {resp_ai[:300]}")
+    else:
+        print(f"  - AI+行业: API call returned None")
+
+    total = sum(len(c.get("news", [])) for c in categories)
+    print(f"  - Focused total: {total} items in {len(categories)} categories")
 
     if not categories:
         print(f"  - WARNING: Both calls failed, returning empty")
