@@ -1,87 +1,99 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 12:02 ~ 2026-02-08 12:02",
+  "time_window": "2026-02-07 18:40 ~ 2026-02-08 18:40",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "2026全球人形机器人出货量将破5万台 中国成核心市场",
-          "summary": "2026年全球人形机器人出货量预计突破5万台，年同比增幅超700%，其中中国市场销量将达2.8万台，占据全球超五成市场份额，行业告别炫技迈入实用化阶段。",
-          "comment": "当人形机器人进入大规模商业化阶段，如何确保其在工业应用中的安全性和伦理规范？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119067.html"
+          "title": "M5 MacBook Air will just be a spec bump, but there's one upgrade I really want to see",
+          "summary": "苹果M5 MacBook Air将主要是性能提升，但改进散热系统成为用户期待的关键升级点。",
+          "comment": "在轻薄本性能已足够强劲的今天，散热设计是否应该成为硬件评价的首要指标？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/07/m5-macbook-air-one-feature-request-better-thermals/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "ICLR 2026｜UIUC：一行代码彻底解决LLM推理的过度思考",
+          "summary": "UIUC研究团队提出仅需一行代码就能解决大语言模型推理过程中的过度思考问题，有望显著优化LLM推理效率。",
+          "comment": "如果LLM推理的「过度思考」问题被解决，这是否意味着未来AI系统的成本和延迟会出现质的飞跃？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-08"
         },
         {
-          "title": "Snap拆分AR眼镜业务成立独立子公司 年内将推出消费级产品",
-          "summary": "Snapchat母公司Snap宣布将AR眼镜业务Specs拆分成立全资独立子公司，并计划于2026年推出面向消费者的AR眼镜产品。",
-          "comment": "独立子公司模式能否帮助Snap加速AR眼镜商业化，与Meta Ray-Ban等竞品形成差异化竞争？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119055.html"
+          "title": "Benchmarking GGUF Quantization for LLaMA-3.2-1B：68%尺寸缩减且精度损失低于0.4%",
+          "summary": "研究表明通过GGUF量化技术，LLaMA-3.2-1B模型可实现68%的尺寸缩减，同时精度损失控制在0.4%以内，为端侧部署奠定基础。",
+          "comment": "当开源模型的量化技术达到这样的效率水平，是否会加速AI应用从云端向边缘设备的转移？",
+          "source": "Reddit - Machine Learning",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1qz1kmq/n_benchmarking_gguf_quantization_for_llama321b_68/"
         },
         {
-          "title": "科技赋能体育，乐奇Rokid向冬奥会中国之家捐赠AI智能眼镜",
-          "summary": "国内AR领军企业乐奇Rokid向冬奥会·中国之家捐赠了一批自主研发的AI智能眼镜，展示AR技术在体育领域的应用。",
-          "comment": "AI智能眼镜在冬奥会等大型体育赛事中的应用能否推动消费级AR眼镜的普及？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119059.html"
+          "title": "Open-source quota monitor for AI coding APIs",
+          "summary": "开发者推出开源工具onWatch，可实时监测Anthropic、Synthetic等多个AI API提供商的使用配额，填补了API管理的空白。",
+          "comment": "随着企业部署多个AI API服务，统一的成本管理工具是否会成为AI工程团队的标配？",
+          "source": "Reddit - Artificial Intelligence",
+          "url": "https://www.reddit.com/r/artificial/comments/1qz5aid/opensource_quota_monitor_for_ai_coding_apis/"
         },
         {
-          "title": "全球首创！邯郸赵王城遗址公园启用MR技术",
-          "summary": "邯郸赵王城遗址公园启用全球首个MR混合现实数字遗址技术，游客可通过MR设备穿越三千年见证古都重生。",
-          "comment": "MR技术在文化遗产保护和观光体验中的应用，如何平衡创新展示与历史真实性？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119057.html"
+          "title": "LLMs as Language Compilers: Lessons from Fortran for the Future of Coding",
+          "summary": "研究文章探讨将LLM类比为编程语言编译器的新视角，揭示AI与编程抽象演进的深层联系。",
+          "comment": "如果LLM真的可以被理解为「现代的编程编译器」，这对未来代码生成工具的架构设计会有什么启示？",
+          "source": "Hacker News",
+          "url": "https://cyber-omelette.com/posts/the-abstraction-rises.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "硅谷狂投万亿美元，黄仁勋火上浇油：现在不烧，更待何时",
+          "summary": "硅谷四巨头计划投入6500亿美元用于AI基础设施建设，反映出科技巨头对AI产业的前所未有的投入力度。",
+          "comment": "在这样的万亿级投入面前，传统产业和新兴国家的AI竞争力差距是否会被进一步拉大？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7871392.html"
         },
         {
-          "title": "两部门联合发文：支持演出场所探索VR、AI",
-          "summary": "文化和旅游部与国家消防救援局联合发布通知，支持演出场所探索VR、AI等技术，打造沉浸式演艺新空间。",
-          "comment": "政策支持下，VR和AI技术如何创新演艺形式，并确保演出场所的消防安全？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119072.html"
+          "title": "India has changed its startup rules for deep tech",
+          "summary": "印度调整初创企业政策以支持深度科技企业融资和长期发展，标志着新兴市场对AI等关键技术投资的重视。",
+          "comment": "印度对深科技创业的政策倾斜是否能帮助其在全球AI竞争中缩小与欧美的差距？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/07/india-has-changed-its-startup-rules-for-deep-tech/"
         },
         {
-          "title": "深圳龙岗AI玩具超级品类日启幕",
-          "summary": "2026龙岗AI玩具超级品类日在深圳盛大举办，30余家企业携200余款新品打造智能玩乐盛宴，展现AI玩具市场活力。",
-          "comment": "AI玩具市场的爆发式增长背后，如何确保儿童数据隐私和产品安全性？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119063.html"
+          "title": "Dorsey's Block Cutting Up to 10% of Staff in Efficiency Push",
+          "summary": "Jack Dorsey旗下的支付公司Block Inc.正在进行大规模裁员，涉及员工数达10%，以推进业务重组和效率提升。",
+          "comment": "科技巨头和中型企业的大规模裁员潮是否反映了AI时代企业效率优化的新常态？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-07/dorsey-s-block-cutting-up-to-10-of-staff-in-efficiency-push"
         },
         {
-          "title": "Valve因全球内存存储短缺，重新审视Steam Frame与Steam Machine发货及定价计划",
-          "summary": "Valve宣布受全球内存与存储供应短缺影响，将重新审视Steam Frame和Steam Machine两款硬件产品的发货计划及定价策略。",
-          "comment": "芯片供应链危机对游戏硬件厂商的冲击，如何影响下一代游戏机的上市时间和价格？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119061.html"
+          "title": "Former Tumblr head Jeff D'Onofrio steps in as acting CEO at the Washington Post",
+          "summary": "曾任Tumblr CEO的Jeff D'Onofrio接任《华盛顿邮报》代理CEO兼发行人，接替因管理争议而下台的Will Lewis。",
+          "comment": "传统新闻机构频繁更换CEO的背后，是否反映了媒体行业在AI时代找不到发展方向的困境？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/875433/tumblr-jeff-donofrio-ceo-washington-post-layoffs"
         },
         {
-          "title": "VR游戏周报 | 获奖佳作《光之旅团》登陆PICO",
-          "summary": "1月30日至2月5日期间VR游戏市场持续活跃，获奖佳作《光之旅团》登陆PICO，Quest、PS VR2、Steam等平台内容库持续扩大。",
-          "comment": "VR游戏内容生态的丰富是否能有效推动VR设备的消费级普及？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544699.html"
-        },
-        {
-          "title": "Glassbreakers: Champions of Moss & Clay Hunt VR Are Quest's Horizon+ Monthly Games This February",
-          "summary": "Meta Horizon+本月精选游戏包括策略游戏《光之旅团》(Glassbreakers: Champions of Moss)和《Clay Hunt VR》等VR佳作。",
-          "comment": "平台精选机制如何引导用户发现高质量VR内容，促进VR生态健康发展？",
-          "source": "UploadVR",
-          "url": "https://www.uploadvr.com/glassbreakers-champions-of-moss-clay-hunt-vr-are-quests-horizon-monthly-games-this-february/"
-        },
-        {
-          "title": "Khronos Moves to Integrate Gaussian Splatting Into glTF 3D Format",
-          "summary": "Khronos Group提议将高斯溅射(Gaussian Splatting)技术集成到广泛采用的glTF 3D格式中，推进该技术的行业标准化。",
-          "comment": "将高斯溅射纳入行业标准，如何加速VR/AR内容创作和3D显示技术的发展？",
-          "source": "UploadVR",
-          "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
+          "title": "Tech's AI Push Risks a Bond Market Blowback",
+          "summary": "科技巨头对AI的持续巨额投入引发金融市场担忧，投资者担心信用债市场可能因此遭受冲击。",
+          "comment": "当AI投资回报率的不确定性越来越大时，债券市场的风险溢价是否会成为AI泡沫的预警信号？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-07/tech-s-ai-push-risks-a-bond-blowback-amzn-googl-msft-orcl"
         }
       ]
     }
   ],
   "source": "manual",
-  "status": "rejected",
-  "created_at": "2026-02-08T12:08:37.279919+08:00",
+  "status": "pending_review",
+  "created_at": "2026-02-08T18:43:12.095406+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
