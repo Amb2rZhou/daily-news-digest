@@ -1,24 +1,24 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 12:02 ~ 2026-02-08 12:02",
+  "time_window": "2026-02-07 10:00 ~ 2026-02-08 09:59",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "Crypto.com创始人7000万美元收购AI.com域名，推出个人AI智能体服务",
-          "summary": "加密货币交易网站Crypto.com创始人以7000万美元收购互联网域名AI.com，计划推出提供个人AI智能体服务的平台，用户可用其发送消息、使用应用程序并进行股票交易。",
-          "comment": "当科技巨头争相布局AI基础设施时，AI.com这样的顶级域名为何能成为投资者眼中的战略资产？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3674116581565057?f=rss"
+          "title": "千问一夜爆火，上演AI时代第一场'现象级'事件",
+          "summary": "阿里千问大模型通过'奶茶攻势'等营销手段实现快速用户增长，引发AI应用落地的关注。",
+          "comment": "大模型的用户获取是否最终还是要靠产品本身的价值而非营销噱头？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7870990.html"
         },
         {
-          "title": "LocalGPT：用Rust开发的本地AI助手，支持持久化记忆和自主任务",
-          "summary": "开发者用Rust语言打造了LocalGPT本地AI助手，编译为27MB单一二进制文件，支持markdown格式持久化记忆、全文搜索和本地语义搜索，无需API密钥。",
-          "comment": "在云端AI服务主导的时代，本地化、隐私优先的AI助手能否成为个人计算的新范式？",
-          "source": "Hacker News",
-          "url": "https://github.com/localgpt-app/localgpt"
+          "title": "Waymo联手DeepMind打造世界模型：基于Genie 3，让自动驾驶'脑补'罕见场景",
+          "summary": "Waymo与DeepMind合作基于Genie 3开发世界模型，使自动驾驶系统能够预测和处理罕见场景。",
+          "comment": "世界模型能否真正突破自动驾驶在长尾场景中的识别瓶颈？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-07-5"
         }
       ]
     },
@@ -27,23 +27,16 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Nvidia CEO表示AI资本支出适当且可持续",
-          "summary": "Nvidia CEO为科技巨头的AI芯片采购规模进行辩护，强调当前AI资本支出水平既适当又具有可持续性。",
-          "comment": "在7000亿美元AI投资面临变现压力的背景下，Nvidia对AI支出的乐观态度是基于什么样的长期信心？",
+          "title": "Nvidia CEO Says AI Capital Spending Is Appropriate, Sustainable",
+          "summary": "Nvidia CEO为AI芯片的巨额资本支出进行辩护，强调其可持续性和合理性。",
+          "comment": "科技巨头的AI投资热潮何时会面临实际变现压力的真正考验？",
           "source": "Reddit - Artificial Intelligence",
           "url": "https://www.reddit.com/r/artificial/comments/1qyx57y/nvidia_ceo_says_ai_capital_spending_is/"
         },
         {
-          "title": "印度调整初创公司规则，支持深度科技企业融资",
-          "summary": "印度政府调整创业政策框架，为深度科技初创公司提供更好的融资条件和长期发展支持。",
-          "comment": "当全球AI竞争升温时，新兴市场通过政策倾斜扶持本土AI企业能否实现弯道超车？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/07/india-has-changed-its-startup-rules-for-deep-tech/"
-        },
-        {
-          "title": "Elon Musk将SpaceX与xAI合并，估值达1.25万亿美元",
-          "summary": "Elon Musk推进SpaceX与xAI的合并，合并后实体估值达1.25万亿美元，Musk净资产突破8000亿美元。",
-          "comment": "将火箭公司与AI公司合并的战略逻辑何在，这能否加速AGI时代的到来？",
+          "title": "Elon Musk wants to be a trillionaire — here's how SpaceX may get him there",
+          "summary": "Elon Musk将SpaceX与xAI合并，估值达1.25万亿美元，为其迈向万亿富豪之路铺路。",
+          "comment": "AI与火箭技术的结合能否真正创造出比单独发展更大的经济价值？",
           "source": "CNBC",
           "url": "https://www.cnbc.com/2026/02/07/elon-musk-wants-to-be-a-trillionaire-how-spacex-xai-tesla-can-get-him-there.html"
         }
@@ -54,25 +47,18 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "UIUC研究：一行代码解决大模型推理过度思考问题",
-          "summary": "伊利诺伊大学香槟分校在ICLR 2026发表研究，通过极简单的代码解决大模型推理中的过度思考问题，提升推理效率。",
-          "comment": "当大模型推理效率问题被归结为一行代码的优化时，这是否预示着我们对AI推理机制的理解还有多大的提升空间？",
+          "title": "Benchmarking GGUF Quantization for LLaMA-3.2-1B: 68% Size Reduction with <0.4pp Accuracy Loss",
+          "summary": "研究表明通过GGUF量化可将LLaMA-3.2-1B模型大小减少68%，同时精度损失低于0.4%。",
+          "comment": "量化技术的不断进步是否会使边缘设备上的高效AI成为主流应用的关键突破口？",
+          "source": "Reddit - Machine Learning",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1qz1kmq/n_benchmarking_gguf_quantization_for_llama321b_68/"
+        },
+        {
+          "title": "ICLR 2026｜UIUC：一行代码彻底解决LLM推理的过度思考",
+          "summary": "UIUC研究者在ICLR 2026提出简洁解决方案，解决大语言模型推理过程中的过度思考问题。",
+          "comment": "简化而高效的AI优化方法是否预示着大模型工程化的新方向？",
           "source": "机器之心",
           "url": "https://www.jiqizhixin.com/articles/2026-02-08"
-        },
-        {
-          "title": "研究量化AI边界：识别多任务中的复杂性拐点",
-          "summary": "机器学习研究者通过计量经济学方法，基于Scale AI数据，量化LLM在多资产任务中的生产率崩溃点，识别AI边界的精确坐标。",
-          "comment": "当我们开始精准定位AI能力的临界失效点时，这对设计AI系统的架构和应用边界有什么启示？",
-          "source": "Reddit - Machine Learning",
-          "url": "https://www.reddit.com/r/MachineLearning/comments/1qyxn1q/r_identifying_the_complexity_kink_an_econometric/"
-        },
-        {
-          "title": "Humanoid推出KinetIQ框架，用AI编排机器人群",
-          "summary": "Humanoid公司发布KinetIQ AI框架，专门用于在工业和服务应用中协调和编排机器人群。",
-          "comment": "当AI不再只是单机运行，而是实时编排数百个物理机器人时，这对人类就业和产业结构意味着什么？",
-          "source": "The Robot Report",
-          "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
         }
       ]
     },
@@ -81,25 +67,39 @@
       "icon": "📊",
       "news": [
         {
-          "title": "科技巨头AI狂欢后面临资金困局，7000亿美元投入能否变现成谜",
-          "summary": "科技巨头在AI基础设施上投入7000亿美元，但变现能力仍不明确，行业面临泡沫风险和资金链压力的质疑。",
-          "comment": "当AI投入规模超越历史上任何技术革新时，如果找不到对等的商业变现模式，这是创新投资还是资本泡沫？",
+          "title": "7000亿美元一把梭哈？AI尚未变现，Top科技巨头已面临资金困局",
+          "summary": "科技巨头在AI上的巨额投入尚未产生相应回报，行业面临资本耗尽与变现困局的风险。",
+          "comment": "当AI的资本驱动开始失去耐心时，真正的技术创新和应用落地是否才刚刚开始？",
           "source": "钛媒体",
           "url": "https://www.tmtpost.com/7870817.html"
         },
         {
-          "title": "2026年全球人形机器人出货量预计破5万台，中国成核心市场",
-          "summary": "预测显示2026年全球人形机器人出货量将超5万台，同比增长超700%，中国市场销量达2.8万台，占全球市场超五成份额。",
-          "comment": "当人形机器人从展览品走向批量生产，中国市场的主导地位是否意味着新一轮产业制高点的争夺已成定局？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119067.html"
+          "title": "Super Bowl LX ads: all AI everything",
+          "summary": "超级碗60期广告中充满AI相关内容，AI成为今年的营销热点，类似几年前的加密货币热。",
+          "comment": "当AI从技术概念演变为营销概念时，其实际价值认知是在上升还是在转向泡沫化？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/entertainment/874504/super-bowl-lx-ads-big-game"
+        },
+        {
+          "title": "Tech's AI Push Risks a Bond Market Blowback: Credit Weekly",
+          "summary": "科技公司对AI的巨额投资可能引发债券市场的反弹，信用市场面临潜在风险。",
+          "comment": "当资本市场开始对AI投资的可持续性表示怀疑时，科技巨头的战略调整会有多迅速？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-07/tech-s-ai-push-risks-a-bond-blowback-amzn-googl-msft-orcl"
+        },
+        {
+          "title": "KinetIQ framework from Humanoid orchestrates robot fleets",
+          "summary": "Humanoid推出KinetIQ AI框架，用于协调工业和服务机器人群体的运作。",
+          "comment": "AI驱动的机器人编队管理能否成为未来工业自动化的标准范式？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
         }
       ]
     }
   ],
-  "source": "manual",
+  "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-08T12:08:37.279411+08:00",
+  "created_at": "2026-02-08T15:59:17.006923+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
