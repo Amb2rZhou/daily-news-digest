@@ -624,6 +624,7 @@ def _parse_json_response(response_text: str):
 
     Uses multi-pass JSON repair matching the main summarize function.
     """
+    import re
     start_idx = response_text.find('{')
     end_idx = response_text.rfind('}') + 1
     if start_idx == -1 or end_idx <= start_idx:
