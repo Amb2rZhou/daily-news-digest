@@ -600,7 +600,7 @@ def _call_minimax(prompt: str, label: str) -> str:
     if not api_key:
         return None
 
-    client = OpenAIClient(api_key=api_key, base_url="https://api.minimax.io/v1")
+    client = OpenAIClient(api_key=api_key, base_url="https://api.minimaxi.chat/v1")
     start = time.time()
     try:
         resp = client.chat.completions.create(
