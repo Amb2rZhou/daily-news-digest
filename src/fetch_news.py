@@ -672,14 +672,27 @@ def _focused_split_call(client, articles_text: str, max_items: int, paywalled_so
                 categories.append({"name": "智能硬件", "icon": "🥽", "news": hw_news})
                 print(f"  - 🥽 智能硬件: {len(hw_news)} 条")
 
-    # Parse AI/industry result
+    # Collect URLs from hardware for dedup
+    seen_urls = set()
+    for cat in categories:
+        for news in cat.get("news", []):
+            url = news.get("url", "")
+            if url:
+                seen_urls.add(url)
+
+    # Parse AI/industry result, dedup by URL
     if resp_ai:
         parsed = _parse_json_response(resp_ai)
         if parsed:
             for cat in parsed.get("categories", []):
-                if cat.get("news"):
+                deduped_news = [n for n in cat.get("news", []) if n.get("url", "") not in seen_urls]
+                if deduped_news:
+                    cat["news"] = deduped_news
                     categories.append(cat)
-                    print(f"  - {cat.get('icon', '')} {cat.get('name', '')}: {len(cat['news'])} 条")
+                    print(f"  - {cat.get('icon', '')} {cat.get('name', '')}: {len(deduped_news)} 条")
+                    removed = len(cat.get("news", [])) - len(deduped_news)
+                    if removed > 0:
+                        print(f"    (去重移除 {removed} 条与智能硬件重复的新闻)")
 
     if not categories:
         print(f"  - WARNING: Both calls failed, returning empty")
