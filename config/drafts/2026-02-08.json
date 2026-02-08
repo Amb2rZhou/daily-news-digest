@@ -1,0 +1,104 @@
+{
+  "date": "2026-02-08",
+  "time_window": "2026-02-07 10:00 ~ 2026-02-08 09:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "2026全球人形机器人出货量将破5万台，中国成核心市场",
+          "summary": "2026年全球人形机器人出货量预计突破5万台，年同比增幅超700%，其中中国市场销量将达2.8万台，占据全球超五成市场份额。",
+          "comment": "人形机器人从炫技迈入实用化阶段，中国为何能成为全球最大市场？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119067.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "ICLR 2026｜UIUC：一行代码彻底解决LLM推理的过度思考！",
+          "summary": "UIUC研究团队提出简洁的代码解决方案，有效解决大型语言模型推理中的过度思考问题。",
+          "comment": "简化复杂推理问题的方法是否意味着我们之前对LLM能力的理解有误？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-08"
+        },
+        {
+          "title": "神秘模型「Pony Alpha」引外网热议，它会是国产大模型中的谁？",
+          "summary": "神秘AI模型「Pony Alpha」在网络引发热议，业界猜测其背后可能是某个国产大模型团队。",
+          "comment": "神秘模型的发布策略是否暗示国产大模型正在进行新的技术突破？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-08-2"
+        },
+        {
+          "title": "加密货币交易网站创始人7000万美元收购「AI.com」",
+          "summary": "Crypto.com创始人以创纪录的7000万美元收购域名AI.com，计划推出个人AI智能体服务平台。",
+          "comment": "AI.com这样的顶级域名是否值得7000万美元，还是这个价格反映了AI市场的泡沫？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3674116581565057?f=rss"
+        },
+        {
+          "title": "千问一夜爆火，上演AI时代第一场「现象级」事件",
+          "summary": "阿里千问通过「奶茶攻势」营销活动在一夜间爆火，成为AI时代首个现象级事件，展现巨大的用户迁移潜力。",
+          "comment": "营销噱头驱动的用户增长能否转化为真正的产品粘性和价值？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7870990.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Disney's magic might find a home in Big Tech's kingdom",
+          "summary": "迪士尼新任首席执行官Josh D'Amaro上台，面临公司众多战略挑战，寻求在科技巨头领域的发展机遇。",
+          "comment": "传统娱乐帝国与科技巨头的融合是否能创造新的商业价值，还是只是权力交接的戏剧性表演？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/ad4578de-3d23-41d5-a992-8c896389577c"
+        },
+        {
+          "title": "Former Tumblr head Jeff D'Onofrio steps in as acting CEO at the Washington Post",
+          "summary": "前Tumblr首席执行官Jeff D'Onofrio接任《华盛顿邮报》代理CEO，接替因大规模裁员争议而下台的Will Lewis。",
+          "comment": "从失败的社交网络到传统媒体的领导，这一转变是否反映了科技与传媒行业生态的深刻变化？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/875433/tumblr-jeff-donofrio-ceo-washington-post-layoffs"
+        },
+        {
+          "title": "7000亿美元一把梭哈？AI尚未变现，Top科技巨头已面临资金困局",
+          "summary": "科技巨头在AI基础设施上投入7000亿美元，但AI商业价值还未充分体现，行业面临资金可持续性问题。",
+          "comment": "如此巨大的AI投资能否在可预见的未来产生相应的商业回报，还是市场正在形成新的泡沫？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7870817.html"
+        },
+        {
+          "title": "Dorsey's Block Cutting Up to 10% of Staff in Efficiency Push",
+          "summary": "Jack Dorsey旗下的Block公司在年度绩效评审中通知员工可能被裁员，裁员比例高达10%，以推进业务重组。",
+          "comment": "支付行业的效率优化是否需要通过大规模裁员实现，还是暗示整个行业正在经历深刻的商业模式调整？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-07/dorsey-s-block-cutting-up-to-10-of-staff-in-efficiency-push"
+        },
+        {
+          "title": "Tech's AI Push Risks a Bond Market Blowback: Credit Weekly",
+          "summary": "科技公司对AI的巨额投资可能超出投资者预期，带来债券市场风险，信用评级面临压力。",
+          "comment": "AI热潮导致的过度资本支出是否会演变为企业债务危机，或者市场能否自我调节？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-07/tech-s-ai-push-risks-a-bond-blowback-amzn-googl-msft-orcl"
+        },
+        {
+          "title": "A diverging Magnificent Seven",
+          "summary": "由于AI监管审查加强，科技巨头集团「七巨头」开始出现分化，部分公司成为赢家，部分面临压力。",
+          "comment": "AI监管的不确定性是否会重塑科技行业的竞争格局和市值分布？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/5676a4bd-c7d8-47f1-84f7-82c006cfc2ca"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-02-08T13:43:34.304960+08:00"
+}
