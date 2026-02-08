@@ -620,24 +620,78 @@ def _call_minimax(prompt: str, label: str) -> str:
 
 
 def _parse_json_response(response_text: str):
-    """Extract and parse JSON from model response text. Returns parsed dict or None."""
+    """Extract and parse JSON from model response text. Returns parsed dict or None.
+
+    Uses multi-pass JSON repair matching the main summarize function.
+    """
     start_idx = response_text.find('{')
     end_idx = response_text.rfind('}') + 1
     if start_idx == -1 or end_idx <= start_idx:
         return None
     json_str = response_text[start_idx:end_idx]
+
+    # Pass 1: direct parse
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError as first_error:
+        print(f"  - JSON parse error (attempting fix): {first_error}")
+
+    # Pass 2: control chars + unescaped quotes fix
+    json_str = re.sub(r'[\x00-\x1f\x7f]', ' ', json_str)
+
+    def fix_quotes_in_value(match):
+        key = match.group(1)
+        value = match.group(2)
+        fixed_value = value.replace('"', "'")
+        return f'"{key}": "{fixed_value}"'
+
+    json_str = re.sub(
+        r'"(title|summary|comment|source|url|name|icon)"\s*:\s*"((?:[^"\\]|\\.)*)(?<!\\)"',
+        fix_quotes_in_value,
+        json_str
+    )
+
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError as second_error:
+        print(f"  - JSON fix attempt 1 failed: {second_error}")
+
+    # Pass 3: trailing commas + extract categories array
+    json_str = re.sub(r',\s*}', '}', json_str)
+    json_str = re.sub(r',\s*]', ']', json_str)
+
     try:
         return json.loads(json_str)
     except json.JSONDecodeError:
-        import re
-        json_str = re.sub(r'[\x00-\x1f\x7f]', ' ', json_str)
-        json_str = re.sub(r',\s*}', '}', json_str)
-        json_str = re.sub(r',\s*]', ']', json_str)
-        try:
-            return json.loads(json_str)
-        except json.JSONDecodeError as e:
-            print(f"  - JSON parse error: {e}")
-            return None
+        pass
+
+    try:
+        cat_match = re.search(r'"categories"\s*:\s*(\[[\s\S]*\])', json_str)
+        if cat_match:
+            categories_str = cat_match.group(1)
+            categories_str = re.sub(r',\s*}', '}', categories_str)
+            categories_str = re.sub(r',\s*]', ']', categories_str)
+            result = json.loads(categories_str)
+            print(f"  - Recovered {len(result)} categories from partial JSON")
+            return {"categories": result}
+    except Exception:
+        pass
+
+    # Pass 4: line-by-line quote reconstruction
+    try:
+        lines = json_str.split('\n')
+        fixed_lines = []
+        for line in lines:
+            m = re.match(r'^(\s*"(?:title|summary|comment|source|url|name|icon)":\s*")(.*)(",?\s*)$', line)
+            if m:
+                value = m.group(2).replace('"', "'")
+                line = m.group(1) + value + m.group(3)
+            fixed_lines.append(line)
+        json_str = '\n'.join(fixed_lines)
+        return json.loads(json_str)
+    except Exception as final_error:
+        print(f"  - All JSON fix attempts failed: {final_error}")
+        return None
 
 
 def _call_haiku(client, prompt: str, label: str) -> str:
