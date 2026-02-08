@@ -1,78 +1,78 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 11:48 ~ 2026-02-08 11:48",
+  "time_window": "2026-02-07 12:02 ~ 2026-02-08 12:02",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "2026全球人形机器人出货量将破5万台，中国成核心市场",
+          "title": "2026全球人形机器人出货量将破5万台 中国成核心市场",
           "summary": "2026年全球人形机器人出货量预计突破5万台，年同比增幅超700%，其中中国市场销量将达2.8万台，占据全球超五成市场份额，行业告别炫技迈入实用化阶段。",
-          "comment": "人形机器人从展览品走向生产工具的转折点是什么？",
+          "comment": "当人形机器人进入大规模商业化阶段，如何确保其在工业应用中的安全性和伦理规范？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119067.html"
         },
         {
-          "title": "Snap拆分AR眼镜业务成立独立子公司，年内推出消费级产品",
-          "summary": "Snapchat母公司Snap将旗下AR眼镜业务Specs拆分并成立全资独立子公司Specs Inc.，计划年内推出面向消费者的AR眼镜产品。",
-          "comment": "独立子公司运作是否能加快AR眼镜商业化进程？",
+          "title": "Snap拆分AR眼镜业务成立独立子公司 年内将推出消费级产品",
+          "summary": "Snapchat母公司Snap宣布将AR眼镜业务Specs拆分成立全资独立子公司，并计划于2026年推出面向消费者的AR眼镜产品。",
+          "comment": "独立子公司模式能否帮助Snap加速AR眼镜商业化，与Meta Ray-Ban等竞品形成差异化竞争？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119055.html"
         },
         {
-          "title": "邯郸赵王城遗址公园启用MR技术，游客可穿越三千年",
-          "summary": "邯郸市产业投资集团与武汉华创全息数字科技合作打造全球首个MR混合现实数字遗址公园，让游客通过MR技术实现时空穿越体验。",
-          "comment": "MR技术在文化遗产保护和展示中的商业潜力有多大？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119057.html"
-        },
-        {
-          "title": "乐奇Rokid向冬奥会中国之家捐赠AI智能眼镜",
-          "summary": "国内AR领域领军企业乐奇Rokid向冬奥会·中国之家捐赠了一批自主研发的AI智能眼镜。",
-          "comment": "AI智能眼镜在大型体育赛事中的应用场景还有哪些可能性？",
+          "title": "科技赋能体育，乐奇Rokid向冬奥会中国之家捐赠AI智能眼镜",
+          "summary": "国内AR领军企业乐奇Rokid向冬奥会·中国之家捐赠了一批自主研发的AI智能眼镜，展示AR技术在体育领域的应用。",
+          "comment": "AI智能眼镜在冬奥会等大型体育赛事中的应用能否推动消费级AR眼镜的普及？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119059.html"
         },
         {
-          "title": "深圳龙岗AI玩具超级品类日启幕，30余家企业推200余款新品",
-          "summary": "2026龙岗AI玩具超级品类日在深圳龙岗区举办，30余家企业展示200余款AI玩具新品，打造智能玩乐盛宴。",
-          "comment": "AI玩具产业如何在教育价值和娱乐需求之间平衡？",
+          "title": "全球首创！邯郸赵王城遗址公园启用MR技术",
+          "summary": "邯郸赵王城遗址公园启用全球首个MR混合现实数字遗址技术，游客可通过MR设备穿越三千年见证古都重生。",
+          "comment": "MR技术在文化遗产保护和观光体验中的应用，如何平衡创新展示与历史真实性？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119057.html"
+        },
+        {
+          "title": "两部门联合发文：支持演出场所探索VR、AI",
+          "summary": "文化和旅游部与国家消防救援局联合发布通知，支持演出场所探索VR、AI等技术，打造沉浸式演艺新空间。",
+          "comment": "政策支持下，VR和AI技术如何创新演艺形式，并确保演出场所的消防安全？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119072.html"
+        },
+        {
+          "title": "深圳龙岗AI玩具超级品类日启幕",
+          "summary": "2026龙岗AI玩具超级品类日在深圳盛大举办，30余家企业携200余款新品打造智能玩乐盛宴，展现AI玩具市场活力。",
+          "comment": "AI玩具市场的爆发式增长背后，如何确保儿童数据隐私和产品安全性？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119063.html"
         },
         {
-          "title": "重庆千万级资金扶持元宇宙消费新场景，最高资助1000万元",
-          "summary": "重庆市商务委员会与财政局联合印发消费新业态新模式新场景项目管理办法，以千万级资金扶持包括智能硬件在内的元宇宙消费场景建设。",
-          "comment": "政府补贴如何引导智能硬件产业向真实消费场景转化？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119070.html"
-        },
-        {
-          "title": "Valve重新审视Steam Deck及Steam Machine发货和定价计划",
-          "summary": "受全球内存与存储供应短缺影响，Valve将重新审视Steam Deck和Steam Machine两款硬件产品的发货计划及定价策略。",
-          "comment": "芯片短缺对掌机硬件创新的影响会持续多久？",
+          "title": "Valve因全球内存存储短缺，重新审视Steam Frame与Steam Machine发货及定价计划",
+          "summary": "Valve宣布受全球内存与存储供应短缺影响，将重新审视Steam Frame和Steam Machine两款硬件产品的发货计划及定价策略。",
+          "comment": "芯片供应链危机对游戏硬件厂商的冲击，如何影响下一代游戏机的上市时间和价格？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119061.html"
         },
         {
-          "title": "VR游戏周报：《光之旅团》登陆PICO，多平台新增内容",
-          "summary": "1月30日至2月5日期间，VR游戏市场新增多款游戏，其中获奖佳作《光之旅团》登陆PICO平台，各主要VR平台内容库持续扩充。",
-          "comment": "优质VR内容如何突破硬件平台限制实现跨生态发展？",
+          "title": "VR游戏周报 | 获奖佳作《光之旅团》登陆PICO",
+          "summary": "1月30日至2月5日期间VR游戏市场持续活跃，获奖佳作《光之旅团》登陆PICO，Quest、PS VR2、Steam等平台内容库持续扩大。",
+          "comment": "VR游戏内容生态的丰富是否能有效推动VR设备的消费级普及？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544699.html"
         },
         {
-          "title": "Glassbreakers等作品成Meta Horizon+ 2月月度游戏",
-          "summary": "Meta宣布《Glassbreakers: Champions of Moss》等作品为Meta Horizon+ 2月月度游戏，继续扩充Quest平台优质内容库。",
-          "comment": "VR平台如何通过精品游戏策略提升用户粘性？",
+          "title": "Glassbreakers: Champions of Moss & Clay Hunt VR Are Quest's Horizon+ Monthly Games This February",
+          "summary": "Meta Horizon+本月精选游戏包括策略游戏《光之旅团》(Glassbreakers: Champions of Moss)和《Clay Hunt VR》等VR佳作。",
+          "comment": "平台精选机制如何引导用户发现高质量VR内容，促进VR生态健康发展？",
           "source": "UploadVR",
           "url": "https://www.uploadvr.com/glassbreakers-champions-of-moss-clay-hunt-vr-are-quests-horizon-monthly-games-this-february/"
         },
         {
-          "title": "Khronos推进高斯泼溅在glTF 3D格式中的标准化集成",
-          "summary": "Khronos Group发布高斯泼溅集成到glTF 3D格式的候选版本，旨在为这一新型3D渲染技术建立行业标准。",
-          "comment": "高斯泼溅标准化对VR/AR内容创建有什么革命性意义？",
+          "title": "Khronos Moves to Integrate Gaussian Splatting Into glTF 3D Format",
+          "summary": "Khronos Group提议将高斯溅射(Gaussian Splatting)技术集成到广泛采用的glTF 3D格式中，推进该技术的行业标准化。",
+          "comment": "将高斯溅射纳入行业标准，如何加速VR/AR内容创作和3D显示技术的发展？",
           "source": "UploadVR",
           "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
         }
@@ -81,7 +81,7 @@
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-08T11:51:23.048446+08:00",
+  "created_at": "2026-02-08T12:08:37.279919+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
