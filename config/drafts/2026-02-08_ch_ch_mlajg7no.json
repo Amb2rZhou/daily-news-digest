@@ -1,24 +1,24 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 09:57 ~ 2026-02-08 09:57",
+  "time_window": "2026-02-07 10:09 ~ 2026-02-08 10:09",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "Super Bowl LX ads: all AI everything",
-          "summary": "今年超级碗广告中AI成为主角，多家科技巨头纷纷推出AI相关广告，延续去年谷歌Gemini广告的热潮。",
-          "comment": "当AI广告成为Super Bowl主流，这是否标志着AI已从技术圈走向主流消费者认知的临界点？",
-          "source": "The Verge",
-          "url": "https://www.theverge.com/entertainment/874504/super-bowl-lx-ads-big-game"
+          "title": "OpenAI推出GPT-5.3-Codex和Codex应用",
+          "summary": "OpenAI发布新一代代码模型GPT-5.3-Codex及其应用程序，为开发者提供更强大的代码生成和理解能力。",
+          "comment": "当代码生成模型的性能超越大多数开发者时，它会如何改变软件开发的未来职业生态？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7870592.html"
         },
         {
-          "title": "Khronos Moves to Integrate Gaussian Splatting Into glTF 3D Format",
-          "summary": "Khronos Group提议将高斯溅射技术集成到广泛应用的glTF 3D格式中，推出候选版本实现标准化。",
-          "comment": "将高斯溅射这一先进3D渲染技术标准化，会如何加速AI与3D内容生成的融合应用？",
-          "source": "UploadVR",
-          "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
+          "title": "Humanoid推出KinetIQ框架实现机器人群组编排",
+          "summary": "Humanoid发布KinetIQ AI框架，可在工业和服务应用中协调多个机器人的协同工作。",
+          "comment": "一个统一的机器人编排框架是否会加速工业自动化从单机到群体协作的转变？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
         }
       ]
     },
@@ -27,25 +27,25 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Waymo联手DeepMind打造世界模型：基于Genie 3，让自动驾驶「脑补」罕见场景",
-          "summary": "Waymo与DeepMind合作开发基于Genie 3的世界模型，使自动驾驶汽车能够预测和应对罕见的驾驶场景。",
-          "comment": "当自动驾驶AI能够通过世界模型预测罕见场景，这对无人驾驶安全性的提升意味着什么？",
-          "source": "机器之心",
-          "url": "https://www.jiqizhixin.com/articles/2026-02-07-5"
-        },
-        {
-          "title": "马斯克：打通太阳能、机器人、芯片、AI闭环后，传统货币会成为障碍",
-          "summary": "马斯克表示一旦太阳能发电、机器人、芯片和AI的整个闭环打通，传统货币反而会成为障碍，真正重要的是发电功率和产量。",
-          "comment": "当AI、机器人和可再生能源形成完整闭环时，这对现有经济体系和价值衡量方式的颠覆性影响会有多大？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3673994187924099?f=rss"
-        },
-        {
-          "title": "Elon Musk wants to be a trillionaire — here's how SpaceX may get him there",
-          "summary": "马斯克将SpaceX与xAI合并，合并后估值达1.25万亿美元，通过这一战略布局迈向万亿富豪目标。",
-          "comment": "SpaceX与xAI的合并是否预示着太空探索与AI发展的深度融合将成为未来的主流趋势？",
+          "title": "Elon Musk将SpaceX与xAI合并，估值达1.25万亿美元",
+          "summary": "Elon Musk宣布SpaceX与xAI完成合并，合并实体估值高达1.25万亿美元，推进其太阳能、机器人、芯片和AI的闭环战略。",
+          "comment": "当一个AI公司与太空公司合并时，这种跨领域整合最终会产生什么样的颠覆性应用？",
           "source": "CNBC",
           "url": "https://www.cnbc.com/2026/02/07/elon-musk-wants-to-be-a-trillionaire-how-spacex-xai-tesla-can-get-him-there.html"
+        },
+        {
+          "title": "Waymo完成160亿美元融资",
+          "summary": "自动驾驶公司Waymo成功融资160亿美元，为其大规模商业化部署提供充足的资金支持。",
+          "comment": "大额融资涌入自动驾驶领域，这是否预示着无人驾驶距离大规模落地已近在咫尺？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7870592.html"
+        },
+        {
+          "title": "Anthropic发布法律插件",
+          "summary": "Anthropic推出法律领域专用插件，扩展Claude在法律文件分析和合规工作中的应用能力。",
+          "comment": "当AI开始专业化进入法律等高风险领域时，如何确保其输出的准确性和可追溯性？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7870592.html"
         }
       ]
     },
@@ -54,25 +54,25 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "KinetIQ framework from Humanoid orchestrates robot fleets",
-          "summary": "Humanoid推出KinetIQ AI框架，可以在工业和服务应用中协调管理机器人集群的运作。",
-          "comment": "当AI可以协调管理大规模机器人集群时，这会如何改变传统制造业和服务业的生产方式？",
-          "source": "The Robot Report",
-          "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
+          "title": "Waymo与DeepMind合作打造自动驾驶世界模型",
+          "summary": "Waymo与DeepMind基于Genie 3框架开发世界模型，使自动驾驶系统能够预测和处理罕见的驾驶场景。",
+          "comment": "世界模型在自动驾驶中的应用会如何解决长尾问题，是否能真正提升系统的安全性？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-07-5"
         },
         {
-          "title": "人形机器人的真机强化学习! ICLR 2026 通研院提出人形机器人预训练与真机微调新范式",
-          "summary": "通研院在ICLR 2026提出人形机器人的预训练与真机微调新范式，实现真机强化学习的突破。",
-          "comment": "人形机器人从虚拟预训练到真机微调的新范式，会如何加速机器人在现实世界的适应能力？",
+          "title": "Khronos Group将高斯溅射技术整合进glTF 3D格式标准",
+          "summary": "Khronos Group发布提议将高斯溅射技术标准化整合到广泛采用的glTF 3D格式中，推进3D内容创作的标准化。",
+          "comment": "高斯溅射作为NeRF替代方案的标准化，会如何加速AIGC在3D内容生成领域的普及？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
+        },
+        {
+          "title": "通研院提出人形机器人预训练与真机微调新范式",
+          "summary": "通研院在ICLR 2026发表研究，提出人形机器人的真机强化学习预训练与微调新方法，加速机器人学习效率。",
+          "comment": "从模拟到真实的机器人学习转移，这个新范式是否能让人形机器人更快获得实用技能？",
           "source": "机器之心",
           "url": "https://www.jiqizhixin.com/articles/2026-02-07-4"
-        },
-        {
-          "title": "AI气象大模型的下半场：当天气开始进入现金流",
-          "summary": "AI气象大模型从榜单竞赛走向产业兑现，预测能力被应用于调度、交易和保险定价等实际业务中。",
-          "comment": "当AI气象预测能力直接转化为商业决策和金融定价，其准确性的边界和风险该如何评估？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7871105.html"
         }
       ]
     },
@@ -81,25 +81,25 @@
       "icon": "📊",
       "news": [
         {
-          "title": "2026全球人形机器人出货量将破5万台 中国成核心市场行业告别炫技迈入实用化阶段",
-          "summary": "2026年全球人形机器人出货量预计突破5万台，同比增幅超700%，中国市场销量达2.8万台占超五成份额，行业从展示阶段进入实用化。",
-          "comment": "人形机器人出货量的指数级增长和中国市场占有率的主导地位，会如何改变全球机器人产业格局？",
-          "source": "93913",
+          "title": "2026全球人形机器人出货量预计破5万台，中国占超五成市场",
+          "summary": "据预测，2026年全球人形机器人出货量将超5万台，年同比增长超700%，中国市场销量达2.8万台，占全球50%以上份额。",
+          "comment": "人形机器人产业进入爆发阶段，中国市场的领先地位会如何影响全球AI机器人的技术路线？",
+          "source": "93913元宇宙与AI信息",
           "url": "https://www.93913.com/119067.html"
         },
         {
-          "title": "Tech's AI Push Risks a Bond Market Blowback: Credit Weekly",
-          "summary": "科技巨头在AI上的投入超过投资者预期，市场担忧这笔巨大支出会对信用债券市场造成冲击。",
-          "comment": "AI基础设施的天量投资是否最终会形成科技公司难以承受的财务压力，从而引发市场调整？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-07/tech-s-ai-push-risks-a-bond-blowback-amzn-googl-msft-orcl"
+          "title": "中国生成式人工智能用户规模达6.02亿人",
+          "summary": "中国AIGC用户市场规模持续扩大，已达6.02亿人，反映出生成式AI技术的广泛应用和渗透。",
+          "comment": "当超六亿用户接触到AIGC技术时，这会如何改变内容创作、工作流程和教育方式的整体生态？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7870592.html"
         }
       ]
     }
   ],
   "source": "manual",
-  "status": "rejected",
-  "created_at": "2026-02-08T10:00:42.237711+08:00",
+  "status": "pending_review",
+  "created_at": "2026-02-08T10:26:03.424828+08:00",
   "channel_id": "ch_mlajg7no",
   "channel_name": "2人测试群for部门",
   "topic_mode": "broad"
