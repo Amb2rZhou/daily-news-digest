@@ -1,24 +1,24 @@
 {
   "date": "2026-02-08",
-  "time_window": "2026-02-07 11:29 ~ 2026-02-08 11:29",
+  "time_window": "2026-02-07 11:48 ~ 2026-02-08 11:48",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "ICLR 2026｜UIUC：一行代码彻底解决LLM推理的过度思考！",
-          "summary": "伊利诺伊大学香槟分校在ICLR 2026上展示了一项创新解决方案，通过简洁代码解决大型语言模型推理时的过度思考问题，有望显著提升LLM的推理效率。",
-          "comment": "如果LLM的推理过程可以通过简单调整大幅优化，这对降低AI推理成本和加速商业化落地会产生什么样的连锁反应？",
-          "source": "机器之心",
-          "url": "https://www.jiqizhixin.com/articles/2026-02-08"
+          "title": "Crypto.com创始人7000万美元收购'AI.com'域名，计划推出个人AI智能体服务",
+          "summary": "加密货币交易网站Crypto.com创始人以7000万美元收购互联网域名'AI.com'，这是迄今披露的域名交易中价格最高的一笔。该网站将提供个人'AI智能体'服务，用户可用其发送消息、使用应用程序并进行股票交易。",
+          "comment": "为什么一个域名能卖到7000万美元？这是否反映了市场对AI应用落地的过度乐观预期？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3674116581565057?f=rss"
         },
         {
-          "title": "Show HN: LocalGPT – A local-first AI assistant in Rust with persistent memory",
-          "summary": "开发者创建了LocalGPT，一个用Rust编写的本地优先AI助手，支持持久化内存、全文搜索和语义搜索，编译为单个27MB的二进制文件无需依赖。",
-          "comment": "当AI助手可以完全离线运行且文件极小，这是否会推动AI应用向边缘计算和个人设备端的大规模转移？",
-          "source": "Hacker News: Front Page",
-          "url": "https://github.com/localgpt-app/localgpt"
+          "title": "UIUC研究团队发布LLM推理优化方案，仅需一行代码解决过度思考问题",
+          "summary": "UIUC在ICLR 2026会议上发布研究成果，展示了一行代码即可彻底解决大语言模型推理过程中的过度思考问题，优化推理效率。",
+          "comment": "如果推理优化这么简单，为什么业界之前没有发现这个解决方案，这背后说明了什么？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-08"
         }
       ]
     },
@@ -27,25 +27,18 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Waymo联手DeepMind打造世界模型：基于Genie 3，让自动驾驶'脑补'罕见场景",
-          "summary": "Waymo与Google DeepMind合作，基于Genie 3世界模型技术开发自动驾驶系统，使其能够预测和应对罕见的驾驶场景，增强安全性。",
-          "comment": "如果自动驾驶系统能通过世界模型'想象'极端场景并提前做出反应，这会如何改变我们对自动驾驶安全的认知和测试方式？",
-          "source": "机器之心",
-          "url": "https://www.jiqizhixin.com/articles/2026-02-07-5"
-        },
-        {
-          "title": "Nvidia CEO Says AI Capital Spending Is Appropriate, Sustainable",
-          "summary": "英伟达CEO表示公司在AI领域的巨额资本支出是合理且可持续的，为业界关于AI投资泡沫的争议做出回应。",
-          "comment": "当芯片巨头坚称数千亿美元的AI投资是合理的，而市场还在担忧AI商业价值兑现时，两者之间的信息差距意味着什么？",
+          "title": "Nvidia CEO声称AI资本支出合理且可持续",
+          "summary": "Nvidia首席执行官表示公司的AI芯片和基础设施投资是合理且可持续的，为业界高额资本支出进行辩护。",
+          "comment": "在AI资本支出已达7000亿美元的背景下，Nvidia的这一声明能否打消市场对泡沫风险的担忧？",
           "source": "Artificial Intelligence (AI)",
           "url": "https://www.reddit.com/r/artificial/comments/1qyx57y/nvidia_ceo_says_ai_capital_spending_is/"
         },
         {
-          "title": "Elon Musk wants to be a trillionaire — here's how SpaceX may get him there",
-          "summary": "埃隆·马斯克在将SpaceX与xAI合并后，其净资产超过8000亿美元，通过SpaceX、xAI和特斯拉等业务有望成为首位万亿美元富翁。",
-          "comment": "当一个人的财富与AI、太空探索和能源等战略技术紧密绑定时，这对全球科技产业的发展方向会产生什么样的影响？",
-          "source": "Tech",
-          "url": "https://www.cnbc.com/2026/02/07/elon-musk-wants-to-be-a-trillionaire-how-spacex-xai-tesla-can-get-him-there.html"
+          "title": "xAI联合创始人Babuschkin否认伦敦豪宅收购传言",
+          "summary": "Elon Musk旗下xAI公司联合创始人Igor Babuschkin否认了彭博社报道的其计划以约7700万美元购买伦敦海德公园豪宅的消息。",
+          "comment": "高管个人资产动向为何会引发市场关注，这反映了对xAI财务状况的什么样的关切？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-08/xai-s-babuschkin-says-he-has-not-purchased-london-penthouse"
         }
       ]
     },
@@ -54,11 +47,18 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "KinetIQ framework from Humanoid orchestrates robot fleets",
-          "summary": "Humanoid公司推出KinetIQ AI框架，专门用于协调管理工业和服务应用中的机器人群体，实现多机器人协作。",
-          "comment": "当AI可以像编排交响乐一样协调数百台机器人同时工作，这对制造业和物流业的自动化水平会带来怎样的革命性提升？",
+          "title": "Humanoid推出KinetIQ AI框架用于机器人集群协调",
+          "summary": "Humanoid公司推出了KinetIQ AI框架，专门设计用于在工业和服务应用中协调和管理机器人集群的运作。",
+          "comment": "在机器人集群协调技术上的突破是否意味着大规模自主机器人应用的时代正在加速到来？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/kinetiq-framework-from-humanoid-orchestrates-robot-fleets/"
+        },
+        {
+          "title": "Khronos Group计划将高斯喷溅技术整合到glTF 3D格式中",
+          "summary": "Khronos Group宣布提议将高斯喷溅（Gaussian Splatting）技术集成到广泛采用的glTF 3D格式中，以实现该技术的标准化。",
+          "comment": "将高斯喷溅标准化对3D内容创建和AI渲染应用会产生什么样的深远影响？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/khronos-moves-to-integrate-gaussian-splatting-into-gltf-3d-format/"
         }
       ]
     },
@@ -67,39 +67,39 @@
       "icon": "📊",
       "news": [
         {
-          "title": "专家：AI将推动机器人技术应用'螺旋式上升'",
-          "summary": "北京航空航天大学教授王田苗表示，AI大模型赋予机器人理解力、软体技术提供安全性、电子感官实现感知力，推动机器人在工业、商业和家庭场景中实现螺旋式发展。",
-          "comment": "当机器人不仅能执行预设任务，而是能通过AI自主学习和适应新环境时，人工成本最高的哪些行业会首先被重塑？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3674090750272133?f=rss"
-        },
-        {
-          "title": "7000亿美元一把梭哈？AI尚未变现，Top科技巨头已面临资金困局",
-          "summary": "科技巨头在AI基础设施上投入高达7000亿美元，但AI商业化变现缓慢，引发业界对AI泡沫的担忧和资金困局的讨论。",
-          "comment": "如果数万亿美元的AI投资在未来2-3年仍看不到相应的商业回报，这个产业会经历怎样的调整和洗牌？",
-          "source": "钛媒体：引领未来商业与生活新知",
+          "title": "AI资本支出已达7000亿美元，科技巨头面临资金困局与变现压力",
+          "summary": "尽管科技巨头在AI基础设施上投入巨大，但AI产业仍未实现预期的商业变现，Top科技公司开始面临资金压力和ROI困境。",
+          "comment": "当AI的投资已经超过7000亿美元但商业变现仍遥遥无期时，这个市场是否正在经历泡沫膨胀的最后阶段？",
+          "source": "钛媒体",
           "url": "https://www.tmtpost.com/7870817.html"
         },
         {
-          "title": "Super Bowl LX ads: all AI everything",
-          "summary": "今年超级碗广告大战中，AI成为主角，多家科技公司将在这个全球最大的广告舞台上展示AI应用，预示着AI成为消费科技的新焦点。",
-          "comment": "当科技巨头在超级碗这样的顶级广告平台上大力宣传AI产品，这是在向大众普及AI应用，还是在为过热的AI投资寻找舆论支撑？",
-          "source": "The Verge",
-          "url": "https://www.theverge.com/entertainment/874504/super-bowl-lx-ads-big-game"
+          "title": "2026年全球人形机器人出货量预计突破5万台，中国占超五成市场份额",
+          "summary": "预测2026年全球人形机器人出货量将达到5万台以上，同比增幅超700%，其中中国市场销量达2.8万台，占据全球超五成份额，行业告别炫技进入实用化阶段。",
+          "comment": "人形机器人何时能从实验室走向大规模商业应用，中国市场的主导地位能否持续？",
+          "source": "93913",
+          "url": "https://www.93913.com/119067.html"
         },
         {
-          "title": "2026全球人形机器人出货量将破5万台 中国成核心市场行业告别炫技迈入实用化阶段",
-          "summary": "2026年全球人形机器人出货量预计突破5万台，中国市场销量达2.8万台占全球超五成，行业从概念演示阶段迈入实际应用阶段。",
-          "comment": "当人形机器人年出货量以700%的增速增长且中国占主导，这是否意味着AI+机器人的产业链竞争格局正在发生根本性转变？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119067.html"
+          "title": "印度调整深科技初创企业政策，支持长期融资和发展",
+          "summary": "印度政府调整初创企业相关政策，重点支持深科技领域初创企业获得融资和长期成功，为该国AI和深科技产业发展创造更好的政策环境。",
+          "comment": "印度在深科技领域的政策倾斜是否能帮助其在全球AI竞争中弯道超车？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/07/india-has-changed-its-startup-rules-for-deep-tech/"
+        },
+        {
+          "title": "超级碗LX广告掀起AI浪潮，业界重点关注AI应用展示",
+          "summary": "即将举行的超级碗LX中，AI成为广告中的主要亮点，众多科技公司和品牌通过超级碗平台展示各自的AI产品和应用方案。",
+          "comment": "超级碗广告投放的AI主题转变，是否预示着AI从技术炒作向消费级应用的拐点已经到来？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/entertainment/874504/super-bowl-lx-ads-big-game"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-08T11:32:31.550433+08:00",
+  "created_at": "2026-02-08T11:51:23.047909+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
