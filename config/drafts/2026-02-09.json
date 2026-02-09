@@ -3,49 +3,43 @@
   "time_window": "2026-02-08 10:00 ~ 2026-02-09 09:59",
   "categories": [
     {
-      "name": "智能硬件",
-      "icon": "🥽",
-      "news": [
-        {
-          "title": "Meta在超级碗广告中推介Oakley AI性能眼镜",
-          "summary": "Meta在2026年超级碗广告中重点推介专为运动、健身和探险设计的Oakley Meta性能AI眼镜，展示了运动员使用眼镜捕捉极限时刻、进行慢动作拍摄和免提分享等功能。",
-          "comment": "当AI眼镜从科技爱好者的玩物进化为运动员的专业装备时，这是否意味着可穿戴AI硬件的消费者主流化时代已经到来？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544703.html"
-        },
-        {
-          "title": "2025年中国消费级AR销量首次超越VR",
-          "summary": "CINNO Research数据显示，2025年国内消费级XR市场总销量达64.5万台，其中AR销量48.4万台首次超越VR的16.1万台，AR市场同比增长71%，预计2030年消费级出货量将突破500万台。",
-          "comment": "为什么AR眼镜能在短短一年内超越VR成为市场主力，这反映了消费者对什么样的硬件形态的真实需求？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544704.html"
-        }
-      ]
-    },
-    {
       "name": "AI技术与产品",
       "icon": "🤖",
       "news": [
         {
-          "title": "虚实融合实时交互视频模型发布：华为天才少年创业新作",
-          "summary": "华为天才少年创业团队推出全球首个虚实融合的实时交互视频模型，将童年的虚拟角色概念带入现实。",
-          "comment": "这种虚实融合的AI模型如何改变未来的内容创作和人机交互方式？",
+          "title": "Nvidia工程师使用AI编程工具Cursor，代码产出提升3倍",
+          "summary": "Nvidia内部有超过30,000名工程师使用专定制版Cursor（AI辅助开发环境），代码提交量增加了3倍，同时bug率保持不变。",
+          "comment": "当AI编程工具能让工程师生产力提升3倍时，这是否预示着软件开发模式的根本性变革？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-now-produces-three-times-as-much-code-as-before-ai-specialized-version-of-cursor-is-being-used-by-over-30-000-nvidia-engineers-internally"
+        },
+        {
+          "title": "OpenAI首席执行官Sam Altman宣称ChatGPT增长加速，月度增速超10%",
+          "summary": "在OpenAI接近100亿美元融资之际，CEO Sam Altman向员工表示ChatGPT的月度增长已回升至10%以上，尽管生成式AI竞争日益激烈。",
+          "comment": "在竞争对手不断涌现的情况下，ChatGPT如何维持增长动力，是否新的商业模式而非技术创新成为了关键？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/09/sam-altman-touts-chatgpt-growth-as-openai-nears-100-billion-funding.html"
+        },
+        {
+          "title": "Gather AI完成4000万美元融资，推出好奇型仓储AI无人机",
+          "summary": "仓储AI公司Gather AI获得前Salesforce CEO Keith Block旗下Smith Point Capital领投的4000万美元融资，其仓储AI系统能够主动寻找特定数据而非仅被动扫描。",
+          "comment": "AI在仓储物流中从被动执行向主动决策转变，这对传统仓储运营的重构意义有多大？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/09/gather-ai-maker-of-curious-warehouse-drones-lands-40m-led-by-keith-blocks-firm"
+        },
+        {
+          "title": "小红书上线语音问一问功能，推进AI驱动的搜索升级",
+          "summary": "小红书正式上线语音问一问功能，用户可通过语音提问，系统基于真人经验笔记生成答案，并呈现相关内容推荐。",
+          "comment": "从文字搜索到语音交互再到AI总结答案，搜索产品形态的演进如何重塑用户信息获取方式？",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3676110606197379?f=rss"
+        },
+        {
+          "title": "华为天才少年创业推出全球首个虚实融合实时交互视频模型",
+          "summary": "华为天才少年创业团队开发出虚实融合的实时交互视频生成模型，标志着AI视频生成技术在交互性和实时性上的重大突破。",
+          "comment": "虚实融合的实时交互视频能否真正打破当前AI视频生成的延迟和交互限制？",
           "source": "机器之心",
           "url": "https://www.jiqizhixin.com/articles/2026-02-09-8"
-        },
-        {
-          "title": "谷歌Gemini在Chrome浏览器正式登陆Chromebook Plus",
-          "summary": "谷歌确认其Gemini AI功能现已在Chromebook Plus笔记本上的Chrome浏览器中可用。",
-          "comment": "将AI模型集成到浏览器中，是否会成为下一代个人计算设备的标配功能？",
-          "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/08/google-confirms-gemini-in-chrome-is-now-available-for-chromebook-plus-laptops/"
-        },
-        {
-          "title": "千问App接入天猫超市和盒马，AI开始替用户买单",
-          "summary": "阿里千问AI应用全面接入天猫超市、盒马等电商平台，用户可通过AI语音指令完成一站式年货采购。",
-          "comment": "AI助手从信息搜索进化到交易执行，这是否意味着AI已找到真正的商业变现路径？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/dK29Y45ty5tKcRhb.html"
         }
       ]
     },
@@ -54,44 +48,44 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "TSMC将在日本制造先进AI芯片",
-          "summary": "台积电宣布将在日本生产用于AI应用的先进芯片，标志着AI芯片制造地域分散化趋势。",
-          "comment": "AI芯片制造向日本等地扩展，是否会打破现有的芯片供应链地缘政治格局？",
-          "source": "AP News",
-          "url": "https://apnews.com/article/semiconductors-tsmc-japan-taiwan-ai-11256f2bfde73ca23d08331ad138d6d5"
+          "title": "Alphabet计划发行约150亿美元债券，用于AI投资热潮融资",
+          "summary": "谷歌母公司Alphabet正计划发行150亿美元的美元高等级债券，加入AI投资浪潮中大规模融资的科技巨头行列。",
+          "comment": "科技巨头通过债权融资数百亿美元投入AI基础设施，这种融资模式的可持续性和回报预期如何评估？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/google-parent-alphabet-kicks-off-seven-part-us-bond-sale"
         },
         {
-          "title": "欧盟警告Meta可能对WhatsApp AI政策实施制裁措施",
-          "summary": "欧盟委员会宣布对Meta可能实施临时措施，以推翻其WhatsApp AI政策，这是对其反垄断调查的后续行动。",
-          "comment": "欧盟对AI政策的监管干预，会如何影响全球科技公司的AI战略制定？",
-          "source": "CNBC",
-          "url": "https://www.cnbc.com/2026/02/09/eu-interim-measures-meta-whatsapp-ai-policy-antritrust.html"
+          "title": "欧盟要求Meta允许竞争对手AI聊天机器人在WhatsApp上运行",
+          "summary": "欧盟监管部门要求Meta允许其他AI聊天机器人供应商在WhatsApp平台上运行服务，挑战Meta的封闭生态。",
+          "comment": "监管部门强制要求开放平台给竞争对手的AI服务，这是否预示着未来AI助手竞争将围绕平台开放性展开？",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/cqxdj77welpo?at_medium=RSS&at_campaign=rss"
         },
         {
-          "title": "印度重新定义深科技初创企业资格，扩展AI融资支持",
-          "summary": "印度政府重新定义深科技初创企业标准，将资格期限延长至20年，目的是通过税收优惠和政府资金支持前沿AI创新。",
-          "comment": "印度通过政策创新扶持AI初创企业，能否成为全球AI创新的新的增长中心？",
-          "source": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/india-redraws-rules-for-deep-tech-funding-to-spur-innovation"
+          "title": "Discord启动全球用户年龄验证，拟通过人脸扫描或身份证验证",
+          "summary": "Discord宣布从3月起在全球推行年龄验证功能，所有用户需通过人脸扫描或身份证验证，否则将被限制使用成人内容频道。",
+          "comment": "大型社交平台采用人脸识别进行用户年龄验证，这种AI应用在隐私保护与内容安全之间的平衡点在哪里？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/875309/discord-age-verification-global-roll-out"
         },
         {
-          "title": "英飞凌加入AI融资潮，发行一年来首笔欧元债券",
-          "summary": "英飞凌科技公司发行其一年来首笔欧元债券，用于资助雄心勃勃的AI项目，加入科技企业融资AI的浪潮。",
-          "comment": "芯片制造商通过债券融资支持AI项目，说明了什么样的产业发展趋势？",
-          "source": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/infineon-joins-ai-funding-rush-with-first-euro-debt-in-a-year"
+          "title": "前General Atlantic高管筹集10亿美元基金投资AI驱动创业公司",
+          "summary": "前General Atlantic高管Anton Levy成立新基金，计划投资具备年增长率达300%潜力的AI驱动型初创企业。",
+          "comment": "投资者对AI初创企业的增长预期（年增300%）是否过于乐观，还是反映了AI市场真实的机遇窗口？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/0b961a9d-d4a7-43e9-b8a0-65ab97d4dc3d"
         },
         {
-          "title": "中国芯片设计商澜起科技在香港上市首日暴涨60%",
-          "summary": "中国芯片设计企业澜起科技在香港上市首日股价飙升60%，融资9.02亿美元，显示资本市场对国产AI芯片的热情。",
-          "comment": "国产AI芯片企业的上市热潮，能否打破美国在高端芯片领域的垄断地位？",
-          "source": "CNBC",
-          "url": "https://www.cnbc.com/2026/02/09/chinese-chipmaker-montage-technology-hong-kong-ipo-debut.html"
+          "title": "MIT Technology Review推出新闻通讯'Making AI Work'，聚焦AI实际应用",
+          "summary": "MIT Technology Review推出专门的AI通讯'Making AI Work'，专注报道AI在医疗、气候科技、教育等领域的具体应用案例。",
+          "comment": "从AI技术理论研究转向实际应用报道，这反映了整个AI产业发展的哪个阶段转变？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/09/1132462/ai-newsletter-professional-applications/"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-09T19:16:59.562226+08:00"
+  "created_at": "2026-02-09T22:57:11.219677+08:00"
 }
