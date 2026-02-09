@@ -7,9 +7,9 @@
       "icon": "🥽",
       "news": [
         {
-          "title": "夸克AI眼镜S1新增「直播」功能",
-          "summary": "夸克AI眼镜S1迎来软件升级，新增支持第一视角直播功能，用户可通过眼镜内置摄像头直接发起直播，适合户外骑行、旅行探店等场景。同时还上线了截屏、录屏功能，可同步记录虚拟显示屏上的AI信息与真实场景。",
-          "comment": "AI眼镜从信息展示向内容创作工具升级，这会如何改变用户的日常记录和分享方式？",
+          "title": "夸克AI眼镜S1新增直播功能",
+          "summary": "夸克AI眼镜S1升级后支持第一视角直播功能，用户可通过眼镜内置摄像头直接发起直播，同时新增截屏、录屏功能用于记录AI信息和实时场景。",
+          "comment": "AI眼镜的直播和录屏能力如何改变内容创作者的工作流和商业模式？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544705.html"
         }
@@ -20,46 +20,39 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "中国科大、科大讯飞团队开发ChemEval：化学大模型多层次多维度能力评估的新基准",
-          "summary": "中国科大和科大讯飞联合推出ChemEval，为化学大模型的多维度能力评估提供了新的评估基准，标志着AI在化学领域的能力评估体系逐步完善。",
-          "comment": "化学领域的大模型评估基准如何能够加速AI在科学研究中的实际应用？",
-          "source": "机器之心",
-          "url": "https://www.jiqizhixin.com/articles/2026-02-09"
+          "title": "首个多模态记忆湖MemoryLake发布：AI基础设施迈入记忆驱动时代",
+          "summary": "质变科技发布MemoryLake平台，集成多模态内容理解、记忆存储和计算管理，标志AI基础设施从数据驱动向记忆驱动转变。",
+          "comment": "当AI系统开始拥有持久化的多模态记忆能力，企业决策的准确性和可解释性是否会产生质的飞跃？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/ai/tQF0ahbkW8nRkVqN.html"
         },
         {
-          "title": "百度智能云推出OpenClaw极速简易部署方案，加速Agent应用落地",
-          "summary": "百度智能云推出OpenClaw简易版部署方案，通过可视化配置面板让非专业开发者也能快速部署AI Agent应用，降低了Agent技术的使用门槛。",
-          "comment": "简化AI Agent部署能否真正让非技术人员成为AI应用的创建者？",
+          "title": "百度智能云推出OpenClaw极速简易部署方案",
+          "summary": "百度智能云推出OpenClaw轻量化部署方案，降低AI Agent应用的开发门槛，加速从体验到实用的落地进程。",
+          "comment": "当AI Agent的部署难度大幅降低，非专业开发者的参与会如何改变AI应用的生态格局？",
           "source": "雷峰网",
           "url": "https://www.leiphone.com/category/industrynews/LRiK4YxAiUvC2TRN.html"
         },
         {
-          "title": "字节跳动新视频生成模型引发中国AI应用股票大涨",
-          "summary": "字节跳动推出的最新视频生成模型因其优异的内容创作质量在业界获得认可，引发中国媒体和AI应用公司股价上升。",
-          "comment": "视频生成模型的突破如何重新定义AI内容创作的竞争格局？",
-          "source": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/bytedance-s-new-video-model-sparks-rally-in-china-ai-app-stocks"
+          "title": "华为天才少年创业：全球首个虚实融合的实时交互视频模型来了",
+          "summary": "华为天才少年创业公司发布虚实融合的实时交互视频模型，将动画角色与现实场景实时融合互动。",
+          "comment": "虚实融合的实时交互能力成熟后，数字人与真人的界限还会存在吗？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-09-8"
         },
         {
-          "title": "中美AI应用分岔路：阿里千问推出春节补贴活动展示Agent落地新方向",
-          "summary": "阿里的AI入口'千问'推出春节'30亿大免单'活动，通过实际帮助用户点奶茶等生活场景展示了中国AI Agent与美国企业级应用的不同路径。",
-          "comment": "AI Agent从办公自动化延伸到日常消费场景，这种应用路径转变意味着什么？",
+          "title": "中美AI应用的分岔路，出现在这个春节",
+          "summary": "阿里千问推出AI Agent应用，通过春节补贴活动展示AI办事能力，反映中美AI应用路径差异——中国更关注生活场景落地。",
+          "comment": "当AI Agent从B端企业系统走向C端日常生活，AI的价值定义是否需要被重新审视？",
           "source": "雷峰网",
           "url": "https://www.leiphone.com/category/industrynews/YuswDroey1c3iUE4.html"
         },
         {
-          "title": "Anthropic的Claude C编译器与GCC的性能对比分析",
-          "summary": "Claude开发的C编译器与传统GCC编译器进行了性能对比，展示了AI生成代码工具在编程领域的实际能力。",
-          "comment": "AI生成的编译器能否在性能上挑战传统开源工具的统治地位？",
-          "source": "Hacker News",
-          "url": "https://harshanu.space/en/tech/ccc-vs-gcc/"
-        },
-        {
-          "title": "NanoClaw容器现已支持Claude的Agent群体协作能力",
-          "summary": "NanoClaw容器技术扩展了对Claude Agent群体协作的支持，使开发者能更容易地部署多Agent协作系统。",
-          "comment": "多Agent协作在容器化部署中的完善能否加速Agent应用的商业化？",
-          "source": "Hacker News",
-          "url": "https://twitter.com/Gavriel_Cohen/status/2020701159175155874"
+          "title": "字节跳动新视频生成模型引发中国AI应用股票上涨",
+          "summary": "字节跳动推出新视频生成模型，因内容生成质量获得分析师认可，带动中国媒体和AI应用公司股价上涨。",
+          "comment": "视频生成模型的质量突破是否预示着内容创作工具的下一个拐点即将到来？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/bytedance-s-new-video-model-sparks-rally-in-china-ai-app-stocks"
         }
       ]
     },
@@ -68,51 +61,37 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "台积电宣布在日本制造先进AI芯片",
-          "summary": "台积电将在日本建立先进芯片制造设施，专门生产AI芯片，这是台积电全球AI芯片供应战略的重要部分。",
-          "comment": "台积电在日本建立AI芯片制造基地如何改变全球AI芯片供应链格局？",
-          "source": "AP News",
+          "title": "台积电将在日本生产先进AI芯片",
+          "summary": "台积电宣布在日本制造先进AI芯片，扩大其AI芯片生产布局，满足全球需求并分散产能风险。",
+          "comment": "台积电的地缘多元化战略是否标志着全球芯片产业格局正在发生结构性转变？",
+          "source": "Hacker News/AP News",
           "url": "https://apnews.com/article/semiconductors-tsmc-japan-taiwan-ai-11256f2bfde73ca23d08331ad138d6d5"
         },
         {
-          "title": "Omdia报告：百度智能云在中国具身智能AI云市场占率第一",
-          "summary": "Omdia发布报告显示百度智能云以35%市占率居中国具身智能AI云服务市场第一，领先优势超过第二名两倍，预计2030年市场规模将增长至4.08亿美元。",
-          "comment": "百度智能云在具身智能领域的领先优势能否维持到下一个产业周期？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3675618947605378?f=rss"
-        },
-        {
-          "title": "科技巨头争相投入660亿美元AI支出，面临资金压力",
-          "summary": "大科技公司面临前所未有的AI基础设施投资压力，需要选择是削减股东回报、动用储备还是融资来支撑660亿美元的AI支出计划。",
-          "comment": "如此庞大的AI投资是否能产生相应的商业回报，还是会成为科技行业的泡沫？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/d503afd5-1012-40f0-8f9d-620dcb39a9a2"
-        },
-        {
-          "title": "Blackstone和Coatue向澳大利亚AI初创企业Firmus提供100亿美元贷款",
-          "summary": "Blackstone旗下基金和Coatue Capital为澳大利亚初创公司Firmus Technologies提供100亿美元贷款，用于支持其数据中心扩展，这是澳大利亚最大规模的私募信贷融资之一。",
-          "comment": "为新兴AI数据中心公司提供超大额贷款反映了投资者对AI基础设施未来的什么判断？",
-          "source": "Bloomberg",
+          "title": "英伟达支持的澳大利亚AI创企获黑石领导的100亿美元贷款",
+          "summary": "澳大利亚AI创企Firmus Technologies获得黑石等机构提供的100亿美元贷款，用于数据中心扩建，创澳大利亚私募信贷最大融资记录。",
+          "comment": "数据中心融资规模的这种爆发式增长是否预示着AI基础设施投资正在进入新的阶段？",
+          "source": "Bloomberg Technology",
           "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
         },
         {
-          "title": "中国芯片设计公司晶晨股份在香港上市首日暴涨57%",
-          "summary": "中国芯片设计公司晶晨股份在香港首次公开募股中筹集9.02亿美元，上市首日股价暴涨57%，反映了市场对国内芯片设计企业的强烈需求。",
-          "comment": "国内芯片设计企业在国际资本市场的热捧是否预示AI芯片国产化进程的加速？",
-          "source": "CNBC",
-          "url": "https://www.cnbc.com/2026/02/09/chinese-chipmaker-montage-technology-hong-kong-ipo-debut.html"
+          "title": "中国数字出口激增，阿里、腾讯等科技巨头领导全球扩张",
+          "summary": "中国数字服务出口大幅增长，字节跳动、腾讯等巨头在直播、电商和AI领域加快海外布局。",
+          "comment": "中国AI应用的出海潮是否会重塑全球AI应用的竞争格局？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/china-digital-exports-surge-as-alibaba-tencent-lead-global-push"
         },
         {
-          "title": "中国数字出口激增，阿里和腾讯领导全球扩张",
-          "summary": "中国科技公司从字节跳动到腾讯的数字服务出口持续增长，包括直播、电商和AI应用等领域，这些巨头正在全球范围内推进AI和数字服务业务。",
-          "comment": "中国科技巨头的全球AI应用输出能否打破美国在该领域的话语权？",
-          "source": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/china-digital-exports-surge-as-alibaba-tencent-lead-global-push"
+          "title": "OpenAI超级碗泄露广告被证实是骗局",
+          "summary": "声称OpenAI超级碗广告泄露的耳机和发光球体产品被证实为虚假信息，反映科技公司围绕超级碗广告的营销生态复杂。",
+          "comment": "当AI和科技话题足以成为造假诱饵，这是否反映了公众对AI产品发布的期待已达到什么样的高度？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/875615/openai-super-bowl-ai-hardware-leak-hoax-fake"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-09T14:03:47.172325+08:00"
+  "created_at": "2026-02-09T16:10:12.372569+08:00"
 }
