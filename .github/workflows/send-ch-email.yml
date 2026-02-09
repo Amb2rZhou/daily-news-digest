@@ -1,0 +1,111 @@
+name: "Send: email"
+
+on:
+  schedule:
+    # 1 hour before 10:00 CST (UTC+8) = 01:00 UTC
+    - cron: '0 1 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  send-channel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Sleep until send time
+        run: |
+          python3 -c "
+          import json, time
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          settings = json.load(open('config/settings.json'))
+          tz = ZoneInfo(settings.get('timezone', 'Asia/Shanghai'))
+          channels = settings.get('channels', [])
+
+          channel = None
+          for ch in channels:
+              if ch.get('id') == 'email':
+                  channel = ch
+                  break
+
+          if not channel:
+              print('Channel email not found, skipping sleep')
+          else:
+              send_hour = channel.get('send_hour', 10)
+              send_minute = channel.get('send_minute', 0)
+              now = datetime.now(tz)
+              target = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
+
+              diff = (target - now).total_seconds()
+              if diff > 0:
+                  print(f'Sleeping {diff:.0f}s until {target.strftime(\"%H:%M\")} {tz}')
+                  time.sleep(diff)
+              else:
+                  print(f'Already past send time {target.strftime(\"%H:%M\")}, proceeding immediately')
+          "
+
+      - name: Pull latest edits
+        run: git pull origin main --rebase || true
+
+      - name: Send channel
+        env:
+          SMTP_HOST: smtp.qq.com
+          SMTP_PORT: 587
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
+          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
+          SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
+        run: |
+          cd src
+          python main.py send --channel email
+
+      - name: Commit sent status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config/drafts/
+          git diff --cached --quiet || git commit -m "Mark email draft as sent"
+          git pull origin main --rebase -X theirs || {
+            git checkout --theirs config/drafts/ 2>/dev/null || true
+            git add config/drafts/
+            git rebase --continue
+          }
+          git push
+
+      - name: Notify admin on failure
+        if: failure()
+        env:
+          SMTP_HOST: smtp.qq.com
+          SMTP_PORT: '587'
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_RECIPIENTS: ${{ secrets.ADMIN_EMAIL }}
+        run: |
+          cd src
+          python -c "
+          from send_email import send_email
+          send_email(
+              subject='[FAILED] Send email - ${{ github.run_id }}',
+              body='<h3>Send email 运行失败</h3><p>Run ID: <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">${{ github.run_id }}</a></p><p>请检查 Actions 日志。</p>'
+          )
+          "

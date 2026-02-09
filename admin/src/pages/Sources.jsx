@@ -234,6 +234,17 @@ export default function Sources() {
         </div>
       </div>
 
+      {/* Batch add hint */}
+      <div style={{
+        ...card,
+        background: '#f0f9ff', borderColor: '#bae6fd',
+        display: 'flex', alignItems: 'center', gap: 12,
+      }}>
+        <span style={{ fontSize: 14, color: '#0369a1', flex: 1 }}>
+          需要将新闻源批量添加到多个频道？前往各频道详情页的「频道设置」tab 管理。
+        </span>
+      </div>
+
       {/* Feed list by group */}
       {Object.entries(groups).map(([group, groupFeeds]) => {
         const groupEnabled = groupFeeds.filter(f => f.enabled).length

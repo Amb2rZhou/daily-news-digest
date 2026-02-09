@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
-import { readFile, writeFile, listFiles, getWorkflowRuns, triggerWorkflow, deleteFile } from '../lib/github'
-import { getStoredAuth } from '../lib/auth'
-import { hasAnthropicKey, generateSummary } from '../lib/claude'
-import { generateEmailHtml } from '../lib/emailTemplate'
+import { useNavigate } from 'react-router-dom'
+import { readFile, writeFile, listFiles, getWorkflowRuns, triggerWorkflow } from '../lib/github'
 
 const card = {
   background: 'var(--card)', borderRadius: 'var(--radius)',
@@ -11,45 +9,22 @@ const card = {
 
 const WEWE_RSS_BASE = 'https://amb2rzhou.zeabur.app'
 
-const CATEGORY_ICONS = {
-  // 聚焦模式 3 分类
-  '智能硬件': '🥽', 'AI技术与产品': '🤖', '巨头动向与行业观察': '🏢',
-  // 泛 AI 模式 5 分类
-  '产品发布': '🚀', '巨头动向': '🏢', '技术进展': '🔬',
-  '行业观察': '📊', '投融资': '💰',
-}
-
 const btnPrimary = {
   padding: '8px 20px', borderRadius: 6, border: 'none',
   fontWeight: 600, fontSize: 14, cursor: 'pointer', transition: 'opacity .15s',
 }
 
 export default function Dashboard() {
+  const navigate = useNavigate()
   const [settings, setSettings] = useState(null)
   const [runs, setRuns] = useState([])
-  const [recentDrafts, setRecentDrafts] = useState([])
   const [loading, setLoading] = useState(true)
   const [weweStatus, setWeweStatus] = useState(null)
   const [triggerStatus, setTriggerStatus] = useState({})
-  const [latestDraft, setLatestDraft] = useState(null)
-  const [draftSha, setDraftSha] = useState(null)
-  const [draftExpanded, setDraftExpanded] = useState({})
-  const [saving, setSaving] = useState(false)
-  const [showEmailPreview, setShowEmailPreview] = useState(false)
-  const [editingNews, setEditingNews] = useState(null) // { catIdx, newsIdx }
-  const [editSummary, setEditSummary] = useState('')
-  const [showAddNews, setShowAddNews] = useState(false)
-  const [addForm, setAddForm] = useState({ url: '', title: '', summary: '', source: '', category: '' })
-  const [aiLoading, setAiLoading] = useState(false)
-  const [refetching, setRefetching] = useState(false)
+  const [channelDraftInfo, setChannelDraftInfo] = useState({}) // { channelId: { status, newsCount } }
   const pollRef = useRef(null)
 
-  // Multi-channel state
-  const [activeTab, setActiveTab] = useState('email')
-  const [channelDrafts, setChannelDrafts] = useState({}) // { channelId: { data, sha } }
-
   useEffect(() => { load() }, [])
-
   useEffect(() => {
     return () => { if (pollRef.current) clearInterval(pollRef.current) }
   }, [])
@@ -64,55 +39,29 @@ export default function Dashboard() {
         setSettings(parsedSettings)
       }
 
-      try {
-        const files = await listFiles('config/drafts')
-        // Filter out channel drafts for the recent drafts list (email only)
-        const emailDrafts = files
-          .filter(f => f.name.endsWith('.json') && !f.name.includes('_ch_'))
-          .sort((a, b) => b.name.localeCompare(a.name))
-          .slice(0, 7)
+      // Load draft info for all channels
+      if (parsedSettings) {
+        const channels = (parsedSettings.channels || []).filter(c => c.enabled)
+        const today = new Date().toISOString().slice(0, 10)
+        const draftInfo = {}
 
-        // 加载所有草稿内容以显示状态
-        const draftsWithData = await Promise.all(emailDrafts.map(async (f) => {
+        await Promise.all(channels.map(async (ch) => {
+          const fname = ch.type === 'email' ? `${today}.json` : `${today}_ch_${ch.id}.json`
           try {
-            const file = await readFile(`config/drafts/${f.name}`)
+            const file = await readFile(`config/drafts/${fname}`)
             if (file) {
               const data = JSON.parse(file.content)
-              return { name: f.name, status: data.status, newsCount: (data.categories || []).reduce((n, c) => n + (c.news || []).length, 0) }
+              draftInfo[ch.id] = {
+                status: data.status || 'pending_review',
+                newsCount: (data.categories || []).reduce((n, c) => n + (c.news || []).length, 0),
+              }
             }
-          } catch {}
-          return { name: f.name }
+          } catch { /* draft may not exist */ }
         }))
-        setRecentDrafts(draftsWithData)
+        setChannelDraftInfo(draftInfo)
+      }
 
-        if (emailDrafts.length > 0) {
-          const latestFile = await readFile(`config/drafts/${emailDrafts[0].name}`)
-          if (latestFile) {
-            setLatestDraft({ name: emailDrafts[0].name, ...JSON.parse(latestFile.content) })
-            setDraftSha(latestFile.sha)
-          }
-        }
-
-        // Load channel drafts
-        if (parsedSettings) {
-          const channels = (parsedSettings.channels || []).filter(c => c.enabled && c.type !== 'email')
-          const today = emailDrafts.length > 0 ? emailDrafts[0].name.replace('.json', '') : null
-          if (today && channels.length > 0) {
-            const chDrafts = {}
-            await Promise.all(channels.map(async (ch) => {
-              const chFileName = `${today}_ch_${ch.id}.json`
-              try {
-                const file = await readFile(`config/drafts/${chFileName}`)
-                if (file) {
-                  chDrafts[ch.id] = { data: { name: chFileName, ...JSON.parse(file.content) }, sha: file.sha }
-                }
-              } catch { /* channel draft may not exist */ }
-            }))
-            setChannelDrafts(chDrafts)
-          }
-        }
-      } catch { /* drafts dir may not exist */ }
-
+      // WeWe RSS status
       try {
         const res = await fetch(`${WEWE_RSS_BASE}/feeds`)
         if (res.ok) {
@@ -141,14 +90,9 @@ export default function Dashboard() {
     try {
       const fetchRuns = await getWorkflowRuns('fetch-news.yml', 5)
       const sendRuns = await getWorkflowRuns('send-email.yml', 5)
-      let autoSendRuns = { workflow_runs: [] }
-      try {
-        autoSendRuns = await getWorkflowRuns('auto-send.yml', 5)
-      } catch { /* auto-send workflow may not exist yet */ }
       setRuns([
         ...(fetchRuns.workflow_runs || []).map(r => ({ ...r, type: 'fetch' })),
         ...(sendRuns.workflow_runs || []).map(r => ({ ...r, type: 'send' })),
-        ...(autoSendRuns.workflow_runs || []).map(r => ({ ...r, type: 'auto-send' })),
       ].sort((a, b) => new Date(b.created_at) - new Date(a.created_at)).slice(0, 10))
     } catch { /* workflow may not exist yet */ }
   }
@@ -178,144 +122,24 @@ export default function Dashboard() {
     }
   }, [])
 
-  // Save draft back to GitHub (for email or channel)
-  async function saveDraft(updatedDraft, channelId = null) {
-    setSaving(true)
-    try {
-      const { name, ...data } = updatedDraft
-      const content = JSON.stringify(data, null, 2) + '\n'
+  const triggerBtnLabel = (key, defaultLabel) => {
+    const s = triggerStatus[key]
+    if (s === 'loading') return '触发中...'
+    if (s === 'success') return '已触发'
+    if (s === 'error') return '失败'
+    return defaultLabel
+  }
 
-      if (channelId) {
-        const chInfo = channelDrafts[channelId]
-        if (!chInfo) { setSaving(false); return }
-        const result = await writeFile(
-          `config/drafts/${name}`,
-          content,
-          `Update channel draft ${name} via admin UI`,
-          chInfo.sha
-        )
-        setChannelDrafts(prev => ({
-          ...prev,
-          [channelId]: { data: updatedDraft, sha: result.content.sha }
-        }))
-      } else {
-        if (!latestDraft || !draftSha) { setSaving(false); return }
-        const result = await writeFile(
-          `config/drafts/${name}`,
-          content,
-          `Update draft ${name} via admin UI`,
-          draftSha
-        )
-        setDraftSha(result.content.sha)
-        setLatestDraft(updatedDraft)
-      }
-    } catch (e) {
-      alert('保存失败: ' + e.message)
+  const statusBadge = (status) => {
+    const map = {
+      pending_review: { bg: '#fef3c7', color: '#d97706', label: '待审核' },
+      approved: { bg: '#dbeafe', color: '#2563eb', label: '已审核' },
+      sent: { bg: '#d1fae5', color: '#059669', label: '已发送' },
+      rejected: { bg: '#fee2e2', color: '#dc2626', label: '已拒绝' },
     }
-    setSaving(false)
+    const s = map[status] || { bg: '#f3f4f6', color: '#6b7280', label: status || '无草稿' }
+    return <span style={{ background: s.bg, color: s.color, padding: '2px 10px', borderRadius: 12, fontSize: 12, fontWeight: 500 }}>{s.label}</span>
   }
-
-  // Get the active draft based on current tab
-  function getActiveDraft() {
-    if (activeTab === 'email') return latestDraft
-    const chInfo = channelDrafts[activeTab]
-    return chInfo?.data || null
-  }
-
-  // Review actions
-  async function handleApprove() {
-    const draft = getActiveDraft()
-    if (!draft) return
-    const channelId = activeTab === 'email' ? null : activeTab
-    await saveDraft({ ...draft, status: 'approved' }, channelId)
-    // 批准后自动触发发送工作流
-    handleTrigger('send-email.yml', 'send', { channel_id: activeTab })
-  }
-
-  async function handleReject() {
-    const draft = getActiveDraft()
-    if (!draft) return
-    const channelId = activeTab === 'email' ? null : activeTab
-    await saveDraft({ ...draft, status: 'rejected' }, channelId)
-  }
-
-  // Delete a news item
-  async function handleDeleteNews(catIdx, newsIdx) {
-    const draft = getActiveDraft()
-    if (!draft) return
-    const categories = [...draft.categories]
-    const cat = { ...categories[catIdx], news: [...categories[catIdx].news] }
-    cat.news.splice(newsIdx, 1)
-    if (cat.news.length === 0) {
-      categories.splice(catIdx, 1)
-    } else {
-      categories[catIdx] = cat
-    }
-    const channelId = activeTab === 'email' ? null : activeTab
-    await saveDraft({ ...draft, categories }, channelId)
-  }
-
-  // Save edited summary
-  async function handleSaveSummary(catIdx, newsIdx) {
-    const draft = getActiveDraft()
-    if (!draft) return
-    const categories = [...draft.categories]
-    const cat = { ...categories[catIdx], news: [...categories[catIdx].news] }
-    cat.news[newsIdx] = { ...cat.news[newsIdx], summary: editSummary }
-    categories[catIdx] = cat
-    const channelId = activeTab === 'email' ? null : activeTab
-    await saveDraft({ ...draft, categories }, channelId)
-    setEditingNews(null)
-  }
-
-  // Add news
-  async function handleAddNews() {
-    if (!addForm.title.trim() || !addForm.category) {
-      alert('标题和分类为必填项')
-      return
-    }
-    const draft = getActiveDraft()
-    if (!draft) return
-
-    const newItem = {
-      title: addForm.title.trim(),
-      url: addForm.url.trim() || '#',
-      summary: addForm.summary.trim(),
-      source: addForm.source.trim(),
-    }
-
-    const categories = [...draft.categories]
-    const catIdx = categories.findIndex(c => c.name === addForm.category)
-    if (catIdx >= 0) {
-      const cat = { ...categories[catIdx], news: [...categories[catIdx].news, newItem] }
-      categories[catIdx] = cat
-    } else {
-      categories.push({ name: addForm.category, news: [newItem] })
-    }
-
-    const channelId = activeTab === 'email' ? null : activeTab
-    await saveDraft({ ...draft, categories }, channelId)
-    setAddForm({ url: '', title: '', summary: '', source: '', category: '' })
-    setShowAddNews(false)
-  }
-
-  // AI generate summary
-  async function handleAiSummary() {
-    if (!addForm.title.trim()) {
-      alert('请先填写标题')
-      return
-    }
-    setAiLoading(true)
-    try {
-      const summary = await generateSummary(addForm.title, addForm.url)
-      setAddForm(prev => ({ ...prev, summary }))
-    } catch (e) {
-      alert('AI 摘要生成失败: ' + e.message)
-    }
-    setAiLoading(false)
-  }
-
-  const stored = getStoredAuth()
 
   const runStatusBadge = (status, conclusion) => {
     if (status === 'completed') {
@@ -337,49 +161,9 @@ export default function Dashboard() {
     return <span style={{ color: 'var(--text2)', fontSize: 12 }}>{status}</span>
   }
 
-  const triggerBtnLabel = (key, defaultLabel) => {
-    const s = triggerStatus[key]
-    if (s === 'loading') return '触发中...'
-    if (s === 'success') return '已触发 ✓'
-    if (s === 'error') return '失败 ✗'
-    return defaultLabel
-  }
-
-  const statusBadge = (status) => {
-    const map = {
-      pending_review: { bg: '#fef3c7', color: '#d97706', label: '待审核' },
-      approved: { bg: '#dbeafe', color: '#2563eb', label: '已审核' },
-      sent: { bg: '#d1fae5', color: '#059669', label: '已发送' },
-      rejected: { bg: '#fee2e2', color: '#dc2626', label: '已拒绝' },
-    }
-    const s = map[status] || { bg: '#f3f4f6', color: '#6b7280', label: status || '未知' }
-    return <span style={{ background: s.bg, color: s.color, padding: '2px 10px', borderRadius: 12, fontSize: 12, fontWeight: 500 }}>{s.label}</span>
-  }
-
-  // Status dot for tab
-  const statusDot = (status) => {
-    const colorMap = {
-      pending_review: '#d97706',
-      approved: '#2563eb',
-      sent: '#059669',
-      rejected: '#dc2626',
-    }
-    const color = colorMap[status] || '#9ca3af'
-    return <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: color, marginLeft: 6 }} />
-  }
-
   if (loading) return <p style={{ color: 'var(--text2)' }}>加载中...</p>
 
-  const feeds = settings?.rss_feeds || []
-  const enabledFeeds = feeds.filter(f => f.enabled)
-  const recipients = settings?.recipients || []
-  const enabledRecipients = recipients.filter(r => r.enabled)
-  const categoryOptions = settings?.categories_order || Object.keys(CATEGORY_ICONS)
-  const enabledChannels = (settings?.channels || []).filter(c => c.enabled && c.type !== 'email')
-
-  // Get the currently active draft
-  const activeDraft = getActiveDraft()
-  const activeChannelName = activeTab === 'email' ? null : enabledChannels.find(c => c.id === activeTab)?.name
+  const channels = (settings?.channels || []).filter(c => c.enabled)
 
   return (
     <div>
@@ -390,65 +174,28 @@ export default function Dashboard() {
       {/* Workflow trigger buttons */}
       <div style={{ display: 'flex', gap: 12, marginBottom: 24 }}>
         <button
-          onClick={async () => {
-            if (latestDraft && draftSha) {
-              // 有草稿，先删除再抓取
-              if (!confirm('确定要删除当前草稿并重新抓取吗？')) return
-              setRefetching(true)
-              try {
-                await deleteFile(
-                  `config/drafts/${latestDraft.name}`,
-                  `Delete draft ${latestDraft.name} for re-fetch`,
-                  draftSha
-                )
-                setLatestDraft(null)
-                setDraftSha(null)
-              } catch (e) {
-                alert('删除草稿失败: ' + e.message)
-                setRefetching(false)
-                return
-              }
-              setRefetching(false)
-            }
-            handleTrigger('fetch-news.yml', 'fetch')
-          }}
-          disabled={triggerStatus.fetch === 'loading' || refetching}
+          onClick={() => handleTrigger('fetch-news.yml', 'fetch')}
+          disabled={triggerStatus.fetch === 'loading'}
           style={{
             ...btnPrimary, background: '#2563eb', color: '#fff',
-            opacity: (triggerStatus.fetch === 'loading' || refetching) ? 0.6 : 1,
+            opacity: triggerStatus.fetch === 'loading' ? 0.6 : 1,
           }}
         >
-          {refetching ? '删除中...' : triggerBtnLabel('fetch', latestDraft ? '重新抓取' : '抓取新闻')}
+          {triggerBtnLabel('fetch', '抓取新闻')}
         </button>
-        <button
-          onClick={() => {
-            if (activeTab === 'email') {
-              handleTrigger('send-email.yml', 'send', { channel_id: 'email' })
-            } else {
-              handleTrigger('send-email.yml', 'send', { channel_id: activeTab })
-            }
-          }}
-          disabled={triggerStatus.send === 'loading'}
-          style={{
-            ...btnPrimary, background: '#059669', color: '#fff',
-            opacity: triggerStatus.send === 'loading' ? 0.6 : 1,
-          }}
-        >
-          {triggerBtnLabel('send', activeTab === 'email' ? '发送邮件' : `发送 ${activeChannelName || activeTab}`)}
-        </button>
-        {(triggerStatus.fetch === 'success' || triggerStatus.send === 'success' || triggerStatus.webhook === 'success') && (
+        {(triggerStatus.fetch === 'success' || triggerStatus.send === 'success') && (
           <span style={{ fontSize: 13, color: 'var(--success)', alignSelf: 'center' }}>
             Workflow 已触发，运行记录将自动刷新
           </span>
         )}
-        {(triggerStatus.fetch === 'error' || triggerStatus.send === 'error' || triggerStatus.webhook === 'error') && (
+        {(triggerStatus.fetch === 'error' || triggerStatus.send === 'error') && (
           <span style={{ fontSize: 13, color: 'var(--danger)', alignSelf: 'center' }}>
             触发失败，请检查 Token 权限
           </span>
         )}
       </div>
 
-      {/* WeWe RSS login status alert */}
+      {/* WeWe RSS status */}
       {weweStatus && !weweStatus.ok && (
         <div style={{
           padding: '12px 16px', marginBottom: 16, borderRadius: 8,
@@ -489,100 +236,99 @@ export default function Dashboard() {
         </div>
       )}
 
-      {/* Config summary cards */}
-      {(() => {
-        // Find the active channel for displaying send_time and max_items
-        const allChannels = settings?.channels || []
-        const activeChannel = activeTab === 'email'
-          ? allChannels.find(c => c.type === 'email')
-          : allChannels.find(c => c.id === activeTab)
-        const chSendHour = activeChannel?.send_hour ?? 18
-        const chSendMinute = activeChannel?.send_minute ?? 0
-        const chMaxItems = activeChannel?.max_news_items ?? 10
-        const chName = activeChannel?.name || (activeTab === 'email' ? '邮件' : activeTab)
-
-        return (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16, marginBottom: 24 }}>
-            <div style={card}>
-              <div style={{ fontSize: 13, color: 'var(--text2)' }}>发送时间 ({chName})</div>
-              <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
-                {String(chSendHour).padStart(2, '0')}:{String(chSendMinute).padStart(2, '0')}
-              </div>
-              <div style={{ fontSize: 12, color: 'var(--text3)' }}>{settings?.timezone || 'Asia/Shanghai'}</div>
-            </div>
-            <div style={card}>
-              <div style={{ fontSize: 13, color: 'var(--text2)' }}>新闻条数 ({chName})</div>
-              <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>{chMaxItems}</div>
-              <div style={{ fontSize: 12, color: 'var(--text3)' }}>每日最大</div>
-            </div>
-            <div style={card}>
-              <div style={{ fontSize: 13, color: 'var(--text2)' }}>新闻源</div>
-              <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
-                {enabledFeeds.length}<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text3)' }}>/{feeds.length}</span>
-              </div>
-              <div style={{ fontSize: 12, color: 'var(--text3)' }}>启用/总数</div>
-            </div>
-            <div style={card}>
-              <div style={{ fontSize: 13, color: 'var(--text2)' }}>收件人</div>
-              <div style={{ fontSize: 24, fontWeight: 700, marginTop: 4 }}>
-                {enabledRecipients.length}<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text3)' }}>/{recipients.length}</span>
-              </div>
-              <div style={{ fontSize: 12, color: 'var(--text3)' }}>启用/总数</div>
-            </div>
-          </div>
-        )
-      })()}
-
-      {/* Source health overview */}
-      <div style={{ ...card, marginBottom: 24 }}>
-        <h2 style={{ fontSize: 16, marginBottom: 12 }}>源健康概览</h2>
-        {feeds.length === 0 ? (
-          <p style={{ color: 'var(--text3)', fontSize: 14 }}>暂未配置新闻源</p>
-        ) : (
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-            {(() => {
-              const groups = {}
-              feeds.forEach(f => {
-                const g = f.group || '未分组'
-                if (!groups[g]) groups[g] = { total: 0, enabled: 0 }
-                groups[g].total++
-                if (f.enabled) groups[g].enabled++
-              })
-              return Object.entries(groups).map(([group, stats]) => (
-                <div key={group} style={{
-                  padding: '8px 14px', borderRadius: 8, border: '1px solid var(--border)',
-                  background: stats.enabled === stats.total ? '#f0fdf4' : stats.enabled === 0 ? '#fef2f2' : '#fffbeb',
-                  fontSize: 13,
+      {/* Channel grid */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+        gap: 16,
+        marginBottom: 24,
+      }}>
+        {channels.map(ch => {
+          const info = channelDraftInfo[ch.id]
+          const isEmail = ch.type === 'email'
+          return (
+            <div
+              key={ch.id}
+              onClick={() => navigate(`/channel/${ch.id}`)}
+              style={{
+                ...card,
+                cursor: 'pointer',
+                transition: 'box-shadow .15s, transform .15s',
+                borderLeft: `4px solid ${isEmail ? '#2563eb' : '#059669'}`,
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'
+                e.currentTarget.style.transform = 'translateY(-2px)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.boxShadow = 'var(--shadow)'
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+                <span style={{ fontWeight: 600, fontSize: 15, flex: 1 }}>{ch.name || ch.id}</span>
+                <span style={{
+                  fontSize: 11, padding: '2px 8px', borderRadius: 4, fontWeight: 500,
+                  background: isEmail ? '#dbeafe' : '#dcfce7',
+                  color: isEmail ? '#1d4ed8' : '#166534',
                 }}>
-                  <span style={{ fontWeight: 500 }}>{group}</span>
-                  <span style={{ color: 'var(--text2)', marginLeft: 8 }}>{stats.enabled}/{stats.total}</span>
-                </div>
-              ))
-            })()}
-          </div>
-        )}
-      </div>
-
-      {/* Recent send records (email only) */}
-      <div style={{ ...card, marginBottom: 24 }}>
-        <h2 style={{ fontSize: 16, marginBottom: 12 }}>最近发送记录</h2>
-        {recentDrafts.length === 0 ? (
-          <p style={{ color: 'var(--text3)', fontSize: 14 }}>暂无草稿记录</p>
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            {recentDrafts.map(f => (
-              <div key={f.name} style={{
-                display: 'flex', alignItems: 'center', gap: 12,
-                padding: '8px 12px', background: '#f9fafb', borderRadius: 6,
-                border: '1px solid var(--border)', fontSize: 13,
-              }}>
-                <span style={{ fontWeight: 500 }}>{f.name.replace('.json', '')}</span>
-                {f.status && statusBadge(f.status)}
-                {f.newsCount != null && <span style={{ color: 'var(--text3)', fontSize: 12 }}>{f.newsCount} 条</span>}
+                  {isEmail ? '邮件' : 'Webhook'}
+                </span>
               </div>
-            ))}
-          </div>
-        )}
+
+              {ch.description && (
+                <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 8 }}>{ch.description}</div>
+              )}
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
+                <span style={{ fontSize: 13, color: 'var(--text2)' }}>
+                  {String(ch.send_hour ?? 10).padStart(2, '0')}:{String(ch.send_minute ?? 0).padStart(2, '0')}
+                </span>
+                <span style={{ fontSize: 11, color: '#6366f1', background: '#eef2ff', padding: '2px 8px', borderRadius: 4 }}>
+                  {ch.topic_mode === 'focused' ? '聚焦' : '泛AI'}
+                </span>
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                {info ? (
+                  <>
+                    {statusBadge(info.status)}
+                    <span style={{ fontSize: 12, color: 'var(--text3)' }}>{info.newsCount} 条</span>
+                  </>
+                ) : (
+                  <span style={{ fontSize: 12, color: 'var(--text3)' }}>暂无草稿</span>
+                )}
+              </div>
+            </div>
+          )
+        })}
+
+        {/* Add channel card */}
+        <div
+          onClick={() => navigate('/settings')}
+          style={{
+            ...card,
+            cursor: 'pointer',
+            border: '2px dashed var(--border)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: 120,
+            color: 'var(--text3)',
+            fontSize: 14,
+            transition: 'border-color .15s, color .15s',
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.borderColor = 'var(--primary)'
+            e.currentTarget.style.color = 'var(--primary)'
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.borderColor = 'var(--border)'
+            e.currentTarget.style.color = 'var(--text3)'
+          }}
+        >
+          + 添加频道
+        </div>
       </div>
 
       {/* Recent workflow runs */}
@@ -615,8 +361,8 @@ export default function Dashboard() {
                   onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                 >
                   <td style={{ padding: '8px 4px' }}>
-                    <span style={{ background: r.type === 'fetch' ? '#dbeafe' : r.type === 'auto-send' ? '#fef3c7' : '#d1fae5', padding: '2px 8px', borderRadius: 4, fontSize: 11 }}>
-                      {r.type === 'fetch' ? '抓取检查' : r.type === 'auto-send' ? '发送检查' : '手动发送'}
+                    <span style={{ background: r.type === 'fetch' ? '#dbeafe' : '#d1fae5', padding: '2px 8px', borderRadius: 4, fontSize: 11 }}>
+                      {r.type === 'fetch' ? '抓取' : '发送'}
                     </span>
                   </td>
                   <td style={{ padding: '8px 4px' }}>{runStatusBadge(r.status, r.conclusion)}</td>
@@ -629,357 +375,6 @@ export default function Dashboard() {
           </table>
         )}
       </div>
-
-      {/* Tab bar for email + channels */}
-      {(latestDraft || Object.keys(channelDrafts).length > 0) && (
-        <div style={{ display: 'flex', gap: 4, marginBottom: 0, borderBottom: '2px solid var(--border)', paddingBottom: 0 }}>
-          <button
-            onClick={() => setActiveTab('email')}
-            style={{
-              padding: '10px 20px', border: 'none', cursor: 'pointer',
-              fontSize: 14, fontWeight: activeTab === 'email' ? 600 : 400,
-              background: activeTab === 'email' ? 'var(--card)' : 'transparent',
-              borderBottom: activeTab === 'email' ? '2px solid var(--primary)' : '2px solid transparent',
-              marginBottom: -2, borderRadius: '8px 8px 0 0',
-              color: activeTab === 'email' ? 'var(--text)' : 'var(--text2)',
-              display: 'flex', alignItems: 'center',
-            }}
-          >
-            邮件草稿
-            {latestDraft && statusDot(latestDraft.status)}
-          </button>
-          {enabledChannels.map(ch => {
-            const chDraft = channelDrafts[ch.id]?.data
-            return (
-              <button
-                key={ch.id}
-                onClick={() => setActiveTab(ch.id)}
-                style={{
-                  padding: '10px 20px', border: 'none', cursor: 'pointer',
-                  fontSize: 14, fontWeight: activeTab === ch.id ? 600 : 400,
-                  background: activeTab === ch.id ? 'var(--card)' : 'transparent',
-                  borderBottom: activeTab === ch.id ? '2px solid #ea580c' : '2px solid transparent',
-                  marginBottom: -2, borderRadius: '8px 8px 0 0',
-                  color: activeTab === ch.id ? 'var(--text)' : 'var(--text2)',
-                  display: 'flex', alignItems: 'center',
-                }}
-              >
-                {ch.name || ch.id}
-                {chDraft && statusDot(chDraft.status)}
-              </button>
-            )
-          })}
-        </div>
-      )}
-
-      {/* Draft preview area (shared UI, data driven by activeTab) */}
-      {activeDraft && (() => {
-        const isDone = activeDraft.status === 'sent' || activeDraft.status === 'rejected'
-        const isEditable = !isDone
-        return (
-        <div style={card}>
-          {/* Review action bar */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: isDone ? 0 : 16, flexWrap: 'wrap' }}>
-            <h2 style={{ fontSize: 16, margin: 0 }}>
-              {activeTab === 'email' ? '最新新闻预览' : `频道预览 - ${activeChannelName || activeTab}`}
-            </h2>
-            {statusBadge(activeDraft.status)}
-            <span style={{ fontSize: 12, color: 'var(--text3)' }}>{activeDraft.name?.replace('.json', '')}</span>
-            {activeDraft.time_window && <span style={{ fontSize: 12, color: 'var(--text3)' }}>{activeDraft.time_window}</span>}
-            {activeDraft.topic_mode && <span style={{ fontSize: 11, color: '#6366f1', background: '#eef2ff', padding: '2px 8px', borderRadius: 4 }}>{activeDraft.topic_mode}</span>}
-            <div style={{ flex: 1 }} />
-            {saving && <span style={{ fontSize: 12, color: 'var(--text2)' }}>保存中...</span>}
-            {activeDraft.status === 'pending_review' && (
-              <>
-                <button
-                  onClick={handleApprove}
-                  disabled={saving}
-                  style={{ ...btnPrimary, background: '#059669', color: '#fff', padding: '6px 16px', fontSize: 13 }}
-                >
-                  批准发送
-                </button>
-                <button
-                  onClick={handleReject}
-                  disabled={saving}
-                  style={{ ...btnPrimary, background: '#dc2626', color: '#fff', padding: '6px 16px', fontSize: 13 }}
-                >
-                  拒绝/跳过
-                </button>
-              </>
-            )}
-            {activeTab === 'email' && (
-              <button
-                onClick={() => setShowEmailPreview(true)}
-                style={{ ...btnPrimary, background: '#6366f1', color: '#fff', padding: '6px 16px', fontSize: 13 }}
-              >
-                预览邮件
-              </button>
-            )}
-          </div>
-
-          {isEditable && <>
-          {/* Add news collapsible */}
-          <div style={{ marginBottom: 16 }}>
-            <button
-              onClick={() => setShowAddNews(!showAddNews)}
-              style={{
-                background: 'none', border: '1px dashed var(--border)', borderRadius: 6,
-                padding: '8px 16px', fontSize: 13, cursor: 'pointer', color: 'var(--primary)',
-                width: '100%', textAlign: 'left',
-              }}
-            >
-              {showAddNews ? '▼ 收起添加新闻' : '＋ 添加新闻'}
-            </button>
-            {showAddNews && (
-              <div style={{
-                marginTop: 8, padding: 16, border: '1px solid var(--border)',
-                borderRadius: 8, background: '#f9fafb',
-              }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-                  <label style={{ gridColumn: '1 / -1' }}>
-                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>URL</span>
-                    <input
-                      type="url"
-                      value={addForm.url}
-                      onChange={e => setAddForm(prev => ({ ...prev, url: e.target.value }))}
-                      placeholder="https://..."
-                      style={{ width: '100%' }}
-                    />
-                  </label>
-                  <label>
-                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>
-                      标题 <span style={{ color: 'var(--danger)' }}>*</span>
-                    </span>
-                    <input
-                      type="text"
-                      value={addForm.title}
-                      onChange={e => setAddForm(prev => ({ ...prev, title: e.target.value }))}
-                      placeholder="新闻标题"
-                      style={{ width: '100%' }}
-                    />
-                  </label>
-                  <label>
-                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>来源</span>
-                    <input
-                      type="text"
-                      value={addForm.source}
-                      onChange={e => setAddForm(prev => ({ ...prev, source: e.target.value }))}
-                      placeholder="来源名称"
-                      style={{ width: '100%' }}
-                    />
-                  </label>
-                  <label style={{ gridColumn: '1 / -1' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-                      <span style={{ fontSize: 12, fontWeight: 500 }}>摘要</span>
-                      {hasAnthropicKey() && (
-                        <button
-                          onClick={handleAiSummary}
-                          disabled={aiLoading}
-                          style={{
-                            background: '#eef2ff', color: '#4f46e5', border: 'none', borderRadius: 4,
-                            padding: '2px 8px', fontSize: 11, cursor: 'pointer', fontWeight: 500,
-                          }}
-                        >
-                          {aiLoading ? '生成中...' : 'AI 生成摘要'}
-                        </button>
-                      )}
-                    </div>
-                    <textarea
-                      value={addForm.summary}
-                      onChange={e => setAddForm(prev => ({ ...prev, summary: e.target.value }))}
-                      placeholder="新闻摘要（可选）"
-                      rows={2}
-                      style={{ width: '100%', resize: 'vertical' }}
-                    />
-                  </label>
-                  <label>
-                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>
-                      分类 <span style={{ color: 'var(--danger)' }}>*</span>
-                    </span>
-                    <select
-                      value={addForm.category}
-                      onChange={e => setAddForm(prev => ({ ...prev, category: e.target.value }))}
-                      style={{ width: '100%' }}
-                    >
-                      <option value="">选择分类...</option>
-                      {categoryOptions.map(c => (
-                        <option key={c} value={c}>{c}</option>
-                      ))}
-                    </select>
-                  </label>
-                  <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-                    <button
-                      onClick={handleAddNews}
-                      disabled={saving}
-                      style={{ ...btnPrimary, background: 'var(--primary)', color: '#fff', padding: '8px 24px' }}
-                    >
-                      添加
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-          </>}
-
-          {/* News categories */}
-          {isEditable && (activeDraft.categories || []).map((cat, catIdx) => {
-            const catKey = cat.name || catIdx
-            const isExpanded = draftExpanded[catKey]
-            return (
-              <div key={catIdx} style={{ marginBottom: 8 }}>
-                <div
-                  onClick={() => setDraftExpanded(prev => ({ ...prev, [catKey]: !prev[catKey] }))}
-                  style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8, padding: '8px 0' }}
-                >
-                  <span style={{ fontSize: 12, color: 'var(--text2)' }}>{isExpanded ? '▼' : '▶'}</span>
-                  <span style={{ fontSize: 14, fontWeight: 500 }}>
-                    {CATEGORY_ICONS[cat.name] || '📰'} {cat.name}
-                  </span>
-                  <span style={{ fontSize: 12, color: 'var(--text3)' }}>({(cat.news || []).length})</span>
-                </div>
-                {isExpanded && (cat.news || []).map((item, newsIdx) => {
-                  const isEditing = editingNews?.catIdx === catIdx && editingNews?.newsIdx === newsIdx
-                  return (
-                    <div key={newsIdx} style={{
-                      padding: '10px 14px', marginBottom: 6, marginLeft: 20, borderRadius: 6,
-                      border: '1px solid var(--border)', background: '#fafafa',
-                      position: 'relative',
-                    }}>
-                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-                        <div style={{ flex: 1 }}>
-                          <a href={item.url} target="_blank" rel="noopener" style={{ fontWeight: 500, fontSize: 13 }}>
-                            {item.title}
-                          </a>
-                          <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 2 }}>{item.source}</div>
-                        </div>
-                        <button
-                          onClick={() => handleDeleteNews(catIdx, newsIdx)}
-                          disabled={saving}
-                          title="删除"
-                          style={{
-                            background: 'none', border: 'none', cursor: 'pointer',
-                            color: '#dc2626', fontSize: 16, padding: '0 4px', lineHeight: 1,
-                            opacity: saving ? 0.5 : 1,
-                          }}
-                        >
-                          &times;
-                        </button>
-                      </div>
-                      {isEditing ? (
-                        <div style={{ marginTop: 6 }}>
-                          <textarea
-                            value={editSummary}
-                            onChange={e => setEditSummary(e.target.value)}
-                            onBlur={() => handleSaveSummary(catIdx, newsIdx)}
-                            onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSaveSummary(catIdx, newsIdx) } }}
-                            autoFocus
-                            rows={2}
-                            style={{ width: '100%', fontSize: 13, resize: 'vertical' }}
-                          />
-                          <div style={{ fontSize: 11, color: 'var(--text3)', marginTop: 2 }}>Enter 保存，Shift+Enter 换行</div>
-                        </div>
-                      ) : (
-                        item.summary && (
-                          <p
-                            onClick={() => { setEditingNews({ catIdx, newsIdx }); setEditSummary(item.summary) }}
-                            style={{
-                              fontSize: 13, color: 'var(--text2)', marginTop: 6, lineHeight: 1.5,
-                              cursor: 'pointer', borderBottom: '1px dashed transparent',
-                            }}
-                            onMouseEnter={e => e.currentTarget.style.borderBottomColor = 'var(--text3)'}
-                            onMouseLeave={e => e.currentTarget.style.borderBottomColor = 'transparent'}
-                            title="点击编辑摘要"
-                          >
-                            {item.summary}
-                          </p>
-                        )
-                      )}
-                      {item.comment && (
-                        <p style={{
-                          fontSize: 12, color: '#7c3aed', marginTop: 6, lineHeight: 1.5,
-                          padding: '6px 10px', background: '#f5f3ff', borderRadius: 6,
-                          borderLeft: '3px solid #8b5cf6',
-                        }}>
-                          <span style={{ fontWeight: 500 }}>🤔 </span>{item.comment}
-                        </p>
-                      )}
-                      {!isEditing && !item.summary && (
-                        <button
-                          onClick={() => { setEditingNews({ catIdx, newsIdx }); setEditSummary('') }}
-                          style={{
-                            background: 'none', border: 'none', cursor: 'pointer',
-                            color: 'var(--text3)', fontSize: 12, padding: 0, marginTop: 4,
-                          }}
-                        >
-                          + 添加摘要
-                        </button>
-                      )}
-                    </div>
-                  )
-                })}
-              </div>
-            )
-          })}
-          {isEditable && (!activeDraft.categories || activeDraft.categories.length === 0) && (
-            <p style={{ color: 'var(--text3)', fontSize: 14 }}>该草稿暂无新闻内容</p>
-          )}
-        </div>
-        )
-      })()}
-
-      {/* No draft message for active tab */}
-      {!activeDraft && activeTab !== 'email' && (
-        <div style={{ ...card, textAlign: 'center', padding: 40, color: 'var(--text2)' }}>
-          <p style={{ fontSize: 14 }}>频道「{activeChannelName || activeTab}」暂无草稿</p>
-          <p style={{ fontSize: 12, color: 'var(--text3)' }}>请先运行「抓取新闻」生成草稿</p>
-        </div>
-      )}
-
-      {/* Email preview modal */}
-      {showEmailPreview && latestDraft && (
-        <div
-          onClick={() => setShowEmailPreview(false)}
-          style={{
-            position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-            background: 'rgba(0,0,0,0.5)', zIndex: 1000,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            padding: 24,
-          }}
-        >
-          <div
-            onClick={e => e.stopPropagation()}
-            style={{
-              background: '#fff', borderRadius: 12, width: '100%', maxWidth: 700,
-              maxHeight: '90vh', display: 'flex', flexDirection: 'column',
-              boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
-            }}
-          >
-            <div style={{
-              display: 'flex', alignItems: 'center', padding: '12px 20px',
-              borderBottom: '1px solid #e5e7eb',
-            }}>
-              <h3 style={{ margin: 0, fontSize: 15, flex: 1 }}>邮件预览</h3>
-              <button
-                onClick={() => setShowEmailPreview(false)}
-                style={{
-                  background: 'none', border: 'none', cursor: 'pointer',
-                  fontSize: 20, color: '#6b7280', padding: '0 4px',
-                }}
-              >
-                &times;
-              </button>
-            </div>
-            <div style={{ flex: 1, overflow: 'hidden' }}>
-              <iframe
-                srcDoc={generateEmailHtml(latestDraft, settings)}
-                style={{ width: '100%', height: '80vh', border: 'none' }}
-                title="Email Preview"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
