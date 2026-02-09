@@ -482,7 +482,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 {{
   "news": [
     {{
-      "title": "新闻标题",
+      "title": "中文标题",
       "summary": "1-2句中文摘要",
       "comment": "一个启发思考的问题？",
       "source": "来源",
@@ -492,6 +492,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 }}
 
 注意：
+- 标题必须翻译为中文，英文标题一律翻译
 - 只返回合法的 JSON，不要其他文字
 - 确保所有字符串中的双引号用单引号替换"""
 
@@ -554,7 +555,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 
 每条 news 的结构：
 {{
-  "title": "新闻标题",
+  "title": "中文标题",
   "summary": "1-2句中文摘要",
   "comment": "一个启发思考的问题？",
   "source": "来源",
@@ -563,6 +564,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 
 注意：
 - 两个分类都必须有内容
+- 标题必须翻译为中文，英文标题一律翻译
 - 只返回合法的 JSON，不要其他文字
 - 确保所有字符串中的双引号用单引号替换"""
 
