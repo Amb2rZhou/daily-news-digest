@@ -1,38 +1,17 @@
 {
   "date": "2026-02-09",
-  "time_window": "2026-02-08 09:01 ~ 2026-02-09 09:01",
+  "time_window": "2026-02-08 10:00 ~ 2026-02-09 09:59",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "苹果研发AI眼镜与AI胸针，旨在'重新定义人机交互'",
-          "summary": "苹果正在研发AI智能眼镜和AI胸针等穿戴设备，AI智能眼镜被视为接替iPhone的关键设备之一。",
-          "comment": "当AI眼镜真正成熟时，是否会像iPhone一样彻底改变人们的日常交互方式？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119094.html"
-        },
-        {
-          "title": "智元机器人打造全球首个大型机器人晚会 数百台远征A2上演科技艺术盛宴",
-          "summary": "智元机器人举办全球首个大型机器人晚会《机器人奇妙夜》，数百台远征A2机器人参与表演。",
-          "comment": "当机器人能够进行艺术表演时，这是否预示着人形机器人即将进入消费级应用的新阶段？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119090.html"
-        },
-        {
-          "title": "浙江瓯海眼镜米兰展斩获3亿美元意向订单 AI智能款式成出海新亮点",
-          "summary": "瓯海130余家眼镜企业在米兰光学眼镜展上展示AI智能眼镜款式，斩获约3亿美元意向订单。",
-          "comment": "传统眼镜产业与AI智能硬件的结合，能否成为中国制造出海的新增长点？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119089.html"
-        },
-        {
-          "title": "4 Best AI Notetakers (2026), Tested and Reviewed",
-          "summary": "WIRED评测了四款最佳AI笔记工具，这些口袋大小的设备可以实时记录会议并提取价值。",
-          "comment": "随着AI穿戴记录设备的普及，人们的隐私和信息安全如何得到保护？",
-          "source": "WIRED",
-          "url": "https://www.wired.com/gallery/best-ai-notetakers/"
+          "title": "夸克AI眼镜S1新增「直播」功能",
+          "summary": "夸克AI眼镜S1迎来软件升级，新增支持第一视角直播功能，用户可通过眼镜内置摄像头直接发起直播，适合户外骑行、旅行探店等场景。同时还上线了截屏、录屏功能，可同步记录虚拟显示屏上的AI信息与真实场景。",
+          "comment": "AI眼镜从信息展示向内容创作工具升级，这会如何改变用户的日常记录和分享方式？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544705.html"
         }
       ]
     },
@@ -41,18 +20,46 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "Abu Dhabi's G42 Leads $1 Billion Data Center Project in Vietnam",
-          "summary": "阿联酋AI企业G42领导一项最高10亿美元的项目，在越南建设数据中心和云计算服务，扩展其AI基础设施布局。",
-          "comment": "非美国科技巨头在AI基础设施上的大规模投资会如何改变全球AI竞争格局？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/abu-dhabi-s-g42-leads-1-billion-data-center-project-in-vietnam"
+          "title": "中国科大、科大讯飞团队开发ChemEval：化学大模型多层次多维度能力评估的新基准",
+          "summary": "中国科大和科大讯飞联合推出ChemEval，为化学大模型的多维度能力评估提供了新的评估基准，标志着AI在化学领域的能力评估体系逐步完善。",
+          "comment": "化学领域的大模型评估基准如何能够加速AI在科学研究中的实际应用？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-09"
         },
         {
-          "title": "走向大众的短剧，对新增量更加饥渴",
-          "summary": "2025年短剧行业进入精品内容与平台生态定胜负的下半场，AI漫剧、出海和下沉市场成为三大增量方向。",
-          "comment": "AI在内容创作中的应用会加速内容工业化还是降低内容质量？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7871614.html"
+          "title": "百度智能云推出OpenClaw极速简易部署方案，加速Agent应用落地",
+          "summary": "百度智能云推出OpenClaw简易版部署方案，通过可视化配置面板让非专业开发者也能快速部署AI Agent应用，降低了Agent技术的使用门槛。",
+          "comment": "简化AI Agent部署能否真正让非技术人员成为AI应用的创建者？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/LRiK4YxAiUvC2TRN.html"
+        },
+        {
+          "title": "字节跳动新视频生成模型引发中国AI应用股票大涨",
+          "summary": "字节跳动推出的最新视频生成模型因其优异的内容创作质量在业界获得认可，引发中国媒体和AI应用公司股价上升。",
+          "comment": "视频生成模型的突破如何重新定义AI内容创作的竞争格局？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/bytedance-s-new-video-model-sparks-rally-in-china-ai-app-stocks"
+        },
+        {
+          "title": "中美AI应用分岔路：阿里千问推出春节补贴活动展示Agent落地新方向",
+          "summary": "阿里的AI入口'千问'推出春节'30亿大免单'活动，通过实际帮助用户点奶茶等生活场景展示了中国AI Agent与美国企业级应用的不同路径。",
+          "comment": "AI Agent从办公自动化延伸到日常消费场景，这种应用路径转变意味着什么？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/YuswDroey1c3iUE4.html"
+        },
+        {
+          "title": "Anthropic的Claude C编译器与GCC的性能对比分析",
+          "summary": "Claude开发的C编译器与传统GCC编译器进行了性能对比，展示了AI生成代码工具在编程领域的实际能力。",
+          "comment": "AI生成的编译器能否在性能上挑战传统开源工具的统治地位？",
+          "source": "Hacker News",
+          "url": "https://harshanu.space/en/tech/ccc-vs-gcc/"
+        },
+        {
+          "title": "NanoClaw容器现已支持Claude的Agent群体协作能力",
+          "summary": "NanoClaw容器技术扩展了对Claude Agent群体协作的支持，使开发者能更容易地部署多Agent协作系统。",
+          "comment": "多Agent协作在容器化部署中的完善能否加速Agent应用的商业化？",
+          "source": "Hacker News",
+          "url": "https://twitter.com/Gavriel_Cohen/status/2020701159175155874"
         }
       ]
     },
@@ -61,37 +68,51 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Samsung Stock Rises After Report on Mass Production of AI Chips",
-          "summary": "三星电子股价上涨6.4%，因该公司即将开始大规模生产用于AI基础设施的HBM4内存芯片。",
-          "comment": "传统芯片厂商在AI芯片领域的产能突破会如何影响英伟达的市场地位？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/samsung-stock-rises-after-report-on-mass-production-of-ai-chips"
+          "title": "台积电宣布在日本制造先进AI芯片",
+          "summary": "台积电将在日本建立先进芯片制造设施，专门生产AI芯片，这是台积电全球AI芯片供应战略的重要部分。",
+          "comment": "台积电在日本建立AI芯片制造基地如何改变全球AI芯片供应链格局？",
+          "source": "AP News",
+          "url": "https://apnews.com/article/semiconductors-tsmc-japan-taiwan-ai-11256f2bfde73ca23d08331ad138d6d5"
         },
         {
-          "title": "Big Tech groups race to fund unprecedented $660bn AI spending spree",
-          "summary": "科技巨头竞相投入创纪录的6600亿美元进行AI支出，面临削减股东回报、动用储备或融资等选择。",
-          "comment": "如此巨大的AI投资最终是否能产生相应的商业回报，还是成为烧钱竞赛？",
+          "title": "Omdia报告：百度智能云在中国具身智能AI云市场占率第一",
+          "summary": "Omdia发布报告显示百度智能云以35%市占率居中国具身智能AI云服务市场第一，领先优势超过第二名两倍，预计2030年市场规模将增长至4.08亿美元。",
+          "comment": "百度智能云在具身智能领域的领先优势能否维持到下一个产业周期？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3675618947605378?f=rss"
+        },
+        {
+          "title": "科技巨头争相投入660亿美元AI支出，面临资金压力",
+          "summary": "大科技公司面临前所未有的AI基础设施投资压力，需要选择是削减股东回报、动用储备还是融资来支撑660亿美元的AI支出计划。",
+          "comment": "如此庞大的AI投资是否能产生相应的商业回报，还是会成为科技行业的泡沫？",
           "source": "Financial Times",
           "url": "https://www.ft.com/content/d503afd5-1012-40f0-8f9d-620dcb39a9a2"
         },
         {
-          "title": "New York is considering two bills to rein in the AI industry",
-          "summary": "纽约州立法机构考虑推出两项法案，要求对AI生成内容进行标签标注，并对新数据中心建设实施三年暂停。",
-          "comment": "地方政府对AI数据中心的监管限制会否推动AI企业的全球化分布式部署？",
-          "source": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/875501/new-york-is-considering-two-bills-to-rein-in-the-ai-industry"
+          "title": "Blackstone和Coatue向澳大利亚AI初创企业Firmus提供100亿美元贷款",
+          "summary": "Blackstone旗下基金和Coatue Capital为澳大利亚初创公司Firmus Technologies提供100亿美元贷款，用于支持其数据中心扩展，这是澳大利亚最大规模的私募信贷融资之一。",
+          "comment": "为新兴AI数据中心公司提供超大额贷款反映了投资者对AI基础设施未来的什么判断？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
         },
         {
-          "title": "Nvidia says it didn't use pirated books to train its AI models",
-          "summary": "英伟达反驳称其AI模型训练未使用盗版书籍，要求法院驳回相关诉讼。",
-          "comment": "AI模型训练数据的合法性问题最终会如何在法律框架内得到解决？",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-says-annas-archive-contact-does-not-show-pirated-books-were-used-to-train-its-ai"
+          "title": "中国芯片设计公司晶晨股份在香港上市首日暴涨57%",
+          "summary": "中国芯片设计公司晶晨股份在香港首次公开募股中筹集9.02亿美元，上市首日股价暴涨57%，反映了市场对国内芯片设计企业的强烈需求。",
+          "comment": "国内芯片设计企业在国际资本市场的热捧是否预示AI芯片国产化进程的加速？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/09/chinese-chipmaker-montage-technology-hong-kong-ipo-debut.html"
+        },
+        {
+          "title": "中国数字出口激增，阿里和腾讯领导全球扩张",
+          "summary": "中国科技公司从字节跳动到腾讯的数字服务出口持续增长，包括直播、电商和AI应用等领域，这些巨头正在全球范围内推进AI和数字服务业务。",
+          "comment": "中国科技巨头的全球AI应用输出能否打破美国在该领域的话语权？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/china-digital-exports-surge-as-alibaba-tencent-lead-global-push"
         }
       ]
     }
   ],
-  "source": "manual",
+  "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-09T09:07:25.613249+08:00"
+  "created_at": "2026-02-09T14:03:47.172325+08:00"
 }
