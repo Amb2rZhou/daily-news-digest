@@ -7,11 +7,18 @@
       "icon": "🥽",
       "news": [
         {
-          "title": "夸克AI眼镜S1新增直播功能",
-          "summary": "夸克AI眼镜S1升级后支持第一视角直播功能，用户可通过眼镜内置摄像头直接发起直播，同时新增截屏、录屏功能用于记录AI信息和实时场景。",
-          "comment": "AI眼镜的直播和录屏能力如何改变内容创作者的工作流和商业模式？",
+          "title": "Meta在超级碗广告中推介Oakley AI性能眼镜",
+          "summary": "Meta在2026年超级碗广告中重点推介专为运动、健身和探险设计的Oakley Meta性能AI眼镜，展示了运动员使用眼镜捕捉极限时刻、进行慢动作拍摄和免提分享等功能。",
+          "comment": "当AI眼镜从科技爱好者的玩物进化为运动员的专业装备时，这是否意味着可穿戴AI硬件的消费者主流化时代已经到来？",
           "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544705.html"
+          "url": "https://www.vrtuoluo.cn/544703.html"
+        },
+        {
+          "title": "2025年中国消费级AR销量首次超越VR",
+          "summary": "CINNO Research数据显示，2025年国内消费级XR市场总销量达64.5万台，其中AR销量48.4万台首次超越VR的16.1万台，AR市场同比增长71%，预计2030年消费级出货量将突破500万台。",
+          "comment": "为什么AR眼镜能在短短一年内超越VR成为市场主力，这反映了消费者对什么样的硬件形态的真实需求？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544704.html"
         }
       ]
     },
@@ -20,39 +27,25 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "首个多模态记忆湖MemoryLake发布：AI基础设施迈入记忆驱动时代",
-          "summary": "质变科技发布MemoryLake平台，集成多模态内容理解、记忆存储和计算管理，标志AI基础设施从数据驱动向记忆驱动转变。",
-          "comment": "当AI系统开始拥有持久化的多模态记忆能力，企业决策的准确性和可解释性是否会产生质的飞跃？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/ai/tQF0ahbkW8nRkVqN.html"
-        },
-        {
-          "title": "百度智能云推出OpenClaw极速简易部署方案",
-          "summary": "百度智能云推出OpenClaw轻量化部署方案，降低AI Agent应用的开发门槛，加速从体验到实用的落地进程。",
-          "comment": "当AI Agent的部署难度大幅降低，非专业开发者的参与会如何改变AI应用的生态格局？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/LRiK4YxAiUvC2TRN.html"
-        },
-        {
-          "title": "华为天才少年创业：全球首个虚实融合的实时交互视频模型来了",
-          "summary": "华为天才少年创业公司发布虚实融合的实时交互视频模型，将动画角色与现实场景实时融合互动。",
-          "comment": "虚实融合的实时交互能力成熟后，数字人与真人的界限还会存在吗？",
+          "title": "虚实融合实时交互视频模型发布：华为天才少年创业新作",
+          "summary": "华为天才少年创业团队推出全球首个虚实融合的实时交互视频模型，将童年的虚拟角色概念带入现实。",
+          "comment": "这种虚实融合的AI模型如何改变未来的内容创作和人机交互方式？",
           "source": "机器之心",
           "url": "https://www.jiqizhixin.com/articles/2026-02-09-8"
         },
         {
-          "title": "中美AI应用的分岔路，出现在这个春节",
-          "summary": "阿里千问推出AI Agent应用，通过春节补贴活动展示AI办事能力，反映中美AI应用路径差异——中国更关注生活场景落地。",
-          "comment": "当AI Agent从B端企业系统走向C端日常生活，AI的价值定义是否需要被重新审视？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/YuswDroey1c3iUE4.html"
+          "title": "谷歌Gemini在Chrome浏览器正式登陆Chromebook Plus",
+          "summary": "谷歌确认其Gemini AI功能现已在Chromebook Plus笔记本上的Chrome浏览器中可用。",
+          "comment": "将AI模型集成到浏览器中，是否会成为下一代个人计算设备的标配功能？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/08/google-confirms-gemini-in-chrome-is-now-available-for-chromebook-plus-laptops/"
         },
         {
-          "title": "字节跳动新视频生成模型引发中国AI应用股票上涨",
-          "summary": "字节跳动推出新视频生成模型，因内容生成质量获得分析师认可，带动中国媒体和AI应用公司股价上涨。",
-          "comment": "视频生成模型的质量突破是否预示着内容创作工具的下一个拐点即将到来？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/bytedance-s-new-video-model-sparks-rally-in-china-ai-app-stocks"
+          "title": "千问App接入天猫超市和盒马，AI开始替用户买单",
+          "summary": "阿里千问AI应用全面接入天猫超市、盒马等电商平台，用户可通过AI语音指令完成一站式年货采购。",
+          "comment": "AI助手从信息搜索进化到交易执行，这是否意味着AI已找到真正的商业变现路径？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/dK29Y45ty5tKcRhb.html"
         }
       ]
     },
@@ -61,37 +54,44 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "台积电将在日本生产先进AI芯片",
-          "summary": "台积电宣布在日本制造先进AI芯片，扩大其AI芯片生产布局，满足全球需求并分散产能风险。",
-          "comment": "台积电的地缘多元化战略是否标志着全球芯片产业格局正在发生结构性转变？",
-          "source": "Hacker News/AP News",
+          "title": "TSMC将在日本制造先进AI芯片",
+          "summary": "台积电宣布将在日本生产用于AI应用的先进芯片，标志着AI芯片制造地域分散化趋势。",
+          "comment": "AI芯片制造向日本等地扩展，是否会打破现有的芯片供应链地缘政治格局？",
+          "source": "AP News",
           "url": "https://apnews.com/article/semiconductors-tsmc-japan-taiwan-ai-11256f2bfde73ca23d08331ad138d6d5"
         },
         {
-          "title": "英伟达支持的澳大利亚AI创企获黑石领导的100亿美元贷款",
-          "summary": "澳大利亚AI创企Firmus Technologies获得黑石等机构提供的100亿美元贷款，用于数据中心扩建，创澳大利亚私募信贷最大融资记录。",
-          "comment": "数据中心融资规模的这种爆发式增长是否预示着AI基础设施投资正在进入新的阶段？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+          "title": "欧盟警告Meta可能对WhatsApp AI政策实施制裁措施",
+          "summary": "欧盟委员会宣布对Meta可能实施临时措施，以推翻其WhatsApp AI政策，这是对其反垄断调查的后续行动。",
+          "comment": "欧盟对AI政策的监管干预，会如何影响全球科技公司的AI战略制定？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/09/eu-interim-measures-meta-whatsapp-ai-policy-antritrust.html"
         },
         {
-          "title": "中国数字出口激增，阿里、腾讯等科技巨头领导全球扩张",
-          "summary": "中国数字服务出口大幅增长，字节跳动、腾讯等巨头在直播、电商和AI领域加快海外布局。",
-          "comment": "中国AI应用的出海潮是否会重塑全球AI应用的竞争格局？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-09/china-digital-exports-surge-as-alibaba-tencent-lead-global-push"
+          "title": "印度重新定义深科技初创企业资格，扩展AI融资支持",
+          "summary": "印度政府重新定义深科技初创企业标准，将资格期限延长至20年，目的是通过税收优惠和政府资金支持前沿AI创新。",
+          "comment": "印度通过政策创新扶持AI初创企业，能否成为全球AI创新的新的增长中心？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/india-redraws-rules-for-deep-tech-funding-to-spur-innovation"
         },
         {
-          "title": "OpenAI超级碗泄露广告被证实是骗局",
-          "summary": "声称OpenAI超级碗广告泄露的耳机和发光球体产品被证实为虚假信息，反映科技公司围绕超级碗广告的营销生态复杂。",
-          "comment": "当AI和科技话题足以成为造假诱饵，这是否反映了公众对AI产品发布的期待已达到什么样的高度？",
-          "source": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/875615/openai-super-bowl-ai-hardware-leak-hoax-fake"
+          "title": "英飞凌加入AI融资潮，发行一年来首笔欧元债券",
+          "summary": "英飞凌科技公司发行其一年来首笔欧元债券，用于资助雄心勃勃的AI项目，加入科技企业融资AI的浪潮。",
+          "comment": "芯片制造商通过债券融资支持AI项目，说明了什么样的产业发展趋势？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/infineon-joins-ai-funding-rush-with-first-euro-debt-in-a-year"
+        },
+        {
+          "title": "中国芯片设计商澜起科技在香港上市首日暴涨60%",
+          "summary": "中国芯片设计企业澜起科技在香港上市首日股价飙升60%，融资9.02亿美元，显示资本市场对国产AI芯片的热情。",
+          "comment": "国产AI芯片企业的上市热潮，能否打破美国在高端芯片领域的垄断地位？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/09/chinese-chipmaker-montage-technology-hong-kong-ipo-debut.html"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-09T16:10:12.372569+08:00"
+  "created_at": "2026-02-09T19:16:59.562226+08:00"
 }
