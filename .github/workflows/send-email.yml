@@ -61,14 +61,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="${GITHUB_REF#refs/heads/}"
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Mark draft as sent"
-          git pull origin main --rebase -X theirs || {
+          git pull origin "$BRANCH" --rebase -X theirs || {
             git checkout --theirs config/drafts/ 2>/dev/null || true
             git add config/drafts/
             git rebase --continue
           }
-          git push
+          git push origin HEAD:"$BRANCH"
 
       - name: Notify admin on failure
         if: failure()

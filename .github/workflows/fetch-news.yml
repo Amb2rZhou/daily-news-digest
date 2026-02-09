@@ -141,15 +141,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="${GITHUB_REF#refs/heads/}"
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Add news draft for $(TZ=Asia/Shanghai date +%Y-%m-%d)"
-          git pull origin main --rebase -X theirs || {
+          git pull origin "$BRANCH" --rebase -X theirs || {
             echo "Rebase conflict, resolving with our draft versions..."
             git checkout --theirs config/drafts/ 2>/dev/null || true
             git add config/drafts/
             git rebase --continue
           }
-          git push
+          git push origin HEAD:"$BRANCH"
 
       # 测试模式：抓取后立即发送
       - name: Auto-send (test mode)
@@ -170,14 +171,15 @@ jobs:
       - name: Commit sent status (test mode)
         if: steps.pre_check.outputs.skip != 'true' && inputs.auto_send == true
         run: |
+          BRANCH="${GITHUB_REF#refs/heads/}"
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Mark draft as sent (test mode)"
-          git pull origin main --rebase -X theirs || {
+          git pull origin "$BRANCH" --rebase -X theirs || {
             git checkout --theirs config/drafts/ 2>/dev/null || true
             git add config/drafts/
             git rebase --continue
           }
-          git push
+          git push origin HEAD:"$BRANCH"
 
       - name: Notify admin on failure
         if: failure()
