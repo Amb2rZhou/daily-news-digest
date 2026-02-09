@@ -236,6 +236,53 @@ export default function Dashboard() {
         </div>
       )}
 
+      {/* Source health overview */}
+      {(() => {
+        const feeds = settings?.rss_feeds || []
+        if (feeds.length === 0) return null
+        const groups = {}
+        feeds.forEach(f => {
+          const g = f.group || '未分组'
+          if (!groups[g]) groups[g] = { total: 0, enabled: 0 }
+          groups[g].total++
+          if (f.enabled) groups[g].enabled++
+        })
+        const totalEnabled = feeds.filter(f => f.enabled).length
+        return (
+          <div style={{ ...card, marginBottom: 24 }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: 12 }}>
+              <h2 style={{ fontSize: 16, flex: 1, margin: 0 }}>
+                源健康概览
+                <span style={{ fontSize: 13, fontWeight: 400, color: 'var(--text2)', marginLeft: 8 }}>
+                  {totalEnabled}/{feeds.length} 启用
+                </span>
+              </h2>
+              <span
+                onClick={() => navigate('/sources')}
+                style={{ fontSize: 13, color: 'var(--primary)', cursor: 'pointer' }}
+              >
+                管理源
+              </span>
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              {Object.entries(groups).map(([group, info]) => {
+                const ratio = info.total > 0 ? info.enabled / info.total : 0
+                const bg = ratio === 1 ? '#d1fae5' : ratio === 0 ? '#fee2e2' : '#fef3c7'
+                const color = ratio === 1 ? '#059669' : ratio === 0 ? '#dc2626' : '#d97706'
+                return (
+                  <span key={group} style={{
+                    padding: '4px 12px', borderRadius: 6, fontSize: 12, fontWeight: 500,
+                    background: bg, color: color,
+                  }}>
+                    {group} ({info.enabled}/{info.total})
+                  </span>
+                )
+              })}
+            </div>
+          </div>
+        )
+      })()}
+
       {/* Channel grid */}
       <div style={{
         display: 'grid',
