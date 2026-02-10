@@ -1,17 +1,59 @@
 {
   "date": "2026-02-10",
-  "time_window": "2026-02-09 10:00 ~ 2026-02-10 10:00",
+  "time_window": "2026-02-09 10:08 ~ 2026-02-10 10:08",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "2025年VR/MR市场回顾：短期回调明显，长期增势不变",
-          "summary": "2025年VR/MR行业虽有放缓，但各厂商持续推进产品创新，Meta调整战略计划2027年推出超轻薄头显，苹果推出Vision Pro M5版本，国内厂商vivo推出仅398g的轻量化头显。",
-          "comment": "当VR/MR头显重量和厚度不断优化时，消费者的痛点是否真正在于硬件本身，还是内容生态的不完善？",
+          "title": "Meta新头显Phoenix计算单元渲染图流出",
+          "summary": "Meta计划明年上半年发布超轻薄头显Phoenix，采用计算单元外置设计以降低佩戴重量，近日其配套计算单元的渲染图被曝光。",
+          "comment": "将计算单元外置是否会成为未来VR/MR头显的主流设计方向？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544710.html"
+        },
+        {
+          "title": "2025年VR/MR市场回顾：短期回调但长期增势不变",
+          "summary": "2025年VR/MR发展略显平静甚至出现下滑，但Meta调整战略规划超轻薄头显、苹果推出Vision Pro M5版本、国产厂商vivo推出398g轻量化头显，行业在降中有升。",
+          "comment": "轻量化和平价化是否是VR/MR走向大众消费的关键突破口？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544709.html"
+        },
+        {
+          "title": "穹彻智能完成数亿元A轮融资",
+          "summary": "具身智能企业穹彻智能完成数亿元A轮融资，由C资本领投，将持续推进大模型研发并聚焦多种标准化机器人硬件的适配。",
+          "comment": "具身智能的通用大模型突破是否会加速人形机器人的商业化进程？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3676846269817478?f=rss"
+        },
+        {
+          "title": "华为AI眼镜暂定2026年上半年发布",
+          "summary": "华为全新AI眼镜将于2026年上半年正式发布，搭载鸿蒙系统，带来跨端协同体验，标志着智能眼镜赛道的又一重要布局。",
+          "comment": "鸿蒙生态在AI眼镜上的应用能否为华为打开消费级智能硬件的新市场？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119132.html"
+        },
+        {
+          "title": "夸克AI眼镜全系完成软件升级",
+          "summary": "夸克AI眼镜S1旗舰系列新增第一视角直播、截屏录屏功能，G1系列搭载Super RAW暗光增强技术实现超级夜景模式，功能体验进一步优化。",
+          "comment": "AI眼镜从基础视觉功能向直播、夜景等专业应用拓展，是否预示着消费级智能眼镜的成熟期正在到来？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119130.html"
+        },
+        {
+          "title": "苹果新款AirPods Pro将集成摄像头",
+          "summary": "爆料者确认苹果即将推出的新款AirPods Pro将内置摄像头，这将是AirPods Pro系列的重要升级。",
+          "comment": "在耳机中集成摄像头会如何改变用户的交互体验和隐私考量？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/09/apples-next-airpods-pro-will-come-with-cameras-says-leaker/"
+        },
+        {
+          "title": "深圳众擎机器人发起首届URKL全球人形机器人自由格斗联赛",
+          "summary": "首个专注全尺寸人形机器人的商业化自由格斗赛事启动，标志着人形机器人技术检验正式迈入实战化竞技阶段。",
+          "comment": "竞技化验证是否会加速人形机器人在实际应用场景中的迭代优化？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119122.html"
         }
       ]
     },
@@ -20,74 +62,18 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "OpenAI的Codex应用首周下载量超100万，但免费用户可能面临限制",
-          "summary": "OpenAI推出的独立Codex桌面应用（目前仅限Mac）在首周实现了超100万次下载的里程碑，但公司可能对免费和Go用户施加使用限制。",
-          "comment": "AI编程工具的爆发性增长能否持续，关键是否取决于价格模式的平衡？",
+          "title": "OpenAI的Codex应用首周下载量突破100万，但免费用户可能面临限制",
+          "summary": "OpenAI的独立Codex桌面应用（仅Mac版）在首周下载量突破100万，标志着AI编程工具竞争的重要里程碑，但公司正考虑对免费和Go用户施加使用限制。",
+          "comment": "AI编程工具的爆炸性增长是否意味着开发者生产力的真正革命，还是仅仅是用户对新技术的短期热情？",
           "source": "VentureBeat",
-          "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be"
+          "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be-coming-to-free-and-go-users"
         },
         {
-          "title": "ChatGPT最便宜版本开始显示广告",
-          "summary": "OpenAI正式开始在ChatGPT测试广告，将以标记\"赞助\"的链接形式出现在回答下方，仅对最便宜的用户版本展示。",
-          "comment": "将广告引入生成式AI产品会如何影响用户体验和模型输出的中立性？",
-          "source": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/876029/openai-testing-ads-in-chatgpt"
-        },
-        {
-          "title": "新苹果支持的AI模型VSSFlow可从无声视频生成声音和语音",
-          "summary": "苹果支持的新AI模型VSSFlow采用创意架构，能够用单一统一系统生成声音和语音，达到业界领先效果。",
-          "comment": "从视频到音频的跨模态生成能力将如何重塑多媒体内容创作的工作流程？",
+          "title": "Apple支持的VSSFlow模型能从无声视频生成声音和语音",
+          "summary": "Apple支持的新AI模型VSSFlow采用创新架构，可以从静音视频中生成声音和语音内容，实现了该领域的最先进效果。",
+          "comment": "多模态AI从视觉信息反推音频的能力突破，会如何改变视频内容创作和生成的未来？",
           "source": "9to5Mac",
           "url": "https://9to5mac.com/2026/02/09/new-apple-backed-ai-model-can-generate-sound-and-speech-from-silent-videos/"
-        },
-        {
-          "title": "DeepSeek V4定位编程专家，成本相比前代骤降70倍",
-          "summary": "DeepSeek即将推出新一代旗舰模型V4，以\"编程专家\"为核心定位，在超长代码处理、成本控制及国产芯片适配三大维度实现突破性进展。",
-          "comment": "国产AI大模型通过极致性价比和垂直领域专精能否真正撼动国际厂商的市场地位？",
-          "source": "93913",
-          "url": "https://www.93913.com/119125.html"
-        },
-        {
-          "title": "Databricks年度化收入达54亿美元，其CEO称AI未削弱SaaS",
-          "summary": "数据和AI平台公司Databricks年度化收入达到54亿美元，增长的关键在于其AI产品线，尤其是名为Genie的自然语言处理界面。",
-          "comment": "AI功能的深度整合能否成为传统SaaS厂商逆势增长的新引擎？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7873720.html"
-        },
-        {
-          "title": "Nvidia现在生成的代码量是AI出现前的三倍",
-          "summary": "Nvidia内部使用AI编程工具Cursor，有超过30,000名工程师使用，代码提交量增长了三倍，同时缺陷率保持不变，生产力在开发周期各阶段均有提升。",
-          "comment": "代码量大幅增长但质量不降，这是否意味着AI编程已达到工业级应用的临界点？",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-now-produces-three-times-as-much-code-as-before-ai-specialized-version-of-cursor-is-being-used-by-over-30-000-nvidia-engineers-internally"
-        },
-        {
-          "title": "欺诈检测AI模型在300毫秒内运行，揭示AI构建者的启示",
-          "summary": "Mastercard的AI欺诈检测模型能在300毫秒内对个别交易进行深度分析，年处理160亿笔交易，峰值期间处理70,000笔/秒，展示了AI在金融安全领域的实际应用。",
-          "comment": "超低延迟的实时AI决策系统能否成为金融科技防守竞争的新标准？",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/orchestration/what-ai-builders-can-learn-from-fraud-models-that-run-in-300-milliseconds"
-        },
-        {
-          "title": "阿里新一代模型Qwen 3.5曝光",
-          "summary": "阿里推出新一代模型Qwen 3.5，有望在春节前上线，继续强化其大模型产品线。",
-          "comment": "频繁更新的大模型迭代周期能否满足真实应用场景对稳定性和可靠性的需求？",
-          "source": "爱范儿",
-          "url": "https://www.ifanr.com/1654707"
-        },
-        {
-          "title": "EU要求Meta允许竞争对手在WhatsApp运行AI聊天机器人",
-          "summary": "欧盟监管部门要求Meta允许竞争对手在WhatsApp上运行AI聊天机器人，而Meta则声称欧盟无理由干涉其1月份的应用变更。",
-          "comment": "监管部门强制开放AI能力的决定是否会加速还是阻碍AI聊天机器人生态的健康发展？",
-          "source": "BBC News",
-          "url": "https://www.bbc.com/news/articles/cqxdj77welpo"
-        },
-        {
-          "title": "AI不会减少工作，反而会加强工作强度",
-          "summary": "研究表明AI技术不会导致工作量减少，反而可能加强工作的强度和复杂性，改变职场的工作性质。",
-          "comment": "如果AI在提升生产力的同时反而增加工作强度，我们该如何重新思考AI的社会价值定义？",
-          "source": "Artificial Intelligence (AI)",
-          "url": "https://www.reddit.com/r/artificial/comments/1r0i8ly/ai_doesnt_reduce-workit-intensifies-it/"
         }
       ]
     },
@@ -96,67 +82,18 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "爱芯元智登陆港交所，成为首家港股上市的边缘计算AI芯片企业",
-          "summary": "AI感知与边缘计算芯片企业爱芯元智正式于香港交易所主板挂牌上市，现报28.2港元，总市值166亿港元，累计出货SoC 1.65亿颗。",
-          "comment": "国内AI芯片初创企业上市融资，是否预示着边缘计算芯片市场的爆发性增长机会？",
+          "title": "爱芯元智登陆港交所，首家边缘计算AI芯片港股上市企业",
+          "summary": "AI感知与边缘计算芯片企业爱芯元智正式在香港交易所主板上市，总市值166亿港元，截至2025年9月累计出货SoC芯片1.65亿颗，是首家在港股上市的边缘计算AI芯片企业。",
+          "comment": "端侧AI芯片企业的成功上市是否预示着AI芯片产业链的本土化趋势正在加速？",
           "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3676836287816327"
-        },
-        {
-          "title": "Alphabet筹划100亿英镑英镑债券发行，加速AI借贷潮",
-          "summary": "谷歌母公司Alphabet计划发行100亿英镑债券，与此前美元债券200亿美元的发行相接，反映了科技巨头在AI投资上加速融资。",
-          "comment": "科技巨头通过大规模债券融资支撑AI投资，是否表明AI基础设施建设已进入巨额资本竞争阶段？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/3260bc45-e09e-45a7-ae30-e55effbaf29b"
-        },
-        {
-          "title": "TSMC日本工厂升级3纳米工艺以应对AI芯片需求激增",
-          "summary": "TSMC正在对日本工厂进行3纳米工艺升级，以满足不断增长的AI芯片需求，这是其全球产能扩充战略的重要一步。",
-          "comment": "TSMC优先在日本而非台湾扩展先进工艺产能，背后的地缘政治考量如何影响全球AI芯片供应格局？",
-          "source": "EE Times",
-          "url": "https://www.eetimes.com/tsmc-3-nm-upgrade-in-japan-to-catch-up-with-demand/"
-        },
-        {
-          "title": "美国计划为大科技公司提供芯片关税豁免",
-          "summary": "美国政府正计划为大科技公司提供下一波芯片关税的豁免，豁免条件基于芯片制造商TSMC的美国投资承诺。",
-          "comment": "通过关税豁免引导AI芯片产业链本土化，这种政策工具的长期有效性如何？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/e6f7f69a-2552-45f5-ae4c-6f1135e5cde1"
-        },
-        {
-          "title": "声称AI驱动裁员增长1100%可能被夸大，企业被指掩饰经营不善",
-          "summary": "研究表明，2025年企业声称的AI驱动裁员增长1100%数据可能被夸大，部分企业被指以AI替罪羊来掩饰真实的经营问题。",
-          "comment": "企业利用AI叙事来合理化裁员决策，如何避免这种\"AI问责转移\"成为普遍现象？",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/claimed-1-100-percent-increase-in-ai-driven-layoffs-in-2025-might-be-misleading-firms-accused-of-exaggerating-ai-performance-to-downplay-poor-business-performance"
-        },
-        {
-          "title": "Moltbook热潮揭示AI炒作的本质",
-          "summary": "Reddit克隆社交网络Moltbook短期成为互联网热点，声称是机器人社交网络，但其火爆与快速衰落揭示了当前AI市场存在的炒作泡沫。",
-          "comment": "互联网对AI应用的热炒与冷淡周期加速，真正有价值的AI产品应该如何破圈？",
-          "source": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/02/09/1132537/a-lesson-from-pokemon/"
-        },
-        {
-          "title": "AI chatbots在医疗建议上存在\"危险\"风险",
-          "summary": "研究表明AI聊天机器人在提供医疗建议时存在\"危险\"风险，人们难以辨别哪些AI医疗建议值得信任。",
-          "comment": "如何在不阻止AI医疗应用创新的前提下，建立有效的信息安全筛查机制？",
-          "source": "BBC News",
-          "url": "https://www.bbc.com/news/articles/c3093gjy2ero"
-        },
-        {
-          "title": "AI.com超级碗广告投放导致网站流量崩溃",
-          "summary": "AI.com斥资8500万美元投放超级碗广告（广告费1500万，域名费7000万），但随后网站因流量激增而崩溃，暴露了其基础设施不足问题。",
-          "comment": "品牌为获得一时关注而过度烧钱，这种AI创业公司的营销战术是否可持续？",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-dot-com-super-bowl-ad-drove-massive-traffic-and-then-it-crashed"
+          "url": "https://36kr.com/newsflashes/3676836287816327?f=rss"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-10T10:03:43.393356+08:00",
+  "created_at": "2026-02-10T10:26:29.315452+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"

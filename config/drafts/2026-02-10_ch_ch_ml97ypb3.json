@@ -1,6 +1,6 @@
 {
   "date": "2026-02-10",
-  "time_window": "2026-02-09 10:00 ~ 2026-02-10 10:00",
+  "time_window": "2026-02-09 10:08 ~ 2026-02-10 10:08",
   "categories": [
     {
       "name": "产品发布",
@@ -8,36 +8,29 @@
       "news": [
         {
           "title": "OpenAI的Codex应用首周下载突破100万",
-          "summary": "OpenAI推出的独立Codex桌面应用（目前仅支持Mac）在首周内突破100万下载量，标志着AI编程工具竞争的升温。",
-          "comment": "当AI代码生成工具开始限制免费用户的访问权限时，这是否预示着付费AI工具的黄金时代即将到来？",
+          "summary": "OpenAI发布的Codex桌面应用（仅限Mac）在首周内下载量突破100万，标志着AI编程工具竞争激烈。",
+          "comment": "当AI编程助手进入大众应用阶段，这是否意味着开发者的工作流程即将发生根本性改变？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be"
         },
         {
-          "title": "苹果支持的AI模型VSSFlow可从无声视频生成声音和语音",
-          "summary": "新的VSSFlow模型展示了苹果在生成式AI领域的研究进展，能够从视频画面生成逼真的声音和语音效果。",
-          "comment": "当AI能够完整重构视频的声音维度时，我们如何在真假视频鉴别上建立新的信任机制？",
+          "title": "Apple推出VSSFlow模型：从无声视频生成声音和语音",
+          "summary": "Apple支持的新AI模型VSSFlow能从无声视频中生成逼真的声音和语音，采用统一的系统架构实现最先进的效果。",
+          "comment": "当AI能够为视频自动补全音频，这对内容创作和无障碍应用会带来怎样的革新？",
           "source": "9to5Mac",
           "url": "https://9to5mac.com/2026/02/09/new-apple-backed-ai-model-can-generate-sound-and-speech-from-silent-videos/"
         },
         {
-          "title": "谷歌Gemini在安卓桌面模式中新增持久化图标和快捷键",
-          "summary": "谷歌为即将推出的安卓桌面界面添加了Gemini AI助手的永久访问入口，提升了用户对AI功能的快速调用能力。",
-          "comment": "当AI助手被深度集成进操作系统的各个层级时，用户的隐私和数据安全问题是否应该被重新评估？",
-          "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/09/gemini-icon-android-desktop/"
+          "title": "DeepSeek V4定位编程专家，成本下降70倍",
+          "summary": "深度求索即将推出旗舰大模型DeepSeek V4，专注编程任务处理，成本相比前代大幅下降，同时优化了国产芯片适配。",
+          "comment": "国产AI模型在成本和性能上的突破，会如何改变全球AI应用的竞争格局？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119125.html"
         },
         {
-          "title": "阿里新一代模型Qwen 3.5曝光",
-          "summary": "阿里的最新大模型Qwen 3.5即将上线，展现了国内AI企业在大模型迭代上的持续进展。",
-          "comment": "当中美AI模型更新的速度都在加快时，性能差距缩小后的竞争焦点会转向哪个方向？",
-          "source": "爱范儿",
-          "url": "https://www.ifanr.com/1654707"
-        },
-        {
-          "title": "华为AI眼镜计划2026上半年发布，搭载鸿蒙系统",
-          "summary": "华为全新AI眼镜将于2026上半年正式发布，搭载鸿蒙系统并提供跨端协同体验，标志着智能眼镜领域的新竞争。",
-          "comment": "当国产AI眼镜陆续推出时，整个产业的竞争格局会如何重新划分？",
+          "title": "华为AI眼镜暂定2026上半年发布",
+          "summary": "华为全新AI眼镜计划于2026年上半年正式发布，搭载鸿蒙系统，提供跨端协同等全新体验。",
+          "comment": "当AI眼镜成为主流科技巨头的标配产品，会如何改变人们的日常交互方式和隐私保护的平衡？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119132.html"
         }
@@ -48,32 +41,25 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "ChatGPT开始在部分用户中测试广告",
-          "summary": "OpenAI宣布正式开始在ChatGPT中测试广告，以标记的赞助链接形式出现在回答底部，这是OpenAI盈利模式的重要尝试。",
-          "comment": "当免费AI工具引入广告后，用户会如何权衡免费使用与隐私/体验的权衡？",
+          "title": "OpenAI在ChatGPT中开始测试广告，廉价版用户将看到赞助链接",
+          "summary": "OpenAI官方确认开始在ChatGPT中测试广告功能，免费和Go用户将看到标记为赞助的链接出现在回答底部。",
+          "comment": "当免费AI服务开始承载广告，这是否标志着AI平台商业模式的转折，还是必然的可持续发展选择？",
           "source": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/876029/openai-testing-ads-in-chatgpt"
         },
         {
           "title": "Databricks年度化收入达54亿美元，AI产品线驱动增长",
-          "summary": "Databricks的年度化收入突破54亿美元，其中名为Genie的自然语言处理界面成为增长的关键动力。",
-          "comment": "当数据平台公司通过AI功能实现营收倍增时，这是否意味着AI已经成为企业软件的标配而非创新卖点？",
+          "summary": "数据AI公司Databricks年度化收入达到54亿美元，核心增长动力来自于AI产品线，特别是自然语言处理界面Genie。",
+          "comment": "当企业数据平台加速融合AI能力，会如何重塑数据分析和决策的效率边界？",
           "source": "钛媒体",
           "url": "https://www.tmtpost.com/7873720.html"
         },
         {
-          "title": "Waymo在纳什维尔测试无人驾驶出租车",
-          "summary": "Waymo在纳什维尔启动自动驾驶出租车的测试项目，这是其在新城市启动商业服务前的典型步骤。",
-          "comment": "自动驾驶技术从硅谷向外扩展时，不同城市的基础设施和法规差异会成为最大的瓶颈吗？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/09/waymo-is-testing-driverless-robotaxis-in-nashville/"
-        },
-        {
-          "title": "欧盟要求Meta允许竞争对手的AI聊天机器人在WhatsApp上运行",
-          "summary": "欧盟监管机构对Meta在WhatsApp中引入AI功能后排斥竞争对手的做法进行干预，要求其开放平台。",
-          "comment": "当监管机构强制要求AI功能互操作时，这是否会改变科技巨头对AI产品战略的思考方式？",
-          "source": "BBC News",
-          "url": "https://www.bbc.com/news/articles/cqxdj77welpo"
+          "title": "Alphabet融资200亿美元用于AI发展，发行百年英镑债券",
+          "summary": "Google母公司Alphabet发行20亿美元美元债券融资，并计划发行百年期的英镑债券，用于加快AI基础设施投资。",
+          "comment": "科技巨头用百年债券为AI投资融资，这是否反映出AI的长期价值认知还是产业泡沫的信号？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/3260bc45-e09e-45a7-ae30-e55effbaf29b"
         }
       ]
     },
@@ -82,18 +68,32 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "STLE开源框架教AI学会说'我不知道'",
-          "summary": "一项新的开源框架STLE通过教授AI模型识别自身的不确定性，解决了神经网络过度自信的问题，提升了AI系统的安全性。",
-          "comment": "当AI系统能够主动承认知识的局限性时，这会如何改变人们对AI可靠性的信任度？",
+          "title": "STLE框架教AI模型学会说'我不知道'",
+          "summary": "开源框架STLE通过补充模糊集合论创新方法，让神经网络能够识别不确定性，对未见过的数据表示认知局限而非过度自信。",
+          "comment": "当AI能够承认自己的知识边界，这对AI在医疗、金融等高风险领域的应用意味着什么？",
           "source": "Artificial Intelligence (AI)",
           "url": "https://www.reddit.com/r/artificial/comments/1r0kitb/stle_an_opensource_framework_for_ai_uncertainty/"
+        },
+        {
+          "title": "TSMC升级日本工厂至3nm工艺以应对AI芯片需求",
+          "summary": "台积电为其日本工厂升级3纳米制程工艺，以满足日益激增的AI芯片需求。",
+          "comment": "全球AI芯片产能竞争中，日本制造的崛起会如何打破现有的供应链格局？",
+          "source": "EE Times",
+          "url": "https://www.eetimes.com/tsmc-3-nm-upgrade-in-japan-to-catch-up-with-demand/"
+        },
+        {
+          "title": "Nvidia内部代码生产效率提升三倍，使用AI助手Cursor",
+          "summary": "Nvidia超过30000名工程师使用AI编程工具Cursor，使代码提交量增加三倍，同时bug率保持不变，证明AI大幅提升了开发效率。",
+          "comment": "当芯片巨头自身成为AI编程工具的重度用户，这是否暗示AI会如何改造整个软件产业的生产力？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-now-produces-three-times-as-much-code-as-before-ai-specialized-version-of-cursor-is-being-used-by-over-30-000-nvidia-engineers-internally"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-10T10:03:43.392824+08:00",
+  "created_at": "2026-02-10T10:26:29.315029+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
