@@ -261,6 +261,7 @@ def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
                 "title": entry.get("title", ""),
                 "description": entry.get("summary", entry.get("description", ""))[:500],
                 "source": source_name,
+                "feed_url": feed_url,
                 "url": entry.get("link", ""),
                 "published": published.isoformat() if published else ""
             })
@@ -285,14 +286,14 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     feed_urls = get_rss_feeds(settings)
     print(f"  - Using {len(feed_urls)} RSS feeds")
 
-    # 获取智能硬件源的名称列表（仅聚焦模式下不受限制）
-    hardware_sources = set()
+    # 获取智能硬件源的 URL 列表（仅聚焦模式下不受限制）
+    hardware_urls = set()
     if hardware_unlimited:
         rss_feeds = settings.get("rss_feeds", [])
         for feed in rss_feeds:
             if feed.get("group") == "智能硬件" and feed.get("enabled", True):
-                hardware_sources.add(feed.get("name", ""))
-        print(f"  - Smart hardware sources (no limit): {list(hardware_sources)}")
+                hardware_urls.add(feed.get("url", ""))
+        print(f"  - Smart hardware sources (no limit): {len(hardware_urls)} feeds")
 
     # Collect articles grouped by source
     articles_by_source = {}
@@ -340,8 +341,10 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
         # Sort by published time within source
         articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
-        # 检查是否是智能硬件源（仅聚焦模式下生效）
-        is_hardware = hardware_unlimited and any(hw_name in source for hw_name in hardware_sources if hw_name)
+        # 检查是否是智能硬件源（通过 feed_url 精确匹配）
+        is_hardware = hardware_unlimited and any(
+            a.get("feed_url", "") in hardware_urls for a in articles
+        ) if hardware_urls else False
 
         if is_hardware:
             # 智能硬件源：全部保留（仅聚焦模式）
@@ -456,7 +459,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 普通消费电子（电视、音箱、相机等）
 - 纯软件产品、互联网服务
 
-**数量要求**：选 5-7 条，不多不少。
+**数量要求**：选 5-7 条（如果符合条件的超过 7 条，可以多选，最多 10 条）。
 
 **筛选要求**：
 - 去重：相同事件只保留最权威来源

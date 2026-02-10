@@ -221,7 +221,7 @@ export default function ChannelDetail() {
   const handleTrigger = useCallback(async (workflowFile, key, inputs = {}) => {
     setTriggerStatus(prev => ({ ...prev, [key]: 'loading' }))
     try {
-      await triggerWorkflow(workflowFile, 'main', inputs)
+      await triggerWorkflow(workflowFile, 'refactor/sleep-arch', inputs)
       setTriggerStatus(prev => ({ ...prev, [key]: 'success' }))
       setTimeout(() => setTriggerStatus(prev => ({ ...prev, [key]: null })), 5000)
     } catch (e) {
@@ -347,11 +347,20 @@ export default function ChannelDetail() {
                   if (!confirm('确定要删除当前草稿并重新抓取吗？')) return
                   setRefetching(true)
                   try {
-                    await deleteFile(
-                      `config/drafts/${draft.name}`,
-                      `Delete draft ${draft.name} for re-fetch`,
-                      draftSha
-                    )
+                    let sha = draftSha
+                    try {
+                      await deleteFile(`config/drafts/${draft.name}`, `Delete draft ${draft.name} for re-fetch`, sha)
+                    } catch (e1) {
+                      if (e1.message && e1.message.includes('409')) {
+                        // SHA mismatch — re-fetch latest SHA and retry
+                        const latest = await readFile(`config/drafts/${draft.name}`)
+                        if (latest) {
+                          await deleteFile(`config/drafts/${draft.name}`, `Delete draft ${draft.name} for re-fetch`, latest.sha)
+                        }
+                      } else {
+                        throw e1
+                      }
+                    }
                     setDraft(null)
                     setDraftSha(null)
                   } catch (e) {
