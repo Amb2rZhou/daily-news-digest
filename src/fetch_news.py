@@ -736,8 +736,11 @@ def _focused_split_call(client, articles_text: str, max_items: int, paywalled_so
 
     print(f"  - Focused mode: 2 Haiku calls (hardware + AI/industry)")
 
+    hw_budget = 7  # hardware gets 5-7 items
+    ai_budget = max(max_items - hw_budget, 3)  # rest goes to AI+industry, at least 3
     prompt_hw = get_prompt_for_mode("focused_hardware", articles_text, max_items, "", "", "", None, paywalled_sources)
-    prompt_ai = get_prompt_for_mode("focused_ai_industry", articles_text, max_items, "", "", "", None, paywalled_sources)
+    prompt_ai = get_prompt_for_mode("focused_ai_industry", articles_text, ai_budget, "", "", "", None, paywalled_sources)
+    print(f"  - Budget: hardware 5-7, AI+industry {ai_budget}, total cap {max_items}")
 
     start = time.time()
 
