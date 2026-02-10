@@ -261,6 +261,7 @@ def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
                 "title": entry.get("title", ""),
                 "description": entry.get("summary", entry.get("description", ""))[:500],
                 "source": source_name,
+                "feed_url": feed_url,
                 "url": entry.get("link", ""),
                 "published": published.isoformat() if published else ""
             })
@@ -285,14 +286,14 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     feed_urls = get_rss_feeds(settings)
     print(f"  - Using {len(feed_urls)} RSS feeds")
 
-    # 获取智能硬件源的名称列表（仅聚焦模式下不受限制）
-    hardware_sources = set()
+    # 获取智能硬件源的 URL 列表（仅聚焦模式下不受限制）
+    hardware_urls = set()
     if hardware_unlimited:
         rss_feeds = settings.get("rss_feeds", [])
         for feed in rss_feeds:
             if feed.get("group") == "智能硬件" and feed.get("enabled", True):
-                hardware_sources.add(feed.get("name", ""))
-        print(f"  - Smart hardware sources (no limit): {list(hardware_sources)}")
+                hardware_urls.add(feed.get("url", ""))
+        print(f"  - Smart hardware sources (no limit): {len(hardware_urls)} feeds")
 
     # Collect articles grouped by source
     articles_by_source = {}
@@ -340,8 +341,10 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
         # Sort by published time within source
         articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
-        # 检查是否是智能硬件源（仅聚焦模式下生效）
-        is_hardware = hardware_unlimited and any(hw_name in source for hw_name in hardware_sources if hw_name)
+        # 检查是否是智能硬件源（通过 feed_url 精确匹配）
+        is_hardware = hardware_unlimited and any(
+            a.get("feed_url", "") in hardware_urls for a in articles
+        ) if hardware_urls else False
 
         if is_hardware:
             # 智能硬件源：全部保留（仅聚焦模式）
@@ -742,6 +745,16 @@ def _focused_split_call(client, articles_text: str, max_items: int, paywalled_so
     resp_hw = _call_haiku(client, prompt_hw, "智能硬件")
     resp_ai = _call_haiku(client, prompt_ai, "AI+行业")
 
+    # Retry failed calls once
+    if not resp_hw:
+        print(f"  - Retrying 智能硬件 call...")
+        time.sleep(2)
+        resp_hw = _call_haiku(client, prompt_hw, "智能硬件-retry")
+    if not resp_ai:
+        print(f"  - Retrying AI+行业 call...")
+        time.sleep(2)
+        resp_ai = _call_haiku(client, prompt_ai, "AI+行业-retry")
+
     elapsed = time.time() - start
     print(f"  - Focused split total 耗时: {elapsed:.1f}s")
 
@@ -771,28 +784,36 @@ def _focused_split_call(client, articles_text: str, max_items: int, paywalled_so
                 seen_urls.add(url)
 
     # Parse AI/industry result, dedup by URL
+    ai_parsed = None
     if resp_ai:
-        parsed = _parse_json_response(resp_ai)
-        if parsed:
-            ai_cats = parsed.get("categories", [])
-            print(f"  - AI+行业: parsed OK, {len(ai_cats)} categories. Keys: {list(parsed.keys())}")
-            for cat in ai_cats:
-                cat_name = cat.get("name", "?")
-                cat_news = cat.get("news", [])
-                deduped_news = [n for n in cat_news if n.get("url", "") not in seen_urls]
-                removed = len(cat_news) - len(deduped_news)
-                if deduped_news:
-                    categories.append({"name": cat_name, "icon": cat.get("icon", ""), "news": deduped_news})
-                    msg = f"  - {cat.get('icon', '')} {cat_name}: {len(deduped_news)} 条"
-                    if removed > 0:
-                        msg += f" (去重移除 {removed} 条)"
-                    print(msg)
-                else:
-                    print(f"  - {cat.get('icon', '')} {cat_name}: 0 条 (all {len(cat_news)} deduped)")
-        else:
-            print(f"  - AI+行业: JSON parse failed. Response preview: {resp_ai[:300]}")
+        ai_parsed = _parse_json_response(resp_ai)
+        if not ai_parsed:
+            print(f"  - AI+行业: JSON parse failed, retrying call...")
+            time.sleep(2)
+            resp_ai = _call_haiku(client, prompt_ai, "AI+行业-retry-json")
+            if resp_ai:
+                ai_parsed = _parse_json_response(resp_ai)
     else:
         print(f"  - AI+行业: API call returned None")
+
+    if ai_parsed:
+        ai_cats = ai_parsed.get("categories", [])
+        print(f"  - AI+行业: parsed OK, {len(ai_cats)} categories. Keys: {list(ai_parsed.keys())}")
+        for cat in ai_cats:
+            cat_name = cat.get("name", "?")
+            cat_news = cat.get("news", [])
+            deduped_news = [n for n in cat_news if n.get("url", "") not in seen_urls]
+            removed = len(cat_news) - len(deduped_news)
+            if deduped_news:
+                categories.append({"name": cat_name, "icon": cat.get("icon", ""), "news": deduped_news})
+                msg = f"  - {cat.get('icon', '')} {cat_name}: {len(deduped_news)} 条"
+                if removed > 0:
+                    msg += f" (去重移除 {removed} 条)"
+                print(msg)
+            else:
+                print(f"  - {cat.get('icon', '')} {cat_name}: 0 条 (all {len(cat_news)} deduped)")
+    elif resp_ai:
+        print(f"  - AI+行业: JSON parse failed after retry. Response preview: {resp_ai[:300]}")
 
     total = sum(len(c.get("news", [])) for c in categories)
     print(f"  - Focused total: {total} items in {len(categories)} categories")
