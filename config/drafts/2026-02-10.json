@@ -1,59 +1,38 @@
 {
   "date": "2026-02-10",
-  "time_window": "2026-02-09 10:08 ~ 2026-02-10 10:08",
+  "time_window": "2026-02-09 10:00 ~ 2026-02-10 09:59",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "Meta新头显Phoenix计算单元渲染图流出",
-          "summary": "Meta计划明年上半年发布超轻薄头显Phoenix，采用计算单元外置设计以降低佩戴重量，近日其配套计算单元的渲染图被曝光。",
-          "comment": "将计算单元外置是否会成为未来VR/MR头显的主流设计方向？",
+          "title": "Meta推进AI眼镜辅助功能，助力认知障碍者与退伍军人重获独立生活",
+          "summary": "Meta的AI眼镜正通过结合时尚设计与前沿技术，帮助盲人、低视力群体和患有记忆缺失的伤残退伍军人改善生活质量，在记忆辅助和空间感知等无障碍领域取得进展。",
+          "comment": "AI眼镜在医疗辅助领域的应用如何才能实现从概念验证到大规模商业部署的突破？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544711.html"
+        },
+        {
+          "title": "影目INMO GO 3入驻成都熊猫基地，提供AI眼镜智能导览服务",
+          "summary": "影目科技联合成都熊猫基地推出AI眼镜定制款INMO GO 3租赁服务，游客可通过AR技术自动获得精准科普内容和实时AI问答，实现智能文旅体验。",
+          "comment": "AI眼镜在文化旅游场景中的部署如何平衡技术创新与用户隐私保护的要求？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544713.html"
+        },
+        {
+          "title": "Meta新头显计算单元渲染图流出，超轻薄设计成为发展方向",
+          "summary": "Meta计划于2026年上半年发布代号Phoenix的超轻薄VR头显，采用计算单元外置设计以降低头部重量，正脸设计参考Quest Pro，瞄准高端市场。",
+          "comment": "计算单元外置的VR头显架构如何解决长期穿戴的舒适性和功能集成的矛盾？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544710.html"
         },
         {
-          "title": "2025年VR/MR市场回顾：短期回调但长期增势不变",
-          "summary": "2025年VR/MR发展略显平静甚至出现下滑，但Meta调整战略规划超轻薄头显、苹果推出Vision Pro M5版本、国产厂商vivo推出398g轻量化头显，行业在降中有升。",
-          "comment": "轻量化和平价化是否是VR/MR走向大众消费的关键突破口？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544709.html"
-        },
-        {
-          "title": "穹彻智能完成数亿元A轮融资",
-          "summary": "具身智能企业穹彻智能完成数亿元A轮融资，由C资本领投，将持续推进大模型研发并聚焦多种标准化机器人硬件的适配。",
-          "comment": "具身智能的通用大模型突破是否会加速人形机器人的商业化进程？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3676846269817478?f=rss"
-        },
-        {
-          "title": "华为AI眼镜暂定2026年上半年发布",
-          "summary": "华为全新AI眼镜将于2026年上半年正式发布，搭载鸿蒙系统，带来跨端协同体验，标志着智能眼镜赛道的又一重要布局。",
-          "comment": "鸿蒙生态在AI眼镜上的应用能否为华为打开消费级智能硬件的新市场？",
+          "title": "华为AI眼镜暂定2026上半年发布，搭载鸿蒙系统",
+          "summary": "华为全新AI眼镜计划在2026年上半年发布，将搭载鸿蒙系统并提供跨端协同等新体验，标志着国内科技巨头在智能眼镜领域的重要布局。",
+          "comment": "国产AI眼镜如何通过系统级优化来建立相比国际产品的差异化竞争优势？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119132.html"
-        },
-        {
-          "title": "夸克AI眼镜全系完成软件升级",
-          "summary": "夸克AI眼镜S1旗舰系列新增第一视角直播、截屏录屏功能，G1系列搭载Super RAW暗光增强技术实现超级夜景模式，功能体验进一步优化。",
-          "comment": "AI眼镜从基础视觉功能向直播、夜景等专业应用拓展，是否预示着消费级智能眼镜的成熟期正在到来？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119130.html"
-        },
-        {
-          "title": "苹果新款AirPods Pro将集成摄像头",
-          "summary": "爆料者确认苹果即将推出的新款AirPods Pro将内置摄像头，这将是AirPods Pro系列的重要升级。",
-          "comment": "在耳机中集成摄像头会如何改变用户的交互体验和隐私考量？",
-          "source": "9to5Mac",
-          "url": "https://9to5mac.com/2026/02/09/apples-next-airpods-pro-will-come-with-cameras-says-leaker/"
-        },
-        {
-          "title": "深圳众擎机器人发起首届URKL全球人形机器人自由格斗联赛",
-          "summary": "首个专注全尺寸人形机器人的商业化自由格斗赛事启动，标志着人形机器人技术检验正式迈入实战化竞技阶段。",
-          "comment": "竞技化验证是否会加速人形机器人在实际应用场景中的迭代优化？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119122.html"
         }
       ]
     },
@@ -62,16 +41,23 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "OpenAI的Codex应用首周下载量突破100万，但免费用户可能面临限制",
-          "summary": "OpenAI的独立Codex桌面应用（仅Mac版）在首周下载量突破100万，标志着AI编程工具竞争的重要里程碑，但公司正考虑对免费和Go用户施加使用限制。",
-          "comment": "AI编程工具的爆炸性增长是否意味着开发者生产力的真正革命，还是仅仅是用户对新技术的短期热情？",
+          "title": "OpenAI的Codex应用首周下载破百万——AI编程工具竞争升温",
+          "summary": "OpenAI发布的独立Codex桌面应用（目前仅限Mac）在首周内突破100万下载量，标志着AI编程工具市场的快速增长。该应用可能面临对免费用户和Go订阅用户的使用限制。",
+          "comment": "当AI编程工具达到百万级用户时，这是否意味着传统开发工作流的根本性转变即将来临？",
           "source": "VentureBeat",
-          "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be-coming-to-free-and-go-users"
+          "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be"
         },
         {
-          "title": "Apple支持的VSSFlow模型能从无声视频生成声音和语音",
-          "summary": "Apple支持的新AI模型VSSFlow采用创新架构，可以从静音视频中生成声音和语音内容，实现了该领域的最先进效果。",
-          "comment": "多模态AI从视觉信息反推音频的能力突破，会如何改变视频内容创作和生成的未来？",
+          "title": "DuckDuckGo为Duck.ai增加免费加密实时AI语音聊天功能",
+          "summary": "DuckDuckGo为其搜索AI平台Duck.ai添加了免费的加密实时语音聊天功能，免费用户有日限额，付费订阅用户限额更高。这是隐私导向的搜索引擎在AI应用中的新尝试。",
+          "comment": "在隐私与功能性之间，用户会如何权衡免费AI工具的使用？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/09/duckduckgo-adds-free-encrypted-real-time-ai-voice-chat-to-duck-ai/"
+        },
+        {
+          "title": "Apple支持的VSSFlow模型可从无声视频生成声音和语音",
+          "summary": "Apple支持的新AI模型VSSFlow能够从无声视频中生成逼真的音效和语音，采用统一的创新架构实现最先进的效果。",
+          "comment": "生成式AI在多模态融合中的突破，会如何改变内容创作的门槛？",
           "source": "9to5Mac",
           "url": "https://9to5mac.com/2026/02/09/new-apple-backed-ai-model-can-generate-sound-and-speech-from-silent-videos/"
         }
@@ -82,16 +68,30 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "爱芯元智登陆港交所，首家边缘计算AI芯片港股上市企业",
-          "summary": "AI感知与边缘计算芯片企业爱芯元智正式在香港交易所主板上市，总市值166亿港元，截至2025年9月累计出货SoC芯片1.65亿颗，是首家在港股上市的边缘计算AI芯片企业。",
-          "comment": "端侧AI芯片企业的成功上市是否预示着AI芯片产业链的本土化趋势正在加速？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3676836287816327?f=rss"
+          "title": "ChatGPT正式开始测试广告投放——OpenAI商业化进展加速",
+          "summary": "OpenAI开始在ChatGPT平台测试广告，广告将以标记的'赞助'链接形式出现在回答底部，首先在免费和部分付费用户中推出。OpenAI CEO Sam Altman曾称此举为'最后手段'。",
+          "comment": "当免费AI服务面临变现压力时，用户体验的妥协是否会加剧行业的两极分化？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/876029/openai-testing-ads-in-chatgpt"
+        },
+        {
+          "title": "Tem融资7500万美元用AI重塑电力市场",
+          "summary": "Tem完成7500万美元融资，用于扩展其AI驱动的电力交易引擎到美国和澳大利亚。该公司的交易引擎利用AI降低成本，由Lightspeed领投。",
+          "comment": "AI在能源市场的应用能否帮助解决全球AI芯片对电力的饥渴需求？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/09/tem-raises-75m-to-remake-electricity-markets-using-ai/"
+        },
+        {
+          "title": "摩根大通看好中国AI股——MiniMax和智谱AI股价大涨",
+          "summary": "摩根大通发布看好评级后，中国新兴AI模型开发商MiniMax和智谱AI在香港大幅上涨，反映国际资本对国内AI创业公司的乐观态度。",
+          "comment": "中国AI初创企业能否在国际融资和技术竞争中找到突破口？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-10/china-s-latest-ai-stars-minimax-zhipu-jump-on-jpmorgan-buy-call"
         }
       ]
     }
   ],
-  "source": "manual",
+  "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-10T10:26:01.070305+08:00"
+  "created_at": "2026-02-10T13:55:59.187371+08:00"
 }
