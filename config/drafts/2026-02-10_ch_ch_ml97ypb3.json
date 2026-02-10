@@ -1,38 +1,45 @@
 {
   "date": "2026-02-10",
-  "time_window": "2026-02-09 09:50 ~ 2026-02-10 09:50",
+  "time_window": "2026-02-09 10:00 ~ 2026-02-10 10:00",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "OpenAI Codex应用首周下载突破100万，但可能对免费用户施加限制",
-          "summary": "OpenAI推出独立Codex桌面应用（目前仅限Mac），首周下载量突破100万，标志着AI编程工具竞争加剧，但公司可能即将对免费和Go用户实施使用限制。",
-          "comment": "当AI编码工具快速普及时，是否会因为商业化而失去对开发者的吸引力？",
+          "title": "OpenAI的Codex应用首周下载突破100万",
+          "summary": "OpenAI推出的独立Codex桌面应用（目前仅支持Mac）在首周内突破100万下载量，标志着AI编程工具竞争的升温。",
+          "comment": "当AI代码生成工具开始限制免费用户的访问权限时，这是否预示着付费AI工具的黄金时代即将到来？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be"
         },
         {
-          "title": "华为全新AI眼镜暂定2026上半年发布，搭载鸿蒙系统",
-          "summary": "华为计划在2026年上半年推出新款AI眼镜，搭载鸿蒙系统并提供跨端协同功能，进一步加强在智能眼镜赛道的布局。",
-          "comment": "国内AI眼镜厂商的集中发力能否打破国际巨头的技术垄断？",
+          "title": "苹果支持的AI模型VSSFlow可从无声视频生成声音和语音",
+          "summary": "新的VSSFlow模型展示了苹果在生成式AI领域的研究进展，能够从视频画面生成逼真的声音和语音效果。",
+          "comment": "当AI能够完整重构视频的声音维度时，我们如何在真假视频鉴别上建立新的信任机制？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/09/new-apple-backed-ai-model-can-generate-sound-and-speech-from-silent-videos/"
+        },
+        {
+          "title": "谷歌Gemini在安卓桌面模式中新增持久化图标和快捷键",
+          "summary": "谷歌为即将推出的安卓桌面界面添加了Gemini AI助手的永久访问入口，提升了用户对AI功能的快速调用能力。",
+          "comment": "当AI助手被深度集成进操作系统的各个层级时，用户的隐私和数据安全问题是否应该被重新评估？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/09/gemini-icon-android-desktop/"
+        },
+        {
+          "title": "阿里新一代模型Qwen 3.5曝光",
+          "summary": "阿里的最新大模型Qwen 3.5即将上线，展现了国内AI企业在大模型迭代上的持续进展。",
+          "comment": "当中美AI模型更新的速度都在加快时，性能差距缩小后的竞争焦点会转向哪个方向？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1654707"
+        },
+        {
+          "title": "华为AI眼镜计划2026上半年发布，搭载鸿蒙系统",
+          "summary": "华为全新AI眼镜将于2026上半年正式发布，搭载鸿蒙系统并提供跨端协同体验，标志着智能眼镜领域的新竞争。",
+          "comment": "当国产AI眼镜陆续推出时，整个产业的竞争格局会如何重新划分？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119132.html"
-        },
-        {
-          "title": "苹果新款VSSFlow模型可从无声视频生成声音和语音",
-          "summary": "苹果支持的AI模型VSSFlow能够从无声视频中生成逼真的声音和语音，采用创新架构实现统一系统，达到业界领先水平。",
-          "comment": "从视频生成音频的AI技术如何应用才能避免伦理风险？",
-          "source": "9to5Mac",
-          "url": "https://9to5mac.com/2026/02/09/new-apple-backed-ai-model-can-generate-sound-and-speech-from-silent-videos/#more-1038399"
-        },
-        {
-          "title": "DeepSeek V4大模型正式推出，定位编程专家成本骤降70倍",
-          "summary": "国产AI企业DeepSeek发布新一代旗舰大模型V4，聚焦编程应用并实现极致性价比，成本相比顶尖模型下降70倍，同时完美适配国产芯片。",
-          "comment": "国产大模型在成本优势下是否能真正撼动全球AI编程工具的格局？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119125.html"
         }
       ]
     },
@@ -41,32 +48,32 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Alphabet融资200亿美元用于AI基础设施建设，创下公司记录",
-          "summary": "谷歌母公司Alphabet发行20亿美元美元债券，计划融资100年期的英镑债券，作为其AI基础设施投资热潮的一部分，显示科技巨头对AI竞争的巨大投入。",
-          "comment": "科技巨头的AI融资竞赛是否会导致市场泡沫和资源浪费？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/3260bc45-e09e-45a7-ae30-e55effbaf29b"
-        },
-        {
-          "title": "ChatGPT开始测试广告功能，对免费用户推出赞助商链接",
-          "summary": "OpenAI正式开始在ChatGPT上测试广告功能，向免费和部分付费用户展示标记为'赞助'的链接，成为公司探索商业化的新举措。",
-          "comment": "在AI工具中插入广告是否会影响用户体验和模型回答的客观性？",
+          "title": "ChatGPT开始在部分用户中测试广告",
+          "summary": "OpenAI宣布正式开始在ChatGPT中测试广告，以标记的赞助链接形式出现在回答底部，这是OpenAI盈利模式的重要尝试。",
+          "comment": "当免费AI工具引入广告后，用户会如何权衡免费使用与隐私/体验的权衡？",
           "source": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/876029/openai-testing-ads-in-chatgpt"
         },
         {
-          "title": "英伟达、谷歌、阿里集体押注核聚变技术为AI芯片供电",
-          "summary": "包括英伟达、谷歌和阿里在内的科技巨头纷纷投资核聚变技术，以期解决AI数据中心日益增长的能源需求。",
-          "comment": "核聚变能否真正成为解决AI算力危机的终极能源方案，还是仅仅是技术炒作？",
+          "title": "Databricks年度化收入达54亿美元，AI产品线驱动增长",
+          "summary": "Databricks的年度化收入突破54亿美元，其中名为Genie的自然语言处理界面成为增长的关键动力。",
+          "comment": "当数据平台公司通过AI功能实现营收倍增时，这是否意味着AI已经成为企业软件的标配而非创新卖点？",
           "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7873067.html"
+          "url": "https://www.tmtpost.com/7873720.html"
         },
         {
-          "title": "欧盟要求Meta允许竞争对手AI聊天机器人接入WhatsApp",
-          "summary": "欧盟监管部门要求Meta允许其他AI提供商的聊天机器人在WhatsApp平台上运行，以促进市场竞争。",
-          "comment": "强制互操作性是否能真正促进AI生态开放，还是会削弱平台的竞争优势？",
+          "title": "Waymo在纳什维尔测试无人驾驶出租车",
+          "summary": "Waymo在纳什维尔启动自动驾驶出租车的测试项目，这是其在新城市启动商业服务前的典型步骤。",
+          "comment": "自动驾驶技术从硅谷向外扩展时，不同城市的基础设施和法规差异会成为最大的瓶颈吗？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/09/waymo-is-testing-driverless-robotaxis-in-nashville/"
+        },
+        {
+          "title": "欧盟要求Meta允许竞争对手的AI聊天机器人在WhatsApp上运行",
+          "summary": "欧盟监管机构对Meta在WhatsApp中引入AI功能后排斥竞争对手的做法进行干预，要求其开放平台。",
+          "comment": "当监管机构强制要求AI功能互操作时，这是否会改变科技巨头对AI产品战略的思考方式？",
           "source": "BBC News",
-          "url": "https://www.bbc.com/news/articles/cqxdj77welpo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.com/news/articles/cqxdj77welpo"
         }
       ]
     },
@@ -75,25 +82,18 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "STLE开源框架教会AI模型说'我不知道'来处理不确定性",
-          "summary": "开源框架STLE通过集合论方法，使神经网络能够识别自身的不确定性并主动承认不知道，而非盲目给出高置信度的错误答案。",
-          "comment": "让AI学会承认自己的局限性能否从根本上提升AI系统在关键应用中的安全性？",
+          "title": "STLE开源框架教AI学会说'我不知道'",
+          "summary": "一项新的开源框架STLE通过教授AI模型识别自身的不确定性，解决了神经网络过度自信的问题，提升了AI系统的安全性。",
+          "comment": "当AI系统能够主动承认知识的局限性时，这会如何改变人们对AI可靠性的信任度？",
           "source": "Artificial Intelligence (AI)",
           "url": "https://www.reddit.com/r/artificial/comments/1r0kitb/stle_an_opensource_framework_for_ai_uncertainty/"
-        },
-        {
-          "title": "TSMC日本工厂升级至3纳米工艺以应对AI芯片需求爆发",
-          "summary": "台积电为其日本工厂增加3纳米芯片产能，以满足全球AI芯片需求的持续增长。",
-          "comment": "后发国家的芯片产能建设能否有效缓解全球AI芯片供应瓶颈？",
-          "source": "EE Times",
-          "url": "https://www.eetimes.com/tsmc-3-nm-upgrade-in-japan-to-catch-up-with-demand/"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-10T09:53:13.600240+08:00",
+  "created_at": "2026-02-10T10:03:43.392824+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
