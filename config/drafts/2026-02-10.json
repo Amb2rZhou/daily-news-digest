@@ -7,23 +7,23 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "阿里巴巴推出开源机器人AI模型RynnBrain",
-          "summary": "阿里巴巴推出名为RynnBrain的AI模型，能帮助机器人和其他设备执行真实世界任务，标志着其在多个AI领域领导地位的又一步进展。",
-          "comment": "开源机器人AI模型如何加速具身智能在不同行业的落地应用？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-10/alibaba-pushes-into-robotics-ai-with-open-source-rynnbrain"
+          "title": "阿里巴巴推出机器人AI模型，科技巨头争相布局'物理AI'",
+          "summary": "阿里巴巴发布AI模型驱动机器人，与英伟达、谷歌等科技巨头一同在机器人和'物理AI'领域展开竞争。",
+          "comment": "当AI模型开始赋能具体的机器人硬件时，'物理AI'时代是否意味着AI将从虚拟世界真正进入物理世界？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/10/alibaba-ai-model-robotics-rynnbrain-china.html"
         },
         {
-          "title": "腾讯混元推出0.3B端侧模型实现2Bit量化新突破",
-          "summary": "腾讯混元推出HY-1.8B-2Bit极小模型，通过2Bit量化技术将参数量压缩至0.3B，存储仅600MB，实现了端侧部署的产业级突破。",
-          "comment": "极致压缩的端侧模型如何在资源受限的消费级硬件上重新定义AI应用边界？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/l9jyZlcDsoDFMzjU.html"
+          "title": "Anthropic发布2026 Agent编程趋势报告，揭示软件开发范式转变",
+          "summary": "Anthropic报告指出，编程正从'人写代码'转变为'人指挥AI Agent写代码'，工程师角色逐步转变为编排者，多Agent协同和长时间自主运行成为新趋势。",
+          "comment": "如果AI Agent能够自主运行并协同工作，那么未来的软件开发是否还需要专业程序员，或者程序员将演变为AI编排师？",
+          "source": "宝玉的分享",
+          "url": "https://baoyu.io/blog/2026/02/09/anthropic-agentic-coding-trends-2026"
         },
         {
-          "title": "OpenAI Codex应用首周下载突破百万",
-          "summary": "OpenAI的独立Codex桌面应用（仅限Mac）在首周内下载量突破100万，标志着AI编程工具竞争进入新阶段。",
-          "comment": "超快的用户采纳速度如何预示AI编程工具的市场前景与长期发展方向？",
+          "title": "OpenAI Codex桌面应用首周下载量超百万，AI编程工具竞争升温",
+          "summary": "OpenAI推出的Codex独立应用（MacOS）在首周下载量突破100万，标志着AI编程工具领域竞争进一步加剧。",
+          "comment": "AI编程工具在如此短的时间内获得百万级下载，这是否预示着传统IDE即将被重塑？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be"
         }
@@ -34,23 +34,30 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Alphabet发布年报强调AI相关风险，同时融资支撑基础设施建设",
-          "summary": "谷歌母公司Alphabet在年报中指出AI对其广告业务等存在潜在风险，同时通过债券融资推进AI基础设施投资，体现了对AI机遇和挑战的复杂认知。",
-          "comment": "当科技巨头同时强调AI风险与加大AI投资时，这反映出怎样的行业发展困境？",
+          "title": "Alphabet年度报告突出强调AI相关风险，同时发债融资扩建AI基础设施",
+          "summary": "谷歌母公司Alphabet在年度报告中警示AI带来的商业风险（包括对广告业务的冲击），同时积极融资推进AI基础设施建设。",
+          "comment": "科技巨头一边声称AI风险，一边加大AI投资，这种矛盾的策略背后反映了什么样的行业现状？",
           "source": "CNBC",
           "url": "https://www.cnbc.com/2026/02/09/alphabet-highlights-new-ai-related-risks-in-tapping-debt-market.html"
         },
         {
-          "title": "TSMC升级日本工厂至3纳米工艺以应对AI芯片需求激增",
-          "summary": "TSMC加速升级其日本工厂的3纳米制程技术，以满足全球AI芯片需求的快速增长。",
-          "comment": "AI芯片需求暴增如何重塑全球芯片制造产业的地理布局和投资策略？",
-          "source": "EE Times",
-          "url": "https://www.eetimes.com/tsmc-3-nm-upgrade-in-japan-to-catch-up-with-demand/"
+          "title": "阿里巴巴淘宝Vision在米兰冬奥会展示AI数字购物体验",
+          "summary": "阿里巴巴在米兰冬奥会推出'米兰·阿里廊'，运用XR、3D和AI大模型技术为用户打造沉浸式AI数字购物新体验。",
+          "comment": "科技与传统体育赛事的结合是否将成为AI应用的新舞台，推动AI商业化落地？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/HqWtkmAIE31SMRIZ.html"
+        },
+        {
+          "title": "大晓机器人完成天使轮融资，蚂蚁集团领投具身智能赛道",
+          "summary": "大晓机器人完成天使轮融资，蚂蚁集团、启明创投等机构参与，融资将用于具身AI全栈研发和商业化推进。",
+          "comment": "蚂蚁集团等头部机构布局具身智能，是否标志着AI产业化进入新阶段？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/robot/n05a59ofUOIjId1Z.html"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-10T16:09:55.319269+08:00"
+  "created_at": "2026-02-10T19:35:25.103350+08:00"
 }
