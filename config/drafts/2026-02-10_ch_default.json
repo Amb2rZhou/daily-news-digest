@@ -1,0 +1,114 @@
+{
+  "date": "2026-02-10",
+  "time_window": "2026-02-09 09:37 ~ 2026-02-10 09:37",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "具身智能企业穹彻智能完成数亿元A轮融资",
+          "summary": "专注具身智能领域的创业公司穹彻智能近日完成数亿元A轮融资，由C资本领投，Sea Limited、普华资本等多家海外产业方跟投，这距其获得阿里巴巴投资仅数月之隔。",
+          "comment": "具身智能在海外资本和国内大厂的同时加注下，是否有望成为下一代AI硬件的突破口？",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3675766564987780?f=rss"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "OpenAI的Codex应用首周下载超100万，但免费用户可能面临限制",
+          "summary": "OpenAI推出的独立Codex桌面应用（仅限Mac）在首周突破100万下载量，但公司可能对免费和Go用户实施使用限制。",
+          "comment": "AI编程工具如何在保证商业可持续性和用户体验之间找到平衡？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be"
+        },
+        {
+          "title": "ChatGPT开始测试内置广告，向免费用户展示赞助内容",
+          "summary": "OpenAI正式开始在ChatGPT上测试广告，以标注'赞助'的链接形式出现在答案底部，仅对免费用户展示，不影响AI的实际回答。",
+          "comment": "AI产品如何在商业化和用户体验之间权衡，才能避免广告成为负累？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/876029/openai-testing-ads-in-chatgpt"
+        },
+        {
+          "title": "Apple支持的VSSFlow模型可从无声视频生成音频和语音",
+          "summary": "新型AI模型VSSFlow能够使用统一架构从无声视频生成自然的声音和语音效果，达到业界领先水平。",
+          "comment": "多模态AI在音频生成领域的突破能否开启视频内容创作的新可能性？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/09/new-apple-backed-ai-model-can-generate-sound-and-speech-from-silent-videos/#more-1038399"
+        },
+        {
+          "title": "DeepSeek V4大模型以编程专家定位上线，成本下降70倍",
+          "summary": "国产AI模型DeepSeek即将发布V4版本，专注编程领域，在超长代码处理、成本控制及国产芯片适配上实现突破，成本降低70倍。",
+          "comment": "国产大模型在特定领域的垂直深化能否打破国际顶尖模型的技术垄断？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119125.html"
+        },
+        {
+          "title": "Nvidia内部使用AI编程工具Cursor，代码产出量增加3倍",
+          "summary": "Nvidia超过30000名工程师内部使用AI辅助开发环境Cursor，代码提交量相比之前增加3倍，同时bug率保持不变。",
+          "comment": "AI开发工具如何真正提升开发效率而不是制造技术债务？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-now-produces-three-times-as-much-code-as-before-ai-specialized-version-of-cursor-is-being-used-by-over-30-000-nvidia-engineers-internally"
+        },
+        {
+          "title": "欧盟要求Meta允许竞争对手在WhatsApp上运行AI聊天机器人",
+          "summary": "欧盟监管机构指示Meta开放WhatsApp平台，允许竞争对手在其上运行AI聊天机器人，以促进应用生态的竞争。",
+          "comment": "监管要求的开放互联互通能否推动AI应用的创新生态建设？",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/cqxdj77welpo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "TSMC日本工厂升级3nm工艺以应对AI芯片需求激增",
+          "summary": "TSMC升级其日本工厂的3nm工艺技术以满足AI芯片需求的快速增长，这是应对全球AI芯片荒的重要举措。",
+          "comment": "芯片制造产能的地域分散化能否有效缓解AI时代的全球供应链压力？",
+          "source": "EE Times",
+          "url": "https://www.eetimes.com/tsmc-3-nm-upgrade-in-japan-to-catch-up-with-demand/"
+        },
+        {
+          "title": "英伟达、谷歌、阿里集体押注核聚变作为AI终极能源",
+          "summary": "英伟达、谷歌、阿里等科技巨头正积极投资核聚变技术，试图寻求解决AI数据中心能耗危机的终极方案。",
+          "comment": "核聚变商业化的关键技术瓶颈能否在10年内突破，以满足AI产业的能源需求？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7873067.html"
+        },
+        {
+          "title": "美国计划为大科技公司设计芯片关税豁免",
+          "summary": "美国政府计划在下一波芯片关税中为大科技公司提供豁免，豁免基于芯片制造商TSMC的美国投资承诺。",
+          "comment": "产业政策如何平衡保护本土芯片制造与维持全球AI产业链完整性？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/e6f7f69a-2552-45f5-ae4c-6f1135e5cde1"
+        },
+        {
+          "title": "OpenAI为美国防部部署ChatGPT，正式进入政府AI应用领域",
+          "summary": "OpenAI宣布在GenAI.mil平台部署定制版ChatGPT，为美国防部提供安全、前瞻性的AI服务。",
+          "comment": "AI模型在政府防务领域的应用如何确保安全性与合规性的同时保持创新？",
+          "source": "OpenAI News",
+          "url": "https://openai.com/index/bringing-chatgpt-to-genaimil"
+        },
+        {
+          "title": "Alphabet发行100年英镑债券，融资规模达20亿美元AI相关投资",
+          "summary": "谷歌母公司Alphabet推出100年期英镑债券融资，配合此前20亿美元美元债发行，加快AI基础设施投资步伐。",
+          "comment": "超长期债券融资用于AI投资能否体现出科技巨头对产业长期发展的信心？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/3260bc45-e09e-45a7-ae30-e55effbaf29b"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-10T09:43:17.572388+08:00",
+  "channel_id": "default",
+  "channel_name": "2人测试群",
+  "topic_mode": "focused"
+}
