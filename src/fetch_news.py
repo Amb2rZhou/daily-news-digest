@@ -238,11 +238,11 @@ def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
     try:
         # Use requests to fetch content first (handles SSL better than feedparser's urllib)
         try:
-            resp = requests.get(feed_url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+            resp = requests.get(feed_url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
             resp.raise_for_status()
             feed = feedparser.parse(resp.content)
         except requests.RequestException:
-            feed = feedparser.parse(feed_url)
+            return []
         source_name = feed.feed.get("title", feed_url)
 
         for entry in feed.entries[:20]:  # Limit entries per feed
