@@ -1,36 +1,43 @@
 {
   "date": "2026-02-11",
-  "time_window": "2026-02-10 09:54 ~ 2026-02-11 09:54",
+  "time_window": "2026-02-10 10:02 ~ 2026-02-11 10:02",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "OpenAI升级Responses API，支持Agent技能和完整终端Shell",
-          "summary": "OpenAI为Responses API增加了新功能，支持AI Agent具备持久记忆和完整的终端操作能力，解决了长上下文交互中的幻觉问题。",
-          "comment": "当AI Agent能够像真实开发者一样持续工作和自主调试代码时，我们是否真的准备好让它们独立完成复杂的软件项目？",
+          "title": "Runway完成3.15亿美元E轮融资，估值飙升至53亿美元",
+          "summary": "Runway完成3.15亿美元E轮融资，估值达53亿美元，正在开发下一代AI世界模型，与谷歌DeepMind、World Labs等竞争。",
+          "comment": "当多家顶级AI实验室同时押注世界模型技术，这是否预示着具身AI和机器人时代即将到来？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7875346.html"
+        },
+        {
+          "title": "OpenAI升级Responses API支持智能体技能和完整终端",
+          "summary": "OpenAI更新Responses API，新增对智能体技能和完整终端shell的支持，解决AI模型长对话中的上下文丢失问题。",
+          "comment": "当AI智能体能够更好地保持长期记忆和执行复杂任务时，它距离真正的自主工作系统还有多远？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/orchestration/openai-upgrades-its-responses-api-to-support-agent-skills-and-a-complete"
         },
         {
-          "title": "DPVR发布搭载GPT的AI太阳镜G5 Air",
-          "summary": "大朋正式发布DPVR G5 Air AI太阳镜，集成OpenAI GPT大模型，主打全天候佩戴体验和高频使用场景。",
-          "comment": "当AI太阳镜成为日常穿戴品，企业和开发者如何在隐私保护与功能创新之间找到平衡点？",
+          "title": "DPVR发布AI太阳镜G5 Air，搭载OpenAI GPT大模型",
+          "summary": "大朋（DPVR）向海外市场正式发布飞行员款AI太阳镜G5 Air，集成OpenAI GPT模型，专为全天候长时间佩戴设计。",
+          "comment": "AR眼镜集成大模型后，是否会成为继智能手机之后下一个人机交互的必需品？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544719.html"
         },
         {
-          "title": "Cadence推出ChipStack AI Agent芯片设计助手",
-          "summary": "Cadence发布ChipStack AI Super Agent，号称能将芯片设计和验证速度提升10倍，标志着AI在硬件设计领域的深度应用。",
-          "comment": "如果AI能够显著加速芯片设计，这是否会改变全球芯片产业的竞争格局和自给能力？",
-          "source": "EE Times",
-          "url": "https://www.eetimes.com/cadence-unveils-chipstack-ai-agent-for-agentic-chip-design-and-verification/"
+          "title": "Nothing推出Essential Apps测试版，支持AI驱动的主屏小部件生成",
+          "summary": "Nothing推出Essential Apps测试版，用户可通过文字提示和AI协助创建主屏小部件和应用，实现所谓的'氛围编码'。",
+          "comment": "当用户可以用自然语言生成应用界面时，传统应用开发的门槛是否会被彻底打破？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/10/nothing-essential-apps-hands-on/"
         },
         {
-          "title": "YouTube Music推出AI Playlist文本生成功能",
-          "summary": "Google为YouTube Music推出AI Playlist功能，用户可通过文本提示生成个性化播放列表，仅限Premium用户使用。",
-          "comment": "文本生成音乐推荐能否比传统推荐算法更深入理解用户的情感和音乐品味需求？",
+          "title": "YouTube Music推出AI Playlist功能，支持文本生成播单",
+          "summary": "YouTube Music新增'AI Playlist'功能，用户可通过文本提示生成个性化播单，目前仅限Premium订阅者。",
+          "comment": "生成式AI在音乐推荐中的应用是否能比传统算法更好地理解用户的隐性音乐需求？",
           "source": "9to5Google",
           "url": "https://9to5google.com/2026/02/10/youtube-music-adding-ai-playlist-with-text-based-playlist-generation/"
         }
@@ -41,59 +48,46 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Alphabet宣布2026年资本支出翻倍至1800亿美元",
-          "summary": "谷歌在财报会议上宣布2026年资本支出将达到1800-1850亿美元，较2025年增长翻倍，用于AI基础设施建设。",
-          "comment": "当科技巨头在AI基础设施上的投入超过许多国家GDP时，这种算力集中会如何影响全球AI生态的竞争格局？",
+          "title": "Alphabet宣布2026年资本支出增至1800-1850亿美元，超去年一倍",
+          "summary": "谷歌母公司Alphabet宣布2026年资本支出预算为1800-1850亿美元，较2025年大幅增加，主要用于AI基础设施和数据中心投资。",
+          "comment": "当科技巨头在AI基础设施上的投入超过传统芯片制造商时，这是否标志着AI竞争已进入全面军备竞赛阶段？",
           "source": "Tom's Hardware",
           "url": "https://www.tomshardware.com/tech-industry/alphabet-is-doubling-its-capital-expenditure-to-a-staggering-usd180-billion-in-2026-earnings-suggest-that-the-companys-ai-investments-may-be-paying-off"
         },
         {
-          "title": "xAI创始团队半数已离职，引发IPO前景担忧",
-          "summary": "马斯克旗下xAI公司创始团队近半已经离职，包括联创Jimmy Ba在内，业界担忧这对公司即将进行的IPO造成负面影响。",
-          "comment": "当一个AI初创公司的核心创始人不断离职，投资者和市场应该如何评估其长期竞争力和产品前景？",
+          "title": "Amazon或推出媒体内容许可市场，连接发布商与AI公司",
+          "summary": "报道称亚马逊计划创建一个市场平台，使媒体出版商能将内容直接许可给AI公司，建立内容与AI模型间的良好生态。",
+          "comment": "当科技巨头正式建立内容许可通道时，是否意味着AI训练数据的版权问题有望通过市场机制解决？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/10/amazon-may-launch-a-marketplace-where-media-sites-can-sell-their-content-to-ai-companies/"
+        },
+        {
+          "title": "Musk的xAI在两天内失去第二位联合创始人",
+          "summary": "在与SpaceX合并后，xAI核心研究人员Jimmy Ba等多位联合创始人相继离职，现已有约一半创始团队离开公司。",
+          "comment": "当AI初创公司面临关键人才流失时，融资规模和估值的高低是否仍是衡量其真正竞争力的准确指标？",
           "source": "TechCrunch",
           "url": "https://techcrunch.com/2026/02/10/nearly-half-of-xais-founding-team-has-now-left-the-company/"
         },
         {
-          "title": "Boston Dynamics CEO Robert Playter宣布离职",
-          "summary": "Boston Dynamics首席执行官Robert Playter在领导公司六年后宣布即日起离职，将于2月27日正式离开公司。",
-          "comment": "顶级机器人公司领导人的更替会如何影响其在人形机器人商业化方向上的战略调整？",
+          "title": "波士顿动力CEO Robert Playter宣布辞职",
+          "summary": "波士顿动力首席执行官Robert Playter宣布即日生效离职，将于2月27日正式离开公司，公司CFO接任临时CEO。",
+          "comment": "当机器人领域的知名企业失去领导者时，其在AI应用落地中的竞争力是否会受到影响？",
           "source": "The Verge",
           "url": "https://www.theverge.com/tech/876819/boston-dynamics-robots-ceo-steps-down-hyundai"
         },
         {
-          "title": "Amazon计划推出AI内容交易市场",
-          "summary": "亚马逊正在筹划建立媒体发行商与AI公司之间的内容许可交易平台，为AI公司提供合规的训练数据来源。",
-          "comment": "如果电商巨头成为AI数据交易的中介，这是否会打破当前的数据获取模式并建立新的产业生态？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/10/amazon-may-launch-a-marketplace-where-media-sites-can-sell-their-content-to-ai-companies/"
-        }
-      ]
-    },
-    {
-      "name": "技术进展",
-      "icon": "🔬",
-      "news": [
-        {
-          "title": "观察记忆技术将AI Agent成本降低10倍",
-          "summary": "研究团队开发'观察记忆'架构，相比传统RAG方案，在长上下文基准测试中性能更优，同时成本降低10倍。",
-          "comment": "当记忆管理技术能够大幅降低AI Agent的运行成本，这会如何推动Agent应用在更多实际场景中的落地？",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/data/observational-memory-cuts-ai-agent-costs-10x-and-outscores-rag-on-long"
-        },
-        {
-          "title": "重塑软件工程：从Vibe Coding走向Spec Coding",
-          "summary": "AI编程的竞争内核正在发生质变，业界开始从快速原型的Vibe Coding向更规范的Spec Coding转变。",
-          "comment": "当AI代码生成从追求速度转向追求规范和可维护性时，这对软件开发行业的专业标准会产生什么样的重塑？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7875267.html"
+          "title": "Google Photos在iPhone上推出'Create with AI'模板功能",
+          "summary": "Google Photos将其'Create with AI'生成式模板功能扩展至iPhone和iPad，用户可使用AI工具创建照片作品。",
+          "comment": "当生成式AI编辑工具跨越平台边界时，苹果和谷歌在照片处理领域的竞争格局是否将被重塑？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/10/google-photos-brings-create-with-ai-templates-to-iphone/"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-11T09:55:22.845782+08:00",
+  "created_at": "2026-02-11T10:03:59.935267+08:00",
   "channel_id": "ch_mlajg7no",
   "channel_name": "2人测试群for部门",
   "topic_mode": "broad"
