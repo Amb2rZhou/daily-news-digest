@@ -779,19 +779,24 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
 
     start = time.time()
 
-    # Sequential calls to avoid thread-safety issues with Anthropic client
-    resp_hw = _call_haiku(client, prompt_hw, "智能硬件")
-    resp_ai = _call_haiku(client, prompt_ai, "AI+行业")
+    def _call_and_parse(prompt, label, max_retries=2):
+        """Call Haiku and parse JSON, with retries for both API and parse failures."""
+        for attempt in range(max_retries + 1):
+            if attempt > 0:
+                print(f"  - Retrying {label} (attempt {attempt + 1})...")
+                time.sleep(3)
+            resp = _call_haiku(client, prompt, f"{label}" if attempt == 0 else f"{label}-retry{attempt}")
+            if not resp:
+                print(f"  - {label}: API call returned None")
+                continue
+            parsed = _parse_json_response(resp)
+            if parsed:
+                return parsed
+            print(f"  - {label}: JSON parse failed. Preview: {resp[:200]}")
+        return None
 
-    # Retry failed calls once
-    if not resp_hw:
-        print(f"  - Retrying 智能硬件 call...")
-        time.sleep(2)
-        resp_hw = _call_haiku(client, prompt_hw, "智能硬件-retry")
-    if not resp_ai:
-        print(f"  - Retrying AI+行业 call...")
-        time.sleep(2)
-        resp_ai = _call_haiku(client, prompt_ai, "AI+行业-retry")
+    hw_parsed = _call_and_parse(prompt_hw, "智能硬件")
+    ai_parsed = _call_and_parse(prompt_ai, "AI+行业")
 
     elapsed = time.time() - start
     print(f"  - Focused split total 耗时: {elapsed:.1f}s")
@@ -799,19 +804,15 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
     categories = []
 
     # Parse hardware result
-    if resp_hw:
-        parsed = _parse_json_response(resp_hw)
-        if parsed:
-            hw_news = parsed.get("news", [])
-            if hw_news:
-                categories.append({"name": "智能硬件", "icon": "🥽", "news": hw_news})
-                print(f"  - 🥽 智能硬件: {len(hw_news)} 条")
-            else:
-                print(f"  - 🥽 智能硬件: parsed OK but no 'news' key. Keys: {list(parsed.keys())}")
+    if hw_parsed:
+        hw_news = hw_parsed.get("news", [])
+        if hw_news:
+            categories.append({"name": "智能硬件", "icon": "🥽", "news": hw_news})
+            print(f"  - 🥽 智能硬件: {len(hw_news)} 条")
         else:
-            print(f"  - 🥽 智能硬件: JSON parse failed. Response preview: {resp_hw[:200]}")
+            print(f"  - 🥽 智能硬件: parsed OK but no 'news' key. Keys: {list(hw_parsed.keys())}")
     else:
-        print(f"  - 🥽 智能硬件: API call returned None")
+        print(f"  - 🥽 智能硬件: all attempts failed")
 
     # Collect URLs from hardware for dedup
     seen_urls = set()
@@ -820,19 +821,6 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
             url = news.get("url", "")
             if url:
                 seen_urls.add(url)
-
-    # Parse AI/industry result, dedup by URL
-    ai_parsed = None
-    if resp_ai:
-        ai_parsed = _parse_json_response(resp_ai)
-        if not ai_parsed:
-            print(f"  - AI+行业: JSON parse failed, retrying call...")
-            time.sleep(2)
-            resp_ai = _call_haiku(client, prompt_ai, "AI+行业-retry-json")
-            if resp_ai:
-                ai_parsed = _parse_json_response(resp_ai)
-    else:
-        print(f"  - AI+行业: API call returned None")
 
     if ai_parsed:
         ai_cats = ai_parsed.get("categories", [])
@@ -850,8 +838,8 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
                 print(msg)
             else:
                 print(f"  - {cat.get('icon', '')} {cat_name}: 0 条 (all {len(cat_news)} deduped)")
-    elif resp_ai:
-        print(f"  - AI+行业: JSON parse failed after retry. Response preview: {resp_ai[:300]}")
+    else:
+        print(f"  - AI+行业: all attempts failed")
 
     total = sum(len(c.get("news", [])) for c in categories)
     print(f"  - Focused total: {total} items in {len(categories)} categories")
