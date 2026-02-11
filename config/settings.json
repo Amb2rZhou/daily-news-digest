@@ -166,12 +166,6 @@
       "enabled": true
     },
     {
-      "url": "https://www.jiqizhixin.com/rss",
-      "name": "机器之心",
-      "group": "中文科技媒体",
-      "enabled": true
-    },
-    {
       "url": "https://www.leiphone.com/feed",
       "name": "雷锋网",
       "group": "中文科技媒体",
@@ -314,18 +308,6 @@
     {
       "url": "https://wechat2rss.xlab.app/feed/9685937b45fe9c7a526dbc32e4f24ba879a65b9a.xml",
       "name": "腾讯技术工程",
-      "group": "微信公众号",
-      "enabled": true
-    },
-    {
-      "url": "https://www.qbitai.com/feed",
-      "name": "量子位",
-      "group": "中文科技媒体",
-      "enabled": true
-    },
-    {
-      "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
-      "name": "新智元",
       "group": "微信公众号",
       "enabled": true
     },
