@@ -1,59 +1,52 @@
 {
   "date": "2026-02-11",
-  "time_window": "2026-02-10 10:02 ~ 2026-02-11 10:02",
+  "time_window": "2026-02-10 10:00 ~ 2026-02-11 09:59",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "Meta轻量VR头显Project Phoenix设计细节曝光：计算模块可夹腰带",
-          "summary": "Meta的轻量化VR头显Project Phoenix采用创新设计，将计算模块放在腰带上，旨在解决行业普遍存在的头显重量问题。",
-          "comment": "将计算模块分离到腰带上的设计是否能真正改善用户长时间佩戴的舒适度体验？",
-          "source": "93913-元宇宙&AI信息与产业服务",
+          "title": "Multiset AI定位技术兼容Ray-Ban Meta智能眼镜",
+          "summary": "Multiset AI的视觉定位系统（VPS）现已支持Ray-Ban Meta等智能眼镜，定位精度可达5厘米以内，支持室内、多层建筑等复杂环境。该技术可用于免提导航和工业应用场景。",
+          "comment": "当智能眼镜的定位精度达到厘米级，会如何改变AR应用在室内导航和工业培训中的可用性？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544726.html"
+        },
+        {
+          "title": "苹果AirPods将配备摄像头支持类似Vision Pro的手势控制",
+          "summary": "知名分析师预测苹果即将推出内置摄像头的AirPods，可能配备外置摄像头以理解周围环境，为Apple Intelligence提供视觉功能，实现类似Vision Pro的手势识别体验。",
+          "comment": "如果AirPods成为AI感知现实世界的入口，这会如何重新定义'智能眼镜'的产品形态？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544722.html"
+        },
+        {
+          "title": "Meta轻量VR头显Project Phoenix设计细节曝光",
+          "summary": "Meta正在开发轻量化VR头显Project Phoenix，其计算模块可夹在腰带上，旨在通过分离计算和显示部分来解决VR头显普遍存在的重量问题。",
+          "comment": "将计算模块从头显分离出来挂在腰间，这种模块化设计能否真正解决用户长时间佩戴的舒适度痛点？",
+          "source": "93913",
           "url": "https://www.93913.com/119138.html"
         },
         {
-          "title": "大朋DPVR发布搭载GPT的AI太阳镜G5 Air",
-          "summary": "大朋（DPVR）正式发布飞行员款AI太阳镜DPVR G5 Air，搭载OpenAI GPT大模型，专为全天候佩戴和高频使用场景设计。",
-          "comment": "AI太阳镜集成GPT能力后，会如何改变用户的日常信息交互方式？",
+          "title": "中国制造掌控全球80%AI眼镜供应链",
+          "summary": "中国已成为全球AI眼镜产业的核心力量，掌控了全球该产品80%的供应链，完成了从追随到引领的产业升级。",
+          "comment": "在供应链主导权的背后，中国AI眼镜企业如何从代工向品牌和创新转变？",
+          "source": "93913",
+          "url": "https://www.93913.com/119161.html"
+        },
+        {
+          "title": "头戴VR设备视觉健康国家标准正式发布",
+          "summary": "我国正式发布头戴式VR设备视觉健康国家标准，由歌尔等企业参与制定，为该领域建立了统一的技术规范。",
+          "comment": "VR头显视觉健康标准的建立，会如何推动消费者对VR设备安全性和长期可用性的信心？",
+          "source": "93913",
+          "url": "https://www.93913.com/119158.html"
+        },
+        {
+          "title": "Sandbox VR第七家加拿大分店开业",
+          "summary": "位置基础服务VR开发商Sandbox VR在加拿大素里市开设第七家体验中心，玩家佩戴头显、触觉背心和运动传感器进行沉浸式游戏体验。",
+          "comment": "当LBS VR体验店扩展到7家门店时，这种高端沉浸式娱乐的商业模式能否实现规模化盈利？",
           "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544719.html"
-        },
-        {
-          "title": "Meta携Oakley推出AI运动眼镜登陆2026超级碗",
-          "summary": "Meta与Oakley联合推出Oakley Meta性能AI眼镜，推出Vanguard和HSTN两款核心款式，将在2026超级碗期间亮相。",
-          "comment": "将AI功能集成到运动眼镜中，能否成为下一代主流穿戴设备的新标杆？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119154.html"
-        },
-        {
-          "title": "Ray-Ban智能眼镜获得ClawdBot黑客改造实现功能扩展",
-          "summary": "Ray-Ban Meta智能眼镜通过ClawdBot开源项目实现了功能扩展，但这一改造方式存在安全风险。",
-          "comment": "开发者通过黑客改造增强智能眼镜功能，制造商应该如何平衡开放性与安全性？",
-          "source": "Road to VR",
-          "url": "https://www.roadtovr.com/clawdbot-ray-ban-smart-glasses-hack/"
-        },
-        {
-          "title": "Apple Watch推出2026年心脏月挑战赛",
-          "summary": "Apple推出2026年心脏月挑战赛，邀请Apple Watch用户通过健身活动庆祝情人节。",
-          "comment": "穿戴设备通过健康挑战建立用户粘性，这种互动模式对长期用户留存的效果如何？",
-          "source": "9to5Mac",
-          "url": "https://9to5mac.com/2026/02/10/apple-rolling-out-2026-heart-month-challenge-for-the-apple-watch/"
-        },
-        {
-          "title": "Boston Dynamics首席执行官罗伯特·普莱耶尔宣布辞职",
-          "summary": "Boston Dynamics CEO Robert Playter宣布离职，首席财务官Amanda McMaster将担任临时CEO，直到董事会确定新任领导。",
-          "comment": "人形机器人领域的关键领导力变动，会如何影响Boston Dynamics的产品商业化进程？",
-          "source": "The Robot Report",
-          "url": "https://www.therobotreport.com/boston-dynamics-ceo-robert-playter-steps-down/"
-        },
-        {
-          "title": "三星确认Galaxy Z TriFold折叠手机2月底补货",
-          "summary": "三星Galaxy Z TriFold三折屏手机初期库存已售罄，将在本月晚些时候补充库存供应。",
-          "comment": "高端折叠屏手机的供不应求反映出什么样的市场需求变化趋势？",
-          "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/10/samsung-will-restock-the-galaxy-z-trifold-in-the-us-later-this-month/"
+          "url": "https://www.vrtuoluo.cn/544723.html"
         }
       ]
     },
@@ -62,18 +55,25 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "OpenAI升级Responses API，支持Agent技能和完整终端shell功能",
-          "summary": "OpenAI更新了其Responses API，使AI Agent能够支持更多技能并集成完整的终端shell，解决了此前AI模型在多次交互后容易丧失上下文和出现幻觉的问题。",
-          "comment": "当AI Agent能够在更长的交互周期内维持一致的上下文和记忆，这对生产级应用的可靠性有什么深层影响？",
+          "title": "OpenAI升级Responses API，支持Agent技能和完整终端shell",
+          "summary": "OpenAI为其Responses API添加了Agent技能支持和完整的终端shell功能，解决了长上下文对话中AI模型容易丢失记忆和幻觉的问题，使长时间运行的Agent能力更强。",
+          "comment": "当AI Agent可以持续记忆和执行复杂的多步骤任务时，它们将如何改变企业级应用的开发方式？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/orchestration/openai-upgrades-its-responses-api-to-support-agent-skills-and-a-complete"
         },
         {
-          "title": "打通视频生成与机器人世界模型，BridgeV2W让机器人学会预演未来",
-          "summary": "中科第五纪联合中科院自动化所推出BridgeV2W，通过具身掩码设计解决视频生成模型与机器人控制系统的表征语言差异，使机器人能够基于视频生成模型预测动作后果。",
-          "comment": "当机器人能够通过视频世界模型预先模拟动作，这是否标志着具身AI从被动反应向主动规划的范式转变？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/mifSWo8g3erzPNOm.html"
+          "title": "网易有道发布中国版'OpenClaw'，推出全场景个人助理Agent'LobsterAI'",
+          "summary": "网易有道发布了名为LobsterAI的全场景个人助理Agent产品，对标OpenAI的Agent能力框架，展示了国内厂商在AI Agent领域的新进展。",
+          "comment": "国内厂商推出的通用AI Agent产品要在实际应用中获得成功，关键的差异化竞争力应该聚焦在哪些方面？",
+          "source": "量子位",
+          "url": "https://www.qbitai.com/2026/02/378453.html"
+        },
+        {
+          "title": "蚂蚁集团开源全模态大模型Ming-Flash-Omni 2.0，对标Gemini 2.5 Pro",
+          "summary": "蚂蚁集团开源了全模态大模型Ming-Flash-Omni 2.0，在推理能力和多模态处理上与Gemini 2.5 Pro相当，展示了国内模型的先进水平。",
+          "comment": "开源全模态大模型与商业闭源模型的竞争中，开源方案的主要优势和劣势分别是什么？",
+          "source": "机器之心",
+          "url": "https://www.jiqizhixin.com/articles/2026-02-11-4"
         }
       ]
     },
@@ -82,16 +82,16 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Runway完成3.15亿美元E轮融资，估值飙升至53亿美元",
-          "summary": "Runway宣布完成3.15亿美元E轮融资，公司估值达到53亿美元，正与谷歌DeepMind、World Labs等AI巨头在世界模型领域展开直接竞争。",
-          "comment": "当多家初创公司和科技巨头同时押注世界模型这一方向，这个赛道最终的商业价值实现路径会是什么？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7875346.html"
+          "title": "阿里巴巴与上海仪电达成战略合作，推进AI芯片与智算云一体化",
+          "summary": "阿里巴巴与上海仪电签署战略合作协议，将千问大模型、自研AI芯片和云计算能力与仪电智算云YiCloud平台集成，共同开发数据可信空间、自动驾驶等应用场景的解决方案。",
+          "comment": "大模型、AI芯片和云计算能力的深度融合，是否将成为国内科技巨头的核心竞争壁垒？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3678458167337603?f=rss"
         }
       ]
     }
   ],
-  "source": "manual",
+  "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-11T10:03:27.355002+08:00"
+  "created_at": "2026-02-11T13:49:48.816916+08:00"
 }
