@@ -1,0 +1,100 @@
+{
+  "date": "2026-02-11",
+  "time_window": "2026-02-10 09:25 ~ 2026-02-11 09:25",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "OpenAI升级Responses API，支持Agent技能和完整终端Shell",
+          "summary": "OpenAI为其Responses API添加了Agent技能支持和完整终端Shell功能，使AI代理能够维持更长的上下文记忆并执行更复杂的任务，解决了之前几十次交互后会遗忘的问题。",
+          "comment": "当AI Agent能够像真实员工一样持续工作和学习时，企业流程自动化的边界会扩展到哪里？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/openai-upgrades-its-responses-api-to-support-agent-skills-and-a-complete"
+        },
+        {
+          "title": "Nothing发布Essential Apps测试版，支持文本提示生成主屏幕小件",
+          "summary": "Nothing推出AI驱动的Essential Apps功能，用户可通过文本提示使用'Vibe Coding'技术在主屏幕上创建自定义小件应用，目前已进入公开测试阶段。",
+          "comment": "当普通用户能通过自然语言创建应用而无需编程知识时，低代码开发工具的市场还有生存空间吗？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/10/nothing-essential-apps-hands-on/"
+        },
+        {
+          "title": "DPVR发布G5 Air AI太阳镜，搭载OpenAI GPT大模型",
+          "summary": "大朋推出面向海外市场的飞行员款AI太阳镜DPVR G5 Air，集成OpenAI GPT大模型，主打全天候佩戴和高频使用场景。",
+          "comment": "当AI太阳镜成为日常穿戴的智能设备时，眼镜作为AI交互入口的地位会超越手机吗？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544719.html"
+        },
+        {
+          "title": "YouTube Music推出AI Playlist功能，支持文本生成播放列表",
+          "summary": "Google为YouTube Music Premium用户推出AI Playlist功能，允许用户通过文本提示自动生成定制化音乐播放列表。",
+          "comment": "音乐推荐从算法驱动转向生成式AI后，音乐发现的惊喜度会增加还是陷入个性化陷阱？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/10/youtube-music-adding-ai-playlist-with-text-based-playlist-generation/"
+        },
+        {
+          "title": "Google Photos为iPhone推出Create with AI模板功能",
+          "summary": "Google Photos为iOS用户发布Create with AI模板功能，几个月前已在Android平台推出，让用户可通过AI工具创建个性化内容。",
+          "comment": "AIGC工具从专业创意人士下沉到普通用户时，内容创意的门槛会降低到什么程度？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/10/google-photos-brings-create-with-ai-templates-to-iphone/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Alphabet宣布2026年资本支出翻倍至180-185亿美元，主要用于AI基础设施投资",
+          "summary": "Google母公司Alphabet在财报电话会议上宣布，2026年资本开支将翻倍至180-185亿美元（对比2025年的约90亿美元），主要用于AI芯片、数据中心等基础设施建设。",
+          "comment": "当科技巨头每年在AI基础设施上投入超千亿美元时，这笔投资最终能转化为多少实际的商业价值和社会效益？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/alphabet-is-doubling-its-capital-expenditure-to-a-staggering-usd180-billion-in-2026-earnings-suggest-that-the-companys-ai-investments-may-be-paying-off"
+        },
+        {
+          "title": "Amazon探索建立AI内容交易市场，连接媒体出版商与AI公司",
+          "summary": "亚马逊计划推出一个内容交易平台，为媒体出版商和AI公司之间建立可授权内容的交易渠道，形成AI训练数据的合规获取生态。",
+          "comment": "当科技巨头成为内容与AI公司之间的中介时，版权方会因此获得更公平的收益分配吗？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/10/amazon-may-launch-a-marketplace-where-media-sites-can-sell-their-content-to-ai-companies/"
+        },
+        {
+          "title": "xAI联合创始人大规模离职，Elon Musk的AI企业遭遇人才流失",
+          "summary": "Musk旗下AI创业公司xAI的联合创始人Jimmy Ba等多名核心技术团队成员相继离职，这是该公司创始团队的第六位离职者。",
+          "comment": "当AI初创公司的核心创始人纷纷离职时，这反映出什么样的行业信号和人才价值观变化？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/3d4a9683-b70a-4953-b21b-b3ea07d693a3"
+        },
+        {
+          "title": "Boston Dynamics CEO Robert Playter宣布离职，CFO接任临时CEO",
+          "summary": "机器人公司Boston Dynamics CEO Robert Playter在任职6年、公司任职30年后宣布离职，公司CFO Amanda McMaster将担任临时CEO直至董事会找到永久继任者。",
+          "comment": "领先机器人公司的CEO在这个关键时期离职，是否预示着该领域的战略方向或投资形势发生了转变？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/876819/boston-dynamics-robots-ceo-steps-down-hyundai"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "观察性记忆技术将AI Agent成本降低10倍，超越RAG在长上下文任务中的表现",
+          "summary": "研究团队开发的'观察性记忆'架构通过新的记忆管理方式，相比传统RAG方案成本降低10倍，并在长上下文基准测试中表现更优，为AI Agent设计提供了新的技术路径。",
+          "comment": "当AI Agent的成本和性能都能通过新型记忆架构显著改进时，企业级AI应用的落地速度会如何加快？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/data/observational-memory-cuts-ai-agent-costs-10x-and-outscores-rag-on-long"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-11T09:27:18.031072+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}
