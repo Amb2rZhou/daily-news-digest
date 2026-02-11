@@ -1,65 +1,24 @@
 {
   "date": "2026-02-11",
-  "time_window": "2026-02-10 09:25 ~ 2026-02-11 09:25",
+  "time_window": "2026-02-10 09:41 ~ 2026-02-11 09:41",
   "categories": [
-    {
-      "name": "智能硬件",
-      "icon": "🥽",
-      "news": [
-        {
-          "title": "Boston Dynamics CEO罗伯特·普莱特下台",
-          "summary": "波士顿动力公司CEO罗伯特·普莱特宣布离职，在该公司工作30年、担任CEO6年后正式离职。公司CFO阿曼达·麦克马斯特将担任临时CEO。",
-          "comment": "在人形机器人商业化竞争日趋激烈的时刻，领导层的更替会如何影响Boston Dynamics的战略方向和产品落地速度？",
-          "source": "The Verge",
-          "url": "https://www.theverge.com/tech/876819/boston-dynamics-robots-ceo-steps-down-hyundai"
-        },
-        {
-          "title": "DPVR发布搭载OpenAI GPT的AI太阳镜G5 Air",
-          "summary": "大朋（DPVR）向海外市场正式发布飞行员款AI太阳镜DPVR G5 Air，搭载OpenAI GPT大模型，强调全天候佩戴和高频使用场景。",
-          "comment": "集成大模型的AI眼镜能否在续航、隐私和实用性之间找到平衡，成为消费级产品而非概念展示？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544719.html"
-        },
-        {
-          "title": "三星Galaxy Z TriFold折叠屏手机美国市场将补货",
-          "summary": "三星Galaxy Z TriFold三折叠屏手机首批售罄后，公司计划在本月晚些时候进行美国市场补货，该款设备定价2899美元。",
-          "comment": "高端折叠屏手机的持续供应紧张是否反映了AI手机新形态的真实市场需求，还是仅限于早期采用者的猎奇心理？",
-          "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/10/samsung-will-restock-the-galaxy-z-trifold-in-the-us-later-this-month/"
-        },
-        {
-          "title": "Ayaneo Next 2 Windows掌机正式发布，搭载AMD Ryzen AI Max+ 395",
-          "summary": "Ayaneo推出旗舰掌机Ayaneo Next 2，采用AMD最强移动APU Ryzen AI Max+ 395、116Whr大电池和高刷OLED屏，起价1799美元。",
-          "comment": "AI PC芯片下沉到掌机产品线，是否能改变掌机玩家的游戏体验，还是沦为营销噱头？",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/video-games/handheld-gaming/ayaneo-next-2-windows-handheld-goes-official-with-ryzen-ai-max-395-also-features-massive-116-whr-battery-and-a-starting-price-of-usd1-799"
-        }
-      ]
-    },
     {
       "name": "AI技术与产品",
       "icon": "🤖",
       "news": [
         {
-          "title": "OpenAI升级Responses API以支持Agent技能和完整终端shell",
-          "summary": "OpenAI更新了Responses API，增加了Agent技能支持和完整终端shell功能，解决了AI Agent长期运行中的上下文丢失和幻觉问题，使AI Agent能够在更长的交互序列中保持连贯性。",
-          "comment": "当AI Agent能够在数百次交互后仍保持记忆和理解时，它们离真正的自主工作助手还有多远？",
+          "title": "OpenAI升级Responses API以支持智能体技能和完整终端shell",
+          "summary": "OpenAI的最新更新为Responses API增加了智能体技能支持和完整终端shell功能，解决了长上下文交互中AI模型容易丢失记忆和产生幻觉的问题，使AI智能体能够在生产系统中进行长时间、多工具的任务执行。",
+          "comment": "当AI智能体能够在更长的上下文中保持一致的推理能力时，它们在处理复杂的现实问题中会带来哪些颠覆性的应用场景？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/orchestration/openai-upgrades-its-responses-api-to-support-agent-skills-and-a-complete"
         },
         {
-          "title": "观察性记忆将AI Agent成本降低10倍，超越RAG长上下文基准",
-          "summary": "新型内存架构方案通过观察性记忆机制，将AI Agent成本降低10倍，并在长上下文基准测试中超越传统RAG方案，为生产环境中的长期运行Agent提供更高效的解决方案。",
-          "comment": "如果内存架构的优化能让Agent运营成本降低10倍，企业是否会加速部署自主AI系统？",
+          "title": "观察记忆技术使AI智能体成本降低10倍，超越RAG长上下文基准",
+          "summary": "一项名为'观察记忆'的新型内存架构在长运行智能体中表现出优于RAG的性能，成本降低10倍，这为生产环节中复杂的AI工作流提供了更高效的替代方案。",
+          "comment": "如果AI智能体的成本和效率能够大幅提升，企业对于部署生产级AI系统的投资决策会如何转变？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/data/observational-memory-cuts-ai-agent-costs-10x-and-outscores-rag-on-long"
-        },
-        {
-          "title": "谷歌Photos推出面向iPhone的AI创意模板功能",
-          "summary": "Google Photos将其'Create with AI'模板功能扩展到iOS平台，让iPhone和iPad用户也能使用AI工具创建创意照片内容，追赶Android用户已有的功能。",
-          "comment": "当AI创意工具成为跨平台标配时，普通用户创造专业级内容的门槛会降低到什么程度？",
-          "source": "9to5Mac",
-          "url": "https://9to5mac.com/2026/02/10/google-photos-brings-create-with-ai-templates-to-iphone/"
         }
       ]
     },
@@ -68,32 +27,18 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Alphabet将2026年资本支出翻倍增至1800亿美元，AI投资持续加速",
-          "summary": "谷歌母公司Alphabet宣布2026年资本支出将增至180-185亿美元，较2025年翻倍增长，反映其在AI基础设施和芯片投资上的巨大赌注，这也是AI芯片短缺期间的关键战略部署。",
-          "comment": "当一家科技巨头愿意每年投入近200亿美元用于AI基础设施时，它在赌注什么样的未来产品或能力？",
+          "title": "Alphabet计划在2026年将资本支出翻倍至1800亿美元用于AI投资",
+          "summary": "谷歌母公司Alphabet在Q4财报中宣布2026年资本支出计划增至1800-1850亿美元，相比2025年翻倍增长，主要用于支撑其AI研发和基础设施建设。",
+          "comment": "当科技巨头在AI基础设施上的投入规模达到前所未有的水平时，这种资本密集的战略是否会重新塑造整个AI产业的竞争格局？",
           "source": "Tom's Hardware",
           "url": "https://www.tomshardware.com/tech-industry/alphabet-is-doubling-its-capital-expenditure-to-a-staggering-usd180-billion-in-2026-earnings-suggest-that-the-companys-ai-investments-may-be-paying-off"
-        },
-        {
-          "title": "Amazon或推出媒体内容交易平台，连接出版商与AI公司",
-          "summary": "报道称亚马逊计划建立一个市场，帮助媒体出版社向AI企业许可和出售其内容，标志着科技巨头在解决AI训练数据获取方面的新尝试，也反映了内容创作者与AI开发者之间日益复杂的利益关系。",
-          "comment": "如果Amazon成功建立内容交易市场，是否能够化解AI数据使用的法律和伦理争议？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/10/amazon-may-launch-a-marketplace-where-media-sites-can-sell-their-content-to-ai-companies/"
-        },
-        {
-          "title": "Musk旗下xAI公司多名联合创始人离职，团队面临人才流失",
-          "summary": "包括联合创始人Jimmy Ba在内的多名xAI核心技术团队成员相继离职，这是该公司成立以来最大规模的人事变动，反映出这家AI初创公司面临的内部挑战和人才竞争压力。",
-          "comment": "当AI初创公司的核心技术人才大规模离职时，这是否预示着其商业模式或发展方向存在问题？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/3d4a9683-b70a-4953-b21b-b3ea07d693a3"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-11T09:27:18.030701+08:00",
+  "created_at": "2026-02-11T09:42:49.945339+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
