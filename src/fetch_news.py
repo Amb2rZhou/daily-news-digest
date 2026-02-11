@@ -509,9 +509,13 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 
 **分类 2：🏢 巨头动向与行业观察**
 - 科技巨头的**AI相关**战略布局、并购收购
+  - 国内大厂（字节跳动/豆包、阿里/通义千问、腾讯、百度/文心、华为、小米、美团、京东等）的 AI 动态要重点关注
+  - 海外巨头（OpenAI、Google、Meta、Microsoft、Apple、Amazon 等）
 - AI 行业趋势、AI 政策法规
 - AI 领域重大投融资事件（包括AI芯片、AI基础设施投资）
 - AI 相关重要人事变动
+
+⚠️ **中外新闻平衡**：如有国内大厂相关的 AI 新闻，至少选入 1 条。不要全是海外新闻。
 
 ⚠️ **所有新闻必须与AI/人工智能直接相关**。以下不收录：
 - 与AI无关的科技新闻（传统媒体人事、非AI公司裁员、加密货币等）
@@ -526,7 +530,8 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 按重要性排序
 
 **来源权威性优先**：
-- 优先选择权威来源（The Verge, TechCrunch, Reuters, Bloomberg, 机器之心, 36氪 等）
+- 中文权威来源：36氪、机器之心、量子位、虎嗅、钛媒体、晚点LatePost、Founder Park
+- 英文权威来源：The Verge, TechCrunch, Reuters, Bloomberg, Wired
 - ⚠️ 使用某个来源的 URL 时，摘要必须准确反映该 URL 文章的内容
 
 **付费墙处理**：
@@ -580,7 +585,8 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
    - 必须排除的：与 AI 无关的普通科技新闻（如手机发布、游戏、电商促销、社交媒体八卦、纯硬件评测等）
    - 边界情况：如果一条新闻主要讲某科技公司但核心内容与 AI 无关，应排除
 2. 去重：相同事件的多篇报道只保留一条（保留最权威来源）
-3. 按重要性排序（全球影响 > 行业影响 > 区域影响）
+3. **中外平衡**：如有国内大厂（字节跳动/豆包、阿里/通义千问、腾讯、百度/文心、华为、小米等）的 AI 相关新闻，至少选入 1 条，不要全是海外新闻
+4. 按重要性排序（全球影响 > 行业影响 > 区域影响）
 4. 为每条新闻写一个简短的中文摘要（1-2句话）
 5. **重要**：为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾），引导读者深入思考这条新闻的意义、影响或未来可能性
 6. 将新闻按以下类别分组：{category_names}
