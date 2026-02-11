@@ -737,16 +737,45 @@ def _call_haiku(client, prompt: str, label: str) -> str:
         return None
 
 
-def _focused_split_call(client, articles_text: str, max_items: int, paywalled_sources: str, settings: dict) -> list[dict]:
+def _format_articles_text(articles: list[dict]) -> str:
+    """Format a list of article dicts into text for Claude prompts."""
+    text = ""
+    for i, article in enumerate(articles, 1):
+        text += f"""
+---
+Article {i}:
+Title: {article.get('title', '')}
+Source: {article.get('source', '')}
+Published: {article.get('published', '')}
+Description: {article.get('description', '')}
+URL: {article.get('url', '')}
+"""
+    return text
+
+
+def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_sources: str, settings: dict) -> list[dict]:
     """Focused mode: two sequential Haiku calls for hardware and AI/industry, then merge."""
     import time
 
     print(f"  - Focused mode: 2 Haiku calls (hardware + AI/industry)")
 
+    # Split articles: hardware sources vs others
+    hw_urls = set()
+    for feed in settings.get("rss_feeds", []):
+        if feed.get("group") == "智能硬件" and feed.get("enabled", True):
+            hw_urls.add(feed.get("url", ""))
+
+    hw_articles = [a for a in articles if a.get("feed_url", "") in hw_urls]
+    other_articles = [a for a in articles if a.get("feed_url", "") not in hw_urls]
+    print(f"  - Article split: {len(hw_articles)} hardware, {len(other_articles)} other")
+
+    hw_articles_text = _format_articles_text(hw_articles) if hw_articles else _format_articles_text(articles)
+    other_articles_text = _format_articles_text(other_articles) if other_articles else _format_articles_text(articles)
+
     hw_budget = 7  # hardware gets 5-7 items
     ai_budget = max(max_items - hw_budget, 3)  # rest goes to AI+industry, at least 3
-    prompt_hw = get_prompt_for_mode("focused_hardware", articles_text, max_items, "", "", "", None, paywalled_sources)
-    prompt_ai = get_prompt_for_mode("focused_ai_industry", articles_text, ai_budget, "", "", "", None, paywalled_sources)
+    prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources)
+    prompt_ai = get_prompt_for_mode("focused_ai_industry", other_articles_text, ai_budget, "", "", "", None, paywalled_sources)
     print(f"  - Budget: hardware 5-7, AI+industry {ai_budget}, total cap {max_items}")
 
     start = time.time()
@@ -899,7 +928,7 @@ URL: {article.get('url', '')}
 
     # Focused mode: split into 2 parallel calls (hardware + AI/industry)
     if prompt is None and topic_mode == "focused":
-        return _focused_split_call(client, articles_text, max_items, paywalled_sources, settings)
+        return _focused_split_call(client, articles[:120], max_items, paywalled_sources, settings)
 
     model = "claude-haiku-4-5-20251001"
     print(f"  - Using model: {model}")
