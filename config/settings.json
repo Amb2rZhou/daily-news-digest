@@ -318,20 +318,14 @@
       "enabled": true
     },
     {
-      "url": "https://feed.hamibot.com/api/feeds/6131b5301269c358aa0dec25",
-      "name": "白鲸出海",
-      "group": "微信公众号",
+      "url": "https://www.qbitai.com/feed",
+      "name": "量子位",
+      "group": "中文科技媒体",
       "enabled": true
     },
     {
-      "url": "https://feed.hamibot.com/api/feeds/6121d8a451e2511a8279faaf",
-      "name": "晚点LatePost",
-      "group": "微信公众号",
-      "enabled": true
-    },
-    {
-      "url": "https://feed.hamibot.com/api/feeds/613570931269c358aa0f0cca",
-      "name": "海外独角兽",
+      "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
+      "name": "新智元",
       "group": "微信公众号",
       "enabled": true
     },
@@ -416,30 +410,6 @@
     {
       "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3075486737.rss",
       "name": "白鲸出海",
-      "group": "WeWe RSS",
-      "enabled": true
-    },
-    {
-      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3236757533.rss",
-      "name": "量子位",
-      "group": "WeWe RSS",
-      "enabled": true
-    },
-    {
-      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_2392024520.rss",
-      "name": "APPSO",
-      "group": "WeWe RSS",
-      "enabled": true
-    },
-    {
-      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3271041950.rss",
-      "name": "新智元",
-      "group": "WeWe RSS",
-      "enabled": true
-    },
-    {
-      "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3073282833.rss",
-      "name": "机器之心",
       "group": "WeWe RSS",
       "enabled": true
     },
