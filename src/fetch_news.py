@@ -1104,6 +1104,18 @@ def save_draft(news_data: dict, settings: dict = None, channel_id: str = None) -
         filename = f"{date}.json"
     draft_path = os.path.join(drafts_dir, filename)
 
+    # Never overwrite a draft that's already been sent or rejected
+    if os.path.exists(draft_path):
+        try:
+            with open(draft_path, "r", encoding="utf-8") as f:
+                existing = json.load(f)
+            existing_status = existing.get("status", "")
+            if existing_status in ("sent", "rejected"):
+                print(f"  - Skipping {filename}: already {existing_status}")
+                return draft_path
+        except (json.JSONDecodeError, IOError):
+            pass  # Corrupted file, safe to overwrite
+
     # Filter out internal fields like _raw_articles
     clean_data = {k: v for k, v in news_data.items() if not k.startswith("_")}
 
