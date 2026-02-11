@@ -7,58 +7,91 @@
       "icon": "🥽",
       "news": [
         {
-          "title": "Meta轻量VR头显Project Phoenix设计细节曝光：计算模块可夹腰带",
-          "summary": "Meta的轻量化VR头显Project Phoenix采用创新设计，将计算模块独立设计可夹腰带，旨在解决行业头显重量过重的痛点问题。",
-          "comment": "将计算能力从头显转移到腰部，这种模块化设计是否能成为未来AR/VR设备的主流解决方案？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119138.html"
+          "title": "Rokid眼镜现已支持自定义智能体功能",
+          "summary": "Rokid灵珠平台上线自定义智能体功能，允许开发者通过SSE接口将Rokid Glasses接入自定义后端，支持接入DeepSeek、Qwen等主流大模型。",
+          "comment": "AI智能眼镜的开放生态能否成为其与专有系统的竞争优势？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544727.html"
         },
         {
-          "title": "Multiset AI定位技术兼容Ray-Ban Meta智能眼镜，精度可达5厘米",
-          "summary": "Multiset AI的视觉定位系统（VPS）现已支持Ray-Ban Meta等智能眼镜，能在室内外实现5厘米以内的定位精度，可用于免提导航和工业场景。",
-          "comment": "高精度的眼镜定位技术能否重新定义AR眼镜在室内导航和工业应用中的价值？",
+          "title": "Multiset AI定位技术兼容Ray-Ban Meta智能眼镜",
+          "summary": "Multiset AI宣布其VPS视觉定位系统现已兼容Ray-Ban Meta，精度可达5厘米以内，支持免提语音导航和工业应用场景。",
+          "comment": "精准定位能力的加入是否能显著提升消费级智能眼镜的实用价值？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544726.html"
         },
         {
-          "title": "内置摄像头AirPods有望支持类似Vision Pro的手势控制",
-          "summary": "苹果即将推出的摄像头AirPods可能支持红外健康监测或环境感知功能，为用户提供'无镜片智能眼镜'体验，充当AI感知现实世界的入口。",
-          "comment": "如果AirPods通过摄像头实现环境感知和手势控制，这是否会成为比头显更实用的AI穿戴方案？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544722.html"
-        },
-        {
-          "title": "中国掌控全球AI眼镜80%供应链，从追随转向引领",
-          "summary": "中国已成为全球AI眼镜产业的核心力量，掌控了该产品80%的全球供应链，标志着产业从追随国际到自主引领的华丽蜕变。",
-          "comment": "中国在AI眼镜供应链的主导地位如何影响全球AR/VR硬件的创新方向和商业格局？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119161.html"
-        },
-        {
-          "title": "AR联盟新增18家成员，推动XR硬件产业发展",
-          "summary": "SPIE旗下AR联盟宣布新增18家企业成员，涵盖光学、显示、芯片等领域，包括歌尔科技等国内厂商，旨在加速AR硬件市场发展。",
-          "comment": "AR联盟扩大成员阵容，国际合作能否加速AR/VR技术的商业化落地进程？",
+          "title": "AR联盟新增18家成员，涵盖光学、显示等核心领域",
+          "summary": "SPIE旗下AR联盟宣布扩充18家成员，包括TDK、歌尔等行业领导企业，涵盖光学、显示、用户界面、空间计算等领域，推动AR市场发展。",
+          "comment": "越来越多供应链企业加入AR联盟是否标志着AR硬件产业进入成熟期？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544725.html"
         },
         {
-          "title": "头戴式VR设备视觉健康获国家标准，歌尔参与制定",
-          "summary": "中国首次为头戴式VR设备视觉健康建立统一技术规范和国家标准，歌尔科技等企业参与制定，标志着VR硬件进入规范化发展阶段。",
-          "comment": "VR设备视觉健康标准的确立，是否预示着整个行业即将进入成熟规范阶段？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119158.html"
+          "title": "AirPods摄像头可能支持类似Vision Pro的手势控制",
+          "summary": "据彭博社和分析师报道，内置摄像头的AirPods有望在今年推出，可能配备外置摄像头实现AI视觉功能，相当于打造无镜片的智能眼镜方案。",
+          "comment": "将智能眼镜的功能分散到耳机中是否能更好地解决头显的重量和舒适度问题？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544722.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "DeepSeek更新新模型，上下文达百万级token",
+          "summary": "DeepSeek在网页端和APP端更新版本，支持最高1M（百万）Token的上下文长度，相比去年8月的128K大幅提升，可一次性处理超长文本。",
+          "comment": "百万Token的超长上下文能力将如何改变AI在知识密集型任务中的应用边界？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3678790308638593?f=rss"
         },
         {
-          "title": "Ray-Ban智能眼镜通过ClawdBot黑客工具获得实用功能提升",
-          "summary": "开发者通过ClawdBot工具为Ray-Ban Meta智能眼镜增加实用功能，展示了第三方开发对智能眼镜生态的潜力，但也存在安全隐忧。",
-          "comment": "第三方开发扩展是否应该成为消费级智能眼镜生态的正规化方向，还是存在安全风险？",
-          "source": "Road to VR",
-          "url": "https://www.roadtovr.com/clawdbot-ray-ban-smart-glasses-hack/"
+          "title": "OpenAI升级Responses API，支持Agent技能和完整终端shell",
+          "summary": "OpenAI升级Responses API，使AI Agent能够维持更长的交互记忆和上下文，支持完整的终端shell操作，解决了长时间交互中的内存丧失问题。",
+          "comment": "Agent能力突破的这一步是否将标志着AI从被动工具向主动自主系统的转变？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/openai-upgrades-its-responses-api-to-support-agent-skills-and-a-complete"
+        },
+        {
+          "title": "\"观察记忆\"将AI Agent成本降低10倍，在长上下文基准上超越RAG",
+          "summary": "新的\"观察记忆\"架构为长时间运行的Agent提供替代方案，相比传统RAG方法成本降低10倍，在长上下文基准测试中表现更优。",
+          "comment": "这种新的记忆架构是否能成为生产级Agent系统的标配？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/data/observational-memory-cuts-ai-agent-costs-10x-and-outscores-rag-on-long"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "AI拉动，阿里云市场份额扩大至36%",
+          "summary": "国际市场研究机构Omdia数据显示，2025年第三季度阿里云在中国云市场份额从34%提升至36%，连续三个季度保持增长，AI成为核心驱动力，AI相关产品收入已连续九个季度实现三位数同比增长。",
+          "comment": "AI基础设施需求的爆发是否正在改变中国云市场的竞争格局？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/WebcGva6Ogw0qHuc.html"
+        },
+        {
+          "title": "OpenAI员工为支持言论自由而退出，同时公司面临IPO和管理变化",
+          "summary": "根据《纽约时报》报道，xAI联合创始人陆续离职，Elon Musk在员工会议上提出建立月球制造设施用于制造AI卫星的雄心勃勃计划，公司正处于IPO冲刺阶段。",
+          "comment": "AI领域创始人的离职潮是反映战略分歧还是更深层的行业问题？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/10/with-co-founders-leaving-and-an-ipo-looming-elon-musk-turns-talk-to-the-moon/"
+        },
+        {
+          "title": "Mistral公司收入破4亿美元，欧洲寻求AI独立",
+          "summary": "法国初创公司Mistral的年收入超过4亿美元，正乘着欧洲企业寻求美国科技替代品的浪潮扩张，成为欧洲AI独立的重要推动力量。",
+          "comment": "欧洲在全球AI竞争中能否通过扶持本土企业实现真正的技术独立？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/664249e7-e8d5-4425-b397-ad3ed590b305"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-11T16:06:53.074136+08:00"
+  "created_at": "2026-02-11T19:13:55.957867+08:00"
 }
