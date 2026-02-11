@@ -7,32 +7,46 @@
       "icon": "🥽",
       "news": [
         {
+          "title": "迪士尼+在欧洲Apple Vision Pro上悄然移除3D功能",
+          "summary": "迪士尼+在多个欧洲国家的Apple Vision Pro应用中移除了3D支持，削弱了该头显的一项标志性功能。",
+          "comment": "监管压力是否会成为XR头显内容体验的长期制约因素？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/disney-quietly-removes-3d-from-apple-vision-pro-in-europe/"
+        },
+        {
           "title": "Rokid眼镜现已支持自定义智能体功能",
-          "summary": "Rokid灵珠平台上线自定义智能体功能，允许开发者通过SSE接口将Rokid Glasses接入自定义后端，支持接入DeepSeek、Qwen等主流大模型。",
-          "comment": "AI智能眼镜的开放生态能否成为其与专有系统的竞争优势？",
+          "summary": "Rokid灵珠平台正式上线自定义智能体功能，允许开发者通过SSE接口将Rokid眼镜接入私有部署的大模型如DeepSeek R1和Qwen3。",
+          "comment": "本地化大模型与AR眼镜的结合能否打造真正隐私优先的AI助手？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544727.html"
         },
         {
-          "title": "Multiset AI定位技术兼容Ray-Ban Meta智能眼镜",
-          "summary": "Multiset AI宣布其VPS视觉定位系统现已兼容Ray-Ban Meta，精度可达5厘米以内，支持免提语音导航和工业应用场景。",
-          "comment": "精准定位能力的加入是否能显著提升消费级智能眼镜的实用价值？",
+          "title": "Multiset AI定位技术现已兼容Ray-Ban Meta智能眼镜",
+          "summary": "Multiset AI宣布其VPS视觉定位系统已兼容智能眼镜，可在Ray-Ban Meta上实现5厘米以内精度的定位，支持免提语音导航等应用。",
+          "comment": "精准室内定位能力是否将成为智能眼镜下一代杀手级应用？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544726.html"
         },
         {
-          "title": "AR联盟新增18家成员，涵盖光学、显示等核心领域",
-          "summary": "SPIE旗下AR联盟宣布扩充18家成员，包括TDK、歌尔等行业领导企业，涵盖光学、显示、用户界面、空间计算等领域，推动AR市场发展。",
-          "comment": "越来越多供应链企业加入AR联盟是否标志着AR硬件产业进入成熟期？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544725.html"
-        },
-        {
-          "title": "AirPods摄像头可能支持类似Vision Pro的手势控制",
-          "summary": "据彭博社和分析师报道，内置摄像头的AirPods有望在今年推出，可能配备外置摄像头实现AI视觉功能，相当于打造无镜片的智能眼镜方案。",
-          "comment": "将智能眼镜的功能分散到耳机中是否能更好地解决头显的重量和舒适度问题？",
+          "title": "AirPods摄像头功能可能支持类似Vision Pro的手势控制",
+          "summary": "彭博社和分析师郭明錤均表示AirPods内置摄像头有望今年推出，可能配备外置摄像头以理解周围环境，支持Apple Intelligence视觉功能。",
+          "comment": "耳机作为无镜片智能眼镜的替代方案，其技术可行性和市场接受度如何？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544722.html"
+        },
+        {
+          "title": "Boston Dynamics首席执行官罗伯特·普莱特离职",
+          "summary": "Boston Dynamics首席执行官Robert Playter宣布离职，公司CFO Amanda McMaster将担任临时CEO，董事会寻找新的领导者。",
+          "comment": "人形机器人商业化的缓慢进展是否影响了投资者和领导者的信心？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/boston-dynamics-ceo-robert-playter-steps-down/"
+        },
+        {
+          "title": "Symbotic收购自主叉车制造商Fox Robotics",
+          "summary": "自动化企业Symbotic宣布收购自主叉车制造商Fox Robotics，两家公司共享部分大客户，此举扩展了Symbotic的仓储机器人能力。",
+          "comment": "工业机器人的垂直整合趋势是否预示着物流自动化市场的进一步整合？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/symbotic-acquires-autonomous-forklift-maker-fox-robotics/"
         }
       ]
     },
@@ -41,25 +55,25 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "DeepSeek更新新模型，上下文达百万级token",
-          "summary": "DeepSeek在网页端和APP端更新版本，支持最高1M（百万）Token的上下文长度，相比去年8月的128K大幅提升，可一次性处理超长文本。",
-          "comment": "百万Token的超长上下文能力将如何改变AI在知识密集型任务中的应用边界？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3678790308638593?f=rss"
+          "title": "字节跳动Seedance 2.0视频生成模型实现突破",
+          "summary": "字节跳动的AI视频生成工具Seedance 2.0实现90%视频案例一次生成，展现中国AI视频能力的重大进步，但随后自行下线引发关注。",
+          "comment": "企业在推出突破性AI产品后选择主动下线，背后的商业和政策考量是什么？",
+          "source": "虎嗅网",
+          "url": "http://www.huxiu.com/article/4834171.html?f=wangzhan"
         },
         {
-          "title": "OpenAI升级Responses API，支持Agent技能和完整终端shell",
-          "summary": "OpenAI升级Responses API，使AI Agent能够维持更长的交互记忆和上下文，支持完整的终端shell操作，解决了长时间交互中的内存丧失问题。",
-          "comment": "Agent能力突破的这一步是否将标志着AI从被动工具向主动自主系统的转变？",
+          "title": "OpenAI升级Responses API支持Agent能力",
+          "summary": "OpenAI为Responses API增加了Agent技能支持和完整终端shell功能，解决长上下文中AI Agent的上下文丢失问题，推进Agent应用的生产化。",
+          "comment": "随着Agent能力的不断改进，这类系统在实际生产环境中的成本和可靠性是否已经可以大规模应用？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/orchestration/openai-upgrades-its-responses-api-to-support-agent-skills-and-a-complete"
         },
         {
-          "title": "\"观察记忆\"将AI Agent成本降低10倍，在长上下文基准上超越RAG",
-          "summary": "新的\"观察记忆\"架构为长时间运行的Agent提供替代方案，相比传统RAG方法成本降低10倍，在长上下文基准测试中表现更优。",
-          "comment": "这种新的记忆架构是否能成为生产级Agent系统的标配？",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/data/observational-memory-cuts-ai-agent-costs-10x-and-outscores-rag-on-long"
+          "title": "Complyance完成2000万美元融资推进AI合规平台",
+          "summary": "Complyance获得Google Ventures领投的2000万美元A轮融资，用于开发AI原生合规管理平台，帮助企业管理风险和合规性。",
+          "comment": "AI在企业合规领域的应用能否真正降低人工审核的成本和时间？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/11/complyance-raises-20m-to-help-companies-manage-risk-and-compliance/"
         }
       ]
     },
@@ -68,30 +82,16 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "AI拉动，阿里云市场份额扩大至36%",
-          "summary": "国际市场研究机构Omdia数据显示，2025年第三季度阿里云在中国云市场份额从34%提升至36%，连续三个季度保持增长，AI成为核心驱动力，AI相关产品收入已连续九个季度实现三位数同比增长。",
-          "comment": "AI基础设施需求的爆发是否正在改变中国云市场的竞争格局？",
+          "title": "星海图完成10亿元B轮融资成为百亿具身智能独角兽",
+          "summary": "中国具身智能企业星海图完成10亿元B轮融资，估值突破百亿元，成为继宇树、智元、银河通用之外的第四家百亿独角兽，产业资本与战略投资者深度参与。",
+          "comment": "随着具身智能企业的融资规模和估值持续上升，这个赛道真正的商业化落地瓶颈在哪里？",
           "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/WebcGva6Ogw0qHuc.html"
-        },
-        {
-          "title": "OpenAI员工为支持言论自由而退出，同时公司面临IPO和管理变化",
-          "summary": "根据《纽约时报》报道，xAI联合创始人陆续离职，Elon Musk在员工会议上提出建立月球制造设施用于制造AI卫星的雄心勃勃计划，公司正处于IPO冲刺阶段。",
-          "comment": "AI领域创始人的离职潮是反映战略分歧还是更深层的行业问题？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/10/with-co-founders-leaving-and-an-ipo-looming-elon-musk-turns-talk-to-the-moon/"
-        },
-        {
-          "title": "Mistral公司收入破4亿美元，欧洲寻求AI独立",
-          "summary": "法国初创公司Mistral的年收入超过4亿美元，正乘着欧洲企业寻求美国科技替代品的浪潮扩张，成为欧洲AI独立的重要推动力量。",
-          "comment": "欧洲在全球AI竞争中能否通过扶持本土企业实现真正的技术独立？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/664249e7-e8d5-4425-b397-ad3ed590b305"
+          "url": "https://www.leiphone.com/category/robot/suRAIuhhR4aJhe4R.html"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-11T19:13:55.957867+08:00"
+  "created_at": "2026-02-11T22:42:58.006021+08:00"
 }
