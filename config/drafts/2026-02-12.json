@@ -7,91 +7,58 @@
       "icon": "🥽",
       "news": [
         {
+          "title": "Ray-Ban Meta智能眼镜销量突破700万副，同比增长250%",
+          "summary": "依视路陆逊梯卡财报显示，与Meta合作的Ray-Ban AI智能眼镜去年销量增长超过两倍，突破700万副，已成为公司业绩主线中的重要板块。",
+          "comment": "当AI眼镜的销售规模达到消费级产品量级时，是否意味着该品类已经度过了早期采用者阶段，进入主流市场？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544735.html"
+        },
+        {
           "title": "李未可AI眼镜率先接入OpenClaw，实现跨端智能办公",
-          "summary": "李未可AI眼镜已接入OpenClaw框架，用户可通过语音直接在眼镜上指挥AI完成电脑任务。该功能依托WAKE-AI 2.0开放架构和PPDAF智能循环框架，实现端到端的系统闭环。",
-          "comment": "当AI眼镜成为跨设备控制中枢时，这是否会改变传统PC和手机的交互地位？",
+          "summary": "李未可AI眼镜宣布接入OpenClaw框架，用户可通过语音直接指挥AI完成电脑端任务，实现真正意义上的跨设备智能协作。",
+          "comment": "当AI眼镜能够作为PC的语音控制枢纽时，这是否会重新定义办公设备的交互范式？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544734.html"
         },
         {
-          "title": "Virtuix VR跑步机Omni One Core欧洲发售，售价2995欧元",
-          "summary": "全身VR系统开发商Virtuix推出消费级产品Omni One Core，支持360度全向运动，首批预计2026年4月发货。该设备采用PC连接设计，可与现有PC VR头显配套使用。",
-          "comment": "高端VR跑步机进入欧洲主流市场，这是否标志着沉浸式健身硬件的商业化拐点？",
+          "title": "Virtuix VR跑步机进军欧洲，Omni One Core售价2995欧元",
+          "summary": "VR跑步机公司Virtuix推出消费级系统Omni One Core进入欧洲市场，支持360度全方位物理运动，首批产品预计4月发货。",
+          "comment": "随着全身VR系统进入消费级价格段，家庭沉浸式娱乐设备的普及会如何改变用户的运动和游戏习惯？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544732.html"
         },
         {
-          "title": "日本GUIDE01智能眼镜显示器众筹超额达成，重仅10克",
-          "summary": "HappyLifeCreators推出的GUIDE01单目智能显示器在众筹获得1650万日元，超目标5504%。该产品重量仅10克，支持AI翻译、AI聊天等功能，将于3月发货。",
-          "comment": "超轻量级智能显示器能否成为AR眼镜普及前的过渡形态？",
+          "title": "GUIDE01可穿戴显示器众筹超额认购，3月开始发货",
+          "summary": "日本HappyLifeCreators推出的轻量级智能显示器GUIDE01众筹获得1650万日元，达到目标的5504%，将于3月向支持者发货。",
+          "comment": "仅重10克的可穿戴显示器能否成为取代传统智能手机的下一代AI交互终端？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544731.html"
         },
         {
           "title": "Rokid Glasses推出自定义智能体功能，支持私有化大模型部署",
-          "summary": "Rokid灵珠平台正式上线自定义智能体功能，允许用户通过SSE接口接入OpenClaw、DeepSeek等大模型，实现智能体的私有化部署。",
-          "comment": "消费级AR眼镜开放底层模型接入，这是否会加速AI眼镜的应用创新生态？",
+          "summary": "Rokid灵珠平台上线自定义智能体功能，允许用户通过标准接口接入OpenClaw框架或私有部署的大模型如DeepSeek、Qwen等。",
+          "comment": "当AR眼镜成为可以私有化部署大模型的硬件终端时，是否将打破云端AI服务的垄断格局？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544727.html"
-        }
-      ]
-    },
-    {
-      "name": "AI技术与产品",
-      "icon": "🤖",
-      "news": [
-        {
-          "title": "字节跳动发布Seedance 2.0视频创作模型，持续探索大模型与人类反馈对齐",
-          "summary": "字节跳动正式发布新一代视频创作模型Seedance 2.0，虽然生成结果仍存在瑕疵，但展示了视频生成的新突破。未来将继续优化模型与人类反馈的深度对齐，为创作者提供更高效稳定的工具。",
-          "comment": "AI视频生成从追求能力到追求质量的转变，会如何重塑内容创作产业的格局？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3679869595250311?f=rss"
         },
         {
-          "title": "智谱GLM-5开源发布，实现记录低幻觉率并采用新型RL'粘液'技术",
-          "summary": "智谱发布开源大模型GLM-5，采用MIT开源许可证，实现了业界记录最低的幻觉率，并引入创新的强化学习技术。该模型已在华为芯片上完成训练，展现了国产AI芯片的应用能力。",
-          "comment": "开源模型降低幻觉率的突破，会如何推动企业级AI应用的落地和信任度提升？",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/technology/z-ais-open-source-glm-5-achieves-record-low-hallucination-rate-and-leverages"
+          "title": "Apptronik获5.2亿美元融资，加速Apollo人形机器人量产",
+          "summary": "人形机器人公司Apptronik融资5.2亿美元，累计融资接近10亿美元，用于加速Apollo工业机器人的大规模生产。",
+          "comment": "人形机器人从实验室走向工业应用的融资规模不断扩大，距离真正的商业化量产还需要克服哪些核心障碍？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/apptronik-brings-in-another-520m-to-ramp-up-apollo-production/"
         },
         {
-          "title": "Anthropic的Claude Cowork登陆Windows，带来工作日程自动化AI助手",
-          "summary": "Anthropic发布Claude Cowork在Windows平台的版本，这款AI Agent软件可以管理文件和自动化任务，覆盖全球70%的桌面计算市场。标志着AI工作助手向主流操作系统的重要扩展。",
-          "comment": "AI Agent进入Windows生态后，企业办公自动化的效率提升空间有多大？",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/technology/anthropics-claude-cowork-finally-lands-on-windows-and-it-wants-to-automate"
-        }
-      ]
-    },
-    {
-      "name": "巨头动向与行业观察",
-      "icon": "🏢",
-      "news": [
-        {
-          "title": "百度文心助手春节期间MAU增长4倍，率先确立AI入口优势",
-          "summary": "百度文心凭借深度整合搜索和百度App的策略，在春节期间实现了MAU同比增长4倍。生图功能调用量增长50倍，生视频功能增长40倍，AI打电话增长近4倍，显示用户使用已从尝鲜转向高频真实场景。",
-          "comment": "国内AI大厂通过整合主入口而非新建应用的策略，会否成为未来AI普及的主流路径？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/AsunOC82fTgy8Ngt.html"
-        },
-        {
-          "title": "OpenAI解散任务对齐团队，团队负责人晋升为首席未来官",
-          "summary": "OpenAI宣布解散专注于安全和可信任AI开发的任务对齐团队，其负责人被任命为首席未来官，其他成员则在公司内部重新分配。这一举措引发对OpenAI安全优先级的讨论。",
-          "comment": "OpenAI重组安全团队结构，是否意味着AI安全治理优先级的调整还是战略升级？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/11/openai-disbands-mission-alignment-team-which-focused-on-safe-and-trustworthy-ai-development/"
-        },
-        {
-          "title": "Modal Labs AI推理初创企业融资估值达25亿美元，由General Catalyst主导",
-          "summary": "AI推理初创公司Modal Labs正与General Catalyst进行融资谈判，估值达25亿美元。这是对AI推理基础设施需求增长的重要信号，反映了企业对高效AI推理的强劲需求。",
-          "comment": "AI推理初创公司的高估值融资，会如何改变大型科技公司的基础设施建设策略？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/11/ai-inference-startup-modal-labs-in-talks-to-raise-at-2-5b-valuation-sources-say/"
+          "title": "《星际公民》4.6版本正式添加VR选项，PC VR支持完善",
+          "summary": "Cloud Imperium Games发布《星际公民》4.6版本，首次在设置菜单中添加官方VR选项，使PC VR支持更加完善，用户可在头显上体验游戏大部分内容。",
+          "comment": "当大型3A游戏开始原生支持VR时，这是否预示着VR游戏即将迎来内容爆发期？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/star-citizen-vr-support-4-6-update-release/"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-12T13:24:48.248293+08:00"
+  "created_at": "2026-02-12T16:03:20.004336+08:00"
 }
