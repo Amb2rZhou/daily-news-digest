@@ -7,58 +7,91 @@
       "icon": "🥽",
       "news": [
         {
-          "title": "Ray-Ban Meta智能眼镜销量突破700万副，同比增长250%",
-          "summary": "依视路陆逊梯卡财报显示，与Meta合作的Ray-Ban AI智能眼镜去年销量增长超过两倍，突破700万副，已成为公司业绩主线中的重要板块。",
-          "comment": "当AI眼镜的销售规模达到消费级产品量级时，是否意味着该品类已经度过了早期采用者阶段，进入主流市场？",
+          "title": "Meta与依视路合作的AI智能眼镜销量突破700万副，同比增长250%",
+          "summary": "Ray-Ban和Oakley品牌的Meta AI智能眼镜在2025年销量超过700万副，相比2023-2024年总销量增长250%，已成为公司业绩主线的重要业务板块。",
+          "comment": "当AI眼镜销量达到这个量级后，消费级AR市场的临界点是否已经出现？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544735.html"
         },
         {
-          "title": "李未可AI眼镜率先接入OpenClaw，实现跨端智能办公",
-          "summary": "李未可AI眼镜宣布接入OpenClaw框架，用户可通过语音直接指挥AI完成电脑端任务，实现真正意义上的跨设备智能协作。",
-          "comment": "当AI眼镜能够作为PC的语音控制枢纽时，这是否会重新定义办公设备的交互范式？",
+          "title": "李未可AI眼镜接入OpenClaw，实现跨端智能办公",
+          "summary": "李未可宣布旗下AI眼镜已率先接入OpenClaw框架，用户可通过语音指令直接调用电脑端任务，无需手动配置，实现端到端的智能闭环。",
+          "comment": "当AI眼镜成为跨端任务的执行中枢时，它与手机/PC的关系会如何重新定义？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544734.html"
         },
         {
-          "title": "Virtuix VR跑步机进军欧洲，Omni One Core售价2995欧元",
-          "summary": "VR跑步机公司Virtuix推出消费级系统Omni One Core进入欧洲市场，支持360度全方位物理运动，首批产品预计4月发货。",
-          "comment": "随着全身VR系统进入消费级价格段，家庭沉浸式娱乐设备的普及会如何改变用户的运动和游戏习惯？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544732.html"
-        },
-        {
-          "title": "GUIDE01可穿戴显示器众筹超额认购，3月开始发货",
-          "summary": "日本HappyLifeCreators推出的轻量级智能显示器GUIDE01众筹获得1650万日元，达到目标的5504%，将于3月向支持者发货。",
-          "comment": "仅重10克的可穿戴显示器能否成为取代传统智能手机的下一代AI交互终端？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544731.html"
-        },
-        {
-          "title": "Rokid Glasses推出自定义智能体功能，支持私有化大模型部署",
-          "summary": "Rokid灵珠平台上线自定义智能体功能，允许用户通过标准接口接入OpenClaw框架或私有部署的大模型如DeepSeek、Qwen等。",
-          "comment": "当AR眼镜成为可以私有化部署大模型的硬件终端时，是否将打破云端AI服务的垄断格局？",
+          "title": "Rokid Glasses上线自定义智能体功能，支持私有化部署大模型",
+          "summary": "Rokid灵珠平台正式推出自定义智能体功能，开发者和用户可通过SSE接口将Rokid Glasses接入自定义后端，支持DeepSeek、Qwen等主流大模型私有部署。",
+          "comment": "AR眼镜的开放性和本地化能力是否会成为中国消费级AR设备的核心竞争力？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544727.html"
         },
         {
-          "title": "Apptronik获5.2亿美元融资，加速Apollo人形机器人量产",
-          "summary": "人形机器人公司Apptronik融资5.2亿美元，累计融资接近10亿美元，用于加速Apollo工业机器人的大规模生产。",
-          "comment": "人形机器人从实验室走向工业应用的融资规模不断扩大，距离真正的商业化量产还需要克服哪些核心障碍？",
-          "source": "The Robot Report",
-          "url": "https://www.therobotreport.com/apptronik-brings-in-another-520m-to-ramp-up-apollo-production/"
+          "title": "国家电影局发布VR电影技术标准，规定单目分辨率不低于2048×2160",
+          "summary": "国家电影局正式发布《虚拟现实电影通用技术要求》标准文件，规定了VR头显、内容制作、放映等系统的技术要求，单目分辨率不应低于2048×2160，帧率不低于60fps。",
+          "comment": "官方标准的出台是否会加速VR电影产业的规范化和商业化落地？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544737.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "智谱发布GLM-5开源模型，实现记录最低幻觉率和新型强化学习技术",
+          "summary": "中国AI初创公司智谱(z.ai)推出GLM-5大语言模型，保持MIT开源许可证，在独立测试中达到创纪录的最低幻觉率，并采用新型强化学习'黏液'技术。",
+          "comment": "开源模型在降低幻觉率上的突破，会如何改变企业选择自研还是采用第三方模型的决策？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/z-ais-open-source-glm-5-achieves-record-low-hallucination-rate-and-leverages"
         },
         {
-          "title": "《星际公民》4.6版本正式添加VR选项，PC VR支持完善",
-          "summary": "Cloud Imperium Games发布《星际公民》4.6版本，首次在设置菜单中添加官方VR选项，使PC VR支持更加完善，用户可在头显上体验游戏大部分内容。",
-          "comment": "当大型3A游戏开始原生支持VR时，这是否预示着VR游戏即将迎来内容爆发期？",
-          "source": "Road to VR",
-          "url": "https://www.roadtovr.com/star-citizen-vr-support-4-6-update-release/"
+          "title": "Anthropic的Claude Cowork登陆Windows，提供AI工作流自动化能力",
+          "summary": "Anthropic发布Claude Cowork AI代理软件的Windows版本，覆盖约70%的桌面计算市场，提供文件管理和任务自动化功能。",
+          "comment": "AI Agent在工作效率领域的应用何时能真正降低企业的运营成本而非仅是演示概念？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropics-claude-cowork-finally-lands-on-windows-and-it-wants-to-automate"
+        },
+        {
+          "title": "MIT研发自蒸馏微调方法，让大语言模型学习新技能而不遗忘旧知识",
+          "summary": "MIT、Improbable AI Lab和ETH Zurich的研究人员开发自蒸馏微调(SDFT)技术，使大语言模型能够在学习新任务时保留已有能力，解决企业需维护多个模型的问题。",
+          "comment": "这种微调方法若成熟，是否能让企业级LLM在持续演进中保持稳定性和一致性？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/mits-new-fine-tuning-method-lets-llms-learn-new-skills-without-losing-old"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "阿里高德发布ABot系列基座模型，实现具身操作和导航'双SOTA'",
+          "summary": "阿里巴�巴旗下高德发布具身操作基座模型ABot-M0和具身导航模型ABot-N0，成为全球首个同步在具身操作和导航上达到SOTA的厂商，补齐机器人规模化落地的核心能力。",
+          "comment": "具身机器人能力的统一基座模型，会如何加速国内机器人产业的商业化落地进程？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/Md6FbG7BkzMzmjIf.html"
+        },
+        {
+          "title": "SoftBank因OpenAI投资获得42亿美元收益，总投资额超340亿美元",
+          "summary": "日本软银集团因持有ChatGPT开发商OpenAI的股份而获得42亿美元投资收益，累计对OpenAI的投资已超过340亿美元。",
+          "comment": "软银对OpenAI的巨额投资回报，是否预示着AI产业的投资热度和商业化前景正在逐步验证？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/6a53c940-c291-4aa9-ab41-f4d1813ac786"
+        },
+        {
+          "title": "中国AI芯片初创公司Modal Labs融资轮估值达25亿美元，General Catalyst领投",
+          "summary": "AI推理初创公司Modal Labs正在进行融资洽谈，估值达25亿美元，由General Catalyst领投，该公司成立仅四年已成为AI基础设施领域的重要参与者。",
+          "comment": "AI推理基础设施初创的高估值融资，反映了业界对推理优化市场需求的何种判断？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/11/ai-inference-startup-modal-labs-in-talks-to-raise-at-2-5b-valuation-sources-say/"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-12T16:03:20.004336+08:00"
+  "created_at": "2026-02-12T18:32:15.209780+08:00"
 }
