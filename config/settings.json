@@ -208,6 +208,12 @@
       "enabled": true
     },
     {
+      "url": "https://rsshub.rssforever.com/infoq/recommend",
+      "name": "InfoQ中文",
+      "group": "中文科技媒体",
+      "enabled": true
+    },
+    {
       "url": "https://feeds.reuters.com/reuters/technologyNews",
       "name": "Reuters Tech",
       "group": "国际主流媒体",
