@@ -1,0 +1,100 @@
+{
+  "date": "2026-02-13",
+  "time_window": "2026-02-12 09:52 ~ 2026-02-13 09:52",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta与依视路陆逊梯卡联名AI眼镜年销量突破700万副，实现三倍增长",
+          "summary": "Meta与依视路陆逊梯卡合作的Ray-Ban和Oakley智能眼镜2025年销量突破700万副，相比前两年总销量增长250%。这标志着AI眼镜已从新物种演变为主流消费产品。",
+          "comment": "AI眼镜的销量增长速度已经接近iPhone初期，这样的市场拐点会如何改变科技产业的硬件格局？",
+          "source": "Road to VR/VR陀螺",
+          "url": "https://www.roadtovr.com/meta-ray-ban-smart-glasses-sales-tripled-2025/"
+        },
+        {
+          "title": "YouTube推出Apple Vision Pro原生应用",
+          "summary": "YouTube官方推出visionOS原生应用，填补了Vision Pro平台自2024年2月推出以来的重大应用空白。该应用支持沉浸式视频体验。",
+          "comment": "大型流媒体应用的完整适配对AR/VR平台的内容生态建设意味着什么？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/12/youtube-launches-native-app-for-apple-vision-pro/"
+        },
+        {
+          "title": "Meta CTO确认Quest 4仍在产品路线图上",
+          "summary": "Meta首席技术官Andrew Bosworth在采访中似乎确认了此前泄露的消息，即游戏专用型Quest 4头显仍在开发计划中。Meta同时强调继续在VR内容上的投资力度。",
+          "comment": "在VR硬件迭代中引入差异化的产品线会如何重塑市场竞争格局？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/meta-cto-seems-to-confirm-quest-4-still-on-roadmap/"
+        },
+        {
+          "title": "苹果visionOS 26.3正式推送，修复PS VR2手柄兼容性",
+          "summary": "苹果向所有Apple Vision Pro用户推送visionOS 26.3系统更新，核心关注漏洞修复和系统稳定性，特别是解决了PS VR2 Sense游戏控制器的兼容性问题。",
+          "comment": "Vision Pro支持第三方游戏控制器意味着苹果在扩大其XR生态的跨平台互联互通，这会如何影响竞争对手的生态策略？",
+          "source": "93913",
+          "url": "https://www.93913.com/119215.html"
+        },
+        {
+          "title": "Sony WF-1000XM6无线耳机发布，支持32位音频和Google Gemini",
+          "summary": "Sony发布旗舰级WF-1000XM6无线耳机，搭载32位音频处理和Google Gemini集成功能，售价329美元。这标志着AI助手开始深度集成到高端穿戴设备中。",
+          "comment": "在AI穿戴设备中集成LLM助手，相比在手机上集成会带来什么样的交互和隐私上的新挑战？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/wp-content/uploads/sites/4/2026/02/Sony-WF-1000XM6-official-1.jpg"
+        },
+        {
+          "title": "李未可AI眼镜接入OpenClaw智能体框架",
+          "summary": "李未可AI眼镜宣布率先接入OpenClaw框架，用户可通过语音指令直接调用AI完成跨端任务。这是AI眼镜从感知设备向主动决策执行平台的进化。",
+          "comment": "AI眼镜从输入输出设备升级为任务执行代理，这样的转变对现有PC和手机生态会产生怎样的威胁和机遇？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544734.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "OpenAI推出GPT-5.3-Codex-Spark：采用Cerebras芯片实现15倍速代码生成",
+          "summary": "OpenAI发布新的编码模型GPT-5.3-Codex-Spark，运行在Cerebras芯片上，实现近乎即时的代码生成，速度比前代快15倍，标志着OpenAI首次大规模采用英伟达以外的芯片进行推理。",
+          "comment": "OpenAI绕过英伟达拥抱新芯片厂商，这是否预示着AI芯片生态即将出现真正的多元化竞争？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openai-deploys-cerebras-chips-for-15x-faster-code-generation-in-first-major"
+        },
+        {
+          "title": "Nvidia推出动态内存稀疏化技术，将大模型推理成本降低8倍",
+          "summary": "Nvidia研究团队开发了动态内存稀疏化（DMS）技术，通过压缩大模型推理过程中的键值缓存，在不损失准确性的前提下将内存成本降低8倍。",
+          "comment": "当芯片厂商和模型厂商都在优化推理成本，这种竞争最终会如何改变AI应用的经济学？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/nvidias-new-technique-cuts-llm-reasoning-costs-by-8x-without-losing-accuracy"
+        },
+        {
+          "title": "小米开源首代机器人VLA大模型",
+          "summary": "小米开源了其首代机器人视觉语言行动（VLA）大模型，这是小米在机器人AI能力方面的重要进展。",
+          "comment": "国内科技企业开源机器人大模型，这会如何加速机器人应用落地的速度？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655183"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "微软AI主管Mustafa Suleyman宣布推进AI自主性，放松与OpenAI关系",
+          "summary": "微软AI部门负责人Mustafa Suleyman表示微软正在推进AI自主能力发展，并预测18个月内白领工作可能自动化，同时微软正在逐步减少对OpenAI的依赖。",
+          "comment": "微软加速独立开发AI能力意味着什么，这会如何改变科技巨头的AI竞争格局？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/f1ec830c-2f08-4b1a-b70f-7330f260753c"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-13T09:53:56.708281+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
