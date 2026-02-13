@@ -7,39 +7,39 @@
       "icon": "🥽",
       "news": [
         {
-          "title": "YouTube推出Apple Vision Pro原生应用",
-          "summary": "YouTube正式发布Apple Vision Pro原生应用，用户可在虚拟巨幕上享受影院级体验和Shorts短视频，结束了两年来仅能通过Safari浏览器访问的局面。",
-          "comment": "随着YouTube等主流应用的逐步适配，Vision Pro生态何时能突破内容匮乏的瓶颈？",
-          "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/12/youtube-launches-native-app-for-apple-vision-pro/"
+          "title": "YouTube为Apple Vision Pro推出原生应用",
+          "summary": "YouTube正式发布Apple Vision Pro原生应用，用户可在虚拟巨型屏幕上享受影院级体验和Shorts短视频内容，结束了两年来仅能通过Safari浏览器访问的局面。",
+          "comment": "Vision Pro生态应用的完善是否会成为推动XR设备大众采用的关键转折点？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/12/youtube-launches-native-app-for-apple-vision-pro/"
         },
         {
-          "title": "Meta与依视路陆逊梯卡AI智能眼镜2025年销量突破700万副",
-          "summary": "Meta与EssilorLuxottica合作的Ray-Ban和Oakley AI智能眼镜2025年销量超700万副，实现250%同比增长，成为传统眼镜公司重要业务板块。",
-          "comment": "AI智能眼镜销量的爆炸式增长是否预示着穿戴式AI设备即将迎来「iPhone时刻」？",
-          "source": "Road to VR",
-          "url": "https://www.roadtovr.com/meta-ray-ban-smart-glasses-sales-tripled-2025/"
+          "title": "Trener Robotics获3200万美元融资用于机器人通用技能平台",
+          "summary": "Trener Robotics的Acteris平台获得3200万美元融资，该平台支持用户用自然语言描述任务实现跨机器人型号的自动化，降低了机器人编程的技术门槛。",
+          "comment": "自然语言驱动的通用机器人技能平台是否能打破不同厂商机器人之间的应用壁垒？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/trener-robotics-raises-32m-for-robot-agnostic-skills-platform/"
         },
         {
-          "title": "Meta首席技术官确认Quest 4仍在产品规划中",
-          "summary": "Meta首席技术官Andrew Bosworth在采访中似乎确认了游戏专用型Quest 4仍在公司产品路线图中，该产品此前曾被泄露。",
-          "comment": "Meta对VR硬件的持续投入，能否重新激发消费级VR头显市场的增长动力？",
-          "source": "UploadVR",
-          "url": "https://www.uploadvr.com/meta-cto-seems-to-confirm-quest-4-still-on-roadmap/"
+          "title": "Meta与依视路联名AI眼镜2025年销量突破700万副，实现三倍增长",
+          "summary": "Meta与全球眼镜制造商依视路陆逊梯卡联名推出的AI智能眼镜在2025年销量突破700万副，相比前年实现了三倍增长，成为AI穿戴硬件市场的明星产品。",
+          "comment": "AI眼镜的爆发式增长是否预示着AR/AI穿戴设备即将进入消费级主流市场？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119209.html"
         },
         {
-          "title": "苹果visionOS 26.3正式推送 修复PS VR2手柄兼容性",
-          "summary": "Apple推送visionOS 26.3系统更新，重点修复了PlayStation VR2游戏控制器的兼容性问题，进一步完善了Vision Pro的外设适配体验。",
-          "comment": "Vision Pro与其他VR生态的互联互通，能否成为其生态扩展的关键路径？",
+          "title": "Apple发布visionOS 26.3系统更新，重点修复PS VR2控制器兼容性",
+          "summary": "苹果向Apple Vision Pro用户推送visionOS 26.3系统更新，主要聚焦于系统稳定性优化和外设适配，特别是修复了PS VR2 Sense游戏控制器的兼容性问题。",
+          "comment": "Vision Pro与PlayStation VR2控制器的兼容性改进是否意味着跨平台游戏生态的融合趋势？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119215.html"
         },
         {
-          "title": "Sony推出WF-1000XM6耳机 集成Google Gemini",
-          "summary": "Sony官方发布旗舰无线耳机WF-1000XM6，搭载32位音频处理和Google Gemini功能，定价329美元，为AI穿戴设备增添新选项。",
-          "comment": "AI助手深度集成到消费级穿戴设备中，是否将重新定义用户对智能耳机的期待？",
+          "title": "Pixel Watch 4长期测评：功能完善但仍需市场验证",
+          "summary": "经过数月使用，Pixel Watch 4展现出精致完善的设计和功能，但在竞争激烈的AI穿戴设备市场中其市场表现和创新力仍需进一步验证。",
+          "comment": "传统智能手表厂商如何在AI穿戴设备时代重新定义产品价值和差异化竞争力？",
           "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/12/sony-wf-1000xm6-earbuds-launch/"
+          "url": "https://9to5google.com/2026/02/12/pixel-watch-4-long-term-review/"
         }
       ]
     },
@@ -48,25 +48,25 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "OpenAI发布GPT-5.3-Codex-Spark实时编码模型，采用Cerebras芯片",
-          "summary": "OpenAI昨晚发布了首个专为实时编码设计的精简模型GPT-5.3-Codex-Spark，运行在芯片初创企业Cerebras的专用芯片上，相比前代模型推理延迟显著降低，生成吞吐提升3倍以上。",
-          "comment": "OpenAI绕过英伟达采用新芯片方案，这是否标志着AI推理基础设施即将迎来多芯片竞争的时代？",
-          "source": "Ars Technica / VentureBeat",
-          "url": "https://arstechnica.com/ai/2026/02/openai-sidesteps-nvidia-with-unusually-fast-coding-model-on-plate-sized-chips/"
+          "title": "OpenAI发布GPT-5.3-Codex-Spark：首个实时编码模型，采用Cerebras芯片",
+          "summary": "OpenAI推出专为实时编码场景设计的GPT-5.3-Codex-Spark模型，运行在Cerebras芯片上，相比前代模型编码速度快15倍，标志着OpenAI首次在推理基础设施上突破英伟达依赖。",
+          "comment": "OpenAI选择与Cerebras合作而非继续依赖英伟达，这是否预示着AI芯片生态竞争格局的重大转变？",
+          "source": "VentureBeat、Ars Technica",
+          "url": "https://venturebeat.com/technology/openai-deploys-cerebras-chips-for-15x-faster-code-generation-in-first-major"
         },
         {
-          "title": "蚂蚁集团开源Ring-2.5-1T万亿参数混合线性架构思考模型",
-          "summary": "蚂蚁集团发布全球首个基于混合线性架构的万亿参数思考模型Ring-2.5-1T，在长文本生成、数学推理和智能体任务执行上达到开源领先水平，长文本生成场景访存规模降低10倍以上。",
-          "comment": "国内开源万亿参数模型在推理效率上的突破，能否打破海外闭源大模型的性能垄断格局？",
+          "title": "GitHub推出Agentic Workflows：用AI智能体自动化代码库任务",
+          "summary": "GitHub在Actions中引入Agentic Workflows功能，允许开发者使用编码智能体自动完成代码审查、文档生成和质量检查等任务，目前处于技术预览阶段。",
+          "comment": "当AI智能体开始自动化软件开发的审查和文档工作，开发者的角色会如何转变？",
+          "source": "The GitHub Blog",
+          "url": "https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/"
+        },
+        {
+          "title": "蚂蚁集团开源Ring-2.5-1T：全球首个万亿参数混合线性架构思考模型",
+          "summary": "蚂蚁集团发布开源的Ring-2.5-1T模型，基于混合线性架构，在长文本生成、数学推理和智能体任务执行上达到开源领先水平，IMO自测达金牌级别。",
+          "comment": "开源万亿参数模型的发布是否会加速国内AI智能体应用的落地？",
           "source": "雷峰网",
           "url": "https://www.leiphone.com/category/industrynews/t3CiJyrkzQTfru1E.html"
-        },
-        {
-          "title": "Cloudflare推出Moltworker边缘自托管AI智能体平台",
-          "summary": "Cloudflare发布开源的Moltworker，支持在Cloudflare Workers边缘环境中运行自托管AI智能体Moltbot，用户可集成AI模型、浏览器与第三方工具，无需专用本地硬件。",
-          "comment": "端侧AI与边缘计算的结合能否成为个人AI助理的主流部署方式？",
-          "source": "InfoQ",
-          "url": "https://www.infoq.cn/article/PRrDv1gQQ2JhuOp1xI9b"
         }
       ]
     },
@@ -75,23 +75,23 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "腾讯云智能体开发平台覆盖超半数头部文化传媒机构，客户规模增长25倍",
-          "summary": "腾讯云披露其智能体开发平台已覆盖中国新闻社、北京广播电视台等全国超半数头部文化传媒机构，过去一年客户规模增长13倍、落地智能体数量增长25倍，相关机构内容生产效率平均提升70%。",
-          "comment": "智能体从辅助工具转向生产系统核心组件，大厂垂直深耕行业应用是否正在改变AI商业化的路径？",
+          "title": "腾讯云智能体开发平台覆盖超半数头部文化传媒机构，规模一年增长25倍",
+          "summary": "腾讯云ADP平台已覆盖中国新闻社、北京广播电视台等超半数头部文化传媒机构，过去一年智能体数量激增约25倍，在内容策划和生产中效率平均提升70%。",
+          "comment": "腾讯云在文化传媒领域的智能体规模爆炸性增长，是否标志着Agent应用已从试验阶段进入大规模商用？",
           "source": "雷峰网",
           "url": "https://www.leiphone.com/category/industrynews/R39emxEIGNYM6Z3Y.html"
         },
         {
-          "title": "百度将OpenClaw AI集成到搜索应用，覆盖7亿用户",
-          "summary": "百度计划在春节前让智能手机应用用户直接使用OpenClaw AI执行任务，将AI能力整合进覆盖7亿用户的搜索应用。",
-          "comment": "国内大厂将AI助手深度融入核心产品，这种集成策略相比独立应用能创造什么样的竞争优势？",
-          "source": "CNBC",
-          "url": "https://www.cnbc.com/2026/02/13/baidu-openclaw-ai-search-app-integration-china-lunar-new-year.html"
+          "title": "MiniMax发布M2.5开源模型，成本仅为Claude Opus的1/20",
+          "summary": "中国AI创业公司MiniMax推出M2.5和M2.5 Lightning两个开源模型变体，性能接近SOTA水平，但成本仅为Claude Opus的1/20，引发行业成本竞争加剧。",
+          "comment": "当开源模型以极低成本接近闭源模型性能，这对OpenAI和Anthropic的商业模式会带来什么挑战？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/minimaxs-new-open-m2-5-and-m2-5-lightning-near-state-of-the-art-while"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-13T18:27:00.710949+08:00"
+  "created_at": "2026-02-13T22:30:48.681732+08:00"
 }
