@@ -86,8 +86,8 @@
     }
   ],
   "source": "manual",
-  "status": "approved",
-  "created_at": "2026-02-13T09:53:56.707854+08:00",
+  "status": "sent",
+  "created_at": "2026-02-13T09:56:31.877248+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
