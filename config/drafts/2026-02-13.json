@@ -7,46 +7,46 @@
       "icon": "🥽",
       "news": [
         {
-          "title": "YouTube为Apple Vision Pro推出官方应用",
-          "summary": "谷歌正式为Apple Vision Pro头显推出YouTube官方应用，这是该平台自2024年2月发布以来最受期待的应用之一。",
-          "comment": "Vision Pro应用生态的完善是否会成为推动其市场普及的关键转折点？",
+          "title": "Meta与依视路陆逊梯卡AI智能眼镜年销量突破700万副",
+          "summary": "Meta与EssilorLuxottica合作的Ray-Ban和Oakley智能眼镜在2025年销量超过700万副，相比2023-2024年的200万副实现三倍增长，成为公司业绩主线的重要板块。",
+          "comment": "AI眼镜从小众产品快速成为主流消费品，这背后的核心驱动力是什么——是硬件能力成熟、应用场景明确，还是消费者心态转变？",
+          "source": "Road to VR / VR陀螺",
+          "url": "https://www.roadtovr.com/meta-ray-ban-smart-glasses-sales-tripled-2025/"
+        },
+        {
+          "title": "YouTube正式发布Apple Vision Pro官方应用",
+          "summary": "谷歌推出YouTube官方应用支持Apple Vision Pro头显，这是Vision Pro上线两年多以来最大的应用缺失补位。",
+          "comment": "作为XR平台最重要的内容生态，YouTube为何等到2026年才正式适配Vision Pro——是技术难题还是商业策略考量？",
           "source": "9to5Google",
           "url": "https://9to5google.com/2026/02/12/youtube-launches-native-app-for-apple-vision-pro/"
         },
         {
-          "title": "Meta与依视路陆逊梯卡2025年智能眼镜销量突破700万副",
-          "summary": "Meta与EssilorLuxottica联合推出的AI智能眼镜2025年销量超过700万副，实现了三倍增长，成为公司批发业务增长的主要驱动力。",
-          "comment": "AI智能眼镜销量的爆炸性增长是否标志着可穿戴设备正迎来其「iPhone时刻」？",
+          "title": "苹果Vision Pro系统更新修复PS VR2手柄兼容性",
+          "summary": "苹果正式推送visionOS 26.3系统更新，重点修复了与PS VR2游戏控制器的兼容性问题，进一步优化了Vision Pro的外设适配体验。",
+          "comment": "Vision Pro主动适配竞品的游戏手柄，是否意味着苹果已将竞争的重心从硬件独占转向生态开放？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119215.html"
+        },
+        {
+          "title": "Sony WF-1000XM6耳机发布32位音频和Gemini集成",
+          "summary": "索尼推出旗舰款WF-1000XM6无线耳机，搭载32位音频处理和谷歌Gemini AI助手，售价329美元，定位高端消费市场。",
+          "comment": "AI穿戴设备竞争从硬件规格转向AI功能集成，Sony这个传统音频巨头能否通过Gemini集成在AI时代逆袭？",
           "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/12/meta-essilorluxottica-sold-7-million-smart-glasses-in-2025/"
+          "url": "https://9to5google.com/wp-content/uploads/sites/4/2026/02/Sony-WF-1000XM6-official-1.jpg"
         },
         {
-          "title": "Meta首席技术官确认Quest 4游戏头显仍在开发路线图中",
-          "summary": "Meta CTO Andrew Bosworth在采访中似乎确认了此前的泄露信息，即一款游戏专属的Quest 4头显仍在公司的产品规划中。",
-          "comment": "Meta在VR头显市场推出更细分的游戏专用产品，是否意味着VR内容消费正在走向垂直化？",
-          "source": "UploadVR",
-          "url": "https://www.uploadvr.com/meta-cto-seems-to-confirm-quest-4-still-on-roadmap/"
-        },
-        {
-          "title": "Sony WF-1000XM6耳机发布，搭载32位音频与Google Gemini功能",
-          "summary": "索尼发布旗舰级WF-1000XM6真无线耳机，首次采用32位音频处理技术，并集成Google Gemini AI助手功能，售价329美元。",
-          "comment": "高端耳机中集成AI助手功能是否会成为下一代穿戴设备的标配趋势？",
-          "source": "9to5Google",
-          "url": "https://9to5google.com/2026/02/12/sony-wf-1000xm6-earbuds-launch/"
-        },
-        {
-          "title": "Google Pixel Watch 4长期评测：精细化与完整体验的实现",
-          "summary": "经过数月使用后，Pixel Watch 4展现出精细的设计与完整的功能体验，虽然即将面临新品挑战，但仍保持着强劲的竞争力。",
-          "comment": "作为AI手表的代表产品，Pixel Watch 4的优势和不足对于行业发展有何启示？",
+          "title": "谷歌Pixel Watch 4长期评测：成熟完善的AI穿戴体验",
+          "summary": "经过数月实际使用测试，Pixel Watch 4展现出谷歌在AI穿戴设备上的成熟能力，虽然硬件未有突破但软件体验持续优化。",
+          "comment": "在AI穿戴设备竞争中，硬件创新与软件体验哪个对消费者留存率影响更大？",
           "source": "9to5Google",
           "url": "https://9to5google.com/2026/02/12/pixel-watch-4-long-term-review/"
         },
         {
-          "title": "Apple Vision Pro visionOS 26.3更新发布，重点修复PS VR2控制器兼容性",
-          "summary": "苹果为Vision Pro用户推送visionOS 26.3系统更新，核心修复了PS VR2 Sense游戏控制器的兼容性问题，进一步优化了空间计算的外设适配体验。",
-          "comment": "Vision Pro与PlayStation等传统游戏设备的兼容性整合是否预示着跨平台沉浸式体验的未来方向？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119215.html"
+          "title": "虚拟现实电影行业标准发布：头显设备分辨率和帧率指标明确",
+          "summary": "中国国家电影局发布虚拟现实电影行业标准文件，规定VR电影头戴显示设备单目分辨率不低于2048×2160像素、帧率不低于60fps的技术要求。",
+          "comment": "国家标准的出台是否意味着VR电影内容正在从实验阶段走向商业化落地？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544737.html"
         }
       ]
     },
@@ -55,25 +55,25 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "Xcode 26.3扩展支持编程智能体，可接入Claude Agent和Codex",
-          "summary": "苹果最新发布的Xcode 26.3版本扩展了对编程代理的支持，可接入Anthropic的Claude Agent和OpenAI的Codex，赋予智能体更高的自主性来处理复杂编程任务。",
-          "comment": "当编程智能体能够独立分解任务、做出架构决策并验证代码效果时，开发者的角色会发生怎样的根本性转变？",
-          "source": "InfoQ推荐",
-          "url": "https://www.infoq.cn/article/39BuXj6WpGFqPERk4X9x"
+          "title": "OpenAI推出GPT-5.3-Codex-Spark编码模型，采用Cerebras芯片实现近乎实时代码生成",
+          "summary": "OpenAI发布新的编码模型GPT-5.3-Codex-Spark，运行在Cerebras芯片上，速度比前代快15倍，标志着OpenAI首次在推理部署中大幅偏离Nvidia芯片。",
+          "comment": "OpenAI绕过Nvidia转向Cerebras芯片，这是否预示着AI基础设施即将出现多元化竞争格局？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openai-deploys-cerebras-chips-for-15x-faster-code-generation-in-first-major"
         },
         {
-          "title": "MiniMax发布M2.5和M2.5 Lightning模型，性能接近Claude Opus 4.6但成本仅1/20",
-          "summary": "中国AI初创公司MiniMax推出两个版本的M2.5语言模型，在接近行业顶级模型性能的同时，成本仅为竞品的二十分之一，展现了成本与性能优化的新方向。",
-          "comment": "当高性能AI模型的成本大幅下降至现有价格的1/20时，会如何重塑AI应用的商业可行性边界？",
+          "title": "MiniMax发布M2.5和M2.5 Lightning开源模型，性能接近最先进水平但成本仅为Claude 1/20",
+          "summary": "中国AI创业公司MiniMax推出M2.5系列开源大模型，性能与顶级模型相当，但成本仅为竞争对手的二十分之一。",
+          "comment": "国内开源模型在成本效益上的突破，会如何重塑全球AI模型的竞争格局？",
           "source": "VentureBeat",
           "url": "https://venturebeat.com/technology/minimaxs-new-open-m2-5-and-m2-5-lightning-near-state-of-the-art-while"
         },
         {
-          "title": "OpenAI部署Cerebras芯片推出GPT-5.3-Codex-Spark，代码生成速度快15倍",
-          "summary": "OpenAI发布的GPT-5.3-Codex-Spark运行在Cerebras芯片上，实现了近乎即时的代码生成能力，速度是前代产品的15倍，标志着OpenAI在芯片选择上首次重大突破。",
-          "comment": "当AI推理从依赖英伟达转向采用专用芯片架构时，这对AI芯片产业的格局会产生怎样的影响？",
+          "title": "Nvidia发布动态内存稀疏化技术，可将大语言模型推理成本降低8倍而不损失准确性",
+          "summary": "Nvidia研究人员开发了动态内存稀疏化(DMS)技术，通过压缩KV缓存将大语言模型推理的内存成本降低最多8倍。",
+          "comment": "推理成本的大幅下降是否会加速大模型在边缘设备上的部署？",
           "source": "VentureBeat",
-          "url": "https://venturebeat.com/technology/openai-deploys-cerebras-chips-for-15x-faster-code-generation-in-first-major"
+          "url": "https://venturebeat.com/orchestration/nvidias-new-technique-cuts-llm-reasoning-costs-by-8x-without-losing-accuracy"
         }
       ]
     },
@@ -82,16 +82,16 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "中国AI模型开发商智谱股价周内暴涨120%，凸显投资者对国内生成式AI企业的热情",
-          "summary": "智谱作为中国AI模型开发商，股价在一周内翻倍，反映出即使全球估值面临调整，投资者对中国新兴生成式AI公司的强劲需求。",
-          "comment": "在全球AI公司估值普遍承压的背景下，中国AI初创企业为何仍能获得投资者的追捧？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-13/zhipu-s-120-surge-highlights-china-s-new-ai-market-favorites"
+          "title": "OpenAI指控DeepSeek通过'蒸馏'美国模型训练AI，绕过安全协议",
+          "summary": "OpenAI内部备忘录披露，DeepSeek通过对OpenAI等美国模型进行数万次提示来进行蒸馏，以复制前沿能力并绕过安全协议。",
+          "comment": "模型蒸馏技术的大规模应用是否预示着开源模型与闭源模型间的竞争将更加激烈？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7879369.html"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-13T13:26:16.255763+08:00"
+  "created_at": "2026-02-13T16:01:01.514862+08:00"
 }
