@@ -92,8 +92,8 @@
     }
   ],
   "source": "manual",
-  "status": "approved",
-  "created_at": "2026-02-14T11:13:16.524280+08:00",
+  "status": "sent",
+  "created_at": "2026-02-14T11:16:33.263613+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
