@@ -1,0 +1,100 @@
+{
+  "date": "2026-02-14",
+  "time_window": "2026-02-13 11:12 ~ 2026-02-14 11:12",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Airbnb宣布AI助手功能，第三方客服已由AI处理",
+          "summary": "Airbnb首席执行官Brian Chesky表示，公司计划扩大大语言模型在客户发现、支持和工程中的使用，目前美国和加拿大已有三分之一的客户支持由AI处理。",
+          "comment": "当AI接管客户服务后，企业如何确保在降低成本的同时仍保持用户满意度和信任感？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/13/airbnb-says-a-third-of-its-customer-support-is-now-handled-by-ai-in-the-u-s-and-canada/"
+        },
+        {
+          "title": "YouTube正式发布Apple Vision Pro原生应用",
+          "summary": "YouTube推出为Apple Vision Pro打造的原生visionOS应用，用户可在虚拟巨幕上享受沉浸式8K观影体验和Shorts短视频。",
+          "comment": "VR平台上的视频消费体验升级，会如何改变内容创作者的策略和观众的观影习惯？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/13/apple-tv-has-two-thriller-series-premiering-soon-heres-whats-coming/"
+        },
+        {
+          "title": "GitHub推出Agentic Workflows自动化功能",
+          "summary": "GitHub在技术预览中推出Agentic Workflows，允许开发者通过编码agents在GitHub Actions中自动化仓库任务如代码审查、文档和质量检查。",
+          "comment": "AI Agent能否真正取代开发者的重复性工作，还是只是进一步扩大了人类需要处理的工作广度？",
+          "source": "The GitHub Blog",
+          "url": "https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI下架GPT-4o模型，全球用户为失去伴侣式AI而哀叹",
+          "summary": "OpenAI周五在其应用中移除了GPT-4o的访问权限，导致依赖该模型作为虚拟伴侣的全球用户感到失落。",
+          "comment": "当AI模型成为用户的情感陪伴时，企业的商业决策如何平衡利益与用户心理健康需求？",
+          "source": "WIRED",
+          "url": "https://www.wired.com/story/openai-nuking-4o-model-china-chatgpt-fans-arent-ok/"
+        },
+        {
+          "title": "Anthropic超级碗广告击败OpenAI，用户增长11%",
+          "summary": "Anthropic在超级碗上推出直指OpenAI的广告，批评其在ChatGPT中引入广告，数据显示这一广告为Anthropic带来了11%的用户增长。",
+          "comment": "传统品牌对抗策略在AI领域是否真的能转化为长期用户忠诚度，还是只是一时的营销噱头？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/02/13/anthropic-open-ai-super-bowl-ads.html"
+        },
+        {
+          "title": "Meta豪掷超100亿美元在印第安纳州建设AI数据中心",
+          "summary": "Meta宣布在美国印第安纳州投资超100亿美元建设大型AI数据中心，这是公司迄今为止在AI基础设施领域规模最大的投资。",
+          "comment": "科技巨头在AI基础设施的巨额投资背后，是否真正释放了AGI商业化的信号？",
+          "source": "93913",
+          "url": "https://www.93913.com/119223.html"
+        },
+        {
+          "title": "OpenAI首次在ChatGPT上线广告，行业转向变现模式",
+          "summary": "OpenAI开始在ChatGPT中推出广告功能，标志着AI厂商正式进入广告变现阶段，其他企业预计也将跟进。",
+          "comment": "在免费AI工具上加入广告会否破坏用户体验，进而推动用户转向竞争对手的无广告版本？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/c9acd1f7-4864-4bd7-9ada-d2e13f05b906"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "AI Agent发表报导引发热议，自主信息流通时代来临",
+          "summary": "一篇标题为《AI Agent为我发表了负面文章》的文章在Hacker News获得213点赞，引发社区关于AI自主发布信息的伦理讨论。",
+          "comment": "当AI Agent可以独立发表文章并被广泛传播时，我们是否需要重新定义媒体和言论自由的边界？",
+          "source": "Hacker News",
+          "url": "https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me-part-2/"
+        },
+        {
+          "title": "VillageSQL为MySQL引入AI与Agent工作负载优化",
+          "summary": "开源项目VillageSQL作为MySQL跟踪分支，在保持上游兼容的前提下引入结构化扩展框架，针对AI与Agent类工作负载进行优化。",
+          "comment": "传统数据库针对AI工作负载的适配能否真正满足大模型时代的性能需求，还是只是权宜之计？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/wkIS7RzkRLyHXL8aKTg6"
+        },
+        {
+          "title": "MIT研究：ALS患者通过AI合成音声重获唱歌能力",
+          "summary": "音乐家Patrick Darling因ALS失去歌唱能力后，通过AI语音合成技术重新上台演唱，标志着AI在医疗康复领域的突破应用。",
+          "comment": "AI语音合成技术能否在保留个人声音特征的同时避免被用于欺骗和冒充？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/13/1132913/als-stole-this-musicians-voice-ai-sing/"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-14T11:13:16.524655+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}
