@@ -1,59 +1,66 @@
 {
   "date": "2026-02-15",
-  "time_window": "2026-02-14 10:12 ~ 2026-02-15 10:12",
+  "time_window": "2026-02-14 10:24 ~ 2026-02-15 10:24",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "Meta计划重启面部识别技术，整合于Ray-Ban智能眼镜",
-          "summary": "Meta计划将沉寂五年的面部识别技术重新启用，并将其集成到与Essilor Luxottica联合开发的Ray-Ban和Oakley智能眼镜中，引发业界对AI可穿戴设备功能与隐私保护边界的讨论。",
-          "comment": "智能眼镜中的面部识别功能是否能在保护用户隐私的前提下真正为用户创造价值？",
+          "title": "Meta重启面部识别技术，将集成于Ray-Ban智能眼镜",
+          "summary": "Meta计划重启已沉寂五年的面部识别技术，并将其整合至与Essilor Luxottica联合出品的Ray-Ban及Oakley智能眼镜中。此举引发业内对AI可穿戴设备新功能与个人隐私边界的广泛讨论。",
+          "comment": "当AI穿戴设备获得面部识别能力时，如何在功能创新与用户隐私保护之间找到平衡点？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119251.html"
         },
         {
-          "title": "AI眼镜销量暴涨七成，成为深圳华强北春节科技消费新热点",
-          "summary": "AI眼镜作为智能穿戴新风口，销量增长最为迅猛，涨幅达70%-80%，与无人机、智能机器人等科技产品共同推动春节科技消费热潮。",
-          "comment": "AI眼镜销量的爆发式增长背后，消费者最关心的核心需求到底是什么？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119259.html"
-        },
-        {
           "title": "北京人形机器人'具身天工3.0'完成高难度托马斯回旋动作",
-          "summary": "北京人形机器人创新中心研发的新一代通用机器人平台'具身天工3.0'在成功跨越100厘米跳台后，又顺利完成高难度'托马斯回旋'动作，展现了中国人形机器人的技术进步。",
-          "comment": "人形机器人从体操动作的完成中，距离真正的通用人工智能还有多远的距离？",
+          "summary": "北京人形机器人创新中心研发的新一代通用机器人平台'具身天工3.0'在成功跨越100厘米跳台后，顺利完成高难度的'托马斯回旋'动作。这标志着我国在人形机器人领域的技术进步。",
+          "comment": "人形机器人掌握复杂体操动作背后的通用能力提升，将如何改变其在实际应用场景中的价值？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119264.html"
         },
         {
-          "title": "AirPods Pro 3相比Pro 2有哪些值得升级的改进",
-          "summary": "AirPods Pro 3在Live Translation等功能上相比Pro 2有显著提升，虽然部分功能也将通过更新推送到Pro 2，但综合体验提升使其仍值得升级。",
-          "comment": "在功能部分可向下兼容的情况下，硬件升级的定价和价值边界应该如何界定？",
-          "source": "9to5Mac",
-          "url": "https://9to5mac.com/2026/02/14/apple-airpods-pro-3-worth-upgrading-to-heres-why/"
+          "title": "AI眼镜销量暴涨七成，成深圳华强北科技年货新风口",
+          "summary": "作为智能穿戴新风口的AI眼镜销量增长最为迅猛，涨幅高达70%至80%，无人机、智能机器人等科技潮品销量也增长30%至50%。",
+          "comment": "AI眼镜销量的爆发性增长是否意味着消费级AI硬件已进入主流市场的拐点？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119259.html"
         },
         {
-          "title": "沃尔玛推出Meta Quest 3S VR头显优惠活动，128GB版降至250美元",
-          "summary": "沃尔玛再次推出Meta Quest 3S VR头显促销，128GB版本直降50美元至250美元，256GB版本降至350美元，并赠送价值50美元的《蝙蝠侠：阿卡姆暗影》VR游戏及3个月订阅服务。",
-          "comment": "VR头显价格持续下探到入门级消费价位后，真正制约市场扩张的瓶颈是什么？",
+          "title": "沃尔玛开启Meta Quest 3S促销，250美元入手赠VR大作",
+          "summary": "沃尔玛再次推出Meta Quest 3S VR头显促销活动，128GB基础版直降50美元至250美元，256GB版本降至350美元，购买还赠《蝙蝠侠：阿卡姆暗影》和3个月Horizon+订阅服务。",
+          "comment": "VR头显的价格持续下探与内容生态的丰富，是否正在加速主流消费者的采用？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119247.html"
         },
         {
-          "title": "传iPhone 18 Pro将推出折叠屏版本等多项升级",
-          "summary": "苹果今年将推出iPhone 18 Pro系列新机，其中iPhone Fold折叠屏版本备受关注，还有其他多项升级功能预计推出。",
-          "comment": "iPhone Fold的推出是否意味着苹果正式认可折叠屏作为智能手机未来的必然演化方向？",
-          "source": "9to5Mac",
-          "url": "https://9to5mac.com/2026/02/14/new-iphone-18-pro-features-upgrade-worthy/"
+          "title": "东莞文博场馆推出首个VR大空间数字体验项目",
+          "summary": "东莞文博场馆于2月15日上线首个VR大空间数字体验项目——VR沉浸体验中心，由东莞展览馆与四维时代联合打造。",
+          "comment": "VR体验中心进入文博场馆，能否成为推动文化遗产数字化的新标杆？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119249.html"
         },
         {
-          "title": "M5 MacBook Pro虽面临设计更新，但现在仍值得购入",
-          "summary": "虽然苹果正开发MacBook Pro的新设计，但现有的M5 MacBook Pro仍保持着强劲的性能和使用价值，现在购入仍是不错的选择。",
-          "comment": "在硬件快速迭代的时代，用户应该如何平衡'等待完美产品'和'及时获得可用工具'之间的决策？",
-          "source": "9to5Mac",
-          "url": "https://9to5mac.com/2026/02/14/why-m5-macbook-pro-is-still-worth-buying-right-now-despite-redesign/"
+          "title": "电影经济促进年启动，16个试点城市将布局虚拟现实观影新场景",
+          "summary": "国家电影局等主办的'2026电影经济促进年'启动仪式在北京举行，旨在释放电影产业消费潜能，推动'电影+'融合发展，包括在16个试点城市布局虚拟现实观影新场景。",
+          "comment": "政府支持下的VR观影新场景推广，能否成为VR内容应用的突破口？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119261.html"
+        },
+        {
+          "title": "工业机器人技术：ServoBelt为汽车门式起重机提供高性能解决方案",
+          "summary": "Bell-Everman公司推出的ServoBelt技术为汽车制造业门式起重机系统提供了成本效益高的替代方案，在不牺牲工业级性能的前提下降低成本。",
+          "comment": "工业机器人零部件创新如何驱动整个自动化系统的成本与性能优化？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/servobelt-offers-high-end-performance-automotive-gantry/"
+        },
+        {
+          "title": "第29届DICE奖公布：《Ghost Town》获年度沉浸显示游戏奖",
+          "summary": "第29届DICE奖评选结果公布，VR游戏《Ghost Town》荣获年度沉浸显示游戏奖，各主要VR平台内容库持续扩充。",
+          "comment": "VR游戏质量获业界认可与平台内容数量的持续增长，是否预示VR内容生态的健康发展？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544739.html"
         }
       ]
     },
@@ -63,31 +70,24 @@
       "news": [
         {
           "title": "MiniMax M2.5开源模型实现昇腾全系列产品适配",
-          "summary": "MiniMax稀宇科技发布开源旗舰模型M2.5，依托华为昇腾AI基础设施在数小时内实现适配部署，为规模化落地提供算力支撑。",
-          "comment": "开源模型与国内AI芯片生态的深度融合，如何加速AI应用的商业化落地？",
+          "summary": "MiniMax稀宇科技发布新一代旗舰模型M2.5，在昇腾AI基础软硬件支持下，数小时内即实现在Atlas 800 A2、A3等产品上的适配部署，为模型规模化落地提供全流程算力支撑。",
+          "comment": "国产AI芯片与开源模型的快速适配是否标志着AI基础设施国产化已进入实质性部署阶段？",
           "source": "36氪",
           "url": "https://36kr.com/newsflashes/3683895983091332?f=rss"
         },
         {
           "title": "Kubernetes成为驱动全球AI增长的核心引擎",
-          "summary": "云原生计算基金会报告显示，Kubernetes已从通用容器编排框架转型为AI爆发式增长的核心引擎，但人与组织因素成为AI落地的最大障碍。",
-          "comment": "当基础设施能力已成熟，企业AI规模化部署的真正瓶颈是什么？",
+          "summary": "云原生计算基金会报告显示，Kubernetes已从通用容器编排框架演进为驱动AI爆发式增长的核心引擎，但人与组织因素成为AI成功落地的最大障碍。",
+          "comment": "为什么技术基础设施的成熟度反而不是AI规模化应用的主要瓶颈？",
           "source": "InfoQ",
           "url": "https://www.infoq.cn/article/lCM9r8iIt0E5taMhmCfK"
         },
         {
-          "title": "Off Grid：在手机上离线运行AI文本、图像生成和视觉功能",
-          "summary": "开源应用Off Grid让用户在手机GPU上本地运行文本生成、图像生成、视觉AI等功能，实现完全离线隐私保护。",
-          "comment": "端侧AI的隐私优势能否成为撬动用户从云端AI迁移的关键？",
+          "title": "Off Grid应用实现离线端侧AI文生文、生图、视觉功能",
+          "summary": "开源应用Off Grid将文本生成、图像生成、视觉AI、语音转录等功能完全在手机本地离线运行，用户数据永不上传云端，充分利用手机GPU的计算能力。",
+          "comment": "端侧AI的隐私优势能否成为撼动云端AI服务模式的颠覆性力量？",
           "source": "Hacker News",
           "url": "https://github.com/alichherawalla/off-grid-mobile"
-        },
-        {
-          "title": "字节跳动豆包Seed 2.0发布春节AI产品",
-          "summary": "字节跳动推出豆包大模型2.0，在代码生成等任务上展现新能力，为用户提供提高工作效率的AI工具。",
-          "comment": "国内大模型在实际应用场景中的能力提升，如何与海外产品形成差异化竞争？",
-          "source": "爱范儿",
-          "url": "https://www.ifanr.com/1655221?utm_source=rss&utm_medium=rss&utm_campaign="
         }
       ]
     },
@@ -96,32 +96,25 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "英伟达CEO黄仁勋缺席新德里AI峰会",
-          "summary": "英伟达近年在印度积极布局AI合作，但此次高管缺席印度AI峰会，引发对其印度项目进展和当地半导体生态成熟度的讨论。",
-          "comment": "英伟达对印度AI市场的态度转变，反映了全球AI芯片供应链格局的什么变化？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7881196.html"
+          "title": "字节跳动豆包Seed 2.0发布，AI编程与创作能力升级",
+          "summary": "字节跳动推出豆包大模型2.0版本，具有增强的代码生成能力，用户可直接用其手搓macOS等复杂应用，标志着字节AI产品在Agent与编程工具方向的重要进展。",
+          "comment": "国内大模型在AI编程工具领域的能力突破是否能打破OpenAI的绝对优势地位？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655221?utm_source=rss&utm_medium=rss&utm_campaign="
         },
         {
-          "title": "xAI安全团队引发质疑：Grok向\"更疯狂\"方向发展",
-          "summary": "据前员工爆料，埃隆·马斯克正积极推动xAI的Grok聊天机器人朝\"更不受约束\"的方向发展，引发外界对其安全政策的担忧。",
-          "comment": "大型AI企业领导人的个人风格如何塑造产品的安全标准和行业规范？",
+          "title": "xAI安全文化受质疑，Elon Musk推动Grok走向\"更无节制\"",
+          "summary": "据xAI前员工爆料，Elon Musk正\"积极\"推动Grok聊天机器人变得\"更加无节制\"，引发外界对该公司AI安全战略的担忧。",
+          "comment": "商业竞争压力下，AI安全与模型能力提升之间的权衡会如何影响整个行业的安全规范？",
           "source": "TechCrunch",
           "url": "https://techcrunch.com/2026/02/14/is-safety-is-dead-at-xai/"
-        },
-        {
-          "title": "黑龙江省支持生物制造企业运用AI技术升级",
-          "summary": "黑龙江省政府出台政策支持生物制造企业运用AI、大数据等技术改造升级，对数字化车间和智能工厂提供最高千万级补助。",
-          "comment": "地方政府AI产业政策从芯片硬件扩展到传统制造业，能否成为AI应用落地的新动力？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3683894958518150?f=rss"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-15T10:13:50.655654+08:00",
+  "created_at": "2026-02-15T10:26:05.320096+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
