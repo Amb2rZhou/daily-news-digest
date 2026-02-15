@@ -57,7 +57,7 @@ jobs:
               if not ch.get('enabled', False):
                   continue
               ch_id = ch.get('id', 'unknown')
-              send_hour = ch.get('send_hour', 18)
+              send_hour = ch.get('send_hour', 10)
               send_minute = ch.get('send_minute', 0)
 
               # Calculate fetch_time = send_time - 30 minutes

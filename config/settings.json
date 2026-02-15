@@ -507,36 +507,6 @@
       "enabled": true
     },
     {
-      "url": "https://www.tomshardware.com/feeds/all",
-      "name": "Tom's Hardware",
-      "group": "智能硬件",
-      "enabled": true
-    },
-    {
-      "url": "https://www.anandtech.com/rss/",
-      "name": "AnandTech",
-      "group": "智能硬件",
-      "enabled": true
-    },
-    {
-      "url": "https://www.eetimes.com/feed/",
-      "name": "EE Times",
-      "group": "智能硬件",
-      "enabled": true
-    },
-    {
-      "url": "https://9to5mac.com/feed/",
-      "name": "9to5Mac",
-      "group": "智能硬件",
-      "enabled": true
-    },
-    {
-      "url": "https://9to5google.com/feed/",
-      "name": "9to5Google",
-      "group": "智能硬件",
-      "enabled": true
-    },
-    {
       "url": "https://www.7tin.cn/feed/",
       "name": "青亭网",
       "group": "智能硬件",

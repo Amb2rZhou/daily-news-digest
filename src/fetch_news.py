@@ -78,7 +78,7 @@ def load_settings() -> dict:
 
         # --- Backward-compatible migration to unified channels ---
         if "channels" not in settings:
-            send_hour = settings.get("send_hour", 18)
+            send_hour = settings.get("send_hour", 10)
             send_minute = settings.get("send_minute", 0)
             topic_mode = settings.get("topic_mode", "broad")
             max_items = settings.get("max_news_items", 10)
@@ -167,13 +167,13 @@ def get_time_window(settings: dict = None, manual: bool = False, channel: dict =
         settings = load_settings()
 
     if channel:
-        send_hour = channel.get("send_hour", 18)
+        send_hour = channel.get("send_hour", 10)
         send_minute = channel.get("send_minute", 0)
     else:
         # Fallback: use the first channel's time, or defaults
         channels = settings.get("channels", [])
         first = channels[0] if channels else {}
-        send_hour = first.get("send_hour", settings.get("send_hour", 18))
+        send_hour = first.get("send_hour", settings.get("send_hour", 10))
         send_minute = first.get("send_minute", settings.get("send_minute", 0))
 
     tz_name = settings.get("timezone", "Asia/Shanghai")
@@ -211,12 +211,12 @@ def get_cutoff_time(settings: dict = None, manual: bool = False, channel: dict =
     tz = ZoneInfo(tz_name)
 
     if channel:
-        send_hour = channel.get("send_hour", 18)
+        send_hour = channel.get("send_hour", 10)
         send_minute = channel.get("send_minute", 0)
     else:
         channels = settings.get("channels", [])
         first = channels[0] if channels else {}
-        send_hour = first.get("send_hour", settings.get("send_hour", 18))
+        send_hour = first.get("send_hour", settings.get("send_hour", 10))
         send_minute = first.get("send_minute", settings.get("send_minute", 0))
 
     now = datetime.now(tz)
@@ -470,7 +470,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 普通消费电子（电视、音箱、相机等）
 - 纯软件产品、互联网服务
 
-**数量要求**：选 5-7 条，不多不少。
+**数量要求**：选 7-10 条，不多不少。
 
 **筛选要求**：
 - 去重：相同事件只保留最权威来源
@@ -782,11 +782,11 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
     hw_articles_text = _format_articles_text(hw_articles) if hw_articles else _format_articles_text(articles)
     other_articles_text = _format_articles_text(other_articles) if other_articles else _format_articles_text(articles)
 
-    hw_budget = 7  # hardware gets 5-7 items
-    ai_budget = max(max_items - hw_budget, 3)  # rest goes to AI+industry, at least 3
+    hw_budget = 10  # hardware gets 7-10 items
+    ai_budget = max(max_items - hw_budget, 5)  # rest goes to AI+industry, at least 5
     prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources)
     prompt_ai = get_prompt_for_mode("focused_ai_industry", other_articles_text, ai_budget, "", "", "", None, paywalled_sources)
-    print(f"  - Budget: hardware 5-7, AI+industry {ai_budget}, total cap {max_items}")
+    print(f"  - Budget: hardware 7-10, AI+industry {ai_budget}, total cap {max_items}")
 
     start = time.time()
 

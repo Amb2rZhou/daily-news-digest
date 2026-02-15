@@ -92,7 +92,7 @@ def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
 
     for ch in get_enabled_channels(settings):
         ch_id = ch.get("id", "unknown")
-        send_hour = ch.get("send_hour", 18)
+        send_hour = ch.get("send_hour", 10)
         send_minute = ch.get("send_minute", 0)
 
         # Calculate fetch_time = send_time - 30 minutes
@@ -162,7 +162,7 @@ def get_channels_to_send(settings: dict, now: datetime) -> list[dict]:
         elif status == "pending_review" and source != "manual":
             # Scheduled pending: send within [send_time, send_time + 2h]
             # Manual pending: never auto-send (must approve first)
-            send_hour = ch.get("send_hour", 18)
+            send_hour = ch.get("send_hour", 10)
             send_minute = ch.get("send_minute", 0)
             send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
             send_deadline = send_time + timedelta(hours=2)

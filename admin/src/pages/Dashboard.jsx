@@ -496,7 +496,7 @@ export default function Dashboard() {
         const activeChannel = activeTab === 'email'
           ? allChannels.find(c => c.type === 'email')
           : allChannels.find(c => c.id === activeTab)
-        const chSendHour = activeChannel?.send_hour ?? 18
+        const chSendHour = activeChannel?.send_hour ?? 10
         const chSendMinute = activeChannel?.send_minute ?? 0
         const chMaxItems = activeChannel?.max_news_items ?? 10
         const chName = activeChannel?.name || (activeTab === 'email' ? '邮件' : activeTab)

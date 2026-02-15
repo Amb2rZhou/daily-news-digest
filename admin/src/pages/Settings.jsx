@@ -412,7 +412,7 @@ icon 映射：{icon_mapping}
                     <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>发送时间</span>
                     <input
                       type="time"
-                      value={`${String(ch.send_hour ?? 18).padStart(2, '0')}:${String(ch.send_minute ?? 0).padStart(2, '0')}`}
+                      value={`${String(ch.send_hour ?? 10).padStart(2, '0')}:${String(ch.send_minute ?? 0).padStart(2, '0')}`}
                       onChange={(e) => {
                         const [h, m] = e.target.value.split(':').map(Number)
                         updateChannel(idx, { send_hour: h, send_minute: m })
