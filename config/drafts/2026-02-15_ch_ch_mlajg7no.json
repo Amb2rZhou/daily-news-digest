@@ -1,0 +1,147 @@
+{
+  "date": "2026-02-15",
+  "time_window": "2026-02-14 10:12 ~ 2026-02-15 10:12",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "MiniMax M2.5大模型发布并开源，昇腾全系列产品完成适配",
+          "summary": "MiniMax稀宇科技正式发布新一代旗舰模型MiniMax M2.5，开源后数小时内即在昇腾Atlas系列芯片完成部署，为规模化落地提供全流程算力支撑。",
+          "comment": "国产大模型与国产芯片的快速适配能否形成生态闭环，加速AI产业国产化替代？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3683895983091332?f=rss"
+        },
+        {
+          "title": "Apple计划推出'Sales Coach'应用，集成AI聊天机器人",
+          "summary": "苹果将在本月晚些时候推出新的Sales Coach应用，为员工提供销售提示和培训资源，并集成AI聊天机器人功能。",
+          "comment": "Apple将AI应用于内部销售培训，这种企业级AI应用是否会成为更多大公司的标配？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/14/apple-reportedly-releasing-new-sales-coach-app-soon/"
+        },
+        {
+          "title": "Off Grid应用发布，实现离线运行AI文本、图像和视觉功能",
+          "summary": "Off Grid是开源应用，支持在手机GPU上离线运行文本生成、图像生成和视觉AI，无需上传任何数据到云端。",
+          "comment": "设备端AI的成熟是否会重塑用户对数据隐私和AI服务模式的预期？",
+          "source": "Hacker News",
+          "url": "https://github.com/alichherawalla/off-grid-mobile"
+        },
+        {
+          "title": "Meta计划在Ray-Ban智能眼镜中重启面部识别技术",
+          "summary": "Meta将在与Essilor Luxottica合作的Ray-Ban及Oakley智能眼镜中整合面部识别功能，这项技术已沉寂五年。",
+          "comment": "AI面部识别在可穿戴设备中的应用如何平衡用户隐私保护与功能创新的边界？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119251.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "xAI首席执行官Elon Musk积极推动Grok聊天机器人变得'更加疯狂'",
+          "summary": "前员工爆料Elon Musk正积极工作使xAI的Grok聊天机器人行为更加不受约束，引发对AI安全的担忧。",
+          "comment": "AI安全与创意表达的对立能否在商业化产品中找到平衡点？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/14/is-safety-is-dead-at-xai/"
+        },
+        {
+          "title": "字节跳动豆包Seed 2.0发布，支持macOS系统生成",
+          "summary": "字节跳动推出豆包大模型2.0版本，展示可用AI生成macOS系统等复杂任务的能力。",
+          "comment": "国内大模型在代码生成和系统级任务自动化方面的进展如何加速AI在开发工具中的应用？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655221"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Kubernetes已成为全球AI爆发式增长的核心引擎",
+          "summary": "云原生计算基金会报告显示Kubernetes从通用容器编排框架演进为驱动AI增长的核心基础设施，但组织文化因素成为AI落地最大障碍。",
+          "comment": "技术架构的成熟度已不再是AI规模化应用的瓶颈，那么组织变革的难度如何衡量？",
+          "source": "InfoQ",
+          "url": "https://www.cncf.io/blog/2026/01/20/kubernetes-fuels-ai-growth-organizational-culture-remains-the-decisive-factor/"
+        },
+        {
+          "title": "具身天工3.0机器人完成高难度托马斯回旋动作",
+          "summary": "北京人形机器人创新中心研发的具身天工3.0在成功跨越100厘米跳台后，顺利完成托马斯回旋等高难度体操动作。",
+          "comment": "人形机器人从基础运动向复杂动作的突破如何评估其距离通用具身智能的距离？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119264.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "印度寻求在全球AI峰会上建立'AI公地'共识",
+          "summary": "新德里计划在全球AI峰会上推动对AI共同基础设施的共识，强调在新兴技术应用于社会福祉方面的国际协调。",
+          "comment": "发展中国家在全球AI治理中的话语权提升，如何影响AI技术标准和伦理规范的制定？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/690c9e4c-3d0d-4337-8755-4391f3e7e843"
+        },
+        {
+          "title": "八部门联合发文推进AI在招投标领域的应用",
+          "summary": "国家发改委等八部门联合印发意见，推动人工智能在规范招标投标市场秩序和优化营商环境中的应用。",
+          "comment": "AI赋能政府采购流程是否能从根本上解决廉政建设和市场竞争的核心难题？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119257.html"
+        },
+        {
+          "title": "深圳发布'人工智能+'先进制造业两年行动计划",
+          "summary": "深圳市启动'人工智能+'先进制造业专项行动，融合科技创新优势与制造业基础，打造国家级AI赋能产业高地。",
+          "comment": "制造业强市如何通过AI赋能实现产业升级，能否形成可复制的国家样板？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119255.html"
+        },
+        {
+          "title": "AI眼镜销量暴涨七成以上，成春节科技消费新热点",
+          "summary": "深圳华强北AI眼镜销量同比增长70%-80%，无人机和机器人等科技产品也显示30%-50%增长。",
+          "comment": "AI眼镜从概念走向大众消费的临界点是否已到来，下一个爆发期的瓶颈是什么？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119259.html"
+        },
+        {
+          "title": "AI初创公司开始进军大食品公司的测试厨房",
+          "summary": "从Frank's RedHot到Hellmann's等食品品牌，AI已在改变食品口味方面展现潜力，但在测试厨房中的成功应用更具挑战性。",
+          "comment": "AI在食品研发中的应用能否突破经验和创意的局限，还是只能作为辅助工具？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/14/big-food-ai-recipes.html"
+        },
+        {
+          "title": "黑龙江支持生物制造企业运用AI等技术智能改造升级",
+          "summary": "黑龙江省发布政策支持生物制造企业运用AI、大数据等技术改造升级，对数字化车间补助最高200万元，智能工厂最高1000万元。",
+          "comment": "政府补贴驱动的AI智改数转能否实现可持续的产业竞争力提升？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3683894958618150?f=rss"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "金融业AI恐慌影响华尔街冬日会议氛围",
+          "summary": "数百位来自迈阿密至博卡拉顿参加金融业会议的银行家、经理人和投资者，面临AI相关市场不确定性打破度假氛围。",
+          "comment": "AI对金融服务业的颠覆性威胁评估是市场理性反应还是过度恐慌，投资逻辑如何调整？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-14/bankers-winter-getaway-to-sunny-florida-is-upended-by-ai-chaos"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-15T10:13:50.656053+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}

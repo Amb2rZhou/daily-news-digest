@@ -1,0 +1,128 @@
+{
+  "date": "2026-02-15",
+  "time_window": "2026-02-14 10:12 ~ 2026-02-15 10:12",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta计划重启面部识别技术，整合于Ray-Ban智能眼镜",
+          "summary": "Meta计划将沉寂五年的面部识别技术重新启用，并将其集成到与Essilor Luxottica联合开发的Ray-Ban和Oakley智能眼镜中，引发业界对AI可穿戴设备功能与隐私保护边界的讨论。",
+          "comment": "智能眼镜中的面部识别功能是否能在保护用户隐私的前提下真正为用户创造价值？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119251.html"
+        },
+        {
+          "title": "AI眼镜销量暴涨七成，成为深圳华强北春节科技消费新热点",
+          "summary": "AI眼镜作为智能穿戴新风口，销量增长最为迅猛，涨幅达70%-80%，与无人机、智能机器人等科技产品共同推动春节科技消费热潮。",
+          "comment": "AI眼镜销量的爆发式增长背后，消费者最关心的核心需求到底是什么？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119259.html"
+        },
+        {
+          "title": "北京人形机器人'具身天工3.0'完成高难度托马斯回旋动作",
+          "summary": "北京人形机器人创新中心研发的新一代通用机器人平台'具身天工3.0'在成功跨越100厘米跳台后，又顺利完成高难度'托马斯回旋'动作，展现了中国人形机器人的技术进步。",
+          "comment": "人形机器人从体操动作的完成中，距离真正的通用人工智能还有多远的距离？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119264.html"
+        },
+        {
+          "title": "AirPods Pro 3相比Pro 2有哪些值得升级的改进",
+          "summary": "AirPods Pro 3在Live Translation等功能上相比Pro 2有显著提升，虽然部分功能也将通过更新推送到Pro 2，但综合体验提升使其仍值得升级。",
+          "comment": "在功能部分可向下兼容的情况下，硬件升级的定价和价值边界应该如何界定？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/14/apple-airpods-pro-3-worth-upgrading-to-heres-why/"
+        },
+        {
+          "title": "沃尔玛推出Meta Quest 3S VR头显优惠活动，128GB版降至250美元",
+          "summary": "沃尔玛再次推出Meta Quest 3S VR头显促销，128GB版本直降50美元至250美元，256GB版本降至350美元，并赠送价值50美元的《蝙蝠侠：阿卡姆暗影》VR游戏及3个月订阅服务。",
+          "comment": "VR头显价格持续下探到入门级消费价位后，真正制约市场扩张的瓶颈是什么？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119247.html"
+        },
+        {
+          "title": "传iPhone 18 Pro将推出折叠屏版本等多项升级",
+          "summary": "苹果今年将推出iPhone 18 Pro系列新机，其中iPhone Fold折叠屏版本备受关注，还有其他多项升级功能预计推出。",
+          "comment": "iPhone Fold的推出是否意味着苹果正式认可折叠屏作为智能手机未来的必然演化方向？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/14/new-iphone-18-pro-features-upgrade-worthy/"
+        },
+        {
+          "title": "M5 MacBook Pro虽面临设计更新，但现在仍值得购入",
+          "summary": "虽然苹果正开发MacBook Pro的新设计，但现有的M5 MacBook Pro仍保持着强劲的性能和使用价值，现在购入仍是不错的选择。",
+          "comment": "在硬件快速迭代的时代，用户应该如何平衡'等待完美产品'和'及时获得可用工具'之间的决策？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/14/why-m5-macbook-pro-is-still-worth-buying-right-now-despite-redesign/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "MiniMax M2.5开源模型实现昇腾全系列产品适配",
+          "summary": "MiniMax稀宇科技发布开源旗舰模型M2.5，依托华为昇腾AI基础设施在数小时内实现适配部署，为规模化落地提供算力支撑。",
+          "comment": "开源模型与国内AI芯片生态的深度融合，如何加速AI应用的商业化落地？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3683895983091332?f=rss"
+        },
+        {
+          "title": "Kubernetes成为驱动全球AI增长的核心引擎",
+          "summary": "云原生计算基金会报告显示，Kubernetes已从通用容器编排框架转型为AI爆发式增长的核心引擎，但人与组织因素成为AI落地的最大障碍。",
+          "comment": "当基础设施能力已成熟，企业AI规模化部署的真正瓶颈是什么？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/lCM9r8iIt0E5taMhmCfK"
+        },
+        {
+          "title": "Off Grid：在手机上离线运行AI文本、图像生成和视觉功能",
+          "summary": "开源应用Off Grid让用户在手机GPU上本地运行文本生成、图像生成、视觉AI等功能，实现完全离线隐私保护。",
+          "comment": "端侧AI的隐私优势能否成为撬动用户从云端AI迁移的关键？",
+          "source": "Hacker News",
+          "url": "https://github.com/alichherawalla/off-grid-mobile"
+        },
+        {
+          "title": "字节跳动豆包Seed 2.0发布春节AI产品",
+          "summary": "字节跳动推出豆包大模型2.0，在代码生成等任务上展现新能力，为用户提供提高工作效率的AI工具。",
+          "comment": "国内大模型在实际应用场景中的能力提升，如何与海外产品形成差异化竞争？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655221?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "英伟达CEO黄仁勋缺席新德里AI峰会",
+          "summary": "英伟达近年在印度积极布局AI合作，但此次高管缺席印度AI峰会，引发对其印度项目进展和当地半导体生态成熟度的讨论。",
+          "comment": "英伟达对印度AI市场的态度转变，反映了全球AI芯片供应链格局的什么变化？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7881196.html"
+        },
+        {
+          "title": "xAI安全团队引发质疑：Grok向\"更疯狂\"方向发展",
+          "summary": "据前员工爆料，埃隆·马斯克正积极推动xAI的Grok聊天机器人朝\"更不受约束\"的方向发展，引发外界对其安全政策的担忧。",
+          "comment": "大型AI企业领导人的个人风格如何塑造产品的安全标准和行业规范？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/14/is-safety-is-dead-at-xai/"
+        },
+        {
+          "title": "黑龙江省支持生物制造企业运用AI技术升级",
+          "summary": "黑龙江省政府出台政策支持生物制造企业运用AI、大数据等技术改造升级，对数字化车间和智能工厂提供最高千万级补助。",
+          "comment": "地方政府AI产业政策从芯片硬件扩展到传统制造业，能否成为AI应用落地的新动力？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3683894958518150?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-15T10:13:50.655654+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
