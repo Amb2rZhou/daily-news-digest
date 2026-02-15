@@ -1,5 +1,7 @@
 {
   "timezone": "Asia/Shanghai",
+  "fetch_hour": 9,
+  "fetch_minute": 0,
   "channels": [
     {
       "id": "email",

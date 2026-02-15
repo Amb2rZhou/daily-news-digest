@@ -228,7 +228,7 @@ export default function Settings() {
       {/* Basic settings */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>基本设置</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
           <label>
             <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>时区</span>
             <select value={settings.timezone} onChange={e => update('timezone', e.target.value)} style={{ width: '100%' }}>
@@ -237,6 +237,11 @@ export default function Settings() {
                 <option value={settings.timezone}>{settings.timezone}</option>
               )}
             </select>
+          </label>
+          <label>
+            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>每日抓取时间</span>
+            <input type="time" value={`${String(settings.fetch_hour ?? 9).padStart(2, '0')}:${String(settings.fetch_minute ?? 0).padStart(2, '0')}`} onChange={e => { const [h, m] = e.target.value.split(':').map(Number); update('fetch_hour', h); update('fetch_minute', m) }} style={{ width: '100%' }} />
+            <span style={{ display: 'block', fontSize: 11, color: 'var(--text3)', marginTop: 2 }}>RSS 抓取 + AI 筛选的执行时间</span>
           </label>
           <label>
             <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>全局 Webhook URL Base</span>

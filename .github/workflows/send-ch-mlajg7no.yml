@@ -1,9 +1,9 @@
 name: "Send: ch_mlajg7no"
 
 on:
-  schedule:
-    # 1 hour before 11:00 CST (UTC+8) = 02:00 UTC
-    - cron: '0 2 * * *'
+  workflow_run:
+    workflows: ["Fetch News"]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
@@ -11,8 +11,9 @@ permissions:
 
 jobs:
   send-channel:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 360
 
     steps:
       - name: Checkout repository
