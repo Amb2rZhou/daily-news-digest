@@ -471,7 +471,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 普通消费电子（电视、音箱、相机等）
 - 纯软件产品、互联网服务
 
-**数量要求**：选 5-7 条，不多不少。
+**数量要求**：选 7-10 条，不多不少。
 
 **筛选要求**：
 - 去重：相同事件只保留最权威来源
@@ -783,11 +783,11 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
     hw_articles_text = _format_articles_text(hw_articles) if hw_articles else _format_articles_text(articles)
     other_articles_text = _format_articles_text(other_articles) if other_articles else _format_articles_text(articles)
 
-    hw_budget = 7  # hardware gets 5-7 items
-    ai_budget = max(max_items - hw_budget, 3)  # rest goes to AI+industry, at least 3
+    hw_budget = 10  # hardware gets 7-10 items
+    ai_budget = max(max_items - hw_budget, 5)  # rest goes to AI+industry, at least 5
     prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources)
     prompt_ai = get_prompt_for_mode("focused_ai_industry", other_articles_text, ai_budget, "", "", "", None, paywalled_sources)
-    print(f"  - Budget: hardware 5-7, AI+industry {ai_budget}, total cap {max_items}")
+    print(f"  - Budget: hardware 7-10, AI+industry {ai_budget}, total cap {max_items}")
 
     start = time.time()
 
