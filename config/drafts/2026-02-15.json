@@ -1,64 +1,64 @@
 {
   "date": "2026-02-15",
-  "time_window": "2026-02-14 10:24 ~ 2026-02-15 10:24",
+  "time_window": "2026-02-14 10:00 ~ 2026-02-15 09:59",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "Meta重启面部识别技术，将集成于Ray-Ban智能眼镜",
-          "summary": "Meta计划重启已沉寂五年的面部识别技术，并将其整合至与Essilor Luxottica联合出品的Ray-Ban及Oakley智能眼镜中。此举引发业内对AI可穿戴设备新功能与个人隐私边界的广泛讨论。",
-          "comment": "当AI穿戴设备获得面部识别能力时，如何在功能创新与用户隐私保护之间找到平衡点？",
+          "title": "Meta计划在Ray-Ban智能眼镜中集成面部识别技术",
+          "summary": "Meta将重启沉寂五年的面部识别技术，并将其整合到与Essilor Luxottica联合推出的Ray-Ban和Oakley智能眼镜中。这引发了业界对AI可穿戴设备新功能与个人隐私边界的广泛讨论。",
+          "comment": "当智能眼镜具备面部识别能力后，如何在创新功能和用户隐私保护之间找到平衡？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119251.html"
         },
         {
           "title": "北京人形机器人'具身天工3.0'完成高难度托马斯回旋动作",
-          "summary": "北京人形机器人创新中心研发的新一代通用机器人平台'具身天工3.0'在成功跨越100厘米跳台后，顺利完成高难度的'托马斯回旋'动作。这标志着我国在人形机器人领域的技术进步。",
-          "comment": "人形机器人掌握复杂体操动作背后的通用能力提升，将如何改变其在实际应用场景中的价值？",
+          "summary": "北京人形机器人创新中心研发的新一代通用机器人平台'具身天工3.0'在成功跨越100厘米跳台后，顺利完成了高难度的'托马斯回旋'动作。这展现了我国在人形机器人领域的技术突破。",
+          "comment": "人形机器人掌握复杂的体操动作，距离真正的通用人工智能还有多远？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119264.html"
         },
         {
-          "title": "AI眼镜销量暴涨七成，成深圳华强北科技年货新风口",
-          "summary": "作为智能穿戴新风口的AI眼镜销量增长最为迅猛，涨幅高达70%至80%，无人机、智能机器人等科技潮品销量也增长30%至50%。",
-          "comment": "AI眼镜销量的爆发性增长是否意味着消费级AI硬件已进入主流市场的拐点？",
+          "title": "AI眼镜销量暴涨七成以上，成春节消费新热点",
+          "summary": "深圳华强北地区AI眼镜销量增长最为迅猛，涨幅高达70%-80%，同时无人机、智能机器人等科技产品也备受青睐，销量增长30%-50%。",
+          "comment": "AI眼镜在春节假期迎来爆发式增长，这是否预示了可穿戴AI设备即将进入主流市场？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119259.html"
         },
         {
-          "title": "沃尔玛开启Meta Quest 3S促销，250美元入手赠VR大作",
-          "summary": "沃尔玛再次推出Meta Quest 3S VR头显促销活动，128GB基础版直降50美元至250美元，256GB版本降至350美元，购买还赠《蝙蝠侠：阿卡姆暗影》和3个月Horizon+订阅服务。",
-          "comment": "VR头显的价格持续下探与内容生态的丰富，是否正在加速主流消费者的采用？",
+          "title": "沃尔玛推出Meta Quest 3S VR头显促销活动",
+          "summary": "沃尔玛开启Meta Quest 3S VR头显的促销活动，128GB版本直降50美元至250美元，256GB版本降至350美元，购买任意版本均附赠蝙蝠侠VR游戏和3个月订阅服务。",
+          "comment": "入门级VR头显的大幅降价与促销，能否加速VR设备在消费市场的普及？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119247.html"
         },
         {
           "title": "东莞文博场馆推出首个VR大空间数字体验项目",
-          "summary": "东莞文博场馆于2月15日上线首个VR大空间数字体验项目——VR沉浸体验中心，由东莞展览馆与四维时代联合打造。",
-          "comment": "VR体验中心进入文博场馆，能否成为推动文化遗产数字化的新标杆？",
+          "summary": "东莞文博场馆于2月15日正式上线首个VR大空间数字体验项目——VR沉浸体验中心，由东莞展览馆与四维时代打造。",
+          "comment": "文博机构引入VR体验中心，虚拟现实技术如何改变传统文化展示的方式？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119249.html"
         },
         {
-          "title": "电影经济促进年启动，16个试点城市将布局虚拟现实观影新场景",
-          "summary": "国家电影局等主办的'2026电影经济促进年'启动仪式在北京举行，旨在释放电影产业消费潜能，推动'电影+'融合发展，包括在16个试点城市布局虚拟现实观影新场景。",
-          "comment": "政府支持下的VR观影新场景推广，能否成为VR内容应用的突破口？",
+          "title": "国家电影局启动'电影经济促进年'，布局虚拟现实观影新场景",
+          "summary": "由国家电影局等部门主办的'2026电影经济促进年'启动仪式在北京举行，16个试点城市将布局虚拟现实观影新场景，推动电影与科技融合发展。",
+          "comment": "VR观影作为电影产业的新形式，能否成为传统电影院的有效补充而非替代？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119261.html"
         },
         {
-          "title": "工业机器人技术：ServoBelt为汽车门式起重机提供高性能解决方案",
-          "summary": "Bell-Everman公司推出的ServoBelt技术为汽车制造业门式起重机系统提供了成本效益高的替代方案，在不牺牲工业级性能的前提下降低成本。",
-          "comment": "工业机器人零部件创新如何驱动整个自动化系统的成本与性能优化？",
+          "title": "汽车门式龙门架的伺服皮带高性能解决方案",
+          "summary": "Bell-Everman公司推出的ServoBelt技术为汽车门式龙门架应用提供了成本效益高的替代方案，在不牺牲工业级性能的前提下实现成本优化。",
+          "comment": "工业机器人关键部件的成本优化，如何推动制造业对机器人技术的更广泛采用？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/servobelt-offers-high-end-performance-automotive-gantry/"
         },
         {
-          "title": "第29届DICE奖公布：《Ghost Town》获年度沉浸显示游戏奖",
-          "summary": "第29届DICE奖评选结果公布，VR游戏《Ghost Town》荣获年度沉浸显示游戏奖，各主要VR平台内容库持续扩充。",
-          "comment": "VR游戏质量获业界认可与平台内容数量的持续增长，是否预示VR内容生态的健康发展？",
+          "title": "第29届DICE奖揭晓，VR沉浸游戏《Ghost Town》获年度大奖",
+          "summary": "第29届DICE奖公布，VR游戏《Ghost Town》荣获年度沉浸显示游戏奖，多个VR平台内容库持续扩展，Quest平台游戏总数超1000款。",
+          "comment": "VR游戏内容生态的快速增长，是否足以支撑VR头显设备的持续销售增长？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544739.html"
         }
@@ -69,25 +69,25 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "MiniMax M2.5开源模型实现昇腾全系列产品适配",
-          "summary": "MiniMax稀宇科技发布新一代旗舰模型M2.5，在昇腾AI基础软硬件支持下，数小时内即实现在Atlas 800 A2、A3等产品上的适配部署，为模型规模化落地提供全流程算力支撑。",
-          "comment": "国产AI芯片与开源模型的快速适配是否标志着AI基础设施国产化已进入实质性部署阶段？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3683895983091332?f=rss"
-        },
-        {
-          "title": "Kubernetes成为驱动全球AI增长的核心引擎",
-          "summary": "云原生计算基金会报告显示，Kubernetes已从通用容器编排框架演进为驱动AI爆发式增长的核心引擎，但人与组织因素成为AI成功落地的最大障碍。",
-          "comment": "为什么技术基础设施的成熟度反而不是AI规模化应用的主要瓶颈？",
-          "source": "InfoQ",
+          "title": "Kubernetes驱动AI扩展，文化转型成为关键因素",
+          "summary": "云原生计算基金会报告显示，Kubernetes已成为驱动全球AI增长的核心引擎，但人与组织层面的因素已成为AI落地的最大障碍。",
+          "comment": "在AI基础设施日趋成熟的背景下，企业AI成功率的瓶颈是否已从技术转向了组织管理？",
+          "source": "InfoQ推荐",
           "url": "https://www.infoq.cn/article/lCM9r8iIt0E5taMhmCfK"
         },
         {
-          "title": "Off Grid应用实现离线端侧AI文生文、生图、视觉功能",
-          "summary": "开源应用Off Grid将文本生成、图像生成、视觉AI、语音转录等功能完全在手机本地离线运行，用户数据永不上传云端，充分利用手机GPU的计算能力。",
-          "comment": "端侧AI的隐私优势能否成为撼动云端AI服务模式的颠覆性力量？",
-          "source": "Hacker News",
-          "url": "https://github.com/alichherawalla/off-grid-mobile"
+          "title": "字节豆包大模型2.0发布，DAU逼近豆包原版本",
+          "summary": "字节跳动推出豆包大模型2.0和Seedance 2.0等AI产品，在LLM和视频生成等领域加速迭代，与通义千问等竞品竞争加剧。",
+          "comment": "国内大厂在AI能力快速更新迭代的竞争中，技术突破的边际效应是否正在递减？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655221"
+        },
+        {
+          "title": "Sora 2.0惹怒迪士尼，AI视频生成模型面临版权挑战",
+          "summary": "OpenAI的Sora 2.0作为地表最强AI视频模型，因版权问题与迪士尼等内容巨头产生冲突，引发AI创意工具的合规性讨论。",
+          "comment": "AI视频生成能力的突破是否必然与内容创意产业的商业模式产生矛盾？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7880797.html"
         }
       ]
     },
@@ -96,23 +96,30 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "字节跳动豆包Seed 2.0发布，AI编程与创作能力升级",
-          "summary": "字节跳动推出豆包大模型2.0版本，具有增强的代码生成能力，用户可直接用其手搓macOS等复杂应用，标志着字节AI产品在Agent与编程工具方向的重要进展。",
-          "comment": "国内大模型在AI编程工具领域的能力突破是否能打破OpenAI的绝对优势地位？",
-          "source": "爱范儿",
-          "url": "https://www.ifanr.com/1655221?utm_source=rss&utm_medium=rss&utm_campaign="
+          "title": "美团遭遇AI威胁，下一代商业模式正在形成",
+          "summary": "AI技术可能颠覆美团等平台型互联网企业的商业模式，新的AI驱动商业形式正在浮现。",
+          "comment": "当AI能够直接替代平台的信息聚合和匹配功能时，传统互联网平台的护城河还有多深？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7880258.html"
         },
         {
-          "title": "xAI安全文化受质疑，Elon Musk推动Grok走向\"更无节制\"",
-          "summary": "据xAI前员工爆料，Elon Musk正\"积极\"推动Grok聊天机器人变得\"更加无节制\"，引发外界对该公司AI安全战略的担忧。",
-          "comment": "商业竞争压力下，AI安全与模型能力提升之间的权衡会如何影响整个行业的安全规范？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/14/is-safety-is-dead-at-xai/"
+          "title": "AI生产率提升已可见，美国经济数据显示可量化增益",
+          "summary": "美国最新经济数据表明，AI技术的生产力优势正在显现，美国经济正进入AI带来可测量收益的阶段。",
+          "comment": "AI在宏观经济层面的生产率提升何时才能抵消其对特定行业的颠覆性冲击？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/4b51d0b4-bbfe-4f05-b50a-1d485d419dc5"
+        },
+        {
+          "title": "姚顺宇率领谷歌复仇Anthropic，AI人才争夺战升温",
+          "summary": "清华物理天才姚顺宇加入谷歌领导AI团队，展开与Anthropic的竞争，反映出科技巨头在AI人才争夺上的激烈程度。",
+          "comment": "顶尖AI人才向巨头公司的聚集是否会加速还是延缓AI领域的技术创新？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7880733.html"
         }
       ]
     }
   ],
-  "source": "manual",
+  "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-15T10:25:38.814420+08:00"
+  "created_at": "2026-02-15T13:13:54.477745+08:00"
 }
