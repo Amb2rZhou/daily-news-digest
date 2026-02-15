@@ -238,11 +238,22 @@ export default function Settings() {
               )}
             </select>
           </label>
-          <label>
+          <div>
             <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>每日抓取时间</span>
-            <input type="time" value={`${String(settings.fetch_hour ?? 9).padStart(2, '0')}:${String(settings.fetch_minute ?? 0).padStart(2, '0')}`} onChange={e => { const [h, m] = e.target.value.split(':').map(Number); update('fetch_hour', h); update('fetch_minute', m) }} style={{ width: '100%' }} />
-            <span style={{ display: 'block', fontSize: 11, color: 'var(--text3)', marginTop: 2 }}>RSS 抓取 + AI 筛选的执行时间</span>
-          </label>
+            {(() => {
+              const chs = (settings.channels || []).filter(c => c.enabled)
+              if (!chs.length) return <span style={{ fontSize: 13, color: 'var(--text3)' }}>无启用频道</span>
+              const earliest = chs.reduce((min, c) => {
+                const t = (c.send_hour ?? 10) * 60 + (c.send_minute ?? 0)
+                return t < min ? t : min
+              }, 24 * 60)
+              const fetch = earliest - 30
+              const h = Math.floor((fetch + 1440) % 1440 / 60)
+              const m = ((fetch + 1440) % 1440) % 60
+              return <span style={{ fontSize: 14, fontWeight: 600 }}>{String(h).padStart(2, '0')}:{String(m).padStart(2, '0')}</span>
+            })()}
+            <span style={{ display: 'block', fontSize: 11, color: 'var(--text3)', marginTop: 2 }}>自动计算：最早发送时间前 30 分钟</span>
+          </div>
           <label>
             <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>全局 Webhook URL Base</span>
             <input type="text" value={settings.webhook_url_base ?? ''} onChange={e => update('webhook_url_base', e.target.value)} placeholder="https://redcity-open.xiaohongshu.com/api/robot/webhook/send" style={{ width: '100%' }} />

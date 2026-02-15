@@ -35,19 +35,30 @@ jobs:
           from datetime import datetime
           from zoneinfo import ZoneInfo
 
+          from datetime import timedelta
+
           s = json.load(open('config/settings.json'))
           tz = ZoneInfo(s.get('timezone', 'Asia/Shanghai'))
           now = datetime.now(tz)
-          fetch_hour = s.get('fetch_hour', 9)
-          fetch_minute = s.get('fetch_minute', 0)
-          target = now.replace(hour=fetch_hour, minute=fetch_minute, second=0, microsecond=0)
 
-          if target <= now:
-              print(f'Already past {target.strftime(\"%H:%M\")} CST, proceeding immediately')
+          # Auto-calculate: earliest send_time - 30 minutes
+          channels = [c for c in s.get('channels', []) if c.get('enabled')]
+          if not channels:
+              print('No enabled channels, proceeding immediately')
           else:
-              wait = (target - now).total_seconds()
-              print(f'Sleeping {wait/60:.0f} minutes until {target.strftime(\"%H:%M\")} CST')
-              time.sleep(wait)
+              earliest = min(
+                  now.replace(hour=c.get('send_hour', 10), minute=c.get('send_minute', 0), second=0, microsecond=0)
+                  for c in channels
+              )
+              target = earliest - timedelta(minutes=30)
+              print(f'Earliest send time: {earliest.strftime(\"%H:%M\")}, fetch target: {target.strftime(\"%H:%M\")}')
+
+              if target <= now:
+                  print(f'Already past {target.strftime(\"%H:%M\")}, proceeding immediately')
+              else:
+                  wait = (target - now).total_seconds()
+                  print(f'Sleeping {wait/60:.0f} minutes until {target.strftime(\"%H:%M\")}')
+                  time.sleep(wait)
           "
 
       - name: Check if fetch is needed
