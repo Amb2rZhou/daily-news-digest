@@ -72,7 +72,7 @@ jobs:
       - name: Send channel
         env:
           SMTP_HOST: smtp.qq.com
-          SMTP_PORT: 587
+          SMTP_PORT: '587'
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}

@@ -394,8 +394,8 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
                 continue
 
             status = ch_draft.get("status", "pending_review")
-            if status == "rejected":
-                print(f"Channel {ch_name}: draft rejected, skipping")
+            if status in ("sent", "rejected"):
+                print(f"Channel {ch_name}: draft {status}, skipping")
                 continue
 
             print(f"Sending webhook to {ch_name}...")

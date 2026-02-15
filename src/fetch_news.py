@@ -78,7 +78,7 @@ def load_settings() -> dict:
 
         # --- Backward-compatible migration to unified channels ---
         if "channels" not in settings:
-            send_hour = settings.get("send_hour", 18)
+            send_hour = settings.get("send_hour", 10)
             send_minute = settings.get("send_minute", 0)
             topic_mode = settings.get("topic_mode", "broad")
             max_items = settings.get("max_news_items", 10)
@@ -167,13 +167,13 @@ def get_time_window(settings: dict = None, manual: bool = False, channel: dict =
         settings = load_settings()
 
     if channel:
-        send_hour = channel.get("send_hour", 18)
+        send_hour = channel.get("send_hour", 10)
         send_minute = channel.get("send_minute", 0)
     else:
         # Fallback: use the first channel's time, or defaults
         channels = settings.get("channels", [])
         first = channels[0] if channels else {}
-        send_hour = first.get("send_hour", settings.get("send_hour", 18))
+        send_hour = first.get("send_hour", settings.get("send_hour", 10))
         send_minute = first.get("send_minute", settings.get("send_minute", 0))
 
     tz_name = settings.get("timezone", "Asia/Shanghai")
@@ -211,12 +211,12 @@ def get_cutoff_time(settings: dict = None, manual: bool = False, channel: dict =
     tz = ZoneInfo(tz_name)
 
     if channel:
-        send_hour = channel.get("send_hour", 18)
+        send_hour = channel.get("send_hour", 10)
         send_minute = channel.get("send_minute", 0)
     else:
         channels = settings.get("channels", [])
         first = channels[0] if channels else {}
-        send_hour = first.get("send_hour", settings.get("send_hour", 18))
+        send_hour = first.get("send_hour", settings.get("send_hour", 10))
         send_minute = first.get("send_minute", settings.get("send_minute", 0))
 
     now = datetime.now(tz)
