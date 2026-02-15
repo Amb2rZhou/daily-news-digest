@@ -146,7 +146,8 @@ export default function ChannelDetail() {
   async function handleApprove() {
     if (!draft) return
     await saveDraft({ ...draft, status: 'approved' })
-    handleTrigger('send-email.yml', 'send', { channel_id: id })
+    const sendWf = id === 'email' ? 'send-ch-email.yml' : `send-ch-${id}.yml`
+    handleTrigger(sendWf, 'send')
   }
 
   async function handleReject() {
@@ -221,7 +222,7 @@ export default function ChannelDetail() {
   const handleTrigger = useCallback(async (workflowFile, key, inputs = {}) => {
     setTriggerStatus(prev => ({ ...prev, [key]: 'loading' }))
     try {
-      await triggerWorkflow(workflowFile, 'refactor/sleep-arch', inputs)
+      await triggerWorkflow(workflowFile, 'main', inputs)
       setTriggerStatus(prev => ({ ...prev, [key]: 'success' }))
       setTimeout(() => setTriggerStatus(prev => ({ ...prev, [key]: null })), 5000)
     } catch (e) {
@@ -291,7 +292,9 @@ export default function ChannelDetail() {
   )
 
   const isEmail = channel.type === 'email'
-  const categoryOptions = settings?.categories_order || Object.keys(CATEGORY_ICONS)
+  const isFocused = channel.topic_mode === 'focused'
+  const focusedCategories = ['智能硬件', 'AI技术与产品', '巨头动向与行业观察']
+  const categoryOptions = isFocused ? focusedCategories : (settings?.categories_order || Object.keys(CATEGORY_ICONS))
 
   return (
     <div>
@@ -378,7 +381,7 @@ export default function ChannelDetail() {
               {refetching ? '删除中...' : triggerBtnLabel('fetch', draft ? '重新抓取' : '抓取新闻')}
             </button>
             <button
-              onClick={() => handleTrigger('send-email.yml', 'send', { channel_id: id })}
+              onClick={() => { const wf = id === 'email' ? 'send-ch-email.yml' : `send-ch-${id}.yml`; handleTrigger(wf, 'send') }}
               disabled={triggerStatus.send === 'loading'}
               style={{ ...btnPrimary, background: '#059669', color: '#fff', opacity: triggerStatus.send === 'loading' ? 0.6 : 1 }}
             >
@@ -680,7 +683,7 @@ export default function ChannelDetail() {
                 </p>
               </div>
               <a
-                href={`https://github.com/${localStorage.getItem('gh_owner') || '{owner}'}/${localStorage.getItem('gh_repo') || '{repo}'}/settings/secrets/actions`}
+                href={`https://github.com/${localStorage.getItem('news_admin_owner') || '{owner}'}/${localStorage.getItem('news_admin_repo') || '{repo}'}/settings/secrets/actions`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ ...btnPrimary, background: 'var(--primary-light)', color: 'var(--primary)', textDecoration: 'none', display: 'inline-block' }}

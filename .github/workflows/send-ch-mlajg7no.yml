@@ -3,6 +3,7 @@ name: "Send: ch_mlajg7no"
 on:
   workflow_run:
     workflows: ["Fetch News"]
+    branches: [main]
     types: [completed]
   workflow_dispatch: {}
 
@@ -50,7 +51,7 @@ jobs:
           if not channel:
               print('Channel ch_mlajg7no not found, skipping sleep')
           else:
-              send_hour = channel.get('send_hour', 11)
+              send_hour = channel.get('send_hour', 10)
               send_minute = channel.get('send_minute', 0)
               now = datetime.now(tz)
               target = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
@@ -84,12 +85,16 @@ jobs:
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Mark ch_mlajg7no draft as sent"
           BRANCH="${GITHUB_REF#refs/heads/}"
-          git pull origin "$BRANCH" --rebase -X theirs || {
-            git checkout --theirs config/drafts/ 2>/dev/null || true
-            git add config/drafts/
-            git rebase --continue
-          }
-          git push origin HEAD:"$BRANCH"
+          for i in 1 2 3 4 5; do
+            git pull origin "$BRANCH" --rebase -X theirs || {
+              git checkout --theirs config/drafts/ 2>/dev/null || true
+              git add config/drafts/
+              git rebase --continue || true
+            }
+            git push origin HEAD:"$BRANCH" && break
+            echo "Push attempt $i failed, retrying after random sleep..."
+            sleep $((RANDOM % 15 + 5))
+          done
 
       - name: Notify admin on failure
         if: failure()

@@ -3,6 +3,7 @@ name: "Send: email"
 on:
   workflow_run:
     workflows: ["Fetch News"]
+    branches: [main]
     types: [completed]
   workflow_dispatch: {}
 
@@ -89,12 +90,16 @@ jobs:
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Mark email draft as sent"
           BRANCH="${GITHUB_REF#refs/heads/}"
-          git pull origin "$BRANCH" --rebase -X theirs || {
-            git checkout --theirs config/drafts/ 2>/dev/null || true
-            git add config/drafts/
-            git rebase --continue
-          }
-          git push origin HEAD:"$BRANCH"
+          for i in 1 2 3 4 5; do
+            git pull origin "$BRANCH" --rebase -X theirs || {
+              git checkout --theirs config/drafts/ 2>/dev/null || true
+              git add config/drafts/
+              git rebase --continue || true
+            }
+            git push origin HEAD:"$BRANCH" && break
+            echo "Push attempt $i failed, retrying after random sleep..."
+            sleep $((RANDOM % 15 + 5))
+          done
 
       - name: Notify admin on failure
         if: failure()

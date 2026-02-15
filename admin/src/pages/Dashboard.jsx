@@ -89,10 +89,18 @@ export default function Dashboard() {
   async function loadRuns() {
     try {
       const fetchRuns = await getWorkflowRuns('fetch-news.yml', 5)
-      const sendRuns = await getWorkflowRuns('send-email.yml', 5)
+      // Gather runs from all per-channel send workflows
+      const sendWorkflows = ['send-ch-email.yml', 'send-ch-default.yml', 'send-ch-ml97ypb3.yml', 'send-ch-ml9b9t9s.yml', 'send-ch-mlajg7no.yml']
+      const sendRunsAll = []
+      for (const wf of sendWorkflows) {
+        try {
+          const r = await getWorkflowRuns(wf, 3)
+          sendRunsAll.push(...(r.workflow_runs || []).map(run => ({ ...run, type: 'send' })))
+        } catch { /* workflow may not exist */ }
+      }
       setRuns([
         ...(fetchRuns.workflow_runs || []).map(r => ({ ...r, type: 'fetch' })),
-        ...(sendRuns.workflow_runs || []).map(r => ({ ...r, type: 'send' })),
+        ...sendRunsAll,
       ].sort((a, b) => new Date(b.created_at) - new Date(a.created_at)).slice(0, 10))
     } catch { /* workflow may not exist yet */ }
   }

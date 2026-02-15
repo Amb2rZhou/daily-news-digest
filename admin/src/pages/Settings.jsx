@@ -303,7 +303,7 @@ export default function Settings() {
                   </label>
                   <label>
                     <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>发送时间</span>
-                    <input type="time" value={`${String(ch.send_hour ?? 18).padStart(2, '0')}:${String(ch.send_minute ?? 0).padStart(2, '0')}`} onChange={e => { const [h, m] = e.target.value.split(':').map(Number); updateChannel(idx, { send_hour: h, send_minute: m }) }} style={{ width: '100%' }} />
+                    <input type="time" value={`${String(ch.send_hour ?? 10).padStart(2, '0')}:${String(ch.send_minute ?? 0).padStart(2, '0')}`} onChange={e => { const [h, m] = e.target.value.split(':').map(Number); updateChannel(idx, { send_hour: h, send_minute: m }) }} style={{ width: '100%' }} />
                   </label>
                   <label>
                     <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>主题模式</span>

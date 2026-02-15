@@ -4,7 +4,6 @@ Main script for daily news digest.
 Supports modes:
   - fetch:     Fetch news, save as draft (for review)
   - send:      Read draft and send (email/webhook by channel type)
-  - auto-send: Hourly cron – check each channel's send_time and send if due
   - webhook:   Read draft and send webhook only (no email, no status change)
   - (default): Fetch + send in one step (legacy behavior)
 """
@@ -92,7 +91,7 @@ def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
 
     for ch in get_enabled_channels(settings):
         ch_id = ch.get("id", "unknown")
-        send_hour = ch.get("send_hour", 18)
+        send_hour = ch.get("send_hour", 10)
         send_minute = ch.get("send_minute", 0)
 
         # Calculate fetch_time = send_time - 30 minutes
@@ -125,51 +124,6 @@ def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
 
     return result
 
-
-def get_channels_to_send(settings: dict, now: datetime) -> list[dict]:
-    """Return channels ready for auto-send.
-
-    Rules:
-    - approved: send ASAP (no time restriction, next cron picks it up)
-    - pending_review: send within [send_time, send_time + 2h]
-    - sent / rejected: skip
-    """
-    from datetime import timedelta
-
-    result = []
-    today = now.strftime("%Y-%m-%d")
-
-    for ch in get_enabled_channels(settings):
-        ch_id = ch.get("id", "unknown")
-        if ch.get("type") == "email":
-            draft = load_draft(today)
-        else:
-            draft = load_draft(today, channel_id=ch_id)
-
-        if not draft:
-            continue
-
-        status = draft.get("status", "pending_review")
-
-        if status in ("sent", "rejected"):
-            continue
-
-        source = draft.get("source", "scheduled")
-
-        if status == "approved":
-            # Approved: send immediately, no time restriction, any source
-            result.append(ch)
-        elif status == "pending_review" and source != "manual":
-            # Scheduled pending: send within [send_time, send_time + 2h]
-            # Manual pending: never auto-send (must approve first)
-            send_hour = ch.get("send_hour", 18)
-            send_minute = ch.get("send_minute", 0)
-            send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-            send_deadline = send_time + timedelta(hours=2)
-            if send_time <= now <= send_deadline:
-                result.append(ch)
-
-    return result
 
 
 # ---------------------------------------------------------------------------
@@ -315,80 +269,7 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
 
 
 # ---------------------------------------------------------------------------
-# Mode: auto-send (hourly cron)
-# ---------------------------------------------------------------------------
-
-def run_auto_send(settings: dict) -> int:
-    """Check each channel's send_time and send if due.
-
-    Called by auto-send.yml hourly cron.
-    """
-    tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
-    now = datetime.now(tz)
-    today = now.strftime("%Y-%m-%d")
-
-    channels = get_channels_to_send(settings, now)
-
-    if not channels:
-        print("No channels ready to send at this time")
-        return 0
-
-    any_failed = False
-    for ch in channels:
-        ch_id = ch.get("id", "unknown")
-        ch_type = ch.get("type", "webhook")
-        ch_name = ch.get("name", ch_id)
-
-        # Load draft (no fallback - each channel uses its own draft only)
-        if ch_type == "email":
-            draft = load_draft(today)
-        else:
-            draft = load_draft(today, channel_id=ch_id)
-
-        if not draft:
-            print(f"Warning: No draft found for channel {ch_name}, skipping")
-            continue
-
-        status = draft.get("status", "pending_review")
-        if status in ("sent", "rejected"):
-            print(f"Channel {ch_name}: draft already {status}, skipping")
-            continue
-
-        print(f"Sending to {ch_name} (type={ch_type})...")
-
-        if ch_type == "email":
-            email_body = format_email_html(draft, settings)
-            email_subject = f"AI/科技新闻日报 - {draft.get('date', today)}"
-            success = send_email(subject=email_subject, body=email_body)
-            if success:
-                draft["status"] = "sent"
-                save_draft(draft, settings)
-                print(f"Channel {ch_name}: email sent successfully")
-            else:
-                print(f"Channel {ch_name}: email send failed")
-                any_failed = True
-        else:
-            try:
-                wh_ok = send_webhook(draft, settings, channel=ch)
-                if wh_ok:
-                    draft["status"] = "sent"
-                    if ch_id == "email":
-                        save_draft(draft, settings)
-                    else:
-                        save_draft(draft, settings, channel_id=ch_id)
-                    print(f"Channel {ch_name}: webhook sent successfully")
-                else:
-                    print(f"Channel {ch_name}: webhook send failed")
-                    any_failed = True
-            except Exception as e:
-                print(f"Channel {ch_name}: webhook error: {e}")
-                any_failed = True
-
-    return 1 if any_failed else 0
-
-
-# ---------------------------------------------------------------------------
-# Mode: send (manual)
+# Mode: send
 # ---------------------------------------------------------------------------
 
 def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
@@ -428,8 +309,8 @@ def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
             continue
 
         status = draft.get("status", "pending_review")
-        if status == "rejected":
-            print(f"Channel {ch_name}: draft rejected, skipping")
+        if status in ("sent", "rejected"):
+            print(f"Channel {ch_name}: draft {status}, skipping")
             continue
 
         print(f"Sending to {ch_name} (type={ch_type})...")
@@ -642,8 +523,6 @@ def main():
         exit_code = run_fetch(settings, manual=manual_flag)
     elif mode == "send":
         exit_code = run_send(settings, date_arg, channel_id=channel_id)
-    elif mode == "auto-send":
-        exit_code = run_auto_send(settings)
     elif mode == "webhook":
         exit_code = run_webhook(settings, date_arg, channel_id=channel_id)
     else:

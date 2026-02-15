@@ -1,7 +1,7 @@
 name: Fetch News
 
 on:
-  # 低峰期双 cron，sleep 到 fetch_hour 再执行
+  # 低峰期双 cron，sleep 到最早 send_time - 30min 再执行
   schedule:
     - cron: '0 22 * * *'   # 主触发: CST 06:00 (低峰期，可靠)
     - cron: '0 0 * * *'    # 备用:   CST 08:00 (防主触发跳过)
@@ -21,7 +21,7 @@ permissions:
 jobs:
   fetch-news:
     runs-on: ubuntu-latest
-    timeout-minutes: 240   # 4 小时 (含 sleep)
+    timeout-minutes: 300   # 5 小时 (含 sleep)
 
     steps:
       - name: Checkout repository
