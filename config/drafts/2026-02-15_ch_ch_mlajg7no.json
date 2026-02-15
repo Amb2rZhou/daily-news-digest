@@ -1,0 +1,112 @@
+{
+  "date": "2026-02-15",
+  "time_window": "2026-02-14 08:59 ~ 2026-02-15 08:59",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Off Grid – 在手机上离线运行AI文本、图像生成和视觉识别",
+          "summary": "开源应用Off Grid让用户在手机GPU上离线运行文本生成、图像生成、视觉AI等功能，无需上传任何数据到云端，保护用户隐私。",
+          "comment": "当AI能力完全迁移到端侧运行，这是否会改变云端大模型的商业模式？",
+          "source": "Hacker News: Front Page",
+          "url": "https://github.com/alichherawalla/off-grid-mobile"
+        },
+        {
+          "title": "我用豆包大模型2.0手搓了macOS，Seedance 2.0后字节再送春节AI大礼",
+          "summary": "字节跳动推出豆包大模型2.0及Seedance 2.0等AI产品，展现在AI能力上的持续迭代和春节期间的产品布局。",
+          "comment": "国内大厂在春节档集中发力AI产品，这是否预示着2026年AI竞争会进入新阶段？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655221"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Is safety 'dead' at xAI?",
+          "summary": "据前员工爆料，Elon Musk正在积极推动xAI的Grok聊天机器人变得'更加不受约束'，引发对AI安全问题的质疑。",
+          "comment": "在AI安全与产品自由度之间如何平衡，这会成为未来AI产品差异化竞争的关键吗？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/14/is-safety-is-dead-at-xai/"
+        },
+        {
+          "title": "Meta拟重启面部识别技术，集成于Ray-Ban智能眼镜引关注",
+          "summary": "Meta计划重启已暂停五年的面部识别技术，并将其整合到与Essilor Luxottica联合开发的Ray-Ban及Oakley智能眼镜中。",
+          "comment": "面部识别技术重回消费级产品，隐私保护与产品创新的矛盾如何解决？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119251.html"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Kubernetes驱动AI扩展，文化转型成为关键因素",
+          "summary": "云原生计算基金会报告显示Kubernetes已成为驱动全球AI爆发增长的核心引擎，但人与组织层面的因素已成为AI落地的最大障碍。",
+          "comment": "当基础设施技术不再是瓶颈，组织文化和人员能力是否会成为AI规模化应用的决定因素？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/lCM9r8iIt0E5taMhmCfK"
+        },
+        {
+          "title": "北京人形机器人'具身天工 3.0'再突破 首度完成高难度托马斯回旋",
+          "summary": "北京人形机器人创新中心研发的'具身天工 3.0'成功完成'托马斯回旋'高难度动作，展现国内人形机器人的技术突破。",
+          "comment": "当国产人形机器人能完成复杂体操动作，这预示着具身智能在实际应用中还需要多长时间的突破？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119264.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "深圳发布'人工智能+'先进制造业两年行动计划，剑指打造国家级AI赋能产业高地",
+          "summary": "深圳市启动'人工智能+'先进制造业专项行动，将科技创新优势与先进制造业基础结合，开启AI全方位赋能实体经济的新篇章。",
+          "comment": "AI与制造业深度融合的政策驱动是否能真正提升产业效率，还是会成为新一轮产能过剩的源头？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119255.html"
+        },
+        {
+          "title": "AI眼镜销量暴涨七成以上！深圳华强北科技年货迎来新春消费热潮",
+          "summary": "AI眼镜在春节期间销量增长70-80%，成为智能穿戴新风口，反映市场对AI硬件的强劲需求。",
+          "comment": "AI眼镜成为春节消费黑马，这是泡沫还是真正的需求爆发的信号？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119259.html"
+        },
+        {
+          "title": "Bankers' Winter Getaway to Sunny Florida Is Upended By AI Chaos",
+          "summary": "在迈阿密和博卡拉顿举行的金融行业会议被AI话题完全主导，反映AI成为全球金融业最核心的关注焦点。",
+          "comment": "当AI已经成为金融从业者最关注的主题，这会加速资本流向AI领域还是引发更多风险警示？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-14/bankers-winter-getaway-to-sunny-florida-is-upended-by-ai-chaos"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "前字节高管创业教育类出海项目，用Agent做'终身学习搭子'，红杉投了",
+          "summary": "前字节高管李可佳创办的AI教育公司Ouraca获得700万美元种子轮融资，用AI Agent赋能终身学习，获得红杉中国等顶级VC支持。",
+          "comment": "AI Agent在教育领域的应用融资热度持续，这会成为2026年教育科技的主要增长驱动力吗？",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3682939862740615?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-15T08:59:51.285018+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}
