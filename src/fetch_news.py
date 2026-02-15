@@ -287,10 +287,18 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     feed_urls = get_rss_feeds(settings)
     print(f"  - Using {len(feed_urls)} RSS feeds")
 
+    # Build feed_url → group mapping and per-group article limits
+    rss_feeds = settings.get("rss_feeds", [])
+    source_limits = settings.get("source_limits", {})
+    default_limit = source_limits.get("default", max_per_source)
+    feed_url_to_group = {}
+    for feed in rss_feeds:
+        if feed.get("enabled", True):
+            feed_url_to_group[feed.get("url", "")] = feed.get("group", "")
+
     # 获取智能硬件源的 URL 列表（仅聚焦模式下不受限制）
     hardware_urls = set()
     if hardware_unlimited:
-        rss_feeds = settings.get("rss_feeds", [])
         for feed in rss_feeds:
             if feed.get("group") == "智能硬件" and feed.get("enabled", True):
                 hardware_urls.add(feed.get("url", ""))
@@ -352,8 +360,11 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
             all_articles.extend(articles)
             hardware_article_count += len(articles)
         else:
-            # 其他源：限制数量
-            all_articles.extend(articles[:max_per_source])
+            # 其他源：按组限制数量
+            feed_url = articles[0].get("feed_url", "") if articles else ""
+            group = feed_url_to_group.get(feed_url, "")
+            limit = source_limits.get(group, default_limit)
+            all_articles.extend(articles[:limit])
 
     # Sort all by published time (newest first)
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
