@@ -54,7 +54,7 @@
       "type": "webhook",
       "name": "2人测试群for部门",
       "enabled": true,
-      "send_hour": 11,
+      "send_hour": 10,
       "send_minute": 0,
       "topic_mode": "broad",
       "max_news_items": 10,
