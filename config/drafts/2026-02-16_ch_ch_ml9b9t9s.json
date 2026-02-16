@@ -1,6 +1,6 @@
 {
   "date": "2026-02-16",
-  "time_window": "2026-02-15 09:32 ~ 2026-02-16 09:32",
+  "time_window": "2026-02-15 09:36 ~ 2026-02-16 09:36",
   "categories": [
     {
       "name": "智能硬件",
@@ -8,38 +8,59 @@
       "news": [
         {
           "title": "智能眼镜成新年货爆款 产业迎规模化增长需破局软硬件生态",
-          "summary": "2026年春节期间，智能眼镜成为线上线下热门的新年货，全球智能眼镜市场迎来爆发式增长。产业发展需要突破软硬件生态的瓶颈才能实现可持续增长。",
-          "comment": "智能眼镜从小众产品到春节爆款的转变，反映了消费者接受度的提升，那么限制大规模普及的核心瓶颈究竟是硬件成本、内容生态，还是使用场景的定义不清？",
+          "summary": "2026年春节期间，智能眼镜成为热门新年货，全球市场迎来爆发式增长。产业发展需要在软硬件生态方面实现突破。",
+          "comment": "智能眼镜从小众产品到春节爆款的转变说明了什么消费趋势的变化？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119272.html"
         },
         {
-          "title": "AI眼镜首次护航春运外贸物流 宁波港智能查验提效新三样出海",
-          "summary": "宁波港首次在春运期间投入AI智能眼镜用于外贸物流查验，检查员通过AR眼镜进行实时数据回传，实现了远程同步核验。这标志着AI穿戴设备在物流领域的实际应用落地。",
-          "comment": "AI眼镜在物流查验中的应用提高了效率，但这种单点技术应用如何才能扩展到整个供应链的其他环节，形成端到端的智能化体系？",
+          "title": "AI眼镜首次护航春运外贸物流 宁波港智能查验提效",
+          "summary": "宁波港在春运期间首次将AI智能眼镜投入外贸物流保障，检查员佩戴设备对高货值储能柜进行远程查验，大幅提升货物出运效率。",
+          "comment": "AI眼镜在物流查验中的应用能否成为工业级智能硬件的重要突破口？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119282.html"
         },
         {
-          "title": "科技赋能千年名胜 镇江金山幻境VR大空间新春启幕",
-          "summary": "镇江金山景区推出金山幻境VR大空间体验区，融合沉浸式科技与传统文化，为春节假期游客提供互动娱乐新体验。该项目是元宇宙+文旅融合的典范案例。",
-          "comment": "VR大空间体验在文旅景区的应用能否成为传统景区的标配升级方案，还是仅限于特色试点项目？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119270.html"
-        },
-        {
-          "title": "国内首个春节文化主题VR体验中心春启阆苑在阆中古城开业",
-          "summary": "四川阆中古城开业了国内首个以春节文化为主题的VR全感知体验中心，运用虚拟现实技术为游客提供沉浸式的春节文化体验。该项目将文化传承与XR硬件应用相结合。",
-          "comment": "将春节文化通过VR完全数字化呈现，是否真的能增强传统文化的传承效果，还是只是创造了一种新的旅游噱头？",
+          "title": "国内首个春节文化主题VR体验中心在阆中古城开业",
+          "summary": "四川阆中古城推出国内首个以春节文化为主题的VR全感知体验中心——'春启阆苑'，运用虚拟现实技术为游客提供沉浸式文化体验。",
+          "comment": "VR文化体验中心能否成为传统旅游景区数字化升级的可复制模式？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119278.html"
         },
         {
-          "title": "高精密机器人：绝对精度不佳时如何应对？",
-          "summary": "弗劳恩霍夫制造工程和自动化研究所正在帮助改进机器人的绝对精度问题，为高精密工业机器人应用提供解决方案。",
-          "comment": "工业机器人的精度瓶颈如果被突破，会对哪些现有制造业流程产生颠覆性的改变？",
+          "title": "科技赋能千年名胜 镇江'金山幻境VR大空间'新春启幕",
+          "summary": "镇江文旅集团打造的'金山幻境VR大空间'在景区开业，以沉浸式VR技术为传统人文景区注入互动娱乐新业态。",
+          "comment": "VR大空间体验如何在传统景区中实现商业化和文化价值的平衡？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119270.html"
+        },
+        {
+          "title": "高精度机器人：绝对精度不佳时应如何处理？",
+          "summary": "弗劳恩霍夫制造工程和自动化研究所通过技术方案帮助改进机器人的绝对精度问题。",
+          "comment": "工业机器人的精度限制目前是否已成为制造业智能化升级的关键瓶颈？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/high-precision-robots-what-to-do-when-absolute-accuracy-is-poor/"
+        },
+        {
+          "title": "93913产业周报│2月9日-2月15日XR产业动态回顾",
+          "summary": "本周报回顾了XR产业在2月9日至15日期间的重要动态，涵盖AR/VR/MR等智能硬件领域的最新发展。",
+          "comment": "XR产业周报汇总的主要趋势对消费级和行业级应用的发展方向预示了什么？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119268.html"
+        },
+        {
+          "title": "北京重磅发文支持虚拟模特、元宇宙庙会、AI虚拟偶像等消费新业态",
+          "summary": "北京推出重大政策支持虚拟模特、元宇宙庙会和AI虚拟偶像等新兴消费业态，最高奖补达到2000万元。",
+          "comment": "政府对AI虚拟产品的高额补助投入能否有效加速元宇宙消费应用的成熟？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119274.html"
+        },
+        {
+          "title": "福建出台人工智能项目实施方案 最高千万元补助培育优质行业垂直模型",
+          "summary": "福建省印发《人工智能项目实施方案》，通过最高千万元补助支持AI新技术新产品开发，推动AI与实体经济深度融合。",
+          "comment": "地方政府对AI产品和硬件应用的差异化补助政策如何影响产业创新生态的形成？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119280.html"
         }
       ]
     },
@@ -49,24 +70,24 @@
       "news": [
         {
           "title": "OpenClaw创始人Peter Steinberger加入OpenAI",
-          "summary": "流行开源AI Agent项目OpenClaw的创始人Peter Steinberger已加入OpenAI，将帮助推进多Agent交互能力的发展。",
-          "comment": "多Agent协作是否真的是AI未来发展的核心方向？",
+          "summary": "OpenAI招聘了开源AI Agent项目OpenClaw的创始人Peter Steinberger，旨在加强多Agent交互能力，推动AI Agent领域的产品创新。",
+          "comment": "多Agent协作是否会成为未来AI系统架构的核心方向？",
           "source": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/879623/openclaw-founder-peter-steinberger-joins-openai"
         },
         {
-          "title": "印度AI数据中心电力瓶颈突破：C2i获1500万美元融资",
-          "summary": "印度初创公司C2i通过grid-to-GPU技术方案降低AI数据中心电力损耗，获得Peak XV领投的1500万美元融资。",
-          "comment": "当AI芯片性能不再是主要瓶颈时，电力效率是否会成为下一个制约行业发展的关键问题？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/15/as-ai-data-centers-hit-power-limits-peak-xv-backs-indian-startup-c2i-to-fix-the-bottleneck/"
-        },
-        {
-          "title": "AI内存芯片短缺危机加剧，威胁行业发展",
-          "summary": "全球AI需求驱动的内存芯片短缺问题日益严重，导致芯片价格上升、企业计划受阻，科技领袖包括马斯克和库克等已发出警告。",
-          "comment": "内存芯片短缺相比GPU短缺是否会对AI产业造成更深层的冲击？",
+          "title": "AI数据中心面临芯片内存危机",
+          "summary": "包括Elon Musk和Tim Cook在内的科技领袖警告全球内存芯片短缺危机日益加剧，已经影响利润、推高各类设备价格，AI需求是主要推手。",
+          "comment": "内存芯片成为AI基础设施的新瓶颈，这会否推动芯片产业的重新洗牌？",
           "source": "Bloomberg Technology",
           "url": "https://www.bloomberg.com/news/articles/2026-02-15/rampant-ai-demand-for-memory-is-fueling-a-growing-chip-crisis"
+        },
+        {
+          "title": "C2i获1500万美元融资优化AI数据中心电力效率",
+          "summary": "印度初创公司C2i获得Peak XV领投的1500万美元融资，开发从电网到GPU的直连方案以降低AI数据中心的电力损耗。",
+          "comment": "端侧能源效率优化是否会成为AI基础设施投资的下一个重点赛道？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/15/as-ai-data-centers-hit-power-limits-peak-xv-backs-indian-startup-c2i-to-fix-the-bottleneck/"
         }
       ]
     },
@@ -75,16 +96,16 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Blackstone领投印度AI基础设施公司Neysa，融资高达12亿美元",
-          "summary": "Blackstone牵头投资印度AI云计算初创公司Neysa，融资规模达12亿美元，目标部署超20000块GPU，推动印度本土AI基础设施建设。",
-          "comment": "印度是否正在成为仅次于美国之外的AI基础设施投资重地，这对全球AI格局意味着什么？",
+          "title": "Blackstone领投Neysa最高12亿美元融资建设印度AI基础设施",
+          "summary": "Blackstone领导的投资者联盟向印度AI云计算公司Neysa进行最高12亿美元股权投资，支持其部署超过2万块GPU以满足本地AI计算需求。",
+          "comment": "国际资本大规模押注印度AI基础设施，这是否预示着全球AI算力格局的重新分布？",
           "source": "TechCrunch",
           "url": "https://techcrunch.com/2026/02/15/blackstone-backs-neysa-in-up-to-1-2b-financing-as-india-pushes-to-build-domestic-ai-compute/"
         },
         {
-          "title": "英国加强在线安全法规，将AI聊天机器人纳入监管范围",
-          "summary": "英国政府宣布收紧在线安全法律，在深度伪造丑闻后对Grok等AI聊天机器人进行新的监管，要求科技平台对内容安全承担责任。",
-          "comment": "各国对AI应用的监管趋严是否会影响AI创新公司的商业模式和发展步伐？",
+          "title": "英国收紧在线安全法规将AI聊天机器人纳入监管",
+          "summary": "英国政府宣布就在线安全法进行磋商，计划收紧针对AI聊天机器人等技术平台的监管，要求科技公司在儿童安全上承担更多责任。",
+          "comment": "AI监管从模型层面向应用层面深化，这会如何影响AI企业的全球部署策略？",
           "source": "Financial Times",
           "url": "https://www.ft.com/content/15917aa4-2d40-49be-85c3-da395b16e7f1"
         }
@@ -93,7 +114,7 @@
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-16T09:33:37.293793+08:00",
+  "created_at": "2026-02-16T09:37:57.865689+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
