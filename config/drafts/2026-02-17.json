@@ -7,67 +7,39 @@
       "icon": "🥽",
       "news": [
         {
-          "title": "华米科技AI智能眼镜量产，业绩指引与股价波动引关注",
-          "summary": "华米科技近期因AI智能眼镜量产、四季度业绩指引、核心业务表现及股价波动成为行业焦点。该公司在AI眼镜硬件领域取得重要进展。",
-          "comment": "AI眼镜作为消费级穿戴设备的重要形态，其量产落地对整个智能硬件产业链有什么启示？",
+          "title": "Apple Vision Pro visionOS更新为开发者提供改进的VR云流媒体工具",
+          "summary": "Apple Vision Pro获得visionOS更新，为开发者提供了改进的VR云流媒体工具，增强了头显的云游戏和应用流媒体能力。",
+          "comment": "云流媒体技术能否成为解决VR设备本地算力限制的关键突破口？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/visionos-update-improved-vr-cloud-streaming-tools/"
+        },
+        {
+          "title": "华米科技AI智能眼镜实现量产，成为行业与资本市场焦点",
+          "summary": "华米科技因AI智能眼镜量产、业绩指引和股价波动成为业界关注焦点，标志着AI眼镜产品进入商用阶段。",
+          "comment": "AI智能眼镜的大规模量产是否会推动整个AR眼镜行业的消费级普及？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119297.html"
         },
         {
-          "title": "则成电子AI眼镜量产落地，光模块破局与海外复苏迎增长新局",
-          "summary": "则成电子在光模块、AI眼镜两大新兴赛道取得实质性进展，海外订单恢复，东南亚产能布局稳步推进，业务拓展迎来新增长机遇。",
-          "comment": "AI眼镜产业链企业的全球化布局会如何改变消费级AR眼镜的市场竞争格局？",
+          "title": "则成电子AI眼镜量产和光模块技术取得突破",
+          "summary": "则成电子在AI眼镜量产和光模块技术上实现重大突破，同时海外订单恢复，业务布局与国家高端制造政策方向契合。",
+          "comment": "光学模块创新能否成为下一代AI眼镜产品差异化竞争的核心优势？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119298.html"
         },
         {
-          "title": "高人气VR游戏《Titan Isles》2月24日登陆PS VR2，全平台画质体验升级",
-          "summary": "英国独立工作室Psytec Games官宣旗下高机动性动作冒险射击VR游戏《Titan Isles》的PS VR2移植版将于2月24日上线。",
-          "comment": "VR游戏在主流游戏主机平台的集中发布，是否意味着VR头显正在向主流消费市场突破？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119308.html"
+          "title": "SlimeVR启动众筹活动推出更轻薄的全身追踪器",
+          "summary": "SlimeVR推出新一代众筹活动，致力于开发更轻薄的全身VR追踪器，以改进用户VR体验。",
+          "comment": "追踪器的轻量化设计是否会成为提升VR长时间佩戴舒适度的关键因素？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/slimevr-campaign-butterfly-body-trackers/"
         },
         {
-          "title": "Meta CTO：Steam Frame若获成功将借鉴其设计，竞合并存成行业常态",
-          "summary": "Meta表示若Steam Frame获得市场成功，将从中吸取产品设计与用户反馈的相关经验，说明VR/MR头显市场的竞争与学习并存。",
-          "comment": "VR/MR头显市场中的技术借鉴与竞争并存模式，会推动整个产业生态更快成熟吗？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119310.html"
-        },
-        {
-          "title": "电机设计如何推动不同类型机器人的发展",
-          "summary": "电机设计的进步使得不同类型的机器人既能为工业功能专业化，又能在精度上实现融合。",
-          "comment": "电机技术的突破对人形机器人和工业机器人的性能升级会产生什么样的连锁反应？",
+          "title": "马达设计如何支撑不同类型机器人的功能差异化",
+          "summary": "文章探讨了马达设计进展如何使不同类型的机器人既能针对工业应用进行专业化定制，又能在精度上趋于一致。",
+          "comment": "电机技术的通用化与专业化平衡是否会重塑机器人产业的竞争格局？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/how-motor-design-enables-different-types-of-robots/"
-        },
-        {
-          "title": "协作机器人工作空间安全设计的关键要素",
-          "summary": "力限制和功率限制机器人臂的安全性取决于协作机器人工作空间设计的质量，工业安全成为硬件设计的核心考量。",
-          "comment": "协作机器人的安全标准化设计，是否会加速其在制造业中的大规模应用？",
-          "source": "The Robot Report",
-          "url": "https://www.therobotreport.com/keys-designing-safe-shared-cobot-workspaces/"
-        },
-        {
-          "title": "VRChat创造并发用户纪录，日本动漫演唱会引爆社交平台",
-          "summary": "VRChat通过举办日本动漫演唱会刷新历史最高并发用户纪录，展现了VR社交平台的市场潜力与用户活跃度。",
-          "comment": "VR社交平台通过内容驱动实现用户突增，这个模式对VR头显硬件的需求拉动会有多大影响？",
-          "source": "Road to VR",
-          "url": "https://www.roadtovr.com/vrchat-all-time-high-japanese-concert/"
-        },
-        {
-          "title": "全球首个'三位一体'智能驾驶实验室建成投用，我国智驾测试验证能力达国际领先",
-          "summary": "全球首个集实物整车、动态交通、环境模拟于一体的智能驾驶实验室正式建成并投入使用，标志着自动驾驶测试硬件设施的重大突破。",
-          "comment": "智能驾驶测试硬件设施的完善，是否会加速自动驾驶产品化落地的进程？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119292.html"
-        },
-        {
-          "title": "VR史诗《如梦令·泉吟》亮相济南趵突泉，沉浸式项目引领产业升级",
-          "summary": "VR史诗作品《如梦令·泉吟》在济南趵突泉景区正式亮相，展现了VR硬件在文旅场景中的应用潜力与行业升级方向。",
-          "comment": "VR硬件在文旅体验中的创新应用，能否成为消费级VR设备普及的新驱动力？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119295.html"
         }
       ]
     },
@@ -76,25 +48,32 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "阿里巴巴发布千问3.5，展现成本优势驱动的大模型创新",
-          "summary": "阿里巴巴推出千问3.5大模型系列，具备新的Agent能力，在中国AI竞争中以降低推理成本为核心竞争力，标志着大模型竞争重心从规模向效率转变。",
-          "comment": "当模型能力趋同后，成本效率是否会成为决定应用爆发的关键因素？",
+          "title": "Figma与Anthropic合作，将AI生成代码转化为可编辑设计",
+          "summary": "Figma与Anthropic合作推出新功能，利用AI将代码直接转化为可编辑的设计文件，简化设计师与开发人员的协作流程。",
+          "comment": "AI代码到设计的自动化转换，会否成为下一代设计工具的标配能力？",
           "source": "CNBC",
-          "url": "https://www.cnbc.com/2026/02/17/china-alibaba-qwen-ai-agent-latest-model.html"
+          "url": "https://www.cnbc.com/2026/02/17/figma-anthropic-ai-code-designs.html"
         },
         {
-          "title": "Cohere发布开源多语言模型家族",
-          "summary": "AI初创公司Cohere推出Tiny Aya系列开源模型，支持超过70种语言，为开源AI生态提供多语言能力解决方案。",
-          "comment": "开源多语言模型的普及是否能加速全球AI应用的民主化？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/17/cohere-launches-a-family-of-open-multilingual-models/"
+          "title": "Qodo 2.1解决编程Agent的记忆遗失问题，精准度提升11%",
+          "summary": "AI代码审查创业公司Qodo发布2.1版本，通过引入记忆机制解决AI编程Agent在会话切换后信息丢失的问题，显著提升推理精准度。",
+          "comment": "持久化记忆对于Agent能力演进而言是必需品还是加分项？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/qodo-2-1-solves-your-coding-agents-amnesia-problem-giving-them-an-11"
         },
         {
-          "title": "字节跳动豆包春晚AI互动创新高",
-          "summary": "字节跳动旗下AI助手豆包在除夕与央视春晚联动，单日AI互动总数达19亿次，推理吞吐量峰值达633亿tokens，展现大模型在高并发场景的工程优化成果。",
-          "comment": "春晚这类国民级事件对AI大模型的实际压力测试能否成为产业能力衡量的新标准？",
-          "source": "雷峰网",
-          "url": "https://www.leiphone.com/category/industrynews/c1dBJmII8svTBsTC.html"
+          "title": "SurrealDB 3.0欲用单一数据库替代五层RAG技术栈",
+          "summary": "SurrealDB推出3.0版本，整合结构化数据、向量和图数据管理能力，旨在为AI Agent系统提供统一的数据层和上下文记忆支持。",
+          "comment": "统一数据基础设施能否真正解决RAG系统的复杂性和同步问题？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/data/surrealdb-3-0-wants-to-replace-your-five-database-rag-stack-with-one"
+        },
+        {
+          "title": "AI数字孪生助力糖尿病和肥胖症管理",
+          "summary": "硅谷创业公司Twin Health利用AI和可穿戴传感器创建患者数字孪生，帮助用户通过数据驱动的洞察管理代谢健康，为GLP-1药物提供替代方案。",
+          "comment": "个性化AI健康管理模型是否会重塑传统医疗产业的竞争格局？",
+          "source": "WIRED",
+          "url": "https://www.wired.com/story/ai-digital-twins-are-helping-people-manage-diabetes-and-obesity/"
         }
       ]
     },
@@ -103,30 +82,51 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Anthropic与五角大楼就AI监控防护谈判受阻",
-          "summary": "AI安全公司Anthropic与美国国防部就Claude合约续约谈判陷入僵局，Anthropic坚持为其AI模型添加防护措施，防止被用于大规模监控或自主武器开发。",
-          "comment": "AI企业的伦理底线与政府安全需求之间的冲突是否反映了AI治理的根本性难题？",
+          "title": "SoftBank支持的Emergent在成立不足一年内达到1亿美元年收入运行率",
+          "summary": "由SoftBank支持的AI初创公司Emergent推出的AI驱动软件开发平台在不足一年内实现1亿美元年收入运行率，展现出AI开发工具的强劲市场需求。",
+          "comment": "AI编程工具的商业化速度是否预示着整个开发者工具领域的范式转移？",
           "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/videos/2026-02-17/digi-neil-campling-on-tech-nervousness"
+          "url": "https://www.bloomberg.com/news/articles/2026-02-17/softbank-backed-emergent-hits-100-million-run-rate-in-a-year"
         },
         {
-          "title": "印度阿达尼集团计划投资1000亿美元建AI数据中心",
-          "summary": "印度阿达尼集团宣布至2035年投资1000亿美元开发绿色能源驱动的AI数据中心，并可能催化额外1500亿美元投入，反映印度在AI基础设施赛道的雄心。",
-          "comment": "新兴经济体在AI基础设施领域的巨额投入是否预示着AI产业格局从美中二元化向多极化演变？",
+          "title": "印度计划吸引2000亿美元AI基础设施投资至2028年",
+          "summary": "印度政府加大力度建设共享AI计算基础设施，增加20000块GPU，目标在2028年前吸引超过2000亿美元的全球AI投资。",
+          "comment": "印度的AI基础设施建设能否真正撼动美国在全球AI计算主导权中的地位？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/17/india-bids-to-attract-over-200b-in-ai-infrastructure-investment-by-2028/"
+        },
+        {
+          "title": "OpenAI首席执行官Altman与Google首席执行官Pichai出席印度AI峰会",
+          "summary": "全球科技巨头领袖前往印度参加重要AI峰会，反映出印度作为AI人才库和应用市场的战略重要性日益提升。",
+          "comment": "科技巨头对印度AI市场的集体关注，是否标志着全球AI产业格局向多极化发展？",
           "source": "CNBC",
-          "url": "https://www.cnbc.com/2026/02/17/india-adani-ai-data-centers-investment.html"
+          "url": "https://www.cnbc.com/2026/02/16/india-ai-impact-summit-tech-ceos-new-delhi.html"
         },
         {
-          "title": "印度寻求吸引200亿美元AI投资促进产业发展",
-          "summary": "印度联邦政府高层表示，该国期望在两年内吸引超过200亿美元的AI驱动投资，体现全球第一人口大国在AI赛道上的战略抱负。",
-          "comment": "印度作为AI投资目的地的崛起是否会改变全球AI产业的地缘政治格局？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-17/india-eyes-200-billion-in-ai-investments-over-two-years"
+          "title": "字节跳动豆包除夕AI互动达19亿次，火山引擎支撑春晚直播",
+          "summary": "字节跳动AI助手豆包在除夕与央视春晚联动，完成19亿次AI互动，单分钟推理吞吐量达633亿tokens，展示国内AI基础设施的成熟度。",
+          "comment": "国民级AI应用在春晚这样的超大流量场景中的稳定表现，能否成为中国AI产业对外输出的新证明？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/c1dBJmII8svTBsTC.html"
+        },
+        {
+          "title": "阿里通义千问3.5以小胜大，推理成本成真正竞争力",
+          "summary": "阿里巴巴通义千问3.5版本在参数规模更小的情况下超越部分大模型，强调推理成本而非模型规模才是应用爆发的关键驱动因素。",
+          "comment": "大模型竞争从规模竞赛转向效率竞争，这是否预示着行业进入理性创新阶段？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7882917.html"
+        },
+        {
+          "title": "阿达尼集团计划投资千亿美元建AI数据中心至2035年",
+          "summary": "印度阿达尼集团宣布至2035年投资1000亿美元开发绿色能源驱动的AI数据中心，可能撬动额外1500亿美元相关投资，瞄准印度AI与云计算中心崛起机遇。",
+          "comment": "新兴经济体巨头的大规模AI基础设施投资，是否正在打破由美国和中国垄断的AI芯片与数据中心格局？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3687187972238982?f=rss"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-17T19:10:49.734779+08:00"
+  "created_at": "2026-02-17T22:16:02.771212+08:00"
 }
