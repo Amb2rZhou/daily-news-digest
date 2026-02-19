@@ -1,0 +1,135 @@
+{
+  "date": "2026-02-19",
+  "time_window": "2026-02-18 10:28 ~ 2026-02-19 10:28",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "苹果AR智能眼镜计划2028年发布 OLEDoS屏成行业核心趋势",
+          "summary": "市场研究机构Omdia最新报告显示，苹果备受期待的AR智能眼镜预计将于2028年正式推出，OLEDoS屏幕技术成为行业发展的核心方向。",
+          "comment": "苹果延迟两年发布AR眼镜，这是否意味着技术成熟度要求比预期更高，还是战略重心有所调整？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119339.html"
+        },
+        {
+          "title": "Apple Vision Pro迎重磅更新 新增注视点流传输技术发力企业级VR云串流",
+          "summary": "苹果向Apple Vision Pro推送visionOS 26.4测试版，正式引入注视点流传输技术，可显著优化无线VR远程渲染的带宽占用。",
+          "comment": "注视点流传输技术的引入是否标志着VR头显正从消费娱乐向企业级应用转变？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/visionos-26-4-foveated-streaming-apple-vision-pro/"
+        },
+        {
+          "title": "AI眼镜销量暴增领跑科技年货 行业迈入消费化新赛道",
+          "summary": "2026年春节期间，AI眼镜成为科技年货采购的亮点，销量大幅攀升，全球产业端迎来产能与技术升级，行业正式进入轻量化消费化阶段。",
+          "comment": "春节消费数据显示AI眼镜销量暴增，这是否预示着AR/AI穿戴设备正经历从早期采用者向大众市场的转变？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119347.html"
+        },
+        {
+          "title": "苹果加速智能眼镜开发 预计2027年初推出双摄像头产品",
+          "summary": "据彭博社报道，苹果正加速开发智能眼镜，该产品将配备两个摄像头用于捕捉和计算机视觉，预计在2027年初推出。",
+          "comment": "苹果在AI硬件赛道加速布局，其智能眼镜与Vision Pro的差异化定位是否将重塑整个AR市场的竞争格局？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/apple-glasses-could-have-2-cameras-launch-in-early-2027/"
+        },
+        {
+          "title": "东京幽灵特务展览采用Xreal Air 2 Ultra眼镜打造沉浸体验",
+          "summary": "东京幽灵特务主题展览利用Xreal Air 2 Ultra鸟浴型AR眼镜为观众提供增强现实体验，展示AR眼镜在文化创意领域的应用。",
+          "comment": "消费级AR眼镜在艺术展览中的应用是否能够成为推动该类硬件大众化的重要场景切入点？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/how-tokyos-ghost-in-the-shell-exhibition-embraces-ar/"
+        },
+        {
+          "title": "Ottonomy打造Ottumn.AI平台 构建机器人与无人机协调管理系统",
+          "summary": "Ottonomy基于NVIDIA基础设施开发Ottumn.AI平台，用于整合医疗、物流和智慧城市领域的配送机器人、无人机及智能基础设施。",
+          "comment": "多种AI硬件设备的统一协调管理系统是否将成为机器人产业规模化部署的关键基础设施？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/ottonomy-builds-ottumn-ai-platform-to-orchestrate-robots-drones-and-smart-infrastructure/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Anthropic最新研究：AI Agent自主工作时长三个月翻倍",
+          "summary": "Anthropic研究表明AI Agent的自主工作能力在三个月内翻倍，用户正在加速\"放手\"让AI独立完成任务，标志着Agent能力的显著提升。",
+          "comment": "当AI Agent能够自主工作的时间大幅延长，这会如何改变企业对AI员工的信任度和应用场景？",
+          "source": "AGI Hunt",
+          "url": "https://mp.weixin.qq.com/s/oe9vzuvzBiVFwsfGd7VWuQ"
+        },
+        {
+          "title": "谷歌推出音乐生成模型Lyria 3",
+          "summary": "Google推出Lyria 3音乐生成模型，集成到Gemini中，用户可通过文字描述或上传图片/视频生成高质量音乐作品，展示多模态生成能力。",
+          "comment": "AI音乐生成从文本扩展到多模态输入，这会如何冲击音乐创作产业链的价值分布？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3689519379181444?f=rss"
+        },
+        {
+          "title": "阿里巴巴Qwen 3.5 397B-A17以少于十分之一的激活参数击败更大模型",
+          "summary": "阿里巴巴推出Qwen3.5-397B-A17开源模型，虽然参数总数为397B但仅激活17B，性能超越更大的万亿参数模型，成本效益显著提升。",
+          "comment": "混合专家模型在参数效率上的突破，是否预示着\"大即是好\"的LLM发展路线需要重新评估？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/alibabas-qwen-3-5-397b-a17-beats-its-larger-trillion-parameter-model-at-a"
+        },
+        {
+          "title": "微软ERL：让LLM学会吃一堑长一智的新范式",
+          "summary": "微软发布ERL（Experience Replay Learning）框架，使大语言模型能够从错误中学习并优化决策，开创了LLM自我改进的新范式。",
+          "comment": "如果LLM能够像人一样从失败中学习，这会如何改变其在高风险决策场景中的可靠性？",
+          "source": "PaperAgent",
+          "url": "https://mp.weixin.qq.com/s/6-Y3WLewaAblbf9th3gGwQ"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI融资有望突破100亿美元创历史新高",
+          "summary": "OpenAI正在完成新一轮融资，规模有望超过100亿美元，创造创业公司融资历史纪录，用于扩展AI工具开发。",
+          "comment": "OpenAI融资规模屡创新高，这种资本积累速度是否预示着AI基础设施的成本壁垒正在上升？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-19/openai-funding-on-track-to-top-100-billion-with-latest-round"
+        },
+        {
+          "title": "腾讯宣布元宝DAU超5000万，MAU达1.14亿",
+          "summary": "腾讯官方宣布旗下AI助手元宝日活跃用户超5000万，月活跃用户达1.14亿，21天内迭代159项功能，春节期间创意任务完成超10亿次。",
+          "comment": "腾讯元宝在春节期间实现如此庞大的用户规模和高频迭代，国内AI应用的商业化落地速度是否已超过海外竞争对手？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3688860060594052?f=rss"
+        },
+        {
+          "title": "字节跳动豆包春节档大战，重新定义AI应用范式",
+          "summary": "字节跳动通过豆包在春节档推出创新应用，试图在激烈竞赛中重新定义下一代AI的使用范式，抢占实用化时代的核心高地。",
+          "comment": "字节在春节这个全民参与的时间点重点押注豆包，是否意味着AI大厂的竞争已从技术指标转向用户体验和场景应用？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7883814.html"
+        },
+        {
+          "title": "谷歌宣布1750-1850亿美元资本支出，AI基础设施投资翻倍",
+          "summary": "Alphabet 2026财年资本支出达1750-1850亿美元，约为此前两倍，Gemini与Android生态整合预计在I/O 2026大会实现突破。",
+          "comment": "谷歌基础设施投资规模翻倍，这会如何改变全球AI芯片和数据中心的竞争格局？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7884066.html"
+        },
+        {
+          "title": "英伟达与印度风投公司合作，寻找下一代AI初创企业",
+          "summary": "英伟达扩大在印度的战略合作，与主要风投公司建立伙伴关系，押注印度AI生态发展，为全球AI初创企业寻觅新机遇。",
+          "comment": "英伟达将目光转向印度，是否意味着全球AI人才和初创生态的中心正在从硅谷向更多地区扩散？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/18/nvidia-india-ai-vc-data-center-partners.html"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-19T10:30:04.972811+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
