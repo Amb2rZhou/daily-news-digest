@@ -7,60 +7,67 @@
       "icon": "🥽",
       "news": [
         {
-          "title": "苹果智能眼镜敲定2027年初发布，双摄像头成核心差异化卖点",
-          "summary": "苹果首款智能眼镜将配备双摄像头系统，主打影像拍摄与计算机视觉双功能，计划于2026年12月启动大规模生产，并在2027年初正式推出。",
-          "comment": "苹果的双摄像头设计相比其他XR眼镜产品的差异化优势能否在消费市场中转化为竞争力？",
-          "source": "93913-元宇宙&AI信息与产业服务",
+          "title": "苹果智能眼镜确定2027年初发布 双摄像头成核心差异化卖点",
+          "summary": "苹果首款智能眼镜将配备双摄像头系统，主打影像拍摄与计算机视觉功能，计划于2026年12月启动大规模生产，2027年初正式推出。",
+          "comment": "苹果在智能眼镜领域采用双摄像头设计，与其他厂商的设计路线有何本质差异？",
+          "source": "93913",
           "url": "https://www.93913.com/119354.html"
         },
         {
-          "title": "谷歌官宣2026 I/O大会5月举办，AI眼镜与Gemini更新成核心看点",
-          "summary": "谷歌将在5月举办I/O大会，首款面向消费者的AI智能眼镜与Gemini系列大模型更新成为两大核心亮点。",
-          "comment": "谷歌的消费级AI眼镜能否打破苹果与Meta在智能眼镜市场的垄断格局？",
-          "source": "93913-元宇宙&AI信息与产业服务",
+          "title": "谷歌官宣2026 I/O大会5月举办 首款消费级AI智能眼镜成核心看点",
+          "summary": "谷歌宣布于5月举办2026 I/O大会，将重点展示Gemini系列大模型更新与首款面向消费者的AI智能眼镜产品。",
+          "comment": "谷歌选择在I/O大会发布消费级AI眼镜，这如何影响智能眼镜市场的竞争格局？",
+          "source": "93913",
           "url": "https://www.93913.com/119356.html"
         },
         {
-          "title": "Meta将Ray-Ban后继产品升级为双目显示屏，或于今年推出",
-          "summary": "据报道Meta Ray-Ban Display的后继产品将升级为双目显示屏设计，有望在今年晚些时候推出。",
-          "comment": "双目显示屏相比现有单目设计能带来怎样的用户体验提升，这是否会成为智能眼镜普及的关键转折点？",
+          "title": "Meta Ray-Ban双目显示屏继任产品有望今年发布",
+          "summary": "据报道，Meta Ray-Ban Display的继任产品计划于2026年下半年推出，该设备将采用双目显示屏设计。",
+          "comment": "Meta双目智能眼镜的推出将如何改变AR穿戴设备的用户体验？",
           "source": "UploadVR",
           "url": "https://www.uploadvr.com/could-binocular-meta-ray-ban-display-successor-launch-2026/"
         },
         {
-          "title": "Pico详细披露visionOS竞品系统，将在GDC大会展示新一代头显",
-          "summary": "ByteDance旗下Pico宣布将在GDC大会展示其visionOS竞品操作系统与新头显设备，该系统支持2D和空间应用并行运行。",
-          "comment": "Pico推出的Android XR竞品系统能否与苹果visionOS形成真正的技术与生态对抗？",
+          "title": "Pico将在GDC大会展示visionOS竞品及Android XR操作系统",
+          "summary": "字节跳动旗下Pico宣布在3月GDC大会上展示其visionOS竞品，该系统将支持2D和空间应用并行运行，计划在新一代头显中首次亮相。",
+          "comment": "Pico推出的Android XR系统与Apple visionOS的差异化优势在哪里？",
           "source": "Road to VR",
           "url": "https://www.roadtovr.com/pico-to-showcase-visionos-and-android-xr-competitor-at-gdc-next-month/"
         },
         {
-          "title": "SlimeVR推出新一代Butterfly全身追踪器，众筹超额完成目标近两倍",
-          "summary": "SlimeVR新款IMU式全身追踪设备Butterfly上线众筹后迅速成功，筹得金额超过初始目标两倍，展现市场对轻薄长续航VR追踪设备的高度认可。",
-          "comment": "轻薄与长续航技术在VR全身追踪领域的突破会如何推动更多消费者采用VR内容体验？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119368.html"
-        },
-        {
-          "title": "国投智能'慧眼'AI智能眼镜投入春节安防应用",
-          "summary": "国投智能联合公安部门研发的'慧眼'AI智能眼镜在2026年春节期间正式投入安防领域应用。",
-          "comment": "AI智能眼镜在安防与执法领域的应用能否成为该类硬件产品的重要商业化路径？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119360.html"
-        },
-        {
-          "title": "丰田加拿大工厂扩大部署Agility Robotics Digit人形机器人，从3台扩至10台",
-          "summary": "丰田加拿大汽车制造厂商业化试用Digit人形机器人数量大幅扩增，从3台增至10台，表明人形机器人在制造业的应用前景被看好。",
-          "comment": "大型制造企业对人形机器人的快速扩大采购是否预示着工业机器人自动化升级的新拐点？",
+          "title": "丰田加拿大工厂部署Agility Robotics Digit人形机器人 规模扩大至10台",
+          "summary": "丰田加拿大制造公司将其Digit人形机器人的商业试点规模从3台扩大到10台，推进工业机器人在制造领域的实际应用。",
+          "comment": "人形机器人从试点向规模化部署迈进，这将如何重塑制造业的生产方式？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/toyota-motor-manufacturing-canada-deploys-agility-robotics-digit-humanoids/"
         },
         {
-          "title": "Meta明确分离Horizon Worlds与Quest生态，聚焦第三方应用开发",
-          "summary": "Meta宣布将Horizon Worlds与Quest平台进行明确分离，转向支持第三方开发者生态建设。",
-          "comment": "Meta放弃自有元宇宙平台Horizon Worlds的重要性，改为开放生态的策略调整反映出什么样的市场现实？",
+          "title": "国投智能'慧眼'AI智能眼镜春节期间投入公共安全应用",
+          "summary": "国投智能与公安部门联合研发的'慧眼'AI智能眼镜在2026年春节期间正式投入应用，用于安防和公共安全领域。",
+          "comment": "AI智能眼镜在公共安全领域的规模化应用有哪些隐私与伦理的考量？",
+          "source": "93913",
+          "url": "https://www.93913.com/119360.html"
+        },
+        {
+          "title": "SlimeVR推出新一代Butterfly全身追踪器 众筹超目标两倍",
+          "summary": "SlimeVR推出轻薄、长续航的新一代Butterfly IMU式全身追踪器，众筹筹资超过34.7万美元，远超18万美元初始目标，展现市场对VR追踪设备的高度认可。",
+          "comment": "VR全身追踪设备的众筹热度高涨，这预示着什么样的VR应用场景需求？",
+          "source": "93913",
+          "url": "https://www.93913.com/119368.html"
+        },
+        {
+          "title": "Meta宣布向Quest头显引入第三方应用 明确分离Horizon Worlds",
+          "summary": "Meta宣布将Horizon Worlds从Quest平台明确分离，以重点支持第三方应用生态，表明对VR生态的长期承诺。",
+          "comment": "Meta的这一调整是否预示着虚拟世界平台战略的转变？",
           "source": "UploadVR",
           "url": "https://www.uploadvr.com/meta-explicitly-separating-horizon-worlds-from-quest-focusing-on-third-party-apps/"
+        },
+        {
+          "title": "国产VR魂系大作《Grimlord》PS VR2版下月上线",
+          "summary": "合金猫互动开发的国产VR魂系动作RPG《Grimlord》的PS VR2版本已进入开发最终阶段，计划下月发售。",
+          "comment": "国产VR游戏在主流VR平台的布局，将如何影响全球VR内容生态？",
+          "source": "93913",
+          "url": "https://www.93913.com/119370.html"
         }
       ]
     },
@@ -69,32 +76,25 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "字节豆包2.0重磅发布，成本暴降一个数量级",
-          "summary": "字节正式发布豆包大模型2.0系列，包含Pro、Lite、Mini三款通用Agent模型和Code模型，重点加强高效推理、多模态理解与复杂指令执行能力，成本大幅下降。",
-          "comment": "在大模型成本竞争日趋激烈的今天，如何在性能与成本之间找到最优平衡点才是企业级应用的关键？",
+          "title": "字节豆包2.0重磅发布，成本暴降一个数量级，Agent能力全面升级",
+          "summary": "字节发布豆包大模型2.0系列，包含Pro、Lite、Mini三款通用Agent模型和Code模型，围绕生产环境优化了推理效率、多模态理解与复杂指令执行能力，成本相比前代大幅下降。",
+          "comment": "在Agent化阶段，大模型成本与性能的权衡如何决定其在真实生产环境的竞争力？",
           "source": "InfoQ推荐",
           "url": "https://www.infoq.cn/article/Kcqq2ifEZCJaK8o0TxN1"
         },
         {
-          "title": "谷歌Gemini 3.1 Pro发布，推理性能提升2倍以上",
-          "summary": "谷歌发布Gemini 3.1 Pro，采用混合专家架构，支持100万token长上下文和视频等多模态输入，在12项基准测试中取得第一，重新夺得AI模型性能之王。",
-          "comment": "当前端模型能力差异不断收窄，差异化竞争的焦点是否已经转向成本、延迟和应用生态？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/19/googles-new-gemini-pro-model-has-record-benchmark-scores-again/"
+          "title": "Google发布Gemini 3.1 Pro，推理性能提升超2倍，重夺AI模型王座",
+          "summary": "Google推出Gemini 3.1 Pro更新，在推理能力上实现2倍以上性能提升，并引入可调节的推理深度机制，重新夺回最强AI模型的位置。",
+          "comment": "可调节的推理能力是否真正解决了不同应用场景对AI模型的差异化需求？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/google-launches-gemini-3-1-pro-retaking-ai-crown-with-2x-reasoning"
         },
         {
-          "title": "亚马逊AI编程工具Kiro导致服务宕机事件",
-          "summary": "亚马逊12月发生服务宕机事件，涉及其AI编程机器人工具Kiro，公司表示系用户错误而非AI错误造成，引发AI编程工具安全性讨论。",
-          "comment": "随着AI编程工具深度集成到生产环境，如何建立有效的AI决策审计和容错机制成为必要课题？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/00c282de-ed14-4acd-a948-bc8d6bdb339d"
-        },
-        {
-          "title": "OpenAI承诺750万美元资助独立AI对齐研究",
-          "summary": "OpenAI向The Alignment Project承诺750万美元资金，用于资助独立的AI对齐研究，加强全球AGI安全和安全风险防范工作。",
-          "comment": "AI对齐研究的外部独立资助模式是否能够有效避免大模型公司在安全问题上的利益冲突？",
-          "source": "OpenAI News",
-          "url": "https://openai.com/index/advancing-independent-research-ai-alignment"
+          "title": "Agoda开发API Agent：零代码将任意API转换为MCP协议",
+          "summary": "Agoda工程师开发了零代码、零部署的API Agent系统，可将内部REST或GraphQL API对接到模型上下文协议(MCP)，降低多种API管理的运维成本。",
+          "comment": "通过MCP协议统一接口，是否能够加速AI Agent在企业内部的实际应用？",
+          "source": "InfoQ推荐",
+          "url": "https://www.infoq.cn/article/lTdPVphiffHFz6prrxu3"
         }
       ]
     },
@@ -103,30 +103,30 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "Anthropic G轮融资300亿美元，估值3800亿美元",
-          "summary": "Anthropic宣布在G轮融资中筹集300亿美元，融资后估值达3800亿美元，资金用于前沿研究、产品开发和基础设施扩建，致力于成为企业AI和编码市场领导者。",
-          "comment": "在融资竞速的背后，AI公司们正在用真金白银押注哪个细分赛道会最先实现商业化突破？",
+          "title": "Anthropic G轮融资300亿美元，估值达3800亿美元，成为AI领域融资新标杆",
+          "summary": "Anthropic宣布G轮融资筹集300亿美元，融资后估值达3800亿美元，资金用于前沿研究、产品开发与基础设施扩建，致力于成为企业AI和编码市场领导者。",
+          "comment": "从融资估值看，大模型初创公司如何在OpenAI和Google等巨头的夹击中确立自身的市场位置？",
           "source": "InfoQ推荐",
           "url": "https://www.infoq.cn/article/auecWVTgm3Eh8lo5PK8U"
         },
         {
-          "title": "微软CEO宣布添加Grok 4.1 Fast到多模型产品线",
-          "summary": "微软CEO萨提亚·纳德拉发文表示，很高兴能将Grok 4.1 Fast添加到微软的多模型产品系列中，深化与xAI的AI模型集成。",
-          "comment": "微软在OpenAI之外还要引入xAI的模型，是否预示着巨头正在布局多家AI模型供应商以降低单一依赖风险？",
+          "title": "智谱与MINIMAX市值突破3000亿港元，超越快手、携程，逼近百度",
+          "summary": "港股开盘后，大模型公司智谱和MINIMAX股价大幅上涨，智谱上涨36%至691港元，MiniMax上涨12%至957港元，两家企业市值均突破3000亿港元，接连超越携程、快手。",
+          "comment": "国内大模型公司在二级市场的估值超越传统互联网巨头，是否意味着AI已成为资本市场的核心赛道？",
           "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3691306569969285?f=rss"
+          "url": "https://36kr.com/newsflashes/3691371949878915?f=rss"
         },
         {
-          "title": "印度莫迪与OpenAI和Anthropic高管互动，数据中心股价上涨",
-          "summary": "印度总理莫迪与OpenAI CEO萨姆·阿尔特曼和Anthropic CEO达里奥·阿莫代伊互动，重申印度成为全球AI中心的目标，推动相关数据中心股价大幅上升。",
-          "comment": "国家级AI战略支持与顶级AI企业落地的结合，是否会改变全球AI产业版图中西方集中度过高的现状？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-20/india-ai-linked-plays-surge-as-modi-hobnobs-with-altman-amodei"
+          "title": "OpenAI承诺700万美元资助独立AI对齐研究，推进AGI安全防护",
+          "summary": "OpenAI宣布向The Alignment Project投入750万美元，资助独立的AI对齐研究，强化全球在AGI安全与安全风险防护方面的努力。",
+          "comment": "主流AI企业主动投资独立对齐研究，是否反映了行业对AI安全问题的真实重视程度？",
+          "source": "OpenAI News",
+          "url": "https://openai.com/index/advancing-independent-research-ai-alignment"
         }
       ]
     }
   ],
   "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-20T15:55:05.769634+08:00"
+  "created_at": "2026-02-20T18:04:53.391418+08:00"
 }
