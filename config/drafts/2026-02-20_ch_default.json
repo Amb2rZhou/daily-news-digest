@@ -1,0 +1,121 @@
+{
+  "date": "2026-02-20",
+  "time_window": "2026-02-19 09:49 ~ 2026-02-20 09:49",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "苹果智能眼镜确定2027年初发布 双摄像头成核心差异化卖点",
+          "summary": "苹果首款智能眼镜将配备双摄像头系统，主打影像拍摄与计算机视觉双功能，计划于2026年12月启动大规模生产，并在2027年初正式推出。",
+          "comment": "双摄像头设计相比单摄如何改变AR眼镜的应用场景和用户体验？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119354.html"
+        },
+        {
+          "title": "谷歌官宣2026 I/O大会5月举办 AI眼镜与Gemini更新成核心看点",
+          "summary": "谷歌2026年I/O大会将聚焦AI前沿进展，首款面向消费者的AI智能眼镜与Gemini系列大模型更新成为两大核心看点。",
+          "comment": "谷歌AI眼镜相比苹果Vision Pro和Meta Ray-Ban的优势在哪里？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119356.html"
+        },
+        {
+          "title": "Meta Ray-Ban双目显示器后继产品有望今年发布",
+          "summary": "据报道Meta Ray-Ban Display的后继产品计划在2026年下半年推出，新产品为双目设计，标志着消费级AR眼镜的进一步演进。",
+          "comment": "双目显示相比单目显示在实际应用中的优劣势分别是什么？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/could-binocular-meta-ray-ban-display-successor-launch-2026/"
+        },
+        {
+          "title": "字节跳动Pico将展示visionOS竞争产品 新头显即将发布",
+          "summary": "字节跳动Pico将在GDC大会展示其visionOS竞争品，新系统支持2D和空间应用共存，计划在下一代头显中首次亮相。",
+          "comment": "国产VR系统与苹果visionOS的最大技术差异体现在哪些方面？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/pico-to-showcase-visionos-and-android-xr-competitor-at-gdc-next-month/"
+        },
+        {
+          "title": "国投智能'慧眼'AI智能眼镜春节投入应用 创新安防场景",
+          "summary": "国投智能联合公安部门研发的'慧眼'AI智能眼镜在2026年春节期间投入实际应用，在多个场景展现安防守护能力。",
+          "comment": "行业级AI智能眼镜在公安安防领域的实际应用效能如何评估？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119360.html"
+        },
+        {
+          "title": "SlimeVR新一代Butterfly全身追踪器众筹火爆 融资超两倍目标",
+          "summary": "SlimeVR推出主打轻薄长续航的新一代IMU式全身追踪器，众筹融资已超34.7万美元，远超初始18万美元目标，体现市场对VR追踪设备的高度认可。",
+          "comment": "轻薄化和长续航设计如何影响消费级VR全身追踪的应用前景？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119368.html"
+        },
+        {
+          "title": "丰田加拿大制造工厂扩大Digit人形机器人部署规模",
+          "summary": "丰田汽车加拿大制造基地将Agility Robotics的Digit人形机器人部署从3台扩展到10台，推进工业应用的商业化试验。",
+          "comment": "人形机器人在传统制造业的规模化部署能否真正提升生产效率？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/toyota-motor-manufacturing-canada-deploys-agility-robotics-digit-humanoids/"
+        },
+        {
+          "title": "英伟达为Cosmos世界基础模型添加机器人控制策略",
+          "summary": "英伟达推出Cosmos Policy机器人控制策略，对Cosmos Predict-2世界基础模型进行后训练优化，用于机械臂操作任务。",
+          "comment": "基础模型在机器人控制中的应用如何突破当前的准确性和泛化能力瓶颈？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/nvidia-adds-cosmos-policy-world-foundation-models/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Gemini 3.1 Pro登基：在12项基准测试中击败Claude和GPT",
+          "summary": "谷歌推出Gemini 3.1 Pro，采用混合专家架构，支持100万token上下文和多模态输入，在代码、推理等多项基准测试中首次超越竞争对手，标志着其推理能力的重大突破。",
+          "comment": "当主流大模型的性能指标不断相互超越时，这些能力提升对实际应用场景的影响有多大？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/19/googles-new-gemini-pro-model-has-record-benchmark-scores-again/"
+        },
+        {
+          "title": "Microsoft推出新方案识别网络上的AI生成内容",
+          "summary": "微软正在开发新的技术方案来帮助用户区分真实内容和AI生成内容，以应对日益猖獗的AI欺骗现象在社交媒体和网络中的传播。",
+          "comment": "在AI内容生成能力爆炸式增长的时代，真伪辨别技术的发展速度能跟上内容生成的速度吗？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/19/1133360/microsoft-has-a-new-plan-to-prove-whats-real-and-what-is-ai-online/"
+        },
+        {
+          "title": "Figma股价跳升15%，AI工具商业化加速增长",
+          "summary": "设计软件公司Figma在采用AI工具Figma Make的用户增加的同时，保持了毛利率，展现出AI功能的商业变现潜力，推动股价上涨。",
+          "comment": "设计工具中的AI助手如何改变了传统设计工作流和创意工作者的议价能力？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/18/figma-fig-q4-earnings-report-2025.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Nvidia和OpenAI放弃1000亿美元交易，改为300亿美元股权投资",
+          "summary": "Nvidia和OpenAI终止了之前复杂的融资框架，改为Nvidia对OpenAI进行300亿美元的直接股权投资，简化了双方的合作结构。",
+          "comment": "从复杂的结构化融资转向直接股权投资，反映了AI芯片巨头与模型厂商关系的什么变化？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/dea24046-0a73-40b2-8246-5ac7b7a54323"
+        },
+        {
+          "title": "OpenAI投入750万美元支持独立AI安全对齐研究",
+          "summary": "OpenAI向对齐研究项目承诺7.5百万美元资金，用于资助独立的AI安全对齐研究，加强全球范围内的AGI安全和安全风险应对能力。",
+          "comment": "当商业AI公司主动投资外部安全研究时，这是真诚的风险防范还是战略性的声誉管理？",
+          "source": "OpenAI News",
+          "url": "https://openai.com/index/advancing-independent-research-ai-alignment"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-20T09:50:16.945383+08:00",
+  "channel_id": "default",
+  "channel_name": "2人测试群",
+  "topic_mode": "focused"
+}
