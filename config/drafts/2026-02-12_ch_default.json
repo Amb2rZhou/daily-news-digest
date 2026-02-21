@@ -1,0 +1,100 @@
+{
+  "date": "2026-02-12",
+  "time_window": "2026-02-11 09:18 ~ 2026-02-12 09:18",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Apptronik融资5.2亿美元推进Apollo人形机器人生产",
+          "summary": "Apptronik宣布获得5.2亿美元融资，总融资额接近10亿美元，用于加快其工业用途Apollo人形机器人的量产。",
+          "comment": "人形机器人的商业化落地需要多少资本投入和时间才能实现真正的大规模产业应用？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/apptronik-brings-in-another-520m-to-ramp-up-apollo-production/"
+        },
+        {
+          "title": "Apple Vision Pro在欧洲静默移除3D功能",
+          "summary": "Apple Vision Pro在多个欧洲国家的Disney+应用中悄然移除了3D支持，削弱了该头显的主要卖点功能。",
+          "comment": "区域监管要求与产品核心体验之间的冲突如何才能得到更好的平衡？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/disney-quietly-removes-3d-from-apple-vision-pro-in-europe/"
+        },
+        {
+          "title": "Rokid Glasses正式支持自定义智能体功能",
+          "summary": "Rokid Glasses上线'自定义智能体'功能，开发者可通过标准接口将智能眼镜连接到私有大模型部署，包括DeepSeek、Qwen等主流模型。",
+          "comment": "开放自定义AI能力是否能够成为消费级AR眼镜差异化竞争的关键突破口？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544727.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Anthropic的Claude Cowork登陆Windows，自动化工作流程",
+          "summary": "Anthropic发布Claude Cowork AI Agent软件Windows版本，提供文件管理和任务自动化功能，覆盖约70%的桌面计算市场。",
+          "comment": "当AI Agent具备文件访问和任务执行权限后，如何平衡自动化效率与系统安全风险？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropics-claude-cowork-finally-lands-on-windows-and-it-wants-to-automate"
+        },
+        {
+          "title": "智谱清言发布GLM-5开源大模型，实现记录低幻觉率",
+          "summary": "中国AI初创企业z.ai发布GLM-5开源大模型，保持MIT许可证，在幻觉率上创造新纪录，并采用新颖的强化学习'黏液'技术。",
+          "comment": "开源模型在降低幻觉率的同时，如何确保企业级部署的安全性和可控性？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/z-ais-open-source-glm-5-achieves-record-low-hallucination-rate-and-leverages"
+        },
+        {
+          "title": "MIT新型微调方法让大语言模型学习新技能而不遗忘旧知识",
+          "summary": "MIT研究团队开发自蒸馏微调技术(SDFT)，使大语言模型能够在学习新任务的同时保留原有能力，解决企业维护多个模型的难题。",
+          "comment": "这种持续学习能力对多任务AI应用的商业化部署会产生什么样的颠覆性影响？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/mits-new-fine-tuning-method-lets-llms-learn-new-skills-without-losing-old"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Anthropic融资超200亿美元，Founders Fund等领投",
+          "summary": "AI公司Anthropic正在完成超200亿美元融资，由彼得·蒂尔的Founders Fund、D.E. Shaw和Dragoneer Investment Group等联合领投，创初创公司融资纪录。",
+          "comment": "当单次融资规模超200亿美元，这对AI初创企业的估值体系和市场竞争格局意味着什么？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-12/founders-fund-d-e-shaw-dragoneer-among-lead-investors-in-anthropic-deal"
+        },
+        {
+          "title": "马斯克xAI全员大会宣布重组和太空AI战略",
+          "summary": "xAI在全员大会上公布组织重组方案和太空数据中心计划，图像生成工具Imagine日活突破1200万，月生成图像超3亿张，同时多位共同创始人离职。",
+          "comment": "xAI将AI与太空技术深度融合的商业模式，是否能成为AI基础设施发展的新范式？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7877259.html"
+        },
+        {
+          "title": "OpenAI解散使命对齐团队，负责人任命为首席未来学家",
+          "summary": "OpenAI宣布解散专注安全可信AI开发的使命对齐团队，团队负责人获新职位首席未来学家，其他成员被重新分配至公司各部门。",
+          "comment": "OpenAI削弱AI安全治理团队的举措，如何影响行业对AI伦理责任的重视程度？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/11/openai-disbands-mission-alignment-team-which-focused-on-safe-and-trustworthy-ai-development/"
+        },
+        {
+          "title": "Modal Labs融资谈判估值达25亿美元，由General Catalyst领投",
+          "summary": "AI推理初创企业Modal Labs正与General Catalyst进行融资谈判，估值达25亿美元，反映市场对AI基础设施投资的热度。",
+          "comment": "AI推理基础设施公司的高估值背后，是否预示着推理计算将成为下一个AI竞争的焦点？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/11/ai-inference-startup-modal-labs-in-talks-to-raise-at-2-5b-valuation-sources-say/"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-12T10:09:46.615695+08:00",
+  "channel_id": "default",
+  "channel_name": "2人测试群",
+  "topic_mode": "focused"
+}

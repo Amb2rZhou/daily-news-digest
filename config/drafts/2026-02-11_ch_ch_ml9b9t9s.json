@@ -1,0 +1,100 @@
+{
+  "date": "2026-02-11",
+  "time_window": "2026-02-10 10:02 ~ 2026-02-11 10:02",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta轻量VR头显Project Phoenix设计细节曝光：计算模块可夹腰带",
+          "summary": "Meta的轻量化VR头显Project Phoenix采用创新设计，将计算模块放在腰带上，旨在解决行业普遍存在的头显重量问题。",
+          "comment": "将计算模块分离到腰带上的设计是否能真正改善用户长时间佩戴的舒适度体验？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119138.html"
+        },
+        {
+          "title": "大朋DPVR发布搭载GPT的AI太阳镜G5 Air",
+          "summary": "大朋（DPVR）正式发布飞行员款AI太阳镜DPVR G5 Air，搭载OpenAI GPT大模型，专为全天候佩戴和高频使用场景设计。",
+          "comment": "AI太阳镜集成GPT能力后，会如何改变用户的日常信息交互方式？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544719.html"
+        },
+        {
+          "title": "Meta携Oakley推出AI运动眼镜登陆2026超级碗",
+          "summary": "Meta与Oakley联合推出Oakley Meta性能AI眼镜，推出Vanguard和HSTN两款核心款式，将在2026超级碗期间亮相。",
+          "comment": "将AI功能集成到运动眼镜中，能否成为下一代主流穿戴设备的新标杆？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119154.html"
+        },
+        {
+          "title": "Ray-Ban智能眼镜获得ClawdBot黑客改造实现功能扩展",
+          "summary": "Ray-Ban Meta智能眼镜通过ClawdBot开源项目实现了功能扩展，但这一改造方式存在安全风险。",
+          "comment": "开发者通过黑客改造增强智能眼镜功能，制造商应该如何平衡开放性与安全性？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/clawdbot-ray-ban-smart-glasses-hack/"
+        },
+        {
+          "title": "Apple Watch推出2026年心脏月挑战赛",
+          "summary": "Apple推出2026年心脏月挑战赛，邀请Apple Watch用户通过健身活动庆祝情人节。",
+          "comment": "穿戴设备通过健康挑战建立用户粘性，这种互动模式对长期用户留存的效果如何？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/10/apple-rolling-out-2026-heart-month-challenge-for-the-apple-watch/"
+        },
+        {
+          "title": "Boston Dynamics首席执行官罗伯特·普莱耶尔宣布辞职",
+          "summary": "Boston Dynamics CEO Robert Playter宣布离职，首席财务官Amanda McMaster将担任临时CEO，直到董事会确定新任领导。",
+          "comment": "人形机器人领域的关键领导力变动，会如何影响Boston Dynamics的产品商业化进程？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/boston-dynamics-ceo-robert-playter-steps-down/"
+        },
+        {
+          "title": "三星确认Galaxy Z TriFold折叠手机2月底补货",
+          "summary": "三星Galaxy Z TriFold三折屏手机初期库存已售罄，将在本月晚些时候补充库存供应。",
+          "comment": "高端折叠屏手机的供不应求反映出什么样的市场需求变化趋势？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/10/samsung-will-restock-the-galaxy-z-trifold-in-the-us-later-this-month/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "OpenAI升级Responses API，支持Agent技能和完整终端shell功能",
+          "summary": "OpenAI更新了其Responses API，使AI Agent能够支持更多技能并集成完整的终端shell，解决了此前AI模型在多次交互后容易丧失上下文和出现幻觉的问题。",
+          "comment": "当AI Agent能够在更长的交互周期内维持一致的上下文和记忆，这对生产级应用的可靠性有什么深层影响？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/openai-upgrades-its-responses-api-to-support-agent-skills-and-a-complete"
+        },
+        {
+          "title": "打通视频生成与机器人世界模型，BridgeV2W让机器人学会预演未来",
+          "summary": "中科第五纪联合中科院自动化所推出BridgeV2W，通过具身掩码设计解决视频生成模型与机器人控制系统的表征语言差异，使机器人能够基于视频生成模型预测动作后果。",
+          "comment": "当机器人能够通过视频世界模型预先模拟动作，这是否标志着具身AI从被动反应向主动规划的范式转变？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/mifSWo8g3erzPNOm.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Runway完成3.15亿美元E轮融资，估值飙升至53亿美元",
+          "summary": "Runway宣布完成3.15亿美元E轮融资，公司估值达到53亿美元，正与谷歌DeepMind、World Labs等AI巨头在世界模型领域展开直接竞争。",
+          "comment": "当多家初创公司和科技巨头同时押注世界模型这一方向，这个赛道最终的商业价值实现路径会是什么？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7875346.html"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-11T10:06:29.928761+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

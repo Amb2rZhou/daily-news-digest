@@ -1,0 +1,94 @@
+{
+  "date": "2026-02-11",
+  "time_window": "2026-02-10 10:02 ~ 2026-02-11 10:02",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Runway完成3.15亿美元E轮融资，估值飙升至53亿美元",
+          "summary": "Runway完成3.15亿美元E轮融资，估值达53亿美元，正在开发下一代AI世界模型，与谷歌DeepMind、World Labs等竞争。",
+          "comment": "当多家顶级AI实验室同时押注世界模型技术，这是否预示着具身AI和机器人时代即将到来？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7875346.html"
+        },
+        {
+          "title": "OpenAI升级Responses API支持智能体技能和完整终端",
+          "summary": "OpenAI更新Responses API，新增对智能体技能和完整终端shell的支持，解决AI模型长对话中的上下文丢失问题。",
+          "comment": "当AI智能体能够更好地保持长期记忆和执行复杂任务时，它距离真正的自主工作系统还有多远？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/openai-upgrades-its-responses-api-to-support-agent-skills-and-a-complete"
+        },
+        {
+          "title": "DPVR发布AI太阳镜G5 Air，搭载OpenAI GPT大模型",
+          "summary": "大朋（DPVR）向海外市场正式发布飞行员款AI太阳镜G5 Air，集成OpenAI GPT模型，专为全天候长时间佩戴设计。",
+          "comment": "AR眼镜集成大模型后，是否会成为继智能手机之后下一个人机交互的必需品？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544719.html"
+        },
+        {
+          "title": "Nothing推出Essential Apps测试版，支持AI驱动的主屏小部件生成",
+          "summary": "Nothing推出Essential Apps测试版，用户可通过文字提示和AI协助创建主屏小部件和应用，实现所谓的'氛围编码'。",
+          "comment": "当用户可以用自然语言生成应用界面时，传统应用开发的门槛是否会被彻底打破？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/10/nothing-essential-apps-hands-on/"
+        },
+        {
+          "title": "YouTube Music推出AI Playlist功能，支持文本生成播单",
+          "summary": "YouTube Music新增'AI Playlist'功能，用户可通过文本提示生成个性化播单，目前仅限Premium订阅者。",
+          "comment": "生成式AI在音乐推荐中的应用是否能比传统算法更好地理解用户的隐性音乐需求？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/10/youtube-music-adding-ai-playlist-with-text-based-playlist-generation/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Alphabet宣布2026年资本支出增至1800-1850亿美元，超去年一倍",
+          "summary": "谷歌母公司Alphabet宣布2026年资本支出预算为1800-1850亿美元，较2025年大幅增加，主要用于AI基础设施和数据中心投资。",
+          "comment": "当科技巨头在AI基础设施上的投入超过传统芯片制造商时，这是否标志着AI竞争已进入全面军备竞赛阶段？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/alphabet-is-doubling-its-capital-expenditure-to-a-staggering-usd180-billion-in-2026-earnings-suggest-that-the-companys-ai-investments-may-be-paying-off"
+        },
+        {
+          "title": "Amazon或推出媒体内容许可市场，连接发布商与AI公司",
+          "summary": "报道称亚马逊计划创建一个市场平台，使媒体出版商能将内容直接许可给AI公司，建立内容与AI模型间的良好生态。",
+          "comment": "当科技巨头正式建立内容许可通道时，是否意味着AI训练数据的版权问题有望通过市场机制解决？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/10/amazon-may-launch-a-marketplace-where-media-sites-can-sell-their-content-to-ai-companies/"
+        },
+        {
+          "title": "Musk的xAI在两天内失去第二位联合创始人",
+          "summary": "在与SpaceX合并后，xAI核心研究人员Jimmy Ba等多位联合创始人相继离职，现已有约一半创始团队离开公司。",
+          "comment": "当AI初创公司面临关键人才流失时，融资规模和估值的高低是否仍是衡量其真正竞争力的准确指标？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/10/nearly-half-of-xais-founding-team-has-now-left-the-company/"
+        },
+        {
+          "title": "波士顿动力CEO Robert Playter宣布辞职",
+          "summary": "波士顿动力首席执行官Robert Playter宣布即日生效离职，将于2月27日正式离开公司，公司CFO接任临时CEO。",
+          "comment": "当机器人领域的知名企业失去领导者时，其在AI应用落地中的竞争力是否会受到影响？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/876819/boston-dynamics-robots-ceo-steps-down-hyundai"
+        },
+        {
+          "title": "Google Photos在iPhone上推出'Create with AI'模板功能",
+          "summary": "Google Photos将其'Create with AI'生成式模板功能扩展至iPhone和iPad，用户可使用AI工具创建照片作品。",
+          "comment": "当生成式AI编辑工具跨越平台边界时，苹果和谷歌在照片处理领域的竞争格局是否将被重塑？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/10/google-photos-brings-create-with-ai-templates-to-iphone/"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-11T10:06:37.084971+08:00",
+  "channel_id": "ch_ml97ypb3",
+  "channel_name": "午休2小时",
+  "topic_mode": "broad"
+}

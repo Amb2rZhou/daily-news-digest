@@ -1,0 +1,106 @@
+{
+  "date": "2026-02-12",
+  "time_window": "2026-02-11 09:18 ~ 2026-02-12 09:18",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "智谱清言发布GLM-5大模型，打破幻觉率纪录",
+          "summary": "国内AI大模型企业智谱清言（z.ai）推出新一代开源大模型GLM-5，采用创新RL技术实现业界最低幻觉率，保持MIT开源许可证便于企业部署。",
+          "comment": "当国内大模型在幻觉率和开源协议两方面都取得突破时，这是否意味着中国AI模型正在缩小与海外先进模型的差距？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/z-ais-open-source-glm-5-achieves-record-low-hallucination-rate-and-leverages"
+        },
+        {
+          "title": "Anthropic的Claude Cowork登陆Windows，意在自动化办公工作",
+          "summary": "Anthropic发布Claude Cowork在Windows平台的版本，该AI代理工具支持文件管理和任务自动化，覆盖全球约70%的桌面计算市场。",
+          "comment": "当AI代理工具开始主动接管日常办公流程时，员工的工作流方式和企业的组织结构会发生怎样的根本性变革？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropics-claude-cowork-finally-lands-on-windows-and-it-wants-to-automate"
+        },
+        {
+          "title": "字节跳动推出Seedance 2.0视频生成大模型",
+          "summary": "字节跳动即梦AI平台发布新一代视频生成模型Seedance 2.0，代表AI在视频生成工业化应用上的重大进展，有望颠覆多个传统行业。",
+          "comment": "Seedance 2.0能否成为像ChatGPT那样的通用范式转变节点，彻底改写内容创作行业的生产关系？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119170.html"
+        },
+        {
+          "title": "Rokid Glasses支持自定义智能体，用户可私有化部署大模型",
+          "summary": "消费级AR眼镜Rokid Glasses上线自定义智能体功能，允许用户通过标准接口接入私有大模型和开源框架，包括DeepSeek、Qwen等主流模型。",
+          "comment": "当AR眼镜成为私有AI模型的载体时，这会如何改变智能硬件的竞争格局和用户的隐私保护？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544727.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "马斯克xAI宣布重组并公开完整全员大会，披露太空AI战略",
+          "summary": "xAI发布45分钟全员大会内容，宣布与SpaceX合并后的重组计划、核心成员变动，并提出太空数据中心和月球AI卫星工厂等前沿构想，Imagine图像生成工具月活达1200万。",
+          "comment": "当AI企业开始筹划太空数据中心和月球AI工厂时，这是马斯克的宏大愿景还是AI算力需求已经超出地球承载能力的信号？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/11/xai-lays-out-interplanetary-ambitions-in-public-all-hands/"
+        },
+        {
+          "title": "OpenAI解散使命对齐团队，引发AI安全争议",
+          "summary": "OpenAI宣布解散致力于安全和可信AI开发的使命对齐团队，团队负责人获任'首席未来学家'新职位，其他成员重新分配到各部门。",
+          "comment": "在AGI竞赛加速的背景下，OpenAI削弱安全团队是否意味着产品速度优先于安全考量的战略调整？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/11/openai-disbands-mission-alignment-team-which-focused-on-safe-and-trustworthy-ai-development/"
+        },
+        {
+          "title": "OpenAI研究员因ChatGPT广告计划离职，警告'Facebook化'危险",
+          "summary": "OpenAI研究员Zoë Hitzig在OpenAI开始在ChatGPT中测试广告的同日宣布辞职，担心广告模式可能导致平台陷入类似Facebook的操纵性内容问题。",
+          "comment": "当生成式AI平台开始引入广告模式时，这会如何影响模型输出的客观性和用户的信息环境安全？",
+          "source": "Ars Technica",
+          "url": "https://arstechnica.com/information-technology/2026/02/openai-researcher-quits-over-fears-that-chatgpt-ads-could-manipulate-users/"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "GPT-5在法律推理测试中超越联邦法官，胜率100%对52%",
+          "summary": "研究论文显示GPT-5在法律推理实验中以100:52的优势击败联邦法官，证明AI在专业领域推理能力的显著进步。",
+          "comment": "当AI在法律推理上已经全面超越人类专家时，这是否预示着整个知识工作者阶层面临的深刻危机？",
+          "source": "Hacker News",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6155012"
+        },
+        {
+          "title": "MIT开发自蒸馏微调技术，让LLM学习新技能不遗忘旧知识",
+          "summary": "MIT和ETH Zurich研究团队开发自蒸馏微调技术（SDFT），使大模型能够学习新任务同时保留原有能力，解决企业维护多个模型的问题。",
+          "comment": "这项技术能否成为解决模型持续学习和灾难性遗忘问题的通用方案，从而推动AI在长期任务学习中的实用性？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/mits-new-fine-tuning-method-lets-llms-learn-new-skills-without-losing-old"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "Anthropic融资超20亿美元，创业界最大融资之一",
+          "summary": "AI公司Anthropic正在完成超20亿美元融资轮，由Founders Fund、D.E. Shaw和Dragoneer等领投，跻身历史最大初创融资之列。",
+          "comment": "在巨额融资背后，Anthropic如何通过技术和商业创新来正当化这样的天价估值和投资者期待？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-12/founders-fund-d-e-shaw-dragoneer-among-lead-investors-in-anthropic-deal"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-12T10:09:53.474338+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}

@@ -1,0 +1,94 @@
+{
+  "date": "2026-02-13",
+  "time_window": "2026-02-12 09:52 ~ 2026-02-13 09:52",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "OpenAI发布GPT-5.3-Codex-Spark，采用Cerebras芯片实现15倍快速代码生成",
+          "summary": "OpenAI推出专为代码生成优化的GPT-5.3-Codex-Spark模型，首次采用Cerebras芯片而非英伟达，实现近乎即时的代码响应速度，标志着AI推理硬件的多元化趋势。",
+          "comment": "当OpenAI开始绕过英伟达选择其他芯片供应商，这是否预示着未来AI基础设施的竞争格局会彻底改变？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openai-deploys-cerebras-chips-for-15x-faster-code-generation-in-first-major"
+        },
+        {
+          "title": "谷歌发布Gemini 3 Deep Think重大升级，专注科学研究和工程应用",
+          "summary": "谷歌Gemini 3的Deep Think专业推理模式获得重大升级，特别针对科学、研究和工程领域的复杂问题求解进行优化。",
+          "comment": "AI模型在专业领域的深度推理能力提升，会如何改变科学研究和工程设计的协作模式？",
+          "source": "9to5Google",
+          "url": "https://9to5google.com/2026/02/12/gemini-3-deep-think-upgrade/"
+        },
+        {
+          "title": "MiniMax发布M2.5开源大模型，性能接近顶级模型但成本仅为1/20",
+          "summary": "中国AI初创公司MiniMax推出M2.5和M2.5 Lightning两个开源大模型版本，在性能接近Claude Opus 4.6的同时，成本仅为其1/20，引发行业成本竞争激烈。",
+          "comment": "当开源模型能以极低成本达到闭源模型性能，这对专有AI模型的商业模式意味着什么？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/minimaxs-new-open-m2-5-and-m2-5-lightning-near-state-of-the-art-while"
+        },
+        {
+          "title": "智谱上线并开源GLM-5模型，字节发布Seedance 2.0视频创作模型",
+          "summary": "智谱发布GLM-5模型并宣布开源，字节跳动同步推出Seedance 2.0视频创作模型，国内大厂加速AI模型开源与创意工具迭代。",
+          "comment": "国内大厂集中发布新模型与开源策略，是在构建AI技术话语权还是陷入无差别竞争？",
+          "source": "少数派",
+          "url": "https://sspai.com/post/106337"
+        },
+        {
+          "title": "Claude免费版新增应用连接、Office文档创建等功能",
+          "summary": "Anthropic为Claude免费版用户开放应用连接功能和Microsoft Office文档创建能力，此前这些功能仅限付费用户使用。",
+          "comment": "AI助手免费版功能不断增强，这会如何影响用户的付费转化策略和商业模式？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/12/claudes-free-tier-now-connects-to-apps-can-create-microsoft-office-documents-and-more/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Apple承诺2026年内推出新版Siri，尽管面临开发延期压力",
+          "summary": "面对此前报道的AI助手Siri开发延期，Apple重申将在2026年内推出采用更强AI能力的新版Siri，尽管部分功能可能晚于原计划。",
+          "comment": "在AI竞争加速的时代，Apple延迟发布AI产品但坚持承诺，这反映了什么样的产品哲学差异？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/12/apple-iphone-siri-promise-this-year/"
+        },
+        {
+          "title": "Meta Ray-Ban AI眼镜2025年销量突破700万副，同比增长250%",
+          "summary": "依视路陆逊梯卡财报显示Meta与Ray-Ban联名AI眼镜2025年销售超700万副，相比2023-2024年总量实现三倍增长，标志AI眼镜市场规模化突破。",
+          "comment": "当AI眼镜从小众尝鲜品快速成为主流消费品，下一个临界点会是什么？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544735.html"
+        },
+        {
+          "title": "Microsoft AI负责人Mustafa Suleyman宣布AI自给自足战略，松绑OpenAI依赖",
+          "summary": "微软AI战略负责人表示公司正推进AI技术自给自足，预计18个月内白领工作可实现大规模自动化，逐步减少对OpenAI的技术依赖。",
+          "comment": "当科技巨头纷纷构建自主AI能力，OpenAI的独特价值如何维持？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/f1ec830c-2f08-4b1a-b70f-7330f260753c"
+        },
+        {
+          "title": "Apple研究团队发布用户与AI Agent交互期望研究",
+          "summary": "Apple研究人员通过用户研究揭示人们对AI Agent的实际交互预期，为Apple AI助手的设计提供实证支撑。",
+          "comment": "了解用户真实期待的AI交互方式，是否能帮助Apple在AI竞争中找到差异化优势？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/12/apple-study-looks-into-how-people-expect-to-interact-with-ai-agents/"
+        },
+        {
+          "title": "李未可AI眼镜接入OpenClaw自动化平台",
+          "summary": "国内AI眼镜厂商李未可宣布其产品已率先接入OpenClaw平台，用户可通过语音指令实现跨端智能办公自动化。",
+          "comment": "国内AI眼镜与智能体平台的整合，能否打造出不同于海外的AI应用生态？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544734.html"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-13T09:56:38.174939+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}

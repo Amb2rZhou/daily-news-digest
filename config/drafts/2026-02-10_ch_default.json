@@ -1,0 +1,100 @@
+{
+  "date": "2026-02-10",
+  "time_window": "2026-02-09 10:08 ~ 2026-02-10 10:08",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta新头显Phoenix计算单元渲染图流出",
+          "summary": "Meta计划明年上半年发布超轻薄头显Phoenix，采用计算单元外置设计以降低佩戴重量，近日其配套计算单元的渲染图被曝光。",
+          "comment": "将计算单元外置是否会成为未来VR/MR头显的主流设计方向？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544710.html"
+        },
+        {
+          "title": "2025年VR/MR市场回顾：短期回调但长期增势不变",
+          "summary": "2025年VR/MR发展略显平静甚至出现下滑，但Meta调整战略规划超轻薄头显、苹果推出Vision Pro M5版本、国产厂商vivo推出398g轻量化头显，行业在降中有升。",
+          "comment": "轻量化和平价化是否是VR/MR走向大众消费的关键突破口？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544709.html"
+        },
+        {
+          "title": "穹彻智能完成数亿元A轮融资",
+          "summary": "具身智能企业穹彻智能完成数亿元A轮融资，由C资本领投，将持续推进大模型研发并聚焦多种标准化机器人硬件的适配。",
+          "comment": "具身智能的通用大模型突破是否会加速人形机器人的商业化进程？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3676846269817478?f=rss"
+        },
+        {
+          "title": "华为AI眼镜暂定2026年上半年发布",
+          "summary": "华为全新AI眼镜将于2026年上半年正式发布，搭载鸿蒙系统，带来跨端协同体验，标志着智能眼镜赛道的又一重要布局。",
+          "comment": "鸿蒙生态在AI眼镜上的应用能否为华为打开消费级智能硬件的新市场？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119132.html"
+        },
+        {
+          "title": "夸克AI眼镜全系完成软件升级",
+          "summary": "夸克AI眼镜S1旗舰系列新增第一视角直播、截屏录屏功能，G1系列搭载Super RAW暗光增强技术实现超级夜景模式，功能体验进一步优化。",
+          "comment": "AI眼镜从基础视觉功能向直播、夜景等专业应用拓展，是否预示着消费级智能眼镜的成熟期正在到来？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119130.html"
+        },
+        {
+          "title": "苹果新款AirPods Pro将集成摄像头",
+          "summary": "爆料者确认苹果即将推出的新款AirPods Pro将内置摄像头，这将是AirPods Pro系列的重要升级。",
+          "comment": "在耳机中集成摄像头会如何改变用户的交互体验和隐私考量？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/09/apples-next-airpods-pro-will-come-with-cameras-says-leaker/"
+        },
+        {
+          "title": "深圳众擎机器人发起首届URKL全球人形机器人自由格斗联赛",
+          "summary": "首个专注全尺寸人形机器人的商业化自由格斗赛事启动，标志着人形机器人技术检验正式迈入实战化竞技阶段。",
+          "comment": "竞技化验证是否会加速人形机器人在实际应用场景中的迭代优化？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119122.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "OpenAI的Codex应用首周下载量突破100万，但免费用户可能面临限制",
+          "summary": "OpenAI的独立Codex桌面应用（仅Mac版）在首周下载量突破100万，标志着AI编程工具竞争的重要里程碑，但公司正考虑对免费和Go用户施加使用限制。",
+          "comment": "AI编程工具的爆炸性增长是否意味着开发者生产力的真正革命，还是仅仅是用户对新技术的短期热情？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openais-new-codex-app-hits-1m-downloads-in-first-week-but-limits-may-be-coming-to-free-and-go-users"
+        },
+        {
+          "title": "Apple支持的VSSFlow模型能从无声视频生成声音和语音",
+          "summary": "Apple支持的新AI模型VSSFlow采用创新架构，可以从静音视频中生成声音和语音内容，实现了该领域的最先进效果。",
+          "comment": "多模态AI从视觉信息反推音频的能力突破，会如何改变视频内容创作和生成的未来？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/09/new-apple-backed-ai-model-can-generate-sound-and-speech-from-silent-videos/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "爱芯元智登陆港交所，首家边缘计算AI芯片港股上市企业",
+          "summary": "AI感知与边缘计算芯片企业爱芯元智正式在香港交易所主板上市，总市值166亿港元，截至2025年9月累计出货SoC芯片1.65亿颗，是首家在港股上市的边缘计算AI芯片企业。",
+          "comment": "端侧AI芯片企业的成功上市是否预示着AI芯片产业链的本土化趋势正在加速？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3676836287816327?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-10T10:28:32.624884+08:00",
+  "channel_id": "default",
+  "channel_name": "2人测试群",
+  "topic_mode": "focused"
+}

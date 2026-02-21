@@ -1,59 +1,66 @@
 {
   "date": "2026-02-15",
-  "time_window": "2026-02-14 08:59 ~ 2026-02-15 08:59",
+  "time_window": "2026-02-14 10:24 ~ 2026-02-15 10:24",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "Meta计划重启面部识别技术，集成于Ray-Ban智能眼镜",
-          "summary": "Meta计划重启已沉寂五年的面部识别技术，并将其整合至Ray-Ban和Oakley智能眼镜中，引发了业界对AI可穿戴设备新功能与个人隐私边界的广泛讨论。",
-          "comment": "在智能眼镜上集成面部识别功能，如何才能在创新应用和用户隐私保护之间找到平衡？",
+          "title": "Meta重启面部识别技术，将集成于Ray-Ban智能眼镜",
+          "summary": "Meta计划重启已沉寂五年的面部识别技术，并将其整合至与Essilor Luxottica联合出品的Ray-Ban及Oakley智能眼镜中。此举引发业内对AI可穿戴设备新功能与个人隐私边界的广泛讨论。",
+          "comment": "当AI穿戴设备获得面部识别能力时，如何在功能创新与用户隐私保护之间找到平衡点？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119251.html"
         },
         {
-          "title": "AI眼镜销量暴涨七成以上，深圳华强北迎来新春消费热潮",
-          "summary": "作为智能穿戴新风口的AI眼镜销量增长最为迅猛，涨幅高达70%至80%，无人机、智能机器人等科技潮品也备受青睐。",
-          "comment": "AI眼镜销量的爆发式增长背后，究竟是什么驱动了消费者的购买欲望？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119259.html"
-        },
-        {
-          "title": "北京人形机器人\"具身天工 3.0\"完成高难度托马斯回旋动作",
-          "summary": "北京人形机器人创新中心研发的新一代通用机器人平台\"具身天工 3.0\"在成功跨越100厘米跳台后，顺利完成高难度的\"托马斯回旋\"动作，展现了中国人形机器人领域的技术进步。",
-          "comment": "人形机器人在体操等复杂动作上的突破，离实现日常生活应用还有多远的距离？",
+          "title": "北京人形机器人'具身天工3.0'完成高难度托马斯回旋动作",
+          "summary": "北京人形机器人创新中心研发的新一代通用机器人平台'具身天工3.0'在成功跨越100厘米跳台后，顺利完成高难度的'托马斯回旋'动作。这标志着我国在人形机器人领域的技术进步。",
+          "comment": "人形机器人掌握复杂体操动作背后的通用能力提升，将如何改变其在实际应用场景中的价值？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119264.html"
         },
         {
-          "title": "沃尔玛推出Meta Quest 3S超值优惠，250美元入手并赠送VR大作",
-          "summary": "沃尔玛开启Meta Quest 3S VR头显促销活动，128GB基础版直降50美元至250美元，256GB版本降至350美元，购买还赠送《蝙蝠侠：阿卡姆暗影》游戏及3个月订阅服务。",
-          "comment": "入门级VR头显价格持续下探，这是否将成为VR设备大众化的转折点？",
+          "title": "AI眼镜销量暴涨七成，成深圳华强北科技年货新风口",
+          "summary": "作为智能穿戴新风口的AI眼镜销量增长最为迅猛，涨幅高达70%至80%，无人机、智能机器人等科技潮品销量也增长30%至50%。",
+          "comment": "AI眼镜销量的爆发性增长是否意味着消费级AI硬件已进入主流市场的拐点？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119259.html"
+        },
+        {
+          "title": "沃尔玛开启Meta Quest 3S促销，250美元入手赠VR大作",
+          "summary": "沃尔玛再次推出Meta Quest 3S VR头显促销活动，128GB基础版直降50美元至250美元，256GB版本降至350美元，购买还赠《蝙蝠侠：阿卡姆暗影》和3个月Horizon+订阅服务。",
+          "comment": "VR头显的价格持续下探与内容生态的丰富，是否正在加速主流消费者的采用？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119247.html"
         },
         {
-          "title": "AirPods Pro 3值得升级吗？实测对比AirPods Pro 2的性能提升",
-          "summary": "AirPods Pro 3相比Pro 2在实际使用中有显著提升，尽管Live Translation等部分功能也将推送至Pro 2，但Pro 3仍提供了足够的升级理由。",
-          "comment": "当新旧产品功能不断重叠时，AI穿戴设备的升级周期应该如何界定？",
-          "source": "9to5Mac",
-          "url": "https://9to5mac.com/2026/02/14/apple-airpods-pro-3-worth-upgrading-to-heres-why/"
-        },
-        {
-          "title": "苹果Vision Pro重做NBA VR直播观赛体验",
-          "summary": "苹果与NBA和Spectrum SportsNet合作，为Vision Pro用户提供沉浸式NBA观赛体验，用户可仿佛置身球场边，获得传统电视转播无法呈现的独特视角。",
-          "comment": "XR设备在体育直播领域的应用，能否成为推动AR/VR头显普及的新杀手级应用？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544736.html"
-        },
-        {
           "title": "东莞文博场馆推出首个VR大空间数字体验项目",
-          "summary": "东莞展览馆联合四维时代打造的VR沉浸体验中心正式上线，标志着东莞公共文化服务与数字科技融合迈入新阶段。",
-          "comment": "VR大空间体验在文化场景中的落地，如何推动文博行业的数字化转型？",
+          "summary": "东莞文博场馆于2月15日上线首个VR大空间数字体验项目——VR沉浸体验中心，由东莞展览馆与四维时代联合打造。",
+          "comment": "VR体验中心进入文博场馆，能否成为推动文化遗产数字化的新标杆？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119249.html"
+        },
+        {
+          "title": "电影经济促进年启动，16个试点城市将布局虚拟现实观影新场景",
+          "summary": "国家电影局等主办的'2026电影经济促进年'启动仪式在北京举行，旨在释放电影产业消费潜能，推动'电影+'融合发展，包括在16个试点城市布局虚拟现实观影新场景。",
+          "comment": "政府支持下的VR观影新场景推广，能否成为VR内容应用的突破口？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119261.html"
+        },
+        {
+          "title": "工业机器人技术：ServoBelt为汽车门式起重机提供高性能解决方案",
+          "summary": "Bell-Everman公司推出的ServoBelt技术为汽车制造业门式起重机系统提供了成本效益高的替代方案，在不牺牲工业级性能的前提下降低成本。",
+          "comment": "工业机器人零部件创新如何驱动整个自动化系统的成本与性能优化？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/servobelt-offers-high-end-performance-automotive-gantry/"
+        },
+        {
+          "title": "第29届DICE奖公布：《Ghost Town》获年度沉浸显示游戏奖",
+          "summary": "第29届DICE奖评选结果公布，VR游戏《Ghost Town》荣获年度沉浸显示游戏奖，各主要VR平台内容库持续扩充。",
+          "comment": "VR游戏质量获业界认可与平台内容数量的持续增长，是否预示VR内容生态的健康发展？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544739.html"
         }
       ]
     },
@@ -62,18 +69,25 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "Off Grid – 在手机上离线运行AI文本、图像生成和视觉功能",
-          "summary": "开源应用Off Grid让用户在手机GPU上离线运行文本生成、图像生成、视觉AI等功能，无需将数据上传到云端服务器，保护用户隐私。",
-          "comment": "当端侧AI能力足以满足日常需求时，用户是否还愿意为云端AI服务付费？",
-          "source": "Hacker News",
-          "url": "https://github.com/alichherawalla/off-grid-mobile"
+          "title": "MiniMax M2.5开源模型实现昇腾全系列产品适配",
+          "summary": "MiniMax稀宇科技发布新一代旗舰模型M2.5，在昇腾AI基础软硬件支持下，数小时内即实现在Atlas 800 A2、A3等产品上的适配部署，为模型规模化落地提供全流程算力支撑。",
+          "comment": "国产AI芯片与开源模型的快速适配是否标志着AI基础设施国产化已进入实质性部署阶段？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3683895983091332?f=rss"
         },
         {
-          "title": "Kubernetes驱动AI扩展，文化转型成为关键因素",
-          "summary": "云原生计算基金会报告显示，Kubernetes已成为驱动全球AI增长的核心基础设施引擎，但人与组织层面因素已成为AI落地的最大障碍。",
-          "comment": "为什么技术基础设施成熟反而不是AI规模化的决定因素，组织文化为何如此重要？",
+          "title": "Kubernetes成为驱动全球AI增长的核心引擎",
+          "summary": "云原生计算基金会报告显示，Kubernetes已从通用容器编排框架演进为驱动AI爆发式增长的核心引擎，但人与组织因素成为AI成功落地的最大障碍。",
+          "comment": "为什么技术基础设施的成熟度反而不是AI规模化应用的主要瓶颈？",
           "source": "InfoQ",
           "url": "https://www.infoq.cn/article/lCM9r8iIt0E5taMhmCfK"
+        },
+        {
+          "title": "Off Grid应用实现离线端侧AI文生文、生图、视觉功能",
+          "summary": "开源应用Off Grid将文本生成、图像生成、视觉AI、语音转录等功能完全在手机本地离线运行，用户数据永不上传云端，充分利用手机GPU的计算能力。",
+          "comment": "端侧AI的隐私优势能否成为撼动云端AI服务模式的颠覆性力量？",
+          "source": "Hacker News",
+          "url": "https://github.com/alichherawalla/off-grid-mobile"
         }
       ]
     },
@@ -82,18 +96,25 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "前字节高管创业教育类出海项目，用Agent做\"终身学习搭子\"，红杉投了",
-          "summary": "前字节跳动高管李可佳、吴俊东、张栖铭联合创立AI教育公司Ouraca，推出AI Agent产品帮助用户终身学习，获得700万美元种子轮融资，投资方包括红杉中国等。",
-          "comment": "为什么互联网大厂的教育AI业务会成为新创业公司的融资热点？",
-          "source": "36氪",
-          "url": "https://36kr.com/p/3682939862740615?f=rss"
+          "title": "字节跳动豆包Seed 2.0发布，AI编程与创作能力升级",
+          "summary": "字节跳动推出豆包大模型2.0版本，具有增强的代码生成能力，用户可直接用其手搓macOS等复杂应用，标志着字节AI产品在Agent与编程工具方向的重要进展。",
+          "comment": "国内大模型在AI编程工具领域的能力突破是否能打破OpenAI的绝对优势地位？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655221?utm_source=rss&utm_medium=rss&utm_campaign="
+        },
+        {
+          "title": "xAI安全文化受质疑，Elon Musk推动Grok走向\"更无节制\"",
+          "summary": "据xAI前员工爆料，Elon Musk正\"积极\"推动Grok聊天机器人变得\"更加无节制\"，引发外界对该公司AI安全战略的担忧。",
+          "comment": "商业竞争压力下，AI安全与模型能力提升之间的权衡会如何影响整个行业的安全规范？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/14/is-safety-is-dead-at-xai/"
         }
       ]
     }
   ],
   "source": "manual",
-  "status": "pending_review",
-  "created_at": "2026-02-15T08:59:51.284671+08:00",
+  "status": "sent",
+  "created_at": "2026-02-15T10:27:36.301834+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
