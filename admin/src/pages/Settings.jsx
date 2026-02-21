@@ -34,6 +34,7 @@ const TIMEZONE_OPTIONS = [
 
 const BASE_SECRET_DEFS = [
   { name: 'ANTHROPIC_API_KEY', label: 'Claude API 密钥', desc: '用于调用 Claude API 生成新闻摘要', type: 'password' },
+  { name: 'MINIMAX_API_KEY', label: 'MiniMax API 密钥', desc: '用于调用 MiniMax M2.1 作为备选模型（可选）', type: 'password' },
   { name: 'SMTP_USERNAME', label: '发件邮箱地址', desc: 'SMTP 发件人邮箱', type: 'text' },
   { name: 'SMTP_PASSWORD', label: '邮箱授权码', desc: 'SMTP 邮箱授权码或应用密码', type: 'password' },
   { name: 'EMAIL_RECIPIENTS', label: '收件人邮箱', desc: '邮件收件人，多个邮箱用英文逗号分隔', type: 'text' },
