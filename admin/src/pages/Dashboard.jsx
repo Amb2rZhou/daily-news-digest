@@ -79,18 +79,18 @@ export default function Dashboard() {
         }
       } catch { /* WeWe RSS may be unreachable */ }
 
-      await loadRuns()
+      await loadRuns(parsedSettings?.channels)
     } catch (e) {
       console.error('Dashboard load error:', e)
     }
     setLoading(false)
   }
 
-  async function loadRuns() {
+  async function loadRuns(channelList) {
     try {
       const fetchRuns = await getWorkflowRuns('fetch-news.yml', 5)
       // Gather runs from all per-channel send workflows
-      const channels = (settings?.channels || []).filter(c => c.enabled)
+      const channels = (channelList || settings?.channels || []).filter(c => c.enabled)
       const sendWorkflows = channels.map(ch => `send-ch-${ch.id}.yml`)
       const sendRunsAll = []
       for (const wf of sendWorkflows) {

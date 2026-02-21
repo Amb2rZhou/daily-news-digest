@@ -520,7 +520,7 @@ def main():
             i += 1
 
     if mode == "fetch":
-        exit_code = run_fetch(settings, manual=manual_flag)
+        exit_code = run_fetch(settings, manual=manual_flag, channel_ids=[channel_id] if channel_id else None)
     elif mode == "send":
         exit_code = run_send(settings, date_arg, channel_id=channel_id)
     elif mode == "webhook":

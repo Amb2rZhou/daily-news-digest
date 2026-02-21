@@ -127,8 +127,18 @@ export default function Settings() {
     if (!settings) return
     setSaving(true)
     try {
-      const content = JSON.stringify(settings, null, 2) + '\n'
-      const result = await writeFile('config/settings.json', content, 'Update settings via admin UI', sha)
+      // Re-read latest settings to avoid overwriting changes from other pages (e.g. Sources)
+      const latest = await readFile('config/settings.json')
+      let latestSha = sha
+      let merged = settings
+      if (latest) {
+        latestSha = latest.sha
+        const latestData = JSON.parse(latest.content)
+        // Preserve fields managed by other pages
+        merged = { ...latestData, ...settings, rss_feeds: latestData.rss_feeds }
+      }
+      const content = JSON.stringify(merged, null, 2) + '\n'
+      const result = await writeFile('config/settings.json', content, 'Update settings via admin UI', latestSha)
       setSha(result.content.sha)
       alert('设置已保存')
     } catch (e) {

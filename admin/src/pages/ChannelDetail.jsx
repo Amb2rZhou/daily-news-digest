@@ -104,10 +104,13 @@ export default function ChannelDetail() {
       )
       setDraftSha(result.content.sha)
       setDraft(updatedDraft)
+      setSaving(false)
+      return true
     } catch (e) {
       alert('保存失败: ' + e.message)
+      setSaving(false)
+      return false
     }
-    setSaving(false)
   }
 
   // Save settings
@@ -145,7 +148,8 @@ export default function ChannelDetail() {
   // Approve/Reject
   async function handleApprove() {
     if (!draft) return
-    await saveDraft({ ...draft, status: 'approved' })
+    const saved = await saveDraft({ ...draft, status: 'approved' })
+    if (!saved) return
     const sendWf = id === 'email' ? 'send-ch-email.yml' : `send-ch-${id}.yml`
     handleTrigger(sendWf, 'send')
   }
