@@ -1,0 +1,113 @@
+{
+  "date": "2026-02-22",
+  "time_window": "2026-02-21 10:05 ~ 2026-02-22 10:05",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "OpenAI智能眼镜2028计划量产，联合Jony Ive打造下一代AI终端",
+          "summary": "OpenAI确认其智能眼镜产品将于2028年开始大规模量产，与设计大师Jony Ive合作打造下一代AI硬件终端。",
+          "comment": "当AI巨头与顶级硬件设计师联手，是否意味着可穿戴AI设备即将成为继智能手机后的下一个计算平台？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119392.html"
+        },
+        {
+          "title": "1000块/年的输入法，我用它习惯了'口喷'，再也回不去打字了",
+          "summary": "国内AI输入法产品通过语音识别和智能理解，改变用户的输入习惯，年费制模式获得用户认可。",
+          "comment": "AI输入法从工具升级为思维延伸，这背后的语言模型能力是否正在重塑人机交互的基础方式？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1654016?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "中国AI大厂春节促销掀热潮，字节跳动豆包、阿里通义千问等密集推广",
+          "summary": "字节跳动、阿里、Moonshot等中国AI企业在春节假期期间推出创意营销和产品促销，争夺消费者用户。",
+          "comment": "中国AI企业从B端走向C端，春节这个消费高峰是否标志着大模型应用开始进入大众化阶段？",
+          "source": "金融时报",
+          "url": "https://www.ft.com/content/a3f9cd15-0217-4a5d-85b2-89738a5fce70"
+        },
+        {
+          "title": "Microsoft新游戏CEO誓言不做'无尽AI垃圾'",
+          "summary": "微软新任游戏部门CEO表示将严格控制AI在游戏生态中的应用，避免用AI生成的低质内容泛滥。",
+          "comment": "在追求AI效率的时代，游戏行业的质量底线守护者立场是否代表科技公司对AI伦理的更深思考？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/21/microsofts-new-gaming-ceo-vows-not-to-flood-the-ecosystem-with-endless-ai-slop/"
+        },
+        {
+          "title": "中国人形机器人领跑全球：2025年出货占比近九成，2026年预计达2.8万台",
+          "summary": "中国人形机器人企业在2025年占全球出货量的90%，摩根士丹利预测2026年销量将翻倍增长至2.8万台。",
+          "comment": "中国在人形机器人领域实现压倒性优势，这是否意味着具身智能成为AI竞争的新高地？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119403.html"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "印度AI雄心在全球峰会中面临瓶颈，难找到国际地位",
+          "summary": "作为全球人口最多的国家，印度在AI产业中仍难以找到与美国、中国相匹敌的地位和话语权。",
+          "comment": "当AI竞争越来越成为国家层面的科技竞争，为什么拥有数据和人才优势的印度仍在落后？",
+          "source": "金融时报",
+          "url": "https://www.ft.com/content/5c26f2f6-c857-407c-93fe-7f59aa88c8f4"
+        },
+        {
+          "title": "第二届国际人形机器人论坛瑞士举行，多国共探产业化与具身智能发展",
+          "summary": "全球科研机构和企业代表在瑞士齐聚，探讨人形机器人的产业化推进与具身智能技术的发展路径。",
+          "comment": "当人形机器人从实验室走向产业端，如何解决应用场景匹配和成本控制的问题将成为关键？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119401.html"
+        },
+        {
+          "title": "视觉无人机检测进入关键基础设施防护体系",
+          "summary": "运用AI视觉识别技术的无人机检测系统开始被部署到关键基础设施保护的应急预案中。",
+          "comment": "AI在安全防护中的应用扩展，是否需要新的监管框架来平衡安全与隐私的关系？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/visual-drone-detection-moves-into-critical-infrastructure-playbooks/"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "中国逆势而上，全球'AI恐慌交易'中中国投资者追逐赢家",
+          "summary": "当美国股市因AI威胁业绩而陷入'AI恐慌交易'时，中国投资者正逆势追捧AI相关企业。",
+          "comment": "不同市场对AI威胁的评估反差如此之大，是否反映了未来AI应用生态的根本差异？",
+          "source": "彭博社",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-22/china-defies-global-ai-scare-trade-as-investors-chase-winners"
+        },
+        {
+          "title": "OpenAI首席Sam Altman提醒：人类也消耗大量能源",
+          "summary": "在AI能源消耗引发担忧之际，OpenAI领导人以人类能源消耗作为对比，重新审视AI的环境成本。",
+          "comment": "将AI能耗与人类活动进行类比，是否能帮助我们更理性地看待AI发展的环境代价？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/21/sam-altman-would-like-remind-you-that-humans-use-a-lot-of-energy-too/"
+        },
+        {
+          "title": "ChatGPT校园枪击案嫌疑人曾向AI描述暴力，OpenAI员工提前预警",
+          "summary": "加拿大校园枪击案嫌疑人此前使用ChatGPT描述枪支暴力，触发了系统审核，OpenAI员工曾提出安全顾虑。",
+          "comment": "当AI在识别潜在威胁时仍无法有效预防悲剧，AI安全防护与社会治理的边界应该如何划分？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-22T10:06:50.414264+08:00",
+  "channel_id": "ch_ml97ypb3",
+  "channel_name": "午休2小时",
+  "topic_mode": "broad"
+}

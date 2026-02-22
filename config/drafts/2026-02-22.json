@@ -1,0 +1,111 @@
+{
+  "date": "2026-02-22",
+  "time_window": "2026-02-21 10:05 ~ 2026-02-22 10:05",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "OpenAI智能眼镜2028年量产，与Jony Ive合作打造下一代AI终端",
+          "summary": "OpenAI确定了其核心可穿戴产品——智能眼镜的大规模量产时间为2028年，联合设计大师Jony Ive共同开发。这标志着OpenAI在硬件领域的重大战略布局。",
+          "comment": "当科技巨头纷纷押注智能眼镜赛道时，什么样的产品创新才能突破当前AR眼镜的应用瓶颈？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119392.html"
+        },
+        {
+          "title": "中国人形机器人2025年出货占全球九成，2026年预计达2.8万台",
+          "summary": "全球人形机器人市场中国企业领跑，2025年出货占比高达90%，2026年预计销量将翻倍增长至2.8万台。",
+          "comment": "在人形机器人产业化快速推进的背景下，如何解决成本、通用性和安全性问题成为下一步竞争的关键？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119403.html"
+        },
+        {
+          "title": "Meta Horizon+订阅用户突破百万，成VR订阅服务标杆",
+          "summary": "Meta旗下Quest头显游戏订阅服务Horizon+活跃订阅用户数突破100万，标志着VR内容消费模式的重要转变。",
+          "comment": "VR订阅制商业模式的成熟是否预示着VR设备将迎来更广泛的消费级应用普及？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119409.html"
+        },
+        {
+          "title": "国补加持智能眼镜成消费新宠，行业迎从尝鲜到常用关键期",
+          "summary": "在政策扶持下，智能眼镜成为消费者春节购置的热门选择，行业正处于从尝鲜阶段向常用阶段的关键转折期。",
+          "comment": "政策补贴能否真正推动智能眼镜的规模化消费，还是只是短期需求刺激？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119394.html"
+        },
+        {
+          "title": "东京《攻壳机动队》主题展融合AR技术，用XREAL Air 2 Ultra打造沉浸式体验",
+          "summary": "东京展览创新运用XREAL Air 2 Ultra AR眼镜，将经典赛博朋克IP与前沿现实技术深度融合，为观众打造沉浸式展览体验。",
+          "comment": "文化展览与AR硬件的结合是否代表了AR眼镜从消费级向内容应用侧深化的新方向？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119407.html"
+        },
+        {
+          "title": "深圳甘坑古镇推出《客从盛唐来》MR展，虚实交融解锁文化沉浸新体验",
+          "summary": "甘坑古镇运用MR混合现实技术打造大空间交互展览，让游客可步入、可触摸、可参与盛唐历史场景，树立了文化与科技融合的文旅新范式。",
+          "comment": "MR设备在文旅场景中的规模化应用，将如何重塑传统景区的商业价值链？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119411.html"
+        },
+        {
+          "title": "第二届国际人形机器人论坛在瑞士举行，多国共探产业化与具身智能发展",
+          "summary": "全球科研机构和企业在瑞士论坛探讨人形机器人产业化和具身智能技术，聚焦如何推动机器人从实验室走向产业应用。",
+          "comment": "国际人形机器人论坛的交流成果是否能加速全球机器人产业的标准化和商业化进程？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119401.html"
+        },
+        {
+          "title": "VR游戏《ZIX》迎来Foundation核心更新，公布免费衍生新作《Gogo Dojo》",
+          "summary": "VR游戏《ZIX》发布重磅Foundation更新和免费衍生作品，旨在应对竞争激烈的VR游戏市场，拓展玩家群体。",
+          "comment": "VR游戏开发商通过免费衍生作品扩大用户基数的策略，是否能有效提升VR头显的活跃度？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119405.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Claude Code 使用指南：规划与执行的分离",
+          "summary": "开发者分享了如何使用 Anthropic 的 Claude Code 工具，通过分离规划和执行阶段来提升 AI 编程助手的效能。",
+          "comment": "将复杂的编程任务拆解为规划和执行两个阶段，是否能成为 AI 编程工具的最佳实践范式？",
+          "source": "Hacker News",
+          "url": "https://boristane.com/blog/how-i-use-claude-code/"
+        },
+        {
+          "title": "1000块/年的输入法让用户适应了'口喷'，再也回不去打字了",
+          "summary": "一款搭载 AI 能力的高端输入法通过语音输入等创新交互方式，改变了用户的文字输入习惯。",
+          "comment": "AI 赋能的输入法如何通过改变人的交互方式来提升用户粘性，这种产品体验升级能否成为下一代输入法的发展方向？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1654016?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "中国 AI 实验室在春节期间推出新模型和营销活动吸引用户",
+          "summary": "字节跳动、阿里巴巴和 Moonshot 等中国 AI 企业在春节假期期间推出新模型和促销活动，展开面向消费者的宣传攻势。",
+          "comment": "中国 AI 厂商在春节期间集中发力消费级 AI 产品，是否反映出国内 AI 市场竞争进入白热化阶段？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/a3f9cd15-0217-4a5d-85b2-89738a5fce70"
+        },
+        {
+          "title": "微软新任游戏 CEO 誓言不会充斥'无尽的 AI 垃圾'内容",
+          "summary": "微软游戏部门新 CEO 表态将谨慎使用 AI 技术，拒绝向游戏生态中填充低质量的 AI 生成内容。",
+          "comment": "在 AI 生成内容泛滥的时代，游戏行业如何在 AI 创新和质量控制之间找到平衡点？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/21/microsofts-new-gaming-ceo-vows-not-to-flood-the-ecosystem-with-endless-ai-slop/"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-22T10:06:29.784240+08:00"
+}
