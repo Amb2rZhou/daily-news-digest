@@ -1,64 +1,64 @@
 {
   "date": "2026-02-22",
-  "time_window": "2026-02-21 10:17 ~ 2026-02-22 10:17",
+  "time_window": "2026-02-21 10:00 ~ 2026-02-22 09:59",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "OpenAI智能眼镜2028年量产计划曝光，携手Jony Ive打造下一代AI终端",
-          "summary": "OpenAI确认将在2028年大规模量产智能眼镜产品，与设计大师Jony Ive合作打造新一代可穿戴AI设备。",
-          "comment": "当科技巨头都将智能眼镜视为下一代AI交互入口，这是否预示着手机时代正在逐步让位？",
+          "title": "OpenAI智能眼镜2028年量产，联合Jony Ive打造下一代AI终端",
+          "summary": "OpenAI宣布其核心可穿戴产品——智能眼镜的大规模量产时间确定为2028年，与设计大师Jony Ive合作打造。",
+          "comment": "当OpenAI、Meta等科技巨头纷纷押注智能眼镜，这会成为下一个真正爆发的AI硬件品类吗？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119392.html"
         },
         {
-          "title": "中国人形机器人2025年出货占全球九成，2026年预计翻倍增长至2.8万台",
-          "summary": "中国人形机器人产业领跑全球，2025年出货量约1.3万台占比90%，2026年销量有望达到2.8万台。",
-          "comment": "中国人形机器人为何能在短时间内占据全球市场的绝对优势？",
+          "title": "中国人形机器人领跑全球，2025年出货占比近九成，2026年预计达2.8万台",
+          "summary": "2025年全球人形机器人出货量约1.3万台，中国企业贡献占比高达90%，摩根士丹利预测2026年中国销量将翻倍至2.8万台。",
+          "comment": "中国在人形机器人领域为何能实现如此领先的出货占比和增速？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119403.html"
         },
         {
-          "title": "国补加持下智能眼镜成消费新宠，行业迈向从尝鲜到常用的关键期",
-          "summary": "政府补贴政策的推动下，智能眼镜成为消费者新年选购的热门产品，行业发展进入关键转折点。",
-          "comment": "政策补贴能否真正推动智能眼镜从小众产品向大众消费品的转变？",
+          "title": "国补加持智能眼镜成消费新宠，行业迎从尝鲜到常用关键期",
+          "summary": "在国家补贴政策支持下，智能眼镜成为消费者购置新年货的热门选择，行业进入从尝鲜到常用的关键发展期。",
+          "comment": "政策补贴对智能眼镜的普及有多大推动作用，用户购买之后的实际应用场景是否能转化为长期粘性？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119394.html"
         },
         {
-          "title": "Meta Horizon+订阅用户突破百万，成为VR订阅服务发展的重要里程碑",
-          "summary": "Meta旗下Quest头显游戏订阅服务Horizon+活跃用户数突破100万，标志着VR内容消费模式的重大转变。",
-          "comment": "VR订阅制的成功是否能复制到其他新兴硬件平台的内容生态建设中？",
+          "title": "Meta Horizon+订阅用户破百万，成VR订阅服务标杆",
+          "summary": "Meta宣布旗下Quest头显游戏订阅服务Horizon+活跃订阅用户数突破100万，成为VR行业订阅制服务的重要里程碑。",
+          "comment": "VR头显订阅制服务的商业模式逐渐成熟，这是否意味着VR内容消费从买断制向订阅制的转变趋势已成定局？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119409.html"
         },
         {
-          "title": "东京《攻壳机动队》主题展融合AR技术，用XREAL眼镜打造沉浸式赛博朋克体验",
-          "summary": "东京展览首次运用XREAL Air 2 Ultra AR眼镜创造沉浸式体验，将经典IP与前沿现实技术深度融合。",
-          "comment": "AR眼镜在文化展览和娱乐场景中的应用是否会成为其大规模普及的重要突破口？",
+          "title": "东京《攻壳机动队》主题展融合AR技术，打造沉浸式赛博朋克体验",
+          "summary": "东京举办的《攻壳机动队》主题展创新运用XREAL Air 2 Ultra AR眼镜，将经典IP与前沿现实技术深度融合，展期至4月5日。",
+          "comment": "AR眼镜在文化展览和艺术展示中的应用如何改变传统参展体验，这种融合能否成为未来博物馆和展览的新常态？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119407.html"
         },
         {
-          "title": "第二届国际人形机器人论坛瑞士举行，全球共探产业化与具身智能发展",
-          "summary": "来自多国的科研机构、企业和投资界代表在瑞士汇聚，围绕人形机器人产业化和具身智能技术展开深度交流。",
-          "comment": "国际合作能否加速人形机器人从实验室走向实际应用的进程？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119401.html"
-        },
-        {
-          "title": "深圳甘坑古镇推出《客从盛唐来》MR展，用混合现实技术打造文化沉浸新体验",
-          "summary": "通过MR混合现实技术，展览在大空间交互场景中生动还原历史文化，树立了'文化+科技'融合的新范式。",
-          "comment": "MR技术在文化遗产保护和传承中的应用是否会成为传统文化走向年轻人的新桥梁？",
+          "title": "深圳甘坑古镇推出《客从盛唐来》MR展，虚实交融解锁文化沉浸新体验",
+          "summary": "甘坑古镇推出特色MR展览，以混合现实技术打破时空边界，还原盛唐和客家南迁历史，树立文化+科技融合新范式。",
+          "comment": "MR技术在文化遗产保护和历史叙事中的应用潜力有多大，它如何改变游客与历史的交互方式？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119411.html"
         },
         {
-          "title": "VR游戏《ZIX》推出Foundation核心更新，同步发布免费衍生作品应对市场竞争",
-          "summary": "霓虹风格合作类游戏《ZIX》推出重磅更新并发布免费衍生作品《Gogo Dojo》，旨在拓展VR游戏玩家基数。",
-          "comment": "在VR游戏市场竞争加剧的背景下，免费衍生作品策略是否是可持续的商业模式？",
+          "title": "第二届国际人形机器人论坛瑞士举行，多国共探产业化与具身智能发展",
+          "summary": "第二届国际人形机器人论坛在瑞士举办，全球科研机构、企业和投资界探讨人形机器人产业化推进和具身智能技术发展路径。",
+          "comment": "国际合作在推动人形机器人从实验室走向产业应用中扮演怎样的角色？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119401.html"
+        },
+        {
+          "title": "VR游戏《ZIX》迎来Foundation核心更新，公布免费衍生新作《Gogo Dojo》",
+          "summary": "VR游戏《ZIX》开发商Hidden IO推出重磅Foundation更新，同时公布免费衍生作品《Gogo Dojo》，以应对竞争激烈的VR游戏市场。",
+          "comment": "VR游戏开发商通过衍生作品和免费策略来扩展用户群体，这种运营模式能否有效提升VR平台的生态活力？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119405.html"
         }
@@ -69,18 +69,18 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "我如何使用Claude Code：规划与执行的分离",
-          "summary": "开发者分享了使用Anthropic的Claude Code AI编程工具的实践方法，展示了将规划和执行分离的工作流程。",
-          "comment": "AI编程助手如何改变开发者的工作方式，相比传统编程工具优势在哪里？",
-          "source": "Hacker News",
-          "url": "https://boristane.com/blog/how-i-use-claude-code/"
+          "title": "阿里云Coding Plan新增支持千问3.5、GLM-4.7等顶尖编程模型",
+          "summary": "阿里云Coding Plan订阅服务新增支持Qwen3.5-Plus、GLM-4.7等4款编程模型，用户可自由切换，首月新用户仅需7.9元享18000次请求额度。该服务针对AI Agent任务复杂度高、Token消耗量大的问题提供性价比解决方案。",
+          "comment": "随着AI Agent应用的爆炸性增长，为何编程模型的灵活订阅制会成为开发者的刚需？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/YcpxNqf22S9oxi7j.html"
         },
         {
-          "title": "千元/年的AI输入法，让我习惯了'口喷'，再也回不去打字了",
-          "summary": "爱范儿介绍了一款具备AI能力的高端输入法产品，通过语音识别和AI理解大幅提升输入效率。",
-          "comment": "付费AI应用在消费端的价值突破点是什么，用户愿意为哪些AI能力埋单？",
-          "source": "爱范儿",
-          "url": "https://www.ifanr.com/1654016?utm_source=rss&utm_medium=rss&utm_campaign="
+          "title": "Cursor设计负责人谈AI编程工具的演进与设计哲学",
+          "summary": "Cursor设计负责人Ryo Lu分享了4人设计团队如何管理293亿美元产品、用Cursor构建Cursor的递归飞轮，以及为什么Cursor专注AI编程助手而非代码编辑器。",
+          "comment": "当AI工具自身用AI来设计和优化时，这种递归飞轮会如何加速产品的迭代周期？",
+          "source": "宝玉的分享",
+          "url": "https://baoyu.io/blog/2026-02-21/cursor-ryo-lu-design-team"
         }
       ]
     },
@@ -89,30 +89,30 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "中国AI实验室在春节推出新模型和推广活动吸引消费者",
-          "summary": "字节跳动、阿里巴巴、Moonshot等中国AI企业在春节假期期间推出新模型和营销活动，积极争取消费者。",
-          "comment": "国内大厂在消费级AI市场的激烈竞争，相比海外AI产品的差异化优势在哪？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/a3f9cd15-0217-4a5d-85b2-89738a5fce70"
+          "title": "谷歌再投12400亿冲击全球AI\"王座\"",
+          "summary": "谷歌宣布新一轮重磅投资，投入资金用于AI基础设施和研发，力图在全球AI竞争中占据领先地位。",
+          "comment": "在算力竞争日趋激烈的时代，巨头的持续重资本投入是否会成为AI发展的新常态？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7886627.html"
         },
         {
-          "title": "中国挑战全球'AI恐慌交易'，投资者追逐赢家",
-          "summary": "在全球AI浪潮下，美国市场陷入'AI恐慌交易'抛售软件公司，而中国投资者则在追逐AI领域的赢家公司。",
-          "comment": "为什么中美投资者对AI相关企业的态度呈现明显分化，背后反映了什么样的市场认知差异？",
-          "source": "Bloomberg",
+          "title": "OpenAI内部权力斗争曝光：Ilya因嫉妒下属而点燃火药桶",
+          "summary": "新文件显示OpenAI首席科学家Ilya因嫉妒优秀下属Jakub的突破而导致内部纠纷，最终导致奥特曼被董事会踢出、高管离职潮，算力不足和预算压力是根本原因。",
+          "comment": "当AI领域的竞争压力和资源限制加剧时，顶级AI公司内部的权力冲突是否不可避免？",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3693861726826112?f=rss"
+        },
+        {
+          "title": "中国逆势抄底AI赛道，全球AI\"恐慌性抛售\"中的机遇",
+          "summary": "在美国市场陷入\"AI恐慌交易\"、投资者抛售软件公司之际，中国投资者逆势布局AI赢家，显示出对AI产业前景的坚定信心。",
+          "comment": "为什么中国资本在全球AI市场恐慌时表现出更强的战略定力？",
+          "source": "Bloomberg Technology",
           "url": "https://www.bloomberg.com/news/articles/2026-02-22/china-defies-global-ai-scare-trade-as-investors-chase-winners"
-        },
-        {
-          "title": "Sam Altman回应AI能耗争议：人类也消耗大量能源",
-          "summary": "OpenAI首席执行官Sam Altman就AI训练的高能耗问题进行回应，指出人类的能源消耗同样巨大。",
-          "comment": "AI能耗问题的争论中，如何理性评估AI相对于人类活动的真实环境影响？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/21/sam-altman-would-like-remind-you-that-humans-use-a-lot-of-energy-too/"
         }
       ]
     }
   ],
-  "source": "manual",
+  "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-22T10:17:56.461695+08:00"
+  "created_at": "2026-02-22T13:13:31.092992+08:00"
 }
