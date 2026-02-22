@@ -113,8 +113,8 @@
     }
   ],
   "source": "manual",
-  "status": "approved",
-  "created_at": "2026-02-22T10:17:56.462293+08:00",
+  "status": "sent",
+  "created_at": "2026-02-22T10:20:35.943215+08:00",
   "channel_id": "default",
   "channel_name": "2人测试群",
   "topic_mode": "focused"
