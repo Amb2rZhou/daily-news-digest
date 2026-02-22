@@ -118,12 +118,22 @@ export default function ChannelDetail() {
     if (!settings) return
     setSettingsSaving(true)
     try {
-      const content = JSON.stringify(settings, null, 2) + '\n'
+      // Re-read latest settings to avoid overwriting changes from other pages
+      const latest = await readFile('config/settings.json')
+      let latestSha = settingsSha
+      let merged = settings
+      if (latest) {
+        latestSha = latest.sha
+        const latestData = JSON.parse(latest.content)
+        // Preserve rss_feeds from latest, apply our channel changes
+        merged = { ...latestData, channels: settings.channels }
+      }
+      const content = JSON.stringify(merged, null, 2) + '\n'
       const result = await writeFile(
         'config/settings.json',
         content,
         'Update channel settings via admin UI',
-        settingsSha
+        latestSha
       )
       setSettingsSha(result.content.sha)
       alert('设置已保存')

@@ -223,11 +223,14 @@ def get_cutoff_time(settings: dict = None, manual: bool = False, channel: dict =
 
     if manual:
         # Manual trigger: 24h before now
-        return (now - timedelta(days=1)).replace(tzinfo=None)
+        # Convert to UTC before stripping tzinfo (RSS published_parsed is naive UTC)
+        cutoff = now - timedelta(days=1)
+        return cutoff.astimezone(ZoneInfo("UTC")).replace(tzinfo=None)
     else:
         # Auto trigger: 24h before today's scheduled send time
         today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-        return (today_send - timedelta(days=1)).replace(tzinfo=None)
+        cutoff = today_send - timedelta(days=1)
+        return cutoff.astimezone(ZoneInfo("UTC")).replace(tzinfo=None)
 
 def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
     """Parse a single RSS feed and return recent articles."""

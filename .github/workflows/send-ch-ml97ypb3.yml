@@ -7,6 +7,10 @@ on:
     types: [completed]
   workflow_dispatch: {}
 
+concurrency:
+  group: send-ch-ml97ypb3
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -85,16 +89,21 @@ jobs:
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Mark ch_ml97ypb3 draft as sent"
           BRANCH="${GITHUB_REF#refs/heads/}"
+          push_ok=false
           for i in 1 2 3 4 5; do
             git pull origin "$BRANCH" --rebase -X theirs || {
               git checkout --theirs config/drafts/ 2>/dev/null || true
               git add config/drafts/
               git rebase --continue || true
             }
-            git push origin HEAD:"$BRANCH" && break
+            git push origin HEAD:"$BRANCH" && { push_ok=true; break; }
             echo "Push attempt $i failed, retrying after random sleep..."
             sleep $((RANDOM % 15 + 5))
           done
+          if [ "$push_ok" = false ]; then
+            echo "ERROR: git push failed after 5 attempts"
+            exit 1
+          fi
 
       - name: Notify admin on failure
         if: failure()
@@ -106,7 +115,7 @@ jobs:
           EMAIL_RECIPIENTS: ${{ secrets.ADMIN_EMAIL }}
         run: |
           cd src
-          python -c "
+          python3 -c "
           from send_email import send_email
           send_email(
               subject='[FAILED] Send ch_ml97ypb3 - ${{ github.run_id }}',

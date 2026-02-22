@@ -23,6 +23,7 @@ export default function Dashboard() {
   const [triggerStatus, setTriggerStatus] = useState({})
   const [channelDraftInfo, setChannelDraftInfo] = useState({}) // { channelId: { status, newsCount } }
   const pollRef = useRef(null)
+  const loadRunsRef = useRef(null)
 
   useEffect(() => { load() }, [])
   useEffect(() => {
@@ -105,6 +106,7 @@ export default function Dashboard() {
       ].sort((a, b) => new Date(b.created_at) - new Date(a.created_at)).slice(0, 10))
     } catch { /* workflow may not exist yet */ }
   }
+  loadRunsRef.current = loadRuns
 
   const handleTrigger = useCallback(async (workflowFile, key, inputs = {}) => {
     setTriggerStatus(prev => ({ ...prev, [key]: 'loading' }))
@@ -116,7 +118,7 @@ export default function Dashboard() {
       if (pollRef.current) clearInterval(pollRef.current)
       pollRef.current = setInterval(async () => {
         elapsed += 10
-        await loadRuns()
+        await loadRunsRef.current?.()
         if (elapsed >= 60) {
           clearInterval(pollRef.current)
           pollRef.current = null

@@ -41,10 +41,20 @@ export default function Sources() {
   async function save(updatedSettings, { silent = false, message = 'Update RSS feeds via admin UI' } = {}) {
     setSaving(true)
     try {
-      const content = JSON.stringify(updatedSettings, null, 2) + '\n'
-      const result = await writeFile('config/settings.json', content, message, sha)
+      // Re-read latest settings to avoid overwriting changes from other pages
+      const latest = await readFile('config/settings.json')
+      let latestSha = sha
+      let merged = updatedSettings
+      if (latest) {
+        latestSha = latest.sha
+        const latestData = JSON.parse(latest.content)
+        // Preserve rss_feeds from our update, keep everything else from latest
+        merged = { ...latestData, rss_feeds: updatedSettings.rss_feeds }
+      }
+      const content = JSON.stringify(merged, null, 2) + '\n'
+      const result = await writeFile('config/settings.json', content, message, latestSha)
       setSha(result.content.sha)
-      setSettings(updatedSettings)
+      setSettings(merged)
       if (!silent) alert('已保存')
     } catch (e) {
       alert('保存失败: ' + e.message)

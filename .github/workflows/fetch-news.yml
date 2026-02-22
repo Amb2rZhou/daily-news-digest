@@ -15,6 +15,10 @@ on:
         type: boolean
         default: false
 
+concurrency:
+  group: fetch-news
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -216,7 +220,7 @@ jobs:
           EMAIL_RECIPIENTS: ${{ secrets.ADMIN_EMAIL }}
         run: |
           cd src
-          python -c "
+          python3 -c "
           from send_email import send_email
           send_email(
               subject='[FAILED] Fetch News - ${{ github.run_id }}',
