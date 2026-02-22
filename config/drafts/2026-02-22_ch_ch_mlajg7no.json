@@ -1,6 +1,6 @@
 {
   "date": "2026-02-22",
-  "time_window": "2026-02-21 10:11 ~ 2026-02-22 10:11",
+  "time_window": "2026-02-21 10:17 ~ 2026-02-22 10:17",
   "categories": [
     {
       "name": "产品发布",
@@ -8,10 +8,17 @@
       "news": [
         {
           "title": "OpenAI智能眼镜2028计划量产，联合Jony Ive打造下一代AI终端",
-          "summary": "OpenAI确定其智能眼镜产品将于2028年大规模量产，与设计大师Jony Ive合作打造下一代AI可穿戴设备。",
-          "comment": "当AI巨头与顶级工业设计师合作打造硬件产品，是否预示着AI界即将进入以软硬件一体化为核心的竞争新时代？",
+          "summary": "OpenAI确定其核心可穿戴产品智能眼镜的大规模量产时间为2028年，与设计大师Jony Ive合作打造下一代AI硬件终端。",
+          "comment": "当AI模型与顶尖硬件设计相结合，是否会改变人们与AI交互的方式，成为新的计算范式？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119392.html"
+        },
+        {
+          "title": "How I use Claude Code: Separation of planning and execution",
+          "summary": "开发者分享了Claude Code工具的实际使用心得，阐述如何通过规划和执行分离来提高开发效率。",
+          "comment": "AI代码辅助工具的最佳实践是否正在建立新的软件开发范式？",
+          "source": "Hacker News: Front Page",
+          "url": "https://boristane.com/blog/how-i-use-claude-code/"
         }
       ]
     },
@@ -20,25 +27,25 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "中国AI实验室春节期间推出新模型并提供优惠吸引用户",
-          "summary": "字节跳动、阿里、Moonshot等中国AI企业在春节假期期间推出新模型和促销活动，争夺消费者市场。",
-          "comment": "中国AI企业为何选择春节这个关键时段进行密集的产品发布和营销活动，这反映了国内AI市场竞争的什么态势？",
+          "title": "China's AI labs unleash new models and bubble tea to lure in customers",
+          "summary": "字节跳动、阿里巴巴、Moonshot等中国AI实验室在春节假期推出新模型并开展促销活动，争夺消费者关注。",
+          "comment": "中国AI厂商在用户争夺战中从产品创新转向营销创新，这是否意味着大模型竞争已进入存量用户阶段？",
           "source": "Financial Times",
           "url": "https://www.ft.com/content/a3f9cd15-0217-4a5d-85b2-89738a5fce70"
         },
         {
-          "title": "中国人形机器人领跑全球：2025年出货占比近九成，2026年预计达2.8万台",
-          "summary": "2025年全球人形机器人出货量约1.3万台，中国企业贡献占比高达90%，摩根士丹利预测2026年中国销量将翻倍增长至2.8万台。",
-          "comment": "中国人形机器人为何能在短时间内占据全球近九成的市场份额，这背后的技术突破和产业支持体系是什么？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119403.html"
-        },
-        {
-          "title": "Microsoft新任游戏CEO承诺不会充斥'无尽AI垃圾'内容",
-          "summary": "微软新上任的游戏部门CEO表示将谨慎应用AI技术，避免游戏生态被低质AI生成内容淹没。",
-          "comment": "在AI生成内容成为风口的背景下，游戏行业的领导者为何需要主动设置'AI应用底线'，这说明了什么问题？",
+          "title": "Microsoft's new gaming CEO vows not to flood the ecosystem with 'endless AI slop'",
+          "summary": "微软游戏部门新任CEO承诺不会用低质量的AI生成内容填充游戏生态，暗示将谨慎整合AI技术。",
+          "comment": "游戏行业对AI的谨慎态度是否反映出AI与创意内容的融合仍需找到恰当的平衡点？",
           "source": "TechCrunch",
           "url": "https://techcrunch.com/2026/02/21/microsofts-new-gaming-ceo-vows-not-to-flood-the-ecosystem-with-endless-ai-slop/"
+        },
+        {
+          "title": "China Defies Global 'AI Scare Trade' as Investors Chase Winners",
+          "summary": "全球股市陷入'AI恐慌交易'抛售软件公司，但中国投资者逆势追捧AI领域赢家，显示市场分化。",
+          "comment": "中国资本市场对AI前景的乐观态度是基于技术信心还是政策支持？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-22/china-defies-global-ai-scare-trade-as-investors-chase-winners"
         }
       ]
     },
@@ -47,18 +54,25 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "Claude Code开发经验分享：规划与执行的分离策略",
-          "summary": "开发者分享了如何有效使用Claude代码执行功能，通过分离规划和执行阶段来提高AI编程效率。",
-          "comment": "在AI辅助编程中引入'规划与执行分离'的思想，是否可能成为提升AI代码质量的通用最佳实践？",
-          "source": "Hacker News",
-          "url": "https://boristane.com/blog/how-i-use-claude-code/"
+          "title": "中国人形机器人领跑全球：2025年出货占比近九成，2026年预计达2.8万台",
+          "summary": "2025年全球人形机器人出货量约1.3万台中国贡献90%，摩根士丹利预测2026年中国销量将翻倍增至2.8万台，持续领跑全球。",
+          "comment": "中国在人形机器人领域的绝对优势是源于成本优势还是技术创新突破？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119403.html"
         },
         {
-          "title": "视觉无人机检测技术融入关键基础设施防护体系",
-          "summary": "运用先进AI视觉识别技术检测无人机，成为关键基础设施安全防护的重要手段。",
-          "comment": "随着无人机应用日益普遍，AI视觉检测技术如何在防范风险和保护隐私之间找到平衡点？",
+          "title": "Visual drone detection moves into critical infrastructure playbooks",
+          "summary": "基于视觉的无人机检测技术被纳入关键基础设施防护体系，成为应对无人机威胁的重要防御工具。",
+          "comment": "AI视觉检测技术在安全领域的应用是否会催生新的基础设施防护标准？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/visual-drone-detection-moves-into-critical-infrastructure-playbooks/"
+        },
+        {
+          "title": "第二届国际人形机器人论坛瑞士举行 多国共探产业化与具身智能发展",
+          "summary": "全球科研机构和企业代表在瑞士论坛上围绕人形机器人产业化和具身智能技术展开深度交流，致力于推动从实验室向产业端转化。",
+          "comment": "具身智能作为AGI的关键路径，其产业化进展是否正在加速AI从虚拟世界向物理世界的转移？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119401.html"
         }
       ]
     },
@@ -67,30 +81,23 @@
       "icon": "📊",
       "news": [
         {
-          "title": "全球'AI恐慌交易'中国逆势上扬，投资者追逐赢家",
-          "summary": "在美股陷入'AI恐慌交易'的背景下，中国市场上的AI相关投资仍然火热，投资者持续追逐AI领域的领先企业。",
-          "comment": "为何中国市场对AI的投资热情与全球其他市场形成鲜明对比，这背后反映了对AI未来前景的不同判断吗？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-22/china-defies-global-ai-scare-trade-as-investors-chase-winners"
-        },
-        {
-          "title": "印度AI雄心在全球峰会中遭遇困境，被美中主导的产业格局困扰",
-          "summary": "全球人口最多的国家在AI产业中仍难以找到位置，被美国和中国主导的格局所制约。",
-          "comment": "作为全球人口大国和IT人才储备地，印度为何在全球AI产业竞争中面临如此窘境，突破口在哪里？",
+          "title": "India's AI ambitions hit limits at global summit",
+          "summary": "全球最人口众多的国家在全球AI峰会上暴露出其雄心与现实的差距，在被美国和中国主导的产业中难以找到自身位置。",
+          "comment": "为什么印度虽然拥有庞大的技术人才库却在AI产业竞争中相对落后，这反映了什么深层的产业结构问题？",
           "source": "Financial Times",
           "url": "https://www.ft.com/content/5c26f2f6-c857-407c-93fe-7f59aa88c8f4"
         },
         {
-          "title": "第二届国际人形机器人论坛在瑞士举行，探讨产业化与具身智能发展",
-          "summary": "来自全球多国的科研机构、企业及投资者在瑞士论坛上围绕人形机器人产业化和具身智能技术展开深度交流。",
-          "comment": "人形机器人从实验室走向产业应用的关键瓶颈是什么，国际合作在这一过程中扮演着怎样的角色？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119401.html"
+          "title": "Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT",
+          "summary": "加拿大Tumbler Ridge枪击案嫌疑人Jesse Van Rootselaar曾向ChatGPT描述暴力场景，触发了OpenAI的审查系统，但最终仍未阻止悲剧发生。",
+          "comment": "AI安全监测系统在识别高危用户和防止真实伤害之间的鸿沟如何才能弥合？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt"
         },
         {
-          "title": "Sam Altman回应AI能源消耗问题：人类训练也消耗大量能量",
-          "summary": "OpenAI首席执行官Sam Altman在回应外界关于AI能源消耗的担忧时表示，人类教育培养同样需要巨大能源投入。",
-          "comment": "当我们讨论AI的环境成本时，应该如何科学地与人类社会的运营成本进行对标和评估？",
+          "title": "Sam Altman would like remind you that humans use a lot of energy, too",
+          "summary": "OpenAI CEO Sam Altman在能源消耗争议中辩称，训练人类同样需要消耗大量能源，为AI能源占用进行辩护。",
+          "comment": "这个关于AI能源效率的辩论是否本质上转移了关于AI可持续性的核心问题？",
           "source": "TechCrunch",
           "url": "https://techcrunch.com/2026/02/21/sam-altman-would-like-remind-you-that-humans-use-a-lot-of-energy-too/"
         }
@@ -99,7 +106,7 @@
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-22T10:12:01.246745+08:00",
+  "created_at": "2026-02-22T10:18:15.641290+08:00",
   "channel_id": "ch_mlajg7no",
   "channel_name": "2人测试群for部门",
   "topic_mode": "broad"

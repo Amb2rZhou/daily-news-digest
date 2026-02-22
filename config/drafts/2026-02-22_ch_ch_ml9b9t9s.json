@@ -1,64 +1,64 @@
 {
   "date": "2026-02-22",
-  "time_window": "2026-02-21 10:11 ~ 2026-02-22 10:11",
+  "time_window": "2026-02-21 10:17 ~ 2026-02-22 10:17",
   "categories": [
     {
       "name": "智能硬件",
       "icon": "🥽",
       "news": [
         {
-          "title": "OpenAI智能眼镜2028年量产，联合Jony Ive打造下一代AI终端",
-          "summary": "OpenAI确定其AI可穿戴产品——智能眼镜的大规模量产时间为2028年，与设计大师Jony Ive合作打造。这标志着OpenAI在硬件赛道的重要布局浮出水面。",
-          "comment": "除了ChatGPT等软件产品外，OpenAI为什么要投入巨资开发硬件设备来承载AI功能？",
+          "title": "OpenAI智能眼镜2028年量产计划曝光，携手Jony Ive打造下一代AI终端",
+          "summary": "OpenAI确认将在2028年大规模量产智能眼镜产品，与设计大师Jony Ive合作打造新一代可穿戴AI设备。",
+          "comment": "当科技巨头都将智能眼镜视为下一代AI交互入口，这是否预示着手机时代正在逐步让位？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119392.html"
         },
         {
-          "title": "中国人形机器人领跑全球：2025年出货占比近九成，2026年预计达2.8万台",
-          "summary": "2025年全球人形机器人出货量约1.3万台，中国企业贡献占比高达90%；摩根士丹利预测2026年中国人形机器人销量将翻倍增长至2.8万台。",
-          "comment": "中国人形机器人在出货量上的绝对优势，能否转化为长期的产业竞争力和技术积累？",
+          "title": "中国人形机器人2025年出货占全球九成，2026年预计翻倍增长至2.8万台",
+          "summary": "中国人形机器人产业领跑全球，2025年出货量约1.3万台占比90%，2026年销量有望达到2.8万台。",
+          "comment": "中国人形机器人为何能在短时间内占据全球市场的绝对优势？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119403.html"
         },
         {
-          "title": "Meta Horizon+订阅用户破百万，成VR订阅服务标杆",
-          "summary": "Meta的Quest头显游戏订阅服务Horizon+活跃订阅用户数突破100万，成为VR行业订阅制服务发展的重要里程碑。",
-          "comment": "VR内容订阅模式的成功能否复制到AR/MR等其他空间计算设备上？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119409.html"
-        },
-        {
-          "title": "国补加持智能眼镜成消费新宠，行业迎从尝鲜到常用关键期",
-          "summary": "在政策补贴支持下，智能眼镜成为消费者购置的热门选择，产业进入从尝鲜到日常使用的关键转折阶段。",
-          "comment": "政府补贴驱动的消费需求能否推动智能眼镜产业形成可持续的商业闭环？",
+          "title": "国补加持下智能眼镜成消费新宠，行业迈向从尝鲜到常用的关键期",
+          "summary": "政府补贴政策的推动下，智能眼镜成为消费者新年选购的热门产品，行业发展进入关键转折点。",
+          "comment": "政策补贴能否真正推动智能眼镜从小众产品向大众消费品的转变？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119394.html"
         },
         {
-          "title": "东京《攻壳机动队》主题展融合AR技术，沉浸式致敬经典赛博朋克IP",
-          "summary": "东京展览创新运用XREAL Air 2 Ultra AR眼镜技术，将经典赛博朋克IP与前沿现实技术深度融合，打造沉浸式艺术体验。",
-          "comment": "AR眼镜在文化展览和艺术体验中的应用是否能成为推动消费级AR设备普及的新引擎？",
+          "title": "Meta Horizon+订阅用户突破百万，成为VR订阅服务发展的重要里程碑",
+          "summary": "Meta旗下Quest头显游戏订阅服务Horizon+活跃用户数突破100万，标志着VR内容消费模式的重大转变。",
+          "comment": "VR订阅制的成功是否能复制到其他新兴硬件平台的内容生态建设中？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119409.html"
+        },
+        {
+          "title": "东京《攻壳机动队》主题展融合AR技术，用XREAL眼镜打造沉浸式赛博朋克体验",
+          "summary": "东京展览首次运用XREAL Air 2 Ultra AR眼镜创造沉浸式体验，将经典IP与前沿现实技术深度融合。",
+          "comment": "AR眼镜在文化展览和娱乐场景中的应用是否会成为其大规模普及的重要突破口？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119407.html"
         },
         {
-          "title": "深圳甘坑古镇推出《客从盛唐来》MR展，虚实交融解锁文化沉浸新体验",
-          "summary": "甘坑古镇以MR混合现实技术打造特色展览，打破时空边界还原历史脉络，为游客提供沉浸式文化体验。",
-          "comment": "MR技术在文化旅游领域的应用能否形成可复制的商业模式，并推动地方文旅产业升级？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119411.html"
-        },
-        {
-          "title": "第二届国际人形机器人论坛瑞士举行，多国共探产业化与具身智能发展",
-          "summary": "第二届国际人形机器人论坛在瑞士召开，全球科研机构和企业深入探讨人形机器人产业化推进与具身智能技术发展路径。",
-          "comment": "国际人形机器人论坛频繁召开，是否预示着该赛道已从研究阶段进入商业化决胜期？",
+          "title": "第二届国际人形机器人论坛瑞士举行，全球共探产业化与具身智能发展",
+          "summary": "来自多国的科研机构、企业和投资界代表在瑞士汇聚，围绕人形机器人产业化和具身智能技术展开深度交流。",
+          "comment": "国际合作能否加速人形机器人从实验室走向实际应用的进程？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119401.html"
         },
         {
-          "title": "VR游戏《ZIX》推出Foundation重磅更新及免费衍生作品《Gogo Dojo》",
-          "summary": "VR游戏《ZIX》开发商Hidden IO宣布重大引擎更新并推出免费衍生作品，旨在拓展玩家群体应对激烈的VR游戏市场竞争。",
-          "comment": "VR游戏开发商采取免费衍生作品的策略，能否打破当前VR内容消费市场的增长瓶颈？",
+          "title": "深圳甘坑古镇推出《客从盛唐来》MR展，用混合现实技术打造文化沉浸新体验",
+          "summary": "通过MR混合现实技术，展览在大空间交互场景中生动还原历史文化，树立了'文化+科技'融合的新范式。",
+          "comment": "MR技术在文化遗产保护和传承中的应用是否会成为传统文化走向年轻人的新桥梁？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119411.html"
+        },
+        {
+          "title": "VR游戏《ZIX》推出Foundation核心更新，同步发布免费衍生作品应对市场竞争",
+          "summary": "霓虹风格合作类游戏《ZIX》推出重磅更新并发布免费衍生作品《Gogo Dojo》，旨在拓展VR游戏玩家基数。",
+          "comment": "在VR游戏市场竞争加剧的背景下，免费衍生作品策略是否是可持续的商业模式？",
           "source": "93913-元宇宙&AI信息与产业服务",
           "url": "https://www.93913.com/119405.html"
         }
@@ -69,16 +69,16 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "Claude Code在规划和执行中的应用分离",
-          "summary": "开发者分享了如何使用Claude Code进行AI编程工作，通过将规划和执行分离来提高代码生成的效率和准确性。",
-          "comment": "分离规划和执行的思路能否成为AI编程工具的标准最佳实践？",
+          "title": "我如何使用Claude Code：规划与执行的分离",
+          "summary": "开发者分享了使用Anthropic的Claude Code AI编程工具的实践方法，展示了将规划和执行分离的工作流程。",
+          "comment": "AI编程助手如何改变开发者的工作方式，相比传统编程工具优势在哪里？",
           "source": "Hacker News",
           "url": "https://boristane.com/blog/how-i-use-claude-code/"
         },
         {
-          "title": "1000块/年的输入法让用户习惯了「口喷」",
-          "summary": "一款支持语音输入的AI输入法产品通过智能识别和处理用户语音，让用户改变了传统打字的输入习惯。",
-          "comment": "AI语音输入工具的普及会如何重新定义人机交互的方式？",
+          "title": "千元/年的AI输入法，让我习惯了'口喷'，再也回不去打字了",
+          "summary": "爱范儿介绍了一款具备AI能力的高端输入法产品，通过语音识别和AI理解大幅提升输入效率。",
+          "comment": "付费AI应用在消费端的价值突破点是什么，用户愿意为哪些AI能力埋单？",
           "source": "爱范儿",
           "url": "https://www.ifanr.com/1654016?utm_source=rss&utm_medium=rss&utm_campaign="
         }
@@ -89,32 +89,32 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "中国AI实验室在新年假期推出新模型和促销活动",
-          "summary": "字节跳动、阿里巴巴和Moonshot等中国AI公司在春节期间推出新模型和优惠活动，针对消费者市场进行大规模推广。",
-          "comment": "国内AI大厂在春节消费者推广的背后，是否意味着AI应用的消费化进程加速？",
+          "title": "中国AI实验室在春节推出新模型和推广活动吸引消费者",
+          "summary": "字节跳动、阿里巴巴、Moonshot等中国AI企业在春节假期期间推出新模型和营销活动，积极争取消费者。",
+          "comment": "国内大厂在消费级AI市场的激烈竞争，相比海外AI产品的差异化优势在哪？",
           "source": "Financial Times",
           "url": "https://www.ft.com/content/a3f9cd15-0217-4a5d-85b2-89738a5fce70"
         },
         {
-          "title": "全球AI恐慌交易中中国逆势而行",
-          "summary": "在美国股市因AI威胁传统商业模式而下跌的背景下，中国投资者继续追逐AI领域的赢家企业，展现出不同的市场态度。",
-          "comment": "中美两国对AI产业前景截然不同的市场反应，反映了什么样的战略差异？",
-          "source": "Bloomberg Technology",
+          "title": "中国挑战全球'AI恐慌交易'，投资者追逐赢家",
+          "summary": "在全球AI浪潮下，美国市场陷入'AI恐慌交易'抛售软件公司，而中国投资者则在追逐AI领域的赢家公司。",
+          "comment": "为什么中美投资者对AI相关企业的态度呈现明显分化，背后反映了什么样的市场认知差异？",
+          "source": "Bloomberg",
           "url": "https://www.bloomberg.com/news/articles/2026-02-22/china-defies-global-ai-scare-trade-as-investors-chase-winners"
         },
         {
-          "title": "微软新任游戏CEO承诺不会充斥「无限AI垃圾内容」",
-          "summary": "微软游戏部门新任首席执行官表示将谨慎对待AI在游戏生态中的应用，避免低质量AI生成内容泛滥。",
-          "comment": "科技巨头对AI应用质量的审慎态度，是否预示着AI产品将进入更成熟的品质竞争阶段？",
+          "title": "Sam Altman回应AI能耗争议：人类也消耗大量能源",
+          "summary": "OpenAI首席执行官Sam Altman就AI训练的高能耗问题进行回应，指出人类的能源消耗同样巨大。",
+          "comment": "AI能耗问题的争论中，如何理性评估AI相对于人类活动的真实环境影响？",
           "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/21/microsofts-new-gaming-ceo-vows-not-to-flood-the-ecosystem-with-endless-ai-slop/"
+          "url": "https://techcrunch.com/2026/02/21/sam-altman-would-like-remind-you-that-humans-use-a-lot-of-energy-too/"
         }
       ]
     }
   ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-22T10:12:01.245295+08:00",
+  "created_at": "2026-02-22T10:18:15.640741+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
