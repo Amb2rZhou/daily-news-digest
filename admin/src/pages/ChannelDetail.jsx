@@ -696,21 +696,50 @@ export default function ChannelDetail() {
       {activeTab === 'recipients' && (
         <div>
           {isEmail ? (
-            <div style={card}>
-              <h2 style={{ fontSize: 16, marginBottom: 12 }}>邮件收件人</h2>
-              <div style={{ padding: 16, background: '#fffbeb', borderRadius: 8, border: '1px solid #fbbf24', marginBottom: 16 }}>
-                <p style={{ fontSize: 14, color: '#92400e', margin: 0 }}>
-                  收件人列表存储在 GitHub Secrets 中（<code>EMAIL_RECIPIENTS</code>），以保护邮箱地址隐私。请前往「设置」页面的密钥管理部分进行更新。
+            <div>
+              {/* Why secrets */}
+              <div style={{ ...card, background: '#fffbeb', borderColor: '#fbbf24' }}>
+                <h2 style={{ fontSize: 15, marginBottom: 8, color: '#b45309' }}>为什么不能直接在 UI 上修改？</h2>
+                <p style={{ fontSize: 14, color: '#92400e', lineHeight: 1.6, margin: 0 }}>
+                  由于本项目是<strong>公开仓库</strong>，存储在代码中的邮箱地址会被公开可见。
+                  为保护隐私，收件人列表存储在 GitHub Secrets 中。Secrets 是加密的，只有 GitHub Actions 运行时可以读取。
                 </p>
               </div>
-              <a
-                href={`https://github.com/${localStorage.getItem('news_admin_owner') || '{owner}'}/${localStorage.getItem('news_admin_repo') || '{repo}'}/settings/secrets/actions`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ ...btnPrimary, background: 'var(--primary-light)', color: 'var(--primary)', textDecoration: 'none', display: 'inline-block' }}
-              >
-                前往 GitHub Secrets 设置
-              </a>
+
+              {/* Steps */}
+              <div style={card}>
+                <h2 style={{ fontSize: 16, marginBottom: 16 }}>如何修改收件人</h2>
+                {[
+                  { step: '1', title: '打开仓库的 Secrets 设置页面', desc: '进入你的 GitHub 仓库 → Settings → Secrets and variables → Actions', link: true },
+                  { step: '2', title: <>添加或更新 <code style={{ background: '#f3f4f6', padding: '2px 6px', borderRadius: 4 }}>EMAIL_RECIPIENTS</code> Secret</>, desc: '点击 New repository secret（或点击已有的 EMAIL_RECIPIENTS 进行更新）' },
+                  { step: '3', title: '填写收件人邮箱', desc: 'Name 填 EMAIL_RECIPIENTS，Value 填邮箱地址，多个邮箱用英文逗号分隔', example: 'user1@example.com,user2@example.com' },
+                  { step: '4', title: '点击 Add secret 保存', desc: '保存后立即生效，下次发送邮件时会使用新的收件人列表。' },
+                ].map(s => (
+                  <div key={s.step} style={{ marginBottom: 16 }}>
+                    <p style={{ marginBottom: 6, display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 24, height: 24, borderRadius: '50%', background: 'var(--primary)', color: '#fff', fontSize: 13, fontWeight: 600, flexShrink: 0 }}>{s.step}</span>
+                      <span style={{ fontWeight: 500 }}>{s.title}</span>
+                    </p>
+                    <p style={{ fontSize: 14, color: 'var(--text2)', marginLeft: 32, marginBottom: s.example ? 8 : 0 }}>{s.desc}</p>
+                    {s.example && <pre style={{ marginLeft: 32, background: '#1e1e1e', color: '#d4d4d4', padding: '10px 16px', borderRadius: 6, fontSize: 13, fontFamily: 'monospace' }}>{s.example}</pre>}
+                    {s.link && <a
+                      href={`https://github.com/${localStorage.getItem('news_admin_owner') || '{owner}'}/${localStorage.getItem('news_admin_repo') || '{repo}'}/settings/secrets/actions`}
+                      target="_blank" rel="noopener noreferrer"
+                      style={{ display: 'inline-block', marginLeft: 32, marginTop: 8, padding: '6px 14px', background: 'var(--primary-light)', color: 'var(--primary)', borderRadius: 6, fontSize: 13, fontWeight: 500, textDecoration: 'none' }}
+                    >前往 Secrets 设置 →</a>}
+                  </div>
+                ))}
+              </div>
+
+              {/* Tips */}
+              <div style={{ ...card, background: '#f0f9ff', borderColor: '#7dd3fc' }}>
+                <h2 style={{ fontSize: 15, marginBottom: 8, color: '#0369a1' }}>提示</h2>
+                <ul style={{ fontSize: 14, color: '#0c4a6e', lineHeight: 1.8, margin: 0, paddingLeft: 20 }}>
+                  <li>Secrets 是<strong>只写</strong>的，设置后无法查看原值，只能覆盖更新</li>
+                  <li>如需查看当前收件人，建议自己维护一份记录</li>
+                  <li>修改后无需重新部署，下次工作流运行时自动生效</li>
+                </ul>
+              </div>
             </div>
           ) : (
             <div style={card}>
