@@ -80,14 +80,14 @@
     "B站UP主": 2,
     "播客": 2,
     "技术博客": 3,
-    "独立博客": 3,
+    "独立博客": 4,
     "default": 3
   },
   "filters": {
     "blacklist_keywords": [],
     "blacklist_sources": [],
     "whitelist_keywords": [],
-    "whitelist_sources": ["宝玉AI", "数字生命卡兹克", "歸藏的AI工具箱"]
+    "whitelist_sources": ["宝玉AI", "数字生命卡兹克", "歸藏的AI工具箱", "归藏(即刻)", "卡兹克(即刻)"]
   },
   "rss_feeds": [
     {
@@ -426,6 +426,18 @@
       "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_3941633310.rss",
       "name": "PaperAgent",
       "group": "WeWe RSS",
+      "enabled": true
+    },
+    {
+      "url": "https://rsshub.rssforever.com/jike/user/0ae2afa7-9b10-4b3a-ab7e-15fbf847038d",
+      "name": "归藏(即刻)",
+      "group": "独立博客",
+      "enabled": true
+    },
+    {
+      "url": "https://rsshub.rssforever.com/jike/user/82C7EBCB-0B1D-49EF-ADE1-F9F006933828",
+      "name": "卡兹克(即刻)",
+      "group": "独立博客",
       "enabled": true
     },
     {
