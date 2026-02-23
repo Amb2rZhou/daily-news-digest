@@ -1,0 +1,140 @@
+{
+  "date": "2026-02-23",
+  "time_window": "2026-02-22 09:53 ~ 2026-02-23 09:53",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "余承东春节返乡佩戴'神秘装备'，华为拍摄款AI智能眼镜疑似首度曝光",
+          "summary": "华为CEO余承东春节返乡期间佩戴的AI智能眼镜在网络流传，采用大黑框、半框设计，这是华为拍摄款AI眼镜首次曝光。",
+          "comment": "华为智能眼镜能否凭借端侧AI能力打破苹果Vision Pro在高端XR市场的垄断地位？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119421.html"
+        },
+        {
+          "title": "Apple's Next Big Thing Is a Push Into Visual Artificial Intelligence",
+          "summary": "苹果CEO蒂姆·库克表示Visual Intelligence将成为苹果可穿戴AI设备的定义性功能，苹果首次推出的产品将在3月2日至4日这周推出。",
+          "comment": "苹果将Visual Intelligence视为AI可穿戴设备的核心差异化竞争力，这个方向能否真正提升用户粘性？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-02-22/apple-s-ai-wearables-push-what-to-expect-from-march-4-low-end-macbook-launch"
+        },
+        {
+          "title": "Samsung is adding Perplexity to Galaxy AI",
+          "summary": "三星Galaxy S26用户现在可以通过说'hey, Plex'来调用Perplexity AI助手，这是三星拥抱'多Agent生态'战略的一部分。",
+          "comment": "多Agent生态中的三星、谷歌、Perplexity等多方协作模式，会如何改变用户的AI助手使用习惯？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/882921/samsung-is-adding-perplexity-to-galaxy-ai"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "千问'一句话下单'刮旋风 山西稷山县城小店十余天爆单5000单",
+          "summary": "阿里千问APP的'一句话下单'功能帮助山西一家小店十余天内接单5000多单，较去年春节销量增长7-8倍，展现AI赋能下沉市场的潜力。",
+          "comment": "AI助手赋能小商户经营，能否成为阿里下沉市场战略的新杀手锏？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119424.html"
+        },
+        {
+          "title": "AI贺岁遇国风 长春科技研学馆解锁新春科普新玩法",
+          "summary": "长春时空旅程人工智能科技研学体验馆推出'时空贺岁AI智趣民俗季'主题活动，将前沿AI技术与传统国风文化融合，为市民打造沉浸式科普体验。",
+          "comment": "AI与传统文化的融合能否成为科技馆、主题乐园的新增长引擎？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119428.html"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "'软件工程师'头衔要没了？Claude Code之父YC访谈：一个月后不再用plan mode，多Agent开始自己组队干活",
+          "summary": "Claude Code创始人Boris Cherny在YC圆桌会上表示，软件工程师这个职位头衔将逐渐消失，因为Anthropic内部70-100%的代码已由Claude编写，多Agent正在自主协作完成复杂任务。",
+          "comment": "当AI模型能自主协作完成软件开发的全流程，开发者应该如何重新定义自己的核心价值？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/Ki4t4mNFY92hisCVaxwB"
+        },
+        {
+          "title": "别再学做App了：Karpathy预言Agent将淘汰App Store，软件进入'用完即丢'时代",
+          "summary": "AI工程师Andrej Karpathy发文表示，未来用户无需在应用商店下载应用，只需告诉AI想要什么功能，AI在1分钟内现场生成临时应用，应用商店模式将被颠覆。",
+          "comment": "如果AI能动态生成应用，App Store、应用开发者的商业模式将如何进化才能避免被淘汰？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/4LPuZzDH4CXh5G5h5N4G"
+        },
+        {
+          "title": "Shadow mode, drift alerts and audit logs: Inside the modern audit loop",
+          "summary": "传统的静态合规审计无法跟上实时变化的AI系统，现代企业开始采用Shadow mode、漂移警报和审计日志等动态审计方法来监控ML模型的实时变化。",
+          "comment": "如何建立一套有效的实时审计机制，在AI系统高速迭代的同时确保企业的风险可控？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/shadow-mode-drift-alerts-and-audit-logs-inside-the-modern-audit-loop"
+        },
+        {
+          "title": "GLM-5 技术报告全解读｜a16z：'最好的开源模型'",
+          "summary": "智谱清言发布GLM-5大模型技术报告，获得a16z评价为'最好的开源模型'，展现了国内大模型在技术创新上的新进展。",
+          "comment": "国内开源大模型能否通过技术优势逐步缩小与OpenAI等国际AI巨头的差距？",
+          "source": "赛博禅心",
+          "url": "https://mp.weixin.qq.com/s/d6qHr9kB38rZDWNPmhrl1Q"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Demis Hassabis 提出了一个判断 AGI 的'爱因斯坦测试'",
+          "summary": "DeepMind首席执行官Demis Hassabis提出使用'爱因斯坦测试'来判断AGI：用1911年前的全部人类知识训练模型，看其能否独立推导出广义相对论；马斯克认为这已经是超级智能而非仅仅是AGI。",
+          "comment": "对AGI的定义和评估标准如此不同的两位业界领袖，反映出当前AI发展道路上存在的根本性认知差异吗？",
+          "source": "AGI Hunt",
+          "url": "https://mp.weixin.qq.com/s/G2eDNIaOPQxWWMl58o4x9g"
+        },
+        {
+          "title": "Can the creator economy stay afloat in a flood of AI slop?",
+          "summary": "内容创作者面临AI生成内容泛滥的冲击，如何在'AI垃圾内容'的洪流中保持生存空间成为业界新话题。",
+          "comment": "当AI可以批量生成内容时，创作者独特价值的护城河应该如何构建？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/22/can-the-creator-economy-stay-afloat-in-a-flood-of-ai-slop/"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "智平方完成B轮系列超10亿元人民币融资，公司估值正式超过百亿",
+          "summary": "通用智能机器人公司智平方完成B轮系列融资超10亿元，估值突破百亿，投资方包括百度战投、中车资本等，一年完成12轮融资，成为全球融资速度最快的具身智能企业。",
+          "comment": "智平方的融资速度为什么能远超同行？背后反映的是投资者对具身智能赛道前景的怎样的信心？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3695202879795076?f=rss"
+        },
+        {
+          "title": "1.69亿融资押注专用芯片：Taalas要靠'去GPU化'改写AI算力格局",
+          "summary": "Taalas公司获得1.69亿融资，致力于开发专用AI芯片，通过'去GPU化'战略来瞄准英伟达在AI芯片市场的垄断地位。",
+          "comment": "专用芯片创企能否凭借差异化设计突破英伟达的GPU垄断，还是终将被巨头收购或淘汰？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7886987.html"
+        },
+        {
+          "title": "Nvidia's Stock Is So Stuck Even Blowout Earnings May Not Lift It",
+          "summary": "英伟达股价停滞不前，尽管业内预期其本周财报可能亮眼，但华尔街对AI前景的怀疑日益增加，担忧财报无法推高股价。",
+          "comment": "英伟达作为AI芯片王者却股价停滞，反映出投资市场对AI泡沫存在怎样的担忧？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-22/nvidia-s-stock-is-so-stuck-even-blowout-earnings-may-not-lift-it"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-23T09:55:01.896616+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}

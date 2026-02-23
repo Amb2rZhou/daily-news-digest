@@ -1,0 +1,121 @@
+{
+  "date": "2026-02-23",
+  "time_window": "2026-02-22 09:53 ~ 2026-02-23 09:53",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "华为AI智能眼镜疑似首度曝光，余承东春节佩戴神秘装备",
+          "summary": "华为高管余承东在春节期间佩戴的AI智能眼镜首次曝光，采用大黑框、半框设计，标志着华为在AR智能眼镜领域的最新进展。",
+          "comment": "华为推出的AI眼镜如何在与Meta Ray-Ban和XREAL等产品的竞争中找到差异化优势？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119421.html"
+        },
+        {
+          "title": "乐奇AI眼镜赋能农业，精准诊断农作物病害",
+          "summary": "乐奇AI眼镜在农业应用中展现实力，能够实时识别马铃薯晚疫病等病害并提供防治方案，实现科技平权赋能农业生产。",
+          "comment": "AI眼镜从消费场景向垂直行业应用的转移，能否成为智能眼镜的重要商业化突破口？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119419.html"
+        },
+        {
+          "title": "《Peak Rhythm》节奏攀岩VR新作3月5日登陆Meta Quest",
+          "summary": "由Zeitlos Interactive开发的VR音乐节奏攀岩游戏《Peak Rhythm》将于3月5日上线Meta Quest平台，售价12.99美元，融合节奏与攀岩元素。",
+          "comment": "VR游戏从单一娱乐向运动健身融合的趋势，如何驱动VR头显的消费者渗透率提升？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119422.html"
+        },
+        {
+          "title": "VRChat新游《Fish!》融合动森与钓鱼玩法，beta测试启动",
+          "summary": "VRChat推出新游戏《Fish!》，融合《动物森友会》治愈风格与钓鱼玩法，支持独立VR头显和PC VR设备，拥有超20000种可捕获鱼类。",
+          "comment": "VR社交游戏的创新玩法融合，能否成为吸引主流消费者进入VR生态的关键突破点？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119426.html"
+        },
+        {
+          "title": "《Pirates VR: Jolly Roger》PC VR与Quest版本图形对比分析",
+          "summary": "《Pirates VR: Jolly Roger》在Quest 3发布，UploadVR对其与PC VR版本进行图形对比，评估独立VR设备的现状与发展。",
+          "comment": "独立VR头显在图形性能上逐步逼近PC VR，这如何影响VR硬件市场的竞争格局？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/pirates-vr-jolly-roger-graphics-comparison-pc-vr-vs-quest/"
+        },
+        {
+          "title": "集成运动控制技术赋能机器人精准运动",
+          "summary": "集成运动控制技术使各类机器人能够以高精度完成复杂任务，相比传统机械设备具有显著优势。",
+          "comment": "运动控制技术的进步如何加速人形机器人和服务机器人在实际应用场景中的部署？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/integrated-motion-control-enables-sophisticated-robot-motion/"
+        },
+        {
+          "title": "2月16日-2月22日XR产业动态周报",
+          "summary": "XR产业在近一周呈现多项新进展，涵盖硬件、应用及市场动态的行业综合回顾。",
+          "comment": "XR行业在春节期间的创新应用和市场表现，反映出消费者对沉浸式体验的需求趋势？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119415.html"
+        },
+        {
+          "title": "2月16日-2月22日AI产业动态周报",
+          "summary": "AI产业在近一周继续快速发展，涵盖芯片、应用、融资等多个领域的行业周期性回顾。",
+          "comment": "AI技术与垂直行业的融合进程，如何驱动AI硬件设备的市场需求增长？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119413.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Claude Code之父：一个月后软件工程师头衔将消失，多Agent开始自主组队工作",
+          "summary": "Anthropic的Claude Code创始人Boris Cherny在YC圆桌访谈中表示，编程正在被AI解决，许多人已70%-100%使用Claude写代码，软件工程师头衔将逐渐消失，多Agent系统开始自主协作完成任务。",
+          "comment": "当AI能够自主生成和组织代码时，传统软件开发的价值链会如何重构？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/Ki4t4mNFY92hisCVaxwB"
+        },
+        {
+          "title": "Andrej Karpathy预言：Agent将淘汰App Store，软件进入\"用完即丢\"时代",
+          "summary": "知名AI工程师Karpathy发文指出，AI可现场生成软件满足用户需求，用户无需下载App，而是通过描述需求让AI在1分钟内生成定制应用，应用商店模式将被颠覆。",
+          "comment": "如果AI能在实时生成软件，应用生态的价值创造方式会发生怎样的根本改变？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/4LPuZzDH4CXh5G7h5N4G"
+        },
+        {
+          "title": "1.69亿融资押注专用芯片：Taalas要靠\"去GPU化\"改写AI算力格局",
+          "summary": "专用芯片初创Taalas完成1.69亿融资，致力于突破英伟达GPU垄断，通过专用芯片设计重塑AI算力供应格局。",
+          "comment": "专用芯片能否在性能和成本上真正挑战英伟达的GPU生态主导地位？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7886987.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "三星将Perplexity集成至Galaxy AI，建立多Agent生态系统",
+          "summary": "三星Galaxy S26用户现可通过\"Hey Plex\"语音指令调用Perplexity AI助手，与Bixby和Gemini形成多Agent协作生态，体现科技巨头对多元AI工具整合的新战略。",
+          "comment": "巨头采纳第三方AI服务而非独家开发，反映了AI生态从垄断走向开放合作的趋势吗？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/882921/samsung-is-adding-perplexity-to-galaxy-ai"
+        },
+        {
+          "title": "智平方完成B轮超10亿元融资，估值突破百亿，成全球融资最快具身智能企业",
+          "summary": "通用智能机器人公司智平方完成B轮系列融资超10亿元，估值正式超百亿，一年内完成12轮融资，投资方包括百度战投、中车资本等产业资本，刷新具身智能领域融资速度纪录。",
+          "comment": "国内创业公司能否通过融资速度和产业资本支持，在具身智能赛道超越海外竞争对手？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3695202879795076?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-23T09:55:01.896178+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
