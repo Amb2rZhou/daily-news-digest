@@ -783,14 +783,22 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
     other_articles = [a for a in articles if a.get("feed_url", "") not in hw_urls]
     print(f"  - Article split: {len(hw_articles)} hardware, {len(other_articles)} other")
 
-    hw_articles_text = _format_articles_text(hw_articles) if hw_articles else _format_articles_text(articles)
     other_articles_text = _format_articles_text(other_articles) if other_articles else _format_articles_text(articles)
 
-    hw_budget = 10  # hardware gets 7-10 items
-    ai_budget = max(max_items - hw_budget, 5)  # rest goes to AI+industry, at least 5
-    prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources)
+    if hw_articles:
+        hw_articles_text = _format_articles_text(hw_articles)
+        hw_budget = 10  # hardware gets 7-10 items
+        ai_budget = max(max_items - hw_budget, 5)  # rest goes to AI+industry, at least 5
+        prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources)
+        print(f"  - Budget: hardware 7-10, AI+industry {ai_budget}, total cap {max_items}")
+    else:
+        # No hardware sources produced articles -- skip hardware prompt, give all budget to AI/industry
+        print("  - No hardware articles found, skipping hardware prompt")
+        hw_budget = 0
+        ai_budget = max_items
+        prompt_hw = None
+
     prompt_ai = get_prompt_for_mode("focused_ai_industry", other_articles_text, ai_budget, "", "", "", None, paywalled_sources)
-    print(f"  - Budget: hardware 7-10, AI+industry {ai_budget}, total cap {max_items}")
 
     start = time.time()
 
@@ -810,7 +818,7 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
             print(f"  - {label}: JSON parse failed. Preview: {resp[:200]}")
         return None
 
-    hw_parsed = _call_and_parse(prompt_hw, "智能硬件")
+    hw_parsed = _call_and_parse(prompt_hw, "智能硬件") if prompt_hw else None
     ai_parsed = _call_and_parse(prompt_ai, "AI+行业")
 
     elapsed = time.time() - start
@@ -1125,7 +1133,7 @@ def save_draft(news_data: dict, settings: dict = None, channel_id: str = None) -
             with open(draft_path, "r", encoding="utf-8") as f:
                 existing = json.load(f)
             existing_status = existing.get("status", "")
-            if existing_status in ("sent", "rejected"):
+            if existing_status in ("sent", "rejected", "approved"):
                 print(f"  - Skipping {filename}: already {existing_status}")
                 return draft_path
         except (json.JSONDecodeError, IOError):
@@ -1278,7 +1286,7 @@ def format_email_html(news_data: dict, settings: dict = None) -> str:
 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:640px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
 
 <!-- Header -->
-<tr><td style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:32px 30px;text-align:center;">
+<tr><td style="background-color:#1a1a2e;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:32px 30px;text-align:center;">
   <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:1px;">AI / 科技新闻日报</h1>
   <p style="margin:10px 0 0 0;color:rgba(255,255,255,0.75);font-size:14px;">{date} &nbsp;|&nbsp; {time_window}</p>
 </td></tr>

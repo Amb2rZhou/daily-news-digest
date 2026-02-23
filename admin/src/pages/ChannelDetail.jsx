@@ -75,7 +75,8 @@ export default function ChannelDetail() {
       }
 
       // Load today's draft
-      const today = new Date().toISOString().slice(0, 10)
+      const tz = parsed?.timezone || 'Asia/Shanghai'
+      const today = new Date().toLocaleDateString('sv-SE', { timeZone: tz })
       const fname = id === 'email' ? `${today}.json` : `${today}_ch_${id}.json`
       try {
         const draftFile = await readFile(`config/drafts/${fname}`)
@@ -125,8 +126,14 @@ export default function ChannelDetail() {
       if (latest) {
         latestSha = latest.sha
         const latestData = JSON.parse(latest.content)
-        // Preserve rss_feeds from latest, apply our channel changes
-        merged = { ...latestData, channels: settings.channels }
+        // Preserve rss_feeds from latest, apply our editable fields
+        merged = {
+          ...latestData,
+          channels: settings.channels,
+          categories_order: settings.categories_order,
+          filters: settings.filters,
+          custom_prompt: settings.custom_prompt,
+        }
       }
       const content = JSON.stringify(merged, null, 2) + '\n'
       const result = await writeFile(

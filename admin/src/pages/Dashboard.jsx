@@ -43,7 +43,8 @@ export default function Dashboard() {
       // Load draft info for all channels
       if (parsedSettings) {
         const channels = (parsedSettings.channels || []).filter(c => c.enabled)
-        const today = new Date().toISOString().slice(0, 10)
+        const tz = parsedSettings.timezone || 'Asia/Shanghai'
+        const today = new Date().toLocaleDateString('sv-SE', { timeZone: tz })
         const draftInfo = {}
 
         await Promise.all(channels.map(async (ch) => {

@@ -63,7 +63,7 @@ export function generateEmailHtml(draft, settings) {
 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:640px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
 
 <!-- Header -->
-<tr><td style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:32px 30px;text-align:center;">
+<tr><td style="background-color:#1a1a2e;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:32px 30px;text-align:center;">
   <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:1px;">AI / 科技新闻日报</h1>
   <p style="margin:10px 0 0 0;color:rgba(255,255,255,0.75);font-size:14px;">${escapeHtml(date)} &nbsp;|&nbsp; ${escapeHtml(timeWindow)}</p>
 </td></tr>
