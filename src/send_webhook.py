@@ -174,57 +174,38 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
     url = f"{url_base}?key={webhook_key}"
 
     content = format_webhook_markdown(news_data)
+    print(f"  Webhook message: {len(content.encode('utf-8'))} bytes")
 
-    # RedCity webhook has a message size limit (~4KB).
-    # Split into multiple messages if content exceeds the limit.
-    MAX_CONTENT_LEN = 3800  # leave headroom for JSON envelope
+    ok = _post_webhook(url, content)
+    if ok:
+        return True
 
-    if len(content.encode("utf-8")) <= MAX_CONTENT_LEN:
-        # Single message, send directly
-        return _post_webhook(url, content)
-    else:
-        # Split by category into multiple messages
-        import copy
-        categories = news_data.get("categories", [])
-        date = news_data.get("date", "")
-        total_news = sum(len(c.get("news", [])) for c in categories)
+    # If failed (possibly due to size limit), retry with one fewer item each time
+    import copy
+    trimmed = copy.deepcopy(news_data)
+    cats = trimmed.get("categories", [])
+    original = sum(len(c.get("news", [])) for c in cats)
 
-        chunks = []
-        current_cats = []
-        for cat in categories:
-            test_draft = {"date": date, "categories": current_cats + [cat]}
-            test_content = format_webhook_markdown(test_draft)
-            if current_cats and len(test_content.encode("utf-8")) > MAX_CONTENT_LEN:
-                # Current batch is full, start new chunk
-                chunks.append(current_cats)
-                current_cats = [cat]
-            else:
-                current_cats.append(cat)
-        if current_cats:
-            chunks.append(current_cats)
+    while cats:
+        # Remove last item from last non-empty category
+        for i in range(len(cats) - 1, -1, -1):
+            if cats[i].get("news"):
+                cats[i]["news"].pop()
+                if not cats[i]["news"]:
+                    cats.pop(i)
+                break
+        else:
+            break
 
-        print(f"  Message split into {len(chunks)} parts ({total_news} items total)")
+        remaining = sum(len(c.get("news", [])) for c in cats)
+        content = format_webhook_markdown(trimmed)
+        print(f"  Retrying with {remaining}/{original} items ({len(content.encode('utf-8'))} bytes)")
+        ok = _post_webhook(url, content)
+        if ok:
+            return True
 
-        import time as _time
-        all_ok = True
-        for i, chunk_cats in enumerate(chunks):
-            chunk_draft = {"date": date, "categories": chunk_cats}
-            chunk_content = format_webhook_markdown(chunk_draft)
-            # Replace header/footer for continuation parts
-            if i > 0:
-                chunk_content = chunk_content.replace(f"# 科技日报 {date}", f"# 科技日报 {date}（续 {i+1}/{len(chunks)}）")
-            if i < len(chunks) - 1:
-                # Remove total count line from non-last parts
-                chunk_content = chunk_content.rsplit("---\n", 1)[0].rstrip()
-
-            print(f"  Sending part {i+1}/{len(chunks)} ({len(chunk_content.encode('utf-8'))} bytes)")
-            ok = _post_webhook(url, chunk_content)
-            if not ok:
-                all_ok = False
-            if i < len(chunks) - 1:
-                _time.sleep(1)  # Brief pause between messages
-
-        return all_ok
+    print("  All retry attempts failed")
+    return False
 
 
 if __name__ == "__main__":
