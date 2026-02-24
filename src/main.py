@@ -314,6 +314,11 @@ def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
             print(f"Channel {ch_name}: draft {status}, skipping")
             continue
 
+        source = draft.get("source", "scheduled")
+        if status == "pending_review" and source == "manual":
+            print(f"Channel {ch_name}: manual draft, requires approval before sending, skipping")
+            continue
+
         print(f"Sending to {ch_name} (type={ch_type})...")
 
         if ch_type == "email":
@@ -397,6 +402,11 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
             status = ch_draft.get("status", "pending_review")
             if status in ("sent", "rejected"):
                 print(f"Channel {ch_name}: draft {status}, skipping")
+                continue
+
+            source = ch_draft.get("source", "scheduled")
+            if status == "pending_review" and source == "manual":
+                print(f"Channel {ch_name}: manual draft, requires approval before sending, skipping")
                 continue
 
             print(f"Sending webhook to {ch_name}...")
