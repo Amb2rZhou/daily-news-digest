@@ -1,0 +1,113 @@
+{
+  "date": "2026-02-22",
+  "time_window": "2026-02-21 10:17 ~ 2026-02-22 10:17",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "OpenAI智能眼镜2028计划量产，联合Jony Ive打造下一代AI终端",
+          "summary": "OpenAI确定其核心可穿戴产品智能眼镜的大规模量产时间为2028年，与设计大师Jony Ive合作打造下一代AI硬件终端。",
+          "comment": "当AI模型与顶尖硬件设计相结合，是否会改变人们与AI交互的方式，成为新的计算范式？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119392.html"
+        },
+        {
+          "title": "How I use Claude Code: Separation of planning and execution",
+          "summary": "开发者分享了Claude Code工具的实际使用心得，阐述如何通过规划和执行分离来提高开发效率。",
+          "comment": "AI代码辅助工具的最佳实践是否正在建立新的软件开发范式？",
+          "source": "Hacker News: Front Page",
+          "url": "https://boristane.com/blog/how-i-use-claude-code/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "China's AI labs unleash new models and bubble tea to lure in customers",
+          "summary": "字节跳动、阿里巴巴、Moonshot等中国AI实验室在春节假期推出新模型并开展促销活动，争夺消费者关注。",
+          "comment": "中国AI厂商在用户争夺战中从产品创新转向营销创新，这是否意味着大模型竞争已进入存量用户阶段？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/a3f9cd15-0217-4a5d-85b2-89738a5fce70"
+        },
+        {
+          "title": "Microsoft's new gaming CEO vows not to flood the ecosystem with 'endless AI slop'",
+          "summary": "微软游戏部门新任CEO承诺不会用低质量的AI生成内容填充游戏生态，暗示将谨慎整合AI技术。",
+          "comment": "游戏行业对AI的谨慎态度是否反映出AI与创意内容的融合仍需找到恰当的平衡点？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/21/microsofts-new-gaming-ceo-vows-not-to-flood-the-ecosystem-with-endless-ai-slop/"
+        },
+        {
+          "title": "China Defies Global 'AI Scare Trade' as Investors Chase Winners",
+          "summary": "全球股市陷入'AI恐慌交易'抛售软件公司，但中国投资者逆势追捧AI领域赢家，显示市场分化。",
+          "comment": "中国资本市场对AI前景的乐观态度是基于技术信心还是政策支持？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-22/china-defies-global-ai-scare-trade-as-investors-chase-winners"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "中国人形机器人领跑全球：2025年出货占比近九成，2026年预计达2.8万台",
+          "summary": "2025年全球人形机器人出货量约1.3万台中国贡献90%，摩根士丹利预测2026年中国销量将翻倍增至2.8万台，持续领跑全球。",
+          "comment": "中国在人形机器人领域的绝对优势是源于成本优势还是技术创新突破？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119403.html"
+        },
+        {
+          "title": "Visual drone detection moves into critical infrastructure playbooks",
+          "summary": "基于视觉的无人机检测技术被纳入关键基础设施防护体系，成为应对无人机威胁的重要防御工具。",
+          "comment": "AI视觉检测技术在安全领域的应用是否会催生新的基础设施防护标准？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/visual-drone-detection-moves-into-critical-infrastructure-playbooks/"
+        },
+        {
+          "title": "第二届国际人形机器人论坛瑞士举行 多国共探产业化与具身智能发展",
+          "summary": "全球科研机构和企业代表在瑞士论坛上围绕人形机器人产业化和具身智能技术展开深度交流，致力于推动从实验室向产业端转化。",
+          "comment": "具身智能作为AGI的关键路径，其产业化进展是否正在加速AI从虚拟世界向物理世界的转移？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119401.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "India's AI ambitions hit limits at global summit",
+          "summary": "全球最人口众多的国家在全球AI峰会上暴露出其雄心与现实的差距，在被美国和中国主导的产业中难以找到自身位置。",
+          "comment": "为什么印度虽然拥有庞大的技术人才库却在AI产业竞争中相对落后，这反映了什么深层的产业结构问题？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/5c26f2f6-c857-407c-93fe-7f59aa88c8f4"
+        },
+        {
+          "title": "Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT",
+          "summary": "加拿大Tumbler Ridge枪击案嫌疑人Jesse Van Rootselaar曾向ChatGPT描述暴力场景，触发了OpenAI的审查系统，但最终仍未阻止悲剧发生。",
+          "comment": "AI安全监测系统在识别高危用户和防止真实伤害之间的鸿沟如何才能弥合？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt"
+        },
+        {
+          "title": "Sam Altman would like remind you that humans use a lot of energy, too",
+          "summary": "OpenAI CEO Sam Altman在能源消耗争议中辩称，训练人类同样需要消耗大量能源，为AI能源占用进行辩护。",
+          "comment": "这个关于AI能源效率的辩论是否本质上转移了关于AI可持续性的核心问题？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/21/sam-altman-would-like-remind-you-that-humans-use-a-lot-of-energy-too/"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-22T10:20:36.954769+08:00",
+  "channel_id": "ch_ml97ypb3",
+  "channel_name": "午休2小时",
+  "topic_mode": "broad"
+}

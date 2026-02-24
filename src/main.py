@@ -140,9 +140,9 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
     4. Save per-channel drafts (email draft = YYYY-MM-DD.json)
     """
     anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    minimax_key = os.environ.get("MINIMAX_API_KEY", "")
-    if not anthropic_key and not minimax_key:
-        print("Error: Neither ANTHROPIC_API_KEY nor MINIMAX_API_KEY is set")
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "")
+    if not anthropic_key and not deepseek_key:
+        print("Error: Neither ANTHROPIC_API_KEY nor DEEPSEEK_API_KEY is set")
         return 1
 
     tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
@@ -425,9 +425,9 @@ def run_webhook(settings: dict, date: str = None, channel_id: str = None) -> int
 def run_full(settings: dict) -> int:
     """Legacy mode: fetch + send in one step."""
     anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    minimax_key = os.environ.get("MINIMAX_API_KEY", "")
-    if not anthropic_key and not minimax_key:
-        print("Error: Neither ANTHROPIC_API_KEY nor MINIMAX_API_KEY is set")
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "")
+    if not anthropic_key and not deepseek_key:
+        print("Error: Neither ANTHROPIC_API_KEY nor DEEPSEEK_API_KEY is set")
         return 1
 
     topic = settings.get("news_topic", "AI")

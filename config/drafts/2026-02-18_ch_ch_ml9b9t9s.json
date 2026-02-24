@@ -1,0 +1,135 @@
+{
+  "date": "2026-02-18",
+  "time_window": "2026-02-17 09:43 ~ 2026-02-18 09:43",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "李未可AI眼镜率先接入OpenClaw，语音操控电脑开启跨端智能办公新时代",
+          "summary": "李未可AI眼镜完成与OpenClaw的深度接入，依托自研WAKE-AI 2.0智能交互体系，实现AI眼镜与电脑端的协同办公，为用户提供真正解放双手的跨端智能办公体验。",
+          "comment": "AI眼镜与PC端的深度融合是否预示着未来办公设备的新形态？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119302.html"
+        },
+        {
+          "title": "全球首款仓储场景通用人形机器人Gino 1亮相",
+          "summary": "全球首款面向仓储场景的通用人形机器人Gino正式亮相，标志着产业进入操作智能化新阶段。",
+          "comment": "通用人形机器人在特定场景的落地应用是否比追求通用性的泛用型机器人更有商业价值？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119319.html"
+        },
+        {
+          "title": "四家企业人形机器人登2026春晚引消费热潮，订单量暴增150%",
+          "summary": "松延动力、宇树科技、魔法原子和银河通用四家企业的人形机器人在央视春晚亮相，直接带动机器人线上消费市场爆发，订单量增长150%。",
+          "comment": "大众媒体曝光对硬件消费的驱动力是否会成为未来AI机器人产业化的关键因素？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119323.html"
+        },
+        {
+          "title": "'洞察者'AR眼镜落地浦东机场飞行区准入管理",
+          "summary": "'洞察者'AR眼镜在上海浦东机场飞行区正式投入使用，为机场核心区域准入管理带来智能化革新，将科幻场景变为现实应用。",
+          "comment": "专业级AR眼镜在机场等高安全性场景的应用成功率是否会推动更多行业的智能硬件部署？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119304.html"
+        },
+        {
+          "title": "Medtronic获得FDA批准的Stealth AXiS脊柱手术系统",
+          "summary": "Medtronic的Stealth AXiS系统获得FDA清批，支持多种外科医生偏好和临床复杂度，可应用于不同的医疗护理场景。",
+          "comment": "医疗手术机器人的FDA认证周期和成本是否会成为该领域创新的主要瓶颈？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/medtronic-earns-fda-clearance-for-stealth-axis-spinal-surgery-system/"
+        },
+        {
+          "title": "VisionOS更新为开发者提供改进的VR云流传输工具",
+          "summary": "Apple Vision Pro获得visionOS更新，为开发者提供改进的VR云流传输工具，增强空间计算应用的网络能力。",
+          "comment": "云流传输技术对于VR头显性能和内容体验的提升是否将成为未来竞争的新焦点？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/visionos-update-improved-vr-cloud-streaming-tools/"
+        },
+        {
+          "title": "SlimeVR启动众筹活动推出更轻薄的全身追踪器",
+          "summary": "SlimeVR发起新一轮众筹活动，推出设计更轻薄的全身追踪器，改进VR沉浸式体验的硬件基础设施。",
+          "comment": "全身追踪设备的轻量化设计是否会促进VR设备在长时间使用场景中的普及？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/slimevr-campaign-butterfly-body-trackers/"
+        },
+        {
+          "title": "Omni One VR跑步机加入'为Meta设计'计划，开启Quest兼容之门",
+          "summary": "Virtuix的Omni One VR跑步机加入Meta的'Made for Meta'认证计划，即将支持Quest设备兼容，扩展VR外设生态。",
+          "comment": "VR外设的生态整合认证是否标志着VR硬件生态从分散走向统一的转折点？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/omni-one-vr-treadmill-quest-support/"
+        },
+        {
+          "title": "国资委宣布成立央企'AI+'具身智能产业共同体",
+          "summary": "国务院国资委正式宣布成立中央企业'AI+'具身智能产业共同体，通过千场落地和开源赋能加速产业升级。",
+          "comment": "国资委主导的具身智能产业共同体在资源整合和标准制定上是否会打破当前的市场分散格局？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119314.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Anthropic发布Claude Sonnet 4.6，以五分之一成本匹配旗舰AI性能",
+          "summary": "Anthropic推出Claude Sonnet 4.6模型，在编码、计算机使用和长上下文推理方面实现全面升级，以更低成本提供旗舰级智能，加速企业AI代理和自动化编码工具的部署。",
+          "comment": "当AI模型成本大幅下降后，真正的技术竞争是否会从能力转向应用场景的深度优化？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropics-sonnet-4-6-matches-flagship-ai-performance-at-one-fifth-the-cost"
+        },
+        {
+          "title": "漫剧公司集体转向，AI仿真人或将颠覆行业",
+          "summary": "魔方漫剧、稻谷文化等头部公司预计AI仿真人剧将在2026年上半年实现产能爆发，制作成本从百万级降至十万级，有望在男频、女频精品和出海领域打开新空间。",
+          "comment": "当AI仿真人技术将短剧制作成本降低100倍时，内容创意和质量是否会成为新的差异化竞争点？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7883243.html"
+        },
+        {
+          "title": "SurrealDB 3.0试图用单一数据库替代五层RAG技术栈",
+          "summary": "SurrealDB发布3.0版本，整合结构化数据、向量和图信息处理能力，为AI代理提供上下文记忆支持，简化RAG系统构建的复杂性和多技术栈协调问题。",
+          "comment": "统一的数据层基础设施是否会成为下一代AI应用开发的关键瓶颈解决方案？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/data/surrealdb-3-0-wants-to-replace-your-five-database-rag-stack-with-one"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Meta与Nvidia达成多年协议购买数百万AI芯片",
+          "summary": "Meta与Nvidia签署多年合约，扩展数据中心采购，包括Grace和Vera CPU以及Blackwell和Rubin GPU，其中Grace处理器部署规模创Nvidia历史之最，提升能效。",
+          "comment": "为何全球头部科技公司都在加速自建AI芯片的同时，仍然大规模采购Nvidia？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/880513/nvidia-meta-ai-grace-vera-chips"
+        },
+        {
+          "title": "Tesla在英国和欧洲汽车中集成Grok AI聊天机器人",
+          "summary": "Tesla开始在英国和欧洲市场的电动汽车中集成xAI的Grok AI聊天机器人，在监管审查期间继续推进AI功能部署。",
+          "comment": "车企集成第三方AI助手而非自研，是否标志着车载AI平台化的新趋势？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/17/tesla-adding-grok-ai-uk-europe.html"
+        },
+        {
+          "title": "OpenAI收购OpenClaw，标志聊天机器人时代向代理AI时代的转变",
+          "summary": "OpenAI宣布收购开源AI代理工具OpenClaw的创始人Peter Steinberger加入团队，反映行业重心从ChatGPT时代向AI Agent时代的转变。",
+          "comment": "从对话式AI向Agent型AI的产业升级，是否会重新定义未来的AI商业模式？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openais-acquisition-of-openclaw-signals-the-beginning-of-the-end-of-the"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-18T09:47:12.685622+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

@@ -1,0 +1,128 @@
+{
+  "date": "2026-02-17",
+  "time_window": "2026-02-16 09:10 ~ 2026-02-17 09:10",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "华米科技AI智能眼镜量产，四大事件引发市场关注",
+          "summary": "华米科技近期因AI智能眼镜量产、四季度业绩指引、核心业务表现及股价波动成为行业焦点。该公司的AI眼镜产品正式进入量产阶段，标志着消费级AI可穿戴设备市场迎来重要进展。",
+          "comment": "AI眼镜从研发走向量产，消费级空间级AR设备的大规模普及还需要多久？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119297.html"
+        },
+        {
+          "title": "则成电子AI眼镜量产突破，光模块与海外市场迎增长",
+          "summary": "则成电子在AI眼镜和光模块两大新兴赛道取得实质性进展，实现量产落地，同时海外订单恢复、东南亚产能布局稳步推进。公司业务布局与'十五五'高端制造、AI终端政策导向高度契合。",
+          "comment": "AI眼镜产业链从上游光学模块到终端产品的成熟，是否已经形成了完整的供应链闭环？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119298.html"
+        },
+        {
+          "title": "《Titan Isles》登陆PS VR2，优化版本2月24日上线",
+          "summary": "英国独立工作室Psytec Games官宣其高机动性动作冒险射击VR游戏《Titan Isles》的PS VR2移植版将于2月24日上线。该作品以高动作性和全平台画质优化为特色。",
+          "comment": "独立VR游戏工作室与大厂平台的合作，能否成为VR内容生态繁荣的新模式？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119308.html"
+        },
+        {
+          "title": "电机设计创新推动不同类型机器人发展",
+          "summary": "电机设计的进步使不同类型机器人能够既专门化用于工业功能，又在精度上实现融合发展。先进的电机技术成为推动机器人多样化应用的关键技术突破。",
+          "comment": "当电机等基础部件实现了突破性创新，这是否意味着通用型机器人的时代正在来临？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/how-motor-design-enables-different-types-of-robots/"
+        },
+        {
+          "title": "Meta CTO表示将借鉴Steam Frame设计，竞合成为行业常态",
+          "summary": "Meta首席技术官表示若Steam Frame在市场获得成功，Meta将从其产品设计与用户反馈中吸取经验。这反映了VR/AR产业巨头间的良性竞争与学习态度。",
+          "comment": "Meta与Valve在VR硬件平台上的'竞合'趋势，会不会推动整个XR产业的标准统一？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119310.html"
+        },
+        {
+          "title": "《The Pirate: Republic of Nassau》VR游戏1.0版正式上线",
+          "summary": "VR冒险游戏《The Pirate: Republic of Nassau》已发布1.0完整版，提供多种选项满足玩家对海盗生活的幻想。该游戏以其丰富的玩法选项和沉浸式体验获得好评。",
+          "comment": "单机VR游戏在追求高度沉浸感的同时，如何找到与多人社交体验的平衡点？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/the-pirate-republic-of-nassau-review-a-pirates-life-for-me/"
+        },
+        {
+          "title": "VRChat创造并发用户新高峰，日本动漫演唱会破纪录",
+          "summary": "VRChat通过举办日本动漫演唱会活动创造了平台历史最高并发用户记录。这展示了VR社交平台在承载大规模虚拟活动上的巨大潜力。",
+          "comment": "虚拟演唱会在VR平台突破并发用户上限，这预示着虚拟演艺产业何时会真正商业化变现？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/vrchat-all-time-high-japanese-concert/"
+        },
+        {
+          "title": "全球首个'三位一体'智能驾驶实验室建成投用",
+          "summary": "全球首个集实物整车、动态交通、环境模拟于一体的智能驾驶实验室在中国正式建成并投入使用。该实验室标志着我国智驾测试验证能力达到国际领先水平。",
+          "comment": "拥有最先进的智能驾驶测试验证平台，是否意味着中国自动驾驶企业的商业化进程会加速？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119292.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "科学家使用AI在各处寻找抗生素",
+          "summary": "研究员César de la Fuente利用AI技术帮助发现新型抗生素，将AI应用于解决全球抗菌素耐药性这一重大医学难题。",
+          "comment": "AI在科学发现中的应用能否加速解决人类面临的根本性健康危机？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/"
+        },
+        {
+          "title": "AI语音复制技术为音乐人带来新可能",
+          "summary": "新型AI语音复制技术使音乐人能够生成个人化的AI声音，为音乐创作和表演带来创新工具。",
+          "comment": "AI语音生成技术如何在保护艺术家权益和激发创新之间找到平衡？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/16/1133008/the-download-unraveling-a-death-threat-mystery-and-ai-voice-recreation-for-musicians/"
+        },
+        {
+          "title": "Recursive Intelligence四个月融资3.35亿美元，估值40亿美元",
+          "summary": "由知名AI领域专家创立的Recursive Intelligence公司在短短四个月内完成融资，获得40亿美元估值，展现AI初创公司融资的火热景象。",
+          "comment": "顶级AI人才创办的初创公司如何能够迅速获得VC追捧，这反映了当前AI产业什么样的发展趋势？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/16/how-ricursive-intelligence-raised-335m-at-a-4b-valuation-in-4-months/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "字节跳动火山引擎豆包大模型2.0走向实用主义",
+          "summary": "字节跳动火山引擎的豆包大模型升级到2.0阶段，由早期的技术探索转向更实用主义的应用路线。",
+          "comment": "国内大厂大模型从追求能力突破转向实用应用，这是否标志着AI产业进入成熟期？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7882249.html"
+        },
+        {
+          "title": "欧盟隐私监管机构调查X公司Grok生成的不当性化AI图像",
+          "summary": "爱尔兰数据保护监管机构对X公司Grok AI聊天机器人生成和发布的性化内容图像展开大规模调查。",
+          "comment": "随着AI聊天机器人的广泛应用，监管机构如何能更有效地平衡创新与保护用户权益？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-17/musk-s-x-probed-by-irish-data-watchdog-over-grok-sexual-images"
+        },
+        {
+          "title": "中国科技产业冲击威胁美国AI垄断地位",
+          "summary": "分析师指出中国技术产业的快速发展对美国AI产业垄断造成威胁，在未来5-10年内全球大部分人口可能转向中国技术栈。",
+          "comment": "在全球AI竞争格局重塑的背景下，国际AI产业生态会如何分化和调整？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/16/chinas-tech-shock-ai-monopoly-us.html"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-17T09:14:38.661106+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

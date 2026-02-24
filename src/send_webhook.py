@@ -139,6 +139,29 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
 
     content = format_webhook_markdown(news_data)
 
+    # RedCity webhook has a message size limit (~4KB).
+    # If content is too large, progressively trim news items from the last category.
+    MAX_CONTENT_LEN = 3800  # leave headroom for JSON envelope
+    if len(content.encode("utf-8")) > MAX_CONTENT_LEN:
+        import copy
+        trimmed = copy.deepcopy(news_data)
+        cats = trimmed.get("categories", [])
+        # Remove items from the end until it fits
+        while cats and len(format_webhook_markdown(trimmed).encode("utf-8")) > MAX_CONTENT_LEN:
+            # Find last category with news
+            for i in range(len(cats) - 1, -1, -1):
+                if cats[i].get("news"):
+                    cats[i]["news"].pop()
+                    if not cats[i]["news"]:
+                        cats.pop(i)
+                    break
+            else:
+                break  # no more items to remove
+        content = format_webhook_markdown(trimmed)
+        original = sum(len(c.get("news", [])) for c in news_data.get("categories", []))
+        remaining = sum(len(c.get("news", [])) for c in cats)
+        print(f"  Message trimmed: {original} → {remaining} items ({len(content.encode('utf-8'))} bytes)")
+
     payload = {
         "msgtype": "markdown",
         "markdown": {

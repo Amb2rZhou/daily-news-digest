@@ -1,0 +1,140 @@
+{
+  "date": "2026-02-17",
+  "time_window": "2026-02-16 09:10 ~ 2026-02-17 09:10",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "宇树科技Unitree G1春晚亮相，配备灵巧手和128线激光雷达",
+          "summary": "宇树科技的人形机器人Unitree G1搭载灵巧手、128线3D激光雷达和全身状态感知模型，在2026年春晚舞台展示先进的机器人技术能力。",
+          "comment": "当人形机器人的硬件配置已经达到如此精细的水平，关键的竞争优势会转向软件算法和应用场景的深度开发吗？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3686701832334977?f=rss"
+        },
+        {
+          "title": "Waymo推出World Model生成式3D世界模型",
+          "summary": "Waymo正式发布World Model生成式3D世界模型，创新自动驾驶仿真训练体系，提升自动驾驶的安全性和可靠性。",
+          "comment": "生成式3D世界模型相比传统仿真方案，能否真正解决现实世界中的长尾场景问题？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119306.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "火山引擎推出豆包大模型Seed 2.0，走向实用主义方向",
+          "summary": "字节跳动火山引擎的豆包大模型迭代至2.0阶段，从研究驱动转向应用实用主义，强化在垂直领域的落地能力。",
+          "comment": "从追求通用能力到深耕垂直应用，这种转变是否标志着大模型竞争重心正在向实际商业价值转移？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7882249.html"
+        },
+        {
+          "title": "魔法原子成央视春晚首家亮相的机器人企业",
+          "summary": "魔法原子人形机器人MagicBot Gen1和Z1亮相春晚，其中Z1展示业内首次同尺寸人形机器人完成360°托马斯翻转特技。",
+          "comment": "机器人企业争相登上春晚舞台，这是否反映了人形机器人产业已经从研发阶段进入商业化展示阶段？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3685933210496901?f=rss"
+        },
+        {
+          "title": "追觅科技以智能生态战略合作伙伴身份亮相春晚",
+          "summary": "追觅科技作为春晚历史上首个完整智能生态品牌亮相，展示汽车、扫地机器人、智能家电等全场景AI赋能产品矩阵。",
+          "comment": "智能生态整合策略是否能突破单一产品竞争的红海，形成新的竞争护城河？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/cQPxBzS8tWmTcSkb.html"
+        },
+        {
+          "title": "莫迪在AI峰会展示印度全球野心，重振经济实力",
+          "summary": "印度总理莫迪借AI国际峰会宣示印度在全球AI治理中的地位，希望为美中之外的国家打造新的选择。",
+          "comment": "印度能否在AI领域形成有别于美中的第三极，还是最终只能成为大国AI竞争的利用方？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-17/modi-seizes-ai-summit-to-assert-india-s-global-ambitions-after-tough-year"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "全球首个三位一体智能驾驶实验室建成投用",
+          "summary": "中国建成全球首个集实物整车、动态交通、环境模拟于一体的智能驾驶实验室，智驾测试验证能力达国际领先水平。",
+          "comment": "整合虚实结合的测试体系，是否能显著缩短自动驾驶从研发到量产的时间周期？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119292.html"
+        },
+        {
+          "title": "利用AI寻找抗生素成为新方向",
+          "summary": "科学家César de la Fuente利用AI技术在多个领域搜寻新型抗生素，应对日益严重的抗菌素耐药性问题。",
+          "comment": "AI在加速抗生素发现的同时，能否真正解决微生物耐药性这场人类与病原体的军备竞赛？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "EU隐私监管机构对X的Grok AI生成色情内容展开调查",
+          "summary": "爱尔兰数据保护机构启动大规模调查，审查X平台Grok聊天机器人生成和发布的性化图像，标志AI监管进一步收紧。",
+          "comment": "AI生成内容监管是否需要统一的全球标准，还是各国各有政策反而能找到最优平衡？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-17/musk-s-x-probed-by-irish-data-watchdog-over-grok-sexual-images"
+        },
+        {
+          "title": "英国收紧AI聊天机器人监管以保护儿童",
+          "summary": "英国在在线安全法中对AI聊天机器人提出更严格的监管要求，确保对儿童的保护，标志全球AI治理趋于强化。",
+          "comment": "保护儿童安全和创新发展之间的平衡点在哪里？过度监管是否会导致创新向监管较松的地区转移？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/16/ai-chatbot-firms-face-stricter-regulation-protect-children-uk.html"
+        },
+        {
+          "title": "AI恐慌冲击印度IT股市56亿美元",
+          "summary": "AI带来的担忧引发印度IT服务公司股价大幅下跌，但也为看好该产业的投资者创造买入机会，反映市场对AI冲击的持续焦虑。",
+          "comment": "印度IT服务业因AI自动化而陷入困境，是否会促使其加速向AI增值服务转变？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-16/ai-scare-s-56-billion-hit-tests-resilience-of-india-s-it-stocks"
+        },
+        {
+          "title": "深圳印发住建领域人工智能+工作方案",
+          "summary": "深圳市住建局发布人工智能+工作方案，在八大场景中应用AI赋能建筑业高质量发展，推动传统行业数字化升级。",
+          "comment": "AI在建筑行业的应用是否能突破传统建造方式的根本瓶颈，还是只能在边界优化层面做出贡献？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119290.html"
+        },
+        {
+          "title": "中国科技堆栈威胁美国AI垄断地位",
+          "summary": "分析师指出中国在AI和科技领域的快速发展将形成独立的技术生态，可能在5-10年内占据全球大部分市场份额。",
+          "comment": "技术割裂成以美国和中国为中心的两个生态系统，是否会降低全球AI创新的整体效率，还是会促进更激烈的竞争？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/16/chinas-tech-shock-ai-monopoly-us.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "Recursive Intelligence四个月融资3.35亿美元，估值40亿美元",
+          "summary": "AI初创公司Recursive Intelligence因创始人在AI领域声名显赫而在四个月内以40亿美元估值融资3.35亿美元，吸引众多风投排队投资。",
+          "comment": "创始人声誉能否持续支撑公司估值，还是最终还需回到产品和商业模式的真实价值创造？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/16/how-ricursive-intelligence-raised-335m-at-a-4b-valuation-in-4-months/"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "sent",
+  "created_at": "2026-02-17T09:14:37.101474+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}

@@ -154,7 +154,7 @@ jobs:
         if: steps.pre_check.outputs.skip != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
           IS_MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
         run: |

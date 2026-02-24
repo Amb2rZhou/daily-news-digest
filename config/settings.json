@@ -87,7 +87,11 @@
     "blacklist_keywords": [],
     "blacklist_sources": [],
     "whitelist_keywords": [],
-    "whitelist_sources": ["宝玉AI", "数字生命卡兹克", "歸藏的AI工具箱", "归藏(即刻)"]
+    "whitelist_sources": [
+      "宝玉AI",
+      "数字生命卡兹克",
+      "歸藏的AI工具箱"
+    ]
   },
   "rss_feeds": [
     {
@@ -145,13 +149,13 @@
       "enabled": true
     },
     {
-      "url": "https://ai.meta.com/blog/rss/",
-      "name": "Meta AI Blog",
+      "url": "https://engineering.fb.com/feed/",
+      "name": "Meta Engineering",
       "group": "AI公司博客",
       "enabled": true
     },
     {
-      "url": "https://www.anthropic.com/rss.xml",
+      "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml",
       "name": "Anthropic Blog",
       "group": "AI公司博客",
       "enabled": true
@@ -199,7 +203,7 @@
       "enabled": true
     },
     {
-      "url": "https://www.pingwest.com/feed",
+      "url": "https://rsshub.rssforever.com/pingwest/status",
       "name": "PingWest品玩",
       "group": "中文科技媒体",
       "enabled": true
@@ -267,46 +271,46 @@
       "paywalled": true
     },
     {
-      "url": "https://rsshub.app/bilibili/user/video/612932327",
+      "url": "https://rsshub.liumingye.cn/bilibili/user/video/612932327",
       "name": "老石谈芯",
       "group": "B站UP主",
       "enabled": true
     },
     {
-      "url": "https://rsshub.app/bilibili/user/video/266765166",
+      "url": "https://rsshub.liumingye.cn/bilibili/user/video/266765166",
       "name": "漫士沉思录",
       "group": "B站UP主",
       "enabled": true
     },
     {
-      "url": "https://rsshub.app/bilibili/user/video/517221395",
+      "url": "https://rsshub.liumingye.cn/bilibili/user/video/517221395",
       "name": "ZOMI酱",
       "group": "B站UP主",
       "enabled": true
     },
     {
-      "url": "https://rsshub.app/bilibili/user/video/504715181",
+      "url": "https://rsshub.liumingye.cn/bilibili/user/video/504715181",
       "name": "王木头学科学",
       "group": "B站UP主",
       "enabled": true
     },
     {
-      "url": "https://rsshub.app/ximalaya/album/51487187",
+      "url": "https://rsshub.rssforever.com/ximalaya/album/51487187",
       "name": "硅谷101",
       "group": "播客",
-      "enabled": true
+      "enabled": false
     },
     {
-      "url": "https://rsshub.app/ximalaya/album/29161862",
+      "url": "https://rsshub.rssforever.com/ximalaya/album/29161862",
       "name": "OnBoard!",
       "group": "播客",
-      "enabled": true
+      "enabled": false
     },
     {
-      "url": "https://rsshub.app/ximalaya/album/3558668",
+      "url": "https://rsshub.rssforever.com/ximalaya/album/3558668",
       "name": "42章经",
       "group": "播客",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://github.blog/feed/",
@@ -317,6 +321,12 @@
     {
       "url": "https://a16z.com/feed/",
       "name": "a16z",
+      "group": "技术博客",
+      "enabled": false
+    },
+    {
+      "url": "https://www.ycombinator.com/blog/feed.xml",
+      "name": "Y Combinator Blog",
       "group": "技术博客",
       "enabled": true
     },
@@ -339,8 +349,8 @@
       "enabled": true
     },
     {
-      "url": "https://www.latepost.com/rss",
-      "name": "晚点LatePost官网",
+      "url": "https://rsshub.liumingye.cn/latepost",
+      "name": "晚点LatePost",
       "group": "独立博客",
       "enabled": true
     },
@@ -462,7 +472,7 @@
       "url": "https://www.xrtoday.com/feed/",
       "name": "XR Today",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://www.93913.com/feed/",
@@ -492,16 +502,16 @@
       "url": "https://mixed-news.com/en/feed/",
       "name": "MIXED",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://6dofreviews.com/feed/",
       "name": "6DOF Reviews",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
-      "url": "https://spectrum.ieee.org/feeds/topic/robotics",
+      "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
       "name": "IEEE Spectrum Robotics",
       "group": "智能硬件",
       "enabled": true
@@ -510,7 +520,7 @@
       "url": "https://www.robotics247.com/rss/rss.xml",
       "name": "Robotics 24/7",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://www.7tin.cn/feed/",

@@ -1,0 +1,141 @@
+{
+  "date": "2026-02-20",
+  "time_window": "2026-02-19 09:49 ~ 2026-02-20 09:49",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Gemini 3.1 Pro血洗Claude与GPT，12项基准测试第一",
+          "summary": "谷歌发布Gemini 3.1 Pro，采用混合专家架构，支持100万token输入和6.4万token输出，在代码、推理等12项基准测试中排名第一，标志着最新AI能力开始全面进入开发者工具和普通应用。",
+          "comment": "当大模型的能力指标竞争白热化时，真正决定市场格局的是否会转向应用层的创新？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/Ic69NzLCGqQ6HRuCligh"
+        },
+        {
+          "title": "ByteDance Pico发布visionOS竞争对手，支持2D和空间应用共享运行",
+          "summary": "字节跳动旗下Pico将在下月详细介绍其visionOS竞争系统，该系统包含2D和空间应用共存功能，计划在新款头显中首次亮相。",
+          "comment": "在AR/VR空间系统竞争中，字节跳动的本地化方案能否打破苹果在空间计算领域的话语权？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/pico-to-detail-visionos-competitor-for-new-headset-next-month/"
+        },
+        {
+          "title": "苹果智能眼镜敲定2027年初发布，双摄像头成核心差异化卖点",
+          "summary": "苹果首款智能眼镜配备双摄像头系统，主打影像拍摄与计算机视觉功能，计划2026年12月启动大规模生产，2027年初正式推出。",
+          "comment": "苹果能否通过双摄像头+AI视觉能力的组合，开创智能眼镜的新使用场景？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119354.html"
+        },
+        {
+          "title": "Figma stock jumps 15% as company sees AI monetization accelerating growth",
+          "summary": "设计软件公司Figma在AI工具Figma Make加速采纳的推动下，在Q4财报后股价上涨15%，并保持了毛利率水平。",
+          "comment": "设计工具的AI化能否成为企业级AIGC变现的标杆模式？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/02/18/figma-fig-q4-earnings-report-2025.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Nvidia和OpenAI放弃100亿美元合作，改为30亿美元股权投资",
+          "summary": "芯片巨头Nvidia与AI初创公司OpenAI放弃复杂的合作框架，改为进行30亿美元的股权投资，标志着两家公司关系的调整。",
+          "comment": "从复杂合作回到股权投资，反映了AI产业链中芯片与模型的关系会如何重新平衡？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/dea24046-0a73-40b2-8246-5ac7b7a54323"
+        },
+        {
+          "title": "Meta与英伟达达成战略合作，全栈AI算力协议锁定未来数年发展",
+          "summary": "Meta和英伟达宣布达成多年战略合作伙伴关系，涵盖全栈AI算力协议，为双方未来数年的AI基础设施发展提供保障。",
+          "comment": "Meta对AI算力的长期锁定能否确保其在生成式AI竞争中的技术优势？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119366.html"
+        },
+        {
+          "title": "谷歌官宣2026 I/O大会5月举办，AI眼镜与Gemini更新成核心看点",
+          "summary": "谷歌宣布5月举办2026年I/O大会，将聚焦AI前沿进展，首款消费级AI智能眼镜和Gemini系列大模型更新成为两大核心看点。",
+          "comment": "谷歌在消费级AI眼镜和模型能力的同步发力，会否重新定义AI的用户交互范式？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119356.html"
+        },
+        {
+          "title": "Nvidia deepens early-stage push into India's AI startup ecosystem",
+          "summary": "Nvidia与印度投资者、非营利组织和风险投资公司合作，深化对印度早期AI初创公司生态的布局。",
+          "comment": "Nvidia向新兴市场AI生态的投入，是否标志着芯片巨头向AI生态投资方转变？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/19/nvidia-deepens-early-stage-push-into-indias-ai-startup-ecosystem/"
+        },
+        {
+          "title": "Ex-Google Engineers Charged With Stealing Phone Processor Tech",
+          "summary": "两名前Google工程师及其中一人的丈夫因被控窃取谷歌Tensor处理器商业机密而被起诉。",
+          "comment": "AI芯片技术的跨境流动风险会否成为未来企业AI战略布局的重要考量因素？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-20/ex-google-engineers-charged-with-stealing-phone-processor-tech"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Firestore添加管道操作，提供超过100个新的查询功能",
+          "summary": "谷歌革新Firestore企业版查询引擎，新增管道操作功能，支持复杂聚合、数组操作和正则表达式匹配，超过100项新查询特性，消除了长期限制。",
+          "comment": "数据库查询能力的大幅跃升会否推动NoSQL在AI数据处理中的应用边界？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/t9ORmgH3AUBsYygo04pd"
+        },
+        {
+          "title": "NVIDIA adds Cosmos Policy to its world foundation models",
+          "summary": "Nvidia为其Cosmos预测世界基础模型新增Cosmos Policy机器人控制策略，用于增强机器人操纵任务的能力。",
+          "comment": "世界模型与机器人控制策略的融合是否会加速通用型物理AI的实现？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/nvidia-adds-cosmos-policy-world-foundation-models/"
+        },
+        {
+          "title": "Microsoft has a new plan to prove what's real and what's AI online",
+          "summary": "微软推出新方案识别在线内容的真伪，应对日益泛滥的AI生成内容欺骗现象，包括图片和视频的验真。",
+          "comment": "在AI合成内容爆炸式增长的时代，内容验真技术的突破能否成为信息生态的防火墙？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/19/1133360/microsoft-has-a-new-plan-to-prove-whats-real-and-what's-ai-online/"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "The Chinese AI app sending Hollywood into a panic",
+          "summary": "中国AI应用因生成死侍等好莱坞电影角色片段而引发好莱坞警惕，涉及版权侵权问题。",
+          "comment": "AI内容生成工具跨越版权边界的速度，是否会迫使全球娱乐产业加速重构内容保护机制？",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/ckg1dl410q9o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "How AI is reshaping developer choice (and Octoverse data proves it)",
+          "summary": "GitHub Octoverse 2025数据显示，AI兼容性正成为开发者选择技术的新标准，AI通过便利性循环重构了开发者偏好。",
+          "comment": "当AI能力成为技术选型的主要驱动力时，开源生态的权力结构会否发生根本性转变？",
+          "source": "The GitHub Blog",
+          "url": "https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/"
+        },
+        {
+          "title": "How attackers hit 700 organizations through CX platforms your SOC already approved",
+          "summary": "攻击者通过投毒AI驱动的客户体验平台的数据，使其自动触发危险工作流，已影响700多个组织，暴露了AI安全栈的盲点。",
+          "comment": "当AI引擎成为攻击链的核心环节时，现有的安全防护范式是否已经失效？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/security/cx-security-gaps-ai-stack-blind-spots"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "approved",
+  "created_at": "2026-02-20T09:50:49.775144+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}
