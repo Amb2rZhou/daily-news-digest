@@ -79,7 +79,7 @@
       "send_hour": 10,
       "send_minute": 0,
       "topic_mode": "broad",
-      "max_news_items": 10,
+      "max_news_items": 14,
       "webhook_url_base": "",
       "webhook_key_slot": 6
     }
