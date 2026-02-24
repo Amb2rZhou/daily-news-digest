@@ -1,0 +1,134 @@
+{
+  "date": "2026-02-24",
+  "time_window": "2026-02-23 16:06 ~ 2026-02-24 16:06",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "月之暗面科技发布开源权重 Kimi K2.5 模型，具备视觉与智能体集群能力",
+          "summary": "月之暗面科技发布其最新的开源多模态大语言模型 Kimi K2.5，该模型具备视觉功能，并支持调度多达 100 个子智能体的集群模式以解决复杂问题。",
+          "comment": "开源多模态大模型与智能体集群能力的结合，是否会催生出超越单一闭源模型的、由社区驱动的分布式AI协作新范式？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/kadDBSqBrtFfUbipxQSs"
+        },
+        {
+          "title": "谷歌发布Glimmer设计语言，专为HUD及AR眼镜打造",
+          "summary": "谷歌发布专为智能眼镜透明抬头显示界面打造的全新设计语言 Glimmer，旨在优化狭小显示区域的信息呈现，强调一目了然的布局。",
+          "comment": "当AI信息从屏幕走向现实空间叠加，界面设计如何重新定义人机交互的注意力和信息优先级？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544743.html"
+        },
+        {
+          "title": "印度AI公司Sarvam展示Kaze智能眼镜，预计今年5月上市",
+          "summary": "印度AI公司Sarvam宣布其硬件布局，包括展示Kaze智能眼镜，计划通过极轻量化边缘模型将AI能力引入功能手机、汽车和智能眼镜。",
+          "comment": "针对特定市场（如印度）的轻量化边缘AI模型，能否成为AI普惠和克服数字鸿沟的关键路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544742.html"
+        },
+        {
+          "title": "Firefox 148 Launches with AI Kill Switch Feature and More Enhancements",
+          "summary": "Firefox 148 浏览器发布，引入了AI终止开关功能，允许用户一键禁用页面上的AI功能。",
+          "comment": "浏览器内置的AI控制开关，是否意味着用户对AI的自主权将从应用层上升到系统层，成为未来数字权利的标准配置？",
+          "source": "Hacker News: Front Page",
+          "url": "https://serverhost.com/blog/firefox-148-launches-with-exciting-ai-kill-switch-feature-and-more-enhancements/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
+          "summary": "据报道，OpenAI有超过200人的团队正在开发一系列AI硬件，包括智能音箱、智能眼镜和智能灯，其中智能眼镜可能在2028年量产。",
+          "comment": "以软件和模型见长的OpenAI进军硬件领域，其AI眼镜是会重新定义个人AI助理的形态，还是面临与科技巨头在供应链和生态上的硬仗？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544748.html"
+        },
+        {
+          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
+          "summary": "据报道，苹果正在加紧研发包括AI眼镜、AI吊坠和新款AirPods在内的AI可穿戴设备，这些设备都将围绕增强的Siri数字助理构建。",
+          "comment": "苹果将AI能力分散到眼镜、吊坠、耳机等多种可穿戴设备中，这种去中心化的AI体验是否会颠覆以手机为中心的智能生态？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544740.html"
+        },
+        {
+          "title": "Meta发布Reality Labs部门2026年战略重点",
+          "summary": "Meta宣布其Reality Labs部门2026年战略重点，包括将Quest VR平台与Worlds社交平台明确分开，并将Worlds重心几乎完全转移到移动端。",
+          "comment": "Meta将VR与社交平台拆分，是否意味着其元宇宙战略正从统一的虚拟世界构想，转向更务实的、基于不同设备特性的体验分层？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544750.html"
+        },
+        {
+          "title": "Anthropic员工股份出售预计将达到60亿美元",
+          "summary": "基于3800亿美元的最新估值，Anthropic启动面向现任和前任员工的股票出售计划，预计总额将高达60亿美元。",
+          "comment": "如此大规模的员工股份出售，是AI人才财富效应的集中释放，还是预示着行业估值泡沫进入了一个需要流动性兑现的阶段？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3696963359403655?f=rss"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "⼤神Karpathy最新推⽂：AI技术栈⻓出了新的⼀层 ，叫Claw",
+          "summary": "AI专家Andrej Karpathy提出新概念'Claw'，指代AI技术栈中新出现的一层，与最近爆火的开源AI Agent项目OpenClaw相关。",
+          "comment": "当Karpathy这样的顶尖研究者开始为AI Agent层定义新术语，这是否标志着AI开发正从模型调用时代，正式进入智能体操作系统时代？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/V6yNz0S1DKeUtmoSfrsw"
+        },
+        {
+          "title": "OpenAI发布了Codex应用服务器架构，用于统一AI智能体表面",
+          "summary": "OpenAI发布Codex应用服务器架构，这是一个双向协议，旨在将Codex编码智能体的核心逻辑与其各种客户端界面解耦，通过单一API支持所有体验。",
+          "comment": "统一智能体后端的架构设计，是否预示着未来AI应用开发将更侧重于前端交互创新，而底层智能能力则趋于标准化和平台化？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/Ac7pCglOgaK4tEoWg5b7"
+        },
+        {
+          "title": "Uber和OpenAI重组了限流系统",
+          "summary": "Uber和OpenAI都讨论了其限流方法的转变，从基于计数器的系统转向适应性、基于策略的系统，以更好地管理AI服务流量并确保系统弹性。",
+          "comment": "顶尖科技公司不约而同地重构AI服务限流策略，这是否意味着随着AI应用规模化，传统的流量治理模型已无法应对智能服务特有的不确定性和资源消耗模式？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/aAR59Z3IR5z7PWOtQtzm"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "一夜蒸发 310 亿美元！Claude 新工具干翻 IBM 摇钱树，AI 正在“清零”人类工位",
+          "summary": "报道指出，Anthropic的Claude新工具对IBM等传统科技公司的核心业务造成冲击，引发市场对AI取代人类工作岗位的担忧和股市震荡。",
+          "comment": "AI工具直接冲击巨头核心业务并引发百亿级市值蒸发，这是否标志着AI对产业结构的颠覆已从效率提升进入价值重分配阶段？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655572?utm_source=rss&utm_medium=rss&utm_campaign="
+        },
+        {
+          "title": "Citrini’s Dystopia Fuels Asia’s Breakaway From Global AI Gloom",
+          "summary": "Citrini Research关于AI塑造的反乌托邦未来报告，反而强化了市场对亚洲将成为AI颠覆赢家的押注，因其拥有丰富的芯片制造商等公司。",
+          "comment": "当全球对AI的社会影响感到悲观时，亚洲却因硬件供应链优势被视为赢家，这是否揭示了在AI时代，地缘科技竞争的核心将从算法转向算力与制造？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-24/citrini-s-dystopia-fuels-asia-s-breakaway-from-global-ai-gloom"
+        },
+        {
+          "title": "Indian IT Stock Selloff Deepens on AI Scare After Citrini Report",
+          "summary": "Citrini Research的报告加剧了市场对AI影响的担忧，导致印度软件服务类股票抛售加剧，这些企业被认为容易受到AI日益增长的影响。",
+          "comment": "以外包和IT服务闻名的印度科技股因AI恐慌遭抛售，这是否意味着全球产业链上曾受益于数字化的环节，如今正首当其冲面临AI自动化的冲击？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-24/indian-it-stock-selloff-deepens-on-ai-scare-after-citrini-report"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-24T16:08:28.888897+08:00",
+  "channel_id": "ch_xiayue",
+  "channel_name": "测试for夏月",
+  "topic_mode": "broad"
+}
