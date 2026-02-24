@@ -58,6 +58,17 @@
       "max_news_items": 15,
       "webhook_url_base": "",
       "webhook_key_slot": 4
+    },
+    {
+      "id": "ch_mm09yf0x",
+      "type": "webhook",
+      "name": "午休新频道",
+      "enabled": true,
+      "send_hour": 10,
+      "send_minute": 0,
+      "topic_mode": "broad",
+      "max_news_items": 10,
+      "webhook_url_base": ""
     }
   ],
   "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
