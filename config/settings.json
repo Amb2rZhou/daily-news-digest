@@ -86,10 +86,10 @@
   ],
   "webhook_url_base": "https://redcity-open.xiaohongshu.com/api/robot/webhook/send",
   "categories_order": [
-    "产品发布",
-    "巨头动向",
     "技术进展",
     "行业观察",
+    "巨头动向",
+    "产品发布",
     "投融资"
   ],
   "source_limits": {
