@@ -1,0 +1,100 @@
+{
+  "date": "2026-02-24",
+  "time_window": "2026-02-23 15:25 ~ 2026-02-24 15:25",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "月之暗面科技发布开源权重 Kimi K2.5 模型，具备视觉与智能体集群能力",
+          "summary": "月之暗面发布最新开源多模态大模型Kimi K2.5，该模型具备视觉能力，并支持调度多达100个子智能体以并行工作流解决复杂问题。",
+          "comment": "开源多模态大模型与智能体集群能力的结合，是否会加速AI应用从单点工具向复杂系统解决方案的演进？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/kadDBSqBrtFfUbipxQSs"
+        },
+        {
+          "title": "Firefox 148 Launches with AI Kill Switch Feature and More Enhancements",
+          "summary": "Firefox 148版本发布，引入了一项名为‘AI Kill Switch’的新功能，允许用户一键禁用网页中的AI相关组件。",
+          "comment": "浏览器内置的AI控制开关，是否预示着未来用户对AI交互的自主权将成为产品设计的核心考量？",
+          "source": "Hacker News: Front Page",
+          "url": "https://serverhost.com/blog/firefox-148-launches-with-exciting-ai-kill-switch-feature-and-more-enhancements/"
+        },
+        {
+          "title": "谷歌发布Glimmer设计语言，专为HUD及AR眼镜打造",
+          "summary": "谷歌详细介绍了其专为智能眼镜透明抬头显示界面打造的全新设计语言Glimmer，旨在优化狭小显示区域与现实世界共存的交互体验。",
+          "comment": "当AI交互从屏幕转向透明空间，设计语言的根本性变革将如何重塑我们获取信息的方式？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544743.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
+          "summary": "据报道，OpenAI有超过200人的团队正在开发一系列AI硬件，包括智能音箱、智能眼镜和智能灯，其中智能眼镜可能在2028年量产。",
+          "comment": "从软件模型到硬件入口，OpenAI的跨界布局是否意味着AI竞争的终极战场将回归到物理世界的交互终端？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544748.html"
+        },
+        {
+          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
+          "summary": "据彭博社报道，苹果正在加紧研发包括AI眼镜、AI吊坠和新款AirPods在内的多款AI可穿戴设备，这些设备都将围绕增强版Siri构建。",
+          "comment": "苹果将AI能力分散到多种可穿戴设备中，这种去中心化的AI策略会如何挑战现有以手机为核心的智能生态？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544740.html"
+        },
+        {
+          "title": "“一句话下单”2亿次： “千问帮我”成马年春节新年俗",
+          "summary": "阿里通义千问数据显示，春节期间用户通过‘一句话下单’功能完成近2亿次消费，覆盖餐饮、出行、娱乐等多种场景，成为消费新习惯。",
+          "comment": "当AI助手能无缝完成从意图理解到交易闭环，这是否标志着AI从信息工具向生活代理的角色转变已经完成？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/gMCPcsJE8VXuUzbu.html"
+        },
+        {
+          "title": "Tesla sues California DMV to reverse ruling that company engaged in false advertising on FSD",
+          "summary": "特斯拉起诉加州机动车辆管理局，要求撤销其关于特斯拉在完全自动驾驶能力方面进行虚假宣传的裁决。",
+          "comment": "车企与监管机构对‘自动驾驶’宣传尺度的法律博弈，会如何影响整个行业的技术披露与消费者教育标准？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/02/23/tesla-sues-california-dmv-to-reverse-false-advertising-ruling-on-fsd.html"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "⼤神Karpathy最新推⽂：AI技术栈⻓出了新的⼀层 ，叫Claw",
+          "summary": "AI专家Andrej Karpathy提出新概念‘Claw’，指代AI技术栈中新兴的智能体层，并提及开源项目OpenClaw的火爆。",
+          "comment": "Claw作为AI技术栈的新层被提出，是否意味着智能体将成为连接底层模型与上层应用的标准中间件？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/V6yNz0S1DKeUtmoSfrsw"
+        },
+        {
+          "title": "OpenAI发布了Codex应用服务器架构，用于统一AI智能体表面",
+          "summary": "OpenAI发布Codex应用服务器架构详情，这是一个双向协议，旨在将Codex智能体的核心逻辑与其各种客户端界面解耦，通过单一API支持多平台体验。",
+          "comment": "通过统一的后端架构支持多样化的前端交互，这是否是AI智能体实现规模化、标准化服务的关键一步？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/Ac7pCglOgaK4tEoWg5b7"
+        },
+        {
+          "title": "构建代理式MLOps：一种基于A2A和MCP的分层协议策略",
+          "summary": "文章提出结合Agent-to-Agent协议和模型上下文协议的分层架构模式，旨在创建可扩展、可互操作的多智能体系统，应用于MLOps等场景。",
+          "comment": "当AI工作流从静态管道转向动态智能体协作，新的通信与编排标准会催生出怎样的基础设施生态？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/Z0QvjUmMxFKvMNl4FzGt"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-24T15:27:43.880099+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-02-24",
-  "time_window": "2026-02-23 10:00 ~ 2026-02-24 09:59",
+  "time_window": "2026-02-23 15:25 ~ 2026-02-24 15:25",
   "categories": [
     {
       "name": "智能硬件",
@@ -8,66 +8,73 @@
       "news": [
         {
           "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
-          "summary": "据报道，OpenAI有超过200人的团队正在开发一系列AI硬件设备，其中包括智能音箱、智能眼镜和智能灯。智能音箱可能最早于2027年上市，而智能眼镜则可能在2028年量产。",
-          "comment": "AI软件巨头进军硬件领域，其产品能否在用户体验上超越现有的智能眼镜？",
+          "summary": "据The Information报道，OpenAI有超过200人的团队正在开发一系列AI硬件，包括智能音箱、智能眼镜和智能灯。其中智能音箱可能最早于2027年上市，而AI眼镜则可能在2028年量产。",
+          "comment": "当顶尖AI软件公司开始涉足硬件，会如何重塑消费者对智能设备的期待和交互范式？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544748.html"
         },
         {
-          "title": "传苹果将于2028年发布AR眼镜，采用OLEDos方案",
-          "summary": "行业分析报告预测，苹果可能在2028年发布一款采用0.6英寸OLEDoS（Micro-OLED）屏幕的AR眼镜。报告同时指出，OLEDoS技术将在未来几年成为AR/VR/MR设备的重要显示方案。",
-          "comment": "在Vision Pro之后，苹果的AR眼镜是否会成为其下一个定义市场的消费级硬件？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544744.html"
-        },
-        {
-          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
-          "summary": "据彭博社报道，苹果正在加紧研发多款AI可穿戴设备，包括AI眼镜、AI吊坠和新款AirPods。这些设备将围绕具备视觉上下文理解能力的Siri构建，并与iPhone系统相连。",
-          "comment": "苹果将如何通过不同形态的AI穿戴设备，构建一个无缝的、情境感知的个人计算网络？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544740.html"
-        },
-        {
-          "title": "印度AI公司Sarvam展示Kaze智能眼镜，预计今年5月上市",
-          "summary": "印度AI公司Sarvam宣布了其硬件布局，包括自主研发的Kaze智能眼镜。该眼镜计划搭载极轻量化的边缘AI模型，支持离线工作，预计将于今年5月上市。",
-          "comment": "专注于本地化语言和离线能力的边缘AI硬件，能否在特定市场挑战全球科技巨头的产品？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544742.html"
-        },
-        {
           "title": "扎克伯格随行人员佩戴Meta AI眼镜进入法庭，涉嫌违规录制遭法官警告",
-          "summary": "Meta首席执行官扎克伯格的随行人员在法庭上佩戴具有录制功能的Meta AI智能眼镜，因涉嫌违反法庭禁止录音录像的规定而遭到法官的严厉警告。",
-          "comment": "具备环境感知和记录功能的智能眼镜，将如何重新定义公共与私人空间的边界及行为规范？",
+          "summary": "在洛杉矶高等法院的一场庭审中，Meta CEO扎克伯格的随行人员因佩戴具有录制功能的Meta AI智能眼镜进入法庭，被法官警告涉嫌违反法庭禁止录音录像的规定。",
+          "comment": "具备环境感知和记录功能的AI眼镜，在公共和私人场所的应用边界应如何界定？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544747.html"
         },
         {
-          "title": "GDC演讲显示，PICO将于3月公布旗舰级头显Project Swan和全新系统",
-          "summary": "根据GDC官网日程，PICO计划在3月12日公布其面向通用空间计算的旗舰设备‘Project Swan’。该设备旨在支持新一代全空间与共享空间体验，并配备全新的操作系统。",
-          "comment": "在Meta和苹果主导的空间计算市场，PICO的新旗舰能否通过差异化的‘共享空间’体验找到突破口？",
+          "title": "PICO将于3月公布旗舰级头显Project Swan和全新系统",
+          "summary": "根据GDC官网日程，PICO将在3月12日公布其面向通用空间计算的旗舰设备‘Project Swan’，并介绍其核心操作系统与平台能力，旨在支持新一代全空间与共享空间体验。",
+          "comment": "面对苹果和Meta的竞争，PICO的‘通用空间计算’新战略能否在市场中开辟出差异化的生存空间？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544746.html"
         },
         {
-          "title": "Tesollo commercializes its lightweight, compact robotic hand for humanoids",
-          "summary": "Tesollo公司宣布将其轻量紧凑的DG-5F-S机器人手商业化。该产品专为人形机器人设计，支持精确抓取和操作所需的灵巧动作。",
-          "comment": "模块化、商业化的灵巧手组件，是否会加速人形机器人从实验室走向实际应用的进程？",
+          "title": "传苹果将于2028年发布AR眼镜，采用OLEDoS方案",
+          "summary": "据Omdia报告预测，苹果可能于2028年发布一款采用0.6英寸OLEDoS屏幕的AR眼镜。报告同时指出，OLEDoS技术将推动AR/VR/MR近眼显示市场在2026年实现超过200%的增长。",
+          "comment": "如果苹果AR眼镜在2028年才面世，它需要具备哪些颠覆性功能才能应对届时可能已相当成熟的市场？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544744.html"
+        },
+        {
+          "title": "谷歌发布Glimmer设计语言，专为HUD及AR眼镜打造",
+          "summary": "谷歌详细介绍了其专为智能眼镜透明抬头显示（HUD）界面打造的全新设计语言Glimmer。该语言针对狭小显示区域和与现实世界共存的特性进行了优化，强调‘一目了然’的交互体验。",
+          "comment": "为透明屏幕设计的UI语言，如何平衡信息呈现的效率和避免对现实世界视野的过度干扰？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544743.html"
+        },
+        {
+          "title": "印度AI公司Sarvam展示Kaze智能眼镜，预计今年5月上市",
+          "summary": "印度AI公司Sarvam在新德里峰会上展示了其自主研发的Kaze智能眼镜，该设备计划于今年5月上市。公司旨在通过极轻量化的边缘AI模型，为功能手机、汽车和眼镜等设备带来离线AI能力。",
+          "comment": "在AI硬件竞赛中，专注于本地化、轻量化模型的边缘设备，能否成为挑战科技巨头的新路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544742.html"
+        },
+        {
+          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
+          "summary": "据彭博社报道，苹果正在加紧研发多款AI可穿戴设备，包括AI眼镜、AI吊坠和新款AirPods。这些设备都将围绕具备视觉上下文理解能力的Siri构建，并与iPhone系统相连。",
+          "comment": "苹果将AI能力分散到眼镜、吊坠、耳机等多种形态的设备中，这是否预示着未来‘去中心化’的个人AI体验？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544740.html"
+        },
+        {
+          "title": "Tesollo将其轻量紧凑型机械手商业化，用于人形机器人",
+          "summary": "Tesollo公司宣布将其DG-5F-S型轻量紧凑机械手商业化。该机械手专为人形机器人设计，支持精确抓取和操作所需的灵巧运动。",
+          "comment": "标准化、商业化的机器人关键部件（如灵巧手）的普及，是否会加速人形机器人行业的整体发展？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/tesollo-commercializes-its-lightweight-compact-robotic-hand-for-humanoids/"
         },
         {
-          "title": "法拉第未来EAI机器人下周开启首批交付 贾跃亭称有信心完成交付爬坡",
-          "summary": "法拉第未来（Faraday Future）宣布，其备受关注的EAI机器人产品将于下周正式开启首批交付。公司创始人贾跃亭表示对完成交付爬坡有信心。",
-          "comment": "跨界造车的公司转向机器人领域，其产品交付能否兑现承诺，并经受住真实场景的考验？",
-          "source": "93913",
-          "url": "https://www.93913.com/119447.html"
-        },
-        {
-          "title": "Vuzix推出企业级智能眼镜 一站式套件赋能一线人员远程协助",
-          "summary": "AR技术提供商Vuzix Corporation正式发布全新的Vuzix Solutions系列企业级智能眼镜部署套件，旨在为一线工作人员提供远程协助等赋能工具。",
-          "comment": "针对垂直行业的企业级智能眼镜解决方案，是否是当前AR硬件实现规模化营收的最现实路径？",
+          "title": "Vuzix推出企业级智能眼镜，一站式套件赋能一线人员远程协助",
+          "summary": "AR技术提供商Vuzix Corporation正式发布全新的Vuzix Solutions系列企业级智能眼镜部署套件，旨在为一线工作人员提供远程协助等企业应用的一站式解决方案。",
+          "comment": "在企业级市场，提供软硬件一体化的完整解决方案，是否比单纯销售硬件更具竞争力和可持续性？",
           "source": "93913",
           "url": "https://www.93913.com/119438.html"
+        },
+        {
+          "title": "法拉第未来EAI机器人下周开启首批交付",
+          "summary": "法拉第未来（Faraday Future）宣布其EAI机器人将于下周正式开启首批交付。公司创始人贾跃亭表示有信心完成交付爬坡。",
+          "comment": "从电动汽车跨界到机器人，法拉第未来的这次转型能否借助其原有的品牌和技术积累获得成功？",
+          "source": "93913",
+          "url": "https://www.93913.com/119447.html"
         }
       ]
     },
@@ -77,17 +84,24 @@
       "news": [
         {
           "title": "月之暗面科技发布开源权重 Kimi K2.5 模型，具备视觉与智能体集群能力",
-          "summary": "月之暗面科技发布了最新的开源多模态大语言模型 Kimi K2.5，该模型在代码任务上表现优异，并支持智能体集群模式，可调度多达100个子智能体并行工作。",
-          "comment": "开源多模态模型在支持复杂智能体协作方面，是否会成为未来AI应用开发的主流基础设施？",
-          "source": "InfoQ",
+          "summary": "月之暗面科技发布了最新的开源多模态大语言模型 Kimi K2.5，该模型在代码任务上表现出色，并新增了视觉功能。它支持智能体集群模式，能够调度多达100个子智能体以并行工作流解决复杂问题。",
+          "comment": "开源多模态模型在代码和智能体能力上已能比肩顶级闭源模型，这会如何改变AI开发者和企业的技术选型策略？",
+          "source": "InfoQ 推荐",
           "url": "https://www.infoq.cn/article/kadDBSqBrtFfUbipxQSs"
         },
         {
           "title": "大神Karpathy最新推文：AI技术栈长出了新的一层，叫Claw",
-          "summary": "AI专家Andrej Karpathy在推文中讨论了近期爆火的开源AI Agent项目OpenClaw，该项目在GitHub上已获得大量关注，并被视为AI技术栈中新兴的一层。",
-          "comment": "像‘Claw’这样的新概念，是否预示着AI Agent的开发与应用正进入一个更标准化、更易普及的新阶段？",
-          "source": "InfoQ",
+          "summary": "AI专家Andrej Karpathy在社交媒体上讨论了近期爆火的开源AI Agent项目OpenClaw，该项目在GitHub上已获得大量关注，被视为AI技术栈中新兴的‘Claw’层。",
+          "comment": "当‘Claw’成为AI技术栈的新一层，这是否意味着未来的AI应用开发将完全由智能体主导，而开发者角色将发生根本性转变？",
+          "source": "InfoQ 推荐",
           "url": "https://www.infoq.cn/article/V6yNz0S1DKeUtmoSfrsw"
+        },
+        {
+          "title": "OpenAI发布了Codex应用服务器架构，用于统一AI智能体表面",
+          "summary": "OpenAI发布了Codex应用服务器的详细架构，这是一个双向协议，旨在将Codex编码智能体的核心逻辑与其各种客户端界面解耦，通过单一、稳定的API支持所有体验。",
+          "comment": "通过统一的应用服务器架构来解耦智能体核心与前端，这是否会成为未来所有复杂AI应用的标准设计模式？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/Ac7pCglOgaK4tEoWg5b7"
         }
       ]
     },
@@ -96,30 +110,23 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "狂掷80亿，春节AI大战谁赢了？",
-          "summary": "文章分析了2026年春节期间，中国互联网巨头在AI领域的激烈竞争与巨额投入，探讨了这场‘最赛博朋克’春节背后的AI新世界布局。",
-          "comment": "当春节成为科技巨头的AI营销战场，这种集中投入对推动AI技术的实际落地和用户体验提升，是利大于弊还是弊大于利？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7887924.html"
+          "title": "“一句话下单”2亿次： “千问帮我”成马年春节新年俗",
+          "summary": "阿里旗下通义千问发布数据显示，春节期间用户通过“一句话下单”功能完成了近2亿次消费，覆盖餐饮、票务等多种场景，显示出AI助手在消费领域的深度渗透。",
+          "comment": "当‘一句话下单’成为国民级新年俗，这是否标志着AI Agent从工具正式迈向了大众生活服务的核心入口？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/gMCPcsJE8VXuUzbu.html"
         },
         {
           "title": "Anthropic指控DeepSeek等中国公司使用数万个虚假账户窃取Claude能力",
-          "summary": "Anthropic公开指控中国AI实验室DeepSeek、Moonshot和MiniMax通过约2.4万个虚假账户进行大规模、有组织的活动，试图从其Claude模型中汲取能力。",
-          "comment": "在AI模型能力快速迭代的背景下，如何建立有效的技术保护与行业伦理规范，以防止不正当竞争并促进健康创新？",
+          "summary": "Anthropic公开指控三家中国AI实验室（DeepSeek、月之暗面、MiniMax）通过创建约24000个虚假账户，进行了大规模、有组织的活动，试图从其Claude模型中汲取能力。",
+          "comment": "这场关于模型能力‘蒸馏’的公开指控，是否会引发新一轮全球AI竞赛中的技术封锁与更严格的合规审查？",
           "source": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/883243/anthropic-claude-deepseek-china-ai-distillation"
-        },
-        {
-          "title": "AI动荡令软件投资者紧张不安",
-          "summary": "市场正在权衡现有软件公司是会适应AI浪潮，还是会被AI Agent等新兴力量边缘化，这反映了AI对传统软件行业商业模式的潜在颠覆性影响。",
-          "comment": "AI Agent的兴起，是否会从根本上重塑企业软件市场的格局，催生一批全新的‘AI原生’巨头？",
-          "source": "Financial Times",
-          "url": "https://www.ft.com/content/8867bff7-8632-40b7-8fde-7c95b3e624f9"
         }
       ]
     }
   ],
-  "source": "scheduled",
+  "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-24T13:15:54.670320+08:00"
+  "created_at": "2026-02-24T15:26:52.543900+08:00"
 }
