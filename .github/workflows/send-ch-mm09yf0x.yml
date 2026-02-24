@@ -15,8 +15,44 @@ permissions:
   contents: write
 
 jobs:
-  send-channel:
+  pre-check:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      should_send: ${{ steps.check.outputs.should_send }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check if draft is sendable
+        id: check
+        run: |
+          DRAFT="config/drafts/$(TZ=Asia/Shanghai date +%Y-%m-%d)_ch_ch_mm09yf0x.json"
+          if [ ! -f "$DRAFT" ]; then
+            echo "No draft file found: $DRAFT"
+            echo "should_send=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          STATUS=$(python3 -c "import json; d=json.load(open('$DRAFT')); print(d.get('status',''))")
+          SOURCE=$(python3 -c "import json; d=json.load(open('$DRAFT')); print(d.get('source',''))")
+          echo "Draft status=$STATUS source=$SOURCE"
+
+          if [ "$STATUS" = "sent" ] || [ "$STATUS" = "rejected" ]; then
+            echo "Draft already $STATUS, skipping"
+            echo "should_send=false" >> "$GITHUB_OUTPUT"
+          elif [ "$STATUS" = "pending_review" ] && [ "$SOURCE" = "manual" ]; then
+            echo "Manual draft requires approval, skipping"
+            echo "should_send=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Draft is sendable"
+            echo "should_send=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  send-channel:
+    needs: pre-check
+    if: needs.pre-check.outputs.should_send == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 360
 
@@ -84,20 +120,23 @@ jobs:
 
       - name: Commit sent status
         run: |
+          DRAFT="config/drafts/$(TZ=Asia/Shanghai date +%Y-%m-%d)_ch_ch_mm09yf0x.json"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config/drafts/
-          git diff --cached --quiet || git commit -m "Mark ch_mm09yf0x draft as sent"
+          git add "$DRAFT"
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Mark ch_mm09yf0x draft as sent"
           BRANCH="${GITHUB_REF#refs/heads/}"
           push_ok=false
           for i in 1 2 3 4 5; do
-            git pull origin "$BRANCH" --rebase -X theirs || {
-              git checkout --theirs config/drafts/ 2>/dev/null || true
-              git add config/drafts/
-              git rebase --continue || true
+            git pull origin "$BRANCH" --rebase || {
+              # On conflict, keep our sent status (not remote's)
+              git checkout --ours "$DRAFT" 2>/dev/null || true
+              git add "$DRAFT"
+              git rebase --continue 2>/dev/null || true
             }
             git push origin HEAD:"$BRANCH" && { push_ok=true; break; }
-            echo "Push attempt $i failed, retrying after random sleep..."
+            echo "Push attempt $i failed, retrying..."
             sleep $((RANDOM % 15 + 5))
           done
           if [ "$push_ok" = false ]; then
