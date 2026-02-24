@@ -93,7 +93,7 @@ export default function Dashboard() {
       const fetchRuns = await getWorkflowRuns('fetch-news.yml', 5)
       // Gather runs from all per-channel send workflows
       const channels = (channelList || settings?.channels || []).filter(c => c.enabled)
-      const sendWorkflows = channels.map(ch => `send-ch-${ch.id}.yml`)
+      const sendWorkflows = channels.map(ch => `send-ch-${ch.id.replace(/^ch_/, '')}.yml`)
       const sendRunsAll = []
       for (const wf of sendWorkflows) {
         try {

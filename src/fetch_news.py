@@ -896,7 +896,7 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
 def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_items: int = 10, settings: dict = None) -> list[dict]:
     """Use AI to summarize, categorize, and select top news.
 
-    Tries MiniMax first, falls back to Claude Haiku if MiniMax is unavailable.
+    Tries DeepSeek first, falls back to Claude Haiku if DeepSeek is unavailable.
     """
 
     if not articles:
@@ -982,7 +982,7 @@ def fetch_news(anthropic_key: str = "", topic: str = "AI/科技", max_items: int
     """Fetch and process news.
 
     Args:
-        anthropic_key: API key for Claude (optional if MINIMAX_API_KEY is set)
+        anthropic_key: API key for Claude (optional if DEEPSEEK_API_KEY is set)
         topic: News topic
         max_items: Maximum news items to return
         settings: Configuration dict
@@ -1244,10 +1244,10 @@ def format_email_html(news_data: dict, settings: dict = None) -> str:
 
 if __name__ == "__main__":
     anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    minimax_key = os.environ.get("MINIMAX_API_KEY", "")
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "")
 
-    if not anthropic_key and not minimax_key:
-        print("Error: Neither ANTHROPIC_API_KEY nor MINIMAX_API_KEY is set")
+    if not anthropic_key and not deepseek_key:
+        print("Error: Neither ANTHROPIC_API_KEY nor DEEPSEEK_API_KEY is set")
         exit(1)
 
     news_data = fetch_news(anthropic_key)

@@ -168,7 +168,7 @@ export default function ChannelDetail() {
     if (!draft) return
     const saved = await saveDraft({ ...draft, status: 'approved' })
     if (!saved) return
-    const sendWf = id === 'email' ? 'send-ch-email.yml' : `send-ch-${id}.yml`
+    const sendWf = id === 'email' ? 'send-ch-email.yml' : `send-ch-${id.replace(/^ch_/, '')}.yml`
     handleTrigger(sendWf, 'send')
   }
 
@@ -403,7 +403,7 @@ export default function ChannelDetail() {
               {refetching ? '删除中...' : triggerBtnLabel('fetch', draft ? '重新抓取' : '抓取新闻')}
             </button>
             <button
-              onClick={() => { const wf = id === 'email' ? 'send-ch-email.yml' : `send-ch-${id}.yml`; handleTrigger(wf, 'send') }}
+              onClick={() => { const wf = id === 'email' ? 'send-ch-email.yml' : `send-ch-${id.replace(/^ch_/, '')}.yml`; handleTrigger(wf, 'send') }}
               disabled={triggerStatus.send === 'loading'}
               style={{ ...btnPrimary, background: '#059669', color: '#fff', opacity: triggerStatus.send === 'loading' ? 0.6 : 1 }}
             >
