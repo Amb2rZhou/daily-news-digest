@@ -325,6 +325,12 @@
       "enabled": false
     },
     {
+      "url": "https://www.ycombinator.com/blog/feed.xml",
+      "name": "Y Combinator Blog",
+      "group": "技术博客",
+      "enabled": true
+    },
+    {
       "url": "https://wechat2rss.xlab.app/feed/a1cd365aa14ed7d64cabfc8aa086da40ecaba34d.xml",
       "name": "夕小瑶科技说",
       "group": "微信公众号",
