@@ -1,4 +1,4 @@
-name: "Send: ch_mm09yf0x"
+name: "Send: ch_xiayue"
 
 on:
   workflow_run:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch: {}
 
 concurrency:
-  group: send-ch-mm09yf0x
+  group: send-ch-xiayue
   cancel-in-progress: false
 
 permissions:
@@ -48,12 +48,12 @@ jobs:
 
           channel = None
           for ch in channels:
-              if ch.get('id') == 'ch_mm09yf0x':
+              if ch.get('id') == 'ch_xiayue':
                   channel = ch
                   break
 
           if not channel:
-              print('Channel ch_mm09yf0x not found, skipping sleep')
+              print('Channel ch_xiayue not found, skipping sleep')
           else:
               send_hour = channel.get('send_hour', 10)
               send_minute = channel.get('send_minute', 0)
@@ -76,18 +76,18 @@ jobs:
       - name: Send channel
         env:
           WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
-          WEBHOOK_KEY_5: ${{ secrets.WEBHOOK_KEY_5 }}
+          WEBHOOK_KEY_6: ${{ secrets.WEBHOOK_KEY_6 }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src
-          python main.py send --channel ch_mm09yf0x
+          python main.py send --channel ch_xiayue
 
       - name: Commit sent status
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add config/drafts/
-          git diff --cached --quiet || git commit -m "Mark ch_mm09yf0x draft as sent"
+          git diff --cached --quiet || git commit -m "Mark ch_xiayue draft as sent"
           BRANCH="${GITHUB_REF#refs/heads/}"
           push_ok=false
           for i in 1 2 3 4 5; do
@@ -118,7 +118,7 @@ jobs:
           python3 -c "
           from send_email import send_email
           send_email(
-              subject='[FAILED] Send ch_mm09yf0x - ${{ github.run_id }}',
-              body='<h3>Send ch_mm09yf0x 运行失败</h3><p>Run ID: <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">${{ github.run_id }}</a></p><p>请检查 Actions 日志。</p>'
+              subject='[FAILED] Send ch_xiayue - ${{ github.run_id }}',
+              body='<h3>Send ch_xiayue 运行失败</h3><p>Run ID: <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">${{ github.run_id }}</a></p><p>请检查 Actions 日志。</p>'
           )
           "
