@@ -41,10 +41,20 @@ export default function Sources() {
   async function save(updatedSettings, { silent = false, message = 'Update RSS feeds via admin UI' } = {}) {
     setSaving(true)
     try {
-      const content = JSON.stringify(updatedSettings, null, 2) + '\n'
-      const result = await writeFile('config/settings.json', content, message, sha)
+      // Re-read latest settings to avoid overwriting changes from other pages
+      const latest = await readFile('config/settings.json')
+      let latestSha = sha
+      let merged = updatedSettings
+      if (latest) {
+        latestSha = latest.sha
+        const latestData = JSON.parse(latest.content)
+        // Preserve rss_feeds from our update, keep everything else from latest
+        merged = { ...latestData, rss_feeds: updatedSettings.rss_feeds }
+      }
+      const content = JSON.stringify(merged, null, 2) + '\n'
+      const result = await writeFile('config/settings.json', content, message, latestSha)
       setSha(result.content.sha)
-      setSettings(updatedSettings)
+      setSettings(merged)
       if (!silent) alert('已保存')
     } catch (e) {
       alert('保存失败: ' + e.message)
@@ -232,6 +242,17 @@ export default function Sources() {
             添加
           </button>
         </div>
+      </div>
+
+      {/* Batch add hint */}
+      <div style={{
+        ...card,
+        background: '#f0f9ff', borderColor: '#bae6fd',
+        display: 'flex', alignItems: 'center', gap: 12,
+      }}>
+        <span style={{ fontSize: 14, color: '#0369a1', flex: 1 }}>
+          需要将新闻源批量添加到多个频道？前往各频道详情页的「频道设置」tab 管理。
+        </span>
       </div>
 
       {/* Feed list by group */}

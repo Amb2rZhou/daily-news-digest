@@ -52,7 +52,7 @@
       "type": "webhook",
       "name": "2人测试群for部门",
       "enabled": true,
-      "send_hour": 11,
+      "send_hour": 10,
       "send_minute": 0,
       "topic_mode": "broad",
       "max_news_items": 15,
@@ -155,7 +155,7 @@
       "enabled": true
     },
     {
-      "url": "https://www.anthropic.com/rss.xml",
+      "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml",
       "name": "Anthropic Blog",
       "group": "AI公司博客",
       "enabled": true
@@ -203,7 +203,7 @@
       "enabled": true
     },
     {
-      "url": "https://www.pingwest.com/feed",
+      "url": "https://rsshub.rssforever.com/pingwest/status",
       "name": "PingWest品玩",
       "group": "中文科技媒体",
       "enabled": true
@@ -271,25 +271,25 @@
       "paywalled": true
     },
     {
-      "url": "https://rsshub.rssforever.com/bilibili/user/video/612932327",
+      "url": "https://rsshub.liumingye.cn/bilibili/user/video/612932327",
       "name": "老石谈芯",
       "group": "B站UP主",
       "enabled": true
     },
     {
-      "url": "https://rsshub.rssforever.com/bilibili/user/video/266765166",
+      "url": "https://rsshub.liumingye.cn/bilibili/user/video/266765166",
       "name": "漫士沉思录",
       "group": "B站UP主",
       "enabled": true
     },
     {
-      "url": "https://rsshub.rssforever.com/bilibili/user/video/517221395",
+      "url": "https://rsshub.liumingye.cn/bilibili/user/video/517221395",
       "name": "ZOMI酱",
       "group": "B站UP主",
       "enabled": true
     },
     {
-      "url": "https://rsshub.rssforever.com/bilibili/user/video/504715181",
+      "url": "https://rsshub.liumingye.cn/bilibili/user/video/504715181",
       "name": "王木头学科学",
       "group": "B站UP主",
       "enabled": true
@@ -298,19 +298,19 @@
       "url": "https://rsshub.rssforever.com/ximalaya/album/51487187",
       "name": "硅谷101",
       "group": "播客",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://rsshub.rssforever.com/ximalaya/album/29161862",
       "name": "OnBoard!",
       "group": "播客",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://rsshub.rssforever.com/ximalaya/album/3558668",
       "name": "42章经",
       "group": "播客",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://github.blog/feed/",
@@ -439,6 +439,12 @@
       "enabled": true
     },
     {
+      "url": "https://rsshub.rssforever.com/jike/user/0ae2afa7-9b10-4b3a-ab7e-15fbf847038d",
+      "name": "归藏(即刻)",
+      "group": "独立博客",
+      "enabled": true
+    },
+    {
       "url": "https://uploadvr.com/feed/",
       "name": "UploadVR",
       "group": "智能硬件",
@@ -466,7 +472,7 @@
       "url": "https://www.xrtoday.com/feed/",
       "name": "XR Today",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://www.93913.com/feed/",
@@ -496,13 +502,13 @@
       "url": "https://mixed-news.com/en/feed/",
       "name": "MIXED",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://6dofreviews.com/feed/",
       "name": "6DOF Reviews",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
@@ -514,7 +520,7 @@
       "url": "https://www.robotics247.com/rss/rss.xml",
       "name": "Robotics 24/7",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://www.7tin.cn/feed/",

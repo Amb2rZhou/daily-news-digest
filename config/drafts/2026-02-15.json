@@ -1,0 +1,97 @@
+{
+  "date": "2026-02-15",
+  "time_window": "2026-02-14 08:59 ~ 2026-02-15 08:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta计划重启面部识别技术，集成于Ray-Ban智能眼镜",
+          "summary": "Meta计划重启已沉寂五年的面部识别技术，并将其整合至Ray-Ban和Oakley智能眼镜中，引发了业界对AI可穿戴设备新功能与个人隐私边界的广泛讨论。",
+          "comment": "在智能眼镜上集成面部识别功能，如何才能在创新应用和用户隐私保护之间找到平衡？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119251.html"
+        },
+        {
+          "title": "AI眼镜销量暴涨七成以上，深圳华强北迎来新春消费热潮",
+          "summary": "作为智能穿戴新风口的AI眼镜销量增长最为迅猛，涨幅高达70%至80%，无人机、智能机器人等科技潮品也备受青睐。",
+          "comment": "AI眼镜销量的爆发式增长背后，究竟是什么驱动了消费者的购买欲望？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119259.html"
+        },
+        {
+          "title": "北京人形机器人\"具身天工 3.0\"完成高难度托马斯回旋动作",
+          "summary": "北京人形机器人创新中心研发的新一代通用机器人平台\"具身天工 3.0\"在成功跨越100厘米跳台后，顺利完成高难度的\"托马斯回旋\"动作，展现了中国人形机器人领域的技术进步。",
+          "comment": "人形机器人在体操等复杂动作上的突破，离实现日常生活应用还有多远的距离？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119264.html"
+        },
+        {
+          "title": "沃尔玛推出Meta Quest 3S超值优惠，250美元入手并赠送VR大作",
+          "summary": "沃尔玛开启Meta Quest 3S VR头显促销活动，128GB基础版直降50美元至250美元，256GB版本降至350美元，购买还赠送《蝙蝠侠：阿卡姆暗影》游戏及3个月订阅服务。",
+          "comment": "入门级VR头显价格持续下探，这是否将成为VR设备大众化的转折点？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119247.html"
+        },
+        {
+          "title": "AirPods Pro 3值得升级吗？实测对比AirPods Pro 2的性能提升",
+          "summary": "AirPods Pro 3相比Pro 2在实际使用中有显著提升，尽管Live Translation等部分功能也将推送至Pro 2，但Pro 3仍提供了足够的升级理由。",
+          "comment": "当新旧产品功能不断重叠时，AI穿戴设备的升级周期应该如何界定？",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/02/14/apple-airpods-pro-3-worth-upgrading-to-heres-why/"
+        },
+        {
+          "title": "苹果Vision Pro重做NBA VR直播观赛体验",
+          "summary": "苹果与NBA和Spectrum SportsNet合作，为Vision Pro用户提供沉浸式NBA观赛体验，用户可仿佛置身球场边，获得传统电视转播无法呈现的独特视角。",
+          "comment": "XR设备在体育直播领域的应用，能否成为推动AR/VR头显普及的新杀手级应用？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544736.html"
+        },
+        {
+          "title": "东莞文博场馆推出首个VR大空间数字体验项目",
+          "summary": "东莞展览馆联合四维时代打造的VR沉浸体验中心正式上线，标志着东莞公共文化服务与数字科技融合迈入新阶段。",
+          "comment": "VR大空间体验在文化场景中的落地，如何推动文博行业的数字化转型？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119249.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Off Grid – 在手机上离线运行AI文本、图像生成和视觉功能",
+          "summary": "开源应用Off Grid让用户在手机GPU上离线运行文本生成、图像生成、视觉AI等功能，无需将数据上传到云端服务器，保护用户隐私。",
+          "comment": "当端侧AI能力足以满足日常需求时，用户是否还愿意为云端AI服务付费？",
+          "source": "Hacker News",
+          "url": "https://github.com/alichherawalla/off-grid-mobile"
+        },
+        {
+          "title": "Kubernetes驱动AI扩展，文化转型成为关键因素",
+          "summary": "云原生计算基金会报告显示，Kubernetes已成为驱动全球AI增长的核心基础设施引擎，但人与组织层面因素已成为AI落地的最大障碍。",
+          "comment": "为什么技术基础设施成熟反而不是AI规模化的决定因素，组织文化为何如此重要？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/lCM9r8iIt0E5taMhmCfK"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "前字节高管创业教育类出海项目，用Agent做\"终身学习搭子\"，红杉投了",
+          "summary": "前字节跳动高管李可佳、吴俊东、张栖铭联合创立AI教育公司Ouraca，推出AI Agent产品帮助用户终身学习，获得700万美元种子轮融资，投资方包括红杉中国等。",
+          "comment": "为什么互联网大厂的教育AI业务会成为新创业公司的融资热点？",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3682939862740615?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-15T08:59:31.392979+08:00"
+}

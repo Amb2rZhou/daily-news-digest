@@ -70,16 +70,32 @@ def format_webhook_markdown(news_data: dict) -> str:
 
 
 def _get_webhook_key(channel: dict = None) -> Optional[str]:
-    """Resolve webhook key for the given channel via slot-based secrets.
+    """Resolve webhook key for the given channel.
 
-    Each channel must have webhook_key_slot configured, mapping to WEBHOOK_KEY_{slot} env var.
+    Resolution order:
+    1. WEBHOOK_KEYS JSON env var (keyed by channel id)
+    2. Fallback to legacy WEBHOOK_KEY_{slot} env var (backward compatible)
     """
     if not channel:
         return None
 
+    ch_id = channel.get("id", "")
+
+    # 1. Try WEBHOOK_KEYS JSON env var
+    webhook_keys_json = os.environ.get("WEBHOOK_KEYS", "").strip()
+    if webhook_keys_json:
+        try:
+            keys_map = json.loads(webhook_keys_json)
+            key = keys_map.get(ch_id)
+            if key:
+                return key.strip()
+        except (json.JSONDecodeError, AttributeError):
+            print("Warning: WEBHOOK_KEYS env var is not valid JSON, falling back to slot-based keys")
+
+    # 2. Fallback to legacy slot-based WEBHOOK_KEY_{slot}
     slot = channel.get("webhook_key_slot")
     if not slot:
-        print(f"Warning: Channel '{channel.get('id', '?')}' has no webhook_key_slot configured")
+        print(f"Warning: Channel '{ch_id or '?'}' has no webhook_key_slot configured")
         return None
 
     key = os.environ.get(f"WEBHOOK_KEY_{slot}")

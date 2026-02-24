@@ -3,7 +3,10 @@
 Fetch AI/Tech news using RSS feeds and summarize with Claude.
 """
 
-import anthropic
+try:
+    import anthropic
+except ImportError:
+    anthropic = None
 import feedparser
 import json
 import os
@@ -223,11 +226,14 @@ def get_cutoff_time(settings: dict = None, manual: bool = False, channel: dict =
 
     if manual:
         # Manual trigger: 24h before now
-        return (now - timedelta(days=1)).replace(tzinfo=None)
+        # Convert to UTC before stripping tzinfo (RSS published_parsed is naive UTC)
+        cutoff = now - timedelta(days=1)
+        return cutoff.astimezone(ZoneInfo("UTC")).replace(tzinfo=None)
     else:
         # Auto trigger: 24h before today's scheduled send time
         today_send = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-        return (today_send - timedelta(days=1)).replace(tzinfo=None)
+        cutoff = today_send - timedelta(days=1)
+        return cutoff.astimezone(ZoneInfo("UTC")).replace(tzinfo=None)
 
 def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
     """Parse a single RSS feed and return recent articles."""
@@ -242,6 +248,7 @@ def parse_feed(feed_url: str, cutoff: datetime = None) -> list[dict]:
             resp.raise_for_status()
             feed = feedparser.parse(resp.content)
         except requests.RequestException:
+            # Don't fallback to feedparser.parse(url) — it has no timeout and can hang
             return []
         source_name = feed.feed.get("title", feed_url)
 
@@ -732,13 +739,14 @@ def _call_haiku(client, prompt: str, label: str) -> str:
     """Call Claude Haiku and return response text. Returns None on failure."""
     import time
     try:
+        start = time.time()
         resp = client.messages.create(
             model="claude-haiku-4-5-20251001",
             max_tokens=8192,
             messages=[{"role": "user", "content": prompt}],
         )
-        elapsed = time.time()
-        print(f"  - Haiku ({label}) stop_reason: {resp.stop_reason}")
+        elapsed = time.time() - start
+        print(f"  - Haiku ({label}) {elapsed:.1f}s, stop_reason: {resp.stop_reason}")
         if resp.stop_reason == "max_tokens":
             print(f"  - WARNING: Response was truncated (hit max_tokens)")
         return resp.content[0].text
@@ -748,7 +756,10 @@ def _call_haiku(client, prompt: str, label: str) -> str:
 
 
 def _call_ai(prompt: str, label: str, anthropic_client=None) -> str:
-    """Call the best available AI backend. Tries MiniMax first, falls back to Haiku."""
+    """Call the best available AI backend. Tries DeepSeek first, falls back to Haiku.
+
+    Returns response text, or None if all backends fail.
+    """
     if os.environ.get("DEEPSEEK_API_KEY"):
         result = _call_deepseek(prompt, label)
         if result:
@@ -777,7 +788,7 @@ URL: {article.get('url', '')}
 
 
 def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_sources: str, settings: dict) -> list[dict]:
-    """Focused mode: two sequential Haiku calls for hardware and AI/industry, then merge."""
+    """Focused mode: two sequential AI calls for hardware and AI/industry, then merge."""
     import time
 
     print(f"  - Focused mode: 2 AI calls (hardware + AI/industry)")
@@ -792,14 +803,22 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
     other_articles = [a for a in articles if a.get("feed_url", "") not in hw_urls]
     print(f"  - Article split: {len(hw_articles)} hardware, {len(other_articles)} other")
 
-    hw_articles_text = _format_articles_text(hw_articles) if hw_articles else _format_articles_text(articles)
     other_articles_text = _format_articles_text(other_articles) if other_articles else _format_articles_text(articles)
 
-    hw_budget = 10  # hardware gets 7-10 items
-    ai_budget = max(max_items - hw_budget, 5)  # rest goes to AI+industry, at least 5
-    prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources)
+    if hw_articles:
+        hw_articles_text = _format_articles_text(hw_articles)
+        hw_budget = 10  # hardware gets 7-10 items
+        ai_budget = max(max_items - hw_budget, 5)  # rest goes to AI+industry, at least 5
+        prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources)
+        print(f"  - Budget: hardware 7-10, AI+industry {ai_budget}, total cap {max_items}")
+    else:
+        # No hardware sources produced articles -- skip hardware prompt, give all budget to AI/industry
+        print("  - No hardware articles found, skipping hardware prompt")
+        hw_budget = 0
+        ai_budget = max_items
+        prompt_hw = None
+
     prompt_ai = get_prompt_for_mode("focused_ai_industry", other_articles_text, ai_budget, "", "", "", None, paywalled_sources)
-    print(f"  - Budget: hardware 7-10, AI+industry {ai_budget}, total cap {max_items}")
 
     start = time.time()
 
@@ -819,7 +838,7 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
             print(f"  - {label}: JSON parse failed. Preview: {resp[:200]}")
         return None
 
-    hw_parsed = _call_and_parse(prompt_hw, "智能硬件")
+    hw_parsed = _call_and_parse(prompt_hw, "智能硬件") if prompt_hw else None
     ai_parsed = _call_and_parse(prompt_ai, "AI+行业")
 
     elapsed = time.time() - start
@@ -875,7 +894,10 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
 
 
 def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_items: int = 10, settings: dict = None) -> list[dict]:
-    """Use Claude to summarize, categorize, and select top news."""
+    """Use AI to summarize, categorize, and select top news.
+
+    Tries DeepSeek first, falls back to Claude Haiku if DeepSeek is unavailable.
+    """
 
     if not articles:
         return []
@@ -885,7 +907,7 @@ def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_ite
 
     topic_mode = settings.get("topic_mode", "broad")  # "broad" or "focused"
     custom_prompt = settings.get("custom_prompt", "")  # User-defined custom prompt
-    client = anthropic.Anthropic(api_key=anthropic_key) if anthropic_key else None
+    client = anthropic.Anthropic(api_key=anthropic_key) if (anthropic_key and anthropic) else None
 
     # 聚焦模式使用专门的 3 个分类
     if topic_mode == "focused" and not custom_prompt:
@@ -956,11 +978,11 @@ URL: {article.get('url', '')}
     print(f"  Error: Failed to parse AI response")
     return []
 
-def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False, hardware_unlimited: bool = None, channel: dict = None) -> dict:
+def fetch_news(anthropic_key: str = "", topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False, hardware_unlimited: bool = None, channel: dict = None) -> dict:
     """Fetch and process news.
 
     Args:
-        anthropic_key: API key for Claude
+        anthropic_key: API key for Claude (optional if DEEPSEEK_API_KEY is set)
         topic: News topic
         max_items: Maximum news items to return
         settings: Configuration dict
@@ -1046,7 +1068,7 @@ def save_draft(news_data: dict, settings: dict = None, channel_id: str = None) -
             with open(draft_path, "r", encoding="utf-8") as f:
                 existing = json.load(f)
             existing_status = existing.get("status", "")
-            if existing_status in ("sent", "rejected"):
+            if existing_status in ("sent", "rejected", "approved"):
                 print(f"  - Skipping {filename}: already {existing_status}")
                 return draft_path
         except (json.JSONDecodeError, IOError):
@@ -1199,7 +1221,7 @@ def format_email_html(news_data: dict, settings: dict = None) -> str:
 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:640px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
 
 <!-- Header -->
-<tr><td style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:32px 30px;text-align:center;">
+<tr><td style="background-color:#1a1a2e;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:32px 30px;text-align:center;">
   <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:1px;">AI / 科技新闻日报</h1>
   <p style="margin:10px 0 0 0;color:rgba(255,255,255,0.75);font-size:14px;">{date} &nbsp;|&nbsp; {time_window}</p>
 </td></tr>
@@ -1221,10 +1243,11 @@ def format_email_html(news_data: dict, settings: dict = None) -> str:
     return html
 
 if __name__ == "__main__":
-    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
+    anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "")
 
-    if not anthropic_key:
-        print("Error: ANTHROPIC_API_KEY environment variable not set")
+    if not anthropic_key and not deepseek_key:
+        print("Error: Neither ANTHROPIC_API_KEY nor DEEPSEEK_API_KEY is set")
         exit(1)
 
     news_data = fetch_news(anthropic_key)

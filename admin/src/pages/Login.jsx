@@ -16,9 +16,12 @@ export default function Login({ onLogin }) {
     try {
       configure({ token, owner, repo })
       const user = await getUser()
-      // Verify that the token owner matches the repo owner
-      if (user.login.toLowerCase() !== owner.toLowerCase()) {
-        setError(`Token 用户 (${user.login}) 与仓库 Owner (${owner}) 不匹配`)
+      // Verify that the token can access the repo (works for both personal and org repos)
+      const repoRes = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
+        headers: { Authorization: `token ${token}` },
+      })
+      if (!repoRes.ok) {
+        setError(`无法访问仓库 ${owner}/${repo}，请检查 Owner、Repo 和 Token 权限`)
         setLoading(false)
         return
       }

@@ -1,9 +1,10 @@
 name: Fetch News
 
 on:
-  # 每 20 分钟运行，由脚本检查哪些频道需要 fetch
+  # 低峰期双 cron，sleep 到最早 send_time - 30min 再执行
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '0 22 * * *'   # 主触发: CST 06:00 (低峰期，可靠)
+    - cron: '0 0 * * *'    # 备用:   CST 08:00 (防主触发跳过)
 
   # 手动触发，可选立即发送（测试模式）
   workflow_dispatch:
@@ -14,19 +15,57 @@ on:
         type: boolean
         default: false
 
+concurrency:
+  group: fetch-news
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
 jobs:
   fetch-news:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 300   # 5 小时 (含 sleep)
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check if any channel needs fetching
+      - name: Sleep until fetch time
+        if: github.event_name != 'workflow_dispatch'
+        run: |
+          python3 -c "
+          import json, time
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          from datetime import timedelta
+
+          s = json.load(open('config/settings.json'))
+          tz = ZoneInfo(s.get('timezone', 'Asia/Shanghai'))
+          now = datetime.now(tz)
+
+          # Auto-calculate: earliest send_time - 30 minutes
+          channels = [c for c in s.get('channels', []) if c.get('enabled')]
+          if not channels:
+              print('No enabled channels, proceeding immediately')
+          else:
+              earliest = min(
+                  now.replace(hour=c.get('send_hour', 10), minute=c.get('send_minute', 0), second=0, microsecond=0)
+                  for c in channels
+              )
+              target = earliest - timedelta(minutes=30)
+              print(f'Earliest send time: {earliest.strftime(\"%H:%M\")}, fetch target: {target.strftime(\"%H:%M\")}')
+
+              if target <= now:
+                  print(f'Already past {target.strftime(\"%H:%M\")}, proceeding immediately')
+              else:
+                  wait = (target - now).total_seconds()
+                  print(f'Sleeping {wait/60:.0f} minutes until {target.strftime(\"%H:%M\")}')
+                  time.sleep(wait)
+          "
+
+      - name: Check if fetch is needed
         id: pre_check
         env:
           IS_MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
@@ -37,13 +76,10 @@ jobs:
             exit 0
           fi
 
-          # Check if any channel needs fetching:
-          # - Draft doesn't exist for today
-          # - Current time >= send_time - 30 minutes
           NEEDS_FETCH=$(python3 -c "
           import json
           import os
-          from datetime import datetime, timedelta
+          from datetime import datetime
           from zoneinfo import ZoneInfo
 
           s = json.load(open('config/settings.json'))
@@ -57,12 +93,6 @@ jobs:
               if not ch.get('enabled', False):
                   continue
               ch_id = ch.get('id', 'unknown')
-              send_hour = ch.get('send_hour', 10)
-              send_minute = ch.get('send_minute', 0)
-
-              # Calculate fetch_time = send_time - 30 minutes
-              send_time = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0)
-              fetch_time = send_time - timedelta(minutes=30)
 
               # Check if draft exists
               if ch.get('type') == 'email':
@@ -72,19 +102,18 @@ jobs:
 
               draft_exists = os.path.exists(draft_path)
 
-              # Need fetch if: no draft yet AND current time >= fetch_time
-              if not draft_exists and now >= fetch_time:
-                  print(f'Channel {ch_id}: needs fetch (send={send_hour}:{send_minute:02d}, no draft)', file=__import__('sys').stderr)
+              if not draft_exists:
+                  print(f'Channel {ch_id}: no draft yet, needs fetch', file=__import__('sys').stderr)
                   need = True
                   break
-              elif draft_exists:
+              else:
                   # Check if draft is stale: unreviewed and created > 2 hours ago
                   try:
                       with open(draft_path) as f:
                           draft = json.load(f)
                       status = draft.get('status', 'pending_review')
                       created_at = draft.get('created_at', '')
-                      if status == 'pending_review' and created_at and now >= fetch_time:
+                      if status == 'pending_review' and created_at:
                           created = datetime.fromisoformat(created_at)
                           hours_old = (now - created).total_seconds() / 3600
                           if hours_old > 2:
@@ -141,15 +170,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="${GITHUB_REF#refs/heads/}"
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Add news draft for $(TZ=Asia/Shanghai date +%Y-%m-%d)"
-          git pull origin main --rebase -X theirs || {
+          git pull origin "$BRANCH" --rebase -X theirs || {
             echo "Rebase conflict, resolving with our draft versions..."
             git checkout --theirs config/drafts/ 2>/dev/null || true
             git add config/drafts/
             git rebase --continue
           }
-          git push
+          git push origin HEAD:"$BRANCH"
 
       # 测试模式：抓取后立即发送
       - name: Auto-send (test mode)
@@ -161,27 +191,7 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_SENDER: ${{ secrets.SMTP_USERNAME }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
-          # Slot-based webhook keys
-          WEBHOOK_KEY_1: ${{ secrets.WEBHOOK_KEY_1 }}
-          WEBHOOK_KEY_2: ${{ secrets.WEBHOOK_KEY_2 }}
-          WEBHOOK_KEY_3: ${{ secrets.WEBHOOK_KEY_3 }}
-          WEBHOOK_KEY_4: ${{ secrets.WEBHOOK_KEY_4 }}
-          WEBHOOK_KEY_5: ${{ secrets.WEBHOOK_KEY_5 }}
-          WEBHOOK_KEY_6: ${{ secrets.WEBHOOK_KEY_6 }}
-          WEBHOOK_KEY_7: ${{ secrets.WEBHOOK_KEY_7 }}
-          WEBHOOK_KEY_8: ${{ secrets.WEBHOOK_KEY_8 }}
-          WEBHOOK_KEY_9: ${{ secrets.WEBHOOK_KEY_9 }}
-          WEBHOOK_KEY_10: ${{ secrets.WEBHOOK_KEY_10 }}
-          WEBHOOK_KEY_11: ${{ secrets.WEBHOOK_KEY_11 }}
-          WEBHOOK_KEY_12: ${{ secrets.WEBHOOK_KEY_12 }}
-          WEBHOOK_KEY_13: ${{ secrets.WEBHOOK_KEY_13 }}
-          WEBHOOK_KEY_14: ${{ secrets.WEBHOOK_KEY_14 }}
-          WEBHOOK_KEY_15: ${{ secrets.WEBHOOK_KEY_15 }}
-          WEBHOOK_KEY_16: ${{ secrets.WEBHOOK_KEY_16 }}
-          WEBHOOK_KEY_17: ${{ secrets.WEBHOOK_KEY_17 }}
-          WEBHOOK_KEY_18: ${{ secrets.WEBHOOK_KEY_18 }}
-          WEBHOOK_KEY_19: ${{ secrets.WEBHOOK_KEY_19 }}
-          WEBHOOK_KEY_20: ${{ secrets.WEBHOOK_KEY_20 }}
+          WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
         run: |
           cd src
@@ -190,14 +200,15 @@ jobs:
       - name: Commit sent status (test mode)
         if: steps.pre_check.outputs.skip != 'true' && inputs.auto_send == true
         run: |
+          BRANCH="${GITHUB_REF#refs/heads/}"
           git add config/drafts/
           git diff --cached --quiet || git commit -m "Mark draft as sent (test mode)"
-          git pull origin main --rebase -X theirs || {
+          git pull origin "$BRANCH" --rebase -X theirs || {
             git checkout --theirs config/drafts/ 2>/dev/null || true
             git add config/drafts/
             git rebase --continue
           }
-          git push
+          git push origin HEAD:"$BRANCH"
 
       - name: Notify admin on failure
         if: failure()
@@ -209,7 +220,7 @@ jobs:
           EMAIL_RECIPIENTS: ${{ secrets.ADMIN_EMAIL }}
         run: |
           cd src
-          python -c "
+          python3 -c "
           from send_email import send_email
           send_email(
               subject='[FAILED] Fetch News - ${{ github.run_id }}',

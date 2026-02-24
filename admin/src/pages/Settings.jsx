@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { readFile, writeFile } from '../lib/github'
+import { readFile, writeFile, listSecrets, getPublicKey, setSecret } from '../lib/github'
 import { getAnthropicKey, setAnthropicKey, hasAnthropicKey } from '../lib/claude'
+import nacl from 'tweetnacl'
+import sealedbox from 'tweetnacl-sealedbox-js'
+import { decodeBase64, encodeBase64, decodeUTF8 } from 'tweetnacl-util'
 
 const card = {
   background: 'var(--card)', borderRadius: 'var(--radius)',
@@ -29,18 +32,49 @@ const TIMEZONE_OPTIONS = [
   { value: 'Australia/Sydney', label: '澳东时间 (UTC+10/+11)' },
 ]
 
+const BASE_SECRET_DEFS = [
+  { name: 'ANTHROPIC_API_KEY', label: 'Claude API 密钥', desc: '用于调用 Claude API 生成新闻摘要', type: 'password' },
+  { name: 'DEEPSEEK_API_KEY', label: 'DeepSeek API 密钥', desc: '用于调用 DeepSeek V3 作为主力模型（推荐）', type: 'password' },
+  { name: 'SMTP_USERNAME', label: '发件邮箱地址', desc: 'SMTP 发件人邮箱', type: 'text' },
+  { name: 'SMTP_PASSWORD', label: '邮箱授权码', desc: 'SMTP 邮箱授权码或应用密码', type: 'password' },
+  { name: 'EMAIL_RECIPIENTS', label: '收件人邮箱', desc: '邮件收件人，多个邮箱用英文逗号分隔', type: 'text' },
+  { name: 'ADMIN_EMAIL', label: '管理员通知邮箱', desc: '接收系统通知的管理员邮箱', type: 'text' },
+  { name: 'WEBHOOK_KEYS', label: 'Webhook Keys (JSON)', desc: 'JSON 格式的 webhook key 映射，如 {"default":"key1","ch_ml97ypb3":"key2"}', type: 'password' },
+]
+
+const SLOT_SECRETS = [...Array(20)].map((_, i) => ({
+  name: `WEBHOOK_KEY_${i + 1}`,
+  label: `Webhook 槽位 ${i + 1}`,
+  desc: `旧版槽位 key (向后兼容)`,
+  type: 'password',
+  slot: i + 1,
+}))
+
+function encryptSecret(publicKey, secretValue) {
+  const keyBytes = decodeBase64(publicKey)
+  const messageBytes = decodeUTF8(secretValue)
+  const encrypted = sealedbox.seal(messageBytes, keyBytes)
+  return encodeBase64(encrypted)
+}
+
 export default function Settings() {
   const [settings, setSettings] = useState(null)
   const [sha, setSha] = useState(null)
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
-
-  const [newBlacklistKw, setNewBlacklistKw] = useState('')
-  const [newBlacklistSrc, setNewBlacklistSrc] = useState('')
-  const [newWhitelistKw, setNewWhitelistKw] = useState('')
-  const [newWhitelistSrc, setNewWhitelistSrc] = useState('')
-  const [apiKey, setApiKey] = useState(() => getAnthropicKey())
+  const [apiKey, setApiKeyState] = useState(() => getAnthropicKey())
   const [apiKeySaved, setApiKeySaved] = useState(() => hasAnthropicKey())
+
+  // Secrets state
+  const [existingSecrets, setExistingSecrets] = useState(new Set())
+  const [secretValues, setSecretValues] = useState({})
+  const [secretUpdating, setSecretUpdating] = useState({})
+  const [secretMessages, setSecretMessages] = useState({})
+  const [usedSlots, setUsedSlots] = useState(new Set())
+  const [channelSlotMap, setChannelSlotMap] = useState({})
+
+  // Channel management
+  const [channelSaving, setChannelSaving] = useState(false)
 
   useEffect(() => { load() }, [])
 
@@ -49,9 +83,28 @@ export default function Settings() {
     try {
       const file = await readFile('config/settings.json')
       if (file) {
-        setSettings(JSON.parse(file.content))
+        const parsed = JSON.parse(file.content)
+        setSettings(parsed)
         setSha(file.sha)
+
+        const channels = parsed.channels || []
+        const webhookChannels = channels.filter(ch => ch.type === 'webhook')
+        const slots = new Set()
+        const slotMap = {}
+        webhookChannels.forEach(ch => {
+          if (ch.webhook_key_slot) {
+            slots.add(ch.webhook_key_slot)
+            slotMap[ch.webhook_key_slot] = ch.name || ch.id
+          }
+        })
+        setUsedSlots(slots)
+        setChannelSlotMap(slotMap)
       }
+
+      try {
+        const secrets = await listSecrets()
+        setExistingSecrets(new Set(secrets.map(s => s.name)))
+      } catch { /* secrets API may fail */ }
     } catch (e) {
       console.error('Load settings error:', e)
     }
@@ -62,42 +115,6 @@ export default function Settings() {
     setSettings(prev => ({ ...prev, [key]: value }))
   }
 
-  function updateFilter(key, value) {
-    setSettings(prev => ({
-      ...prev,
-      filters: { ...prev.filters, [key]: value }
-    }))
-  }
-
-  function addToList(filterKey, value, setter) {
-    if (!value.trim()) return
-    const current = settings.filters?.[filterKey] || []
-    if (!current.includes(value.trim())) {
-      updateFilter(filterKey, [...current, value.trim()])
-    }
-    setter('')
-  }
-
-  function removeFromList(filterKey, idx) {
-    const current = [...(settings.filters?.[filterKey] || [])]
-    current.splice(idx, 1)
-    updateFilter(filterKey, current)
-  }
-
-  function moveCategoryUp(idx) {
-    if (idx === 0) return
-    const order = [...settings.categories_order]
-    ;[order[idx - 1], order[idx]] = [order[idx], order[idx - 1]]
-    update('categories_order', order)
-  }
-
-  function moveCategoryDown(idx) {
-    const order = [...settings.categories_order]
-    if (idx >= order.length - 1) return
-    ;[order[idx], order[idx + 1]] = [order[idx + 1], order[idx]]
-    update('categories_order', order)
-  }
-
   function updateChannel(idx, updates) {
     setSettings(prev => {
       const channels = [...(prev.channels || [])]
@@ -106,22 +123,22 @@ export default function Settings() {
     })
   }
 
-  function updateChannelField(idx, key, value) {
-    updateChannel(idx, { [key]: value })
-  }
-
-
   async function save() {
     if (!settings) return
     setSaving(true)
     try {
-      const content = JSON.stringify(settings, null, 2) + '\n'
-      const result = await writeFile(
-        'config/settings.json',
-        content,
-        'Update settings via admin UI',
-        sha
-      )
+      // Re-read latest settings to avoid overwriting changes from other pages (e.g. Sources)
+      const latest = await readFile('config/settings.json')
+      let latestSha = sha
+      let merged = settings
+      if (latest) {
+        latestSha = latest.sha
+        const latestData = JSON.parse(latest.content)
+        // Preserve fields managed by other pages
+        merged = { ...latestData, ...settings, rss_feeds: latestData.rss_feeds }
+      }
+      const content = JSON.stringify(merged, null, 2) + '\n'
+      const result = await writeFile('config/settings.json', content, 'Update settings via admin UI', latestSha)
       setSha(result.content.sha)
       alert('设置已保存')
     } catch (e) {
@@ -130,230 +147,134 @@ export default function Settings() {
     setSaving(false)
   }
 
+  async function handleUpdateSecret(name) {
+    const value = secretValues[name]
+    if (!value || !value.trim()) return
+    setSecretUpdating(prev => ({ ...prev, [name]: true }))
+    setSecretMessages(prev => ({ ...prev, [name]: null }))
+    try {
+      const pk = await getPublicKey()
+      const encrypted = encryptSecret(pk.key, value.trim())
+      await setSecret(name, encrypted, pk.key_id)
+      setExistingSecrets(prev => new Set([...prev, name]))
+      setSecretValues(prev => ({ ...prev, [name]: '' }))
+      setSecretMessages(prev => ({ ...prev, [name]: { type: 'success', text: '更新成功' } }))
+      setTimeout(() => setSecretMessages(prev => ({ ...prev, [name]: null })), 3000)
+    } catch (e) {
+      setSecretMessages(prev => ({ ...prev, [name]: { type: 'error', text: `更新失败: ${e.message}` } }))
+    }
+    setSecretUpdating(prev => ({ ...prev, [name]: false }))
+  }
+
   if (loading) return <p style={{ color: 'var(--text2)' }}>加载中...</p>
   if (!settings) return <p style={{ color: 'var(--text2)' }}>无法加载设置</p>
 
   const channels = settings.channels || []
+  const maxUsedSlot = usedSlots.size > 0 ? Math.max(...usedSlots) : 0
+  const slotsToShow = Math.max(maxUsedSlot + 3, 5)
+  const visibleSlotSecrets = SLOT_SECRETS.slice(0, Math.min(slotsToShow, 20))
+
+  const renderSecretCard = (def) => {
+    const isSet = existingSecrets.has(def.name)
+    const msg = secretMessages[def.name]
+    const isUsedSlot = def.slot && usedSlots.has(def.slot)
+    const channelName = def.slot && channelSlotMap[def.slot]
+
+    return (
+      <div key={def.name} style={{
+        padding: 16, borderRadius: 8, border: `${isUsedSlot ? 2 : 1}px solid ${isUsedSlot ? '#22c55e' : 'var(--border)'}`,
+        background: 'var(--card)',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 6, flexWrap: 'wrap' }}>
+          <code style={{ fontSize: 13, fontWeight: 600 }}>{def.name}</code>
+          <span style={{
+            padding: '2px 10px', borderRadius: 12, fontSize: 11, fontWeight: 500,
+            background: isSet ? '#d1fae5' : '#fef2f2',
+            color: isSet ? '#059669' : '#dc2626',
+          }}>
+            {isSet ? '已设置' : '未设置'}
+          </span>
+          {isUsedSlot && (
+            <span style={{ padding: '2px 10px', borderRadius: 12, fontSize: 11, fontWeight: 500, background: '#dbeafe', color: '#1d4ed8' }}>
+              被「{channelName}」使用
+            </span>
+          )}
+        </div>
+        <div style={{ fontSize: 12, color: 'var(--text2)', marginBottom: 8 }}>{def.desc}</div>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <input
+            type={def.type}
+            value={secretValues[def.name] || ''}
+            onChange={e => setSecretValues(prev => ({ ...prev, [def.name]: e.target.value }))}
+            placeholder={isSet ? '输入新值以覆盖更新' : '输入值'}
+            style={{ flex: 1, padding: '6px 10px', borderRadius: 6, border: '1px solid var(--border)', fontSize: 13 }}
+            onKeyDown={e => { if (e.key === 'Enter') handleUpdateSecret(def.name) }}
+          />
+          <button
+            onClick={() => handleUpdateSecret(def.name)}
+            disabled={secretUpdating[def.name] || !secretValues[def.name]?.trim()}
+            style={{
+              padding: '6px 16px', borderRadius: 6, border: 'none',
+              background: '#2563eb', color: '#fff', fontWeight: 600, fontSize: 13, cursor: 'pointer',
+              opacity: (secretUpdating[def.name] || !secretValues[def.name]?.trim()) ? 0.5 : 1,
+            }}
+          >
+            {secretUpdating[def.name] ? '更新中...' : '更新'}
+          </button>
+        </div>
+        {msg && <div style={{ marginTop: 6, fontSize: 12, color: msg.type === 'success' ? '#059669' : '#dc2626' }}>{msg.text}</div>}
+      </div>
+    )
+  }
 
   return (
     <div>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: 24 }}>
         <h1 style={{ fontSize: 22, flex: 1 }}>设置</h1>
-        <button
-          onClick={save}
-          disabled={saving}
-          style={{ padding: '8px 24px', background: 'var(--primary)', color: '#fff', border: 'none', borderRadius: 6, fontWeight: 500 }}
-        >
+        <button onClick={save} disabled={saving} style={{ padding: '8px 24px', background: 'var(--primary)', color: '#fff', border: 'none', borderRadius: 6, fontWeight: 500 }}>
           {saving ? '保存中...' : '保存设置'}
         </button>
       </div>
 
-      {/* Basic settings - timezone only */}
+      {/* Basic settings */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>基本设置</h2>
-        <label>
-          <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>时区</span>
-          <select
-            value={settings.timezone}
-            onChange={(e) => update('timezone', e.target.value)}
-            style={{ width: '100%' }}
-          >
-            {TIMEZONE_OPTIONS.map(tz => (
-              <option key={tz.value} value={tz.value}>{tz.label}</option>
-            ))}
-            {!TIMEZONE_OPTIONS.some(tz => tz.value === settings.timezone) && (
-              <option value={settings.timezone}>{settings.timezone}</option>
-            )}
-          </select>
-        </label>
-      </div>
-
-      {/* Custom Prompt */}
-      <div style={card}>
-        <h2 style={{ fontSize: 16, marginBottom: 8 }}>自定义 Prompt</h2>
-        <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 12 }}>
-          高级选项：直接输入自定义 Prompt 控制 AI 筛选逻辑。留空则使用各频道的主题模式默认 Prompt。
-        </div>
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-          <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
-            <input
-              type="checkbox"
-              checked={!!settings.custom_prompt}
-              onChange={(e) => {
-                if (e.target.checked) {
-                  update('custom_prompt', `以下是最近24小时内从多个来源抓取的新闻列表。请帮我筛选和整理。
-
-**你的筛选要求写在这里**
-
-新闻列表：
-{articles_text}
-
-请以 JSON 格式返回，最多选 {max_items} 条新闻，结构如下：
-{{
-  "categories": [
-    {{
-      "name": "类别名",
-      "icon": "emoji",
-      "news": [
-        {{
-          "title": "新闻标题",
-          "summary": "1-2句摘要",
-          "source": "来源",
-          "url": "链接"
-        }}
-      ]
-    }}
-  ]
-}}
-
-可用类别：{category_names}
-icon 映射：{icon_mapping}
-只返回合法的 JSON，不要其他文字。`)
-                } else {
-                  update('custom_prompt', '')
-                }
-              }}
-            />
-            <span style={{ fontSize: 13, fontWeight: 500 }}>启用自定义 Prompt</span>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
+          <label>
+            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>时区</span>
+            <select value={settings.timezone} onChange={e => update('timezone', e.target.value)} style={{ width: '100%' }}>
+              {TIMEZONE_OPTIONS.map(tz => <option key={tz.value} value={tz.value}>{tz.label}</option>)}
+              {!TIMEZONE_OPTIONS.some(tz => tz.value === settings.timezone) && (
+                <option value={settings.timezone}>{settings.timezone}</option>
+              )}
+            </select>
           </label>
-          {settings.custom_prompt && (
-            <span style={{ fontSize: 12, color: '#d97706', fontWeight: 500 }}>
-              ⚠️ 自定义 Prompt 优先于主题模式
-            </span>
-          )}
+          <div>
+            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>每日抓取时间</span>
+            {(() => {
+              const chs = (settings.channels || []).filter(c => c.enabled)
+              if (!chs.length) return <span style={{ fontSize: 13, color: 'var(--text3)' }}>无启用频道</span>
+              const earliest = chs.reduce((min, c) => {
+                const t = (c.send_hour ?? 10) * 60 + (c.send_minute ?? 0)
+                return t < min ? t : min
+              }, 24 * 60)
+              const fetch = earliest - 30
+              const h = Math.floor((fetch + 1440) % 1440 / 60)
+              const m = ((fetch + 1440) % 1440) % 60
+              return <span style={{ fontSize: 14, fontWeight: 600 }}>{String(h).padStart(2, '0')}:{String(m).padStart(2, '0')}</span>
+            })()}
+            <span style={{ display: 'block', fontSize: 11, color: 'var(--text3)', marginTop: 2 }}>自动计算：最早发送时间前 30 分钟</span>
+          </div>
+          <label>
+            <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>全局 Webhook URL Base</span>
+            <input type="text" value={settings.webhook_url_base ?? ''} onChange={e => update('webhook_url_base', e.target.value)} placeholder="https://redcity-open.xiaohongshu.com/api/robot/webhook/send" style={{ width: '100%' }} />
+          </label>
         </div>
-
-        {settings.custom_prompt && (
-          <>
-            <textarea
-              value={settings.custom_prompt}
-              onChange={(e) => update('custom_prompt', e.target.value)}
-              placeholder="输入自定义 Prompt..."
-              style={{
-                width: '100%',
-                minHeight: 300,
-                fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, monospace',
-                fontSize: 13,
-                lineHeight: 1.5,
-                padding: 12,
-                borderRadius: 6,
-                border: '1px solid var(--border)',
-                resize: 'vertical',
-              }}
-            />
-            <div style={{
-              marginTop: 12, padding: 12, background: '#f0f9ff', borderRadius: 6,
-              border: '1px solid #bae6fd', fontSize: 12, color: '#0369a1',
-            }}>
-              <strong>可用变量：</strong>
-              <ul style={{ margin: '8px 0 0 0', paddingLeft: 20 }}>
-                <li><code>{'{articles_text}'}</code> - 新闻文章列表</li>
-                <li><code>{'{max_items}'}</code> - 最大新闻条数</li>
-                <li><code>{'{category_names}'}</code> - 分类名称（用、连接）</li>
-                <li><code>{'{icon_mapping}'}</code> - 分类图标映射</li>
-                <li><code>{'{category_json_example}'}</code> - JSON 结构示例</li>
-              </ul>
-              <div style={{ marginTop: 8, color: '#64748b' }}>
-                提示：确保 Prompt 要求返回合法的 JSON 格式，否则解析会失败。
-              </div>
-            </div>
-          </>
-        )}
-      </div>
-
-      {/* Category order */}
-      <div style={card}>
-        <h2 style={{ fontSize: 16, marginBottom: 16 }}>分类排序</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          {(settings.categories_order || []).map((cat, idx) => (
-            <div key={cat} style={{
-              display: 'flex', alignItems: 'center', gap: 8,
-              padding: '8px 12px', background: '#f9fafb', borderRadius: 6,
-              border: '1px solid var(--border)',
-            }}>
-              <span style={{ flex: 1, fontSize: 14 }}>{cat}</span>
-              <button
-                onClick={() => moveCategoryUp(idx)}
-                disabled={idx === 0}
-                style={{ padding: '2px 8px', background: 'none', border: '1px solid var(--border)', borderRadius: 4, fontSize: 12, cursor: 'pointer' }}
-              >
-                ▲
-              </button>
-              <button
-                onClick={() => moveCategoryDown(idx)}
-                disabled={idx === (settings.categories_order || []).length - 1}
-                style={{ padding: '2px 8px', background: 'none', border: '1px solid var(--border)', borderRadius: 4, fontSize: 12, cursor: 'pointer' }}
-              >
-                ▼
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Filters */}
-      <div style={card}>
-        <h2 style={{ fontSize: 16, marginBottom: 16 }}>过滤规则</h2>
-
-        <FilterList
-          label="黑名单关键词"
-          items={settings.filters?.blacklist_keywords || []}
-          value={newBlacklistKw}
-          onChange={setNewBlacklistKw}
-          onAdd={() => addToList('blacklist_keywords', newBlacklistKw, setNewBlacklistKw)}
-          onRemove={(idx) => removeFromList('blacklist_keywords', idx)}
-        />
-
-        <FilterList
-          label="黑名单来源"
-          items={settings.filters?.blacklist_sources || []}
-          value={newBlacklistSrc}
-          onChange={setNewBlacklistSrc}
-          onAdd={() => addToList('blacklist_sources', newBlacklistSrc, setNewBlacklistSrc)}
-          onRemove={(idx) => removeFromList('blacklist_sources', idx)}
-        />
-
-        <FilterList
-          label="白名单关键词"
-          items={settings.filters?.whitelist_keywords || []}
-          value={newWhitelistKw}
-          onChange={setNewWhitelistKw}
-          onAdd={() => addToList('whitelist_keywords', newWhitelistKw, setNewWhitelistKw)}
-          onRemove={(idx) => removeFromList('whitelist_keywords', idx)}
-        />
-
-        <FilterList
-          label="白名单来源"
-          items={settings.filters?.whitelist_sources || []}
-          value={newWhitelistSrc}
-          onChange={setNewWhitelistSrc}
-          onAdd={() => addToList('whitelist_sources', newWhitelistSrc, setNewWhitelistSrc)}
-          onRemove={(idx) => removeFromList('whitelist_sources', idx)}
-        />
       </div>
 
       {/* Channel Management */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>频道管理</h2>
-
-        {/* Global webhook URL base */}
-        <label style={{ display: 'block', marginBottom: 20 }}>
-          <span style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>全局 Webhook URL Base</span>
-          <input
-            type="text"
-            value={settings.webhook_url_base ?? ''}
-            onChange={(e) => update('webhook_url_base', e.target.value)}
-            placeholder="https://redcity-open.xiaohongshu.com/api/robot/webhook/send"
-            style={{ width: '100%' }}
-          />
-          <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 4, display: 'block' }}>
-            Webhook 频道可覆盖此 URL，留空时使用全局值
-          </span>
-        </label>
-
-        {/* Channel list */}
-        <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 12 }}>频道列表</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {channels.map((ch, idx) => {
             const isEmail = ch.type === 'email'
@@ -364,150 +285,85 @@ icon 映射：{icon_mapping}
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
                   <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <input
-                      type="checkbox"
-                      checked={ch.enabled ?? false}
-                      onChange={(e) => updateChannelField(idx, 'enabled', e.target.checked)}
-                    />
+                    <input type="checkbox" checked={ch.enabled ?? false} onChange={e => updateChannel(idx, { enabled: e.target.checked })} />
                     <span style={{ fontWeight: 600, fontSize: 14 }}>{ch.name || ch.id}</span>
                   </label>
                   <span style={{
                     fontSize: 11, padding: '2px 8px', borderRadius: 4, fontWeight: 500,
-                    background: isEmail ? '#dbeafe' : '#dcfce7',
-                    color: isEmail ? '#1d4ed8' : '#166534',
+                    background: isEmail ? '#dbeafe' : '#dcfce7', color: isEmail ? '#1d4ed8' : '#166534',
                   }}>
                     {isEmail ? '邮件' : 'Webhook'}
                   </span>
                   <span style={{ fontSize: 12, color: 'var(--text3)' }}>ID: {ch.id}</span>
                   <div style={{ flex: 1 }} />
                   {!isEmail && (
-                    <button
-                      onClick={() => {
-                        if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？`)) return
-                        const newChannels = [...channels]
-                        newChannels.splice(idx, 1)
-                        update('channels', newChannels)
-                      }}
-                      style={{
-                        background: 'none', border: 'none', cursor: 'pointer',
-                        color: '#dc2626', fontSize: 14, padding: '2px 6px',
-                      }}
-                    >
+                    <button onClick={() => {
+                      if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？`)) return
+                      const newChannels = [...channels]
+                      newChannels.splice(idx, 1)
+                      update('channels', newChannels)
+                    }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#dc2626', fontSize: 14, padding: '2px 6px' }}>
                       删除
                     </button>
                   )}
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
                   <label>
                     <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道名称</span>
-                    <input
-                      type="text"
-                      value={ch.name || ''}
-                      onChange={(e) => updateChannelField(idx, 'name', e.target.value)}
-                      placeholder="频道名称"
-                      style={{ width: '100%' }}
-                    />
+                    <input type="text" value={ch.name || ''} onChange={e => updateChannel(idx, { name: e.target.value })} style={{ width: '100%' }} />
                   </label>
                   <label>
                     <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>发送时间</span>
-                    <input
-                      type="time"
-                      value={`${String(ch.send_hour ?? 10).padStart(2, '0')}:${String(ch.send_minute ?? 0).padStart(2, '0')}`}
-                      onChange={(e) => {
-                        const [h, m] = e.target.value.split(':').map(Number)
-                        updateChannel(idx, { send_hour: h, send_minute: m })
-                      }}
-                      style={{ width: '100%' }}
-                    />
+                    <input type="time" value={`${String(ch.send_hour ?? 10).padStart(2, '0')}:${String(ch.send_minute ?? 0).padStart(2, '0')}`} onChange={e => { const [h, m] = e.target.value.split(':').map(Number); updateChannel(idx, { send_hour: h, send_minute: m }) }} style={{ width: '100%' }} />
                   </label>
                   <label>
                     <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>主题模式</span>
-                    <select
-                      value={ch.topic_mode || 'broad'}
-                      onChange={(e) => updateChannelField(idx, 'topic_mode', e.target.value)}
-                      style={{ width: '100%' }}
-                    >
+                    <select value={ch.topic_mode || 'broad'} onChange={e => updateChannel(idx, { topic_mode: e.target.value })} style={{ width: '100%' }}>
                       <option value="broad">泛 AI 模式</option>
                       <option value="focused">聚焦模式</option>
                     </select>
                   </label>
-                  <label>
-                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>最大新闻条数</span>
-                    <input
-                      type="number"
-                      min={1}
-                      max={30}
-                      value={ch.max_news_items ?? 10}
-                      onChange={(e) => updateChannelField(idx, 'max_news_items', parseInt(e.target.value) || 10)}
-                      style={{ width: '100%' }}
-                    />
-                  </label>
-                  {!isEmail && (
-                    <>
-                      <label>
-                        <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>
-                          Key 槽位
-                        </span>
-                        <select
-                          value={ch.webhook_key_slot || ''}
-                          onChange={(e) => updateChannelField(idx, 'webhook_key_slot', e.target.value ? parseInt(e.target.value) : null)}
-                          style={{ width: '100%' }}
-                        >
-                          <option value="">未设置</option>
-                          {[...Array(20)].map((_, i) => (
-                            <option key={i + 1} value={i + 1}>
-                              槽位 {i + 1} → WEBHOOK_KEY_{i + 1}
-                            </option>
-                          ))}
-                        </select>
-                      </label>
-                      <label>
-                        <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道 Webhook URL Base（可选）</span>
-                        <input
-                          type="text"
-                          value={ch.webhook_url_base || ''}
-                          onChange={(e) => updateChannelField(idx, 'webhook_url_base', e.target.value)}
-                          placeholder="留空使用全局 URL"
-                          style={{ width: '100%' }}
-                        />
-                      </label>
-                    </>
-                  )}
                 </div>
               </div>
             )
           })}
         </div>
-
-        <button
-          onClick={() => {
-            const newChannels = [...channels]
-            const newId = `ch_${Date.now().toString(36)}`
-            newChannels.push({
-              id: newId,
-              type: 'webhook',
-              name: '',
-              enabled: false,
-              send_hour: 12,
-              send_minute: 0,
-              topic_mode: 'broad',
-              max_news_items: 10,
-              webhook_url_base: '',
-            })
-            update('channels', newChannels)
-          }}
-          style={{
-            marginTop: 12, padding: '8px 20px', background: 'var(--primary-light)',
-            color: 'var(--primary)', border: '1px dashed var(--primary)',
-            borderRadius: 6, fontSize: 13, cursor: 'pointer', fontWeight: 500,
-          }}
-        >
+        <button onClick={() => {
+          const newId = `ch_${Date.now().toString(36)}`
+          update('channels', [...channels, {
+            id: newId, type: 'webhook', name: '', enabled: false,
+            send_hour: 12, send_minute: 0, topic_mode: 'broad', max_news_items: 10, webhook_url_base: '',
+          }])
+        }} style={{
+          marginTop: 12, padding: '8px 20px', background: 'var(--primary-light)',
+          color: 'var(--primary)', border: '1px dashed var(--primary)',
+          borderRadius: 6, fontSize: 13, cursor: 'pointer', fontWeight: 500,
+        }}>
           + 添加频道
         </button>
-
       </div>
 
-      {/* Anthropic API Key */}
+      {/* Secrets management */}
+      <div style={card}>
+        <h2 style={{ fontSize: 16, marginBottom: 8 }}>密钥管理</h2>
+        <p style={{ fontSize: 13, color: 'var(--text2)', marginBottom: 16 }}>
+          管理 GitHub Actions 使用的 Secrets。值为只写，无法读回已设置的内容，只能覆盖更新。
+        </p>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 24 }}>
+          {BASE_SECRET_DEFS.map(def => renderSecretCard(def))}
+        </div>
+
+        <h3 style={{ fontSize: 14, marginBottom: 12 }}>旧版 Webhook 槽位 Key（向后兼容）</h3>
+        <div style={{ padding: 12, marginBottom: 12, borderRadius: 8, background: '#f0fdf4', border: '1px solid #86efac', fontSize: 13, color: '#15803d' }}>
+          推荐使用上方的 <code>WEBHOOK_KEYS</code> (JSON) 替代槽位系统。以下为向后兼容保留。
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {visibleSlotSecrets.map(def => renderSecretCard(def))}
+        </div>
+      </div>
+
+      {/* AI assist */}
       <div style={card}>
         <h2 style={{ fontSize: 16, marginBottom: 16 }}>AI 辅助设置</h2>
         <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 8 }}>Anthropic API Key</div>
@@ -515,85 +371,14 @@ icon 映射：{icon_mapping}
           设置后可在添加新闻时使用 AI 自动生成摘要。Key 仅存储在浏览器本地。
         </div>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-          <input
-            type="password"
-            value={apiKey}
-            onChange={e => { setApiKey(e.target.value); setApiKeySaved(false) }}
-            placeholder="sk-ant-..."
-            style={{ flex: 1 }}
-          />
-          <button
-            onClick={() => {
-              setAnthropicKey(apiKey)
-              setApiKeySaved(true)
-            }}
-            style={{
-              padding: '6px 16px', background: 'var(--primary-light)', color: 'var(--primary)',
-              border: 'none', borderRadius: 6, fontSize: 13, cursor: 'pointer',
-            }}
-          >
-            保存
-          </button>
+          <input type="password" value={apiKey} onChange={e => { setApiKeyState(e.target.value); setApiKeySaved(false) }} placeholder="sk-ant-..." style={{ flex: 1 }} />
+          <button onClick={() => { setAnthropicKey(apiKey); setApiKeySaved(true) }} style={{ padding: '6px 16px', background: 'var(--primary-light)', color: 'var(--primary)', border: 'none', borderRadius: 6, fontSize: 13, cursor: 'pointer' }}>保存</button>
           {apiKey && (
-            <button
-              onClick={() => {
-                setApiKey('')
-                setAnthropicKey('')
-                setApiKeySaved(false)
-              }}
-              style={{
-                padding: '6px 16px', background: '#fee2e2', color: '#dc2626',
-                border: 'none', borderRadius: 6, fontSize: 13, cursor: 'pointer',
-              }}
-            >
-              清除
-            </button>
+            <button onClick={() => { setApiKeyState(''); setAnthropicKey(''); setApiKeySaved(false) }} style={{ padding: '6px 16px', background: '#fee2e2', color: '#dc2626', border: 'none', borderRadius: 6, fontSize: 13, cursor: 'pointer' }}>清除</button>
           )}
         </div>
-        {apiKeySaved && apiKey && (
-          <div style={{ fontSize: 12, color: 'var(--success)', marginTop: 6 }}>API Key 已保存</div>
-        )}
-        {!apiKey && (
-          <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 6 }}>未设置</div>
-        )}
-      </div>
-    </div>
-  )
-}
-
-function FilterList({ label, items, value, onChange, onAdd, onRemove }) {
-  return (
-    <div style={{ marginBottom: 20 }}>
-      <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 8 }}>{label}</div>
-      <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
-        <input
-          type="text"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && onAdd()}
-          placeholder={`输入${label}...`}
-          style={{ flex: 1 }}
-        />
-        <button
-          onClick={onAdd}
-          style={{ padding: '6px 16px', background: 'var(--primary-light)', color: 'var(--primary)', border: 'none', borderRadius: 6, fontSize: 13 }}
-        >
-          添加
-        </button>
-      </div>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-        {items.map((item, idx) => (
-          <span key={idx} style={{
-            display: 'inline-flex', alignItems: 'center', gap: 4,
-            background: '#f3f4f6', padding: '4px 10px', borderRadius: 16, fontSize: 12,
-          }}>
-            {item}
-            <button onClick={() => onRemove(idx)} style={{ background: 'none', border: 'none', color: 'var(--text3)', cursor: 'pointer', padding: 0, fontSize: 14 }}>
-              &times;
-            </button>
-          </span>
-        ))}
-        {items.length === 0 && <span style={{ color: 'var(--text3)', fontSize: 12 }}>暂无</span>}
+        {apiKeySaved && apiKey && <div style={{ fontSize: 12, color: 'var(--success)', marginTop: 6 }}>API Key 已保存</div>}
+        {!apiKey && <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 6 }}>未设置</div>}
       </div>
     </div>
   )
