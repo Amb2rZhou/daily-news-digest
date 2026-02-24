@@ -623,32 +623,32 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 确保所有字符串中的双引号用单引号替换"""
 
 
-def _call_minimax(prompt: str, label: str) -> str:
-    """Call MiniMax M2.1 API and return response text. Returns None on failure."""
+def _call_deepseek(prompt: str, label: str) -> str:
+    """Call DeepSeek V3 API and return response text. Returns None on failure."""
     import time
     import re
     from openai import OpenAI as OpenAIClient
 
-    api_key = os.environ.get("MINIMAX_API_KEY")
+    api_key = os.environ.get("DEEPSEEK_API_KEY")
     if not api_key:
         return None
 
-    client = OpenAIClient(api_key=api_key, base_url="https://api.minimaxi.chat/v1")
+    client = OpenAIClient(api_key=api_key, base_url="https://api.deepseek.com")
     start = time.time()
     try:
         resp = client.chat.completions.create(
-            model="MiniMax-M2.1",
+            model="deepseek-chat",
             max_tokens=8192,
             messages=[{"role": "user", "content": prompt}],
         )
         elapsed = time.time() - start
-        print(f"  - MiniMax ({label}) 耗时: {elapsed:.1f}s")
+        print(f"  - DeepSeek ({label}) 耗时: {elapsed:.1f}s")
         text = resp.choices[0].message.content
         # Strip <think> tags if present
         text = re.sub(r'<think>[\s\S]*?</think>', '', text).strip()
         return text
     except Exception as e:
-        print(f"  - MiniMax ({label}) error: {e}")
+        print(f"  - DeepSeek ({label}) error: {e}")
         return None
 
 
@@ -749,11 +749,11 @@ def _call_haiku(client, prompt: str, label: str) -> str:
 
 def _call_ai(prompt: str, label: str, anthropic_client=None) -> str:
     """Call the best available AI backend. Tries MiniMax first, falls back to Haiku."""
-    if os.environ.get("MINIMAX_API_KEY"):
-        result = _call_minimax(prompt, label)
+    if os.environ.get("DEEPSEEK_API_KEY"):
+        result = _call_deepseek(prompt, label)
         if result:
             return result
-        print(f"  - MiniMax failed for {label}, trying Haiku fallback...")
+        print(f"  - DeepSeek failed for {label}, trying Haiku fallback...")
     if anthropic_client:
         return _call_haiku(anthropic_client, prompt, label)
     print(f"  - No AI backend available for {label}")
@@ -1004,7 +1004,7 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
             "error": "No articles fetched from RSS feeds"
         }
 
-    backend = "MiniMax" if os.environ.get("MINIMAX_API_KEY") else "Claude"
+    backend = "DeepSeek" if os.environ.get("DEEPSEEK_API_KEY") else "Claude"
     print(f"  - Summarizing with {backend}...")
     categories = summarize_news_with_claude(anthropic_key, raw_articles, max_items, settings)
     total = sum(len(c.get("news", [])) for c in categories)
