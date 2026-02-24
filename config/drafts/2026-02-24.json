@@ -1,6 +1,6 @@
 {
   "date": "2026-02-24",
-  "time_window": "2026-02-23 11:09 ~ 2026-02-24 11:09",
+  "time_window": "2026-02-23 10:00 ~ 2026-02-24 09:59",
   "categories": [
     {
       "name": "智能硬件",
@@ -8,66 +8,66 @@
       "news": [
         {
           "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
-          "summary": "据报道，OpenAI有超过200人的团队正在开发一系列AI硬件设备，其中包括智能眼镜，预计可能在2028年量产。",
-          "comment": "AI巨头从软件转向硬件，其首款消费级设备将如何定义下一代人机交互？",
+          "summary": "据报道，OpenAI有超过200人的团队正在开发一系列AI硬件设备，其中包括智能音箱、智能眼镜和智能灯。智能音箱可能最早于2027年上市，而智能眼镜则可能在2028年量产。",
+          "comment": "AI软件巨头进军硬件领域，其产品能否在用户体验上超越现有的智能眼镜？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544748.html"
         },
         {
+          "title": "传苹果将于2028年发布AR眼镜，采用OLEDos方案",
+          "summary": "行业分析报告预测，苹果可能在2028年发布一款采用0.6英寸OLEDoS（Micro-OLED）屏幕的AR眼镜。报告同时指出，OLEDoS技术将在未来几年成为AR/VR/MR设备的重要显示方案。",
+          "comment": "在Vision Pro之后，苹果的AR眼镜是否会成为其下一个定义市场的消费级硬件？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544744.html"
+        },
+        {
+          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
+          "summary": "据彭博社报道，苹果正在加紧研发多款AI可穿戴设备，包括AI眼镜、AI吊坠和新款AirPods。这些设备将围绕具备视觉上下文理解能力的Siri构建，并与iPhone系统相连。",
+          "comment": "苹果将如何通过不同形态的AI穿戴设备，构建一个无缝的、情境感知的个人计算网络？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544740.html"
+        },
+        {
           "title": "印度AI公司Sarvam展示Kaze智能眼镜，预计今年5月上市",
-          "summary": "印度AI公司Sarvam宣布了其硬件布局，包括自主研发的Kaze智能眼镜，该设备计划于今年5月上市，并搭载可在边缘运行的轻量化AI模型。",
-          "comment": "新兴市场的AI硬件公司，能否凭借本地化策略和轻量化模型开辟一条新路径？",
+          "summary": "印度AI公司Sarvam宣布了其硬件布局，包括自主研发的Kaze智能眼镜。该眼镜计划搭载极轻量化的边缘AI模型，支持离线工作，预计将于今年5月上市。",
+          "comment": "专注于本地化语言和离线能力的边缘AI硬件，能否在特定市场挑战全球科技巨头的产品？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544742.html"
         },
         {
           "title": "扎克伯格随行人员佩戴Meta AI眼镜进入法庭，涉嫌违规录制遭法官警告",
-          "summary": "Meta CEO扎克伯格的随行人员在法庭上佩戴具有录制功能的Meta AI智能眼镜，因涉嫌违反法庭禁止录音录像的规定而遭到法官警告。",
-          "comment": "具备环境感知和记录功能的AI穿戴设备，将如何挑战现有的隐私与合规边界？",
+          "summary": "Meta首席执行官扎克伯格的随行人员在法庭上佩戴具有录制功能的Meta AI智能眼镜，因涉嫌违反法庭禁止录音录像的规定而遭到法官的严厉警告。",
+          "comment": "具备环境感知和记录功能的智能眼镜，将如何重新定义公共与私人空间的边界及行为规范？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544747.html"
         },
         {
-          "title": "谷歌发布Glimmer设计语言，专为HUD及AR眼镜打造",
-          "summary": "谷歌详细介绍了其专为智能眼镜透明抬头显示（HUD）界面打造的全新设计语言Glimmer，旨在优化小显示区域与现实世界共存的用户体验。",
-          "comment": "当AR界面设计从‘全屏沉浸’转向‘一目了然’，这会如何重塑我们与数字信息的交互方式？",
-          "source": "UploadVR",
-          "url": "https://www.uploadvr.com/google-details-glimmer-its-ui-design-language-for-hud-ar-glasses/"
-        },
-        {
-          "title": "PICO将于3月公布旗舰级头显Project Swan和全新系统",
-          "summary": "根据GDC日程，PICO将在3月12日公布其面向通用空间计算的旗舰设备‘Project Swan’，旨在支持新一代全空间与共享空间体验。",
-          "comment": "在苹果和Meta主导的空间计算赛道，新入局的竞争者需要具备哪些差异化能力才能立足？",
+          "title": "GDC演讲显示，PICO将于3月公布旗舰级头显Project Swan和全新系统",
+          "summary": "根据GDC官网日程，PICO计划在3月12日公布其面向通用空间计算的旗舰设备‘Project Swan’。该设备旨在支持新一代全空间与共享空间体验，并配备全新的操作系统。",
+          "comment": "在Meta和苹果主导的空间计算市场，PICO的新旗舰能否通过差异化的‘共享空间’体验找到突破口？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544746.html"
         },
         {
-          "title": "Tesollo将其轻量紧凑型机械手商业化，用于人形机器人",
-          "summary": "Tesollo公司宣布将其DG-5F-S轻型紧凑型机械手商业化，该产品支持人形机器人所需的精确抓取和操作动作。",
-          "comment": "模块化、商业化的机器人关键部件，是否会加速人形机器人产业的整体发展和成本下降？",
+          "title": "Tesollo commercializes its lightweight, compact robotic hand for humanoids",
+          "summary": "Tesollo公司宣布将其轻量紧凑的DG-5F-S机器人手商业化。该产品专为人形机器人设计，支持精确抓取和操作所需的灵巧动作。",
+          "comment": "模块化、商业化的灵巧手组件，是否会加速人形机器人从实验室走向实际应用的进程？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/tesollo-commercializes-its-lightweight-compact-robotic-hand-for-humanoids/"
         },
         {
-          "title": "Vuzix推出企业级智能眼镜 一站式套件赋能一线人员远程协助",
-          "summary": "AR技术提供商Vuzix Corporation正式发布全新的Vuzix Solutions系列企业级智能眼镜部署套件，旨在为一线工作人员提供远程协助等能力。",
-          "comment": "在企业级市场，决定智能眼镜成功的关键是硬件性能，还是完整的解决方案和易用性？",
-          "source": "93913",
-          "url": "https://www.93913.com/119438.html"
-        },
-        {
           "title": "法拉第未来EAI机器人下周开启首批交付 贾跃亭称有信心完成交付爬坡",
-          "summary": "法拉第未来宣布其备受关注的EAI机器人产品将于下周正式开启首批交付。",
-          "comment": "从智能汽车跨界到机器人，新兴品牌如何建立消费者对其硬件产品可靠性的信任？",
+          "summary": "法拉第未来（Faraday Future）宣布，其备受关注的EAI机器人产品将于下周正式开启首批交付。公司创始人贾跃亭表示对完成交付爬坡有信心。",
+          "comment": "跨界造车的公司转向机器人领域，其产品交付能否兑现承诺，并经受住真实场景的考验？",
           "source": "93913",
           "url": "https://www.93913.com/119447.html"
         },
         {
-          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
-          "summary": "据报道，苹果正在加紧研发包括AI眼镜、AI吊坠和新款AirPods在内的多款AI可穿戴设备，这些设备都将围绕具备视觉上下文理解能力的Siri构建。",
-          "comment": "如果苹果的AI眼镜成功，它会是iPhone的替代品还是其感知能力的延伸？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544740.html"
+          "title": "Vuzix推出企业级智能眼镜 一站式套件赋能一线人员远程协助",
+          "summary": "AR技术提供商Vuzix Corporation正式发布全新的Vuzix Solutions系列企业级智能眼镜部署套件，旨在为一线工作人员提供远程协助等赋能工具。",
+          "comment": "针对垂直行业的企业级智能眼镜解决方案，是否是当前AR硬件实现规模化营收的最现实路径？",
+          "source": "93913",
+          "url": "https://www.93913.com/119438.html"
         }
       ]
     },
@@ -76,18 +76,18 @@
       "icon": "🤖",
       "news": [
         {
-          "title": "一名工程师在一小时内用AI打造出生产级SaaS产品",
-          "summary": "VentureBeat报道，一家软银支持的客户数据平台Treasure Data展示了其AI驱动的治理系统，使得一名工程师仅用一小时就利用AI代理生成了生产级代码，并完成了SaaS产品的部署。",
-          "comment": "当AI能够以远超人类的速度生成生产级代码时，软件开发的流程、团队角色和治理模式将如何被彻底重塑？",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/orchestration/one-engineer-made-a-production-saas-product-in-an-hour-heres-the-governance"
+          "title": "月之暗面科技发布开源权重 Kimi K2.5 模型，具备视觉与智能体集群能力",
+          "summary": "月之暗面科技发布了最新的开源多模态大语言模型 Kimi K2.5，该模型在代码任务上表现优异，并支持智能体集群模式，可调度多达100个子智能体并行工作。",
+          "comment": "开源多模态模型在支持复杂智能体协作方面，是否会成为未来AI应用开发的主流基础设施？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/kadDBSqBrtFfUbipxQSs"
         },
         {
-          "title": "Meta AI安全研究员称OpenClaw代理在其收件箱中失控",
-          "summary": "一位Meta的AI安全研究员在社交媒体上警告，一个名为OpenClaw的AI代理在尝试处理其收件箱任务时行为失控，这凸显了将任务完全委托给AI代理时可能存在的风险。",
-          "comment": "随着AI代理能力的增强，我们如何在赋予其自主权的同时，建立有效的安全护栏以防止其行为偏离预期？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/"
+          "title": "大神Karpathy最新推文：AI技术栈长出了新的一层，叫Claw",
+          "summary": "AI专家Andrej Karpathy在推文中讨论了近期爆火的开源AI Agent项目OpenClaw，该项目在GitHub上已获得大量关注，并被视为AI技术栈中新兴的一层。",
+          "comment": "像‘Claw’这样的新概念，是否预示着AI Agent的开发与应用正进入一个更标准化、更易普及的新阶段？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/V6yNz0S1DKeUtmoSfrsw"
         }
       ]
     },
@@ -96,30 +96,30 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "字节跳动在内蒙古成立3家新科技公司，注册资本共28亿",
-          "summary": "字节跳动近期在内蒙古成立了三家新科技公司，注册资本合计高达28亿元人民币，经营范围涵盖信息技术咨询、软件开发、系统集成等，此举被外界视为其加强AI基础设施布局的信号。",
-          "comment": "科技巨头在非核心地区重金投入科技公司，是否预示着AI算力基础设施的布局正从成本高昂的中心城市向资源丰富的地区转移？",
-          "source": "36氪",
-          "url": "https://36kr.com/newsflashes/3696682779668102?f=rss"
+          "title": "狂掷80亿，春节AI大战谁赢了？",
+          "summary": "文章分析了2026年春节期间，中国互联网巨头在AI领域的激烈竞争与巨额投入，探讨了这场‘最赛博朋克’春节背后的AI新世界布局。",
+          "comment": "当春节成为科技巨头的AI营销战场，这种集中投入对推动AI技术的实际落地和用户体验提升，是利大于弊还是弊大于利？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7887924.html"
         },
         {
-          "title": "Anthropic指控中国AI实验室对其模型进行‘蒸馏攻击’",
-          "summary": "美国AI公司Anthropic公开指控中国AI公司深度求索、月之暗面与MiniMax通过创建数万个虚假账户，大规模访问其Claude模型以提取能力，用于训练自家模型。",
-          "comment": "在AI模型能力成为核心竞争力的时代，如何在全球范围内建立既鼓励创新又保护知识产权的技术竞争规则？",
+          "title": "Anthropic指控DeepSeek等中国公司使用数万个虚假账户窃取Claude能力",
+          "summary": "Anthropic公开指控中国AI实验室DeepSeek、Moonshot和MiniMax通过约2.4万个虚假账户进行大规模、有组织的活动，试图从其Claude模型中汲取能力。",
+          "comment": "在AI模型能力快速迭代的背景下，如何建立有效的技术保护与行业伦理规范，以防止不正当竞争并促进健康创新？",
           "source": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/883243/anthropic-claude-deepseek-china-ai-distillation"
         },
         {
-          "title": "狂掷80亿，春节AI大战谁赢了？",
-          "summary": "钛媒体报道，今年春节期间，国内互联网巨头在AI应用和营销上投入巨大，展开了一场‘最赛博朋克’的春节AI大战，押注AI新世界的未来。",
-          "comment": "当节日营销成为AI应用的主战场，这是否意味着AI技术已从实验室和PPT，真正进入了大规模用户触达和场景验证的阶段？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7887924.html"
+          "title": "AI动荡令软件投资者紧张不安",
+          "summary": "市场正在权衡现有软件公司是会适应AI浪潮，还是会被AI Agent等新兴力量边缘化，这反映了AI对传统软件行业商业模式的潜在颠覆性影响。",
+          "comment": "AI Agent的兴起，是否会从根本上重塑企业软件市场的格局，催生一批全新的‘AI原生’巨头？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/8867bff7-8632-40b7-8fde-7c95b3e624f9"
         }
       ]
     }
   ],
-  "source": "manual",
+  "source": "scheduled",
   "status": "pending_review",
-  "created_at": "2026-02-24T11:10:32.194099+08:00"
+  "created_at": "2026-02-24T13:15:54.670320+08:00"
 }
