@@ -747,6 +747,19 @@ def _call_haiku(client, prompt: str, label: str) -> str:
         return None
 
 
+def _call_ai(prompt: str, label: str, anthropic_client=None) -> str:
+    """Call the best available AI backend. Tries MiniMax first, falls back to Haiku."""
+    if os.environ.get("MINIMAX_API_KEY"):
+        result = _call_minimax(prompt, label)
+        if result:
+            return result
+        print(f"  - MiniMax failed for {label}, trying Haiku fallback...")
+    if anthropic_client:
+        return _call_haiku(anthropic_client, prompt, label)
+    print(f"  - No AI backend available for {label}")
+    return None
+
+
 def _format_articles_text(articles: list[dict]) -> str:
     """Format a list of article dicts into text for Claude prompts."""
     text = ""
@@ -767,7 +780,7 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
     """Focused mode: two sequential Haiku calls for hardware and AI/industry, then merge."""
     import time
 
-    print(f"  - Focused mode: 2 Haiku calls (hardware + AI/industry)")
+    print(f"  - Focused mode: 2 AI calls (hardware + AI/industry)")
 
     # Split articles: hardware sources vs others
     hw_urls = set()
@@ -791,12 +804,12 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
     start = time.time()
 
     def _call_and_parse(prompt, label, max_retries=2):
-        """Call Haiku and parse JSON, with retries for both API and parse failures."""
+        """Call AI and parse JSON, with retries for both API and parse failures."""
         for attempt in range(max_retries + 1):
             if attempt > 0:
                 print(f"  - Retrying {label} (attempt {attempt + 1})...")
                 time.sleep(3)
-            resp = _call_haiku(client, prompt, f"{label}" if attempt == 0 else f"{label}-retry{attempt}")
+            resp = _call_ai(prompt, f"{label}" if attempt == 0 else f"{label}-retry{attempt}", anthropic_client=client)
             if not resp:
                 print(f"  - {label}: API call returned None")
                 continue
@@ -872,7 +885,7 @@ def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_ite
 
     topic_mode = settings.get("topic_mode", "broad")  # "broad" or "focused"
     custom_prompt = settings.get("custom_prompt", "")  # User-defined custom prompt
-    client = anthropic.Anthropic(api_key=anthropic_key)
+    client = anthropic.Anthropic(api_key=anthropic_key) if anthropic_key else None
 
     # 聚焦模式使用专门的 3 个分类
     if topic_mode == "focused" and not custom_prompt:
@@ -928,108 +941,19 @@ URL: {article.get('url', '')}
     if prompt is None and topic_mode == "focused":
         return _focused_split_call(client, articles[:120], max_items, paywalled_sources, settings)
 
-    model = "claude-haiku-4-5-20251001"
-    print(f"  - Using model: {model}")
+    response_text = _call_ai(prompt, topic_mode, anthropic_client=client)
+    if not response_text:
+        print(f"  Error: All AI backends failed for {topic_mode} mode")
+        return []
 
-    try:
-        response = client.messages.create(
-            model=model,
-            max_tokens=8192,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        claude_elapsed = time.time() - claude_start
-        print(f"  - Claude API ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
+    claude_elapsed = time.time() - claude_start
+    print(f"  - AI ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
 
-        if response.stop_reason == "max_tokens":
-            print(f"  - WARNING: Response was truncated (hit max_tokens limit)")
+    parsed = _parse_json_response(response_text)
+    if parsed:
+        return parsed.get("categories", [])
 
-        response_text = response.content[0].text
-
-        # Extract JSON from response
-        start_idx = response_text.find('{')
-        end_idx = response_text.rfind('}') + 1
-        if start_idx != -1 and end_idx > start_idx:
-            json_str = response_text[start_idx:end_idx]
-
-            # Try parsing directly first
-            try:
-                result = json.loads(json_str)
-                return result.get("categories", [])
-            except json.JSONDecodeError as first_error:
-                print(f"  - JSON parse error (attempting fix): {first_error}")
-                # Debug: show the problematic area
-                error_pos = first_error.pos if hasattr(first_error, 'pos') else 0
-                start_show = max(0, error_pos - 100)
-                end_show = min(len(json_str), error_pos + 100)
-                print(f"  - Error context (pos {error_pos}): ...{json_str[start_show:end_show]}...")
-
-            # Fix common JSON issues
-            import re
-
-            # Remove control characters
-            json_str = re.sub(r'[\x00-\x1f\x7f]', ' ', json_str)
-
-            # Fix unescaped quotes inside string values
-            # Match: "key": "value with "quotes" inside"
-            def fix_quotes_in_value(match):
-                key = match.group(1)
-                value = match.group(2)
-                # Replace inner quotes with single quotes
-                fixed_value = value.replace('"', "'")
-                return f'"{key}": "{fixed_value}"'
-
-            # Pattern for string fields
-            json_str = re.sub(
-                r'"(title|summary|comment|source|url|name|icon)"\s*:\s*"((?:[^"\\]|\\.)*)(?<!\\)"',
-                fix_quotes_in_value,
-                json_str
-            )
-
-            # Try again
-            try:
-                result = json.loads(json_str)
-                return result.get("categories", [])
-            except json.JSONDecodeError as second_error:
-                print(f"  - JSON fix attempt 1 failed: {second_error}")
-
-            # More aggressive fix: use ast.literal_eval style parsing
-            # Replace problematic patterns
-            json_str = re.sub(r',\s*}', '}', json_str)  # trailing comma before }
-            json_str = re.sub(r',\s*]', ']', json_str)  # trailing comma before ]
-
-            # Try with relaxed JSON parser
-            try:
-                # Try to extract just the categories array if full parse fails
-                cat_match = re.search(r'"categories"\s*:\s*(\[[\s\S]*\])', json_str)
-                if cat_match:
-                    categories_str = cat_match.group(1)
-                    # Clean up the categories string
-                    categories_str = re.sub(r',\s*}', '}', categories_str)
-                    categories_str = re.sub(r',\s*]', ']', categories_str)
-                    result = json.loads(categories_str)
-                    print(f"  - Recovered {len(result)} categories from partial JSON")
-                    return result
-            except Exception as third_error:
-                print(f"  - JSON fix attempt 2 failed: {third_error}")
-
-            # Last resort: try line by line reconstruction
-            try:
-                lines = json_str.split('\n')
-                fixed_lines = []
-                for line in lines:
-                    m = re.match(r'^(\s*"(?:title|summary|comment|source|url|name|icon)":\s*")(.*)(",?\s*)$', line)
-                    if m:
-                        value = m.group(2).replace('"', "'")
-                        line = m.group(1) + value + m.group(3)
-                    fixed_lines.append(line)
-                json_str = '\n'.join(fixed_lines)
-                result = json.loads(json_str)
-                return result.get("categories", [])
-            except Exception as final_error:
-                print(f"  - All JSON fix attempts failed: {final_error}")
-    except Exception as e:
-        print(f"  Error: Failed to summarize news: {e}")
-
+    print(f"  Error: Failed to parse AI response")
     return []
 
 def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False, hardware_unlimited: bool = None, channel: dict = None) -> dict:
@@ -1080,7 +1004,8 @@ def fetch_news(anthropic_key: str, topic: str = "AI/科技", max_items: int = 10
             "error": "No articles fetched from RSS feeds"
         }
 
-    print("  - Summarizing with Claude...")
+    backend = "MiniMax" if os.environ.get("MINIMAX_API_KEY") else "Claude"
+    print(f"  - Summarizing with {backend}...")
     categories = summarize_news_with_claude(anthropic_key, raw_articles, max_items, settings)
     total = sum(len(c.get("news", [])) for c in categories)
     print(f"  - Selected {total} top news in {len(categories)} categories")
