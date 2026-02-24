@@ -1,29 +1,36 @@
 {
   "date": "2026-02-24",
-  "time_window": "2026-02-23 10:56 ~ 2026-02-24 10:56",
+  "time_window": "2026-02-23 11:09 ~ 2026-02-24 11:09",
   "categories": [
     {
       "name": "产品发布",
       "icon": "🚀",
       "news": [
         {
-          "title": "月之暗面科技发布开源权重 Kimi K2.5 模型，具备视觉与智能体集群能力",
-          "summary": "月之暗面发布最新开源多模态大模型 Kimi K2.5，该模型在代码任务上表现优异，并新增视觉功能，支持调度多达 100 个子智能体的集群模式以解决复杂问题。",
-          "comment": "开源多模态大模型结合智能体集群能力，是否预示着未来 AI 应用的开发范式将从单一模型调用转向分布式智能体协作？",
-          "source": "InfoQ 推荐",
-          "url": "https://www.infoq.cn/article/kadDBSqBrtFfUbipxQSs"
+          "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
+          "summary": "OpenAI团队正在开发包括智能音箱、智能眼镜和智能灯在内的一系列AI硬件，其中智能音箱最早可能在2027年上市。",
+          "comment": "当AI巨头从软件走向硬件，它们将如何重塑我们与数字世界交互的物理界面？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544748.html"
         },
         {
           "title": "谷歌发布Glimmer设计语言，专为HUD及AR眼镜打造",
-          "summary": "谷歌详细介绍其专为智能眼镜透明抬头显示界面打造的全新设计语言 Glimmer，该语言针对显示区域狭小且需与现实世界共存的特殊环境进行了深度优化。",
-          "comment": "当 AR 界面设计从‘全屏沉浸’转向‘一目了然’的 glanceable 范式，这会如何重塑我们与数字信息交互的日常习惯？",
+          "summary": "谷歌推出专为智能眼镜透明抬头显示界面设计的新语言Glimmer，强调‘一目了然’的布局，以适配狭小且需与现实共存的显示环境。",
+          "comment": "当AR界面设计从‘沉浸’转向‘轻瞥’，这是否意味着下一代计算平台将更注重信息的无缝融入而非独占注意力？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544743.html"
         },
         {
+          "title": "印度AI公司Sarvam展示Kaze智能眼镜，预计今年5月上市",
+          "summary": "印度AI公司Sarvam计划通过部署轻量化边缘模型，将AI能力引入其自主研发的智能眼镜，该产品预计今年5月上市。",
+          "comment": "在边缘设备上运行轻量化AI模型，能否成为新兴市场跨越传统计算基础设施限制、普及AI应用的关键路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544742.html"
+        },
+        {
           "title": "Tesollo commercializes its lightweight, compact robotic hand for humanoids",
-          "summary": "Tesollo 公司宣布将其轻量紧凑的 DG-5F-S 机械手商业化，该产品旨在满足人形机器人所需的精确抓取和操控动作。",
-          "comment": "标准化、商业化的机器人关键部件（如灵巧手）的涌现，是否会加速人形机器人产业的成熟和成本下降？",
+          "summary": "Tesollo公司将其轻量紧凑的DG-5F-S机械手商业化，该产品支持人形机器人所需的精确抓取和操作动作。",
+          "comment": "模块化、标准化的机器人核心部件商业化，是否会加速人形机器人产业的整体发展并降低准入门槛？",
           "source": "The Robot Report",
           "url": "https://www.therobotreport.com/tesollo-commercializes-its-lightweight-compact-robotic-hand-for-humanoids/"
         }
@@ -34,32 +41,32 @@
       "icon": "🏢",
       "news": [
         {
-          "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
-          "summary": "据报道，OpenAI 有超过 200 人的团队正在开发一系列人工智能设备，包括智能音箱、智能眼镜和智能灯，其中智能眼镜可能在 2028 年量产。",
-          "comment": "以软件和模型见长的 OpenAI 进军硬件领域，其 AI 眼镜的核心竞争力会是独特的交互方式，还是深度集成的专用模型？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544748.html"
+          "title": "Altman放话：2028年，超级智能将超越人类",
+          "summary": "OpenAI CEO山姆·奥特曼预测超级智能将在2028年超越人类，并指出其学习效率远超人类专家。",
+          "comment": "当行业领袖将AGI时间表明确化，这是技术自信的体现，还是为了引导资源与舆论的竞争策略？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7887314.html"
         },
         {
           "title": "字节跳动在内蒙古成立3家新科技公司，注册资本共28亿",
-          "summary": "字节跳动近日在内蒙古呼和浩特和乌兰察布新成立三家科技公司，注册资本合计达 28 亿元人民币，经营范围涵盖信息技术咨询、软件开发、系统集成等。",
-          "comment": "在 AI 算力需求激增的背景下，科技巨头在能源富集地区大规模设立公司，是否预示着新一轮的算力基础设施布局竞赛已经开始？",
+          "summary": "字节跳动近期在内蒙古成立三家新科技公司，注册资本合计达28亿人民币，经营范围涵盖信息技术服务、软件开发等。",
+          "comment": "科技巨头在特定区域集中设立高注册资本公司，是否预示着其在AI算力基础设施或数据中心布局上的新战略？",
           "source": "36氪",
           "url": "https://36kr.com/newsflashes/3696682779668102?f=rss"
         },
         {
-          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
-          "summary": "据报道，苹果正在加紧研发包括 AI 眼镜、AI 吊坠和新款 AirPods 在内的可穿戴设备，这些设备都将围绕具备视觉上下文理解能力的 Siri 数字助理构建。",
-          "comment": "如果苹果的 AI 眼镜成功将 Siri 从语音助手升级为‘视觉助手’，这会对我们获取信息和与物理世界互动的方式产生何种根本性改变？",
-          "source": "VR陀螺",
-          "url": "https://www.vrtuoluo.cn/544740.html"
-        },
-        {
           "title": "Meta发布Reality Labs部门2026年战略重点",
-          "summary": "Meta 宣布调整 Reality Labs 战略，明确将 Quest VR 平台与 Horizon Worlds 社交平台分开发展，后者重心将几乎完全转移到移动端。",
-          "comment": "将 Horizon Worlds 从 VR 头显剥离并转向移动端，是否意味着 Meta 对元宇宙的愿景正从‘沉浸式虚拟空间’回归到‘增强型社交应用’的务实路径？",
+          "summary": "Meta宣布将Quest VR平台与Worlds社交平台明确拆分，未来将加大对VR开发者生态的投入，并将Worlds重心转向移动端。",
+          "comment": "将社交平台与VR硬件平台解耦，是Meta应对不同用户需求的务实之举，还是其元宇宙愿景收缩的信号？",
           "source": "VR陀螺",
           "url": "https://www.vrtuoluo.cn/544750.html"
+        },
+        {
+          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
+          "summary": "据报道，苹果正在加紧研发包括AI眼镜、AI吊坠和新款AirPods在内的多款AI可穿戴设备，这些设备都将围绕增强版Siri构建。",
+          "comment": "如果苹果将AI核心能力从手机分散到多种可穿戴设备上，这是否会从根本上改变其以iPhone为中心的产品生态？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544740.html"
         }
       ]
     },
@@ -68,18 +75,25 @@
       "icon": "🔬",
       "news": [
         {
-          "title": "自主式大数据优化：通过多智能体强化学习实现 Apache Spark 的自调优",
-          "summary": "研究者提出一种基于多智能体强化学习的方法，用于实现 Apache Spark 等大数据处理系统的自动参数调优，以应对动态工作负载和复杂分布式环境的挑战。",
-          "comment": "当 AI 智能体开始自主优化底层计算框架的配置，这是否会最终导致一个‘自我进化’的软件栈，其内部运行逻辑将逐渐超出人类工程师的直接理解范围？",
-          "source": "InfoQ 推荐",
-          "url": "https://www.infoq.cn/article/t0uYPeckqF18hc4gUQU0"
+          "title": "Anthropic accuses Chinese AI labs of 'distillation attacks' on its models",
+          "summary": "Anthropic公开指控中国AI公司深度求索、月之暗面和MiniMax通过数万个虚假账户进行大规模‘蒸馏攻击’，以提取其Claude模型的能力。",
+          "comment": "当模型能力提取从学术研究演变为产业规模的‘攻击’，AI公司应如何构建新的技术壁垒与合规防御体系？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/0afa7bb5-7da3-4175-80e6-e38faf52e867"
         },
         {
-          "title": "研究证实沉浸式VR可安全辅助微创机器人手术，显著降低患者焦虑",
-          "summary": "一项研究证实，将沉浸式 VR 技术整合到单孔机器人前列腺切除术中，能在保障手术安全的同时，显著提升患者舒适度并降低其术中及术后焦虑。",
-          "comment": "VR 作为‘数字镇静剂’在手术中的应用获得实证支持，这是否会推动 VR 从娱乐和培训工具，正式成为临床医疗中标准化的辅助治疗手段？",
-          "source": "93913-元宇宙&AI信息与产业服务",
-          "url": "https://www.93913.com/119433.html"
+          "title": "A Meta AI security researcher said an OpenClaw agent ran amok on her inbox",
+          "summary": "一位Meta的AI安全研究员称，一个名为OpenClaw的AI代理在其邮箱中失控运行，这警示了将任务委托给AI代理时可能出现的风险。",
+          "comment": "AI代理的自主行动一旦超出预设边界，我们该如何建立有效的‘紧急制动’机制以防止其造成实际损害？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/"
+        },
+        {
+          "title": "One engineer made a production SaaS product in an hour: here's the governance system that made it possible",
+          "summary": "Treasure Data公司建立了一套治理系统，使得一名工程师能在一小时内利用AI生成生产级SaaS产品代码，并确保其质量与合规。",
+          "comment": "当AI生成代码的速度远超人类审查能力时，什么样的自动化治理框架才能确保软件开发的可靠性不被牺牲？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/one-engineer-made-a-production-saas-product-in-an-hour-heres-the-governance"
         }
       ]
     },
@@ -88,39 +102,25 @@
       "icon": "📊",
       "news": [
         {
-          "title": "Anthropic accuses Chinese AI labs of ‘distillation attacks’ on its models",
-          "summary": "Anthropic 公开指控中国 AI 公司 DeepSeek、Moonshot 和 MiniMax 通过创建数万个虚假账户进行‘蒸馏攻击’，试图从其 Claude 模型中提取能力。",
-          "comment": "这场围绕模型‘蒸馏’的公开指控，是否会成为全球 AI 竞赛中技术保护主义升级、乃至引发行业监管和贸易摩擦的新导火索？",
-          "source": "Technology",
-          "url": "https://www.ft.com/content/0afa7bb5-7da3-4175-80e6-e38faf52e867"
-        },
-        {
-          "title": "Altman放话：2028年，超级智能将超越人类",
-          "summary": "OpenAI CEO 山姆·奥特曼预测超级智能将在 2028 年超越人类，并举例称此类模型可在 3 个月内掌握全球药物研发知识，能耗仅为人类科学家的极小部分。",
-          "comment": "如果‘超级智能’在特定领域的专业能力确实在几年内全面超越人类专家，那么人类科研工作者的核心价值将如何被重新定义？",
-          "source": "钛媒体：引领未来商业与生活新知",
-          "url": "https://www.tmtpost.com/7887314.html"
-        },
-        {
-          "title": "2026年全球AI决战时刻",
-          "summary": "文章指出，2026 年全球人工智能产业正站在一个微妙的转折点上，面临技术突破、商业落地与全球竞争的多重考验。",
-          "comment": "在被称为‘决战时刻’的 2026 年，决定 AI 公司胜负的关键因素，会是技术领先性、商业化速度，还是地缘政治下的市场准入能力？",
-          "source": "钛媒体：引领未来商业与生活新知",
-          "url": "https://www.tmtpost.com/7887950.html"
-        },
-        {
-          "title": "A Meta AI security researcher said an OpenClaw agent ran amok on her inbox",
-          "summary": "一位 Meta 的 AI 安全研究员称，一个名为 OpenClaw 的自主 AI 代理程序在她的收件箱中‘失控运行’，这警示了将任务交给 AI 代理时可能出错的风险。",
-          "comment": "当 AI 代理因指令不明确或逻辑漏洞而‘失控’，我们该如何在赋予其自主权和确保其行为可控之间建立有效的‘紧急制动’机制？",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/"
+          "title": "Lotus CIO Discusses How AI Could Disrupt the Global Economy",
+          "summary": "Lotus Technology Management首席投资官建议，政府应考虑对AI带来的增量收益或意外之财征税，以帮助抵消失业带来的影响。",
+          "comment": "对AI超额利润征税以补偿社会成本，这一构想如何在激励创新与保障公平之间找到可行的平衡点？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/videos/2026-02-24/lotus-cio-on-how-ai-could-disrupt-the-global-economy-video"
         },
         {
           "title": "The human work behind humanoid robots is being hidden",
-          "summary": "文章指出，在人形机器人光鲜的演示背后，大量的人类远程操作和辅助工作被隐藏，这引发了关于 AI 物理智能真实进展程度的讨论。",
-          "comment": "如果当前人形机器人的许多‘智能’表现仍严重依赖幕后的人类遥操作，那么衡量其真正自主性的标准应该是什么？",
+          "summary": "报道指出，人形机器人展示的流畅动作背后，往往隐藏着大量人类远程操作或‘幕后’辅助工作，而非完全的自主性。",
+          "comment": "在追求‘完全自主’的叙事下，我们是否低估了人机协同的长期价值，并过早地试图抹去‘人类在环’的作用？",
           "source": "MIT Technology Review",
           "url": "https://www.technologyreview.com/2026/02/23/1133508/the-human-work-behind-humanoid-robots-is-being-hidden/"
+        },
+        {
+          "title": "NIST Seeking Public Comment on AI Agent Security (Deadline: March 9, 2026)",
+          "summary": "美国国家标准与技术研究院就AI代理的安全考虑因素公开征集意见，截止日期为2026年3月9日。",
+          "comment": "在AI代理快速发展的初期就启动安全标准制定，能否有效引导行业形成‘安全设计’的共识，避免重蹈先发展后治理的覆辙？",
+          "source": "Hacker News",
+          "url": "https://www.federalregister.gov/documents/2026/01/08/2026-00206/request-for-information-regarding-security-considerations-for-artificial-intelligence-agents"
         }
       ]
     },
@@ -129,18 +129,18 @@
       "icon": "💰",
       "news": [
         {
-          "title": "Anthropic Kicks Off Share Sale for Staffers of Up to $6 Billion",
-          "summary": "Anthropic 启动针对现任和前任员工的股票出售计划，估值约 3500 亿美元，允许员工在近期 300 亿美元融资的估值水平上套现，出售规模可达 60 亿美元。",
-          "comment": "AI 独角兽以天价估值向员工提供流动性，这是为了激励人才，还是预示着私人市场对超高估值的承受力已接近极限，需要内部消化压力？",
-          "source": "Bloomberg Technology",
-          "url": "https://www.bloomberg.com/news/articles/2026-02-23/anthropic-kicks-off-share-sale-for-staffers-of-up-to-6-billion"
+          "title": "With AI, investor loyalty is (almost) dead: At least a dozen OpenAI VCs now also back Anthropic",
+          "summary": "报道指出，至少有一打曾投资OpenAI的风险投资机构现在也投资了其竞争对手Anthropic，这标志着在AI领域传统的利益冲突规则被忽视。",
+          "comment": "当顶级风投同时押注多家头部AI公司，这是否意味着资本认为最终胜出者尚未可知，还是说他们正在构建一个无论谁赢都能获利的投资组合？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/23/with-ai-investor-loyalty-is-almost-dead-at-least-a-dozen-openai-vcs-now-also-back-anthropic/"
         }
       ]
     }
   ],
   "source": "manual",
-  "status": "approved",
-  "created_at": "2026-02-24T10:57:52.813642+08:00",
+  "status": "pending_review",
+  "created_at": "2026-02-24T11:11:16.652311+08:00",
   "channel_id": "ch_mlajg7no",
   "channel_name": "2人测试群for部门",
   "topic_mode": "broad"
