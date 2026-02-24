@@ -1,10 +1,134 @@
 {
   "date": "2026-02-24",
-  "time_window": "2026-02-23 10:29 ~ 2026-02-24 10:29",
-  "categories": [],
+  "time_window": "2026-02-23 10:56 ~ 2026-02-24 10:56",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
+          "summary": "据报道，OpenAI有超过200人的团队正在开发一系列AI硬件设备，包括智能音箱、智能眼镜和智能灯。其中智能眼镜可能在2028年量产。",
+          "comment": "当AI巨头从软件走向硬件，其产品会如何重新定义人机交互的边界？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544748.html"
+        },
+        {
+          "title": "扎克伯格随行人员佩戴Meta AI眼镜进入法庭，涉嫌违规录制遭法官警告",
+          "summary": "Meta首席执行官扎克伯格的随行人员在法庭上佩戴具有录制功能的Meta AI智能眼镜，因法庭严禁录音录像而遭到法官的严厉警告。",
+          "comment": "智能眼镜的隐私与合规问题，是否会成为其大规模普及前必须跨越的最大障碍？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544747.html"
+        },
+        {
+          "title": "PICO将于3月公布旗舰级头显Project Swan和全新系统",
+          "summary": "根据GDC官网日程，PICO将在3月12日公布其面向通用空间计算的旗舰设备Project Swan，并介绍其核心操作系统与平台能力。",
+          "comment": "在苹果和Meta主导的空间计算领域，新入局者如何通过差异化定位找到自己的生存空间？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544746.html"
+        },
+        {
+          "title": "传苹果将于2028年发布AR眼镜，采用OLEDos方案",
+          "summary": "据Omdia报告预测，苹果或将于2028年发布一款采用0.6英寸OLEDoS屏幕的AR眼镜，同时报告也披露了Meta等厂商的硬件路线图。",
+          "comment": "苹果迟迟未发布的AR眼镜，是在等待技术成熟，还是在酝酿一场颠覆性的交互革命？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544744.html"
+        },
+        {
+          "title": "谷歌发布Glimmer设计语言，专为HUD及AR眼镜打造",
+          "summary": "谷歌详细介绍了其专为智能眼镜透明抬头显示（HUD）界面打造的全新设计语言Glimmer，旨在为狭小显示区域和现实世界共存的AR环境优化用户体验。",
+          "comment": "当AR界面设计从‘全屏沉浸’转向‘一目了然’，这背后反映了怎样的产品哲学和使用场景变迁？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/google-details-glimmer-its-ui-design-language-for-hud-ar-glasses/"
+        },
+        {
+          "title": "印度AI公司Sarvam展示Kaze智能眼镜，预计今年5月上市",
+          "summary": "印度AI公司Sarvam宣布了其硬件布局，包括计划在今年5月上市其自主研发的Kaze智能眼镜，该眼镜将搭载极轻量化的边缘AI模型并支持离线工作。",
+          "comment": "在巨头林立的智能硬件市场，新兴公司凭借本地化和垂直整合能否开辟出新的赛道？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544742.html"
+        },
+        {
+          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
+          "summary": "据报道，苹果正在加紧研发多款AI可穿戴设备，包括AI眼镜、AI吊坠和新款AirPods，这些设备都将围绕具备视觉上下文理解能力的Siri构建。",
+          "comment": "苹果将AI能力分散到多种可穿戴设备中，而非集中于手机，这是否预示着下一代去中心化的个人计算架构？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544740.html"
+        },
+        {
+          "title": "Tesollo将其轻量紧凑型机器人手商业化，用于人形机器人",
+          "summary": "Tesollo公司宣布将其DG-5F-S轻量紧凑型机器人手商业化，该产品旨在满足人形机器人所需的精确抓取和操作动作。",
+          "comment": "机器人手等核心部件的模块化与商业化，是否会加速人形机器人产业的整体发展进程？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/tesollo-commercializes-its-lightweight-compact-robotic-hand-for-humanoids/"
+        },
+        {
+          "title": "Vuzix推出企业级智能眼镜 一站式套件赋能一线人员远程协助",
+          "summary": "AR技术提供商Vuzix Corporation正式发布全新的Vuzix Solutions系列企业级智能眼镜部署套件，旨在为一线工作人员提供远程协助等赋能方案。",
+          "comment": "在企业级市场，智能眼镜的价值主张从‘酷炫科技’转向‘降本增效’的工具后，其普及路径是否会更加清晰？",
+          "source": "93913",
+          "url": "https://www.93913.com/119438.html"
+        },
+        {
+          "title": "法拉第未来EAI机器人下周开启首批交付 贾跃亭称有信心完成交付爬坡",
+          "summary": "法拉第未来宣布其备受关注的EAI机器人产品将于下周正式开启首批交付，公司创始人贾跃亭表示对完成交付爬坡有信心。",
+          "comment": "当一家以电动汽车闻名的公司转向机器人交付，这反映了当前硬件创业生态中怎样的趋势与挑战？",
+          "source": "93913",
+          "url": "https://www.93913.com/119447.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "月之暗面科技发布开源权重 Kimi K2.5 模型，具备视觉与智能体集群能力",
+          "summary": "月之暗面发布了最新的开源多模态大语言模型 Kimi K2.5，该模型在代码任务上表现优异，并新增了视觉功能，支持多达100个子智能体的集群模式以解决复杂问题。",
+          "comment": "开源多模态模型在支持智能体集群后，是否会成为未来解决复杂任务的主流范式？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/kadDBSqBrtFfUbipxQSs"
+        },
+        {
+          "title": "自主式大数据优化：通过多智能体强化学习实现 Apache Spark 的自调优",
+          "summary": "一篇论文提出使用多智能体强化学习技术，为Apache Spark等大数据处理系统实现自动参数调优，以应对动态负载与环境变化。",
+          "comment": "当AI智能体开始自主优化底层基础设施时，系统运维人员的角色将如何演变？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/t0uYPeckqF18hc4gUQU0"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Anthropic 指控中国AI实验室对其模型进行‘蒸馏攻击’",
+          "summary": "Anthropic 公开指控中国AI公司深度求索、月之暗面和MiniMax通过数万个虚假账户，大规模地‘蒸馏’其Claude模型的能力。",
+          "comment": "当模型能力成为核心资产，开源与闭源阵营之间的攻防战会如何重塑全球AI竞争格局？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropic-says-deepseek-moonshot-and-minimax-used-24-000-fake-accounts-to"
+        },
+        {
+          "title": "字节跳动在内蒙古成立3家新科技公司，注册资本共28亿",
+          "summary": "字节跳动近日在内蒙古成立了三家新科技公司，均由北京字跳网络技术有限公司全资持股，经营范围包含软件开发、信息系统集成服务等。",
+          "comment": "科技巨头在非核心区域进行大规模资本布局，是否预示着AI基础设施建设的战略重心转移？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3696682779668102?f=rss"
+        },
+        {
+          "title": "AI投资者忠诚度几乎消失：至少十多家投资OpenAI的VC也投资了Anthropic",
+          "summary": "报道指出，至少十多家风险投资机构同时投资了OpenAI和Anthropic，这打破了长期以来避免利益冲突的行业伦理规则。",
+          "comment": "当顶级VC在同一赛道广泛下注时，这是否意味着他们更看重赛道整体而非押注单一赢家？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/23/with-ai-investor-loyalty-is-almost-dead-at-least-a-dozen-openai-vcs-now-also-back-anthropic"
+        }
+      ]
+    }
+  ],
   "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-24T10:30:11.586763+08:00",
+  "created_at": "2026-02-24T10:57:52.813085+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
