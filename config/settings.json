@@ -9,7 +9,7 @@
       "send_hour": 10,
       "send_minute": 0,
       "topic_mode": "focused",
-      "max_news_items": 15
+      "max_news_items": 14
     },
     {
       "id": "default",
