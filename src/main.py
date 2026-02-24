@@ -112,7 +112,11 @@ def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
         else:
             # Draft exists: check if stale (unreviewed and > 2 hours old)
             status = draft.get("status", "pending_review")
+            source = draft.get("source", "scheduled")
             created_at = draft.get("created_at", "")
+            # Never overwrite manual drafts — user triggered them intentionally
+            if source == "manual":
+                continue
             if status == "pending_review" and created_at:
                 try:
                     created = datetime.fromisoformat(created_at)
@@ -317,6 +321,12 @@ def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
         source = draft.get("source", "scheduled")
         if status == "pending_review" and source == "manual":
             print(f"Channel {ch_name}: manual draft, requires approval before sending, skipping")
+            continue
+
+        # Guard: skip if draft has no news content
+        total_items = sum(len(c.get("news", [])) for c in draft.get("categories", []))
+        if total_items == 0:
+            print(f"Channel {ch_name}: draft has 0 news items, skipping to avoid empty message")
             continue
 
         print(f"Sending to {ch_name} (type={ch_type})...")

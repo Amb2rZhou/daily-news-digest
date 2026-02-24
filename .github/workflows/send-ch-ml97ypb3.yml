@@ -130,8 +130,8 @@ jobs:
           push_ok=false
           for i in 1 2 3 4 5; do
             git pull origin "$BRANCH" --rebase || {
-              # On conflict, keep our sent status (not remote's)
-              git checkout --ours "$DRAFT" 2>/dev/null || true
+              # On conflict, keep our sent status (--theirs = local in rebase context)
+              git checkout --theirs "$DRAFT" 2>/dev/null || true
               git add "$DRAFT"
               git rebase --continue 2>/dev/null || true
             }

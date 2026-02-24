@@ -106,8 +106,14 @@ def _get_webhook_key(channel: dict = None) -> Optional[str]:
     return None
 
 
-def _post_webhook(url: str, content: str) -> bool:
-    """Post a single markdown message to webhook. Returns True on success."""
+def _post_webhook(url: str, content: str) -> str:
+    """Post a single markdown message to webhook.
+
+    Returns:
+        "ok"          - success
+        "api_error"   - server responded with errcode != 0 (safe to retry with smaller payload)
+        "network_error" - network/timeout issue (NOT safe to retry, message may have been delivered)
+    """
     payload = {
         "msgtype": "markdown",
         "markdown": {
@@ -125,21 +131,21 @@ def _post_webhook(url: str, content: str) -> bool:
     )
 
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        with urllib.request.urlopen(req, timeout=60) as resp:
             result = json.loads(resp.read().decode("utf-8"))
             print(f"Webhook response: {result}")
             errcode = result.get("errcode", 0)
             if errcode != 0:
                 errmsg = result.get("errmsg", "unknown error")
                 print(f"Webhook API error: {errcode} - {errmsg}")
-                return False
-            return True
+                return "api_error"
+            return "ok"
     except urllib.error.HTTPError as e:
         print(f"Webhook HTTP error: {e.code} {e.reason}")
-        return False
+        return "api_error"
     except Exception as e:
-        print(f"Webhook error: {e}")
-        return False
+        print(f"Webhook network error: {e}")
+        return "network_error"
 
 
 def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -> bool:
@@ -176,11 +182,17 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
     content = format_webhook_markdown(news_data)
     print(f"  Webhook message: {len(content.encode('utf-8'))} bytes")
 
-    ok = _post_webhook(url, content)
-    if ok:
+    result = _post_webhook(url, content)
+    if result == "ok":
         return True
 
-    # If failed (possibly due to size limit), retry with one fewer item each time
+    if result == "network_error":
+        # Network errors (timeout, connection reset) may mean the server already
+        # received and delivered the message. Do NOT retry to avoid duplicate.
+        print("  Network error — skipping retry to avoid potential duplicate message")
+        return False
+
+    # API explicitly rejected (errcode != 0, e.g. message too large) — safe to retry
     import copy
     trimmed = copy.deepcopy(news_data)
     cats = trimmed.get("categories", [])
@@ -200,9 +212,12 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
         remaining = sum(len(c.get("news", [])) for c in cats)
         content = format_webhook_markdown(trimmed)
         print(f"  Retrying with {remaining}/{original} items ({len(content.encode('utf-8'))} bytes)")
-        ok = _post_webhook(url, content)
-        if ok:
+        result = _post_webhook(url, content)
+        if result == "ok":
             return True
+        if result == "network_error":
+            print("  Network error during retry — stopping to avoid duplicate")
+            return False
 
     print("  All retry attempts failed")
     return False
