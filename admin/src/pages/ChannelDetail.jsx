@@ -66,8 +66,9 @@ export default function ChannelDetail() {
     setLoading(true)
     try {
       const file = await readFile('config/settings.json')
+      let parsed = null
       if (file) {
-        const parsed = JSON.parse(file.content)
+        parsed = JSON.parse(file.content)
         setSettings(parsed)
         setSettingsSha(file.sha)
         const ch = (parsed.channels || []).find(c => c.id === id)

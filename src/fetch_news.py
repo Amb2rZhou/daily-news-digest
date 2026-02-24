@@ -739,13 +739,14 @@ def _call_haiku(client, prompt: str, label: str) -> str:
     """Call Claude Haiku and return response text. Returns None on failure."""
     import time
     try:
+        start = time.time()
         resp = client.messages.create(
             model="claude-haiku-4-5-20251001",
             max_tokens=8192,
             messages=[{"role": "user", "content": prompt}],
         )
-        elapsed = time.time()
-        print(f"  - Haiku ({label}) stop_reason: {resp.stop_reason}")
+        elapsed = time.time() - start
+        print(f"  - Haiku ({label}) {elapsed:.1f}s, stop_reason: {resp.stop_reason}")
         if resp.stop_reason == "max_tokens":
             print(f"  - WARNING: Response was truncated (hit max_tokens)")
         return resp.content[0].text
