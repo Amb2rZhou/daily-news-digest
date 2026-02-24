@@ -343,10 +343,10 @@
       "enabled": true
     },
     {
-      "url": "https://www.latepost.com/rss",
-      "name": "晚点LatePost官网",
+      "url": "https://rsshub.liumingye.cn/latepost",
+      "name": "晚点LatePost",
       "group": "独立博客",
-      "enabled": false
+      "enabled": true
     },
     {
       "url": "https://amb2rzhou.zeabur.app/feeds/MP_WXS_2399148061.rss",
