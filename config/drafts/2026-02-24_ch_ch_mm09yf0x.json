@@ -1,0 +1,106 @@
+{
+  "date": "2026-02-24",
+  "time_window": "2026-02-23 15:34 ~ 2026-02-24 15:34",
+  "categories": [
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "谷歌发布Glimmer设计语言，专为HUD及AR眼镜打造",
+          "summary": "谷歌详细介绍了其全新的Glimmer设计语言，这套语言专为智能眼镜的透明抬头显示界面打造，并将最终应用于真正的AR眼镜。",
+          "comment": "当AR眼镜的界面设计从'屏幕'思维转向'一瞥即知'的提示，这会如何重塑我们与数字信息在物理世界中的交互方式？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544743.html"
+        },
+        {
+          "title": "印度AI公司Sarvam展示Kaze智能眼镜，预计今年5月上市",
+          "summary": "印度AI公司Sarvam宣布将AI能力引入其自主研发的Kaze智能眼镜，该产品预计今年5月上市，主打极轻量化边缘模型和离线工作能力。",
+          "comment": "在AI硬件竞赛中，新兴市场公司通过轻量化、本地化的边缘AI方案切入，能否开辟出一条不同于科技巨头的差异化成功路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544742.html"
+        },
+        {
+          "title": "PICO将于3月公布旗舰级头显Project Swan和全新系统",
+          "summary": "根据GDC官网信息，PICO将在3月公布其面向通用空间计算的旗舰设备Project Swan，旨在支持新一代全空间与共享空间体验。",
+          "comment": "当XR设备从封闭的独立体验转向支持应用共存的'共享空间'，这会催生出哪些全新的社交与协作模式？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544746.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
+          "summary": "据报道，OpenAI有200多人团队正在开发一系列AI硬件，包括智能音箱、智能眼镜和智能灯，其中智能眼镜可能在2028年量产。",
+          "comment": "OpenAI从软件模型转向硬件生态的布局，是否预示着AI竞争的下一个战场将从云端算力转向个人化的边缘智能体？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544748.html"
+        },
+        {
+          "title": "苹果正在加速AI可穿戴设备研发，眼镜是重点之一",
+          "summary": "据彭博社报道，苹果正在加紧研发AI眼镜、AI吊坠及新款AirPods等AI可穿戴设备，这些设备都将围绕具备视觉上下文能力的Siri构建。",
+          "comment": "如果苹果成功将强大的情境感知AI融入日常佩戴的眼镜中，这是否会彻底改变'智能手机'作为个人计算中心的地位？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544740.html"
+        },
+        {
+          "title": "“一句话下单”2亿次： “千问帮我”成马年春节新年俗",
+          "summary": "春节期间，用户在阿里通义千问上通过'一句话下单'近2亿次，覆盖餐饮、票务等多种消费场景，显示出AI助手在生活服务中的深入应用。",
+          "comment": "当AI助手能够流畅完成从理解意图到完成支付的完整消费闭环，这是否意味着'对话即服务'将成为下一代电商和本地生活的主流入口？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/gMCPcsJE8VXuUzbu.html"
+        },
+        {
+          "title": "Meta发布Reality Labs部门2026年战略重点",
+          "summary": "Meta宣布将Quest VR平台与Horizon Worlds平台明确分开发展，前者专注VR开发者生态，后者重心几乎完全转移到移动端。",
+          "comment": "Meta将社交元宇宙平台与VR硬件平台解耦，这是否意味着其对'元宇宙'的终极形态有了新的、更务实的理解？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544750.html"
+        }
+      ]
+    },
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "1000 倍效率神话，Taalas如何用 '模型即芯片' 暴打英伟达",
+          "summary": "报道介绍了Taalas公司通过'模型即芯片'的专用架构，宣称在特定AI任务上能实现比英伟达GPU高1000倍的效率。",
+          "comment": "如果'模型即芯片'的专用化路线成为主流，这是否会终结通用AI芯片的统治，并让AI模型的硬件门槛和竞争格局发生根本性改变？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7888205.html"
+        },
+        {
+          "title": "Tesollo commercializes its lightweight, compact robotic hand for humanoids",
+          "summary": "Tesollo公司宣布将其轻量紧凑的DG-5F-S机械手商业化，该产品旨在满足人形机器人所需的精确抓取和操作动作。",
+          "comment": "随着像灵巧手这样的核心部件走向商业化，这是否会显著降低人形机器人的研发门槛并加速其应用落地？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/tesollo-commercializes-its-lightweight-compact-robotic-hand-for-humanoids/"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "一夜蒸发 310 亿美元！Claude 新工具干翻 IBM 摇钱树，AI 正在'清零'人类工位",
+          "summary": "报道分析了Anthropic的Claude新工具对传统IT服务巨头IBM业务造成的冲击，反映了AI对某些白领工作岗位的替代效应正在加速。",
+          "comment": "当AI不仅能辅助编程，还能系统性替代某些高端技术服务时，传统科技企业的核心价值护城河将如何重构？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655572?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-24T15:36:39.343613+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
