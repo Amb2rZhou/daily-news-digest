@@ -106,6 +106,42 @@ def _get_webhook_key(channel: dict = None) -> Optional[str]:
     return None
 
 
+def _post_webhook(url: str, content: str) -> bool:
+    """Post a single markdown message to webhook. Returns True on success."""
+    payload = {
+        "msgtype": "markdown",
+        "markdown": {
+            "content": content,
+            "mentioned_list": ["@all"],
+        },
+    }
+
+    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            print(f"Webhook response: {result}")
+            errcode = result.get("errcode", 0)
+            if errcode != 0:
+                errmsg = result.get("errmsg", "unknown error")
+                print(f"Webhook API error: {errcode} - {errmsg}")
+                return False
+            return True
+    except urllib.error.HTTPError as e:
+        print(f"Webhook HTTP error: {e.code} {e.reason}")
+        return False
+    except Exception as e:
+        print(f"Webhook error: {e}")
+        return False
+
+
 def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -> bool:
     """POST markdown message to RedCity webhook. Returns True on success.
 
@@ -140,61 +176,55 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
     content = format_webhook_markdown(news_data)
 
     # RedCity webhook has a message size limit (~4KB).
-    # If content is too large, progressively trim news items from the last category.
+    # Split into multiple messages if content exceeds the limit.
     MAX_CONTENT_LEN = 3800  # leave headroom for JSON envelope
-    if len(content.encode("utf-8")) > MAX_CONTENT_LEN:
+
+    if len(content.encode("utf-8")) <= MAX_CONTENT_LEN:
+        # Single message, send directly
+        return _post_webhook(url, content)
+    else:
+        # Split by category into multiple messages
         import copy
-        trimmed = copy.deepcopy(news_data)
-        cats = trimmed.get("categories", [])
-        # Remove items from the end until it fits
-        while cats and len(format_webhook_markdown(trimmed).encode("utf-8")) > MAX_CONTENT_LEN:
-            # Find last category with news
-            for i in range(len(cats) - 1, -1, -1):
-                if cats[i].get("news"):
-                    cats[i]["news"].pop()
-                    if not cats[i]["news"]:
-                        cats.pop(i)
-                    break
+        categories = news_data.get("categories", [])
+        date = news_data.get("date", "")
+        total_news = sum(len(c.get("news", [])) for c in categories)
+
+        chunks = []
+        current_cats = []
+        for cat in categories:
+            test_draft = {"date": date, "categories": current_cats + [cat]}
+            test_content = format_webhook_markdown(test_draft)
+            if current_cats and len(test_content.encode("utf-8")) > MAX_CONTENT_LEN:
+                # Current batch is full, start new chunk
+                chunks.append(current_cats)
+                current_cats = [cat]
             else:
-                break  # no more items to remove
-        content = format_webhook_markdown(trimmed)
-        original = sum(len(c.get("news", [])) for c in news_data.get("categories", []))
-        remaining = sum(len(c.get("news", [])) for c in cats)
-        print(f"  Message trimmed: {original} → {remaining} items ({len(content.encode('utf-8'))} bytes)")
+                current_cats.append(cat)
+        if current_cats:
+            chunks.append(current_cats)
 
-    payload = {
-        "msgtype": "markdown",
-        "markdown": {
-            "content": content,
-            "mentioned_list": ["@all"],
-        },
-    }
+        print(f"  Message split into {len(chunks)} parts ({total_news} items total)")
 
-    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    req = urllib.request.Request(
-        url,
-        data=data,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
+        import time as _time
+        all_ok = True
+        for i, chunk_cats in enumerate(chunks):
+            chunk_draft = {"date": date, "categories": chunk_cats}
+            chunk_content = format_webhook_markdown(chunk_draft)
+            # Replace header/footer for continuation parts
+            if i > 0:
+                chunk_content = chunk_content.replace(f"# 科技日报 {date}", f"# 科技日报 {date}（续 {i+1}/{len(chunks)}）")
+            if i < len(chunks) - 1:
+                # Remove total count line from non-last parts
+                chunk_content = chunk_content.rsplit("---\n", 1)[0].rstrip()
 
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            result = json.loads(resp.read().decode("utf-8"))
-            print(f"Webhook response: {result}")
-            # Check API error code (0 = success)
-            errcode = result.get("errcode", 0)
-            if errcode != 0:
-                errmsg = result.get("errmsg", "unknown error")
-                print(f"Webhook API error: {errcode} - {errmsg}")
-                return False
-            return True
-    except urllib.error.HTTPError as e:
-        print(f"Webhook HTTP error: {e.code} {e.reason}")
-        return False
-    except Exception as e:
-        print(f"Webhook error: {e}")
-        return False
+            print(f"  Sending part {i+1}/{len(chunks)} ({len(chunk_content.encode('utf-8'))} bytes)")
+            ok = _post_webhook(url, chunk_content)
+            if not ok:
+                all_ok = False
+            if i < len(chunks) - 1:
+                _time.sleep(1)  # Brief pause between messages
+
+        return all_ok
 
 
 if __name__ == "__main__":
