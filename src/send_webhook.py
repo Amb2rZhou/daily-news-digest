@@ -106,7 +106,7 @@ def _get_webhook_key(channel: dict = None) -> Optional[str]:
     return None
 
 
-def _post_webhook(url: str, content: str, mentioned_list: list = None) -> str:
+def _post_webhook(url: str, content: str) -> str:
     """Post a single markdown message to webhook.
 
     Returns:
@@ -114,13 +114,11 @@ def _post_webhook(url: str, content: str, mentioned_list: list = None) -> str:
         "api_error"   - server responded with errcode != 0 (safe to retry with smaller payload)
         "network_error" - network/timeout issue (NOT safe to retry, message may have been delivered)
     """
-    if mentioned_list is None:
-        mentioned_list = ["@all"]
     payload = {
         "msgtype": "markdown",
         "markdown": {
             "content": content,
-            "mentioned_list": mentioned_list,
+            "mentioned_list": ["@all"],
         },
     }
 
@@ -182,17 +180,9 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
     url = f"{url_base}?key={webhook_key}"
 
     content = format_webhook_markdown(news_data)
-
-    # Append channel-specific mention text to markdown content
-    mention_text = channel.get("mention_text", "") if channel else ""
-    if mention_text:
-        content += "\n" + mention_text
-
     print(f"  Webhook message: {len(content.encode('utf-8'))} bytes")
 
-    mentioned_list = channel.get("mentioned_list") if channel else None
-
-    result = _post_webhook(url, content, mentioned_list=mentioned_list)
+    result = _post_webhook(url, content)
     if result == "ok":
         return True
 
@@ -222,7 +212,7 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
         remaining = sum(len(c.get("news", [])) for c in cats)
         content = format_webhook_markdown(trimmed)
         print(f"  Retrying with {remaining}/{original} items ({len(content.encode('utf-8'))} bytes)")
-        result = _post_webhook(url, content, mentioned_list=mentioned_list)
+        result = _post_webhook(url, content)
         if result == "ok":
             return True
         if result == "network_error":
