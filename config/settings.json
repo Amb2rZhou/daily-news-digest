@@ -21,7 +21,8 @@
       "topic_mode": "focused",
       "max_news_items": 14,
       "webhook_url_base": "",
-      "webhook_key_slot": 1
+      "webhook_key_slot": 1,
+      "mentioned_list": ["CodeWiz"]
     },
     {
       "id": "ch_ml97ypb3",
