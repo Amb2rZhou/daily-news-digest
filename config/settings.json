@@ -22,7 +22,8 @@
       "max_news_items": 14,
       "webhook_url_base": "",
       "webhook_key_slot": 1,
-      "mentioned_list": ["CodeWiz"]
+      "mentioned_list": ["CodeWiz"],
+      "mention_text": "测试@机器人:\n1: <@test_app@xiaohongshu.com>\n2: <@CodeWiz@xiaohongshu.com>\n3: <@codewiz@xiaohongshu.com>\n4: <@test_app>\n5: <@CodeWiz>"
     },
     {
       "id": "ch_ml97ypb3",

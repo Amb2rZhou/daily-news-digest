@@ -182,6 +182,12 @@ def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -
     url = f"{url_base}?key={webhook_key}"
 
     content = format_webhook_markdown(news_data)
+
+    # Append channel-specific mention text to markdown content
+    mention_text = channel.get("mention_text", "") if channel else ""
+    if mention_text:
+        content += "\n" + mention_text
+
     print(f"  Webhook message: {len(content.encode('utf-8'))} bytes")
 
     mentioned_list = channel.get("mentioned_list") if channel else None
