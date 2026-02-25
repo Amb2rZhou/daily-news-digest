@@ -1,0 +1,135 @@
+{
+  "date": "2026-02-25",
+  "time_window": "2026-02-24 14:42 ~ 2026-02-25 14:42",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "荣耀官宣：MWC 2026推出首款人形机器人 全球手机厂商首家入局",
+          "summary": "荣耀宣布将在MWC 2026世界移动通信大会上发布其首款人形机器人产品，成为全球首家入局该领域的手机厂商。",
+          "comment": "手机厂商跨界人形机器人，是技术协同的必然，还是寻求新增长点的无奈之举？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119458.html"
+        },
+        {
+          "title": "AI2 Robotics筹集B轮融资以推进AlphaBot半人形机器人研发",
+          "summary": "AI2 Robotics完成B轮融资，估值超10亿美元，资金将用于开发用于半人形机器人的视觉语言动作模型。",
+          "comment": "专注于特定形态机器人的AI公司获得高估值，是否意味着具身智能的商业化路径正变得清晰？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/ai2-robotics-raises-series-b-funding-advance-alphabot-embodied-ai/"
+        },
+        {
+          "title": "OpenAI在研AI眼镜，首款产品或将在2028年推出",
+          "summary": "据报道，OpenAI有超过200人的团队正在开发AI硬件，其中包括智能眼镜，该产品可能于2028年量产。",
+          "comment": "以软件和模型见长的OpenAI下场做硬件，其核心优势在于AI体验的深度整合，还是面临供应链的巨大挑战？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544748.html"
+        },
+        {
+          "title": "谷歌发布Glimmer设计语言，专为HUD及AR眼镜打造",
+          "summary": "谷歌详细介绍了专为智能眼镜透明抬头显示界面打造的全新设计语言Glimmer，旨在优化小显示区域与现实世界共存的交互体验。",
+          "comment": "谷歌为AR眼镜制定UI规范，是否意味着其消费级AR硬件产品已进入最后的冲刺阶段？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544743.html"
+        },
+        {
+          "title": "传苹果将于2028年发布AR眼镜，采用OLEDoS方案",
+          "summary": "据行业报告预测，苹果或将于2028年发布一款采用0.6英寸OLEDoS屏幕的AR眼镜。",
+          "comment": "从Vision Pro到更轻便的AR眼镜，苹果的“空间计算”蓝图能否成功引导消费者接受新的穿戴形态？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544744.html"
+        },
+        {
+          "title": "印度AI公司Sarvam展示Kaze智能眼镜，预计今年5月上市",
+          "summary": "印度AI公司Sarvam展示了其自主研发的Kaze智能眼镜，该产品计划于今年5月上市，主打运行极轻量化边缘AI模型。",
+          "comment": "在巨头林立的AI硬件赛道，新兴市场公司凭借本地化AI模型和轻量化方案，能否开辟一条差异化的生存路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544742.html"
+        },
+        {
+          "title": "扎克伯格随行人员佩戴Meta AI眼镜进入法庭，涉嫌违规录制遭法官警告",
+          "summary": "Meta CEO扎克伯格的随行人员因佩戴具有录制功能的Meta AI智能眼镜进入法庭，被法官警告涉嫌违规并可能构成藐视法庭。",
+          "comment": "AI眼镜的“无感录制”能力在带来便利的同时，是否正在将我们拖入一个更难以防范的隐私困境？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544747.html"
+        },
+        {
+          "title": "海外开发者推出反AI眼镜APP",
+          "summary": "有开发者推出一款名为Nearby Glasses的应用，可通过扫描蓝牙信号检测附近可能存在的AI眼镜设备并向用户发出警报。",
+          "comment": "针对AI监控硬件的“反制软件”出现，这是技术对抗的必然循环，还是社会对隐私焦虑的具象化表达？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544753.html"
+        },
+        {
+          "title": "苹果收购光学初创公司invrs.io",
+          "summary": "苹果已收购专注于AI引导光学设计的光学初创公司invrs.io，以加强其在AR/VR等领域的光学和光子学技术。",
+          "comment": "苹果持续收购小型光学技术公司，这是否揭示了其未来AR硬件在显示和成像技术上的关键突破方向？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544756.html"
+        },
+        {
+          "title": "PICO将于3月公布旗舰级头显Project Swan和全新系统",
+          "summary": "根据GDC议程，PICO计划在3月公布其面向通用空间计算的旗舰设备Project Swan，并介绍其核心操作系统与平台能力。",
+          "comment": "在苹果和Meta主导的空间计算叙事下，PICO推出新旗舰能否在生态和体验上找到独特的立足点？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544746.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "阿里发布三款中型千问3.5新模型，每百万Token低至0.2元",
+          "summary": "阿里巴巴开源了三款中等规模的千问3.5系列模型，性能超越上代旗舰，其中托管模型Qwen3.5-Flash在阿里云百炼上的价格低至每百万Token输入0.2元。",
+          "comment": "开源模型在性能与成本上双重逼近甚至超越闭源模型，这是否意味着AI服务的商业模式将迎来根本性变革？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3698346190811012?f=rss"
+        },
+        {
+          "title": "Anthropic发布Claude Code移动版，并预告企业级Agent Claude Cowork",
+          "summary": "Anthropic为其流行的编程AI代理Claude Code发布了移动版本‘Remote Control’，并预告即将推出面向企业工作流的AI代理Claude Cowork，旨在解决企业AI代理落地难的问题。",
+          "comment": "当AI代理从单一编程工具扩展到复杂的企业工作流时，其成功的关键是更强的模型能力，还是更优的工程化与集成方案？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/anthropic-says-claude-code-transformed-programming-now-claude-cowork-is"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "亚马逊AI实验室负责人David Luan将离职",
+          "summary": "亚马逊AI实验室负责人David Luan将于本周离职，寻求新的发展，这是亚马逊AI部门近期领导层变动的一部分。",
+          "comment": "核心AI人才的频繁流动，是否反映了科技巨头在内部AI创新与外部创业机会之间日益激烈的拉锯战？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/d72bde2b-4f1a-4f0a-a747-03244c4d06ac"
+        },
+        {
+          "title": "挑战英伟达的AI芯片初创公司MatX融资5亿美元",
+          "summary": "由前谷歌TPU工程师创立的AI芯片初创公司MatX完成了5亿美元融资，旨在挑战英伟达在AI训练芯片市场的统治地位。",
+          "comment": "巨额资本持续涌入AI基础设施领域，这是否预示着AI芯片市场将从一家独大走向多元化竞争格局？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/24/nvidia-challenger-ai-chip-startup-matx-raised-500m/"
+        },
+        {
+          "title": "Anthropic指控三家中国AI公司进行“工业规模”的知识蒸馏",
+          "summary": "Anthropic发布报告，指控中国AI公司深度求索、月之暗面和MiniMax通过大量伪造账户调用其API，进行大规模的知识蒸馏以训练自家模型。",
+          "comment": "在模型能力快速迭代的竞争中，关于数据与知识产权的灰色地带争议，是否会成为影响全球AI格局的关键变量？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/24/anthropic-openai-china-firms-distillation-deepseek.html"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
+  "status": "pending_review",
+  "created_at": "2026-02-25T14:43:22.854844+08:00",
+  "channel_id": "default",
+  "channel_name": "2人测试群",
+  "topic_mode": "focused"
+}
