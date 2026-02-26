@@ -126,8 +126,8 @@
     }
   ],
   "source": "scheduled",
-  "status": "pending_review",
-  "created_at": "2026-02-26T09:31:44.165711+08:00",
+  "status": "sent",
+  "created_at": "2026-02-26T10:00:03.103909+08:00",
   "channel_id": "ch_xiayue",
   "channel_name": "测试for夏月",
   "topic_mode": "broad"
