@@ -126,8 +126,8 @@
     }
   ],
   "source": "scheduled",
-  "status": "pending_review",
-  "created_at": "2026-02-26T09:31:44.165237+08:00",
+  "status": "sent",
+  "created_at": "2026-02-26T10:00:02.221045+08:00",
   "channel_id": "ch_mm09yf0x",
   "channel_name": "午休新频道",
   "topic_mode": "broad"
