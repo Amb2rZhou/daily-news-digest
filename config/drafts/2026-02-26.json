@@ -1,0 +1,118 @@
+{
+  "date": "2026-02-26",
+  "time_window": "2026-02-25 10:00 ~ 2026-02-26 09:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "物理AI初创公司RLWRLD融资2600万美元",
+          "summary": "物理AI初创公司RLWRLD宣布获得2600万美元融资，并正在与日本和韩国的企业合作伙伴执行概念验证和机器人转型项目。",
+          "comment": "物理AI如何弥合数字智能与物理世界执行之间的鸿沟，从而改变传统行业？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/physical-ai-startup-rlwrld-raises-26m/"
+        },
+        {
+          "title": "Meta下一代头显‘凤凰’图像在Quest固件中被发现",
+          "summary": "在Meta Quest的固件中发现了其代号为‘凤凰’的下一代超轻量级头显的图像，该设备将采用有线计算模块设计。",
+          "comment": "头显与计算模块分离的设计，是否代表了未来XR设备在便携性与性能之间寻求平衡的主流方向？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/graphics-depicting-metas-next-headset-found-in-quest-firmware/"
+        },
+        {
+          "title": "苹果收购前Meta专家所创公司，强化AI与光学技术布局",
+          "summary": "苹果已于去年10月完成对初创公司invrs.io部分业务的收购，该公司专注于AI驱动的光学和光子学设计，旨在加强其在AR/VR等领域的技术储备。",
+          "comment": "科技巨头频繁收购小型光学技术公司，这是否预示着下一代消费级XR设备将在光学显示上迎来关键突破？",
+          "source": "93913",
+          "url": "https://www.93913.com/119488.html"
+        },
+        {
+          "title": "Wayve融资12亿美元计划在伦敦推出机器人出租车",
+          "summary": "自动驾驶公司Wayve宣布完成12亿美元D轮融资，计划在2026年启动监督下的自动驾驶商业试验，并在2027年推出面向消费者的自动驾驶汽车。",
+          "comment": "巨额融资涌入特定区域的自动驾驶公司，是否意味着城市级、高密度的复杂路况将成为验证AI驾驶能力的终极考场？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/wayve-raises-1-2b-plans-bring-robotaxis-london/"
+        },
+        {
+          "title": "养老院迎来机器人助理 深圳探索AI赋能养老新路径",
+          "summary": "深圳市养老护理院与星尘智能达成战略合作，双方将共同研发AI养老机器人、训练多模态数据并落地智慧照护系统，探索具身智能机器人在养老服务中的应用。",
+          "comment": "当服务机器人进入养老等情感需求强烈的场景时，如何在提升效率与保持人文关怀之间找到平衡点？",
+          "source": "93913",
+          "url": "https://www.93913.com/119490.html"
+        },
+        {
+          "title": "歌尔股份回应AI眼镜布局：与头部客户合作顺利",
+          "summary": "歌尔股份在回应投资者提问时表示，公司在AI智能眼镜产品领域与众多行业头部客户开展合作，目前相关业务进展顺利。",
+          "comment": "作为关键供应链厂商的表态，是否暗示消费级AI眼镜已从概念验证阶段进入规模化量产的前夜？",
+          "source": "93913",
+          "url": "https://www.93913.com/119496.html"
+        },
+        {
+          "title": "Omni One VR跑步机加入‘Made for Meta’官方支持计划",
+          "summary": "Virtuix宣布其Omni One VR跑步机加入‘Made for Meta’硬件合作计划，将提高与Quest头显的兼容性并拓展支持的游戏库。",
+          "comment": "外设厂商积极寻求与主流头显平台的深度整合，这是否意味着VR生态正从单一的视觉沉浸向全身运动交互体验演进？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544754.html"
+        },
+        {
+          "title": "海外开发者推出反AI眼镜APP",
+          "summary": "海外开发者推出一款名为Nearby Glasses的应用，可通过扫描蓝牙信号检测附近可能存在的AI智能眼镜设备，并向用户发出隐私警报。",
+          "comment": "针对智能穿戴设备的‘反监测’应用出现，是否标志着社会对‘泛在传感’时代隐私边界的新一轮讨论与技术对抗已经开始？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544753.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "GitHub 发布 Agentic Workflows，解锁 AI 驱动的代码库自动化潜力",
+          "summary": "GitHub 推出 Agentic Workflows（智能体工作流）技术预览版，利用大语言模型理解上下文与意图，可自动化完成复杂、重复性的仓库任务，如问题分类、文档更新和 CI 故障排查。",
+          "comment": "当 AI 智能体能够自主处理复杂的开发运维任务时，软件开发的协作模式和工作流程将发生怎样的根本性变革？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/WXJ1S1rsALiDNxoswz6f"
+        },
+        {
+          "title": "阿里云 Coding Plan 集齐四大国产模型最强版本，开发者迎来“Token 自由”",
+          "summary": "阿里云百炼 Coding Plan 宣布全面上线 Qwen3.5、智谱 GLM-5、MiniMax M2.5 和 Kimi K2.5 四大顶尖开源模型，旨在为开发者提供更稳定、额度更高的 AI 模型服务，以降低高频次编码的成本。",
+          "comment": "当云服务商集成多个顶级开源模型并提供统一订阅服务，这会如何重塑 AI 编程工具的竞争格局和开发者的使用习惯？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/MPKUKOkgUhTSEXfTDScc"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "英伟达创下首个 2000 亿美元年度营收，AI 投资热潮持续",
+          "summary": "英伟达公布最新财报，年度营收首次突破 2000 亿美元，远超华尔街预期，并预测未来将继续强劲增长，这主要得益于全球对 AI 硬件投资的持续热潮。",
+          "comment": "英伟达的业绩神话是否意味着 AI 基础设施的投资已进入稳定增长期，还是预示着泡沫风险正在累积？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/25/nvidia-earnings-record-capex-spend-ai/"
+        },
+        {
+          "title": "百度市值快速蒸发 110 亿美元，凸显其难以满足 AI 炒作预期",
+          "summary": "百度股价在过去一个月下跌了 20%，市值蒸发约 110 亿美元，这为中国 AI 竞赛中的公司敲响了警钟：投资者正在要求看到切实的成果，而不仅仅是炒作。",
+          "comment": "在激烈的 AI 竞赛中，科技公司应如何平衡技术前瞻性投入与短期商业回报，以维持投资者信心？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-25/baidu-s-swift-11-billion-selloff-shows-struggle-to-meet-ai-hype"
+        },
+        {
+          "title": "Anthropic 收购计算机使用 AI 初创公司 Vercept",
+          "summary": "AI 巨头 Anthropic 收购了专注于开发复杂智能体工具的初创公司 Vercept，后者擅长构建能在应用程序内部像人类一样完成任务的计算机使用智能体。",
+          "comment": "大模型公司通过收购来增强其智能体能力，这是否会成为 AI 行业下一阶段整合与竞争的主要方式？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/25/anthropic-acquires-vercept-ai-startup-agents-computer-use-founders-investors/"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-02-26T09:31:01.894466+08:00"
+}
