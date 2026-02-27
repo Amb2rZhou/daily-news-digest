@@ -127,8 +127,8 @@
     }
   ],
   "source": "scheduled",
-  "status": "pending_review",
-  "created_at": "2026-02-27T09:32:09.882469+08:00",
+  "status": "sent",
+  "created_at": "2026-02-27T10:00:02.508057+08:00",
   "channel_id": "ch_ml9b9t9s",
   "channel_name": "ai-interactive群",
   "topic_mode": "focused"
