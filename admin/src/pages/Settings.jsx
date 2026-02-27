@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { readFile, writeFile, listSecrets, getPublicKey, setSecret } from '../lib/github'
+import { readFile, writeFile, deleteFile, listSecrets, getPublicKey, setSecret } from '../lib/github'
 import { getAnthropicKey, setAnthropicKey, hasAnthropicKey } from '../lib/claude'
 import nacl from 'tweetnacl'
 import sealedbox from 'tweetnacl-sealedbox-js'
@@ -297,11 +297,24 @@ export default function Settings() {
                   <span style={{ fontSize: 12, color: 'var(--text3)' }}>ID: {ch.id}</span>
                   <div style={{ flex: 1 }} />
                   {!isEmail && (
-                    <button onClick={() => {
-                      if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？`)) return
+                    <button onClick={async () => {
+                      if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？\n\n将同时删除该频道的发送工作流文件。`)) return
+                      // Remove from channels array
                       const newChannels = [...channels]
                       newChannels.splice(idx, 1)
                       update('channels', newChannels)
+                      // Also delete the send workflow file
+                      const shortId = ch.id.replace(/^ch_/, '')
+                      const wfPath = `.github/workflows/send-ch-${shortId}.yml`
+                      try {
+                        const wfFile = await readFile(wfPath)
+                        if (wfFile) {
+                          await deleteFile(wfPath, `Delete send workflow for channel ${ch.name || ch.id}`, wfFile.sha)
+                          console.log(`Deleted workflow: ${wfPath}`)
+                        }
+                      } catch (e) {
+                        console.warn(`Failed to delete workflow ${wfPath}:`, e.message)
+                      }
                     }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#dc2626', fontSize: 14, padding: '2px 6px' }}>
                       删除
                     </button>
