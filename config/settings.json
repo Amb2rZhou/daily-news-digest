@@ -24,18 +24,6 @@
       "webhook_key_slot": 1
     },
     {
-      "id": "ch_ml97ypb3",
-      "type": "webhook",
-      "name": "午休2小时",
-      "enabled": true,
-      "send_hour": 10,
-      "send_minute": 0,
-      "topic_mode": "broad",
-      "max_news_items": 14,
-      "webhook_url_base": "",
-      "webhook_key_slot": 2
-    },
-    {
       "id": "ch_ml9b9t9s",
       "type": "webhook",
       "name": "ai-interactive群",
