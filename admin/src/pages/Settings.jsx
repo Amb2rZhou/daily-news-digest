@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { readFile, writeFile, deleteFile, listSecrets, getPublicKey, setSecret } from '../lib/github'
+import { readFile, writeFile, listSecrets, getPublicKey, setSecret } from '../lib/github'
 import { getAnthropicKey, setAnthropicKey, hasAnthropicKey } from '../lib/claude'
 import nacl from 'tweetnacl'
 import sealedbox from 'tweetnacl-sealedbox-js'
@@ -73,9 +73,6 @@ export default function Settings() {
   const [usedSlots, setUsedSlots] = useState(new Set())
   const [channelSlotMap, setChannelSlotMap] = useState({})
 
-  // Channel management
-  const [channelSaving, setChannelSaving] = useState(false)
-
   useEffect(() => { load() }, [])
 
   async function load() {
@@ -113,14 +110,6 @@ export default function Settings() {
 
   function update(key, value) {
     setSettings(prev => ({ ...prev, [key]: value }))
-  }
-
-  function updateChannel(idx, updates) {
-    setSettings(prev => {
-      const channels = [...(prev.channels || [])]
-      channels[idx] = { ...channels[idx], ...(typeof updates === 'object' && !Array.isArray(updates) ? updates : {}) }
-      return { ...prev, channels }
-    })
   }
 
   async function save() {
@@ -169,7 +158,6 @@ export default function Settings() {
   if (loading) return <p style={{ color: 'var(--text2)' }}>加载中...</p>
   if (!settings) return <p style={{ color: 'var(--text2)' }}>无法加载设置</p>
 
-  const channels = settings.channels || []
   const maxUsedSlot = usedSlots.size > 0 ? Math.max(...usedSlots) : 0
   const slotsToShow = Math.max(maxUsedSlot + 3, 5)
   const visibleSlotSecrets = SLOT_SECRETS.slice(0, Math.min(slotsToShow, 20))
@@ -270,90 +258,6 @@ export default function Settings() {
             <input type="text" value={settings.webhook_url_base ?? ''} onChange={e => update('webhook_url_base', e.target.value)} placeholder="https://redcity-open.xiaohongshu.com/api/robot/webhook/send" style={{ width: '100%' }} />
           </label>
         </div>
-      </div>
-
-      {/* Channel Management */}
-      <div style={card}>
-        <h2 style={{ fontSize: 16, marginBottom: 16 }}>频道管理</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {channels.map((ch, idx) => {
-            const isEmail = ch.type === 'email'
-            return (
-              <div key={ch.id || idx} style={{
-                padding: 16, borderRadius: 8, border: '1px solid var(--border)',
-                background: ch.enabled ? (isEmail ? '#eff6ff' : '#f0fdf4') : '#f9fafb',
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                  <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <input type="checkbox" checked={ch.enabled ?? false} onChange={e => updateChannel(idx, { enabled: e.target.checked })} />
-                    <span style={{ fontWeight: 600, fontSize: 14 }}>{ch.name || ch.id}</span>
-                  </label>
-                  <span style={{
-                    fontSize: 11, padding: '2px 8px', borderRadius: 4, fontWeight: 500,
-                    background: isEmail ? '#dbeafe' : '#dcfce7', color: isEmail ? '#1d4ed8' : '#166534',
-                  }}>
-                    {isEmail ? '邮件' : 'Webhook'}
-                  </span>
-                  <span style={{ fontSize: 12, color: 'var(--text3)' }}>ID: {ch.id}</span>
-                  <div style={{ flex: 1 }} />
-                  {!isEmail && (
-                    <button onClick={async () => {
-                      if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？\n\n将同时删除该频道的发送工作流文件。`)) return
-                      // Remove from channels array
-                      const newChannels = [...channels]
-                      newChannels.splice(idx, 1)
-                      update('channels', newChannels)
-                      // Also delete the send workflow file
-                      const shortId = ch.id.replace(/^ch_/, '')
-                      const wfPath = `.github/workflows/send-ch-${shortId}.yml`
-                      try {
-                        const wfFile = await readFile(wfPath)
-                        if (wfFile) {
-                          await deleteFile(wfPath, `Delete send workflow for channel ${ch.name || ch.id}`, wfFile.sha)
-                          console.log(`Deleted workflow: ${wfPath}`)
-                        }
-                      } catch (e) {
-                        console.warn(`Failed to delete workflow ${wfPath}:`, e.message)
-                      }
-                    }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#dc2626', fontSize: 14, padding: '2px 6px' }}>
-                      删除
-                    </button>
-                  )}
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
-                  <label>
-                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>频道名称</span>
-                    <input type="text" value={ch.name || ''} onChange={e => updateChannel(idx, { name: e.target.value })} style={{ width: '100%' }} />
-                  </label>
-                  <label>
-                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>发送时间</span>
-                    <input type="time" value={`${String(ch.send_hour ?? 10).padStart(2, '0')}:${String(ch.send_minute ?? 0).padStart(2, '0')}`} onChange={e => { const [h, m] = e.target.value.split(':').map(Number); updateChannel(idx, { send_hour: h, send_minute: m }) }} style={{ width: '100%' }} />
-                  </label>
-                  <label>
-                    <span style={{ display: 'block', fontSize: 12, fontWeight: 500, marginBottom: 4 }}>主题模式</span>
-                    <select value={ch.topic_mode || 'broad'} onChange={e => updateChannel(idx, { topic_mode: e.target.value })} style={{ width: '100%' }}>
-                      <option value="broad">泛 AI 模式</option>
-                      <option value="focused">聚焦模式</option>
-                    </select>
-                  </label>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-        <button onClick={() => {
-          const newId = `ch_${Date.now().toString(36)}`
-          update('channels', [...channels, {
-            id: newId, type: 'webhook', name: '', enabled: false,
-            send_hour: 12, send_minute: 0, topic_mode: 'broad', max_news_items: 10, webhook_url_base: '',
-          }])
-        }} style={{
-          marginTop: 12, padding: '8px 20px', background: 'var(--primary-light)',
-          color: 'var(--primary)', border: '1px dashed var(--primary)',
-          borderRadius: 6, fontSize: 13, cursor: 'pointer', fontWeight: 500,
-        }}>
-          + 添加频道
-        </button>
       </div>
 
       {/* Secrets management */}

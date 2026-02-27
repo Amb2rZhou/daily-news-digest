@@ -413,7 +413,23 @@ export default function Dashboard() {
 
         {/* Add channel card */}
         <div
-          onClick={() => navigate('/settings')}
+          onClick={async () => {
+            const newId = `ch_${Date.now().toString(36)}`
+            try {
+              const latest = await readFile('config/settings.json')
+              if (!latest) throw new Error('无法读取 settings.json')
+              const latestData = JSON.parse(latest.content)
+              latestData.channels = [...(latestData.channels || []), {
+                id: newId, type: 'webhook', name: '新频道', enabled: false,
+                send_hour: 12, send_minute: 0, topic_mode: 'broad', max_news_items: 10, webhook_url_base: '',
+              }]
+              const content = JSON.stringify(latestData, null, 2) + '\n'
+              await writeFile('config/settings.json', content, `Add new channel ${newId}`, latest.sha)
+              navigate(`/channel/${newId}?tab=settings`)
+            } catch (e) {
+              alert('创建频道失败: ' + e.message)
+            }
+          }}
           style={{
             ...card,
             cursor: 'pointer',

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import { readFile, writeFile, listFiles, triggerWorkflow, deleteFile } from '../lib/github'
 import { hasAnthropicKey, generateSummary } from '../lib/claude'
 import { generateEmailHtml } from '../lib/emailTemplate'
@@ -31,10 +31,14 @@ const TABS = [
 export default function ChannelDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const [settings, setSettings] = useState(null)
   const [settingsSha, setSettingsSha] = useState(null)
   const [channel, setChannel] = useState(null)
-  const [activeTab, setActiveTab] = useState('draft')
+  const [activeTab, setActiveTab] = useState(() => {
+    const tab = searchParams.get('tab')
+    return TABS.some(t => t.key === tab) ? tab : 'draft'
+  })
   const [loading, setLoading] = useState(true)
 
   // Draft tab state
@@ -690,6 +694,44 @@ export default function ChannelDetail() {
               )
             })}
           </div>
+
+          {/* Delete channel */}
+          {!isEmail && (
+            <div style={{ ...card, marginTop: 16, borderColor: '#fca5a5' }}>
+              <h2 style={{ fontSize: 16, marginBottom: 8, color: '#dc2626' }}>危险操作</h2>
+              <p style={{ fontSize: 13, color: 'var(--text2)', marginBottom: 12 }}>
+                删除频道将移除配置和对应的发送工作流文件，此操作不可撤销。
+              </p>
+              <button onClick={async () => {
+                if (!confirm(`确定删除频道「${channel.name || channel.id}」吗？\n\n将同时删除配置和发送工作流文件，此操作不可撤销。`)) return
+                try {
+                  const latest = await readFile('config/settings.json')
+                  if (!latest) throw new Error('无法读取 settings.json')
+                  const latestData = JSON.parse(latest.content)
+                  latestData.channels = (latestData.channels || []).filter(c => c.id !== id)
+                  const content = JSON.stringify(latestData, null, 2) + '\n'
+                  await writeFile('config/settings.json', content, `Delete channel ${channel.name || id}`, latest.sha)
+
+                  const shortId = id.replace(/^ch_/, '')
+                  const wfPath = `.github/workflows/send-ch-${shortId}.yml`
+                  try {
+                    const wfFile = await readFile(wfPath)
+                    if (wfFile) await deleteFile(wfPath, `Delete send workflow for ${channel.name || id}`, wfFile.sha)
+                  } catch (e) { console.warn('Workflow delete failed:', e.message) }
+
+                  alert(`频道「${channel.name || id}」已删除`)
+                  navigate('/')
+                } catch (e) {
+                  alert('删除失败: ' + e.message)
+                }
+              }} style={{
+                padding: '8px 20px', background: '#dc2626', color: '#fff',
+                border: 'none', borderRadius: 6, fontWeight: 600, fontSize: 14, cursor: 'pointer',
+              }}>
+                删除此频道
+              </button>
+            </div>
+          )}
         </div>
       )}
 
