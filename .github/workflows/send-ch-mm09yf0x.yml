@@ -107,7 +107,7 @@ jobs:
       - name: Pull latest edits
         run: |
           BRANCH="${GITHUB_REF#refs/heads/}"
-          git pull origin "$BRANCH" --rebase || true
+          git pull origin "$BRANCH" --rebase || echo "::warning::git pull failed, re-check may use stale data"
 
       - name: Re-check draft status
         id: recheck
@@ -128,7 +128,7 @@ jobs:
           fi
 
       - name: Send channel
-        if: steps.recheck.outputs.should_send != 'false'
+        if: steps.recheck.outputs.should_send == 'true'
         env:
           WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           WEBHOOK_KEY_5: ${{ secrets.WEBHOOK_KEY_5 }}
@@ -139,7 +139,7 @@ jobs:
           python main.py send --channel ch_mm09yf0x
 
       - name: Commit sent status
-        if: steps.recheck.outputs.should_send != 'false'
+        if: steps.recheck.outputs.should_send == 'true'
         run: |
           DRAFT="config/drafts/$(TZ=Asia/Shanghai date +%Y-%m-%d)_ch_ch_mm09yf0x.json"
           git config user.name "github-actions[bot]"

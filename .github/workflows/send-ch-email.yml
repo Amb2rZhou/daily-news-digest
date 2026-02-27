@@ -107,7 +107,7 @@ jobs:
       - name: Pull latest edits
         run: |
           BRANCH="${GITHUB_REF#refs/heads/}"
-          git pull origin "$BRANCH" --rebase || true
+          git pull origin "$BRANCH" --rebase || echo "::warning::git pull failed, re-check may use stale data"
 
       - name: Re-check draft status
         id: recheck
@@ -128,7 +128,7 @@ jobs:
           fi
 
       - name: Send channel
-        if: steps.recheck.outputs.should_send != 'false'
+        if: steps.recheck.outputs.should_send == 'true'
         env:
           SMTP_HOST: smtp.qq.com
           SMTP_PORT: '587'
@@ -144,7 +144,7 @@ jobs:
           python main.py send --channel email
 
       - name: Commit sent status
-        if: steps.recheck.outputs.should_send != 'false'
+        if: steps.recheck.outputs.should_send == 'true'
         run: |
           DRAFT="config/drafts/$(TZ=Asia/Shanghai date +%Y-%m-%d).json"
           git config user.name "github-actions[bot]"
