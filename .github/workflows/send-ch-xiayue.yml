@@ -109,7 +109,26 @@ jobs:
           BRANCH="${GITHUB_REF#refs/heads/}"
           git pull origin "$BRANCH" --rebase || true
 
+      - name: Re-check draft status
+        id: recheck
+        run: |
+          DRAFT="config/drafts/$(TZ=Asia/Shanghai date +%Y-%m-%d)_ch_ch_xiayue.json"
+          if [ ! -f "$DRAFT" ]; then
+            echo "Draft not found after pull, skipping"
+            echo "should_send=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          STATUS=$(python3 -c "import json; d=json.load(open('$DRAFT')); print(d.get('status',''))")
+          echo "Draft status after pull: $STATUS"
+          if [ "$STATUS" = "sent" ] || [ "$STATUS" = "rejected" ]; then
+            echo "Draft already $STATUS, skipping to avoid duplicate"
+            echo "should_send=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_send=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Send channel
+        if: steps.recheck.outputs.should_send != 'false'
         env:
           WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           WEBHOOK_KEY_6: ${{ secrets.WEBHOOK_KEY_6 }}
@@ -120,6 +139,7 @@ jobs:
           python main.py send --channel ch_xiayue
 
       - name: Commit sent status
+        if: steps.recheck.outputs.should_send != 'false'
         run: |
           DRAFT="config/drafts/$(TZ=Asia/Shanghai date +%Y-%m-%d)_ch_ch_xiayue.json"
           git config user.name "github-actions[bot]"
@@ -129,19 +149,18 @@ jobs:
           git commit -m "Mark ch_xiayue draft as sent"
           BRANCH="${GITHUB_REF#refs/heads/}"
           push_ok=false
-          for i in 1 2 3 4 5; do
+          for i in $(seq 1 10); do
             git pull origin "$BRANCH" --rebase || {
-              # On conflict, keep our sent status (--theirs = local in rebase context)
               git checkout --theirs "$DRAFT" 2>/dev/null || true
               git add "$DRAFT"
               git rebase --continue 2>/dev/null || true
             }
             git push origin HEAD:"$BRANCH" && { push_ok=true; break; }
             echo "Push attempt $i failed, retrying..."
-            sleep $((RANDOM % 15 + 5))
+            sleep $((RANDOM % 30 + 10))
           done
           if [ "$push_ok" = false ]; then
-            echo "ERROR: git push failed after 5 attempts"
+            echo "ERROR: git push failed after 10 attempts"
             exit 1
           fi
 
