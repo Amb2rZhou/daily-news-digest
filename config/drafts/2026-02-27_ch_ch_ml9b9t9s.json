@@ -1,0 +1,135 @@
+{
+  "date": "2026-02-27",
+  "time_window": "2026-02-26 10:00 ~ 2026-02-27 09:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta新款超轻头显Phoenix设计细节曝光 固件挖出眼镜式造型2027年上半年计划上市",
+          "summary": "固件数据挖掘者在Quest固件中发现了Meta代号为Phoenix的超轻量级MR头显的设计图像，该设备采用眼镜式造型，对标苹果Vision Pro，计划于2027年上半年上市。",
+          "comment": "当主流头显开始追求极致轻薄时，这是否意味着XR设备正从‘计算平台’回归‘可穿戴设备’的本质？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119509.html"
+        },
+        {
+          "title": "XR Glasses Maker VITURE Raises Another $100M, Marking $200M Raised in Less Than 6 Months",
+          "summary": "XR眼镜制造商VITURE宣布在不到六个月内再次融资1亿美元，总融资额达到2亿美元，显示出市场对消费级XR眼镜的持续看好和资本热度。",
+          "comment": "资本如此密集地押注XR眼镜，是看到了即将爆发的消费市场，还是仅仅在抢占下一代计算平台的入口？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/xr-glasse-viture-100m-financing-2026/"
+        },
+        {
+          "title": "Intrinsic is joining Google to advance physical AI in robotics",
+          "summary": "机器人软件公司Intrinsic宣布将重新并入谷歌，以加速物理人工智能在机器人领域的发展，整合资源推进AI与机器人技术的结合。",
+          "comment": "谷歌将机器人软件公司重新收编，是否意味着其认为通用机器人的商业化落地需要更紧密的软硬件一体化策略？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/intrinsic-is-joining-google-to-advance-physical-ai-in-robotics/"
+        },
+        {
+          "title": "Automation World in Seoul to feature Chinese humanoid makers",
+          "summary": "首尔自动化世界大会将举办中国仿生机器人会议，中国主要的五大人形机器人制造商将集体亮相，展示中国在该领域的最新进展。",
+          "comment": "中国仿生机器人制造商集体出海参展，是否标志着全球仿生机器人竞争已从技术研发阶段进入市场与生态卡位阶段？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/automation-world-seoul-features-china-humanoid-makers/"
+        },
+        {
+          "title": "把AR做进隐形眼镜，这家公司选了一条最难的路",
+          "summary": "海外公司XPANCEO致力于将光学和健康监测功能集成到隐形眼镜中，产品重量仅数克，旨在实现全天无感佩戴，代表了智能眼镜在形态和重量上的极致探索。",
+          "comment": "将AR功能集成到隐形眼镜中，是解决可穿戴设备舒适性问题的终极方案，还是面临生物相容性和安全性的巨大技术鸿沟？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544765.html"
+        },
+        {
+          "title": "华强北AI眼镜攻陷美国亚马逊",
+          "summary": "春节期间华强北AI眼镜销量激增，相关产品在美国亚马逊平台也表现活跃，显示出中国供应链在消费级AI眼镜市场的强大竞争力和市场渗透力。",
+          "comment": "华强北系AI眼镜在海外热销，是依靠性价比打开了新市场，还是意味着全球对AI硬件的需求已从概念验证进入实用普及阶段？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544761.html"
+        },
+        {
+          "title": "虹软科技2025年净利润大增45.86% AI眼镜视觉方案量产成增长新引擎",
+          "summary": "虹软科技2025年净利润大幅增长，其中AI眼镜视觉解决方案的量产落地成为推动公司业绩增长的重要新动力。",
+          "comment": "AI视觉算法公司因硬件方案量产而业绩大涨，这是否说明AI智能硬件的成功越来越依赖于核心软件与硬件的深度整合？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119522.html"
+        },
+        {
+          "title": "SlimeVR发起众筹，推出更轻薄的“蝴蝶”全身动捕追踪器",
+          "summary": "SlimeVR发起新一轮众筹，推出新一代更轻薄、续航更久的“蝴蝶”全身动作捕捉追踪器，该设备基于IMU，无需外部基站，适用于VR、动捕和虚拟直播。",
+          "comment": "消费级全身动捕设备不断迭代轻量化，这是否会加速虚拟化身在社交和办公场景的普及，从而改变我们对线上互动的定义？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544763.html"
+        },
+        {
+          "title": "迪士尼经典游乐项目登Vision Pro 布偶视觉3D打造虚拟永不落幕乐园",
+          "summary": "迪士尼经典线下游乐项目“布偶视觉3D”将登陆苹果Vision Pro等VR头显，以虚拟形式延续经典IP的生命力，探索主题乐园的数字化体验。",
+          "comment": "传统主题乐园将经典项目数字化移植到VR头显，这是对实体体验的补充还是替代？未来娱乐的边界在哪里？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119505.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "微软推出Copilot Tasks AI，使用独立云端计算机处理后台任务",
+          "summary": "微软正在预览其新的AI系统Copilot Tasks，该系统旨在后台处理用户的繁琐工作。该功能利用其独立的基于云的计算机和浏览器，减轻用户设备的负载，可处理从日程安排到文件整理等多种任务。",
+          "comment": "当AI助手拥有独立的计算资源并能在后台自主执行任务时，人类对任务执行过程的控制权和透明度将如何界定？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/885741/microsoft-copilot-tasks-ai"
+        },
+        {
+          "title": "谷歌发布Nano Banana 2图像生成模型，瞄准企业级应用成本问题",
+          "summary": "谷歌DeepMind发布了Nano Banana 2图像生成模型，旨在以更低的成本提供接近专业版模型的质量和速度，解决高质量AI图像生成在企业工作流程中大规模部署的成本障碍。",
+          "comment": "当AI图像生成模型的成本大幅降低后，除了创意和营销领域，还有哪些传统行业的工作流程将被彻底重塑？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/googles-nano-banana-2-takes-aim-at-the-production-cost-problem-thats-kept-ai"
+        },
+        {
+          "title": "GitHub Copilot编码智能体推出多项新功能，包括模型选择器和自定义智能体",
+          "summary": "GitHub Copilot编码智能体进行了更新，新增了模型选择器、自我审查、内置安全扫描、自定义智能体以及命令行交接等功能，旨在提升开发者的编码效率和代码质量。",
+          "comment": "AI编程工具从代码补全进化到具备自我审查和安全扫描能力的“智能体”，这是否意味着未来软件开发的质控流程将前置并主要由AI完成？",
+          "source": "The GitHub Blog",
+          "url": "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "百度发布2025年Q4财报，AI业务收入占比达43%超预期",
+          "summary": "百度2025年第四季度财报显示，其AI业务收入占百度核心业务收入的43%，超出市场预期。其中，AI云业务持续增长，高性能计算设施订阅收入同比大幅增长143%。",
+          "comment": "当一家传统互联网巨头的AI业务收入占比接近半数，这标志着其转型成功，还是意味着整个行业已进入AI收入主导的新阶段？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/Ebw8wdpE2nrWY4rw.html"
+        },
+        {
+          "title": "Anthropic CEO拒绝五角大楼要求，坚持AI安全护栏",
+          "summary": "Anthropic首席执行官Dario Amodei拒绝了美国国防部提出的放弃AI安全限制、提供无限制访问的要求，坚持公司在致命自主武器和大规模监控方面的原则。",
+          "comment": "当国家安全的迫切需求与AI公司的伦理原则发生冲突时，谁应该拥有对前沿AI技术使用边界的最终决定权？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/news/885773/anthropic-department-of-defense-dod-pentagon-refusal-terms-hegseth-dario-amodei"
+        },
+        {
+          "title": "AI基础设施专家庞若鸣离开Meta加入OpenAI",
+          "summary": "顶尖AI基础设施专家庞若鸣在OpenAI长达数月的积极招募后，已正式从Meta离职并加入OpenAI，这被视为AI人才争夺战中的重要人事变动。",
+          "comment": "顶级AI基础设施专家的流向，是否比模型能力的发布更能预示下一代AI竞赛的胜负走向？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311646"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-02-27T09:32:09.882469+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

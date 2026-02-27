@@ -1,0 +1,11 @@
+{
+  "date": "2026-02-27",
+  "time_window": "2026-02-26 10:00 ~ 2026-02-27 09:59",
+  "categories": [],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-02-27T09:32:09.882904+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}
