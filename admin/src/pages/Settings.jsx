@@ -39,7 +39,8 @@ const BASE_SECRET_DEFS = [
   { name: 'SMTP_PASSWORD', label: '邮箱授权码', desc: 'SMTP 邮箱授权码或应用密码', type: 'password' },
   { name: 'EMAIL_RECIPIENTS', label: '收件人邮箱', desc: '邮件收件人，多个邮箱用英文逗号分隔', type: 'text' },
   { name: 'ADMIN_EMAIL', label: '管理员通知邮箱', desc: '接收系统通知的管理员邮箱', type: 'text' },
-  { name: 'WEBHOOK_KEYS', label: 'Webhook Keys (JSON)', desc: 'JSON 格式的 webhook key 映射，如 {"default":"key1","ch_ml97ypb3":"key2"}', type: 'password' },
+  { name: 'ADMIN_WEBHOOK_URL', label: '运维告警 Webhook URL', desc: '接收抓取/发送告警的运维机器人完整 URL（含 key）', type: 'password' },
+  { name: 'WEBHOOK_KEYS', label: 'Webhook Keys (JSON)', desc: 'JSON 格式的 webhook key 映射，如 {"default":"key1","ch_xiayue":"key2"}', type: 'password' },
 ]
 
 const SLOT_SECRETS = [...Array(20)].map((_, i) => ({
