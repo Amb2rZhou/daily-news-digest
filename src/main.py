@@ -246,8 +246,11 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
                 )
                 total = sum(len(c.get("news", [])) for c in ch_categories)
                 print(f"  Got {total} items for {ch_mode} mode")
-            # Store full result for other channels to reuse
-            mode_results[ch_mode] = ch_categories
+            # Only cache non-empty results so other channels can retry on failure
+            if ch_categories:
+                mode_results[ch_mode] = ch_categories
+            else:
+                print(f"  WARNING: {ch_mode} mode returned 0 items, not caching (next channel will retry)")
             # Truncate for this specific channel
             original_count = sum(len(c.get("news", [])) for c in ch_categories)
             ch_categories = truncate_categories(ch_categories, ch_max, balanced=(ch_mode == "focused"))

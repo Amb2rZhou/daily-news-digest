@@ -963,19 +963,32 @@ URL: {article.get('url', '')}
     if prompt is None and topic_mode == "focused":
         return _focused_split_call(client, articles[:120], max_items, paywalled_sources, settings)
 
-    response_text = _call_ai(prompt, topic_mode, anthropic_client=client)
-    if not response_text:
-        print(f"  Error: All AI backends failed for {topic_mode} mode")
-        return []
+    # Retry logic (matches focused mode's _call_and_parse behavior)
+    max_retries = 2
+    for attempt in range(max_retries + 1):
+        if attempt > 0:
+            print(f"  - Retrying {topic_mode} mode (attempt {attempt + 1})...")
+            time.sleep(3)
 
-    claude_elapsed = time.time() - claude_start
-    print(f"  - AI ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
+        response_text = _call_ai(prompt, topic_mode, anthropic_client=client)
+        if not response_text:
+            print(f"  - {topic_mode}: AI call returned None (attempt {attempt + 1})")
+            continue
 
-    parsed = _parse_json_response(response_text)
-    if parsed:
-        return parsed.get("categories", [])
+        claude_elapsed = time.time() - claude_start
+        print(f"  - AI ({topic_mode}) 耗时: {claude_elapsed:.1f}s")
 
-    print(f"  Error: Failed to parse AI response")
+        parsed = _parse_json_response(response_text)
+        if parsed:
+            categories_result = parsed.get("categories", [])
+            if categories_result:
+                return categories_result
+            print(f"  - {topic_mode}: parsed OK but 0 categories (attempt {attempt + 1})")
+            continue
+
+        print(f"  - {topic_mode}: JSON parse failed (attempt {attempt + 1}). Preview: {response_text[:200]}")
+
+    print(f"  Error: All {max_retries + 1} attempts failed for {topic_mode} mode")
     return []
 
 def fetch_news(anthropic_key: str = "", topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False, hardware_unlimited: bool = None, channel: dict = None) -> dict:
