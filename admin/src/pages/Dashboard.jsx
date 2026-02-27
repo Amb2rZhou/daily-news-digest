@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { readFile, writeFile, listFiles, getWorkflowRuns, triggerWorkflow } from '../lib/github'
+import { readFile, writeFile, deleteFile, listFiles, getWorkflowRuns, triggerWorkflow } from '../lib/github'
 
 const card = {
   background: 'var(--card)', borderRadius: 'var(--radius)',
@@ -22,6 +22,7 @@ export default function Dashboard() {
   const [weweStatus, setWeweStatus] = useState(null)
   const [triggerStatus, setTriggerStatus] = useState({})
   const [channelDraftInfo, setChannelDraftInfo] = useState({}) // { channelId: { status, newsCount } }
+  const [settingsSha, setSettingsSha] = useState(null)
   const pollRef = useRef(null)
   const loadRunsRef = useRef(null)
 
@@ -38,6 +39,7 @@ export default function Dashboard() {
       if (settingsFile) {
         parsedSettings = JSON.parse(settingsFile.content)
         setSettings(parsedSettings)
+        setSettingsSha(settingsFile.sha)
       }
 
       // Load draft info for all channels
@@ -176,6 +178,38 @@ export default function Dashboard() {
   if (loading) return <p style={{ color: 'var(--text2)' }}>加载中...</p>
 
   const channels = (settings?.channels || []).filter(c => c.enabled)
+
+  async function deleteChannel(ch) {
+    if (!confirm(`确定删除频道「${ch.name || ch.id}」吗？\n\n将同时删除配置和发送工作流文件。`)) return
+    try {
+      // 1. Remove channel from settings.json
+      const latest = await readFile('config/settings.json')
+      if (!latest) throw new Error('无法读取 settings.json')
+      const latestData = JSON.parse(latest.content)
+      latestData.channels = (latestData.channels || []).filter(c => c.id !== ch.id)
+      const content = JSON.stringify(latestData, null, 2) + '\n'
+      const result = await writeFile('config/settings.json', content, `Delete channel ${ch.name || ch.id}`, latest.sha)
+      setSettingsSha(result.content.sha)
+      setSettings(latestData)
+
+      // 2. Delete the send workflow file
+      const shortId = ch.id.replace(/^ch_/, '')
+      const wfPath = `.github/workflows/send-ch-${shortId}.yml`
+      try {
+        const wfFile = await readFile(wfPath)
+        if (wfFile) {
+          await deleteFile(wfPath, `Delete send workflow for ${ch.name || ch.id}`, wfFile.sha)
+        }
+      } catch (e) {
+        console.warn('Workflow delete failed (may not exist):', e.message)
+      }
+
+      alert(`频道「${ch.name || ch.id}」已删除`)
+      load() // Refresh
+    } catch (e) {
+      alert('删除失败: ' + e.message)
+    }
+  }
 
   return (
     <div>
@@ -333,6 +367,21 @@ export default function Dashboard() {
                 }}>
                   {isEmail ? '邮件' : 'Webhook'}
                 </span>
+                {!isEmail && (
+                  <button
+                    onClick={e => { e.stopPropagation(); deleteChannel(ch) }}
+                    title="删除频道"
+                    style={{
+                      background: 'none', border: 'none', cursor: 'pointer',
+                      color: '#9ca3af', fontSize: 16, padding: '0 4px', lineHeight: 1,
+                      transition: 'color .15s',
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.color = '#dc2626'}
+                    onMouseLeave={e => e.currentTarget.style.color = '#9ca3af'}
+                  >
+                    ×
+                  </button>
+                )}
               </div>
 
               {ch.description && (
