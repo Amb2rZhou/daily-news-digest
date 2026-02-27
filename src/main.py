@@ -19,7 +19,7 @@ from fetch_news import (
     summarize_news_with_claude,
 )
 from send_email import send_email
-from send_webhook import send_webhook
+from send_webhook import send_webhook, send_admin_alert
 
 
 # ---------------------------------------------------------------------------
@@ -273,6 +273,33 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
             draft_path = save_draft(ch_draft, settings, channel_id=ch_id)
         print(f"  Draft saved: {draft_path}")
 
+    # Check for empty drafts and alert admin
+    tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
+    now_str = datetime.now(tz).strftime("%Y-%m-%d %H:%M")
+    empty_channels = []
+    for ch in channels:
+        ch_id = ch.get("id", "unknown")
+        ch_name = ch.get("name", ch_id)
+        ch_mode = ch.get("topic_mode", "broad")
+        ch_cats = mode_results.get(ch_mode, [])
+        ch_max = ch.get("max_news_items", 10)
+        total = sum(len(c.get("news", [])) for c in truncate_categories(ch_cats, ch_max, balanced=(ch_mode == "focused")))
+        if total == 0:
+            empty_channels.append(f"- {ch_name} ({ch_mode})")
+
+    if empty_channels:
+        alert_msg = (
+            f"**⚠️ 每日AI新闻摘要 - 运维告警**\n"
+            f"\n"
+            f"**问题**: 以下频道抓取结果为 0 条新闻\n"
+            + "\n".join(empty_channels) + "\n"
+            f"\n"
+            f"**时间**: {now_str}\n"
+            f"**建议**: 请检查 Admin UI 并手动重新抓取"
+        )
+        print(f"\n⚠️ Alert: {len(empty_channels)} channel(s) have 0 items")
+        send_admin_alert(alert_msg)
+
     return 0
 
 
@@ -300,6 +327,8 @@ def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
         enabled = target
 
     any_failed = False
+    skipped_empty = []
+    failed_send = []
     for ch in enabled:
         ch_id = ch.get("id", "unknown")
         ch_type = ch.get("type", "webhook")
@@ -330,6 +359,7 @@ def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
         total_items = sum(len(c.get("news", [])) for c in draft.get("categories", []))
         if total_items == 0:
             print(f"Channel {ch_name}: draft has 0 news items, skipping to avoid empty message")
+            skipped_empty.append(ch_name)
             continue
 
         print(f"Sending to {ch_name} (type={ch_type})...")
@@ -344,6 +374,7 @@ def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
                 print(f"Channel {ch_name}: email sent successfully")
             else:
                 print(f"Channel {ch_name}: email send failed")
+                failed_send.append(ch_name)
                 any_failed = True
         else:
             try:
@@ -354,10 +385,32 @@ def run_send(settings: dict, date: str = None, channel_id: str = None) -> int:
                     print(f"Channel {ch_name}: webhook sent successfully")
                 else:
                     print(f"Channel {ch_name}: webhook send failed")
+                    failed_send.append(ch_name)
                     any_failed = True
             except Exception as e:
                 print(f"Channel {ch_name}: webhook error: {e}")
+                failed_send.append(ch_name)
                 any_failed = True
+
+    # Alert admin if any channels were skipped or failed
+    problems = []
+    if skipped_empty:
+        problems.append("**0 条新闻被跳过**:\n" + "\n".join(f"- {n}" for n in skipped_empty))
+    if failed_send:
+        problems.append("**发送失败**:\n" + "\n".join(f"- {n}" for n in failed_send))
+
+    if problems:
+        now_str = datetime.now(tz).strftime("%Y-%m-%d %H:%M")
+        alert_msg = (
+            f"**⚠️ 每日AI新闻摘要 - 发送告警**\n"
+            f"\n"
+            + "\n\n".join(problems) + "\n"
+            f"\n"
+            f"**日期**: {today}\n"
+            f"**时间**: {now_str}\n"
+            f"**建议**: 请检查 Admin UI"
+        )
+        send_admin_alert(alert_msg)
 
     return 1 if any_failed else 0
 

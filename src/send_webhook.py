@@ -148,6 +148,45 @@ def _post_webhook(url: str, content: str) -> str:
         return "network_error"
 
 
+def send_admin_alert(message: str) -> bool:
+    """Send an alert message to the admin ops webhook.
+
+    Uses ADMIN_WEBHOOK_URL env var (full URL with key).
+    Returns True on success.
+    """
+    url = os.environ.get("ADMIN_WEBHOOK_URL", "").strip()
+    if not url:
+        print("Admin alert: ADMIN_WEBHOOK_URL not set, skipping")
+        return False
+
+    payload = {
+        "msgtype": "markdown",
+        "markdown": {
+            "content": message,
+        },
+    }
+
+    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            if result.get("errcode", 0) != 0:
+                print(f"Admin alert API error: {result}")
+                return False
+            print("Admin alert sent successfully")
+            return True
+    except Exception as e:
+        print(f"Admin alert failed: {e}")
+        return False
+
+
 def send_webhook(news_data: dict, settings: dict = None, channel: dict = None) -> bool:
     """POST markdown message to RedCity webhook. Returns True on success.
 

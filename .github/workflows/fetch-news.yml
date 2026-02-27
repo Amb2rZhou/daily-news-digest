@@ -157,6 +157,7 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
           IS_MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
+          ADMIN_WEBHOOK_URL: ${{ secrets.ADMIN_WEBHOOK_URL }}
         run: |
           cd src
           if [ "$IS_MANUAL" = "true" ]; then
@@ -193,6 +194,7 @@ jobs:
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
           WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
+          ADMIN_WEBHOOK_URL: ${{ secrets.ADMIN_WEBHOOK_URL }}
         run: |
           cd src
           python main.py send

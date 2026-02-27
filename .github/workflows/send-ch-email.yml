@@ -119,6 +119,7 @@ jobs:
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
           WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
+          ADMIN_WEBHOOK_URL: ${{ secrets.ADMIN_WEBHOOK_URL }}
         run: |
           cd src
           python main.py send --channel email

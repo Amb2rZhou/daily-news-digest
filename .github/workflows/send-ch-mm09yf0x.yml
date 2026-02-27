@@ -114,6 +114,7 @@ jobs:
           WEBHOOK_KEYS: ${{ secrets.WEBHOOK_KEYS }}
           WEBHOOK_KEY_5: ${{ secrets.WEBHOOK_KEY_5 }}
           SETTINGS_PATH: ${{ github.workspace }}/config/settings.json
+          ADMIN_WEBHOOK_URL: ${{ secrets.ADMIN_WEBHOOK_URL }}
         run: |
           cd src
           python main.py send --channel ch_mm09yf0x
