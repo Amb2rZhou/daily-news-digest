@@ -1,10 +1,133 @@
 {
   "date": "2026-02-27",
-  "time_window": "2026-02-26 10:00 ~ 2026-02-27 09:59",
-  "categories": [],
-  "source": "scheduled",
+  "time_window": "2026-02-26 11:18 ~ 2026-02-27 11:18",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "DeepSeek联合北大、清华发布新型AI推理框架DualPath",
+          "summary": "DeepSeek与北京大学、清华大学合作提出全新大模型推理框架DualPath，旨在解决长上下文场景下KV-Cache加载引发的I/O瓶颈问题。",
+          "comment": "这种针对推理效率的底层框架创新，是否预示着大模型竞争正从单纯追求参数规模转向系统级优化和实际部署成本控制？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311655"
+        },
+        {
+          "title": "谷歌推出用于构建交互式XR体验的全新Gemini工具XR Blocks",
+          "summary": "谷歌Android XR团队推出新工具，利用Gemini多模态AI模型，让开发者能快速将创意提示转化为交互式XR体验，大幅加速3D原型构建。",
+          "comment": "AI生成式工具正在降低XR内容创作门槛，这是否会引发一波类似于AIGC的XR内容创作革命，并改变现有的VR/AR开发格局？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544768.html"
+        },
+        {
+          "title": "代码暴减99.9%！独立开发者仅用500行代码做出安全版OpenClaw",
+          "summary": "独立开发者gavrielc开源了极简AI助手NanoClaw，仅用约500行代码实现了OpenClaw的核心功能，大幅降低了复杂AI助手的理解和部署门槛。",
+          "comment": "当核心AI功能可以通过极简代码实现时，这是否意味着未来AI应用的门槛将急剧降低，从而催生出更多小而美的创新产品？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/HHm10aPdwzZxiF9k05fN"
+        },
+        {
+          "title": "编程超越 Gemini 3 Pro？GLM-5 性能实测对齐 Opus 4.6",
+          "summary": "智谱AI发布最新旗舰大模型GLM-5，据称其代码能力和智能体表现在开源模型中达到SOTA，标志着AI开发向更大规模自动化编程的转变。",
+          "source": "InfoQ 推荐",
+          "comment": "GLM-5强调的‘Agentic Engineering’是否代表了大模型应用的下一个关键方向，即从辅助编码转向自主完成复杂系统工程？",
+          "url": "https://www.infoq.cn/article/2WHkkAArr4KhLj1LXUWt"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "曝DeepSeek新模型提前给华为等国内厂商‘开绿灯’，V4 Lite 绝密参数外泄",
+          "summary": "知情人士透露，DeepSeek已提前向华为等国内芯片厂商开放即将推出的旗舰模型DeepSeek V4的访问权限，以进行软件适配与性能优化。",
+          "comment": "DeepSeek优先与国内硬件厂商合作进行优化，这是否预示着全球AI产业链正加速形成地缘技术联盟和独立的软硬件生态？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/2w3JgQftwv3PaM9hHS95"
+        },
+        {
+          "title": "百度四季度AI业务收入占比43% 超预期",
+          "summary": "百度发布2025年第四季度财报，AI业务收入占一般性业务收入的43%，其中AI云全年收入同比增长34%，高性能计算设施订阅收入同比大幅增长。",
+          "comment": "当一家传统互联网公司的AI业务收入占比接近一半时，这是否意味着其‘All in AI’的转型已跨越临界点，并验证了可行的商业模式？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/Ebw8wdpE2nrWY4rw.html"
+        },
+        {
+          "title": "Anthropic CEO拒绝五角大楼要求，坚持AI安全护栏",
+          "summary": "Anthropic首席执行官Dario Amodei拒绝了美国国防部要求其放弃AI安全限制的最终通牒，坚持不为致命性自主武器和大规模监控提供无限制AI访问。",
+          "comment": "当国家安全需求与AI伦理原则发生冲突时，科技公司应如何平衡其商业利益、社会责任与地缘政治压力？",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/cvg3vlzzkqeo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Jack Dorsey's Block裁员40%，称因AI效率提升",
+          "summary": "Jack Dorsey旗下的Block公司宣布裁员超过4000人，约占总员工数的40%，公司称此举是由于AI技术带来的效率提升。",
+          "comment": "当企业将大规模裁员直接归因于AI效率提升时，这是否会加剧社会对AI导致结构性失业的担忧，并可能引发更强烈的监管反弹？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/jack-dorseys-block-cuts-40-of-staff-4-000-people-and-yes-its-because-of-ai"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "千问将面向全球推出多款AI硬件产品",
+          "summary": "阿里巴巴旗下个人AI助手‘千问’正式进军AI硬件领域，将在MWC 2026上发布首款AI眼镜，并计划年内推出AI指环、AI耳机等产品面向全球市场。",
+          "comment": "阿里通过‘千问’品牌全面布局AI硬件入口，这是否意味着大模型竞争已从纯软件和服务，进入软硬一体、争夺用户贴身设备的新阶段？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3700948711124614?f=rss"
+        },
+        {
+          "title": "Google正式推出Gemini Enterprise移动应用",
+          "summary": "谷歌宣布面向企业用户的Gemini Enterprise移动应用现已上线iOS与Android平台，为企业提供移动端的AI助手服务。",
+          "comment": "企业级AI应用从桌面端向移动端延伸，是否意味着AI助手正成为员工跨设备、随时随地提升生产力的标配工具？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311651"
+        },
+        {
+          "title": "谷歌发布Nano Banana 2图像生成模型，成本减半",
+          "summary": "谷歌DeepMind发布Nano Banana 2图像生成模型，API价格仅为Pro版本的一半，在保持高质量的同时提升了生成速度和文本渲染能力。",
+          "comment": "主流AI图像生成模型价格持续下探，这是否会加速其在企业营销、设计、教育等领域的规模化应用，并催生新的商业模式？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/a/311647"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "中国AI模型全球调用量首超美国",
+          "summary": "据OpenRouter数据，2026年2月9日至15日当周，中国大模型的Token调用量达4.12万亿，首次超越同期美国模型的2.94万亿。",
+          "comment": "中国AI模型调用量首次实现全球领先，这更多是反映了国内市场的巨大需求，还是中国模型在全球范围内的竞争力真正开始显现？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311650"
+        },
+        {
+          "title": "Morningstar：企业无需裁员也能释放AI增益",
+          "summary": "晨星公司报告指出，许多企业将AI作为裁员的理由，而非通过重新部署员工来提升生产力，认为企业无需裁员也能解锁AI带来的价值。",
+          "comment": "在AI提升效率的背景下，企业是应该优先考虑成本削减，还是将重点放在员工技能重塑和业务转型以创造更大价值？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-27/ai-gains-can-be-unlocked-without-cutting-jobs-morningstar-says"
+        },
+        {
+          "title": "内地投资者因AI投入未转化为盈利增长而抛售港股",
+          "summary": "内地投资者正在加速抛售港股，显示出对大型科技公司无法将人工智能支出转化为盈利增长的不耐烦。",
+          "comment": "当资本市场对科技公司巨额的AI投资失去耐心时，这是否会迫使企业更早地寻求AI技术的商业化变现路径，从而影响其长期技术战略？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-27/mainland-traders-sell-hong-kong-stocks-on-earnings-frustration"
+        }
+      ]
+    }
+  ],
+  "source": "manual",
   "status": "pending_review",
-  "created_at": "2026-02-27T09:32:09.882062+08:00",
+  "created_at": "2026-02-27T11:20:25.469003+08:00",
   "channel_id": "ch_ml97ypb3",
   "channel_name": "午休2小时",
   "topic_mode": "broad"
