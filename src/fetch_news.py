@@ -14,6 +14,7 @@ import requests
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import re
 
 # Fallback RSS feeds (used when settings.json has no rss_feeds)
 DEFAULT_RSS_FEEDS = [
@@ -494,7 +495,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 **数量要求**：选 7-10 条，不多不少。
 
 **筛选要求**：
-- 去重：相同事件只保留最权威来源
+- **⚠️ 严格事件级去重**：同一事件只保留 1 条，不论有多少篇不同来源的报道。如果 Meta Quest 新品有 3 篇报道，只保留最权威来源的 1 条
 - 按重要性排序
 
 **来源权威性优先**：
@@ -558,7 +559,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - AI技术与产品：至少选 2 条
 - 巨头动向与行业观察：至少选 1 条
 - 两个分类合计最多 {max_items} 条
-- 去重：相同事件只保留最权威来源
+- **⚠️ 严格事件级去重**：同一事件只保留 1 条，不论有多少篇不同来源的报道。例如百度财报有 5 篇报道，只保留最权威来源的 1 条；不同角度的解读也算同一事件
 - 按重要性排序
 
 **来源权威性优先**：
@@ -616,12 +617,15 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
    - 必须包含的：AI 模型发布/更新、AI 公司动态、AI 融资、AI 产品、AI 政策法规、AI 应用落地、大模型、机器学习、深度学习、AIGC、AGI、机器人、自动驾驶等
    - 必须排除的：与 AI 无关的普通科技新闻（如手机发布、游戏、电商促销、社交媒体八卦、纯硬件评测等）
    - 边界情况：如果一条新闻主要讲某科技公司但核心内容与 AI 无关，应排除
-2. 去重：相同事件的多篇报道只保留一条（保留最权威来源）
+2. **⚠️ 严格事件级去重（最重要）**：同一事件/话题只保留 1 条，不论有多少篇不同来源的报道
+   - 例如：百度发布财报，可能有 5 篇来自不同来源的报道（36氪、Reuters、TechCrunch 等），只保留最权威来源的 1 条
+   - 判断标准：如果两条新闻讲的是同一件事（同一公司的同一动态、同一产品的发布、同一笔融资），就是重复，必须只保留 1 条
+   - 不同角度的解读也算重复（如「百度财报超预期」和「百度AI业务增长」是同一事件）
 3. **中外平衡**：如有国内大厂（字节跳动/豆包、阿里/通义千问、腾讯、百度/文心、华为、小米等）的 AI 相关新闻，至少选入 1 条，不要全是海外新闻
 4. 按重要性排序（全球影响 > 行业影响 > 区域影响）
-4. 为每条新闻写一个简短的中文摘要（1-2句话）
-5. **重要**：为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾），引导读者深入思考这条新闻的意义、影响或未来可能性
-6. 将新闻按以下类别分组：{category_names}
+5. 为每条新闻写一个简短的中文摘要（1-2句话）
+6. **重要**：为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾），引导读者深入思考这条新闻的意义、影响或未来可能性
+7. 将新闻按以下类别分组：{category_names}
    - 每条新闻只归入一个最匹配的类别
    - 没有对应新闻的类别不要输出
 
@@ -1005,6 +1009,64 @@ URL: {article.get('url', '')}
     print(f"  Error: All {max_retries + 1} attempts failed for {topic_mode} mode")
     return []
 
+
+def _title_tokens(title: str) -> set:
+    """Extract comparison tokens from a news title.
+
+    Uses Chinese character bigrams (within consecutive runs) and
+    alphanumeric tokens for cross-language title comparison.
+    """
+    tokens = set()
+    # Alphanumeric tokens (English words, version numbers like Q4, GPT5, etc.)
+    for token in re.findall(r'[a-zA-Z0-9]{2,}', title.lower()):
+        tokens.add(token)
+    # Chinese character bigrams (within consecutive Chinese character runs)
+    for run in re.findall(r'[\u4e00-\u9fff]+', title):
+        for i in range(len(run) - 1):
+            tokens.add(run[i:i + 2])
+    return tokens
+
+
+def _dedup_by_title_similarity(categories: list[dict]) -> tuple[list[dict], int]:
+    """Remove news items covering the same event based on title similarity.
+
+    Uses overlap coefficient on title tokens: if two titles share ≥50%
+    of the smaller title's tokens, they are considered same-event coverage
+    and the later one is removed (earlier = higher priority).
+    """
+    # Flatten all news items preserving order
+    all_items = []
+    for cat in categories:
+        for news in cat.get("news", []):
+            all_items.append((id(cat), news, _title_tokens(news.get("title", ""))))
+
+    to_remove = set()
+    for i in range(len(all_items)):
+        if i in to_remove:
+            continue
+        for j in range(i + 1, len(all_items)):
+            if j in to_remove:
+                continue
+            tokens_i = all_items[i][2]
+            tokens_j = all_items[j][2]
+            if not tokens_i or not tokens_j:
+                continue
+            intersection = len(tokens_i & tokens_j)
+            min_size = min(len(tokens_i), len(tokens_j))
+            if min_size > 0 and intersection / min_size >= 0.5:
+                to_remove.add(j)
+
+    if not to_remove:
+        return categories, 0
+
+    # Build set of news objects to remove per category
+    remove_ids = {id(all_items[idx][1]) for idx in to_remove}
+    for cat in categories:
+        cat["news"] = [n for n in cat.get("news", []) if id(n) not in remove_ids]
+    categories = [c for c in categories if c.get("news")]
+    return categories, len(to_remove)
+
+
 def fetch_news(anthropic_key: str = "", topic: str = "AI/科技", max_items: int = 10, settings: dict = None, manual: bool = False, hardware_unlimited: bool = None, channel: dict = None) -> dict:
     """Fetch and process news.
 
@@ -1057,7 +1119,7 @@ def fetch_news(anthropic_key: str = "", topic: str = "AI/科技", max_items: int
     print(f"  - Summarizing with {backend}...")
     categories = summarize_news_with_claude(anthropic_key, raw_articles, max_items, settings)
 
-    # Post-AI dedup: remove duplicate URLs across categories
+    # Post-AI dedup layer 1: remove duplicate URLs across categories
     seen_urls = set()
     dedup_removed = 0
     for cat in categories:
@@ -1072,10 +1134,14 @@ def fetch_news(anthropic_key: str = "", topic: str = "AI/科技", max_items: int
                 seen_urls.add(url)
             unique.append(news)
         cat["news"] = unique
-    # Remove empty categories after dedup
     categories = [c for c in categories if c.get("news")]
     if dedup_removed:
-        print(f"  - Post-AI dedup: removed {dedup_removed} duplicate URLs across categories")
+        print(f"  - Post-AI dedup (URL): removed {dedup_removed} duplicate URLs")
+
+    # Post-AI dedup layer 2: remove same-event coverage by title similarity
+    categories, event_removed = _dedup_by_title_similarity(categories)
+    if event_removed:
+        print(f"  - Post-AI dedup (event): removed {event_removed} same-event duplicates")
 
     total = sum(len(c.get("news", [])) for c in categories)
     print(f"  - Selected {total} top news in {len(categories)} categories")
