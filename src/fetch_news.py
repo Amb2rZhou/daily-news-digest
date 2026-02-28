@@ -375,6 +375,20 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     # Sort all by published time (newest first)
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
+    # Deduplicate by URL (keep first = newest due to sort above)
+    seen_urls = set()
+    deduped = []
+    for article in all_articles:
+        url = article.get("url", "")
+        if url and url in seen_urls:
+            continue
+        if url:
+            seen_urls.add(url)
+        deduped.append(article)
+    if len(deduped) < len(all_articles):
+        print(f"  - RSS dedup: removed {len(all_articles) - len(deduped)} duplicate URLs")
+    all_articles = deduped
+
     print(f"  - Sources with articles: {len(articles_by_source)}")
     if hardware_unlimited:
         print(f"  - Smart hardware articles (unlimited): {hardware_article_count}")
@@ -1042,6 +1056,27 @@ def fetch_news(anthropic_key: str = "", topic: str = "AI/科技", max_items: int
     backend = "DeepSeek" if os.environ.get("DEEPSEEK_API_KEY") else "Claude"
     print(f"  - Summarizing with {backend}...")
     categories = summarize_news_with_claude(anthropic_key, raw_articles, max_items, settings)
+
+    # Post-AI dedup: remove duplicate URLs across categories
+    seen_urls = set()
+    dedup_removed = 0
+    for cat in categories:
+        original = cat.get("news", [])
+        unique = []
+        for news in original:
+            url = news.get("url", "")
+            if url and url in seen_urls:
+                dedup_removed += 1
+                continue
+            if url:
+                seen_urls.add(url)
+            unique.append(news)
+        cat["news"] = unique
+    # Remove empty categories after dedup
+    categories = [c for c in categories if c.get("news")]
+    if dedup_removed:
+        print(f"  - Post-AI dedup: removed {dedup_removed} duplicate URLs across categories")
+
     total = sum(len(c.get("news", [])) for c in categories)
     print(f"  - Selected {total} top news in {len(categories)} categories")
 
