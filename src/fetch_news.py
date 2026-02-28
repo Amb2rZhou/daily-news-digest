@@ -444,7 +444,7 @@ def apply_filters(articles: list[dict], settings: dict = None) -> list[dict]:
 
     return filtered
 
-def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_names: str, category_json_example: str, icon_mapping: str, custom_prompt: str = None, paywalled_sources: str = "") -> str:
+def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_names: str, category_json_example: str, icon_mapping: str, custom_prompt: str = None, paywalled_sources: str = "", previously_reported: str = "") -> str:
     """Generate the Claude prompt based on topic mode or custom prompt.
 
     If custom_prompt is provided, it will be used directly with variable substitution:
@@ -454,6 +454,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
     - {category_json_example} - Example JSON structure
     - {icon_mapping} - Icon mapping string
     - {paywalled_sources} - Comma-separated list of paywalled source names
+    - {previously_reported} - Previously reported news titles for cross-day dedup
     """
 
     if custom_prompt:
@@ -465,7 +466,8 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
                 category_names=category_names,
                 category_json_example=category_json_example,
                 icon_mapping=icon_mapping,
-                paywalled_sources=paywalled_sources
+                paywalled_sources=paywalled_sources,
+                previously_reported=previously_reported
             )
         except KeyError as e:
             print(f"  Warning: Custom prompt has invalid variable {e}, falling back to mode-based prompt")
@@ -509,7 +511,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 **输出要求**：
 - 为每条新闻写一个简短的中文摘要（1-2句话）
 - 为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾）
-
+{previously_reported}
 新闻列表：
 {articles_text}
 
@@ -573,7 +575,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 **输出要求**：
 - 为每条新闻写一个简短的中文摘要（1-2句话）
 - 为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾）
-
+{previously_reported}
 新闻列表：
 {articles_text}
 
@@ -627,7 +629,7 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 
 **重要**：总共最多选 {max_items} 条最值得看的新闻（不是每个分类 {max_items} 条），在这些新闻中归类排列。
 摘要和标题中不要使用双引号，用单引号或其他标点代替。
-
+{previously_reported}
 新闻列表：
 {articles_text}
 
@@ -785,6 +787,59 @@ def _call_ai(prompt: str, label: str, anthropic_client=None) -> str:
     return None
 
 
+def _load_recent_titles(settings: dict, days: int = 3) -> list[str]:
+    """Load news titles from recent drafts for cross-day dedup.
+
+    Scans the last N days' draft files (excluding today) and extracts
+    all news titles that were already sent or are pending.
+    """
+    drafts_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "drafts")
+    if not os.path.exists(drafts_dir):
+        return []
+
+    tz_name = settings.get("timezone", "Asia/Shanghai")
+    tz = ZoneInfo(tz_name)
+
+    titles = set()
+    try:
+        all_files = os.listdir(drafts_dir)
+    except OSError:
+        return []
+
+    for d in range(1, days + 1):
+        date_str = (datetime.now(tz) - timedelta(days=d)).strftime("%Y-%m-%d")
+        for filename in all_files:
+            if filename.startswith(date_str) and filename.endswith(".json"):
+                try:
+                    filepath = os.path.join(drafts_dir, filename)
+                    with open(filepath, "r", encoding="utf-8") as f:
+                        draft = json.load(f)
+                    for cat in draft.get("categories", []):
+                        for news in cat.get("news", []):
+                            title = news.get("title", "").strip()
+                            if title:
+                                titles.add(title)
+                except (json.JSONDecodeError, IOError):
+                    pass
+
+    return sorted(titles)
+
+
+def _format_previously_reported(titles: list[str]) -> str:
+    """Format previously reported titles for injection into AI prompts."""
+    if not titles:
+        return ""
+    titles_list = "\n".join(f"- {t}" for t in titles[:60])
+    return f"""
+
+⚠️ **跨天去重（重要）**：以下是最近几天已推送过的新闻标题。请避免选择相同或高度相似的事件。
+只有当某事件今天有**重大新进展**时（如正式发布 vs 之前的传闻、新数据公布等），才可以再次选入，但标题/摘要须体现是新进展。
+
+已报道过的新闻：
+{titles_list}
+"""
+
+
 def _format_articles_text(articles: list[dict]) -> str:
     """Format a list of article dicts into text for Claude prompts."""
     text = ""
@@ -801,7 +856,7 @@ URL: {article.get('url', '')}
     return text
 
 
-def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_sources: str, settings: dict) -> list[dict]:
+def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_sources: str, settings: dict, previously_reported: str = "") -> list[dict]:
     """Focused mode: two sequential AI calls for hardware and AI/industry, then merge."""
     import time
 
@@ -823,7 +878,7 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
         hw_articles_text = _format_articles_text(hw_articles)
         hw_budget = 10  # hardware gets 7-10 items
         ai_budget = max(max_items - hw_budget, 5)  # rest goes to AI+industry, at least 5
-        prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources)
+        prompt_hw = get_prompt_for_mode("focused_hardware", hw_articles_text, max_items, "", "", "", None, paywalled_sources, previously_reported)
         print(f"  - Budget: hardware 7-10, AI+industry {ai_budget}, total cap {max_items}")
     else:
         # No hardware sources produced articles -- skip hardware prompt, give all budget to AI/industry
@@ -832,7 +887,7 @@ def _focused_split_call(client, articles: list[dict], max_items: int, paywalled_
         ai_budget = max_items
         prompt_hw = None
 
-    prompt_ai = get_prompt_for_mode("focused_ai_industry", other_articles_text, ai_budget, "", "", "", None, paywalled_sources)
+    prompt_ai = get_prompt_for_mode("focused_ai_industry", other_articles_text, ai_budget, "", "", "", None, paywalled_sources, previously_reported)
 
     start = time.time()
 
@@ -968,14 +1023,20 @@ URL: {article.get('url', '')}
     if paywalled_sources:
         print(f"  - Paywalled sources: {paywalled_sources}")
 
-    prompt = get_prompt_for_mode(topic_mode, articles_text, max_items, category_names, category_json_example, icon_mapping, custom_prompt, paywalled_sources)
+    # Load recently reported titles for cross-day dedup
+    recent_titles = _load_recent_titles(settings, days=3)
+    previously_reported = _format_previously_reported(recent_titles)
+    if recent_titles:
+        print(f"  - Cross-day dedup: {len(recent_titles)} titles from recent drafts")
+
+    prompt = get_prompt_for_mode(topic_mode, articles_text, max_items, category_names, category_json_example, icon_mapping, custom_prompt, paywalled_sources, previously_reported)
 
     import time
     claude_start = time.time()
 
     # Focused mode: split into 2 parallel calls (hardware + AI/industry)
     if prompt is None and topic_mode == "focused":
-        return _focused_split_call(client, articles[:120], max_items, paywalled_sources, settings)
+        return _focused_split_call(client, articles[:120], max_items, paywalled_sources, settings, previously_reported)
 
     # Retry logic (matches focused mode's _call_and_parse behavior)
     max_retries = 2
