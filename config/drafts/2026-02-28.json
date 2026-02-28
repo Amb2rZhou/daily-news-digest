@@ -1,0 +1,125 @@
+{
+  "date": "2026-02-28",
+  "time_window": "2026-02-27 10:00 ~ 2026-02-28 09:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "三星Galaxy Unpacked 2026：首款AI智能眼镜重磅亮相",
+          "summary": "三星在Galaxy Unpacked 2026活动上发布了其首款AI智能眼镜，标志着其AI全场景生态落地的新篇章。",
+          "comment": "三星的AI眼镜将如何与苹果、Meta等巨头的产品竞争，并定义新的AI硬件交互范式？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119532.html"
+        },
+        {
+          "title": "阿里千问进军AI硬件领域 首款AI眼镜将亮相MWC并开启全球预约",
+          "summary": "阿里巴巴旗下AI助手‘千问’宣布进军AI硬件领域，其首款AI眼镜将在MWC 2026亮相并开启全球预约，年内还将推出AI指环、AI耳机等产品。",
+          "comment": "阿里从软件服务转向软硬一体，其AI硬件生态能否复制其在互联网领域的成功？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119537.html"
+        },
+        {
+          "title": "AI运动眼镜企业‘致敬未知’完成亿元Pre-A轮融资",
+          "summary": "AI运动科技公司致敬未知宣布完成超亿元Pre-A轮融资，由创维、博裕、联想创投等联合投资，资金将用于全球化市场拓展和产品研发。",
+          "comment": "在AI眼镜赛道竞争加剧的背景下，新晋品牌如何凭借差异化定位和技术路径获得资本青睐？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544773.html"
+        },
+        {
+          "title": "Varjo推出气隙式集成XR解决方案 欧洲起售价24990欧元",
+          "summary": "军工级MR解决方案商Varjo发布集成XR系统，专为物理隔离环境设计，将XR-4系列头显与工作站、软件及支持捆绑，面向国防、专业XR用户。",
+          "comment": "面向专业和国防领域的超高价位XR解决方案，其市场需求和技术壁垒究竟有多高？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119530.html"
+        },
+        {
+          "title": "现代汽车将在AW 2026展示移动机器人MobED",
+          "summary": "现代汽车将在AW 2026展会上展示其移动机器人平台MobED，作为机器人与AI在制造业中应用扩展的一部分。",
+          "comment": "汽车制造商将机器人技术从工厂车间扩展到更广泛的移动平台，这预示着怎样的未来出行图景？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/hyundai-show-mobed-aw-2026-robotics-ai-expand-manufacturing/"
+        },
+        {
+          "title": "XR眼镜制造商VITURE再融资1亿美元，总额已达2.215亿美元",
+          "summary": "XR眼镜公司VITURE宣布获得1亿美元额外融资，由君联资本领投，融资总额已达2.215亿美元，公司近期推出了Luma和Beast系列XR眼镜。",
+          "comment": "在苹果、Meta等巨头主导的XR市场，VITURE等独立品牌如何通过差异化产品和融资策略生存与发展？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544767.html"
+        },
+        {
+          "title": "Meta或将联手Prada打造奢侈品AI眼镜",
+          "summary": "有迹象表明，Meta可能与其合作伙伴依视路陆逊梯卡以及奢侈品牌Prada合作，推出Prada品牌的AI智能眼镜。",
+          "comment": "与奢侈品牌联名，是否是AI眼镜从科技产品走向大众时尚消费品的必经之路？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544766.html"
+        },
+        {
+          "title": "如何将你的Quest 3打造成出色的旅行就绪空间计算机",
+          "summary": "文章介绍了通过最新的浏览器升级和Meta的新Surface Keyboard等，将Meta Quest 3头显转变为适合家庭或旅行的便携式空间计算机的方法。",
+          "comment": "当VR头显努力转型为‘空间计算机’时，它在生产力和便携性上能真正挑战传统笔记本电脑吗？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/how-to-make-your-quest-3-a-great-travel-ready-spatial-computer/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "苹果推出 Ferret-UI Lite：一款用于查看和控制 UI 的端侧 AI 模型",
+          "summary": "苹果公司发布了一款针对移动与桌面屏幕优化的30亿参数端侧AI模型，可解析屏幕图像、理解UI元素并与应用交互，旨在构建轻量化端侧GUI智能体。",
+          "comment": "端侧AI模型在平衡性能、隐私和延迟方面，是否会成为未来人机交互的主流范式？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/qPdlP3JlryK6gcPmLhw5"
+        },
+        {
+          "title": "Claude Code 上线自动记忆功能，不再反复解释项目背景",
+          "summary": "Anthropic为其命令行编码工具Claude Code推出“自动记忆”功能，让模型能在长期项目协作中积累项目认知，减少开发者重复输入背景信息的负担。",
+          "comment": "AI工具从单次会话理解向长期项目记忆演进，这对软件开发流程和开发者角色将产生怎样的重塑？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/QTPQmPZ1DsSBjTTymgK3"
+        },
+        {
+          "title": "DeepSeek联手清北发新论文，仅5000行代码改写规则！V4 架构专治推理I/O瓶颈，性能暴增187%",
+          "summary": "DeepSeek联合清华大学、北京大学发布论文，提出DualPath架构以解决智能体时代LLM推理的存储带宽瓶颈问题，显著提升性能。",
+          "comment": "当模型推理的瓶颈从算力转向I/O，系统层面的优化是否会成为下一代AI基础设施竞争的关键？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/G8pD8clar51Ssg6GwXmB"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI获1100亿美元融资，并与亚马逊达成战略合作",
+          "summary": "OpenAI宣布完成1100亿美元新一轮融资，投前估值7300亿美元，主要投资方包括软银、英伟达和亚马逊，并与亚马逊宣布战略合作，将在AWS上推出带状态的智能体运行时环境。",
+          "comment": "巨头资本与云服务商的深度绑定，是否会加速AI基础设施的垄断格局，并抬高后来者的入场门槛？",
+          "source": "OpenAI News / 歸藏的即刻动态",
+          "url": "https://openai.com/index/scaling-ai-for-everyone"
+        },
+        {
+          "title": "百度2025年财报：AI业务成核心增长引擎，全年营收1291亿元",
+          "summary": "百度发布2025年财报，显示其AI业务已成为公司核心增长引擎，全年总营收达1291亿元。",
+          "comment": "当AI业务成为传统科技巨头财报中的亮点，这是否意味着其商业化路径已经清晰，还是仍处于投入换增长的阶段？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311660"
+        },
+        {
+          "title": "特朗普下令政府停用Anthropic，五角大楼将其列为供应链风险",
+          "summary": "美国总统特朗普下令联邦政府停止使用Anthropic的AI产品，随后国防部长将其指定为供应链风险，起因是Anthropic拒绝放弃其AI产品的安全限制条款。",
+          "comment": "当AI公司的伦理准则与国家战略需求冲突时，商业公司应如何在技术自主权与市场准入之间做出抉择？",
+          "source": "BBC News / The Verge",
+          "url": "https://www.bbc.com/news/articles/cn48jj3y8ezo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-02-28T09:31:35.559585+08:00"
+}

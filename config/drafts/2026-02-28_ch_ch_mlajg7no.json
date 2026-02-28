@@ -1,0 +1,134 @@
+{
+  "date": "2026-02-28",
+  "time_window": "2026-02-27 10:00 ~ 2026-02-28 09:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "苹果推出 Ferret-UI Lite：一款用于查看和控制 UI 的端侧 AI 模型",
+          "summary": "苹果公司发布了一款针对移动与桌面屏幕优化的30亿参数端侧AI模型，可解析屏幕图像、理解UI元素并与应用交互，旨在构建轻量化端侧GUI智能体。",
+          "comment": "当AI模型能够直接在设备上理解和操作任何界面时，传统应用交互范式是否会被彻底颠覆？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/qPdlP3JlryK6gcPmLhw5"
+        },
+        {
+          "title": "DeepSeek联手清北发新论文，仅5000行代码改写规则！V4 架构专治推理I/O瓶颈",
+          "summary": "DeepSeek团队联合清华大学、北京大学发布论文，提出DualPath架构以解决智能体时代LLM推理的存储带宽瓶颈，据称性能可提升187%。",
+          "comment": "当模型推理的瓶颈从算力转向存储带宽，这是否意味着AI硬件竞赛的下一个战场将是内存架构？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/G8pD8clar51Ssg6GwXmB"
+        },
+        {
+          "title": "Claude Code 上线自动记忆功能，不再反复解释项目背景",
+          "summary": "Anthropic为其命令行编码工具Claude Code上线'自动记忆'功能，使模型能在长期项目协作中积累项目认知，减少开发者重复输入背景信息的负担。",
+          "comment": "AI助手拥有持续的项目记忆后，软件开发会从'一次性指令'模式转变为更像与一位资深同事的长期协作吗？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/QTPQmPZ1DsSBjTTymgK3"
+        },
+        {
+          "title": "Vision-language-action models are the next leap in autonomous robotics",
+          "summary": "文章探讨了如Helix、GR00T N1、RT-1等视觉-语言-动作模型如何使机器人能够理解指令并自主行动，代表了自主机器人的下一个飞跃。",
+          "comment": "当机器人能像理解语言一样理解视觉世界并执行动作时，通用机器人的到来会比我们预期的更早吗？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/vision-language-action-models-are-the-next-leap-in-autonomous-robotics/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI获1100亿美元融资，与亚马逊达成战略合作",
+          "summary": "OpenAI宣布获得1100亿美元新投资，投前估值7300亿美元，投资方包括软银、英伟达和亚马逊，并与亚马逊宣布战略合作，将前沿平台引入AWS。",
+          "comment": "千亿美元级别的融资进入单一AI公司，这是否标志着AI行业已从技术竞赛进入资本与生态垄断的新阶段？",
+          "source": "OpenAI News / 综合",
+          "url": "https://openai.com/index/scaling-ai-for-everyone"
+        },
+        {
+          "title": "特朗普政府下令禁止联邦机构使用Anthropic，五角大楼将其列为供应链风险",
+          "summary": "美国总统特朗普下令联邦机构停止使用Anthropic的AI产品，国防部长随后将该公司指定为供应链风险，起因是Anthropic拒绝放弃其AI产品的军事使用安全限制。",
+          "comment": "当AI公司的伦理准则与国家军事需求冲突时，科技公司应如何在商业、伦理与国家安全之间做出选择？",
+          "source": "BBC News / FT / The Verge",
+          "url": "https://www.bbc.com/news/articles/cn48jj3y8ezo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "百度2025年财报：AI业务成核心增长引擎，全年营收1291亿元",
+          "summary": "百度发布2025年财报，显示AI业务已成为其核心增长引擎，全年总营收达到1291亿元。",
+          "comment": "对于百度这样的传统互联网巨头，AI业务成为增长引擎是意味着成功转型，还是暴露出传统业务增长乏力的困境？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311660"
+        },
+        {
+          "title": "DeepSeek to release long-awaited AI model in new challenge to US rivals",
+          "summary": "中国AI公司DeepSeek即将发布备受期待的新AI模型，向美国竞争对手发起挑战，并与华为合作以减少对英伟达芯片的依赖。",
+          "comment": "在中国AI公司寻求技术突破和供应链自主的背景下，全球AI竞赛的格局会如何演变？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/e3366881-0622-40a7-9c34-a0d82e3d573e"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "阿里千问进军AI硬件领域，首款AI眼镜将亮相MWC",
+          "summary": "阿里巴巴旗下个人AI助手'千问'宣布进军AI硬件领域，将在MWC上发布首款AI眼镜，并计划年内推出AI指环、耳机等多款产品面向全球市场。",
+          "comment": "当互联网巨头从软件生态切入AI硬件，这是否会重塑以手机为中心的移动计算形态？",
+          "source": "93913 / VR陀螺",
+          "url": "https://www.93913.com/119537.html"
+        },
+        {
+          "title": "三星Galaxy Unpacked 2026：Agentic AI定义新生态，首款AI智能眼镜亮相",
+          "summary": "三星在发布会上聚焦智能体AI，并推出了其首款AI智能眼镜，旨在拉开其AI全场景生态落地的新篇章。",
+          "comment": "智能体AI与可穿戴硬件的结合，是否意味着个人AI助理将从手机屏幕真正走向我们的日常生活空间？",
+          "source": "93913",
+          "url": "https://www.93913.com/119532.html"
+        },
+        {
+          "title": "刚刚，Nano Banana 2 发布！便宜又大碗",
+          "summary": "AI生图模型Nano Banana 2发布，以其高性价比和快速生成能力受到关注，在速度与免费额度上具有优势。",
+          "comment": "当高质量AI生图模型的成本和门槛不断降低，创意行业的入门壁垒和生产力标准会发生怎样的变化？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1655944?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Jack Dorsey made the loudest case yet that AI is already replacing jobs",
+          "summary": "Block公司裁员近40%，其创始人Jack Dorsey明确表示，AI取代人类工作的时代已经到来，此次裁员是这一趋势的显著例证。",
+          "comment": "当企业主公开将大规模裁员归因于AI替代时，社会应如何为即将到来的劳动力结构剧变做好准备？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/02/27/jack-dorsey-made-the-loudest-case-yet-ai-is-already-replacing-jobs.html"
+        },
+        {
+          "title": "AI is rewiring how the world's best Go players think",
+          "summary": "文章探讨了自AlphaGo击败人类顶尖棋手十年后，AI如何从根本上改变和重新连接了世界顶级围棋棋手的思维方式与训练模式。",
+          "comment": "当AI不仅超越人类表现，更开始重塑人类顶尖专家的思维模式时，人类在相关领域的角色和独特性将如何定义？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/02/27/1133624/ai-is-rewiring-how-the-worlds-best-go-players-think/"
+        },
+        {
+          "title": "领克关掉的大灯，照亮了新能源车圈的吐槽大会",
+          "summary": "一起因语音误操作导致车辆在高速行驶中关闭大灯的事故，引发了公众对新能源汽车AI语音交互安全性与可靠性的广泛讨论。",
+          "comment": "在追求智能化和便捷交互的同时，汽车厂商应如何设计安全冗余，防止AI助手变成'人工智障'甚至安全隐患？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7893155.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-02-28T09:32:51.513887+08:00",
+  "channel_id": "ch_mlajg7no",
+  "channel_name": "2人测试群for部门",
+  "topic_mode": "broad"
+}
