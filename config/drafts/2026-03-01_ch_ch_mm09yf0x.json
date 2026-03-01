@@ -1,0 +1,126 @@
+{
+  "date": "2026-03-01",
+  "time_window": "2026-02-28 10:00 ~ 2026-03-01 09:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "谷歌 Nano Banana 2 一夜补齐短板，各种图解都能画，价格才是 OpenAI 一半",
+          "summary": "谷歌发布Nano Banana 2图像模型，主打极速体验与专业画质，并新增实时联网能力，可结合搜索信息生成更贴合现实的图像。",
+          "comment": "当图像生成模型具备实时联网检索能力，这是否意味着AI将从单纯的‘内容生成者’转变为‘信息整合与可视化表达者’，从而改变我们获取和理解信息的方式？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/GcPU9NHkexyuriC2cBM2"
+        },
+        {
+          "title": "阿里CoPaw桌面Agent工具正式开源",
+          "summary": "阿里巴巴旗下AgentScope团队的个人AI助手CoPaw正式开源，支持用户自由接入本地模型、编写自定义Skills，并集成专属消息应用。",
+          "comment": "大厂将成熟的桌面Agent工具开源，是否会加速个人AI助手生态的碎片化与个性化，还是最终会收敛到少数几个主流框架？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311680"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "八位AI算力CEO：2026，算力旧规则正在作废",
+          "summary": "行业观点认为，AI发展正让算力产业面临逻辑重塑，电力、存储、成本、算法协同等具体而真实的挑战成为决定行业生死的关键命题。",
+          "comment": "当AI算力需求从追求峰值性能转向综合考量成本、能效和利用率，这是否意味着硬件和基础设施行业的竞争规则和成功标准将被彻底改写？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/chips/YDGUXz9W02bqbbiJ.html"
+        },
+        {
+          "title": "AI眼镜市场规模化增长提速 硬件赛道迎来产业新机遇",
+          "summary": "在AI技术与消费电子深度融合趋势下，AI眼镜赛道发展热度持续攀升，行业正式迈入规模化增长新阶段，成为新一代人机交互核心赛道。",
+          "comment": "AI眼镜的规模化增长，是否会像智能手机一样催生出全新的应用生态和交互范式，还是仅仅作为现有设备的附属屏幕？",
+          "source": "93913",
+          "url": "https://www.93913.com/119553.html"
+        },
+        {
+          "title": "春节AI红包大战埋下了四个伏笔",
+          "summary": "文章分析指出，春节期间的AI红包大战只是一场遭遇战，AI的产品体验尚不成熟，远未到决定行业最终格局的时刻。",
+          "comment": "以红包、营销为切入点的AI应用落地，是真需求还是伪风口？这种‘轻量级’场景的竞争，最终会沉淀下用户习惯还是仅仅是一阵流量狂欢？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7894590.html"
+        },
+        {
+          "title": "杭州发布AI新政：2026年打造10+‘AI+’标杆场景，智算规模超70EFlops，最高500万元场景支持、300万元终端奖励",
+          "summary": "杭州市发布2026年版经济政策，明确将人工智能作为核心引擎，提出打造标杆场景、扩大智算规模并提供高额资金支持。",
+          "comment": "地方政府通过巨额补贴推动AI场景落地和终端普及，这种强干预模式能否有效培育出具有市场竞争力的本土AI产业生态，而非催生政策套利？",
+          "source": "93913",
+          "url": "https://www.93913.com/119573.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Claude突遭特朗普高调 ‘封杀’！Altman公开声援‘死对头’后，却用同款协议顺利过关了",
+          "summary": "特朗普下令联邦机构停止使用Anthropic产品，并将其排除出联邦承包商名单；而OpenAI则通过与国防部达成包含安全护栏的协议顺利合作。",
+          "comment": "当AI巨头在国家安全与商业利益之间做出不同选择时，这是否预示着未来全球AI产业将沿着‘价值观’和‘应用红线’产生更深层次的分化？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/h8WsVXZzHtP9W6l2mQqO"
+        },
+        {
+          "title": "The trap Anthropic built for itself",
+          "summary": "文章分析认为，Anthropic等AI公司长期承诺自我负责治理，但在缺乏明确规则的情况下，这种自我设定的道德护栏反而可能使其陷入困境。",
+          "comment": "在监管真空期，由企业自我设定的AI伦理和安全护栏，究竟是保护社会的盾牌，还是束缚自身、将市场拱手让给无底线竞争者的枷锁？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/02/28/the-trap-anthropic-built-for-itself/"
+        },
+        {
+          "title": "Anthropic's Claude hits No. 1 on Apple's top free apps list after Pentagon rejection",
+          "summary": "在Anthropic拒绝五角大楼要求并引发争议后，其Claude应用在美国苹果商店免费应用排行榜上超越ChatGPT升至第一。",
+          "comment": "一次涉及国家安全原则的争议性拒绝，反而带来了巨大的公众关注和市场份额提升，这是否意味着消费者正在用下载投票，支持有‘原则’的AI公司？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/02/28/anthropics-claude-apple-apps.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "我国首个人形机器人国家级标准体系发布 行业迈入规范化发展新阶段",
+          "summary": "我国发布首个覆盖人形机器人全产业链、全生命周期的国家级标准体系，标志着该产业进入标准引领、规范有序的新发展阶段。",
+          "comment": "国家级标准体系的建立，是会加速人形机器人产业的成熟与商业化落地，还是可能过早地固化技术路径，抑制创新多样性？",
+          "source": "93913",
+          "url": "https://www.93913.com/119571.html"
+        },
+        {
+          "title": "汉堡王给员工戴上 AI 耳机：你的每一句‘谢谢’，都在被 AI 打分",
+          "summary": "汉堡王为员工配备AI耳机，用于实时分析服务用语（如‘谢谢’），并对服务质量进行自动化评估和打分。",
+          "comment": "AI对服务业员工进行微观行为管理，是在提升标准化服务质量，还是在制造一种新型的数字泰勒主义，加剧工作异化？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1656044?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "面壁智能完成数亿元融资，中国电信战略领投",
+          "summary": "AI公司面壁智能宣布完成新一轮数亿元融资，由中国电信战略领投，中信金石、中信私募跟投。",
+          "comment": "电信运营商战略投资AI初创公司，是意在布局算力网络的下游应用，还是预示着未来AI能力将像通信服务一样成为运营商的基础业务？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311681"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-01T09:32:14.357404+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}

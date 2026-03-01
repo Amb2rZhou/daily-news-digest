@@ -1,0 +1,114 @@
+{
+  "date": "2026-03-01",
+  "time_window": "2026-02-28 10:00 ~ 2026-03-01 09:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "德国总理默茨到访杭州体验AI眼镜，现场吸引多位德企高管下单",
+          "summary": "德国总理默茨在杭州访问期间，主动试戴了中国人工智能公司灵伴科技（Rokid）的AI眼镜，并吸引了多位随行的德国企业高管现场下单。",
+          "comment": "国家元首的公开体验是否将成为AI硬件打入高端商务市场的关键催化剂？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119555.html"
+        },
+        {
+          "title": "我国首个人形机器人国家级标准体系发布 行业迈入规范化发展新阶段",
+          "summary": "我国首个覆盖人形机器人全产业链、全生命周期的国家级标准顶层设计正式发布，标志着该产业告别‘无规可依’阶段，进入标准引领的规范化发展新阶段。",
+          "comment": "统一的国家标准会加速人形机器人的商业化落地，还是会因过早规范而限制技术创新？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119571.html"
+        },
+        {
+          "title": "Horizon OS升级赋能 Meta Quest 3变身便携空间电脑",
+          "summary": "Meta通过为Quest 3头显推送最新的Horizon OS系统更新，使其从VR游戏设备升级为兼具移动办公和娱乐功能的便携空间电脑。",
+          "comment": "VR头显向‘空间电脑’的转型，是否预示着未来个人计算中心将从桌面和手机转向头戴设备？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119567.html"
+        },
+        {
+          "title": "Vision Pro发布沉浸式视频《Elevated》系列第三集“Switzerland”",
+          "summary": "苹果为其Vision Pro头显发布了原创沉浸式旅行视频系列《Elevated》的第三集，带领观众以独特的空中视角俯瞰瑞士的壮丽景色。",
+          "comment": "顶级硬件厂商自制独占内容，是否是推动高端XR设备普及和建立内容生态壁垒的唯一路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544777.html"
+        },
+        {
+          "title": "AI眼镜市场规模化增长提速 硬件赛道迎来产业新机遇",
+          "summary": "在AI与消费电子融合趋势下，AI眼镜赛道热度持续攀升，头部企业加速布局，市场规模稳步扩容，行业正式迈入规模化增长新阶段。",
+          "comment": "AI眼镜的规模化增长，其核心驱动力是技术成熟、成本下降，还是杀手级应用场景的最终出现？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119553.html"
+        },
+        {
+          "title": "深入解析与机器人配套的外围运动系统",
+          "summary": "文章探讨了各种旨在服务、移动和增强机器人功能，以最大化其效用的自动化外围运动系统。",
+          "comment": "当机器人本体技术趋于同质化，决定其最终实用性的关键是否会转向这些‘配角’外围系统？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/inside-the-peripheral-motion-systems-that-complement-robotics/"
+        },
+        {
+          "title": "杭州发布AI新政：最高500万元场景支持、300万元终端奖励",
+          "summary": "杭州市发布2026年版经济政策，将人工智能作为核心引擎，提出打造10个以上‘AI+’标杆场景，并对符合条件的AI终端产品给予最高300万元奖励。",
+          "comment": "地方政府对AI硬件的直接现金奖励，能否有效刺激本土创新并形成有竞争力的产业集群？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119573.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "谷歌Nano Banana 2一夜补齐短板，各种图解都能画，价格才是OpenAI一半",
+          "summary": "谷歌发布Nano Banana 2图像生成模型，主打极速体验与专业画质，并新增实时联网能力，使其能结合搜索信息生成更贴合现实的图像，同时价格仅为竞争对手的一半。",
+          "comment": "当图像模型具备了实时检索和理解能力，AI生成的内容会从‘好看’走向‘真实可信’吗？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/GcPU9NHkexyuriC2cBM2"
+        },
+        {
+          "title": "阿里CoPaw桌面Agent工具正式开源",
+          "summary": "阿里巴巴旗下AgentScope团队的个人AI助手CoPaw正式开源，该工具支持用户自由接入本地模型、编写自定义技能，并集成专属消息应用，以满足高度定制化需求。",
+          "comment": "开源个人AI助手是否会加速AI Agent在终端用户侧的普及和个性化定制？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311680"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "特朗普下令政府停用Anthropic，Claude遭高调‘封杀’",
+          "summary": "在Anthropic与美国国防部就AI使用安全护栏问题公开争执后，美国总统特朗普下令所有联邦机构停止使用Anthropic的产品，并给予六个月过渡期。",
+          "comment": "当AI公司的伦理原则与政府需求发生根本冲突时，科技巨头应如何平衡商业、伦理与国家安全？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/h8WsVXZzHtP9W6l2mQqO"
+        },
+        {
+          "title": "面壁智能完成数亿元融资，中国电信战略领投",
+          "summary": "国内AI公司面壁智能宣布完成新一轮数亿元融资，本轮融资由中国电信战略领投，中信金石、中信私募跟投。",
+          "comment": "电信运营商战略投资AI初创公司，是否预示着AI基础设施与通信网络的融合将进入新阶段？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311681"
+        },
+        {
+          "title": "春节AI大战的‘另类’玩家：小红书在慌什么？",
+          "summary": "文章分析了在各大平台卷AI生成内容时，小红书却推出主打‘真人感’答案的语音搜索功能，认为这是其在通用AI可能拦截流量入口背景下的一场防御战。",
+          "comment": "在AI生成内容泛滥的时代，‘真人感’和社区信任是否会成为内容平台最核心的护城河？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7894458.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-01T09:31:22.345224+08:00",
+  "channel_id": "default",
+  "channel_name": "2人测试群",
+  "topic_mode": "focused"
+}
