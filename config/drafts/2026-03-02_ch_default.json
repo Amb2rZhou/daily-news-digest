@@ -78,8 +78,8 @@
     }
   ],
   "source": "scheduled",
-  "status": "pending_review",
-  "created_at": "2026-03-02T09:31:12.278346+08:00",
+  "status": "sent",
+  "created_at": "2026-03-02T10:00:02.110797+08:00",
   "channel_id": "default",
   "channel_name": "2人测试群",
   "topic_mode": "focused"
