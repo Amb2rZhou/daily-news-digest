@@ -155,7 +155,7 @@
       "enabled": true
     },
     {
-      "url": "https://feeds.feedburner.com/TechCrunch/artificial-intelligence",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
       "name": "TechCrunch AI",
       "group": "英文科技媒体",
       "enabled": true
@@ -185,20 +185,20 @@
       "enabled": true
     },
     {
-      "url": "https://hnrss.org/frontpage",
+      "url": "https://news.ycombinator.com/rss",
       "name": "Hacker News",
       "group": "技术社区",
       "enabled": true
     },
     {
-      "url": "https://www.reddit.com/r/MachineLearning/.rss",
-      "name": "Reddit ML",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "name": "HuggingFace Blog",
       "group": "技术社区",
       "enabled": true
     },
     {
-      "url": "https://www.reddit.com/r/artificial/.rss",
-      "name": "Reddit AI",
+      "url": "https://simonwillison.net/atom/everything/",
+      "name": "Simon Willison",
       "group": "技术社区",
       "enabled": true
     },
@@ -553,8 +553,8 @@
       "enabled": true
     },
     {
-      "url": "https://www.87870.com/feed/",
-      "name": "87870",
+      "url": "https://news.nweon.com/feed",
+      "name": "映维网",
       "group": "智能硬件",
       "enabled": true
     }
