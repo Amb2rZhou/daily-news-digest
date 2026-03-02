@@ -39,7 +39,7 @@
       "id": "ch_mlajg7no",
       "type": "webhook",
       "name": "2人测试群for部门",
-      "enabled": true,
+      "enabled": false,
       "send_hour": 19,
       "send_minute": 0,
       "topic_mode": "broad",
