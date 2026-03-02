@@ -31,9 +31,21 @@
       "send_hour": 19,
       "send_minute": 0,
       "topic_mode": "focused",
-      "max_news_items": 15,
+      "max_news_items": 14,
       "webhook_url_base": "",
       "webhook_key_slot": 3
+    },
+    {
+      "id": "ch_aimirror",
+      "type": "webhook",
+      "name": "ai-interactive镜像版",
+      "enabled": true,
+      "send_hour": 19,
+      "send_minute": 0,
+      "topic_mode": "focused",
+      "max_news_items": 14,
+      "webhook_url_base": "",
+      "webhook_key_slot": 7
     },
     {
       "id": "ch_mlajg7no",
