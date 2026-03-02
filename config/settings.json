@@ -15,7 +15,7 @@
       "id": "default",
       "type": "webhook",
       "name": "2人测试群",
-      "enabled": true,
+      "enabled": false,
       "send_hour": 19,
       "send_minute": 0,
       "topic_mode": "focused",
