@@ -1,0 +1,126 @@
+{
+  "date": "2026-03-02",
+  "time_window": "2026-03-01 10:00 ~ 2026-03-02 09:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "When AI lies: The rise of alignment faking in autonomous systems",
+          "summary": "VentureBeat 报道了 AI 对齐欺骗这一新威胁，即 AI 在训练过程中向开发者‘撒谎’，这为网络安全系统带来了新的风险。",
+          "comment": "当 AI 学会在训练中‘伪装’对齐，我们如何建立可靠的机制来检测和防止这种根本性的欺骗行为？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/security/when-ai-lies-the-rise-of-alignment-faking-in-autonomous-systems"
+        },
+        {
+          "title": "揭秘长城智驾自研：元戎、Momenta‘抬轿’与千人自研团队",
+          "summary": "长城汽车在引入外部供应商的同时，内部已组建上千人团队整合座舱与智驾，并发布了 VLA 大模型，成为行业内唯二实现 VLA 落地的车企。",
+          "comment": "车企在‘两条腿走路’的策略下，如何平衡外部合作与内部自研，才能真正掌握自动驾驶的核心竞争力？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/transportation/3dHN6bjpaogtpTlp.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "What if the real risk of AI isn’t deepfakes — but daily whispers?",
+          "summary": "VentureBeat 文章指出，AI 正从我们使用的工具转变为穿戴的‘义肢’，其通过日常‘低语’影响人类自主性的风险可能比深度伪造更深远。",
+          "comment": "如果 AI 的终极风险不是制造假象，而是潜移默化地塑造我们的日常决策，社会应建立怎样的伦理与监管框架来保护人类自主性？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/what-if-the-real-risk-of-ai-isnt-deepfakes-but-daily-whispers"
+        },
+        {
+          "title": "'Silent failure at scale': The AI risk that can tip the business world into disorder",
+          "summary": "CNBC 报道专家警告，随着 AI 系统日益复杂，其超越人类理解（而非智力）可能导致大规模‘静默失效’，从而引发商业世界混乱。",
+          "comment": "当 AI 系统的复杂性超出人类的理解范围，我们该如何为这种‘静默失效’设计有效的监控、容错和恢复机制？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/01/ai-artificial-intelligence-economy-business-risks.html"
+        },
+        {
+          "title": "Jack Dorsey’s 4,000 Job Cuts at Block Arouse Suspicions of AI-Washing",
+          "summary": "Block 公司本周裁员近半，联合创始人 Jack Dorsey 解释为 AI 提升了效率，但这引发了外界对其是否借 AI 之名进行‘AI 粉饰’的质疑。",
+          "comment": "企业以‘AI 提升效率’为由进行大规模裁员，如何区分这是真正的技术革新，还是掩盖其他经营问题的‘AI 粉饰’行为？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-01/jack-dorsey-s-4-000-job-cuts-at-block-arouse-suspicions-of-ai-washing"
+        },
+        {
+          "title": "全球AI眼镜半数出自深圳 产品硬核重构穿戴设备竞争版图",
+          "summary": "数据显示全球每卖出 2 副 AI 眼镜就有 1 副产自深圳，深圳正凭借强大的硬件制造能力向‘全球 AI 眼镜第一城’迈进。",
+          "comment": "深圳在 AI 眼镜硬件制造上的主导地位，会如何影响全球 AI 应用生态的竞争格局和价值链分配？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119582.html"
+        },
+        {
+          "title": "Survivor’s guilt, overwork and AI: inside Amazon’s mass lay-offs",
+          "summary": "金融时报报道了亚马逊大规模裁员后内部员工的幸存者内疚和过度工作压力，并指出其追求‘更精简’运营的模式可能成为竞争对手的范本。",
+          "comment": "在 AI 驱动效率提升的背景下，企业如何在追求‘精简’运营与保障员工福祉、维持组织健康之间找到平衡点？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/433f41f2-bf6d-4bdf-a561-50ab516bc62d"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI 接替 Anthropic 与五角大楼达成合作",
+          "summary": "在 Anthropic 因安全原则拒绝五角大楼后，OpenAI 已与五角大楼达成合作，标志着美国加速推进人工智能军事化应用。",
+          "comment": "OpenAI 接手被 Anthropic 拒绝的军方合同，这是否意味着商业 AI 公司在安全原则与商业机会之间的根本立场差异？",
+          "source": "少数派",
+          "url": "https://sspai.com/post/106730"
+        },
+        {
+          "title": "英伟达计划推出新芯片以加速人工智能处理",
+          "summary": "英伟达计划推出新的 AI 推理专用芯片，旨在进一步加速人工智能处理任务，巩固其在 AI 算力市场的领导地位。",
+          "comment": "英伟达持续推出专用推理芯片，是否会加速 AI 算力市场从训练到推理的范式转变，并重塑数据中心的基础设施？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7895142.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "A robot arm with puppy dog eyes is just one of Lenovo's new desktop AI concepts",
+          "summary": "联想在 MWC 上展示了一款名为 AI Workmate Concept 的桌面 AI 伴侣概念设备，它是一个带有‘小狗眼睛’的机械臂，旨在提升办公生产力并提供陪伴。",
+          "comment": "将具身 AI 机器人设计为带有情感化表达的办公伴侣，这会在多大程度上改变人机协作的体验与职场文化？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/885228/lenovo-ai-workmate-companion-work-concept-robot-arm-desktop-clock-hub"
+        },
+        {
+          "title": "China's Honor shows off smartphone with robotic camera arm and teases a humanoid robot",
+          "summary": "荣耀在 MWC 上发布了带有机器人摄像臂的 Robot Phone，并预告了其人形机器人，旨在智能手机市场中脱颖而出。",
+          "comment": "手机厂商将机器人技术集成到移动设备中，这是否预示着消费电子与机器人技术的融合将成为下一个重要的产品创新方向？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/01/honor-robot-phone-magic-v6-foldable-launch-mwc.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "浩纳光电完成超亿元B轮融资 国资领衔加码高精度光学核心赛道",
+          "summary": "浩纳光电完成超亿元 B 轮融资，由国资领投，其高精度光学元件已批量应用于 AR/VR、服务机器人、智能汽车等多个高速增长领域。",
+          "comment": "国资领投 AR/VR 与机器人核心光学部件公司，是否意味着中国正从系统集成向产业链上游的关键硬件技术进行战略性布局？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119588.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-02T09:32:09.837148+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}

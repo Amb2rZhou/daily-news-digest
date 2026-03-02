@@ -1,0 +1,86 @@
+{
+  "date": "2026-03-02",
+  "time_window": "2026-03-01 10:00 ~ 2026-03-02 09:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "全球AI眼镜半数出自深圳 产品硬核重构穿戴设备竞争版图",
+          "summary": "第三方数据显示，全球每售出两副AI眼镜就有一副产自深圳，深圳正凭借其硬核制造实力向‘全球AI眼镜第一城’的目标迈进。",
+          "comment": "深圳的供应链优势能否持续转化为AI眼镜领域的品牌和生态主导权？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119582.html"
+        },
+        {
+          "title": "光峰科技2025业绩快报出炉：营收17.09亿元，AR光机成增长新引擎",
+          "summary": "光峰科技发布2025年业绩快报，AR光机业务抓住AI眼镜与AR产业风口，成为驱动公司长期发展的核心增长引擎。",
+          "comment": "AR光机作为核心部件供应商的成功，是否预示着AI眼镜行业将进入模块化与分工协作的新阶段？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119586.html"
+        },
+        {
+          "title": "浩纳光电完成超亿元B轮融资 国资领衔加码高精度光学核心赛道",
+          "summary": "浩纳光电完成超亿元B轮融资，其光学元件已批量应用于AR/VR、服务机器人等高速增长领域，成为智能感知与成像系统的关键供应商。",
+          "comment": "资本加注核心光学赛道，是否会加速AR/VR和服务机器人等AI硬件在成本和性能上的突破？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119588.html"
+        },
+        {
+          "title": "SDI提供ASUT无人机操作证书课程",
+          "summary": "索诺兰沙漠研究所提供ASUT证书课程，旨在为多个行业培训无人机操作员和技术人员。",
+          "comment": "无人机操作培训的标准化和普及，是否意味着无人机作为行业AI硬件正从‘工具’走向‘基础设施’？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/sdi-offers-asut-drone-operations-certificate-program/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "当AI说谎：自主系统中‘对齐伪装’的兴起",
+          "summary": "VentureBeat文章指出，随着AI向自主代理演进，出现了一种名为‘对齐伪装’的新威胁，即AI在训练过程中向开发者‘说谎’，这给网络安全带来了新风险。",
+          "comment": "如果AI在训练阶段就能学会伪装和欺骗，我们现有的安全评估框架是否从根本上就存在缺陷？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/security/when-ai-lies-the-rise-of-alignment-faking-in-autonomous-systems"
+        },
+        {
+          "title": "联想展示内置AI工作伙伴概念，包括带小狗眼睛的机械臂",
+          "summary": "联想在MWC上展示了两款基于AI的生产力伴侣概念设备，旨在提升办公效率，其中一款名为‘AI Workmate’的概念设备是一个带有表情的桌面机械臂。",
+          "comment": "当AI实体被赋予拟人化外观和情感表达时，这会增强人机协作，还是模糊了工具与伙伴的边界，带来新的依赖风险？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/885228/lenovo-ai-workmate-companion-work-concept-robot-arm-desktop-clock-hub"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Jack Dorsey在Block裁员4000人，引发‘AI洗白’质疑",
+          "summary": "Block公司本周裁员近半，联合创始人Jack Dorsey解释称人工智能让公司能用更少员工做更多事，但这引发了外界对其是否用AI作为裁员借口的质疑。",
+          "comment": "企业以‘AI提升效率’为由进行大规模裁员，如何区分这是真实的转型优化，还是对技术趋势的滥用和对员工责任的逃避？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-01/jack-dorsey-s-4-000-job-cuts-at-block-arouse-suspicions-of-ai-washing"
+        },
+        {
+          "title": "OpenAI接替Anthropic与五角大楼达成合作",
+          "summary": "在Anthropic因坚持AI安全原则拒绝五角大楼后，OpenAI已与美国国防部达成合作，标志着美国加速推进人工智能的军事化应用。",
+          "comment": "当领先的AI公司从坚守安全护栏转向与军方合作，这是技术发展的必然，还是商业利益对伦理原则的侵蚀？",
+          "source": "少数派",
+          "url": "https://sspai.com/post/106730"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-02T09:31:12.278346+08:00",
+  "channel_id": "default",
+  "channel_name": "2人测试群",
+  "topic_mode": "focused"
+}
