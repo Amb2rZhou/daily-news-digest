@@ -787,7 +787,7 @@ def _call_ai(prompt: str, label: str, anthropic_client=None) -> str:
     return None
 
 
-def _load_recent_titles(settings: dict, days: int = 3) -> list[str]:
+def _load_recent_titles(settings: dict, days: int = 2) -> list[str]:
     """Load news titles from recent drafts for cross-day dedup.
 
     Scans the last N days' draft files (excluding today) and extracts
@@ -829,15 +829,12 @@ def _format_previously_reported(titles: list[str]) -> str:
     """Format previously reported titles for injection into AI prompts."""
     if not titles:
         return ""
-    titles_list = "\n".join(f"- {t}" for t in titles[:60])
+    titles_list = "\n".join(f"- {t}" for t in titles[:40])
     return f"""
 
-⚠️ **跨天去重（重要）**：以下是最近几天已推送过的新闻标题。请避免选择完全相同的旧闻。
-但如果某个已报道过的事件今天出现了**有实质新信息的后续报道**，仍然可以选入。例如：
-- ✅ 昨天报了「GPT-5发布」，今天出了「GPT-5 benchmark测评结果」→ 可以选（新信息）
-- ✅ 昨天报了「某公司融资传闻」，今天「正式官宣融资金额」→ 可以选（确认+新细节）
-- ❌ 昨天报了「百度发布财报」，今天另一家媒体又报道同一份财报 → 不选（无新信息）
-- ❌ 昨天报了「某产品发布」，今天只是换个角度评论同一产品 → 不选（无新事实）
+⚠️ **跨天去重**：以下是昨天已推送过的新闻标题，请避免选择完全相同的旧闻。
+但注意：**优先保证选够数量**，去重只排除明确重复的旧闻。如果排除后数量不够，宁可保留有一定相关性的新闻也不要留空。
+有实质新信息的后续报道可以选入（如昨天报了发布，今天出了测评结果）。
 
 已报道过的新闻：
 {titles_list}
@@ -1028,7 +1025,7 @@ URL: {article.get('url', '')}
         print(f"  - Paywalled sources: {paywalled_sources}")
 
     # Load recently reported titles for cross-day dedup
-    recent_titles = _load_recent_titles(settings, days=3)
+    recent_titles = _load_recent_titles(settings)
     previously_reported = _format_previously_reported(recent_titles)
     if recent_titles:
         print(f"  - Cross-day dedup: {len(recent_titles)} titles from recent drafts")
