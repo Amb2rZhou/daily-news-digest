@@ -1,10 +1,10 @@
 name: Fetch News
 
 on:
-  # 低峰期双 cron，sleep 到最早 send_time - 30min 再执行
+  # 双 cron，sleep 到最早 send_time - 30min 再执行
   schedule:
-    - cron: '0 22 * * *'   # 主触发: CST 06:00 (低峰期，可靠)
-    - cron: '0 0 * * *'    # 备用:   CST 08:00 (防主触发跳过)
+    - cron: '0 9 * * *'    # 主触发: CST 17:00 (sleep ~1.5h 到 18:30 抓取)
+    - cron: '0 10 * * *'   # 备用:   CST 18:00 (防主触发跳过)
 
   # 手动触发，可选立即发送（测试模式）
   workflow_dispatch:
