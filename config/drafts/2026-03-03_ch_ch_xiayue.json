@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-03",
+  "time_window": "2026-03-02 19:00 ~ 2026-03-03 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "千问3.5开源四连发，马斯克点赞：智能密度令人印象深刻",
+          "summary": "阿里巴巴开源了四款小尺寸的千问3.5系列模型，最小的仅0.8B参数，性能强大，其中9B模型性能媲美GPT-OSS-120B，适合移动设备和服务器端部署。",
+          "comment": "当小尺寸模型在性能上逼近甚至超越大模型时，这是否意味着AI推理的‘瘦身革命’将彻底改变硬件部署格局，让智能无处不在？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/d16BDGbvBatj6eFYcFdS"
+        },
+        {
+          "title": "Rivet 发布 Sandbox Agent SDK，解决 Agent API 碎片化问题",
+          "summary": "Rivet推出的Sandbox Agent SDK提供了一个通用API，允许开发者在Claude Code、Codex等不同编程代理运行时之间切换，无需重写集成逻辑。",
+          "comment": "统一的Agent API标准能否成为AI开发领域的‘USB接口’，加速复杂多智能体系统的构建与普及？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/9wBHVhzl3hoUORHLyULU"
+        },
+        {
+          "title": "Claude Code与Wispr Flow融合，推动语音驱动开发新范式",
+          "summary": "Anthropic旗下Claude Code与语音输入工具Wispr Flow深度集成，构建出以语音为核心的高效开发工作流，显著提升开发者与AI系统的协作效率。",
+          "comment": "当编程从键盘敲击转向自然语音对话，这是否会从根本上改变软件开发的思维模式，并催生一批全新的‘语音优先’开发者？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311756"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "AI产品榜：月活2.03亿、增速552%，千问成全球第三大AI应用",
+          "summary": "最新数据显示，阿里巴巴的千问以2.03亿月活用户成为全球第三大AI应用，增速高达552%，与字节跳动的豆包形成国内AI应用双雄并立格局。",
+          "comment": "中国AI应用在用户规模上已跻身全球前列，这是否意味着未来的AI竞争主战场将从技术突破转向用户体验和生态构建？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/FUngaML4kxA0cuFL.html"
+        },
+        {
+          "title": "2025年国内消费级AI/AR市场迎历史性突破 全年销量69.6万台同比翻倍增长",
+          "summary": "数据显示，2025年中国消费级AI/AR终端市场销量达69.6万台，同比增长109%，实现翻倍式增长，成为智能穿戴与空间计算领域最亮眼的赛道。",
+          "comment": "AI/AR设备销量翻倍是否预示着消费级‘空间计算’的拐点已至，我们距离‘眼镜取代手机’的预言还有多远？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119654.html"
+        },
+        {
+          "title": "ChatGPT uninstalls surged by 295% after DoD deal",
+          "summary": "在OpenAI与美国国防部达成合作的消息传出后，ChatGPT应用的卸载量激增了295%，而竞争对手Claude的下载量则有所增长。",
+          "comment": "用户用卸载投票反对AI公司与军方合作，这是否意味着‘价值观对齐’将成为未来AI公司获取用户信任的核心竞争力？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/02/chatgpt-uninstalls-surged-by-295-after-dod-deal/"
+        },
+        {
+          "title": "6 lessons I learned watching a robotics startup die from the inside",
+          "summary": "一位前COO回顾了一家低成本人形机器人初创公司倒闭的教训，包括对AI的过度依赖、硬件和供应链的残酷现实以及激进的时间表。",
+          "comment": "当资本热潮退去，硬件创业的‘硬骨头’本质凸显，这是否意味着人形机器人产业将进入一个更务实、更注重工程化的新阶段？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/6-lessons-learned-watching-a-robotics-startup-die-from-the-inside/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI's Altman admits defense deal 'looked opportunistic and sloppy' amid backlash",
+          "summary": "OpenAI CEO Sam Altman承认公司与五角大楼的交易‘看起来机会主义且草率’，并表示‘不应该匆忙行事’，目前正在对协议进行一些补充修订。",
+          "comment": "当商业公司成为国家安全基础设施的一部分，它们应如何建立透明、审慎的治理机制来平衡商业利益、公众信任与国家需求？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html"
+        },
+        {
+          "title": "SoftBank’s $30 Billion OpenAI Bet Spurs S&P Credit Outlook Cut",
+          "summary": "标普全球将软银集团的信用展望从稳定下调至负面，称其计划向OpenAI追加300亿美元投资可能会损害该公司的流动性和资产信用质量。",
+          "comment": "软银豪赌OpenAI引发信用担忧，这是否标志着全球科技投资逻辑正从分散风险转向All in单一‘皇冠上的明珠’？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-03/softbank-s-30-billion-openai-bet-spurs-s-p-credit-outlook-cut"
+        },
+        {
+          "title": "成为主角的百度 AI，能支棱起来吗？",
+          "summary": "文章分析了百度AI当前的战略与处境，指出李彦宏正变得更加决绝，百度AI需要在新一轮竞争中证明自己。",
+          "comment": "在文心一言之后，百度AI需要怎样的‘第二增长曲线’才能重新夺回在中国AI舞台中央的话语权？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7898191.html"
+        },
+        {
+          "title": "Qualcomm CEO sees robotics as a 'larger opportunity' within 2 years",
+          "summary": "高通CEO认为机器人业务将在未来两年内成为比手机更大的市场机会，此前高通已推出专为机器人设计的Dragonwing品牌处理器。",
+          "comment": "芯片巨头将机器人视为下一个蓝海，这是否预示着通用机器人芯片平台将像智能手机芯片一样，成为推动产业爆发的关键基石？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/03/qualcomm-ceo-robotics-chips.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "阿里云百炼专属版登陆国际市场，加速全球企业构建专属AI引擎",
+          "summary": "阿里云在MWC 2026上面向国际市场推出企业级Agentic AI开发平台‘百炼专属版’，帮助金融、医疗等高合规行业企业利用私有数据构建专属业务Agent。",
+          "comment": "中国云厂商将成熟的AI工程化平台推向全球，这是否意味着下一阶段的云竞争将是‘AI原生基础设施’的全面对标？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/hSJAaoRMruFtIEHE.html"
+        },
+        {
+          "title": "MWC 2026：科大讯飞40克AR翻译眼镜问世，中国光学厂商定义AR‘硬指标’",
+          "summary": "科大讯飞在MWC上展示了一款仅重40克的AR翻译眼镜原型，采用国产光波导方案，最高入眼亮度超1500尼特，专为商务和留学生场景设计。",
+          "comment": "当AR眼镜的重量和亮度等‘硬指标’被不断突破，距离它成为像无线耳机一样普及的日常生产力工具还有哪些关键障碍？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544789.html"
+        },
+        {
+          "title": "Big Google Home update lets Gemini describe live camera feeds",
+          "summary": "谷歌为智能家居平台Google Home推出重大更新，其中一项新功能是让Gemini AI能够描述摄像头实时画面中的内容，实现‘实时搜索’。",
+          "comment": "AI从分析历史记录进化到理解实时画面，这是否将彻底改变智能家居的交互范式，使其从被动响应变为主动感知与预警？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/888008/big-google-home-update-lets-gemini-describe-live-camera-feeds"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-03T18:33:51.918435+08:00",
+  "channel_id": "ch_xiayue",
+  "channel_name": "测试for夏月",
+  "topic_mode": "broad"
+}
