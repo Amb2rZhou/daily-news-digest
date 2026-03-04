@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-04",
+  "time_window": "2026-03-03 19:00 ~ 2026-03-04 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Google推出Gemini 3.1 Flash-Lite，主推高性价比与高效推理",
+          "summary": "谷歌正式发布Gemini 3.1 Flash-Lite轻量级多模态AI模型，专为高吞吐、低复杂度任务设计，输入价格仅为每百万token 0.25美元，成本与速度显著优化。",
+          "comment": "当推理成本降至如此之低，是否会催生出大量我们尚未想象到的、以高频次AI交互为核心的‘隐形’应用场景？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311781"
+        },
+        {
+          "title": "OpenAI发布GPT-5.3 Instant，优化日常对话体验",
+          "summary": "OpenAI推出GPT-5.3 Instant模型，面向所有ChatGPT用户开放，主要聚焦于减少冗余声明和机械化回复，使对话更自然流畅。",
+          "comment": "在追求对话自然度的过程中，AI助手应如何在‘人性化’与‘准确性/安全性’之间找到新的平衡点？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311780"
+        },
+        {
+          "title": "谷歌将其开发者文档带入AI智能体时代",
+          "summary": "谷歌发布开发者知识API公开预览版及MCP服务器，为AI开发工具提供机器可读的方式访问官方文档，解决模型因文档过时而生成错误代码的问题。",
+          "comment": "当API文档本身成为可编程的‘实时数据源’，这是否意味着未来的软件开发生态将演变为AI与动态知识库的直接对话？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/ydyggRjpZUGwEZAAdtTF"
+        },
+        {
+          "title": "超22万OpenClaw部署实例暴露公网，Agent在大规模‘裸奔’",
+          "summary": "监控页面显示超22万个OpenClaw AI代理实例暴露在公网，多数未启用身份验证，存在严重安全风险。",
+          "comment": "在追求Agent快速部署和互联互通的同时，我们是否低估了其规模化后面临的、堪比早期互联网的安全挑战？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/Z2FAr6DW70sq4tU9q6hv"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "马云与阿里、蚂蚁核心管理层齐聚谈AI",
+          "summary": "马云罕见地与阿里、蚂蚁核心管理层进行交流，讨论内容与阿里的AI布局构成潜在‘互文’，指向对AI发展‘第一性’的深层思考。",
+          "comment": "企业创始人的‘回归’与深度思考，在AI技术路径竞争白热化的当下，能否成为大厂扭转战略跟随态势的关键变量？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7899434.html"
+        },
+        {
+          "title": "原宁德时代执行总裁朱威，出任地平线总裁",
+          "summary": "雷峰网独家获悉，原宁德时代执行总裁朱威将出任地平线总裁，其横跨智能驾驶和新能源的履历将助力地平线业务拓展。",
+          "comment": "顶级硬件供应链巨头的高管转战AI芯片公司，这预示着汽车产业的竞争核心正加速从‘三电’向‘算力与算法’迁移吗？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/transportation/9QzOPZYEiNisvYVr.html"
+        },
+        {
+          "title": "阿里千问AI团队核心人物离职，引发外界对阿里AI战略猜测",
+          "summary": "在千问3.5系列模型开源发布后，阿里千问AI团队技术负责人林俊洋等人离职，引发业界对阿里AI团队稳定性和战略方向的关注。",
+          "comment": "在开源贡献与商业回报、长期投入与短期绩效之间，大厂的顶尖AI团队正面临怎样的内部张力与抉择？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/did-alibaba-just-kneecap-its-powerful-qwen-ai-team-key-figures-depart-in"
+        },
+        {
+          "title": "Sam Altman tells OpenAI staffers that military's 'operational decisions' are up to the government",
+          "summary": "OpenAI CEO Sam Altman在内部会议上表示，公司无法选择军方如何使用其技术，但会禁止其系统用于监视美国人。",
+          "comment": "当AI公司将其技术的‘使用责任’部分让渡给政府时，这是商业 pragmatism，还是对科技伦理底线的一次重新定义？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/03/sam-altman-tells-openai-staff-operational-decisions-up-to-government.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "最低1997元起，阿里千问AI硬件打响第一枪",
+          "summary": "阿里在MWC 2026大会上正式官宣其首款AI硬件‘千问AI眼镜’，并同步在国内开启预约，标志着阿里软硬一体AI战略落地。",
+          "comment": "从云端模型到千元级消费硬件，AI的入口之争是否正在从‘应用商店’转向‘人体穿戴’的新战场？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544800.html"
+        },
+        {
+          "title": "Rokid Glasses海外版迎重磅更新 成首款原生支持谷歌Gemini的智能眼镜",
+          "summary": "Rokid为其智能眼镜国际版推送更新，原生集成谷歌Gemini、OpenAI ChatGPT等四大主流LLM，成为业内首家原生支持Gemini的智能眼镜制造商。",
+          "comment": "硬件厂商通过集成多个顶级AI模型来打造‘超级入口’，这是否会成为智能穿戴设备摆脱手机附庸地位的关键策略？",
+          "source": "93913",
+          "url": "https://www.93913.com/119664.html"
+        },
+        {
+          "title": "科大讯飞携全链路AI方案矩阵亮相MWC 2026 首款AI眼镜全球首秀",
+          "summary": "科大讯飞在MWC 2026首次展出其AI眼镜，并展示了B端+C端全链路AI方案，彰显其在智能穿戴与跨语言沟通领域的技术实力。",
+          "comment": "以语音技术见长的公司切入AI眼镜赛道，其‘听说’优势能否在‘视觉交互’为主导的AR/AR领域开辟一条差异化路径？",
+          "source": "93913",
+          "url": "https://www.93913.com/119669.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "UK bets £40mn on frontier AI research lab in push for tech independence",
+          "summary": "英国政府投资4000万英镑成立前沿AI研究实验室，旨在推动科学、医疗和交通领域的AI突破，寻求技术独立。",
+          "comment": "在AI竞赛由中美巨头主导的格局下，国家主导的前沿基础研究投入，能否成为其他参与者实现‘非对称超越’的支点？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/41f522fc-10f5-4e5e-b64a-eb515799c265"
+        },
+        {
+          "title": "What if AI just makes us work harder?",
+          "summary": "有报告指出，AI工具在提升员工效率的同时，也可能导致工作节奏加快、任务量增加，让员工感觉更忙碌。",
+          "comment": "当AI成为生产力的加速器，我们面临的真正挑战是‘取代工作’，还是被卷入一个由算法驱动的、永不停止的‘效率竞赛’？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/e8bb5ab1-4b4d-473e-8f76-e690443e9fb4"
+        },
+        {
+          "title": "Can an AI recruiter really spot a good carer?",
+          "summary": "AI正被用于筛选护理人员，但文章质疑机器人是否能够真正判断谁适合这份需要高度同理心和人际技能的工作。",
+          "comment": "在高度依赖人性化服务的领域，AI评估工具是消除了人类偏见，还是用一种更隐蔽的量化方式固化了某种‘理想型’偏见？",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/cdxg4e1dw12o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-04T18:33:26.892669+08:00",
+  "channel_id": "ch_xiayue",
+  "channel_name": "测试for夏月",
+  "topic_mode": "broad"
+}

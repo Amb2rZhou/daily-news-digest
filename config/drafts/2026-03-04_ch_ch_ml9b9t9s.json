@@ -1,0 +1,121 @@
+{
+  "date": "2026-03-04",
+  "time_window": "2026-03-03 19:00 ~ 2026-03-04 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "阿里千问AI眼镜在MWC 2026正式发布，起售价1997元",
+          "summary": "阿里巴巴在MWC 2026上正式发布了其首款AI硬件‘千问AI眼镜’，标志着其AI战略从软件走向软硬一体。该产品已在国内开启预约，并将于3月8日现货发售。",
+          "comment": "阿里作为软件巨头推出AI硬件，能否凭借其生态优势在竞争激烈的智能眼镜市场后来居上？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544800.html"
+        },
+        {
+          "title": "Rokid眼镜海外版更新，成为首款原生支持谷歌Gemini的智能眼镜",
+          "summary": "Rokid为其海外版智能眼镜推送重大软件更新，原生集成了谷歌Gemini、OpenAI ChatGPT、DeepSeek和阿里通义千问四大主流大语言模型，成为业内首家原生支持谷歌Gemini的智能眼镜制造商。",
+          "comment": "多模型原生集成是否会成为未来AI硬件的标配，从而让用户摆脱单一AI助手的限制？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119664.html"
+        },
+        {
+          "title": "科大讯飞在MWC 2026首次展出其首款AI眼镜",
+          "summary": "科大讯飞在MWC 2026上展示了其全链路AI方案矩阵，并首次公开展出了其首款AI眼镜，聚焦于智能穿戴与跨语言沟通领域。",
+          "comment": "以语音技术见长的科大讯飞推出AI眼镜，是否会重新定义跨语言沟通类硬件的交互体验？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119669.html"
+        },
+        {
+          "title": "Waymo自动驾驶出租车在奥斯汀未能为校车停车，引发联邦调查",
+          "summary": "由于远程人工操作失误，一辆Waymo自动驾驶出租车在德克萨斯州奥斯汀非法超越了一辆校车，此事已引发联邦层面的调查。",
+          "comment": "当自动驾驶系统依赖远程人工接管时，如何界定和划分人机责任边界以避免此类安全事故？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/waymo-robotaxi-fails-to-stop-for-school-bus-in-austin-texas/"
+        },
+        {
+          "title": "谷歌在MWC 2026大会上展示Android XR原型眼镜",
+          "summary": "谷歌在MWC 2026大会上展示了其Android XR原型眼镜，此举被视为其在扩展现实（XR）硬件领域的重要探索。",
+          "comment": "谷歌推出XR原型眼镜，是否意味着其将放弃纯软件平台策略，亲自下场参与硬件竞争？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138527"
+        },
+        {
+          "title": "JBD推出车规级MicroLED投影平台‘狮鹫’，进军汽车显示领域",
+          "summary": "MicroLED厂商JBD宣布推出车规级投影平台‘狮鹫’，其光通量达500流明，体积小巧，可嵌入后视镜、车门等位置，计划于2026年中送样。",
+          "comment": "AR显示技术从消费电子向汽车工业渗透，是否会催生全新的车内信息交互和娱乐形态？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544795.html"
+        },
+        {
+          "title": "首镜科技完成A轮融资，加速AI+AR解决方案在工业等领域落地",
+          "summary": "AR解决方案提供商首镜科技完成由道明光学投资的A轮融资，资金将用于新一代光波导研发、量产提升以及在工业、安防等垂直领域的AI+AR解决方案深化。",
+          "comment": "专注于B端垂直领域的AR公司，其商业化路径和生存空间是否会比面向C端的消费级AR硬件更清晰？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544792.html"
+        },
+        {
+          "title": "魅族澄清AR团队‘集体入职雷鸟’传闻，称业务处于战略调整期",
+          "summary": "魅族CMO回应并澄清了关于其AR团队整体入职雷鸟创新的传闻，表示该消息失实，魅族AR业务处于战略调整与市场化运作阶段，核心团队稳定。",
+          "comment": "在AR硬件竞争白热化的当下，二三线品牌的战略调整是收缩信号，还是为了更精准地寻找市场突破口？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544793.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "谷歌将其开发者文档带入AI智能体时代",
+          "summary": "谷歌发布了开发者知识API的公开预览版，旨在为AI开发工具提供访问其官方开发者文档的标准化方式，以解决AI模型与快速变化的平台文档脱节的问题。",
+          "comment": "当AI工具能够实时获取最新、最权威的文档时，开发者与AI助手的协作效率将如何被重新定义？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/ydyggRjpZUGwEZAAdtTF"
+        },
+        {
+          "title": "Google推出Gemini 3.1 Flash-Lite，主推高性价比与高效推理",
+          "summary": "谷歌正式发布轻量级多模态AI模型Gemini 3.1 Flash-Lite，专为高吞吐、低复杂度任务设计，其输入和输出价格远低于Pro版本，强调成本与速度的优化。",
+          "comment": "当AI模型的价格持续下降，推理效率不断提升，这会如何加速AI应用在各类场景中的普及和商业化？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311781"
+        },
+        {
+          "title": "超22万OpenClaw部署实例暴露公网，Agent在大规模“裸奔”",
+          "summary": "监控数据显示，超过22万个OpenClaw AI Agent实例暴露在公网，且多数未启用身份验证，存在严重的安全风险。",
+          "comment": "在AI Agent快速部署和应用的浪潮下，如何平衡开发便利性与基础安全防护，避免成为新的攻击面？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/Z2FAr6DW70sq4tU9q6hv"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "阿里通义千问团队关键人物离职，引发外界对团队稳定性的猜测",
+          "summary": "在发布一系列重要开源模型后，阿里通义千问团队的技术负责人林俊洋宣布离职，此举在团队内部和国际机器学习社区引发震动。",
+          "comment": "核心人才的流失，是否会影响中国科技巨头在开源AI模型领域的持续创新能力和国际竞争力？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/did-alibaba-just-kneecap-its-powerful-qwen-ai-team-key-figures-depart-in"
+        },
+        {
+          "title": "亿万富翁廖凯原买入100万股英伟达，称AI不是泡沫",
+          "summary": "特斯拉大股东、亿万富翁廖凯原宣布买入100万股英伟达股票，并表示将继续买入，他确信AI不是泡沫，现在只是开始。",
+          "comment": "顶级投资者的巨额押注，是否预示着AI基础设施的投资热潮仍将持续，并成为衡量未来科技价值的关键标尺？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3708470930468999?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-04T18:31:45.477554+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
