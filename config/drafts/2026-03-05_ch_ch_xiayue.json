@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-05",
+  "time_window": "2026-03-04 19:00 ~ 2026-03-05 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Black Forest Labs' new Self-Flow technique makes training multimodal AI models 2.8x more efficient",
+          "summary": "德国AI初创公司Black Forest Labs发布Self-Flow技术，使训练多模态AI模型的效率提升2.8倍，解决了依赖外部‘教师’模型的瓶颈问题。",
+          "comment": "当模型能够自我学习语义理解时，未来多模态AI的训练范式是否会彻底摆脱对大规模标注数据的依赖？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/black-forest-labs-new-self-flow-technique-makes-training-multimodal-ai"
+        },
+        {
+          "title": "Microsoft built Phi-4-reasoning-vision-15B to know when to think — and when thinking is a waste of time",
+          "summary": "微软发布紧凑型开源多模态模型Phi-4-reasoning-vision-15B，其性能匹敌或超越大数倍的系统，同时消耗的计算和训练数据仅为后者的一小部分。",
+          "comment": "让模型学会‘选择性思考’是否比单纯扩大规模更能代表下一代AI效率与智能的进化方向？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/microsoft-built-phi-4-reasoning-vision-15b-to-know-when-to-think-and-when"
+        },
+        {
+          "title": "ChatGPT测试个性化写作模板功能，支持学习用户写作风格",
+          "summary": "OpenAI正在ChatGPT网页版测试名为‘创建模板’的新功能，该功能可以学习用户的写作风格并生成个性化模板。",
+          "comment": "当AI能够完美模仿个人写作风格时，如何界定原创性与AI辅助创作的边界？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311825"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "China Prioritizes Rare Earths, Robotics in Manufacturing Agenda",
+          "summary": "中国在制造业议程中优先发展稀土和机器人等高端科技产品，以巩固其制造业强国地位。",
+          "comment": "当机器人产业成为国家战略重点，全球制造业的竞争格局会如何被重塑？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-05/china-prioritizes-rare-earths-robotics-in-manufacturing-agenda"
+        },
+        {
+          "title": "Pentagon vendor cutoff exposes the AI dependency map most enterprises never built",
+          "summary": "美国联邦政府下令机构停止使用Anthropic技术，暴露了大多数企业从未构建的AI供应链依赖图谱问题。",
+          "comment": "当AI成为关键基础设施，企业是否应该像管理财务风险一样，强制审计和可视化其AI供应链？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/security/ai-supply-chain-visibility-gap-anthropic-pentagon-ciso-audit"
+        },
+        {
+          "title": "Ray-Ban Meta私自上传并训练偷拍数据引发争议",
+          "summary": "调查发现Meta的承包商员工分析了Ray-Ban Meta用户拍摄的私密甚至令人不安的视频，用于训练AI模型，引发隐私争议。",
+          "comment": "在追求更智能的视觉AI过程中，科技公司应如何建立透明且合乎伦理的数据使用护栏？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544802.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Jensen Huang says Nvidia is pulling back from OpenAI and Anthropic, but his explanation raises more questions than it answers",
+          "summary": "英伟达CEO黄仁勋表示公司对OpenAI和Anthropic的投资可能是最后一次，但其解释引发了更多疑问。",
+          "comment": "如果芯片巨头减少对顶尖AI实验室的直接投资，这是否意味着AI创新的重心将从模型层转向硬件与应用生态？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/"
+        },
+        {
+          "title": "Anthropic CEO Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies,’ report says",
+          "summary": "据报道，Anthropic CEO Dario Amodei称OpenAI围绕其国防部交易的言论是‘彻头彻尾的谎言’，凸显了两家公司在AI安全与军事应用上的分歧。",
+          "comment": "顶尖AI公司对军事应用的态度分歧，是否会催生出截然不同的AI治理与商业化路径？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/"
+        },
+        {
+          "title": "Nvidia stops production of chips intended for Chinese market",
+          "summary": "英伟达停止为中国市场生产H200芯片，将产能转向最新的Vera Rubin产品。",
+          "comment": "地缘政治持续影响尖端AI芯片的全球流通，这会如何加速中国本土AI算力产业链的独立与创新？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/47f1cf56-209f-46fb-a437-f769b9ccb2cb"
+        },
+        {
+          "title": "千问核心负责人林俊旸凌晨宣布卸任，阿里官方回应：Qwen没有收缩，这是一次团队扩张",
+          "summary": "阿里通义千问核心负责人林俊旸宣布卸任，阿里官方回应称团队没有收缩，而是一次扩张。",
+          "comment": "核心研发人员的变动，是大型科技公司AI战略调整的阵痛，还是激发组织新活力的必要过程？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/zaobao/t9UYHWpaMuhVRMfi.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "NotebookLM推出‘电影感视频概览’功能，升级AI视频生成体验",
+          "summary": "谷歌旗下AI笔记工具NotebookLM推出‘电影感视频概览’功能，将其视频生成能力从旁白幻灯片升级为沉浸式动态叙事。",
+          "comment": "当AI工具开始生成具有电影感的叙事内容，专业视频制作的门槛和定义是否将被永久改变？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311822"
+        },
+        {
+          "title": "Step 3.5 Flash 在海外杀疯了！‘小龙虾’全球第一，阶跃星辰把开源卷到新高度",
+          "summary": "阶跃星辰全面开源其新一代基座模型Step 3.5 Flash后，该模型在OpenClaw平台上的调用量迅速攀升至全球第一。",
+          "comment": "中国大模型通过激进的开源策略在全球社区获得影响力，这是否会改变全球开源AI生态的竞争规则？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/GJoPqXF7Ss2429cj.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "登顶全球第一后再融10亿，星动纪元估值破百亿，最多产业方加持的具身企业",
+          "summary": "具身智能企业星动纪元完成10亿元战略轮融资，估值破百亿，吸引了包括三星、阿里巴巴、吉利等16家国内外产业投资方。",
+          "comment": "当具身智能公司获得如此密集的产业资本加持，是否意味着机器人大规模商业落地的临界点已经到来？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/kD45xqCWplSIf5HF.html"
+        },
+        {
+          "title": "Nvidia Partner Hon Hai’s Sales Climb 22% in Global AI Buildout",
+          "summary": "英伟达合作伙伴鸿海精密前两个月营收增长21.6%，凸显了全球AI发展中对英伟达服务器的强劲需求。",
+          "comment": "AI服务器代工厂商业绩的强劲增长，是否只是全球AI基础设施军备竞赛的一个缩影？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-05/nvidia-partner-hon-hai-s-sales-climb-22-in-global-ai-buildout"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-05T18:33:32.843385+08:00",
+  "channel_id": "ch_xiayue",
+  "channel_name": "测试for夏月",
+  "topic_mode": "broad"
+}

@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-05",
+  "time_window": "2026-03-04 19:00 ~ 2026-03-05 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Ray-Ban Meta私自上传并训练偷拍数据引发争议",
+          "summary": "调查发现，Meta的承包商要求员工分析Ray-Ban Meta用户拍摄的私密视频，包括在浴室等场景拍摄的内容，用于AI模型训练，引发隐私担忧。",
+          "comment": "当AI硬件具备持续感知环境的能力时，如何建立透明且用户可控的数据处理边界，以防止技术滥用？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544802.html"
+        },
+        {
+          "title": "洛图科技：2025年中国智能眼镜市场销量145.4万台",
+          "summary": "报告显示，2025年中国智能眼镜市场销量达145.4万台，同比大涨211%，其中AR眼镜和拍摄眼镜增长显著。",
+          "comment": "智能眼镜销量激增的背后，是哪些核心应用场景真正触达了消费者的刚需，而非仅仅是技术尝鲜？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544801.html"
+        },
+        {
+          "title": "NASA自发采购中国VR头显：小派产品再次征服航天训练场",
+          "summary": "NASA自发采购了中国VR公司小派的旗舰头显Crystal Super，用于航空模拟训练，其视网膜级显示效果和宽广清晰视野满足了高精度训练需求。",
+          "comment": "当消费级VR硬件性能足以满足专业级航天训练时，这是否意味着专业与消费市场的技术壁垒正在被快速消解？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119728.html"
+        },
+        {
+          "title": "XPANCEO：2027年初展示首款全集成智能隐形眼镜原型",
+          "summary": "科技公司XPANCEO宣布，计划在2027年初展示其首款全功能集成的智能隐形眼镜原型，这代表了可穿戴AI设备向更微型化、无感化发展的前沿探索。",
+          "comment": "智能隐形眼镜作为终极形态的可穿戴设备，其商业化落地面临的最大技术与社会接受度挑战是什么？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138552"
+        },
+        {
+          "title": "AW 2026展会以韩国人形机器人首次亮相为特色，行业寻求数字化转型",
+          "summary": "在AW 2026展会上，包括Agibot、Boston Dynamics在内的多款人形机器人亮相，展示了物理AI（实体人工智能）在韩国数字化转型中的应用前景。",
+          "comment": "人形机器人从实验室走向行业展会，其展示的价值更多在于技术可行性，还是已经找到了明确的商业化落地路径？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/aw-2026-features-korea-humanoid-debuts-industry-seeks-digital-transformation/"
+        },
+        {
+          "title": "Noble Machines携Moby人形机器人走出隐身模式",
+          "summary": "机器人公司Noble Machines正式公开其AI驱动的人形机器人Moby，并宣布在成立18个月内已向一家《财富》全球500强客户发货。",
+          "comment": "一家初创公司在如此短时间内向顶级客户交付人形机器人，这反映了当前市场需求的性质是实验性采购还是实际部署？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/noble-machines-exits-stealth-with-moby-humanoid/"
+        },
+        {
+          "title": "MWC 2026：联发科以AI重构穿戴体验 天玑9500驱动AI智能眼镜成全场焦点",
+          "summary": "在MWC 2026上，联发科展示了由新一代旗舰芯片天玑9500驱动的AI智能眼镜，凭借端侧多模态AI能力成为展会关注的创新终端。",
+          "comment": "芯片厂商将旗舰手机SoC用于智能眼镜，这种“降维打击”的策略会如何重塑AI眼镜市场的竞争格局和产品定义？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119693.html"
+        },
+        {
+          "title": "高通发布3nm骁龙Wear Elite芯片 全面押注AI可穿戴新形态",
+          "summary": "高通正式推出采用3nm工艺的骁龙Wear Elite可穿戴处理器，旨在为下一代以AI为核心的新型可穿戴终端提供强大算力支持。",
+          "comment": "专为AI可穿戴设计的顶级芯片出现，是否预示着我们将很快看到超越“智能手表”形态的、功能独立的AI穿戴设备爆发？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119688.html"
+        },
+        {
+          "title": "最低1997元起，阿里千问AI硬件打响第一枪",
+          "summary": "阿里在MWC 2026上正式发布其首款AI硬件“千问AI眼镜”，并宣布于3月8日现货发售，标志着阿里软硬一体AI战略进入新阶段。",
+          "comment": "互联网巨头以亲民价格入局AI硬件，其核心战略是通过硬件获取数据、构建生态，还是仅仅为了卡位下一个入口？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544800.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "微软发布Phi-4-reasoning-vision-15B，一款知道何时思考的紧凑型多模态模型",
+          "summary": "微软发布了Phi-4-reasoning-vision-15B，这是一款紧凑的开源多模态AI模型，据称其性能可匹敌或超越体量更大的模型，同时消耗的计算和训练数据更少。该模型旨在知道何时进行推理，以及何时思考是浪费时间。",
+          "comment": "对于边缘计算和资源受限的场景，这种“选择性思考”的模型设计是否会成为未来高效AI的主流范式？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/microsoft-built-phi-4-reasoning-vision-15b-to-know-when-to-think-and-when"
+        },
+        {
+          "title": "ChatGPT测试个性化写作模板功能，支持学习用户写作风格",
+          "summary": "据AI工程师分享的截图显示，OpenAI正在ChatGPT网页版中测试一项名为“创建模板（Beta）”的新功能，该功能支持学习用户的写作风格，以提供更个性化的写作辅助。",
+          "comment": "当AI能够深度模仿个人风格时，如何界定原创性与AI辅助创作的边界？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/311825"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "英伟达CEO黄仁勋表示将减少对OpenAI和Anthropic的投资",
+          "summary": "英伟达CEO黄仁勋表示，该公司对OpenAI和Anthropic的投资可能是其最后一批此类投资，此举引发了外界对其AI投资战略未来走向的猜测。",
+          "comment": "作为AI芯片的绝对领导者，英伟达减少对头部AI公司的直接投资，是出于战略调整还是对行业风险的预判？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/"
+        },
+        {
+          "title": "拼多多做AI，还是在“做电商”",
+          "summary": "钛媒体文章分析指出，拼多多推出的系列C端AI产品，如社交、互动、体验类应用，本质上仍是为其核心电商业务服务，是在给电商做加法。",
+          "comment": "当互联网巨头将AI技术深度融入现有业务时，是更可能催生颠覆性创新，还是仅仅强化了原有的商业模式？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7899813.html"
+        },
+        {
+          "title": "英伟达停止为中国市场生产芯片",
+          "summary": "据《金融时报》报道，英伟达已停止生产专为中国市场设计的H200芯片，并将产能转向最新的Vera Rubin产品。",
+          "comment": "在地缘政治影响下，全球AI芯片供应链的割裂将对不同区域的AI产业发展速度和路径产生怎样的长期影响？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/47f1cf56-209f-46fb-a437-f769b9ccb2cb"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-05T18:31:59.711908+08:00",
+  "channel_id": "ch_aimirror",
+  "channel_name": "ai-interactive镜像版",
+  "topic_mode": "focused"
+}
