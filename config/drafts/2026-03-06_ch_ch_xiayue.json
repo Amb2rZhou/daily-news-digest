@@ -14,13 +14,6 @@
           "url": "https://venturebeat.com/technology/openai-launches-gpt-5-4-with-native-computer-use-mode-financial-plugins-for"
         },
         {
-          "title": "GPT-5.4 突袭上线：AI 三巨头角逐升级，大模型门槛再次被抬高",
-          "summary": "OpenAI突然发布GPT-5.4，标志着AI巨头间竞争加剧，大模型的技术和成本门槛被进一步抬高。",
-          "comment": "在巨头不断拉高技术壁垒的背景下，其他AI公司是选择跟进军备竞赛，还是转向差异化、垂直化的生存路径？",
-          "source": "钛媒体",
-          "url": "https://www.tmtpost.com/7902767.html"
-        },
-        {
           "title": "Databricks built a RAG agent it says can handle every kind of enterprise search",
           "summary": "Databricks发布名为KARL的RAG智能体，通过强化学习训练，宣称能处理企业内六种不同的搜索行为，解决传统RAG管道功能单一的问题。",
           "comment": "一个能够通用处理各类企业搜索的AI智能体，是否会从根本上改变企业内部知识管理和决策支持的方式？",
