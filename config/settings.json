@@ -245,8 +245,8 @@
       "enabled": true
     },
     {
-      "url": "https://www.geekpark.net/rss",
-      "name": "极客公园",
+      "url": "https://www.oschina.net/news/rss",
+      "name": "开源中国",
       "group": "中文科技媒体",
       "enabled": true
     },
@@ -257,8 +257,8 @@
       "enabled": true
     },
     {
-      "url": "https://feeds.reuters.com/reuters/technologyNews",
-      "name": "Reuters Tech",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+      "name": "NYT Tech",
       "group": "国际主流媒体",
       "enabled": true
     },
@@ -295,9 +295,9 @@
       "paywalled": true
     },
     {
-      "url": "https://rsshub.liumingye.cn/bilibili/user/video/612932327",
-      "name": "老石谈芯",
-      "group": "B站UP主",
+      "url": "https://www.semianalysis.com/feed",
+      "name": "SemiAnalysis",
+      "group": "技术博客",
       "enabled": true
     },
     {
@@ -373,9 +373,9 @@
       "enabled": true
     },
     {
-      "url": "https://rsshub.liumingye.cn/latepost",
-      "name": "晚点LatePost",
-      "group": "独立博客",
+      "url": "https://www.tomshardware.com/feeds/all",
+      "name": "Tom's Hardware",
+      "group": "智能硬件",
       "enabled": true
     },
     {
@@ -466,7 +466,7 @@
       "url": "https://rsshub.rssforever.com/jike/user/0ae2afa7-9b10-4b3a-ab7e-15fbf847038d",
       "name": "归藏(即刻)",
       "group": "独立博客",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://uploadvr.com/feed/",
@@ -511,8 +511,8 @@
       "enabled": true
     },
     {
-      "url": "https://www.vrfocus.com/feed/",
-      "name": "VRFocus",
+      "url": "https://mixed-news.com/en/feed/",
+      "name": "MIXED News",
       "group": "智能硬件",
       "enabled": true
     },
@@ -550,7 +550,7 @@
       "url": "https://www.7tin.cn/feed/",
       "name": "青亭网",
       "group": "智能硬件",
-      "enabled": true
+      "enabled": false
     },
     {
       "url": "https://news.nweon.com/feed",
