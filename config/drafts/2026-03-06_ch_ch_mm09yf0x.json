@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-06",
+  "time_window": "2026-03-05 19:00 ~ 2026-03-06 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "OpenAI launches GPT-5.4 with native computer use mode, financial plugins for Microsoft Excel, Google Sheets",
+          "summary": "OpenAI发布GPT-5.4，包含Thinking和Pro两个版本，新增原生计算机使用模式及针对Microsoft Excel和Google Sheets的金融插件，大幅提升复杂任务处理能力。",
+          "comment": "当AI模型能够原生操作计算机并处理专业金融数据时，传统白领工作的核心价值将如何被重新定义？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openai-launches-gpt-5-4-with-native-computer-use-mode-financial-plugins-for"
+        },
+        {
+          "title": "GPT-5.4 突袭上线：AI 三巨头角逐升级，大模型门槛再次被抬高",
+          "summary": "OpenAI突然发布GPT-5.4，标志着AI巨头间竞争加剧，大模型的技术和成本门槛被进一步抬高。",
+          "comment": "在巨头不断拉高技术壁垒的背景下，其他AI公司是选择跟进军备竞赛，还是转向差异化、垂直化的生存路径？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7902767.html"
+        },
+        {
+          "title": "Databricks built a RAG agent it says can handle every kind of enterprise search",
+          "summary": "Databricks发布名为KARL的RAG智能体，通过强化学习训练，宣称能处理企业内六种不同的搜索行为，解决传统RAG管道功能单一的问题。",
+          "comment": "一个能够通用处理各类企业搜索的AI智能体，是否会从根本上改变企业内部知识管理和决策支持的方式？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/data/databricks-built-a-rag-agent-it-says-can-handle-every-kind-of-enterprise"
+        },
+        {
+          "title": "Dexterity unveils Foresight world model for truck loading",
+          "summary": "机器人公司Dexterity发布名为Foresight的物理一致性世界模型，为卡车装卸等任务提供实时、可交互的物理环境数字表示。",
+          "comment": "物理世界模型从仿真训练走向实时任务控制，这是否是机器人实现通用自主操作的关键一步？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/dexterity-unveils-foresight-world-model-for-truck-loading/"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "工信部部长通道释放重磅信号：2026年强力推进AI+制造，中国AI产业多项指标全球领先",
+          "summary": "工信部部长李乐成在两会部长通道表示，2026年将以更大力度推动人工智能与制造业深度融合，并披露中国AI产业在多项指标上已实现全球领先。",
+          "comment": "当政策强力推动AI与制造业结合时，如何平衡技术跃进与产业稳健升级，避免'为AI而AI'的资源浪费？",
+          "source": "93913",
+          "url": "https://www.93913.com/119720.html"
+        },
+        {
+          "title": "UK to delay difficult decisions on AI copyright rules",
+          "summary": "英国政府推迟了关于AI版权规则的艰难决策，因其提案引发了创意产业的强烈反对，将重新制定方案。",
+          "comment": "在AI生成内容爆炸的时代，延迟制定版权规则是对创新的保护，还是对创作者权益的损害？",
+          "source": "FT",
+          "url": "https://www.ft.com/content/e759a712-eddf-4bdd-b4d9-03446f8c6545"
+        },
+        {
+          "title": "The War on Iran Puts Global Chip Supplies and AI Expansion at Risk",
+          "summary": "文章分析指出，伊朗地区的冲突升级可能危及全球芯片供应链，因为半导体产业依赖波斯湾地区脆弱的氦气提取和航运通道，进而影响AI扩张。",
+          "comment": "当AI发展的命脉——芯片供应链——与地缘政治风险深度绑定，全球科技产业该如何构建更具韧性的基础设施？",
+          "source": "WIRED",
+          "url": "https://www.wired.com/story/the-war-on-iran-puts-global-chip-supply-and-ai-expansion-at-risk/"
+        },
+        {
+          "title": "We might all be AI engineers now",
+          "summary": "文章探讨了随着AI工具（尤其是智能体）的普及，非技术背景人员也能通过自然语言指令完成复杂工程任务，使得'人人都是AI工程师'成为可能。",
+          "comment": "如果人人都能通过自然语言驱动AI完成工程任务，那么专业工程师的角色和价值将如何演变？",
+          "source": "Hacker News",
+          "url": "https://yasint.dev/we-might-all-be-ai-engineers-now/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "SoftBank Seeks Record Loan of Up to $40 Billion for OpenAI Stake",
+          "summary": "软银集团正寻求高达400亿美元的创纪录贷款，主要用于资助其对OpenAI的投资。",
+          "comment": "软银不惜举债天价押注OpenAI，这究竟是看到了通往AGI的确定性未来，还是另一场豪赌？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-06/softbank-seeks-record-loan-of-up-to-40-billion-for-openai-stake"
+        },
+        {
+          "title": "Anthropic Vows Legal Fight Against Pentagon Sanction in AI Feud",
+          "summary": "Anthropic誓言将通过法律途径挑战美国国防部将其列为供应链威胁的决定，加剧了与政府在AI安全监管上的对抗。",
+          "comment": "当AI公司与政府在安全监管上产生根本性分歧时，法律诉讼会成为解决此类争端的常态吗？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-06/anthropic-says-it-has-no-choice-but-to-fight-pentagon-in-court"
+        },
+        {
+          "title": "Meta宣布自主研发AI训练芯片，以多元化策略应对未来算力需求",
+          "summary": "Meta确认将在加大外部芯片采购的同时，坚定推进AI训练芯片的自主研发，旨在掌控未来AI模型训练的核心算力。",
+          "comment": "科技巨头纷纷自研AI芯片，这是否意味着未来算力市场将从通用GPU走向更加封闭和定制化的格局？",
+          "source": "93913",
+          "url": "https://www.93913.com/119715.html"
+        },
+        {
+          "title": "腾讯AI变形记",
+          "summary": "文章深度分析了腾讯在AI浪潮下的战略调整与组织变革，指出人才是AI竞争的关键。",
+          "comment": "对于腾讯这样拥有庞大业务生态的巨头而言，其AI战略的成功是更依赖于内部技术突破，还是对生态资源的整合能力？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7902409.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "搭载天玑9500，联发科发布AI眼镜原型",
+          "summary": "联发科在MWC 2026上发布其首款AI智能眼镜原型，采用天玑9500芯片，主打'隐私优先'，支持本地化AI情境感知与交互。",
+          "comment": "将旗舰手机芯片用于AI眼镜以实现本地化处理，这会是解决可穿戴设备隐私与延迟痛点的最佳方案吗？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544808.html"
+        },
+        {
+          "title": "传华为AI眼镜4月发布",
+          "summary": "据爆料，华为新款AI眼镜或于4月发布，主打拍照、录像、实时同声传译及鸿蒙生态联动，内置小艺助手实现AI物体识别。",
+          "comment": "华为入局AI眼镜，其强大的鸿蒙生态协同能力是否会成为其在激烈竞争中脱颖而出的关键差异化优势？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544806.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-06T18:33:53.429276+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}

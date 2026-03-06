@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-06",
+  "time_window": "2026-03-05 19:00 ~ 2026-03-06 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "搭载天玑9500，联发科发布AI眼镜原型",
+          "summary": "在MWC 2026展会上，联发科正式揭晓了其首款AI智能眼镜原型，该设备搭载旗舰手机芯片天玑9500，主打‘隐私优先’理念，部分AI功能可本地运行。",
+          "comment": "将手机芯片用于智能眼镜，这种算力迁移能否成为未来AI穿戴设备的主流设计思路？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544808.html"
+        },
+        {
+          "title": "传华为AI眼镜4月发布",
+          "summary": "据数码博主爆料，华为新款AI眼镜预计将在今年4月发布，提供多种配色，支持拍照、录像、实时翻译等功能，并依托鸿蒙系统实现跨设备协同。",
+          "comment": "华为入局AI眼镜，其鸿蒙生态的协同能力能否成为区别于其他竞品的核心优势？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544806.html"
+        },
+        {
+          "title": "轻量化+长续航+全场景：影目INMO Go 3欧洲定制版亮相MWC2026",
+          "summary": "影目INMO在MWC 2026期间发布了INMO Go 3欧洲定制版，主打轻量化机身、超窄镜腿和磁吸换电设计，旨在拓展欧洲市场。",
+          "comment": "针对特定市场推出定制版硬件，是否是AI眼镜厂商在全球化过程中提升竞争力的有效策略？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544810.html"
+        },
+        {
+          "title": "AI运动眼镜盘点：细分赛道展现潜力",
+          "summary": "文章盘点了当前AI运动眼镜市场，指出在竞争加剧的背景下，部分厂商正通过切入运动等垂直细分赛道来构建产品壁垒。",
+          "comment": "从通用型AI眼镜转向运动等垂直领域，能否帮助厂商在红海市场中找到可持续的盈利模式？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544811.html"
+        },
+        {
+          "title": "Tesollo和Techman Robot推出用于高混合、低产量生产的机器人",
+          "summary": "Tesollo与Techman Robot合作推出了一款结合了灵巧夹爪和协作机器人手臂的解决方案，专为分拣、装配等高混合、低产量的生产任务设计。",
+          "comment": "针对‘高混合、低产量’场景的机器人解决方案，是否代表了工业自动化向更柔性化方向发展的关键一步？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/tesollo-techman-robot-unveil-robot-high-mix-low-volume-production/"
+        },
+        {
+          "title": "Dexterity发布用于卡车装载的Foresight世界模型",
+          "summary": "机器人公司Dexterity发布了Foresight世界模型，这是一个物理一致、实时可交互的环境表示模型，旨在提升卡车装载等物流任务的自动化水平。",
+          "comment": "像Foresight这样的‘世界模型’技术，能否成为解决机器人复杂物理交互难题的通用钥匙？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/dexterity-unveils-foresight-world-model-for-truck-loading/"
+        },
+        {
+          "title": "西藏昌都消防：大朋联手KATVR，多套VR智慧消防方案正式交付",
+          "summary": "大朋VR与KATVR合作，为西藏昌都消防救援支队交付了多套以VR头显和万向跑步机为核心的智慧消防训练方案，用于高原极端环境下的模拟训练。",
+          "comment": "VR模拟训练在消防等高危行业中的应用日益深入，其训练效果最终能否完全替代或超越部分实体训练？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544814.html"
+        },
+        {
+          "title": "Loft Dynamics、EASA和空客直升机在尼泊尔启动VR飞行员培训项目",
+          "summary": "VR飞行培训公司Loft Dynamics联合欧盟航空安全局和空客直升机，在尼泊尔启动直升机飞行员VR安全培训项目，以应对复杂地形和天气的挑战。",
+          "comment": "在航空等对安全要求极高的领域，VR培训的认证标准和效果评估体系将如何建立和完善？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544804.html"
+        },
+        {
+          "title": "这家公司想通过将员工塞进带有VR头显的小型舱室来让他们恢复精力",
+          "summary": "韩国XR公司NP Inc在MWC上展示了一款VR员工解压舱，旨在为员工提供短暂的沉浸式冥想或放松体验，以恢复工作精力。",
+          "comment": "将VR用于职场心理健康干预，是切实的员工福利创新，还是只是一种吸引眼球的噱头？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/vr-worker-pods-xr-meditation/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "OpenAI 发布 GPT-5.4，原生支持计算机使用模式及金融插件",
+          "summary": "OpenAI 在发布 GPT-5.3 Instant 仅两天后，再次推出重大升级 GPT-5.4，包含 GPT-5.4 Thinking 和 GPT-5.4 Pro 两个版本。新版本原生支持计算机使用模式，并集成了针对 Microsoft Excel 和 Google Sheets 的金融插件。",
+          "comment": "当大模型原生获得操作计算机和金融工具的能力时，其安全边界和责任归属将如何界定？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openai-launches-gpt-5-4-with-native-computer-use-mode-financial-plugins-for"
+        },
+        {
+          "title": "Databricks 推出 KARL RAG 智能体，号称能处理所有企业搜索类型",
+          "summary": "Databricks 推出了名为 KARL 的 RAG 智能体，它通过强化学习训练，旨在解决企业搜索中单一优化模型在不同任务上表现不佳的问题，能够统一处理从简单查找到跨文档推理等多种搜索场景。",
+          "comment": "一个试图‘通吃’所有企业搜索任务的通用智能体，会否在追求广度的同时牺牲了特定场景的深度和精度？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/data/databricks-built-a-rag-agent-it-says-can-handle-every-kind-of-enterprise"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "腾讯AI变形记",
+          "summary": "钛媒体的文章分析了腾讯在AI领域的战略调整与人才布局，指出AI发展的核心驱动力最终在于人才。",
+          "comment": "当‘AI的尽头是人才’成为共识，大厂如何构建既能吸引顶尖人才，又能让其持续创新的组织生态？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7902409.html"
+        },
+        {
+          "title": "英伟达云服务合作伙伴 Together AI 拟以 75 亿美元估值融资",
+          "summary": "据知情人士透露，AI 云服务商 Together AI 正与投资者洽谈，计划以 75 亿美元估值融资约 10 亿美元。该公司主要业务是向开发者出租英伟达芯片服务器。",
+          "comment": "随着 AI 基础设施需求激增，像 Together AI 这样的‘中间层’服务商，其估值逻辑是建立在技术壁垒上，还是对上游芯片巨头的渠道依赖上？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3711304986980737?f=rss"
+        },
+        {
+          "title": "微软表示五角大楼黑名单后，Anthropic 产品仍可供客户使用",
+          "summary": "在 Anthropic 被美国国防部列为供应链风险后，微软成为首个公开表示将继续在其产品中使用 Anthropic 模型的主要公司。",
+          "comment": "科技巨头在政府监管与商业合作之间如何平衡，其选择是否会重塑全球AI产业链的信任格局？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/05/microsoft-says-anthropics-products-can-remain-available-to-customers-after-security-risk-designation.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-06T18:32:06.643841+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
