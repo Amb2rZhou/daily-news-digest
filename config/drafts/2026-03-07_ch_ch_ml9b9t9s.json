@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-07",
+  "time_window": "2026-03-06 19:00 ~ 2026-03-07 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "三星AI眼镜细节：内置摄像头，依托手机处理，年内上市",
+          "summary": "三星新款AI眼镜细节曝光，将内置摄像头，但计算主要依赖连接的智能手机处理，预计将在今年内上市。",
+          "comment": "依赖手机处理是否会成为AI眼镜普及的关键限制因素，还是能有效降低设备成本和功耗？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138616"
+        },
+        {
+          "title": "IDC：2026传统终端集体下滑，智能眼镜等新兴终端成行业破局关键",
+          "summary": "IDC报告指出，受AI产业扩张影响，智能手机、PC等传统终端市场出货量将下滑，而以智能眼镜为代表的新兴终端战略价值凸显，成为行业增长核心。",
+          "comment": "智能眼镜能否真正接过增长大旗，其应用生态的成熟度是否已准备好应对市场期待？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119762.html"
+        },
+        {
+          "title": "瑞德智能战略投资谷东智能5000万元，强强联合共拓AR光波导与智能交互新蓝海",
+          "summary": "瑞德智能对谷东智能进行战略投资，后者是国内少数同时掌握阵列光波导与体全息光波导（PVG）核心技术的企业，双方将共同拓展AR与智能交互市场。",
+          "comment": "核心光学技术的突破，是否是决定下一代AR眼镜形态和用户体验的最关键变量？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119750.html"
+        },
+        {
+          "title": "美国UNC孵化生物技术公司推出新型眼动追踪智能眼镜 瞳孔微变实时解读心理状态",
+          "summary": "一家由北卡罗来纳大学孵化的生物技术公司推出了一款搭载新型无摄像头眼动追踪技术的智能眼镜，可通过瞳孔变化实时解读佩戴者的心理状态和情绪。",
+          "comment": "将生理监测与日常穿戴设备结合，是否会开启心理健康管理的‘量化自我’新时代，并带来新的隐私伦理挑战？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119760.html"
+        },
+        {
+          "title": "人形机器人量产提速：国产成本压至海外1/3，2026年全球出货量有望突破5万台",
+          "summary": "随着核心技术突破与产业链成熟，全球人形机器人产业迎来规模化量产拐点，中国制造的成本优势显著，预计2026年全球出货量将突破5万台。",
+          "comment": "成本大幅降低后，人形机器人将从哪些具体场景率先实现商业化落地和价值验证？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119764.html"
+        },
+        {
+          "title": "IDC、IDTechEx双报告齐发：智能机器人赛道爆发，中国领跑具身智能，人形机器人十年展望清晰",
+          "summary": "IDC与IDTechEx发布报告预测，全球智能机器人产业正迎来规模化落地与高速增长，中国在具身智能领域占据主导地位，并为人形机器人规划了清晰的十年发展路径。",
+          "comment": "中国在具身智能领域的‘领跑’优势，更多是建立在供应链上，还是核心AI算法与系统整合能力上？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119752.html"
+        },
+        {
+          "title": "Simbe Tally货架扫描机器人获得UL 3300认证",
+          "summary": "Simbe Robotics公司的Tally货架扫描机器人通过了UL 3300安全标准评估，完成了40多项安全测试，证明了其在零售环境中安全运行的能力。",
+          "comment": "服务机器人获得权威安全认证，是否意味着其大规模进入公共商业空间的主要非技术障碍已被扫清？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/simbe-tally-shelf-scanning-robot-achieves-ul-3300-certification/"
+        },
+        {
+          "title": "即插即用AI：用模块化技能改造机器人技术",
+          "summary": "The Robot Report的播客节目探讨了模块化AI技能如何改变机器人技术，使其能够像安装软件一样快速获得新能力。",
+          "comment": "模块化AI技能能否真正降低机器人部署和重新编程的门槛，使其适应更碎片化的应用需求？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/plug-and-play-ai-transforming-robotics-with-modular-skills/"
+        },
+        {
+          "title": "视频星期五：具有人造肌肉和肌腱的机器人手",
+          "summary": "IEEE Spectrum的‘视频星期五’栏目展示了一款采用人造肌肉和肌腱设计的机器人手，能够灵巧地抓取物体。",
+          "comment": "仿生学设计在提升机器人灵巧性的同时，是否也意味着更高的维护复杂性和成本？",
+          "source": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/video-friday-robot-hand-artificial-muscles"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "阶跃星辰Step3.5 Flash连续三天登上OpenClaw榜首",
+          "summary": "根据API聚合平台OpenRouter数据，阶跃星辰的Step3.5 Flash模型调用量已在OpenClaw上连续三天保持全球第一，与Kimi K2.5、MiniMax M2.5分列前三。",
+          "comment": "开源模型在API调用量上超越闭源巨头，是否意味着模型能力的竞争已从单纯的技术领先转向生态和开发者体验？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3712723267727495?f=rss"
+        },
+        {
+          "title": "新的KV缓存压缩技术将LLM内存削减50倍且不损失精度",
+          "summary": "MIT研究人员开发出一种名为‘注意力匹配’的新技术，通过快速压缩KV缓存，可将大模型处理长上下文时的内存占用减少高达50倍，同时几乎不影响准确性。",
+          "comment": "推理优化技术正成为释放大模型长上下文潜力的关键，这会如何重塑AI应用的开发范式与成本结构？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/new-kv-cache-compaction-technique-cuts-llm-memory-50x-without-accuracy-loss"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Anthropic推出Claude Marketplace，为企业提供来自Replit、GitLab等的Claude驱动工具",
+          "summary": "Anthropic发布了Claude Marketplace，允许已有Anthropic支出承诺的企业将其部分资金用于购买由Claude驱动的第三方工具和应用，以扩展其AI能力。",
+          "comment": "大模型公司从提供通用API转向构建应用生态平台，这是否会成为未来AI商业模式的主流？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropic-launches-claude-marketplace-giving-enterprises-access-to-claude"
+        },
+        {
+          "title": "亚马逊表示，Anthropic的Claude在非国防工作中仍可供AWS客户使用",
+          "summary": "在五角大楼将Anthropic列为‘供应链风险’后，亚马逊与微软、谷歌一样，宣布其AWS客户在非国防相关工作中仍可继续使用Anthropic的Claude AI技术。",
+          "comment": "云巨头在AI模型供应商与政府监管之间扮演着怎样的缓冲角色，这种‘选择性可用’策略能持续多久？",
+          "source": "CNBC Tech",
+          "url": "https://www.cnbc.com/2026/03/06/amazon-aws-anthropic-claude-pentagon-blacklist.html"
+        },
+        {
+          "title": "2026全球开发者先锋大会本月将在上海举办",
+          "summary": "2026全球开发者先锋大会将于3月27日至29日在上海举行，聚焦AI应用、智能体落地等前沿议题。数据显示，2025年上海规上人工智能企业产业规模突破6300亿元，同比增长近四成。",
+          "comment": "地方性AI产业高速增长与全球性开发者大会结合，能否有效推动中国AI应用生态从‘大’到‘强’的转变？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3712581674758281?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-07T18:31:31.414401+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

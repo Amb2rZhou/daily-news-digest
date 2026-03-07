@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-07",
+  "time_window": "2026-03-06 19:00 ~ 2026-03-07 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "阶跃星辰Step3.5 Flash连续三天登上OpenClaw榜首",
+          "summary": "阶跃星辰的Step3.5 Flash模型在OpenRouter的OpenClaw榜单上连续三日保持全球调用量第一，与Kimi K2.5、MiniMax M2.5分列前三。",
+          "comment": "中国开源模型在全球榜单上的持续领先，是否预示着全球大模型格局正从技术追随转向多极化竞争？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3712723267727495?f=rss"
+        },
+        {
+          "title": "New KV cache compaction technique cuts LLM memory 50x without accuracy loss",
+          "summary": "MIT研究人员开发出一种名为Attention Matching的新技术，可将大语言模型的KV缓存压缩高达50倍，且几乎不损失准确性，有效解决长上下文任务的内存瓶颈。",
+          "comment": "这种革命性的内存压缩技术，是否会成为推动长上下文AI应用（如长文档分析、复杂任务规划）大规模落地的关键转折点？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/new-kv-cache-compaction-technique-cuts-llm-memory-50x-without-accuracy-loss"
+        },
+        {
+          "title": "Sarvam 105B, the first competitive Indian open source LLM",
+          "summary": "印度AI公司Sarvam发布了1050亿参数的Sarvam 105B模型，这是首个具有国际竞争力的印度开源大语言模型。",
+          "comment": "继中美之后，印度本土大模型的崛起，是否标志着全球AI研发中心正在向更多元化的新兴市场扩散？",
+          "source": "Hacker News",
+          "url": "https://www.sarvam.ai/blogs/sarvam-30b-105b"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "IDC：2026传统终端集体下滑，智能眼镜等新兴终端成行业破局关键",
+          "summary": "IDC报告指出，受AI产业扩张导致的存储芯片短缺影响，智能手机、PC等传统终端出货量将两位数下滑，而智能眼镜等新兴终端战略价值凸显，成为行业增长核心。",
+          "comment": "当传统计算设备增长见顶，以智能眼镜为代表的AI原生硬件，是否会开启下一个万亿级的消费电子市场？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119762.html"
+        },
+        {
+          "title": "IDC、IDTechEx双报告齐发：智能机器人赛道爆发，中国领跑具身智能，人形机器人十年展望清晰",
+          "summary": "国际数据机构报告显示，全球智能机器人产业迎来规模化落地拐点，中国在具身智能领域占据主导地位，人形机器人明确了从工业走向消费的十年发展路径。",
+          "comment": "中国在具身智能领域的领先优势，能否转化为全球人形机器人产业的标准制定权和市场主导权？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119752.html"
+        },
+        {
+          "title": "AI creates jobs, data from bank survey shows",
+          "summary": "欧洲央行的报告显示，在欧洲，广泛部署和投资AI的公司比不投资AI的公司更有可能增加招聘，表明AI可能创造而非摧毁就业岗位。",
+          "comment": "AI对就业的‘创造性破坏’效应，是否会因行业、技能水平和地域差异而呈现出比预期更复杂的图景？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-creates-jobs-data-from-bank-survey-shows-companies-with-wide-ai-deployments-and-investments-are-more-likely-to-be-hiring-than-those-that-dont"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "For OpenAI and Anthropic, the Competition Is Deeply Personal",
+          "summary": "围绕五角大楼合同的争夺，揭示了硅谷两大最重要AI初创公司OpenAI与Anthropic的领导人，在科技行业未来发展方向上的深刻分歧与个人恩怨。",
+          "comment": "当AI巨头的竞争从技术参数延伸到价值观和地缘政治选择时，这是否会加速全球AI治理体系的碎片化？",
+          "source": "NYT > Technology",
+          "url": "https://www.nytimes.com/2026/03/07/technology/openai-anthropic-pentagon-rivalry.html"
+        },
+        {
+          "title": "Amazon says Anthropic’s Claude still OK for AWS customers to use outside defense work",
+          "summary": "继微软和谷歌之后，亚马逊也表示，尽管Anthropic被五角大楼列为供应链风险，但其Claude AI技术仍可向非国防领域的AWS客户提供。",
+          "comment": "云巨头们集体为Anthropic‘站台’，这是商业利益驱动下的独立选择，还是科技行业对政府监管的一次联合表态？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/06/amazon-aws-anthropic-claude-pentagon-blacklist.html"
+        },
+        {
+          "title": "Google gives CEO Sundar Pichai new pay deal worth up to $692mn",
+          "summary": "谷歌母公司Alphabet授予CEO皮查伊一份价值高达6.92亿美元的新薪酬方案，其股票期权与未来三年公司股价及Waymo自动驾驶业务的增长挂钩。",
+          "comment": "将CEO的天价薪酬与Waymo的成败深度绑定，是否意味着自动驾驶已成为决定谷歌未来十年市值的‘胜负手’？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/1d3fa4f9-ec94-49ff-b22f-bd69b92be8ce"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Anthropic launches Claude Marketplace, giving enterprises access to Claude-powered tools",
+          "summary": "Anthropic推出Claude Marketplace，允许已有消费承诺的企业客户，将其部分预算用于购买由Claude驱动的第三方工具和应用，如来自Replit、GitLab等的产品。",
+          "comment": "Claude Marketplace的推出，是否意味着AI模型公司正从提供通用能力，转向构建以自身模型为核心的生态系统和开发者经济？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropic-launches-claude-marketplace-giving-enterprises-access-to-claude"
+        },
+        {
+          "title": "三星AI眼镜细节：内置摄像头，依托手机处理，年内上市",
+          "summary": "三星智能眼镜细节曝光，产品将内置摄像头，主要计算依赖连接的手机进行处理，并计划于今年内上市。",
+          "comment": "三星选择手机协同计算的轻量化AI眼镜路径，能否在用户体验和商业可行性上找到比一体式眼镜更优的平衡点？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138616"
+        },
+        {
+          "title": "Simbe Tally shelf-scanning robot achieves UL 3300 certification",
+          "summary": "Simbe公司的货架扫描机器人Tally获得了UL 3300安全认证，通过了40多项安全测试，证明其能在零售环境中安全运行。",
+          "comment": "服务机器人获得权威安全认证，是否会成为其从试点项目走向大规模商业部署的必要通行证？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/simbe-tally-shelf-scanning-robot-achieves-ul-3300-certification/"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "瑞德智能战略投资谷东智能5000万元，强强联合共拓AR光波导与智能交互新蓝海",
+          "summary": "瑞德智能战略投资谷东智能5000万元，后者是国内少数同时掌握阵列光波导与体全息光波导全谱系核心技术的企业。",
+          "comment": "资本向AR核心光学器件公司聚集，是否预示着消费级AR眼镜的硬件瓶颈即将被突破，迎来爆发前夜？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119750.html"
+        },
+        {
+          "title": "MicroOLED龙头视涯科技科创板IPO正式启动，募资20亿扩产",
+          "summary": "MicroOLED（硅基OLED）龙头企业视涯科技股份有限公司正式启动科创板IPO流程，计划募资20亿元用于扩产。",
+          "comment": "作为VR/AR核心显示技术供应商的视涯科技冲刺IPO，是否反映了资本市场对元宇宙底层硬件供应链长期价值的重新评估？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119748.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-07T18:32:42.322227+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
