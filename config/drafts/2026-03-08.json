@@ -1,0 +1,111 @@
+{
+  "date": "2026-03-08",
+  "time_window": "2026-03-07 19:00 ~ 2026-03-08 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "三星首款AI智能眼镜细节亮相MWC 2026 年内发布直面Meta市场垄断",
+          "summary": "三星在MWC 2026期间首次披露其首款AI智能眼镜核心细节，并宣布将于今年正式推出，旨在挑战Meta在智能眼镜市场的主导地位。",
+          "comment": "三星的入局是否会打破Meta在消费级智能眼镜市场的垄断，并加速该品类的普及？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119781.html"
+        },
+        {
+          "title": "人形机器人开发商Agility Robotics进行品牌重塑",
+          "summary": "人形机器人公司Agility Robotics宣布进行品牌重塑，以反映其已准备好扩大部署规模，并引领人形机器人在新行业的应用。",
+          "comment": "品牌重塑是否意味着人形机器人正从研发阶段迈向大规模商业应用的关键转折点？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/humanoid-developer-agility-robotics-rebrands/"
+        },
+        {
+          "title": "工程师因暴露影响7000台机器人吸尘器的漏洞获得3万美元奖励",
+          "summary": "一名软件工程师在尝试用PS5手柄控制其机器人吸尘器时，意外发现了一个影响约7000台DJI Romo机器人吸尘器的安全漏洞，并因此获得3万美元奖励。",
+          "comment": "随着家用服务机器人的普及，其网络安全漏洞是否会成为消费者隐私和家庭安全的新威胁？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/cyber-security/engineer-receives-usd30-000-for-exposing-a-vulnerability-affecting-7-000-robot-vacuum-cleaners-tinkerer-just-wanted-to-drive-his-robot-vacuum-with-a-ps5-controller"
+        },
+        {
+          "title": "百亿估值新独角兽诞生！帕西尼感知科技完成超10亿元B轮融资，领跑具身智能触觉赛道",
+          "summary": "帕西尼感知科技完成超10亿元B轮融资，估值突破百亿元，成为国内具身智能触觉感知领域的头部企业。",
+          "comment": "触觉感知技术的突破，是否会成为人形机器人等具身智能设备实现精细操作和与环境安全交互的关键？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119772.html"
+        },
+        {
+          "title": "Valve将Steam Machine发布日期改为‘今年’，因AI引发内存短缺危机而第二次推迟",
+          "summary": "Valve再次调整其Steam Machine游戏主机的发布日期，从‘2026年上半年’改为‘今年’，官方称延迟与AI热潮引发的内存短缺危机有关。",
+          "comment": "AI基础设施的算力需求激增，是否会持续挤压消费级智能硬件（如游戏主机）的关键零部件供应？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/video-games/console-gaming/valve-changes-steam-machine-release-date-to-this-year-second-change-as-ai-fueled-memory-and-shortage-crisis-deepens-official-announcements-went-from-early-2026-to-first-half-of-2026-to-this-year"
+        },
+        {
+          "title": "苹果18核M5 Max在Geekbench中击败96核Ryzen Threadripper Pro 9995WX",
+          "summary": "苹果新款M5 Max处理器在Geekbench多线程测试中表现惊人，其18核CPU性能超过了AMD的96核Ryzen Threadripper Pro 9995WX。",
+          "comment": "苹果自研芯片的持续领先，是否将迫使整个PC行业加速向集成更强AI能力的‘AI PC’范式转型？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/cpus/apples-18-core-m5-max-destroys-96-core-ryzen-threadripper-pro-9995wx-in-geekbench-gpu-performance-is-much-less-impressive"
+        },
+        {
+          "title": "西安斥资6.76亿元引爆文旅新消费，目标建成全国最大XR电影体验集群",
+          "summary": "西安市出台方案，计划投资6.76亿元培育XR产业链，目标建成全国最大的XR电影体验集群，以推动文旅新消费。",
+          "comment": "地方政府大规模投资XR体验基础设施，是否预示着线下沉浸式娱乐将成为智能硬件（如VR头显）重要的内容与市场驱动力？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119768.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Kimi1月付费用户订单暴涨80倍，跻身Stripe全球支付榜单前10",
+          "summary": "根据Stripe数据，Kimi AI助手1月个人用户支付订单数环比增长8280%，2月环比再涨123.8%，排名跃升至全球第9位，其K2.5模型在OpenRouter调用榜上保持第一。",
+          "comment": "Kimi的付费用户爆发式增长，是否意味着国内C端用户为专业AI服务付费的习惯正在快速形成？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3714143264059528?f=rss"
+        },
+        {
+          "title": "LangChain CEO认为，仅凭更好的模型无法让你的AI智能体投入生产",
+          "summary": "LangChain联合创始人兼CEO Harrison Chase提出，随着模型变得更智能，围绕它们的‘约束工程’（harness engineering）也必须进化，这比单纯的上下文工程更为重要。",
+          "comment": "当模型能力足够强大后，制约AI应用落地的关键是否会从模型本身转向如何安全、可靠地‘驾驭’模型？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/langchains-ceo-argues-that-better-models-alone-wont-get-your-ai-agent-to"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "林俊旸离职后，再看阿里字节的AI路线之争",
+          "summary": "文章分析了阿里与字节跳动在AI发展路径上的差异与竞争，探讨了开源与闭源策略的优劣，并指出无论选择何种路径，两家巨头都在向AI寻求未来增长。",
+          "comment": "国内大厂在AI战略上选择开源或闭源，其背后的核心考量是技术生态主导权，还是商业化效率的差异？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7904392.html"
+        },
+        {
+          "title": "OpenAI机器人部门负责人因公司与五角大楼的交易而辞职",
+          "summary": "OpenAI机器人团队负责人于周六辞职，原因是公司决定将其人工智能模型部署在五角大楼的机密网络中，这引发了内部对AI军事化应用的争议。",
+          "comment": "顶尖AI公司内部对于技术军事化应用的伦理分歧，是否会成为影响其人才稳定和技术发展方向的关键变量？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-07/openai-s-head-of-robotics-resigns-over-company-s-pentagon-deal"
+        },
+        {
+          "title": "KKR考虑以数十亿美元出售数据中心冷却公司",
+          "summary": "私募资本公司KKR正寻求出售其投资的冷却系统公司CoolIT Systems，以期从AI热潮带来的高估值中获得丰厚回报。",
+          "comment": "AI算力需求激增正在重塑整个基础设施产业链，哪些细分领域可能成为下一个价值被重估的投资风口？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/b1784f74-7a91-4e04-b507-cc5b13920f51"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-08T18:31:50.586556+08:00"
+}

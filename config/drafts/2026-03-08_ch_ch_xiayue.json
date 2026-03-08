@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-08",
+  "time_window": "2026-03-07 19:00 ~ 2026-03-08 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "AMD VP uses AI to create Radeon Linux userland driver in Python — senior AI engineer says he 'didn't open the editor once'",
+          "summary": "AMD的AI软件副总裁完全使用Claude Code编写了一个Radeon Linux用户态驱动，这展示了AI在复杂代码生成方面的潜力。",
+          "comment": "当AI能够编写系统级代码时，人类开发者的核心价值将如何重新定义？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/gpu-drivers/amd-vp-uses-ai-to-create-radeon-linux-userland-driver-in-python-senior-ai-engineer-says-he-didnt-open-the-editor-once"
+        },
+        {
+          "title": "LangChain's CEO argues that better models alone won't get your AI agent to production",
+          "summary": "LangChain CEO指出，仅凭更强大的模型不足以让AI智能体投入生产，围绕模型的'约束工程'同样至关重要。",
+          "comment": "在模型能力快速提升的背景下，未来AI应用竞争的焦点是否会从模型本身转向'约束'与'工程化'能力？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/langchains-ceo-argues-that-better-models-alone-wont-get-your-ai-agent-to"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "KKR eyes multibillion-dollar sale of data centre cooling company",
+          "summary": "私募巨头KKR考虑出售数据中心冷却公司CoolIT Systems，AI热潮推高了相关资产估值。",
+          "comment": "AI算力需求如何重塑数据中心基础设施产业链的投资逻辑与价值评估？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/b1784f74-7a91-4e04-b507-cc5b13920f51"
+        },
+        {
+          "title": "Oracle reportedly set to axe thousands of jobs and freeze hiring as AI data center bets ignite financial perfect storm",
+          "summary": "据报道，甲骨文计划裁员数千人并冻结云部门招聘，其AI数据中心投资引发了财务压力。",
+          "comment": "传统科技巨头在向AI基础设施转型的过程中，将如何平衡巨额资本开支与短期财务表现？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/oracle-reportedly-set-to-axe-thousands-of-jobs-and-freeze-hiring-for-cloud-division-ai-datacenter-bets-ignite-financial-perfect-storm"
+        },
+        {
+          "title": "a16z最新访谈：说SaaS已死为时尚早，AI会让这类软件更有价值",
+          "summary": "a16z认为AI不会终结SaaS，而是会推动软件从被动响应向主动执行跃迁，从而创造更大价值。",
+          "comment": "AI赋能的SaaS软件，其定价模式和价值衡量标准将发生怎样的根本性变化？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7904386.html"
+        },
+        {
+          "title": "2026政府工作报告首提打造智能经济新形态 AI成高质量发展核心引擎",
+          "summary": "2026年政府工作报告首次提出'打造智能经济新形态'，标志着AI将从局部赋能进入系统性重塑经济发展全流程的新阶段。",
+          "comment": "当AI被提升为国家经济形态的核心驱动力，政策将如何引导产业平衡创新速度与风险防控？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119778.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI’s Head of Robotics Resigns Over Company’s Pentagon Deal",
+          "summary": "OpenAI机器人团队负责人因公司与五角大楼的AI模型部署协议而辞职，凸显了AI军事化应用的内部伦理分歧。",
+          "comment": "当AI公司的商业合同与团队成员的伦理红线冲突时，企业应建立怎样的决策与沟通机制？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-07/openai-s-head-of-robotics-resigns-over-company-s-pentagon-deal"
+        },
+        {
+          "title": "Samsung seeks AI deals to challenge Apple’s smartphone lead",
+          "summary": "三星设备部门负责人表示，未来Galaxy设备将搭载多个AI模型，允许用户混合搭配AI工具，以挑战苹果的领先地位。",
+          "comment": "设备厂商集成多个AI模型会成为主流吗？这会加剧模型间的竞争还是催生新的融合生态？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/3752d058-d3ee-41a4-b702-d49ae7f61b5c"
+        },
+        {
+          "title": "林俊旸离职后，再看阿里字节的AI路线之争",
+          "summary": "文章分析了阿里与字节跳动在AI发展路线上的差异与竞争，指出无论开源闭源，巨头都在向AI寻求未来增长。",
+          "comment": "在中国AI竞争格局中，开源与闭源策略分别会如何塑造企业的生态影响力和商业护城河？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7904392.html"
+        },
+        {
+          "title": "Anthropic’s and OpenAI’s Dance With the Pentagon: What to Know",
+          "summary": "纽约时报梳理了Anthropic和OpenAI与五角大楼在合同谈判、威胁与修正过程中的复杂关系与遗留问题。",
+          "comment": "AI巨头与政府国防部门的合作，是否会成为划分未来全球AI产业格局的一条隐形分界线？",
+          "source": "NYT > Technology",
+          "url": "https://www.nytimes.com/2026/03/07/technology/anthropic-openai-pentagon-dario-amodei-sam-altman.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "千问AI眼镜G1爆卖！3小时全平台登顶第一、部分渠道已售罄",
+          "summary": "阿里旗下千问AI眼镜G1系列现货开售3小时即登顶全平台智能眼镜热销榜，部分渠道已售罄，显示市场对AI硬件产品的强烈需求。",
+          "comment": "AI眼镜的爆火是消费电子市场的新风口，还是仅为特定场景下的短暂热潮？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/ZUMbCfjunVUDdGhU.html"
+        },
+        {
+          "title": "三星首款AI智能眼镜细节亮相MWC 2026 年内发布直面Meta市场垄断",
+          "summary": "三星在MWC 2026上披露了其首款AI智能眼镜的核心细节，并宣布将于年内推出，旨在挑战Meta在该市场的主导地位。",
+          "comment": "消费电子巨头的入局，能否真正撬动智能眼镜从极客玩具走向大众消费品的市场？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119781.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "百亿估值新独角兽诞生！帕西尼感知科技完成超10亿元B轮融资，领跑具身智能触觉赛道",
+          "summary": "帕西尼感知科技完成超10亿元B轮融资，估值突破百亿元，成为国内具身智能触觉感知赛道的头部企业。",
+          "comment": "在视觉、语言大模型之外，触觉等感知能力是否会成为具身智能价值评估的下一个关键维度？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119772.html"
+        },
+        {
+          "title": "Kimi1月付费用户订单暴涨80倍，跻身Stripe全球支付榜单前10",
+          "summary": "据Stripe数据，月之暗面旗下Kimi应用1月个人用户支付订单数环比增长超80倍，2月持续增长，排名跃升至全球第9。",
+          "comment": "Kimi的付费用户激增，是否意味着C端用户为专业AI工具付费的意愿和习惯正在被快速建立？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3714143264059528?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-08T18:32:59.201609+08:00",
+  "channel_id": "ch_xiayue",
+  "channel_name": "测试for夏月",
+  "topic_mode": "broad"
+}
