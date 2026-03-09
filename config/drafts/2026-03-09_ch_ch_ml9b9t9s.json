@@ -1,0 +1,121 @@
+{
+  "date": "2026-03-09",
+  "time_window": "2026-03-08 19:00 ~ 2026-03-09 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "三星披露AI眼镜细节：配备内置摄像头，需与手机、手表搭配使用",
+          "summary": "三星移动业务高管在MWC期间透露，其即将推出的AI智能眼镜将配备内置摄像头，并高度依赖AI功能，需与手机等设备连接使用，预计今年晚些时候发布。",
+          "comment": "当AI眼镜高度依赖手机生态时，其独立性和用户体验的边界在哪里？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544824.html"
+        },
+        {
+          "title": "千问AI眼镜G1现货开售 1997元起享全渠道购买 月底打通APP解锁生活服务",
+          "summary": "阿里旗下千问AI眼镜G1系列正式现货开售，国补后到手价低至1997元起，开售3小时即登顶全平台智能眼镜热销榜，部分渠道已售罄。",
+          "comment": "低价策略能否成为AI眼镜普及的关键，还是说核心体验才是决定市场成败的根本？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119796.html"
+        },
+        {
+          "title": "Valve公司重申将于2026年推出Steam Frame VR头显",
+          "summary": "Valve官方重申其新一代VR头显Steam Frame将按计划于2026年内出货，同时确认的还有新款Steam Machine和Steam控制器。",
+          "comment": "在苹果和Meta主导的XR市场，Valve的VR头显能否凭借其内容生态优势开辟新格局？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544823.html"
+        },
+        {
+          "title": "雷鸟MWC 2026发布Air 4 Pro AR眼镜 全球首款HDR10加持还推蝙蝠侠限定版",
+          "summary": "雷鸟在MWC 2026上发布了Air 4 Pro AR眼镜，该产品是全球首款支持HDR10的AR眼镜，并推出了蝙蝠侠限定版。",
+          "comment": "与知名IP联名是AR眼镜破圈的有效营销手段，但这能否转化为持久的用户粘性和生态建设？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119798.html"
+        },
+        {
+          "title": "首期投资5亿，觉远创智Micro LED智能眼镜制造基地落地广西柳州",
+          "summary": "觉远创智科技智能显示终端制造基地在广西柳州开工，该项目专注于Micro LED硅基显示技术，以智能眼镜为核心切入点，首期投资5亿元。",
+          "comment": "地方政府重金押注上游制造基地，能否有效降低下游智能眼镜的终端成本并加速产业化？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544825.html"
+        },
+        {
+          "title": "小米人形机器人进驻汽车工厂实习 雷军预计5年大批量上岗",
+          "summary": "小米人形机器人已进入汽车工厂进行实操测试，在特定工站实现连续3小时自主运行，雷军预计其将在5年内实现大批量上岗。",
+          "comment": "从实验室演示到工厂‘实习’，人形机器人距离真正可靠的‘劳动力’还有哪些关键技术鸿沟需要跨越？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119794.html"
+        },
+        {
+          "title": "苹果视线校正系统专利曝光，可大幅提升XR设备视线追踪精度",
+          "summary": "苹果一项新专利曝光，旨在通过校正眼动追踪系统中光轴与视轴的差异，来大幅提升AR眼镜、头显等XR设备的视线追踪精度。",
+          "comment": "专利技术从曝光到最终产品落地往往需要数年，苹果这项基础技术革新会为其未来的XR设备带来怎样的交互革命？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544822.html"
+        },
+        {
+          "title": "VIZO Z1 Pro AR眼镜众筹突破50万美元",
+          "summary": "由TOZO孵化的XR品牌VIZO，其首款AR眼镜VIZO Z1 Pro在Kickstarter众筹额已突破50万美元，产品主打大屏影音体验。",
+          "comment": "众筹成功是否意味着消费级AR眼镜的市场需求已被验证，还是说这仍是一个由极客和早期尝鲜者驱动的小众市场？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544821.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "腾讯电脑管家打造基于 OpenClaw 的本地 AI 助手：QClaw",
+          "summary": "腾讯电脑管家团队基于开源AI智能体框架OpenClaw，推出了名为‘QClaw’的本地AI助手，支持Mac和Windows双端，用户可通过微信对话远程操控电脑，并强调数据全部留在本地以保证隐私安全。",
+          "comment": "当AI助手能够深度集成并控制本地操作系统时，如何在提供强大便利性的同时，确保其行为的安全边界与用户意图完全一致？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/408902"
+        },
+        {
+          "title": "从上下文到长期记忆：大模型记忆工程的架构设计与实践",
+          "summary": "InfoQ整理了一篇关于大模型记忆工程的演讲分享，系统剖析了如何通过记忆分层管理、多粒度调度等技术，解决大模型短时遗忘、知识碎片化等问题，以增强其个性化与持续推理能力。",
+          "comment": "为AI模型构建‘长期记忆’系统，是否意味着我们正在从‘一次性对话’的AI，转向拥有持续学习和成长能力的‘数字生命体’？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/AIVoC9eKfZhW199IQkwB"
+        },
+        {
+          "title": "火山引擎发布开箱即用云AI服务ArkClaw，赋能企业办公智能化",
+          "summary": "字节跳动旗下火山引擎发布基于OpenClaw的云上SaaS服务ArkClaw，旨在通过云端即开即用的模式，降低企业部署和应用AI智能体（Agent）技术的门槛。",
+          "comment": "云服务商将AI智能体框架打包成SaaS产品，是否会成为AI技术在企业级市场快速普及和标准化的关键路径？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311910"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Nvidia投资AI数据中心初创公司Nscale，后者估值达146亿美元",
+          "summary": "英伟达（Nvidia）投资了AI数据中心初创公司Nscale，该公司在最新一轮融资中估值达到146亿美元，成为欧洲科技初创公司中规模最大的融资案例之一，凸显了市场对AI基础设施的狂热投资。",
+          "comment": "当AI芯片巨头开始直接投资下游数据中心运营商，这是否预示着AI算力市场的竞争正从硬件层向全栈生态整合演进？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/09/nscale-ai-data-center-nvidia-raise.html"
+        },
+        {
+          "title": "大模型团队为什么更容易出现人才动荡",
+          "summary": "钛媒体发表评论文章，探讨了AI大模型团队更容易出现人才动荡的现象，指出原因在于AI技术仍处在由技术强人主导的发展周期。",
+          "comment": "在技术快速迭代、资本高度聚集的AI领域，如何构建既能激发天才创造力，又能维持团队稳定性的组织与文化？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7905844.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-09T18:31:50.224279+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

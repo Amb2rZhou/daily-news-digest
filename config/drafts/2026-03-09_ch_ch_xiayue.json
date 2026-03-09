@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-09",
+  "time_window": "2026-03-08 19:00 ~ 2026-03-09 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "从上下文到长期记忆：大模型记忆工程的架构设计与实践",
+          "summary": "InfoQ分享了大模型记忆工程的核心技术，包括记忆分层管理、多粒度调度等，旨在解决大模型短时遗忘和知识碎片化问题，提升其个性化与持续演化能力。",
+          "comment": "当大模型拥有长期记忆后，如何确保其记忆的准确性并防止偏见或错误信息的固化？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/AIVoC9eKfZhW199IQkwB"
+        },
+        {
+          "title": "ODCC联合NVIDIA、焱融等首发KVCache评测结果｜焱融AI存储实现推理提速降本双突破",
+          "summary": "ODCC AI存储实验室发布针对大模型推理关键制约因素KV Cache的专项测试结果，旨在构建标准化存储解决方案，以提升推理效率、降低成本。",
+          "comment": "针对KV Cache的存储优化，是否会成为未来AI基础设施竞争的新焦点，并催生新的硬件或软件标准？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/zVRRjI7EfCiEoYTS2QqH"
+        },
+        {
+          "title": "达摩院联合多家医院发布AI模型，突破脂肪肝肝硬化风险精准识别难题",
+          "summary": "阿里巴巴达摩院联合多家医院研发出用于脂肪肝筛查与风险分层的多模态AI模型MAOSS，提升了疾病早期识别的精准度。",
+          "comment": "多模态AI模型在医疗影像诊断中展现出巨大潜力，未来如何确保其在不同人群和医疗设备间的泛化能力与公平性？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311905"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "大模型团队为什么更容易出现人才动荡",
+          "summary": "文章分析了AI技术仍处于技术强人主导的发展周期，这是导致大模型团队人才频繁流动的核心原因之一。",
+          "comment": "在技术快速迭代的AI领域，除了高薪，企业应如何构建更可持续的人才吸引和留存机制？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7905844.html"
+        },
+        {
+          "title": "超60万片AR晶圆出货量，对话肖特中国吴敏：AR眼镜已跨越60分及格线",
+          "summary": "德国肖特集团披露其AR光学晶圆出货量已超60万片，认为AR眼镜在光学性能上已跨越及格线，进入规模化应用前夜。",
+          "comment": "AR眼镜在光学及格后，下一阶段普及的最大瓶颈是内容生态、功耗还是交互体验？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544816.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "腾讯推出开箱即用版AI智能体WorkBuddy",
+          "summary": "腾讯云正式发布全场景AI智能体产品WorkBuddy，旨在降低企业部署和应用智能体技术的门槛。",
+          "comment": "巨头推出'开箱即用'的AI智能体服务，是否会加速中小企业的AI应用，同时挤压垂直领域创业公司的生存空间？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311907"
+        },
+        {
+          "title": "火山引擎发布开箱即用云AI服务ArkClaw，赋能企业办公智能化",
+          "summary": "字节跳动火山引擎发布基于OpenClaw的云上SaaS服务ArkClaw，以SaaS模式为企业提供便捷的智能体服务。",
+          "comment": "云厂商纷纷推出AI智能体平台，未来企业选择服务商的关键考量因素会从算力转向数据安全、工作流集成还是模型定制能力？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311910"
+        },
+        {
+          "title": "OpenAI's massive Stargate data center canceled as firm can't reach terms with Oracle",
+          "summary": "据报道，OpenAI因与Oracle的条款未达成一致以及运营商可靠性问题，取消了其大型Stargate数据中心的扩建计划，Meta可能接手剩余容量。",
+          "comment": "顶级AI公司自建超大规模数据中心的计划受挫，是否预示着AI基础设施的未来将更依赖于与云服务商的深度合作而非完全自控？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openais-massive-stargate-data-center-canceled-as-firm-cant-reach-terms-with-oracle-operator-struggles-with-reliability-issues-meta-said-to-be-interested-in-snatching-excess-capacity"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "千问AI眼镜G1已开售，3小时全平台登顶第一",
+          "summary": "阿里旗下千问AI眼镜G1正式现货开售，3小时内登顶全平台智能眼镜热销榜，国补后到手价低至1997元起。",
+          "comment": "AI眼镜以接近普通消费电子的价格和形态引爆市场，这是否意味着AI硬件正从极客玩具走向大众消费品的关键拐点？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544817.html"
+        },
+        {
+          "title": "腾讯开源音乐大模型 SongGeneration 2 发布",
+          "summary": "腾讯与清华大学联合研发的音乐生成大模型SongGeneration 2正式推出，在旋律、多轨编曲和歌词准确性方面实现突破。",
+          "comment": "开源音乐大模型的出现，会如何改变音乐创作的门槛，并引发关于版权、艺术原创性与AI生成内容价值的新一轮讨论？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/408891"
+        },
+        {
+          "title": "OpenClaw 发布 2026.3.7 版本，加速迈向生产级智能体操作系统",
+          "summary": "热门开源AI智能体框架OpenClaw发布重大更新，旨在加速其成为生产级智能体操作系统的进程。",
+          "comment": "开源智能体框架的快速迭代，是否意味着未来AI应用的开发范式将从'调用模型API'转向'组装和调度智能体'？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/311904"
+        },
+        {
+          "title": "小米人形机器人进驻汽车工厂实习 雷军预计5年大批量上岗",
+          "summary": "小米人形机器人已在汽车工厂进行实操测试，实现连续3小时自主运行，雷军预计其将在5年内实现大批量上岗。",
+          "comment": "人形机器人进入真实工厂环境测试，是营销噱头还是产业落地的实质性一步？其大规模应用面临的最大挑战是技术成熟度还是投资回报周期？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119794.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "Nscale raises $2bn as investor fervour for AI defies pressures facing sector",
+          "summary": "AI数据中心初创公司Nscale完成20亿美元融资，估值达146亿美元，Nvidia参与投资，成为欧洲科技初创公司最大规模融资之一。",
+          "comment": "在AI算力需求激增的背景下，专注于AI基础设施的初创公司获得巨额融资，这是否预示着下一波投资热潮将从模型层转向更底层的算力与存储解决方案？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/531f7512-94aa-4e97-b986-2dcd8e8cb4c0"
+        },
+        {
+          "title": "AI Product, Developed by a Chinese Young Prodigy and Invested by Chen Tianqiao, Tops GitHub",
+          "summary": "由盛大创始人陈天桥投资的中国年轻天才开发的AI产品MiroFish登上GitHub热榜，该产品致力于让预测触手可及。",
+          "comment": "资深投资人重金押注年轻AI科学家及其产品，在技术快速更迭的AI领域，这是否是一种比投资成熟公司更具潜力和风险的投资策略？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7905996.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-09T18:33:28.712234+08:00",
+  "channel_id": "ch_xiayue",
+  "channel_name": "测试for夏月",
+  "topic_mode": "broad"
+}
