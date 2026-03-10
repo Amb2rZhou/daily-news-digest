@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-10",
+  "time_window": "2026-03-09 19:00 ~ 2026-03-10 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Omdia：全球AI眼镜出货量达870万台",
+          "summary": "市场研究机构Omdia数据显示，2025年全球AI眼镜出货量达到870万台，同比大幅增长322%，Meta以85.2%的市场份额占据主导地位。",
+          "comment": "AI眼镜市场爆发式增长，除了Meta的绝对领先，未来哪些应用场景能真正推动其成为大众消费品？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544826.html"
+        },
+        {
+          "title": "银河通用完成25亿元新一轮融资 稳居中国具身智能领域首位",
+          "summary": "人形机器人公司银河通用完成25亿元新一轮融资，累计融资额位居中国具身智能领域首位，公司估值超200亿元。",
+          "comment": "巨额资本涌入人形机器人赛道，这是否预示着通用机器人的商业化落地即将迎来关键转折点？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119814.html"
+        },
+        {
+          "title": "V社确认Steam Frame仍定上半年上市，并回应诸多技术细节",
+          "summary": "Valve官方确认其Steam Frame VR头显仍计划在2026年上半年上市，并回应了关于该设备的技术细节。",
+          "comment": "在苹果Vision Pro和Meta Quest系列主导的市场中，Valve的VR头显能否凭借其在PC游戏生态的优势开辟新路径？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138663"
+        },
+        {
+          "title": "华为推出升级版AR测量应用：改用双目测距方案，已上架Mate 80",
+          "summary": "华为在Mate 80系列上重新上架并升级了AR测量应用，改用双目测距方案，无需实体工具即可测量长度、面积、体积和身高。",
+          "comment": "手机AR应用功能的持续增强，是否会成为推动消费级AR眼镜普及的重要前置体验和教育环节？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544832.html"
+        },
+        {
+          "title": "风向转变，Meta新款头显解析",
+          "summary": "Meta正在开发代号为Phoenix的新款VR头显，采用全新设计，计划明年上半年发布，此举被视为Meta在VR业务调整后提振市场信心的举措。",
+          "comment": "面对增长放缓的VR市场，Meta下一代头显需要在硬件、内容还是生态定位上做出哪些根本性改变来重振需求？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544831.html"
+        },
+        {
+          "title": "Meta正在推进Micro-LED量产工作",
+          "summary": "Meta正在招聘高级制造工程师，以推动其外部合作伙伴的RGB Micro-LED芯片产能提升，为计划中的AR眼镜产品做准备。",
+          "comment": "Micro-LED被视为AR眼镜的“圣杯”显示技术，Meta的深度介入能否加速其量产进程并降低成本？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544829.html"
+        },
+        {
+          "title": "ABB借助NVIDIA Omniverse库增强RobotStudio",
+          "summary": "ABB宣布将NVIDIA Omniverse库集成到其RobotStudio机器人仿真软件中，并计划在2026年下半年推出基于订阅的HyperReality模拟器。",
+          "comment": "工业机器人仿真软件与通用仿真平台的融合，是否会成为加速机器人从设计到部署工作流程的关键？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/abb-boosts-robotstudio-with-nvidia-omniverse-libraries/"
+        },
+        {
+          "title": "PlusAI推出升级版货运自动驾驶系统",
+          "summary": "自动驾驶卡车公司PlusAI发布了其升级版自动驾驶系统，新系统能够处理夜间驾驶和施工区域等对商业货运至关重要的复杂场景。",
+          "comment": "专注于特定场景（如货运）的自动驾驶技术，是否比追求通用化的方案能更快实现商业闭环和规模化？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/plusai-launches-its-upgraded-autonomous-driver-for-freight-operations/"
+        },
+        {
+          "title": "吉林交通职业技术学院365万招标AI+MR智能制造实训室",
+          "summary": "吉林交通职业技术学院发布招标公告，计划以365万元预算建设AI与混合现实（MR）技术相结合的智能制造实训室。",
+          "comment": "职业院校大力投入AI+MR实训室，反映了产业对何种新型技能人才的需求？这种教育投资的效果将如何衡量？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138669"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "英伟达准备推出开源 AI Agent 平台‘NemoClaw’",
+          "summary": "据多家媒体报道，英伟达正在开发一款名为‘NemoClaw’的开源平台，旨在帮助企业构建和运行能够自动执行数据处理、工作流自动化等任务的AI智能体。该平台被设计为跨硬件平台，即使不使用英伟达GPU也可运行。",
+          "comment": "英伟达推出开源AI Agent平台，是否意味着AI基础设施的竞争正从硬件层扩展到软件和生态层，从而降低企业应用Agent的门槛？",
+          "source": "OSCHINA 社区 / CNBC",
+          "url": "https://www.oschina.net/news/409222"
+        },
+        {
+          "title": "Anthropic 推出代码审查工具 Code Review",
+          "summary": "Anthropic为其Claude Code推出了名为Code Review的多智能体代码审查系统，旨在自动检查AI生成的代码，标记逻辑错误，以应对AI编程带来的代码量激增和审查瓶颈问题。",
+          "comment": "当AI能高效生成代码后，代码审查会成为新的瓶颈，这是否意味着软件开发流程的重心将从‘写代码’转向‘定义问题’和‘质量管控’？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/09/anthropic-launches-code-review-tool-to-check-flood-of-ai-generated-code/"
+        },
+        {
+          "title": "Cloudflare：我们如何用 OpenCode 和 Claude，在一周内重构 Next.js",
+          "summary": "Cloudflare的一名工程师利用AI模型，在一周内从零开始重构了流行的前端框架Next.js，创建了名为vinext的替代方案，实现了构建速度的大幅提升和客户端打包体积的显著减小。",
+          "comment": "AI辅助的‘一周重构’展示了惊人的效率，这是否预示着未来软件框架的迭代和竞争将进入以‘天’甚至‘小时’为单位的超快周期？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/2RV73l1Iyabgij0Ou3hr"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Yann LeCun的AI初创公司AMI Labs融资超10亿美元",
+          "summary": "Meta前首席AI科学家Yann LeCun联合创立的AMI Labs完成了超过10亿美元的融资，投后估值达35亿美元，投资方包括英伟达、淡马锡和杰夫·贝索斯等，旨在开发能够理解物理世界的AI模型。",
+          "comment": "Yann LeCun长期主张AI的未来在于理解物理世界而非语言，这笔巨额融资是否意味着资本开始押注与当前大语言模型不同的AI发展路径？",
+          "source": "TechCrunch / WIRED",
+          "url": "https://techcrunch.com/2026/03/09/yann-lecuns-ami-labs-raises-1-03-billion-to-build-world-models/"
+        },
+        {
+          "title": "腾讯官宣‘龙虾’AI产品矩阵",
+          "summary": "腾讯正式宣布了其‘龙虾’AI产品矩阵，覆盖个人用户、开发者及企业级解决方案，包括个人版WorkBuddy、可连接微信/QQ的QClaw以及云端部署方案，旨在提供自动化任务执行与远程操控能力。",
+          "comment": "腾讯快速跟进并推出覆盖个人到企业的AI Agent产品矩阵，这是否表明大厂间的AI竞争已从基础模型能力，全面转向应用生态和用户触达的比拼？",
+          "source": "OSCHINA 社区",
+          "url": "https://www.oschina.net/news/409197"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-10T18:31:10.997892+08:00",
+  "channel_id": "ch_aimirror",
+  "channel_name": "ai-interactive镜像版",
+  "topic_mode": "focused"
+}
