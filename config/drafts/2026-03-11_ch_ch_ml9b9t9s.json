@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-11",
+  "time_window": "2026-03-10 19:00 ~ 2026-03-11 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "芬兰智能戒指公司ŌURA收购手势识别创企Doublepoint",
+          "summary": "智能戒指制造商ŌURA宣布收购手势识别技术公司Doublepoint，旨在强化其可穿戴AI产品的长期创新路线图，推动更直观的语音与手势交互体验。",
+          "comment": "手势识别技术会成为下一代可穿戴设备交互的核心，还是仅仅是现有触控和语音交互的补充？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544838.html"
+        },
+        {
+          "title": "苹果头显新专利曝光：凭借多区域面部接口结构提升舒适度及视觉效果",
+          "summary": "苹果一项新专利曝光，为Apple Vision Pro等头显设计了由不同硬度缓冲区域构成的面部接口系统，旨在优化重量分布、佩戴舒适度及光学稳定性。",
+          "comment": "头显的物理佩戴舒适度，是否会成为决定其能否从专业设备走向日常佩戴的关键瓶颈？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544839.html"
+        },
+        {
+          "title": "韩国大明光学与Everysight签约，将共同研发AI眼镜",
+          "summary": "韩国大明光学与以色列智能眼镜开发商Everysight签署协议，将合作开发面向视力障碍人士的AR智能眼镜，并通过大明光学的零售网络进行分销。",
+          "comment": "与传统眼镜巨头合作，是否是AR眼镜厂商快速切入大众消费市场并解决验光配镜痛点的最佳路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544836.html"
+        },
+        {
+          "title": "Agility, Boston Dynamics, ASTM to discuss the state of humanoid robotics",
+          "summary": "Agility Robotics、波士顿动力等公司专家将在小组讨论中探讨人形机器人在工厂和仓库中当前实际能完成的任务，旨在厘清行业炒作与现实能力。",
+          "comment": "在工业场景中，人形机器人的通用性优势，是否足以抵消其相对于传统专用机器人在成本和效率上的劣势？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/agility-boston-dynamics-astm-to-discuss-the-state-of-humanoid-robotics/"
+        },
+        {
+          "title": "Meta发力Micro-LED量产，为2027年AR眼镜上市铺路",
+          "summary": "Meta正全力推进其Micro-LED微显示器的量产进程，旨在为计划于2027年底发布的新一代AR眼镜产品构建坚实的供应链基础。",
+          "comment": "Micro-LED的量产瓶颈一旦突破，是否会成为AR眼镜在亮度、功耗和体积上全面超越现有技术方案的决定性因素？",
+          "source": "93913",
+          "url": "https://www.93913.com/119843.html"
+        },
+        {
+          "title": "千问AI眼镜G1热销登顶，市场反响热烈",
+          "summary": "阿里旗下的千问AI眼镜G1在开售次日便登顶天猫XR设备及抖音智能眼镜热销总榜，显示出市场对消费级AI眼镜的强烈兴趣。",
+          "comment": "AI眼镜的早期热销，更多是源于AI功能的新奇性，还是已经找到了解决用户特定痛点的杀手级应用？",
+          "source": "93913",
+          "url": "https://www.93913.com/119849.html"
+        },
+        {
+          "title": "敏芯股份加码前沿领域研发 布局AI眼镜及车载机器人核心传感产品",
+          "summary": "MEMS传感器公司敏芯股份透露，正重点布局AI眼镜用骨传导麦克风、车载及机器人领域IMU等新产品研发，推进向多品类产品矩阵的战略升级。",
+          "comment": "AI硬件设备的创新，在多大程度上依赖于上游核心传感器（如IMU、麦克风）的性能突破与成本下降？",
+          "source": "93913",
+          "url": "https://www.93913.com/119854.html"
+        },
+        {
+          "title": "苹果训练AI模型识别手势，通过可穿戴传感器识别陌生手势",
+          "summary": "苹果发布了一项新研究，通过名为EMBridge的跨模态学习框架，训练AI模型利用肌电信号（EMG）识别训练数据中未出现过的新手势。",
+          "comment": "基于肌电信号的手势识别，其泛化能力能否最终超越基于摄像头的视觉方案，成为AR/VR设备最主流的无控制器交互方式？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544840.html"
+        },
+        {
+          "title": "英伟达升级云游戏体验：GeForce NOW为XR带来90 FPS支持",
+          "summary": "英伟达宣布其云游戏服务GeForce NOW将从3月19日起为Apple Vision Pro和Meta Quest等XR头显提供90 FPS的串流支持，以提升VR游戏的流畅度与沉浸感。",
+          "comment": "云游戏的高帧率串流，能否成为解决高端VR内容对本地算力要求过高、从而推动VR普及的关键技术？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138694"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "谷歌发布首款多模态嵌入模型 Gemini Embedding 2",
+          "summary": "谷歌正式推出其首款原生多模态嵌入模型 Gemini Embedding 2，可将文本、图像、视频、音频及文档映射至统一的向量空间，实现跨模态语义理解，支持100种语言。",
+          "comment": "多模态嵌入模型如何从根本上改变我们构建和理解跨媒体信息检索系统的方式？",
+          "source": "OSCHINA",
+          "url": "https://www.oschina.net/news/409545"
+        },
+        {
+          "title": "JetBrains 推出智能体开发环境 Air",
+          "summary": "JetBrains 宣布推出其 Air 智能体开发环境的公开预览版，旨在帮助开发者围绕智能体构建工具，引导智能体并微调其输出，可将编码任务委托给多个 AI 智能体并发运行。",
+          "comment": "当 AI 智能体开发环境成为主流，软件开发的协作模式会从“人-人”协作转向“人-智能体”协作吗？",
+          "source": "OSCHINA",
+          "url": "https://www.oschina.net/news/409515/jetbrains-air-public-preview"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Meta 收购专为 AI 机器人打造的社交网络 Moltbook",
+          "summary": "Meta 收购了专为 AI 机器人设计的社交网络平台 Moltbook，该平台创始人 Matt Schlicht 将加入 Meta 超级智能实验室，此举被视为 Meta 在 AI 智能体社交互动领域的重要布局。",
+          "comment": "当 AI 智能体拥有专属的社交网络进行互动和学习时，这会对人类社交网络和 AI 的进化路径产生何种深远影响？",
+          "source": "The New York Times",
+          "url": "https://www.nytimes.com/2026/03/10/technology/meta-moltbook-social-ai-bots.html"
+        },
+        {
+          "title": "百度智能云发布 DuClaw 零门槛开启自由‘养虾’",
+          "summary": "百度智能云发布零部署服务 DuClaw，用户无需自行配置云端服务器和 API Key，即可直接使用完整的 OpenClaw（龙虾）智能体服务，深度预置了百度搜索等优势技能并支持多种主流大模型。",
+          "comment": "大厂推出‘零门槛’AI智能体服务，是否会加速AI应用的普及，同时也加剧平台对底层生态和用户数据的控制？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/R5htapqdbfUHU6bW.html"
+        },
+        {
+          "title": "Amazon 寻求发行百亿欧元债券以推动 AI 基础设施建设",
+          "summary": "亚马逊计划首次发行欧元债券，目标筹集约100亿欧元，以资助其人工智能基础设施的建设，反映出科技巨头在AI领域持续大规模投入的趋势。",
+          "comment": "科技巨头通过大规模发债来押注AI基础设施，这种‘军备竞赛’式的投入最终会带来技术普惠还是市场垄断？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-11/amazon-starts-record-eight-part-euro-bond-sale-to-fund-ai-goals"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-11T18:31:28.463113+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

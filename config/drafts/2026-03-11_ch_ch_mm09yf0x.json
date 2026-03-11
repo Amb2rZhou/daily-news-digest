@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-11",
+  "time_window": "2026-03-10 19:00 ~ 2026-03-11 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "谷歌发布首款多模态嵌入模型 Gemini Embedding 2",
+          "summary": "谷歌推出其首款原生多模态嵌入模型，可将文本、图像、视频、音频及文档映射至统一的向量空间，实现跨模态语义理解，支持100种语言。",
+          "comment": "当所有模态的信息都能被统一理解时，AI对世界的认知会从‘读懂’文字进化到‘理解’整个物理世界吗？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/409545"
+        },
+        {
+          "title": "苹果训练AI模型识别手势，通过可穿戴传感器识别陌生手势",
+          "summary": "苹果发布新研究EMBridge，这是一个跨模态表征学习框架，旨在通过肌电信号（EMG）与姿态数据训练AI模型，使其能够识别从未出现在原始数据集中的新手势。",
+          "comment": "当AI能精准解读我们的肌肉信号时，人机交互的终极形态是否会从‘主动操作’变为‘意念响应’？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544840.html"
+        },
+        {
+          "title": "AutoKernel: Autoresearch for GPU Kernels",
+          "summary": "开源项目AutoKernel发布，旨在利用AI自动研究和优化GPU内核，以提升计算效率。",
+          "comment": "当AI开始优化AI硬件运行的底层代码时，我们是否正在见证一个由机器自我迭代驱动的性能增长新范式？",
+          "source": "Hacker News",
+          "url": "https://github.com/RightNow-AI/autokernel"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Seagate CCO says storage price hikes are ‘the new normal’",
+          "summary": "希捷首席商务官表示，由AI数据中心需求驱动的存储价格上涨已成为‘新常态’，市场正进入一个前所未有的‘超级周期’。",
+          "comment": "当AI成为全球算力与存储资源的主要消耗者时，传统数字经济的成本结构将如何被重塑？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/seagate-cco-says-memory-price-hikes-are-the-new-normal"
+        },
+        {
+          "title": "Powering AI: Europe switches on its first microgrid-connected data center",
+          "summary": "欧洲首个连接微电网的数据中心在爱尔兰启用，标志着该地区向私有化供电生态系统迈出第一步，以应对AI繁荣带来的能源需求。",
+          "comment": "当AI的‘胃口’迫使数据中心走向能源自给自足时，这是否会加速全球能源体系的去中心化革命？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/11/data-center-microgrid-power-ireland-ai-boom-avk-pure-dc.html"
+        },
+        {
+          "title": "AI-powered apps struggle with long-term retention, new report shows",
+          "summary": "新报告显示，AI驱动的应用虽然能带来更强的早期变现能力，但如何维持用户长期价值、避免流失仍是巨大挑战。",
+          "comment": "当AI带来的新奇感消退后，决定一个产品生命力的核心，是否会回归到解决真实痛点的深度而非技术炫技？",
+          "source": "AI News & Artificial Intelligence | TechCrunch",
+          "url": "https://techcrunch.com/2026/03/10/ai-powered-apps-struggle-with-long-term-retention-new-report-shows/"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Google to Provide Pentagon with AI Agents",
+          "summary": "谷歌将为美国国防部提供AI智能体，用于处理非机密工作，标志着科技巨头与军方合作的进一步深化。",
+          "comment": "当商业AI巨头更深入地介入国家安全事务时，技术‘中立’的边界在哪里，又该由谁来定义？",
+          "source": "Hacker News",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-10/google-to-provide-pentagon-with-ai-agents-for-unclassified-work"
+        },
+        {
+          "title": "Anthropic is launching a new think tank amid Pentagon blacklist fight",
+          "summary": "在与五角大楼的冲突和诉讼背景下，Anthropic宣布成立名为Anthropic Institute的内部智库，整合现有研究团队，专注于研究AI的大规模影响。",
+          "comment": "在商业利益、国家安全与伦理研究的三角张力中，AI公司自建智库能否真正保持独立与前瞻性？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/892478/anthropic-institute-think-tank-claude-pentagon-jack-clark"
+        },
+        {
+          "title": "Amazon Seeks €10 Billion From Debut Euro Bonds Amid AI Push",
+          "summary": "亚马逊首次发行欧元债券，计划筹集约100亿欧元，以资助其在人工智能基础设施方面的巨额投入。",
+          "comment": "科技巨头为AI军备竞赛发行巨额债券，这是对未来盈利能力的豪赌，还是开启了由债务驱动的基础设施建设新时代？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-11/amazon-starts-record-eight-part-euro-bond-sale-to-fund-ai-goals"
+        },
+        {
+          "title": "Inside OpenAI’s Race to Catch Up to Claude Code",
+          "summary": "文章深入探讨了OpenAI为何在AI编程革命中落后于Anthropic的Claude Code，以及其内部的追赶努力。",
+          "comment": "曾经的行业定义者开始追赶，这是技术路线暂时分叉的常态，还是预示着AI创新重心正在发生不可逆的转移？",
+          "source": "WIRED",
+          "url": "https://www.wired.com/story/openai-codex-race-claude-code/"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "百度智能云发布DuClaw 零门槛开启自由‘养虾’",
+          "summary": "百度智能云发布零部署服务DuClaw，用户无需自行配置服务器和API Key，即可直接使用完整的OpenClaw智能体服务，深度预置百度生态技能并支持主流大模型。",
+          "comment": "当部署和使用AI智能体的门槛被降至近乎为零时，这会催生全民级的AI应用创新，还是加剧底层模型服务的同质化竞争？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/R5htapqdbfUHU6bW.html"
+        },
+        {
+          "title": "JetBrains 推出智能体开发环境 Air",
+          "summary": "JetBrains推出其智能体开发环境Air的公开预览版，旨在帮助开发者围绕智能体构建工具，引导并微调其输出，支持多个AI智能体并发运行。",
+          "comment": "当主流IDE厂商开始为AI智能体量身打造开发环境时，这是否意味着智能体正从‘玩具’转变为下一代软件的核心‘生产单元’？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/409515/jetbrains-air-public-preview"
+        },
+        {
+          "title": "Amazon launches its healthcare AI assistant on its website and app",
+          "summary": "亚马逊在其网站和应用上推出医疗健康AI助手，能够回答问题、解释健康记录、管理处方续订、预约挂号等。",
+          "comment": "当电商巨头凭借AI深入医疗健康这一高度监管和专业的领域，其带来的便利性提升与潜在的隐私、责任风险将如何平衡？",
+          "source": "AI News & Artificial Intelligence | TechCrunch",
+          "url": "https://techcrunch.com/2026/03/10/amazon-launches-its-healthcare-ai-assistant-on-its-website-and-app/"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "芬兰智能戒指公司ŌURA收购手势识别创企Doublepoint",
+          "summary": "智能戒指厂商ŌURA宣布收购手势识别技术开发商Doublepoint，以强化其在可穿戴AI领域的长期创新路线图，构建更直观的隐私优先交互体验。",
+          "comment": "可穿戴设备巨头收购手势识别技术，是否预示着以身体为界面的‘无屏交互’将成为下一代消费电子的主战场？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544838.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-11T18:32:35.260027+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
