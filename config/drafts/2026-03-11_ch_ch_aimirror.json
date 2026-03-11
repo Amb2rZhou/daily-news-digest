@@ -120,8 +120,8 @@
     }
   ],
   "source": "scheduled",
-  "status": "pending_review",
-  "created_at": "2026-03-11T18:31:28.463541+08:00",
+  "status": "sent",
+  "created_at": "2026-03-11T19:00:02.444293+08:00",
   "channel_id": "ch_aimirror",
   "channel_name": "ai-interactive镜像版",
   "topic_mode": "focused"
