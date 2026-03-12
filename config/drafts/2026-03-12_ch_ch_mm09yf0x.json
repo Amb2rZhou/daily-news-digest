@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-12",
+  "time_window": "2026-03-11 19:00 ~ 2026-03-12 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Nvidia 发布开源混合架构模型 Nemotron 3 Super",
+          "summary": "Nvidia 发布了 1200 亿参数的 Nemotron 3 Super 模型，它结合了 Mamba、Transformer 和 MoE 三种架构，旨在解决多智能体系统生成大量 Token 带来的成本效益问题。",
+          "comment": "这种混合架构模型能否成为未来处理复杂、长程任务智能体的标准，从而真正降低企业级 AI 应用的运营成本？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/2026/03/11/nvidias-new-open-weights-nemotron-3-super-combines-three-different"
+        },
+        {
+          "title": "Google 利用旧新闻和 AI 预测山洪暴发",
+          "summary": "Google 开发了一种新方法，利用大语言模型将历史新闻报道中的定性描述转化为定量数据，以解决预测山洪时数据稀缺的问题。",
+          "comment": "将非结构化的历史文本数据转化为可靠的预测模型输入，这会是解锁更多环境与气候科学难题的关键吗？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/12/google-is-using-old-news-reports-and-ai-to-predict-flash-floods/"
+        },
+        {
+          "title": "Meta 公布四款专为 AI 推理设计的新 MTIA 芯片",
+          "summary": "Meta 与博通合作开发了四款新的 MTIA 芯片，专为 AI 推理任务优化，并计划在未来两年内以每六个月一款的节奏部署。",
+          "comment": "科技巨头纷纷自研 AI 芯片，这是否会重塑现有的半导体产业格局，并最终决定下一代 AI 基础设施的形态？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/semiconductors/meta-reveals-four-new-mtia-chips-built-for-ai-inference"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "OpenClaw AI 智能体热潮席卷中国，引发安全担忧与监管",
+          "summary": "开源 AI 智能体项目 OpenClaw 在中国被广泛采用，但当局已警告政府机构和国有企业不要使用该工具，并提示其潜在的安全风险。",
+          "comment": "在 AI 技术快速普及与国家安全风险之间，如何建立一套既鼓励创新又能有效管控的敏捷监管框架？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openclaw-ai-agent-craze-sweeps-china-as-authorities-seek-to-clamp-down-amid-security-fears-adoption-surges-as-state-run-enterprises-are-barred-from-use"
+        },
+        {
+          "title": "中国科技公司争相部署 OpenClaw，推动低成本 AI 模型需求",
+          "summary": "基于 OpenClaw 的 AI 智能体应用在中国迅速普及，其使用量已超过美国，并推动了对本土低成本 AI 模型的需求。",
+          "comment": "开源 AI 智能体框架的流行，是否会催生一个以中国为中心、更具成本效益的 AI 应用开发生态？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/12/china-openclaw-ai-agent-adoption-tech-companies-government-support-lobster-shrimp.html"
+        },
+        {
+          "title": "下一代 AI 眼镜因内存涨价面临成本压力",
+          "summary": "由于生成式 AI 带来的算力需求推高了 HBM、DDR5 等高端内存价格，这股涨价潮正传导至 AI 眼镜等 3C 终端，可能导致产品价格上涨。",
+          "comment": "AI 硬件的普及是否会持续受制于上游核心元器件的供应和价格波动，从而影响其市场扩张速度？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544847.html"
+        },
+        {
+          "title": "AI 驱动的‘杀伤链’正在改变美国的战争方式",
+          "summary": "Palantir 和 Anthropic 等公司的 AI 系统正帮助美军将海量战场数据转化为成千上万的打击行动，变革作战模式。",
+          "comment": "当 AI 深度融入军事决策‘杀伤链’，人类指挥官的角色将如何演变，又该如何确保最终的伦理与责任归属？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/fedb262e-e6db-40bc-a4d0-080812f0f82b"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "字节跳动引进 AI 人才，郁博文加盟 Seed 团队任视觉模型负责人",
+          "summary": "原阿里巴巴通义千问大模型后训练负责人郁博文已加入字节跳动，担任 Seed 团队视觉模型与多模态交互团队的后训练负责人。",
+          "comment": "顶尖 AI 人才在巨头间的流动加剧，这是否意味着中国 AI 产业竞争已进入以‘人才战’为核心的下半场？",
+          "source": "OSCHINA",
+          "url": "https://www.oschina.net/news/409930"
+        },
+        {
+          "title": "Anthropic 与黑石等私募洽谈成立 AI 咨询合资企业",
+          "summary": "Anthropic 正与黑石集团等私募股权财团洽谈，计划成立一家合资企业，向这些机构所投资的公司销售其 Claude 开发者的技术。",
+          "comment": "AI 公司通过与资本巨头结盟来渗透传统行业，这会成为下一代 To-B AI 服务的主流销售模式吗？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3719787524077192?f=rss"
+        },
+        {
+          "title": "腾讯 WorkBuddy 升级，支持一键直连微信",
+          "summary": "腾讯自研的 AI 原生桌面智能体工作台 WorkBuddy 迎来重要升级，新增微信一键直连等核心功能，降低用户使用门槛。",
+          "comment": "将 AI 智能体深度集成到国民级社交应用中，是否意味着‘人人可用’的个性化 AI 助手时代真正到来？",
+          "source": "OSCHINA",
+          "url": "https://www.oschina.net/news/409895"
+        },
+        {
+          "title": "豆包官宣手机助手，与手机厂商合作落地操作系统级 AI 助手",
+          "summary": "字节跳动豆包团队官宣推出豆包手机助手，通过与手机厂商合作，基于操作系统授权将 AI 能力整合进不同品牌机型。",
+          "comment": "大模型厂商选择与硬件厂商合作而非自研硬件，这是否揭示了未来 AI 入口争夺战中‘软硬结合’的最优路径？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/H8w4gm9ko6oHLo0z.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "百度发布全球首款手机‘龙虾’应用‘红手指 Operator’",
+          "summary": "百度发布全球首款手机 AI 智能体应用‘红手指 Operator’，用户下载 App 即可在手机上运行 AI 智能体，上线后迅速引爆下载热潮。",
+          "comment": "将复杂的 AI 智能体能力封装成一个轻量级手机应用，这会是推动 AI 技术真正触达海量普通用户的关键一步吗？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/2FtUIk1mtqmNy1tz.html"
+        },
+        {
+          "title": "Anthropic 为 Claude 增加跨 Excel 和 PowerPoint 的共享上下文功能",
+          "summary": "Anthropic 升级了 Claude 的 Microsoft Office 插件，使其能在 Excel 和 PowerPoint 之间共享上下文，支持跨应用的可复用工作流。",
+          "comment": "AI 助手开始打通不同办公软件的数据孤岛，这是否预示着未来‘一站式智能办公平台’的雏形？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/anthropic-gives-claude-shared-context-across-microsoft-excel-and-powerpoint"
+        },
+        {
+          "title": "京东发布‘智能机器人产业加速 2.0 计划’，目标百亿营收",
+          "summary": "京东在 AWE 2026 上联合多家机器人品牌亮相，并发布‘智能机器人产业加速 2.0 计划’，旨在 2026 年内助力合作伙伴实现百亿规模营收。",
+          "comment": "电商平台利用其渠道和供应链优势推动机器人产业，是否会成为加速消费级机器人商业化落地的催化剂？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3719778258679430?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-12T18:34:05.470972+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
