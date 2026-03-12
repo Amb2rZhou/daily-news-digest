@@ -1,10 +1,11 @@
 name: "Send: ch_ml9b9t9s"
 
 on:
-  workflow_run:
-    workflows: ["Fetch News"]
-    branches: [main]
-    types: [completed]
+  # workflow_run 已禁用：当前仅生成草稿，不自动发送 webhook
+  # workflow_run:
+  #   workflows: ["Fetch News"]
+  #   branches: [main]
+  #   types: [completed]
   workflow_dispatch: {}
 
 concurrency:

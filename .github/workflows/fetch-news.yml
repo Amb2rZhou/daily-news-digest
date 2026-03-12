@@ -172,7 +172,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           BRANCH="${GITHUB_REF#refs/heads/}"
-          git add config/drafts/
+          git add config/drafts/ config/exports/
           git diff --cached --quiet || git commit -m "Add news draft for $(TZ=Asia/Shanghai date +%Y-%m-%d)"
           git pull origin "$BRANCH" --rebase -X theirs || {
             echo "Rebase conflict, resolving with our draft versions..."

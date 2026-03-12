@@ -19,7 +19,7 @@ from fetch_news import (
     summarize_news_with_claude,
 )
 from send_email import send_email
-from send_webhook import send_webhook, send_admin_alert
+from send_webhook import send_webhook, send_admin_alert, format_webhook_markdown
 
 
 # ---------------------------------------------------------------------------
@@ -272,6 +272,20 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
         else:
             draft_path = save_draft(ch_draft, settings, channel_id=ch_id)
         print(f"  Draft saved: {draft_path}")
+
+    # Export MD files (one per topic_mode)
+    exports_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "exports")
+    os.makedirs(exports_dir, exist_ok=True)
+    news_date = news_data.get("date", datetime.now(tz).strftime("%Y-%m-%d"))
+    for mode, cats in mode_results.items():
+        if not cats:
+            continue
+        md_draft = {"date": news_date, "categories": cats}
+        md_content = format_webhook_markdown(md_draft)
+        md_path = os.path.join(exports_dir, f"{news_date}_{mode}.md")
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write(md_content)
+        print(f"  MD exported: {md_path}")
 
     # Check for empty drafts and alert admin
     tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))
