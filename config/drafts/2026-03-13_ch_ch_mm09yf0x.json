@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-13",
+  "time_window": "2026-03-12 19:00 ~ 2026-03-13 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "思特威发布全新1200万像素AI眼镜应用CMOS图像传感器",
+          "summary": "思特威推出专为AI眼镜设计的1200万像素CMOS图像传感器SC1220IOT，支持低功耗常开功能，将于2026年第二季度量产。",
+          "comment": "当AI眼镜的'眼睛'看得更清、更省电时，会催生出哪些超越当前想象的全新交互与应用场景？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544857.html"
+        },
+        {
+          "title": "Future AI chips could be built on glass",
+          "summary": "韩国公司Absolics计划今年开始商业化生产特殊玻璃面板，用于制造下一代AI芯片，旨在提升数据中心硬件的性能和能效。",
+          "comment": "用古老的玻璃材料来构建最前沿的AI芯片，这是否意味着半导体工艺的物理极限将被新的材料科学突破所绕过？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/03/13/1134230/future-ai-chips-could-be-built-on-glass/"
+        },
+        {
+          "title": "Build an Agent That Thinks Like a Data Scientist",
+          "summary": "英伟达团队分享了如何构建能像数据科学家一样思考的智能体，并在DABStep基准测试中获得第一名的经验。",
+          "comment": "当AI智能体能够自主完成复杂的数据分析工作流时，专业数据科学家的核心价值将如何被重新定义？",
+          "source": "Hugging Face - Blog",
+          "url": "https://huggingface.co/blog/nvidia/nemo-agent-toolkit-data-explorer-dabstep-1st-place"
+        },
+        {
+          "title": "AI 编程能力边界探索：基于 Claude Code 的 Spec Coding 项目实战",
+          "summary": "一项基于Claude Code的规格驱动编码实战，在10天内生成2.5万行代码，提效36%，探索了AI编程的真实能力边界。",
+          "comment": "当AI能将规格文档高效转化为可用代码，软件工程的核心是否会从'编写'转向更精确的'需求定义'与'架构设计'？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://my.oschina.net/u/5783135/blog/19210069"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "AI toys for children misread emotions and respond inappropriately, researchers warn",
+          "summary": "剑桥大学研究人员首次研究发现，市面上的AI玩具可能会误读儿童的情绪并做出不恰当的反应。",
+          "comment": "当AI成为儿童的玩伴和情感互动对象时，如何确保其情感识别的准确性，避免对儿童心理发展产生负面影响？",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/clyg4wx6nxgo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Who is really footing the AI energy bill? Inside the debate about data center electricity costs",
+          "summary": "随着AI数据中心耗电量激增，关于谁应承担其巨额电费成本的争论日益激烈，引发了公众关系危机。",
+          "comment": "AI发展的巨大能源消耗成本，最终会由科技巨头、消费者还是全体纳税人来承担？这将对全球能源政策和电价产生何种连锁反应？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/13/ai-data-centers-electricity-prices-backlash-ratepayer-protection.html"
+        },
+        {
+          "title": "中国信通院启动可信互联网智能体测试评估 构建AI安全合规新标尺",
+          "summary": "中国信通院正式启动可信互联网智能体测试评估工作，旨在为快速发展的智能体产业建立权威的安全与合规标准。",
+          "comment": "在AI智能体'野蛮生长'的初期就建立'可信'标准，是能有效引导行业健康发展，还是可能过早地扼杀了创新活力？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119900.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "美团管理层沟通会——王兴：物理世界数字化将是AI非常重要的底座",
+          "summary": "美团CEO王兴在内部沟通会上表示，AI带来的变化将远超互联网，而物理世界的数字化是AI应用的重要基础。",
+          "comment": "当本地生活服务的巨头将'物理世界数字化'视为AI底座，这是否意味着未来AI竞争的核心将从云端算力转向对线下实体世界的感知与理解能力？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/tyeDwAnQsUuown70.html"
+        },
+        {
+          "title": "Meta Delays Rollout of New A.I. Model After Performance Concerns",
+          "summary": "因性能问题，Meta推迟了其新款AI模型的发布计划，该公司已投入数十亿美元以保持在人工智能领域的前沿地位。",
+          "comment": "连投入巨大的科技巨头都会因性能问题推迟AI模型发布，这是否揭示了当前大模型研发中普遍存在的'最后一公里'挑战？",
+          "source": "NYT > Technology",
+          "url": "https://www.nytimes.com/2026/03/12/technology/meta-avocado-ai-model-delayed.html"
+        },
+        {
+          "title": "AMD, Broadcom, and Nvidia join hyperscalers to define optical scale-up interconnect of the future for AI clusters",
+          "summary": "AMD、博通、英伟达联合微软、Meta、OpenAI等巨头，共同定义未来AI集群的光学扩展互连标准，目标速度最终达3.2 Tb/s。",
+          "comment": "当芯片巨头与云巨头联手制定底层互联标准，这是否意味着AI基础设施的竞争已从单一硬件升级，进入跨公司、跨层级的生态体系竞争阶段？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/amd-broadcom-and-nvidia-join-hyperscalers-to-define-optical-scale-up-interconnect-of-the-future-for-ai-clusters-meta-microsoft-and-openai-to-benefit-as-speeds-eventually-scale-to-3-2-tb-s"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "老板电器发布全球首款AI烹饪眼镜",
+          "summary": "老板电器在AWE 2026上发布全球首款AI烹饪眼镜，搭载自研烹饪大模型，能识别食材、感知火力并提供实时指导。",
+          "comment": "AI从手机和电脑屏幕走向厨房灶台，这种深度融入具体生活场景的专用AI硬件，是否会比通用助手更快地改变我们的日常生活？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544852.html"
+        },
+        {
+          "title": "万兴科技正式开放万兴剧厂",
+          "summary": "万兴科技携手生数科技Vidu，正式开放国内首个'精品漫剧全链路工具+漫剧大模型深度共创'产品万兴剧厂，AI分镜创作提效高达6倍。",
+          "comment": "当AIGC工具能将分镜创作效率提升6倍，这是否会彻底改变短视频和短剧的内容生产格局，引发新一轮创作浪潮？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3721219027188104?f=rss"
+        },
+        {
+          "title": "海尔冰箱AWE发布AI新物种，行业最高智能等级认证",
+          "summary": "海尔在AWE 2026发布AI多舱魔方冰箱seeker系列新品，实现健康饮食全托管，并获得行业最高智能等级认证。",
+          "comment": "当冰箱从'储存食物'升级为'管理健康'的AI管家，智能家居的竞争焦点是否会从连接与控制，转向对用户生活习惯的深度理解与主动服务？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/woXHW6ZBaDv4PBFv.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "中国 AI 视频赛道最大单笔融资，为什么给了爱诗科技",
+          "summary": "中国AI视频生成公司爱诗科技完成3亿美元融资，据称为该赛道国内最大单笔融资。",
+          "comment": "在文生视频竞争白热化的当下，资本仍愿意押注巨额资金，他们看中的究竟是技术壁垒、应用前景，还是中国市场的独特机会？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1657947?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-13T18:33:57.833233+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
