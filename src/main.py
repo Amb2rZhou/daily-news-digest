@@ -131,6 +131,88 @@ def get_channels_to_fetch(settings: dict, now: datetime) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# HTML export
+# ---------------------------------------------------------------------------
+
+_MODE_LABELS = {"focused": "AI 精选日报", "broad": "科技全览日报"}
+
+def _render_news_html(draft: dict, mode: str) -> str:
+    """Render draft JSON to a standalone HTML page."""
+    date = draft.get("date", "")
+    categories = draft.get("categories", [])
+    label = _MODE_LABELS.get(mode, "科技日报")
+
+    items_html = []
+    total = 0
+    for cat in categories:
+        icon = cat.get("icon", "")
+        name = cat.get("name", "")
+        news = cat.get("news", [])
+        if not news:
+            continue
+        items_html.append(f'<section class="cat"><h2>{icon} {name}</h2>')
+        for item in news:
+            title = item.get("title", "")
+            summary = item.get("summary", "")
+            comment = item.get("comment", "")
+            url = item.get("url", "")
+            items_html.append('<article>')
+            items_html.append(f'<h3><a href="{url}" target="_blank" rel="noopener">{title}</a></h3>')
+            if summary:
+                items_html.append(f'<p class="summary">{summary}</p>')
+            if comment:
+                items_html.append(f'<p class="comment">{comment}</p>')
+            items_html.append('</article>')
+            total += 1
+        items_html.append('</section>')
+
+    body = "\n".join(items_html)
+
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{label} {date}</title>
+<style>
+*{{margin:0;padding:0;box-sizing:border-box}}
+body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;
+  background:#f5f5f7;color:#1d1d1f;line-height:1.6}}
+.container{{max-width:680px;margin:0 auto;padding:20px 16px 40px}}
+header{{text-align:center;padding:32px 0 24px;border-bottom:1px solid #e5e5e5;margin-bottom:24px}}
+header h1{{font-size:24px;font-weight:700;letter-spacing:-0.5px}}
+header .date{{color:#86868b;font-size:14px;margin-top:6px}}
+header .count{{display:inline-block;background:#0071e3;color:#fff;font-size:12px;
+  padding:2px 10px;border-radius:12px;margin-top:8px}}
+.cat{{margin-bottom:28px}}
+.cat h2{{font-size:16px;font-weight:600;color:#0071e3;padding:8px 0;
+  border-bottom:2px solid #0071e3;margin-bottom:16px}}
+article{{background:#fff;border-radius:12px;padding:16px 18px;margin-bottom:12px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06)}}
+article h3{{font-size:15px;font-weight:600;margin-bottom:8px;line-height:1.4}}
+article h3 a{{color:#1d1d1f;text-decoration:none}}
+article h3 a:hover{{color:#0071e3}}
+.summary{{font-size:14px;color:#424245;margin-bottom:6px}}
+.comment{{font-size:13px;color:#0071e3;background:#f0f7ff;padding:8px 12px;
+  border-radius:8px;border-left:3px solid #0071e3}}
+footer{{text-align:center;color:#86868b;font-size:12px;padding-top:24px;border-top:1px solid #e5e5e5;margin-top:16px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>{label}</h1>
+<div class="date">{date}</div>
+<span class="count">{total} 条</span>
+</header>
+{body}
+<footer>Powered by daily-news-digest</footer>
+</div>
+</body>
+</html>"""
+
+
+# ---------------------------------------------------------------------------
 # Mode: fetch
 # ---------------------------------------------------------------------------
 
@@ -273,7 +355,7 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
             draft_path = save_draft(ch_draft, settings, channel_id=ch_id)
         print(f"  Draft saved: {draft_path}")
 
-    # Export MD files (one per topic_mode)
+    # Export MD + HTML files (one per topic_mode)
     exports_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "exports")
     os.makedirs(exports_dir, exist_ok=True)
     news_date = news_data.get("date", datetime.now(tz).strftime("%Y-%m-%d"))
@@ -285,7 +367,11 @@ def run_fetch(settings: dict, manual: bool = False, channel_ids: list[str] = Non
         md_path = os.path.join(exports_dir, f"{news_date}_{mode}.md")
         with open(md_path, "w", encoding="utf-8") as f:
             f.write(md_content)
-        print(f"  MD exported: {md_path}")
+        html_content = _render_news_html(md_draft, mode)
+        html_path = os.path.join(exports_dir, f"{news_date}_{mode}.html")
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(html_content)
+        print(f"  Exported: {md_path}, {html_path}")
 
     # Check for empty drafts and alert admin
     tz = ZoneInfo(settings.get("timezone", "Asia/Shanghai"))

@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'admin/**'
+      - 'config/exports/*.html'
   workflow_dispatch:
 
 permissions:
@@ -37,6 +38,11 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: admin
+
+      - name: Copy news HTML to dist
+        run: |
+          mkdir -p admin/dist/news
+          cp config/exports/*.html admin/dist/news/ 2>/dev/null || echo "No HTML exports yet"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
