@@ -21,6 +21,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   fetch-news:
@@ -181,6 +182,19 @@ jobs:
             git rebase --continue
           }
           git push origin HEAD:"$BRANCH"
+
+      - name: Trigger Pages deploy
+        if: steps.pre_check.outputs.skip != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy-admin.yml',
+              ref: 'main'
+            })
+            console.log('Triggered deploy-admin workflow')
 
       # 测试模式：抓取后立即发送
       - name: Auto-send (test mode)
