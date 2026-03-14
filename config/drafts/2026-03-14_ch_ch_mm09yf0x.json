@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-14",
+  "time_window": "2026-03-13 19:00 ~ 2026-03-14 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Beyond Semantic Similarity: Introducing NVIDIA NeMo Retriever's Generalizable Agentic Retrieval Pipeline",
+          "summary": "英伟达发布了NeMo Retriever的通用智能体检索管道，旨在超越传统的语义相似性检索，为AI智能体提供更强大的信息获取能力。",
+          "comment": "当AI智能体能够自主进行更复杂、更通用的信息检索时，它们将如何重塑我们获取知识和解决问题的方式？",
+          "source": "Hugging Face - Blog",
+          "url": "https://huggingface.co/blog/nvidia/nemo-retriever-agentic-retrieval"
+        },
+        {
+          "title": "1M context is now generally available for Opus 4.6 and Sonnet 4.6",
+          "summary": "Anthropic宣布其Claude Opus 4.6和Sonnet 4.6模型的100万上下文窗口现已全面开放，并且标准定价适用于整个窗口，没有长上下文溢价。",
+          "comment": "当处理超长上下文成为AI模型的标配且价格不再昂贵时，哪些依赖大量背景信息的行业和应用将首先被颠覆？",
+          "source": "Simon Willison's Weblog",
+          "url": "https://simonwillison.net/2026/Mar/13/1m-context/#atom-everything"
+        },
+        {
+          "title": "Patch Me If You Can: AI Codemods for Secure-by-Dault Android Apps",
+          "summary": "Meta开发了AI驱动的代码修改工具，用于大规模自动化修复安卓应用中的安全漏洞，以应对数百万行代码和数千名工程师的协作挑战。",
+          "comment": "当AI能够自动、大规模地修复软件安全漏洞时，人类开发者的角色是否会从‘代码编写者’转变为‘安全策略定义者’？",
+          "source": "Engineering at Meta",
+          "url": "https://engineering.fb.com/2026/03/13/android/ai-codemods-secure-by-default-android-apps-meta-tech-podcast/"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Sovereign AI is a bet on the economies of anti-scale",
+          "summary": "文章探讨了‘主权AI’的趋势，即各国倾向于发展本土化的AI能力，这虽然对单个国家来说成本高昂，却为其供应商带来了意外之财。",
+          "comment": "在AI领域，追求技术自主的‘主权化’趋势，最终会加剧全球技术割裂，还是催生出更具韧性和多样性的创新生态？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/7938e68a-22f9-4e83-8f66-302fd8f94297"
+        },
+        {
+          "title": "Why physical AI is becoming manufacturing's next advantage",
+          "summary": "文章指出，制造业的下一阶段优势在于物理AI，即结合了感知、推理和行动的智能系统，以应对劳动力限制、复杂性上升和创新压力。",
+          "comment": "当AI从虚拟世界走向物理世界并深度融入制造业时，工厂的终极形态会是完全由AI协调的‘无人工厂’，还是人机协作的新范式？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/03/13/1134184/why-physical-ai-is-becoming-manufacturings-next-advantage/"
+        },
+        {
+          "title": "Coding After Coders: The End of Computer Programming as We Know It",
+          "summary": "在AI智能体时代，许多硅谷程序员已不再进行传统编程，他们的工作方式变得非常奇特，标志着我们所知的计算机编程的终结。",
+          "comment": "如果AI最终接管了大部分代码生成工作，那么‘程序员’这一职业的核心价值将转向何处？是更高层次的系统设计，还是与AI协作的‘提示工程’？",
+          "source": "NYT > Technology",
+          "url": "https://www.nytimes.com/2026/03/12/magazine/ai-coding-programming-jobs-claude-chatgpt.html"
+        },
+        {
+          "title": "The ongoing Strait of Hormuz blockage will impact the semiconductor and AI industries",
+          "summary": "霍尔木兹海峡的持续封锁将导致铝、氦气和液化天然气短缺，这些关键材料的短缺将对芯片和AI产业造成显著冲击。",
+          "comment": "地缘政治风险如何暴露了全球AI算力供应链的脆弱性，这会否加速关键材料和生产环节的区域化或本土化进程？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/the-ongoing-strait-of-hormuz-blockage-will-impact-the-semiconductor-and-ai-industries-with-aluminum-helium-and-lng-shortages-and-with-no-timeline-for-re-opening-supply-chains-face-significant-challenges"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "China's ByteDance to access 36,000 Blackwell GPU cluster through Malaysia cloud operator",
+          "summary": "字节跳动将通过马来西亚云服务商访问一个包含36,000块Blackwell GPU的集群，英伟达确认该交易符合美国出口管制规定。",
+          "comment": "通过海外算力中心规避管制，会成为中国科技公司获取先进AI算力的主流路径吗？这将对全球AI竞争格局产生何种影响？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/gpus/chinas-bytedance-to-access-36-000-blackwell-gpu-cluster-through-malaysia-cloud-operator-nvidia-confirms-no-objections-deal-is-in-line-with-us-export-controls"
+        },
+        {
+          "title": "Elon Musk says xAI must be 'rebuilt' as co-founder exodus continues, SpaceX IPO awaits",
+          "summary": "在联合创始人持续离职后，马斯克表示必须‘重建’xAI，同时该AI公司现已交由SpaceX管理，为SpaceX的IPO做准备。",
+          "comment": "将AI公司的命运与航天公司的IPO深度绑定，这种激进的资本和战略操作，是加速AGI发展的捷径，还是增加了巨大的不确定性？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/13/elon-musk-xai-co-founders-spacex-ipo.html"
+        },
+        {
+          "title": "大裁员20%，新模型难产，Meta AI这团乱麻仍然没理顺",
+          "summary": "文章指出Meta AI部门面临20%的大规模裁员，新模型开发进展不顺，内部管理仍存在诸多问题。",
+          "comment": "在投入巨资并重组后，Meta的AI战略依然面临挑战，这是大公司转型AI的普遍困境，还是其特定组织文化的产物？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7914242.html"
+        },
+        {
+          "title": "英伟达五年豪掷260亿美元押注开源AI大模型 开启全栈式AI战略转型",
+          "summary": "英伟达计划未来五年投入260亿美元研发开源AI大模型，标志着其从芯片制造商向全栈式AI实验室的战略转型。",
+          "comment": "当最大的AI算力供应商开始亲自下场打造顶级开源模型，这会巩固其生态主导地位，还是可能引发下游客户和合作伙伴的担忧？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119928.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "推倒智能家居‘巴别塔’，美的选择做那个‘拆墙人’",
+          "summary": "美的发布了自进化家居智能体，旨在解决不同品牌智能设备之间协议不互通、无法协同的‘巴别塔’难题，实现真正的全屋智能。",
+          "comment": "如果一家家电巨头成功定义了跨品牌智能家居的互联标准，这是否意味着未来智能家居生态的竞争将从硬件转向操作系统和平台？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/smarthome/Frzm81cb3uaJjC8L.html"
+        },
+        {
+          "title": "海尔发布行业首款最高级L4级智能体空调：空调风因人而异",
+          "summary": "海尔在AWE2026上发布了行业首款L4级智能体空调，能够通过AI感知不同家庭成员的需求，实现出风因人而异。",
+          "comment": "当家电从执行固定指令升级为具备环境感知和个性化决策能力的‘智能体’时，家庭生活的隐私边界将如何被重新定义？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/2XDTcw3zj3gPM3O0.html"
+        },
+        {
+          "title": "Microsoft's Copilot AI assistant is coming to current-gen Xbox consoles this year",
+          "summary": "微软计划在今年将Copilot AI助手引入本世代Xbox游戏主机，并扩展到更多游戏服务中。",
+          "comment": "AI助手深度集成到游戏主机后，是会彻底改变游戏交互和叙事方式，还是主要扮演一个更强大的游戏内百科和攻略角色？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/games/894799/microsoft-gaming-copilot-ai-xbox-consoles"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-14T18:34:45.654153+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}

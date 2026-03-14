@@ -1,0 +1,125 @@
+{
+  "date": "2026-03-14",
+  "time_window": "2026-03-13 19:00 ~ 2026-03-14 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta Ray-Ban智能眼镜发布首个重大操作系统更新",
+          "summary": "Meta Ray-Ban Display智能眼镜迎来首次重大OS更新，新增两款EMG控制的小游戏、Instagram Reels信息流、小部件、日历应用以及电话实时字幕等功能。",
+          "comment": "智能眼镜的操作系统更新正在从功能补充转向生态构建，这会是其成为下一代主流计算平台的关键一步吗？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/meta-ray-ban-display-first-major-os-update-new-app-minigames-features/"
+        },
+        {
+          "title": "追觅发布‘水景AQUA 100’AR智能泳镜",
+          "summary": "追觅在AWE 2026大会上发布其首款AR智能泳镜‘水景AQUA 100’，整机重量仅68克，可在水下显示运动数据，续航达7小时，将于近期上市。",
+          "comment": "AR技术正从通用场景向游泳等垂直运动领域渗透，这会成为智能穿戴设备下一个重要的增长点吗？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544862.html"
+        },
+        {
+          "title": "京东方S7 AI+AR骑行眼镜全球首发",
+          "summary": "京东方在AWE 2026全球首发S7 AI+AR骑行运动眼镜，融合AI与AR技术，提供骑行数据与导航信息，预计6月与车厂合作正式亮相。",
+          "comment": "传统显示巨头与运动装备结合推出智能眼镜，是否预示着AI硬件正进入一个跨界融合的新阶段？",
+          "source": "93913",
+          "url": "https://www.93913.com/119918.html"
+        },
+        {
+          "title": "传视涯科技清空产线，全力备战Meta下一代VR头显",
+          "summary": "国内Micro-OLED龙头厂商视涯科技据传已全面清空现有产线，为Meta计划于2027年（或2026年）发布的下一代旗舰VR头显做产能与技术准备。",
+          "comment": "上游核心元件厂商为单一客户进行大规模产线调整，这反映了VR硬件市场怎样的竞争格局与风险？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544861.html"
+        },
+        {
+          "title": "Oxa完成D轮融资，将工业移动自动化推向市场",
+          "summary": "自动驾驶软件公司Oxa完成了D轮融资，其开发的可配置自动驾驶软件据称可部署在超过20种车型上，旨在推动工业移动自动化。",
+          "comment": "专注于工业场景的自动驾驶解决方案开始获得资本青睐，这是否意味着机器人技术的商业化重心正在从消费端转向产业端？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/oxa-closes-series-d-funding-bring-industrial-mobility-automation-market/"
+        },
+        {
+          "title": "ROG Xbox Ally X游戏掌机将于4月获得AI超分辨率增强",
+          "summary": "微软的Auto Super Resolution（自动超级分辨率）功能将于4月登陆ROG Xbox Ally X游戏掌机，这项系统级AI图像增强技术据称可带来30%的性能提升。",
+          "comment": "AI超分辨率技术从桌面GPU下沉到移动游戏掌机，是否会彻底改变便携式游戏设备的性能定义和用户体验？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/video-games/handheld-gaming/rog-xbox-ally-x-gaming-handheld-to-get-auto-super-resolution-boost-in-april-microsoft-touts-30-percent-performance-boost-thanks-to-ai-powered-image-upscaling"
+        },
+        {
+          "title": "前Oculus CTO批评Meta对VR开发者既补贴又抽成的政策",
+          "summary": "传奇程序员、前Oculus CTO约翰·卡马克批评Meta的VR平台政策，认为其对开发者同时进行补贴和收取30%佣金的做法是‘浪费资源的空转’。",
+          "comment": "硬件巨头在构建生态初期采取的补贴与抽成并行的策略，长期来看是否会阻碍创新和开发者的积极性？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovrl.com/john-carmack-oculus-cto-meta-fee-structure-critique/"
+        },
+        {
+          "title": "Bandai Namco热门解谜平台游戏《小小梦魇》VR版将于4月发布",
+          "summary": "万代南梦宫宣布其热门解谜平台游戏系列《小小梦魇》的VR版本《Little Nightmares VR: Altered Echoes》将于4月登陆PS VR2等平台。",
+          "comment": "知名IP持续向VR平台迁移，这是VR内容生态走向成熟的标志，还是主流游戏厂商的试水之举？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/bandai-little-nightmares-vr-release-date-trailer/"
+        },
+        {
+          "title": "Meta Quest推出春季大促，最高半价优惠",
+          "summary": "Meta为其Quest VR头显系列推出春季促销活动，部分游戏和应用提供最高50%的折扣，以吸引更多用户。",
+          "comment": "硬件普及后，通过频繁的内容促销来维持用户活跃度和软件生态，是否已成为VR平台运营的常态？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138782"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "微软游戏Copilot AI助手将于今年登陆本世代Xbox主机",
+          "summary": "微软宣布其游戏Copilot AI助手将于今年内登陆本世代Xbox主机，并计划将其扩展到更多游戏服务中。",
+          "comment": "AI游戏助手会如何改变玩家的游戏习惯和开发者的游戏设计思路？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/games/894799/microsoft-gaming-copilot-ai-xbox-consoles"
+        },
+        {
+          "title": "Claude的100万上下文窗口现已全面开放，且无额外溢价",
+          "summary": "Anthropic宣布其Claude Opus 4.6和Sonnet 4.6模型的100万上下文窗口现已全面开放，并且标准定价适用于整个窗口，没有长上下文溢价。",
+          "comment": "当长上下文成为标配且平价，哪些依赖信息检索和总结的应用形态会被颠覆？",
+          "source": "Simon Willison's Weblog",
+          "url": "https://simonwillison.net/2026/Mar/13/1m-context/#atom-everything"
+        },
+        {
+          "title": "美的发布自进化家居智能体，旨在打破智能家居生态壁垒",
+          "summary": "美的发布了自进化家居智能体，旨在通过AI技术解决不同品牌智能家居设备间协议不互通、无法协同的“巴别塔”难题。",
+          "comment": "以AI智能体作为“翻译层”来整合碎片化生态，会是智能家居走向真正智能的关键一步吗？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/smarthome/Frzm81cb3uaJjC8L.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "中国AI初创公司月之暗面以180亿美元估值寻求融资",
+          "summary": "中国AI初创公司Moonshot AI正在寻求筹集高达10亿美元的资金，此轮融资将使该公司估值达到约180亿美元，在三个月内估值翻了两番以上。",
+          "comment": "中国AI初创公司在资本市场的估值飙升，是反映了真实的技术领先，还是全球AI竞赛下的估值泡沫？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-14/china-ai-startup-moonshot-snags-funds-at-18-billion-valuation"
+        },
+        {
+          "title": "马斯克的xAI因‘首次未构建正确’而再次重启AI编码工具项目",
+          "summary": "埃隆·马斯克的人工智能公司xAI正在彻底改造其构建AI编码工具的努力，并从Cursor公司引入了两名新高管。",
+          "comment": "连顶尖团队都反复‘重启’的项目，AI编程工具的终极形态究竟离我们还有多远？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/13/not-built-right-the-first-time-musks-xai-is-starting-over-again-again/"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-14T18:33:14.788573+08:00"
+}
