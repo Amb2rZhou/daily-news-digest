@@ -1,0 +1,111 @@
+{
+  "date": "2026-03-15",
+  "time_window": "2026-03-14 19:00 ~ 2026-03-15 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "特斯拉官宣Optimus 3今夏投产 年产能100万台启具身智能规模化时代",
+          "summary": "特斯拉官方确认其第三代人形机器人Optimus 3将于2026年夏季启动量产，目标年产能高达100万台，标志着人形机器人规模化生产时代的开启。",
+          "comment": "年产能百万台的人形机器人将对制造业和劳动力市场产生何种颠覆性影响？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119937.html"
+        },
+        {
+          "title": "天键股份AI语音识别技术落地 AI眼镜等产品已出货",
+          "summary": "天键股份在投资者互动中表示，其AI语音识别技术已落地应用于AI翻译耳机、AI眼镜等多款产品，且相关产品均已实现出货。",
+          "comment": "AI语音识别技术如何从消费电子配件中突围，成为下一代人机交互的核心入口？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119947.html"
+        },
+        {
+          "title": "富瀚微2026新品布局落地2.5T算力芯片 Q2量产AI眼镜8月上新",
+          "summary": "富瀚微披露2026年产品规划，将推出AIISP芯片、边缘侧芯片等多类新品，其AI眼镜产品布局提速，多款产品将在第二季度量产并于8月发布。",
+          "comment": "专用AI芯片的算力竞赛，是否正从云端服务器转向眼镜等微型终端设备？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119949.html"
+        },
+        {
+          "title": "美的集团加码AI转型 三年拟投600亿打造全屋智能新生态",
+          "summary": "美的集团发布全屋智能战略，推出自进化家居智能体MevoX，并宣布未来三年将投入超600亿元聚焦AI与具身智能领域，加速业务AI化转型。",
+          "comment": "家电巨头重金押注的‘自进化家居智能体’，是噱头还是智能家居走向真正自主化的关键一步？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/119939.html"
+        },
+        {
+          "title": "物理AI的信任基础是数据安全",
+          "summary": "ANYbotics公司CEO撰文指出，对于现场巡检机器人等物理AI设备，网络与数据安全是建立用户信任的基石，开发者必须予以充分考虑。",
+          "comment": "当机器人深入我们的物理世界，如何构建一个既智能又绝对可信的安全体系？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/data-security-foundation-trust-physical-ai/"
+        },
+        {
+          "title": "美国撤销有争议的AI硬件出口规则草案",
+          "summary": "美国商务部撤销了一项要求外国公司在美国AI领域投资的AI加速器出口规则草案，但表示新的出口管制规则仍在制定中。",
+          "comment": "地缘政治博弈下的AI硬件出口管制，如何在技术封锁与全球产业链合作之间取得平衡？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-govt-revokes-controversial-ai-hardware-export-rule-that-would-mandate-investments-from-foreign-companies-new-export-rules-are-still-in-the-works-though"
+        },
+        {
+          "title": "司法部捣毁由36万台受感染路由器和物联网设备组成的僵尸网络",
+          "summary": "美国司法部与欧洲刑警组织联合行动，捣毁了运行长达16年的SocksEscort代理网络，该僵尸网络由遍布163个国家的36万台受感染路由器和物联网设备组成。",
+          "comment": "海量不安全的智能硬件构成的僵尸网络已成全球性威胁，谁该为物联网设备的基础安全负责？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/cyber-security/doj-dismantles-socksescort-proxy-network-that-ran-for-16-years-in-joint-operation-with-europol-botnet-comprised-360-000-infected-routers-and-iot-devices-across-163-countries"
+        },
+        {
+          "title": "VR游戏周报丨Mega March特卖进行中，PS Store 70款VR游戏参与促销",
+          "summary": "VR陀螺发布最新VR游戏周报，统计了各主要VR平台的新增游戏数量，并报道了PS Store正在进行的VR游戏促销活动。",
+          "comment": "内容生态的繁荣是VR硬件普及的关键，但除了游戏，VR设备还能靠什么杀手级应用打开大众市场？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544864.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "360推出国内首个“安全龙虾”智能体应用及硬件终端",
+          "summary": "360集团发布“360安全龙虾”智能体应用客户端及“360安全龙虾Box”硬件终端，旨在解决OpenClaw智能体在安装、安全等方面的难题，内置百款大模型。",
+          "comment": "当AI智能体走向普及，安全是否会成为其规模化应用的首要门槛？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/XgX3qjd9RZ0aOaFjqbZQ"
+        },
+        {
+          "title": "Cloudflare发布AI辅助开发的实验性Next.js替代方案",
+          "summary": "Cloudflare发布了一个名为‘vinext’的实验性项目，由工程师使用AI在一周内开发完成，旨在作为针对Cloudflare Workers优化的Next.js替代方案，并展示了显著的构建速度提升。",
+          "comment": "AI辅助开发工具在提升效率的同时，如何保证其产出的代码质量和架构的长期可维护性？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/9bFq7FJUQSXANWqtf8fQ"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Meta据称考虑裁员20%，以抵消AI基础设施巨额投入",
+          "summary": "据路透社和TechCrunch报道，Meta正在考虑裁员多达20%的员工，以抵消其在AI基础设施、收购和招聘方面的激进支出。",
+          "comment": "科技巨头在AI军备竞赛中的巨额投入，是否必然导致其内部其他业务的收缩和人员动荡？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/business/895026/meta-laying-off-20-percent"
+        },
+        {
+          "title": "2026年GDC大会AI相关议题分享超百场，中国厂商表现活跃",
+          "summary": "2026年游戏开发者大会（GDC）上，AI相关议题分享超过100场，同比增长超110%。腾讯、谷歌、苹果等巨头亮相，其中9家中国厂商贡献了27场AI议题分享。",
+          "comment": "游戏行业是否会成为AI Agent和多模态技术最快速、最广泛的应用场景和试验场？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3723959543462281?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-15T18:34:41.316194+08:00"
+}
