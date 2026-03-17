@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-17",
+  "time_window": "2026-03-16 19:00 ~ 2026-03-17 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "英伟达开源 NemoClaw，为 OpenClaw 添加隐私和安全控制功能",
+          "summary": "英伟达推出开源堆栈NemoClaw，旨在为流行的OpenClaw生态增加关键的安全与隐私控制层，允许用户通过单行命令部署具备自我进化能力的自主AI代理。",
+          "comment": "当AI代理的部署变得如此简单，如何在开放生态与数据安全之间建立动态且可信的平衡？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/411357"
+        },
+        {
+          "title": "Nvidia demonstrates Rubin Ultra tray, the world's first AI GPU with 1TB of HBM4E memory",
+          "summary": "英伟达在GTC大会上展示了其下一代Kyber机架级解决方案，将由配备四个计算小芯片和1TB HBM4E内存的Rubin Ultra GPU提供支持。",
+          "comment": "当单颗GPU的内存容量达到TB级别，这会如何重塑AI模型的训练范式和应用部署的边界？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-demonstrates-rubin-ultra-tray-worlds-1st-ai-gpu-with-1tb-of-hbm4e"
+        },
+        {
+          "title": "Mistral Small 4 开源",
+          "summary": "Mistral AI宣布在Apache 2.0许可下开源Mistral Small 4，这是首款将其旗舰推理、多模态处理和智能体编码功能整合到单一多功能模型中的模型。",
+          "comment": "当顶级AI公司将多模态、推理与编码能力整合进一个开源模型，这是否意味着通用AI智能体的技术门槛正在被迅速拉平？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/411339/mistral-small-4"
+        },
+        {
+          "title": "Memories AI正在为可穿戴设备和机器人构建视觉记忆层",
+          "summary": "Memories.ai公司宣布与英伟达合作，利用其AI工具为可穿戴设备和机器人构建能够记住并回忆视觉影像的基础设施。",
+          "comment": "如果设备拥有了持续进化的视觉记忆，我们该如何定义个人隐私的边界以及人与机器之间的共生关系？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544880.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Nordea to Cut Up to 5% of Staff as AI Seen Bringing Cost Savings",
+          "summary": "北欧联合银行计划裁员多达1500人，预计人工智能将提高流程效率并降低成本。",
+          "comment": "当AI带来的效率提升直接转化为大规模岗位削减，社会应如何系统性应对由此产生的结构性失业问题？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-17/nordea-to-cut-up-to-5-of-staff-as-ai-seen-bringing-cost-savings"
+        },
+        {
+          "title": "Ark's Wood Sees Leap in AI-Driven Productivity Gains",
+          "summary": "Ark Invest首席执行官Cathie Wood讨论了人工智能驱动的生产力提升对全球经济的影响，认为非农生产率增长将远高于趋势水平。",
+          "comment": "如果AI驱动的生产率增长持续超预期，传统经济学模型是否还能有效预测通胀、就业和经济增长？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/videos/2026-03-17/ark-s-wood-sees-leap-in-ai-driven-productivity-gains-video"
+        },
+        {
+          "title": "Why it’s hard for humans to have the final say over AI",
+          "summary": "文章探讨了人类在AI决策中保留最终控制权所面临的困难，认为我们需要从过去的错误中吸取教训。",
+          "comment": "在AI系统日益复杂和自主的背景下，'人类最终控制权'这一概念本身是否需要进行根本性的重新定义？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/8bc21edd-142d-4866-a0de-6bc188104c0d"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "阿里巴巴宣布成立Alibaba Token Hub事业群，CEO吴泳铭挂帅直管",
+          "summary": "阿里巴巴集团宣布成立全新的Alibaba Token Hub事业群，整合通义实验室、MaaS业务线等AI相关团队，由CEO吴泳铭亲自挂帅。",
+          "comment": "国内大厂以'Token'为核心重组AI业务，这是否预示着AI竞争将从单点模型转向以智能体为载体的生态体系对决？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544873.html"
+        },
+        {
+          "title": "Baidu Taps OpenClaw Smart Speakers to Fuel Agentic AI Paradigm",
+          "summary": "百度正押注OpenClaw的成功，通过智能音箱作为语音控制终端，来推动其智能体AI范式的发展，以抵消核心业务下滑。",
+          "comment": "将爆款AI应用与硬件入口深度绑定，是否是互联网巨头在AI时代重建用户护城河的关键策略？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-17/baidu-taps-openclaw-smart-speakers-to-fuel-agentic-ai-paradigm"
+        },
+        {
+          "title": "Nvidia’s Huang predicts $1tn in AI chip revenue over 2 years",
+          "summary": "英伟达创始人黄仁勋预测，未来两年AI芯片收入将达到1万亿美元，但高于预期的销售预测未能提振股价。",
+          "comment": "当市场对万亿美元规模的AI芯片收入预期都反应平淡时，投资者究竟在等待什么样的'下一个故事'？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/205591d9-2785-4897-808c-739dc223b3d0"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "吉利汽车：'超级Eva+G-ASD 4.0'即将发布并量产上车",
+          "summary": "吉利汽车在英伟达GTC大会上宣布，携手合作伙伴打造的'超级Eva+G-ASD 4.0'即将发布并量产上车，极氪8X将率先搭载，实现对话式舱驾协同。",
+          "comment": "当智能座舱、智能驾驶与数字生态被一个'超级智能体'打通，汽车会从交通工具演变为怎样一种移动智能空间？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3726886426950017?f=rss"
+        },
+        {
+          "title": "Picsart now allows creators to ‘hire’ AI assistants through agent marketplace",
+          "summary": "创意平台Picsart推出AI智能体市场，允许创作者'雇佣'AI助手来完成特定任务，初期上线四个智能体并计划每周增加。",
+          "comment": "AI智能体市场的出现，是否意味着创意工作将从'工具使用'转向'智能体管理与协作'的新模式？",
+          "source": "AI News & Artificial Intelligence | TechCrunch",
+          "url": "https://techcrunch.com/2026/03/16/picsart-now-allows-creators-to-hire-ai-assistants-through-agent-marketplace/"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "VR医疗培训创企Oxford Medical Simulation宣布获500万英镑融资",
+          "summary": "英国VR医疗培训初创公司Oxford Medical Simulation获得500万英镑投资，将用于扩大在美国的布局并加大对AI模拟场景等产品创新的投入。",
+          "comment": "AI与VR结合的高仿真医疗培训正在获得资本青睐，这是否能成为解决全球医疗资源不均和培训成本高昂的有效路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544877.html"
+        },
+        {
+          "title": "Gecko Robotics lands the largest U.S. Navy robotics deal yet",
+          "summary": "Gecko Robotics与美国海军签署了一份为期五年的合同，帮助其监测和预测舰队船只所需的维护，这是美国海军迄今为止最大的机器人合同。",
+          "comment": "国防领域成为机器人及AI技术大规模应用的前沿，这将对民用技术的创新路径和伦理标准产生何种影响？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/17/gecko-robotics-lands-the-largest-u-s-navy-robotics-deal-yet/"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-17T18:31:57.169086+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
