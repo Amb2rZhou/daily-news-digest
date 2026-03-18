@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-18",
+  "time_window": "2026-03-17 19:00 ~ 2026-03-18 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "光粒科技完成近亿元 Pre-B 轮融资",
+          "summary": "智能运动眼镜品牌光粒科技近日完成近亿元 Pre-B 轮融资，资金将用于团队建设、技术研发及全球市场拓展。该公司专注于AR智能眼镜与运动科学算法。",
+          "comment": "AR智能眼镜在垂直运动场景的落地，能否成为其突破消费市场的关键路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544885.html"
+        },
+        {
+          "title": "传「字节豆包 AI 眼镜」项目整体延后",
+          "summary": "据消息称，字节跳动旗下豆包AI眼镜项目生产计划已整体延后，原计划推出的一代产品大概率不会上市，将等待更明确的产业拐点。",
+          "comment": "科技巨头在AI硬件上的谨慎，是否预示着当前消费级AI眼镜市场仍缺乏真正的‘杀手级’应用？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544881.html"
+        },
+        {
+          "title": "元镜科技将发布两款自研AI眼镜，成立一月获数千万元投资",
+          "summary": "新锐智能眼镜公司元镜未来（METLEN）成立仅一个月便获得数千万元投资，并宣布将推出P1、R1两款自研AI眼镜。",
+          "comment": "初创公司快速入局AI眼镜领域，是看到了未被满足的细分需求，还是仅仅在追逐资本风口？",
+          "source": "93913",
+          "url": "https://www.93913.com/120042.html"
+        },
+        {
+          "title": "VITURE携手英伟达、斯坦福大学推出XR-AI解决方案 重塑科研人机协作模式",
+          "summary": "VITURE联合英伟达与斯坦福大学推出XR-AI Lab Automation解决方案，以其Luma Ultra XR智能眼镜为核心硬件，旨在重塑科研场景的人机协作模式。",
+          "comment": "XR眼镜与AI结合的专业解决方案，是否会比消费级应用更早实现规模化商业价值？",
+          "source": "93913",
+          "url": "https://www.93913.com/120035.html"
+        },
+        {
+          "title": "Bigscreen Beyond 2系列发货提速至1-3天 2e版解锁眼动追踪注视点渲染功能",
+          "summary": "VR头显厂商Bigscreen宣布其Beyond 2系列发货周期缩短至1-3天，且Beyond 2e版本已解锁眼动追踪注视点渲染功能，可提升多款VR游戏的画质与性能。",
+          "comment": "高端PC VR头显在提升产能和核心功能后，能否在日益内卷的硬件市场中吸引更多硬核玩家？",
+          "source": "93913",
+          "url": "https://www.93913.com/120031.html"
+        },
+        {
+          "title": "开发者称已破解PSVR 2的PC限制，解锁眼动追踪和触觉反馈功能",
+          "summary": "开发者团队PSVR2Toolkit宣布成功破解PSVR 2在PC上的限制，有望解锁其眼动追踪和触觉反馈等核心硬件功能，释放设备潜力。",
+          "comment": "硬件破解社区的活跃，是否反映了官方对设备跨平台生态支持不足的现状？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138865"
+        },
+        {
+          "title": "Meta宣布Horizon Worlds于本月底从Quest下架，不再开放VR端访问",
+          "summary": "Meta正式宣布其元宇宙社交应用Horizon Worlds的VR版本将于3月31日从Quest商店下架，6月15日彻底关闭VR世界，未来仅作为移动平台服务存在。",
+          "comment": "Meta关闭其标志性VR社交应用，是否意味着‘元宇宙’的叙事重心已从沉浸式VR转向了移动端和AI？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138863"
+        },
+        {
+          "title": "英伟达：CloudXR 6.0原生登陆visionOS，RTX算力直通Vision Pro",
+          "summary": "英伟达宣布其CloudXR 6.0流媒体技术已原生支持visionOS，可将云端RTX算力直接传输至Apple Vision Pro，提升其高保真图形渲染能力。",
+          "comment": "云渲染技术成为连接高性能计算与轻量化XR硬件的桥梁，这是否是未来XR设备形态演进的主流方向？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138861"
+        },
+        {
+          "title": "Meta的下一个头显将配备2.5K Micro-OLED显示屏",
+          "summary": "据中国VR媒体报道，Meta的下一代头显将采用2560×2560分辨率的Micro-OLED显示屏，规格与Bigscreen Beyond头显类似。",
+          "comment": "Meta转向采用更高分辨率的Micro-OLED，是否意味着其在追求轻薄的同时，也开始重视核心显示效果的极致化？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/meta-next-headset-reportedly-2-5k-micro-oled-displays/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "智谱发布多模态模型 GLM-OCR 技术报告",
+          "summary": "智谱团队正式发布其多模态模型 GLM-OCR 的技术报告，详细介绍了该模型在文档理解方面的 SOTA 能力，其创新点包括集成版面分析以提升对复杂版面的鲁棒性和性能。",
+          "comment": "当多模态模型开始专精于特定任务（如文档理解）时，这是否意味着通用大模型与垂直领域专用模型的分野将更加清晰？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/411746"
+        },
+        {
+          "title": "AI 编程正在终结框架时代",
+          "summary": "一篇博客文章深入探讨了AI编程（或称自动化编程）的兴起，认为自2025年12月以来，AI辅助编程的能力已发生戏剧性变化，这可能会从根本上改变软件开发的方式和工具生态。",
+          "comment": "如果AI能自动化大部分编码工作，那么未来软件工程师的核心价值将不再是编写代码，而是什么？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/FyW5gwJotRRb8lUAO7z2"
+        },
+        {
+          "title": "Meta的Manus发布桌面应用，将其AI智能体带入个人设备",
+          "summary": "Meta旗下的Manus宣布推出一款新的桌面应用程序，旨在将其AI智能体直接部署到用户的个人设备上，以顺应OpenClaw等智能体引发的热潮。",
+          "comment": "AI智能体从云端走向个人桌面端，这是否会引发新一轮关于数据隐私、个人计算资源分配和智能体间协作范式的讨论？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/18/metas-manus-launches-desktop-app-to-bring-its-ai-agent-onto-personal-devices.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "腾讯2025年营收超预期，加大AI投资",
+          "summary": "腾讯2025年营收增长13%，超出市场预期。其核心业务的稳健表现为公司加大在人工智能，特别是智能体AI（Agentic AI）领域的投资提供了资源。",
+          "comment": "当互联网巨头的核心业务仍能提供充足现金流时，它们在新兴AI赛道上的战略投入会如何重塑行业竞争格局？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-18/tencent-s-sales-rise-13-in-boost-for-broader-ai-ambitions"
+        },
+        {
+          "title": "阿里云AI算力和存储产品最高涨价34%",
+          "summary": "阿里云发布公告，因全球AI需求爆发及供应链成本上涨，将于2026年4月18日起上调AI算力及CPFS（智算版）存储产品价格，其中平头哥真武810E等算力卡涨幅最高达34%。",
+          "comment": "AI算力成本的持续上涨，是否会迫使更多企业转向开源模型或寻求更经济的混合云策略，从而改变AI基础设施的市场格局？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/411701"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-18T18:31:34.086021+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
