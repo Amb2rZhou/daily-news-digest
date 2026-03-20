@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-20",
+  "time_window": "2026-03-19 19:00 ~ 2026-03-20 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "VMOCION发布VFORCE可穿戴设备",
+          "summary": "运动感知技术厂商VMOCION发布全新可穿戴设备VFORCE，通过前庭电刺激技术为游戏、模拟训练及空间计算场景提供真实体感运动反馈，旨在缓解VR晕动症并提升沉浸感。",
+          "comment": "将生理刺激与视觉体验结合的体感设备，能否成为解决VR沉浸感与舒适度矛盾的关键路径？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544905.html"
+        },
+        {
+          "title": "Omdia报告：乐奇Rokid登顶全球AI+AR眼镜市场第一",
+          "summary": "根据Omdia最新报告，在带显示的AI+AR眼镜细分赛道中，中国公司乐奇Rokid首次登顶全球出货量第一，同时其也是中国智能眼镜（含非显示款）销量第一。",
+          "comment": "中国品牌在AI+AR硬件赛道登顶全球第一，这是否意味着下一代计算终端的竞争格局已发生根本性转变？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544896.html"
+        },
+        {
+          "title": "亚马逊收购机器人门阶配送提供商RIVR",
+          "summary": "亚马逊收购了专注于最后一英里配送的机器人公司RIVR，此举可能旨在利用其四足机器人技术来增强亚马逊的包裹配送网络。",
+          "comment": "亚马逊将四足机器人纳入物流体系，这是否预示着人机协作的‘最后一公里’配送将成为城市基础设施的新常态？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/amazon-acquires-robotic-doorstep-delivery-provider-rivr/"
+        },
+        {
+          "title": "ElliQ AI伴侣获得华盛顿州医疗补助支持",
+          "summary": "Intuition Robotics公司的ElliQ AI伴侣机器人获得了华盛顿州医疗补助的全州范围支持，成为首个被纳入该计划的AI伴侣，旨在帮助人们保持社交参与和健康。",
+          "comment": "政府医疗体系开始为AI陪伴机器人买单，这是否标志着‘数字疗法’或‘社会处方’正在进入主流健康保障范畴？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/elliq-earns-washington-state-medicaid-support-smart-care/"
+        },
+        {
+          "title": "KEWAZO获得融资以加速LIFTBOT在重工业的部署",
+          "summary": "机器人公司KEWAZO获得新融资，将用于扩大其LIFTBOT机器人在能源等重工业领域的部署和集成，该机器人用于自动化维护和大型项目作业。",
+          "comment": "在危险、繁重的工业场景中，专用机器人替代人力是否已成为不可逆且经济效益明确的技术趋势？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/kewazo-raises-funding-accelerate-liftbot-deployment-heavy-industry/"
+        },
+        {
+          "title": "Meta加码线下零售，多城开设体验店展示AI眼镜新品",
+          "summary": "Meta正在多个城市开设名为‘Meta Lab’的线下体验店，重点面向消费者展示并开放体验其最新的AI眼镜产品。",
+          "comment": "科技巨头从线上走向线下开设硬件体验店，这是否意味着AI眼镜这类新兴设备仍需依赖实体触达来完成用户教育？",
+          "source": "93913",
+          "url": "https://www.93913.com/120066.html"
+        },
+        {
+          "title": "朱庇特智能发布两款主打‘最便宜’与‘最轻’的AR眼镜新品",
+          "summary": "朱庇特智能（JOVE）发布了两款新的AR智能眼镜，分别瞄准‘全球最便宜’和‘全球最轻’的市场定位，以应对不同的消费需求。",
+          "comment": "AR硬件厂商开始分化为‘极致性价比’和‘极致体验’两条路径，哪种策略更能推动消费级AR的早期普及？",
+          "source": "93913",
+          "url": "https://www.93913.com/120072.html"
+        },
+        {
+          "title": "英伟达云游戏服务现支持Quest、Vision Pro和Pico头显90 FPS串流",
+          "summary": "英伟达宣布其云游戏服务GeForce Now现已支持在Meta Quest、Apple Vision Pro和PICO头显的网页浏览器中实现最高90 FPS的游戏串流，为Ultimate订阅用户提供更流畅的体验。",
+          "comment": "云游戏与XR头显的结合日趋成熟，这是否会削弱对本地高性能计算的需求，从而改变未来XR设备的设计范式？",
+          "source": "UploadVR",
+          "url": "https://www.uploadvr.com/geforce-now-on-quest-3-pico-apple-vision-pro-gets-90-fps/"
+        },
+        {
+          "title": "AR厂商多屏未来发生工商变更，注册资本增加",
+          "summary": "AR硬件厂商多屏未来发生工商变更，其注册资本有所增加。该公司专注于AR办公解决方案，已发布多款AR空间计算产品。",
+          "comment": "AR办公硬件初创公司持续获得资本注入，但‘办公’这一场景是否足以支撑起一个独立的消费级硬件品类？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544899.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "全球首个企业级开源AI Agent平台“超级麦吉3.0”正式发布",
+          "summary": "36氪报道，超级麦吉3.0今日正式开源，定位为企业级OpenClaw。该平台整合了深度调研、PPT生成、数据分析等全栈AI能力，通过自研沙盒隔离、预算管控及人机协同闭环，旨在解决AI在企业落地中的安全与合规痛点。",
+          "comment": "当开源AI Agent平台开始聚焦企业级的安全与合规，这是否意味着AI Agent的商业化落地将从‘能力展示’阶段正式进入‘规模化部署’阶段？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3731137629520133?f=rss"
+        },
+        {
+          "title": "Cursor发布自研新模型Composer 2，性能超越Claude Opus 4.6",
+          "summary": "InfoQ报道，AI编程平台Cursor发布了其第二代自研编程大模型Composer 2.0，该模型在一项关键的编程基准测试（Terminal-Bench 2.0）上超越了Claude的旗舰模型Opus 4.6，并且定价更具竞争力。",
+          "comment": "当垂直领域的AI工具开始自研并超越通用大模型的特定能力时，这是否预示着AI应用未来将走向‘专用模型+深度优化’的精细化竞争格局？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/sbMemGzadMeYDRuwZSWi"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI计划推出整合ChatGPT、Codex和Atlas的桌面‘超级应用’",
+          "summary": "The Verge和InfoQ均报道，OpenAI正计划将ChatGPT、Codex以及Atlas浏览器整合为一款桌面级‘超级应用’，旨在收缩战线，重新聚焦企业和工程用户的核心使用场景，并强化Agentic智能体能力。",
+          "comment": "巨头从分散的产品线回归到整合的‘超级应用’，这是否意味着AI产品的竞争焦点已从‘功能创新’转向‘工作流整合’与‘用户体验’的深度竞争？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/897778/openai-chatgpt-codex-atlas-browser-superapp"
+        },
+        {
+          "title": "字节跳动同意以60亿美元出售游戏子公司Moonton，以聚焦生成式AI",
+          "summary": "彭博社报道，字节跳动已同意以60亿美元的价格将其游戏子公司Moonton出售给Savvy Games Group。此举旨在剥离非核心资产，将资源集中于生成式人工智能业务。",
+          "comment": "科技巨头通过出售非核心业务来‘瘦身’并聚焦AI，这是否会成为未来几年头部公司应对AI高投入竞争的普遍战略选择？",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-20/bytedance-agrees-to-sell-moonton-to-savvy-games-for-6-billion"
+        },
+        {
+          "title": "阿里2025年员工数减少34%，公司加倍投入AI业务",
+          "summary": "CNBC报道，阿里巴巴在2025年将其员工总数削减了约34%，同时出售了部分外围资产。公司此举是为了将资源更加集中于人工智能业务。",
+          "comment": "在传统业务增长放缓的背景下，国内大厂通过结构性调整（裁员与出售资产）来为AI战略输血，这种‘壮士断腕’式的转型能否成功重塑其增长引擎？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/20/alibaba-headcount-falls-ai-push-sun-art-intime-sales.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-20T18:31:23.346584+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
