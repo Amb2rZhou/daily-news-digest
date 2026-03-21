@@ -1,0 +1,121 @@
+{
+  "date": "2026-03-21",
+  "time_window": "2026-03-20 19:00 ~ 2026-03-21 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta通过资助六项外部研究展示对可穿戴设备EMG输入技术的信心",
+          "summary": "Meta宣布资助六项外部研究项目，以探索肌电图（EMG）输入技术在智能手表、腕带等可穿戴设备中的应用潜力，这表明公司正持续投入这一未来人机交互方式。",
+          "comment": "当我们的意图可以被手腕上的设备无声读取时，这会如何重塑人机交互的隐私边界与伦理规范？",
+          "source": "Road to VR",
+          "url": "https://www.roadtovr.com/meta-emg-input-wearables-research-grant/"
+        },
+        {
+          "title": "RoboForce融资5200万美元以商业化其Titan机器人",
+          "summary": "机器人公司RoboForce成功融资5200万美元，旨在推动其Titan机器人的商业化进程。该机器人主要面向太阳能、航运、采矿和制造等广泛的户外应用场景。",
+          "comment": "当机器人能够胜任越来越多艰苦的户外工作时，传统劳动力密集型产业将如何转型以适应新的生产模式？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/roboforce-raises-52m-to-commercialize-its-titan-robot/"
+        },
+        {
+          "title": "Autodesk VRED登陆苹果Vision Pro，重塑汽车设计评审",
+          "summary": "Autodesk VRED专业可视化软件新增沉浸式模式，可通过Nvidia CloudXR技术将内容流式传输至Apple Vision Pro，宝马、沃尔沃、Rivian等汽车制造商已开始使用该方案进行设计评审。",
+          "comment": "空间计算头显成为专业设计流程的核心工具，这会如何加速从传统屏幕到三维沉浸式工作范式的转变？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138954"
+        },
+        {
+          "title": "VMOCION发布VFORCE可穿戴设备，为VR带来真实运动感",
+          "summary": "运动感知技术厂商VMOCION发布VFORCE可穿戴设备，其采用前庭电刺激（GVS）技术，旨在通过激活内耳机制，为VR游戏、模拟训练等场景提供真实的加速、转弯等体感反馈，以缓解晕动症。",
+          "comment": "通过技术直接‘欺骗’我们的前庭系统来增强沉浸感，这是否会模糊虚拟体验与生理感知之间的安全界限？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544905.html"
+        },
+        {
+          "title": "AI智能眼镜可即时生成假照片，眼见还能为实吗？",
+          "summary": "一篇报道探讨了AI智能眼镜能够实时生成并叠加虚假图像到现实视野中的能力，这引发了关于视觉真实性、隐私和信息可信度的深刻担忧。",
+          "comment": "当AI眼镜能让每个人看到截然不同的、被实时篡改的‘现实’时，我们社会的共同认知基础将如何维系？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138960"
+        },
+        {
+          "title": "PICO助力，国创中心携陈梦共造VR乒乓沉浸式训练生态",
+          "summary": "国家技术创新中心与乒乓球奥运冠军陈梦合作，利用PICO VR头显共同打造沉浸式乒乓球训练生态系统，探索VR技术在专业体育训练中的应用。",
+          "comment": "VR训练能否真正模拟顶级运动员所需的精细肌肉记忆和心理对抗压力，从而成为未来体育训练的标准配置？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/138964"
+        },
+        {
+          "title": "苹果CEO库克对话雷鸟创新，携手共绘空间计算新蓝图",
+          "summary": "雷鸟创新携其专为Apple Vision Pro打造的原生空间计算游戏亮相苹果活动，并与CEO蒂姆·库克对话，标志着AR硬件厂商正积极融入并定义下一代空间计算生态。",
+          "comment": "苹果选择与AR眼镜厂商深度合作推广Vision Pro内容，这是否预示着未来计算平台将走向‘核心头显+多元外设’的开放生态模式？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544902.html"
+        },
+        {
+          "title": "Building tomorrow: How Bedrock Robotics is changing the construction industry",
+          "summary": "The Robot Report的播客节目采访了Bedrock Robotics的联合创始人兼CEO，探讨该公司如何利用机器人技术改变建筑行业。",
+          "comment": "在自动化程度不断提高的建筑工地，人类工人的角色将如何从体力执行者转变为系统监督与协调者？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/building-tomorrow-how-bedrock-robotics-changing-construction-industry/"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Cursor 新模型被指就是 Kimi K2.5，联创回应：确实是，下次我们会说清楚",
+          "summary": "AI编程工具Cursor发布的新模型Composer 2被开发者逆向分析发现，其调用的实际模型ID为‘kimi-k2p5-rl-0317-s515-fast’，证实其基于月之暗面的Kimi K2.5模型构建。Cursor联合创始人随后承认了这一事实，并表示未来会更清晰地说明模型来源。",
+          "comment": "当‘新产品’实质上是现有模型的微调或集成时，企业应如何界定创新边界并保持透明度，以避免‘套壳’争议？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/Uo9qDPlcoExt95xUG8N4"
+        },
+        {
+          "title": "AI Agent 的记忆中间件：火山 Mem0 架构拆解及落地实践｜QCon北京",
+          "summary": "字节跳动高级技术专家将分享火山引擎Mem0的架构设计与落地实践，Mem0是专为AI Agent设计的记忆中间件，旨在解决Agent在长链任务中的上下文丢失与状态管理难题。",
+          "comment": "为AI Agent构建专用的‘记忆’系统，是否意味着AI应用的基础设施正从通用计算向更垂直、更任务特定的架构演进？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/VGTtEPwPCd101Iwm9wQi"
+        },
+        {
+          "title": "三種AI學習理解物理世界的方式",
+          "summary": "随着大语言模型在需要理解物理世界的领域（如机器人、自动驾驶）遇到瓶颈，风险投资正转向‘世界模型’的研究。文章探讨了AI学习物理世界的三种前沿路径。",
+          "comment": "当AI从处理符号信息转向理解物理世界的因果关系时，哪种技术路径最有可能催生出真正的‘具身智能’？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/three-ways-ai-is-learning-to-understand-the-physical-world"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "国家级电力人工智能中试基地迎首批企业，华为、中兴、百度等入驻",
+          "summary": "国家人工智能应用中试基地（能源领域电力方向）迎来首批入驻企业，包括华为、中兴、百度、南网数字集团等8家机构。该基地旨在推动电力AI技术的资源共享与协同创新。",
+          "comment": "国家级AI中试基地吸引巨头入驻，这种‘国家队’牵头、企业协同的模式，能否有效加速AI在关键行业的落地并形成标准？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3732458131783689?f=rss"
+        },
+        {
+          "title": "OpenAI正全力构建全自动AI研究员",
+          "summary": "OpenAI将其研究资源重新聚焦于一个新的宏大挑战：构建一个名为‘AI研究员’的全自动智能体系统。该系统能够自主处理大型、复杂的科研问题。",
+          "comment": "如果AI能够自主进行科学研究，这是否会从根本上改变科学发现的方式，并引发关于科研主体性与伦理的新一轮讨论？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/03/20/1134438/openai-is-throwing-everything-into-building-a-fully-automated-researcher/"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-21T18:31:56.731091+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
