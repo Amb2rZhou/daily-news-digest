@@ -1,0 +1,121 @@
+{
+  "date": "2026-03-22",
+  "time_window": "2026-03-21 19:00 ~ 2026-03-22 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "首款‘数据采集变现’AI眼镜开售，为具身智能贡献‘燃料’可赚金币",
+          "summary": "纵横物理（北京）科技有限公司正式发布并开售其第二代AI智能眼镜‘ACROSS’，售价1699元。该眼镜主打数据采集与变现功能，用户可通过贡献数据获得奖励。",
+          "comment": "用户数据贡献与奖励机制，能否成为未来AI硬件普及的关键驱动力，同时如何平衡数据收集与隐私保护？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120117.html"
+        },
+        {
+          "title": "VMOCION推出VFROCE可穿戴设备，前庭刺激技术重构VR运动体感体验",
+          "summary": "运动感知技术企业VMOCION正式发布首款基于前庭刺激技术的可穿戴设备VFROCE，旨在为VR体验提供更真实的运动体感。",
+          "comment": "通过前庭刺激模拟运动感，这类可穿戴设备会否成为解决VR晕动症、提升沉浸感的主流技术路径？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120125.html"
+        },
+        {
+          "title": "消费市场开年稳健回升！智能绿色消费成新引擎",
+          "summary": "报道指出，2026年1-2月社会消费品零售总额达8.61万亿元，其中重点电商平台的智能眼镜销售额同比增长1.8倍，显示智能硬件消费势头强劲。",
+          "comment": "智能眼镜销售额的迅猛增长，是短期市场热点还是消费者对下一代AI穿戴设备接受度提升的长期信号？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120108.html"
+        },
+        {
+          "title": "伟大的机器人竞赛：美国公司如何平衡上市速度与合规性",
+          "summary": "文章探讨了在美国市场，消费级机器人和AI开发公司如何在快速将产品推向市场的同时，制定并遵守复杂的合规策略。",
+          "comment": "在机器人技术快速迭代的竞赛中，严格的合规要求是会拖慢创新步伐，还是最终成为构建消费者信任和行业健康发展的基石？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/great-robot-race-how-companies-balance-speed-market-compliance-u-s/"
+        },
+        {
+          "title": "Meta反转，决定保留Horizon Worlds现有游戏的VR支持",
+          "summary": "Meta首席技术官安德鲁・博斯沃思宣布，公司将收回此前关停Horizon Worlds VR端的决定，继续为该平台的现有游戏提供VR支持，以回应社区反馈。",
+          "comment": "Meta此次政策反转，是否意味着完全放弃VR生态并非易事，用户社区的力量在元宇宙硬件平台的战略决策中能起到多大作用？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120121.html"
+        },
+        {
+          "title": "《Dimensional Double Shift》迎1.9更新，新增手部追踪捏合转向功能",
+          "summary": "Meta Quest平台的免费VR游戏《Dimensional Double Shift》更新1.9版本，加入了基于手部追踪的捏合式虚拟转向系统，旨在提升坐姿玩家的无障碍体验和操作舒适度。",
+          "comment": "手部追踪等原生交互方式的持续优化，是否比外设控制器更能代表VR/AR设备未来人机交互的主流方向？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120127.html"
+        },
+        {
+          "title": "VR游戏周报：Meta宣布Quest用户数创新高；索尼独占VR游戏《Firewall Ultra》9月停服",
+          "summary": "周报汇总了近期VR游戏动态，其中提到Meta宣布Quest头显用户数创下新高，同时索尼PS VR2的独占游戏《Firewall Ultra》将于9月停止服务。",
+          "comment": "一边是Quest用户增长创新高，一边是高端VR独占游戏停服，这是否揭示了当前VR硬件市场‘硬件普及’与‘优质内容可持续性’之间的核心矛盾？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544906.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "阶跃星辰率先适配微信生态，StepClaw‘龙虾’即插即养即用",
+          "summary": "阶跃星辰的AI Agent产品StepClaw（龙虾）宣布率先适配微信生态，实现了‘即插即养即用’，降低了AI Agent在主流社交平台上的使用门槛。",
+          "comment": "AI Agent与超级App生态的深度集成，是否会成为其大规模普及的关键路径？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/312332"
+        },
+        {
+          "title": "MCP Gateway：构建下一代 AI Agent 的‘中枢网关’｜QCon北京",
+          "summary": "小米架构师将在QCon北京分享MCP（Model Context Protocol）Gateway的架构设计，探讨其作为构建下一代AI Agent‘中枢网关’的作用，属于AI Agent基础设施的重要实践。",
+          "comment": "标准化的协议网关能否解决当前AI Agent在工具调用和上下文管理上的碎片化问题？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/wwu9ccjyS00J9YMgKHI7"
+        },
+        {
+          "title": "别再捣鼓没用的龙虾了，目前 AI Agent 最好的落地容器，是汽车",
+          "summary": "文章提出观点，认为汽车是目前AI Agent（文中戏称为‘龙虾’）最好的落地容器，因其拥有封闭环境、丰富传感器和明确任务场景，超越了当前一些实验性的Agent应用。",
+          "comment": "将AI Agent的落地场景从虚拟助手转向物理空间智能体，是否会开启一个更具商业价值的赛道？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1658243?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "腾讯AI合二为一，姚顺雨第一个大模型混元3.0稳了？",
+          "summary": "钛媒体报道腾讯调整AI组织架构，将原先分散的AI实验室模式整合，资源集中投向大模型混元3.0的研发，反映了国内大厂在AI战略上从研究导向转向产品与业务深度整合的趋势。",
+          "comment": "当大厂结束‘实验室赛马’模式，集中力量办大事，会更快催生领先的AI产品还是可能抑制创新活力？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7924258.html"
+        },
+        {
+          "title": "中国AI大模型周调用量达4.69万亿Token",
+          "summary": "根据OpenRouter数据，中国AI大模型的周调用量达到4.69万亿Token，连续第二周超越美国，且全球调用量前三均为中国模型，显示中国在AI应用层的活跃度。",
+          "comment": "中国AI模型在调用量上领先，这是否意味着应用生态和商业化进程已经走到了技术能力的前面？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3733795048587524?f=rss"
+        },
+        {
+          "title": "马斯克：‘Terafab’项目将落户奥斯汀，由特斯拉和SpaceX共同运营",
+          "summary": "马斯克宣布其旨在为机器人、人工智能和太空数据中心制造自有芯片的‘Terafab’项目将落户奥斯汀，并由特斯拉和SpaceX共同运营，以应对未来巨大的芯片需求。",
+          "comment": "科技巨头垂直整合自研AI芯片已成趋势，这会重塑现有的半导体产业格局，还是加剧供应链的割裂？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3733739661950979?f=rss"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-22T18:31:38.535608+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

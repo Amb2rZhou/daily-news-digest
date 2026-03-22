@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-22",
+  "time_window": "2026-03-21 19:00 ~ 2026-03-22 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Cross-Model Void Convergence: GPT-5.2 and Claude Opus 4.6 Deterministic Silence",
+          "summary": "一项学术研究揭示了GPT-5.2和Claude Opus 4.6等顶级大模型在特定条件下会出现‘确定性沉默’现象，即对某些输入完全无响应。",
+          "comment": "这种跨模型的‘沉默’现象是否揭示了当前大模型架构中存在某种共同的、未被充分理解的底层缺陷？",
+          "source": "Hacker News",
+          "url": "https://zenodo.org/records/18976656"
+        },
+        {
+          "title": "清华杨斌建议将AI核心术语token译‘模元’ 破解全民普及语言壁垒",
+          "summary": "清华大学教授杨斌建议将AI核心术语‘token’统一译为‘模元’，旨在降低技术普及的语言障碍，推动人工智能在中国更广泛的应用。",
+          "comment": "一个统一的、本土化的技术术语体系，对于AI技术在本土市场的深度渗透和公众理解究竟有多大的推动作用？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120119.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "中国AI大模型周调用量达4.69万亿Token",
+          "summary": "数据显示中国AI大模型周调用量连续第二周超越美国，全球前三均被中国模型占据，摩根大通预测中国AI推理消耗量将在五年内增长约370倍。",
+          "comment": "中国在AI推理应用量上快速反超，这是否意味着全球AI竞争的重心正从模型创新转向大规模应用和成本效率的比拼？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3733795048587524?f=rss"
+        },
+        {
+          "title": "国产大模型连续5周霸榜全球冠军",
+          "summary": "国产大模型MiniMax M2.5凭借技术创新带来的成本优势和国内能源价格优势，连续五周位居全球大模型调用量榜首。",
+          "comment": "当‘性价比’成为AI模型的核心竞争力，这是否会加速大模型技术本身的‘商品化’进程，并重塑全球AI产业的格局？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3733794493694209?f=rss"
+        },
+        {
+          "title": "AI狂潮冷思考：当模型沦为水电煤，巨头的真正战场在哪？",
+          "summary": "分析指出，大模型正加速成为行业基础设施，纯模型公司盈利困难，真正的商业赢家将是拥有国民级产品和深厚生态的巨头。",
+          "comment": "如果大模型终将成为像水电煤一样的基础设施，那么未来科技公司的护城河将建立在何处？是应用生态、数据闭环还是硬件集成？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7924190.html"
+        },
+        {
+          "title": "OpenClaw's ChatGPT moment sparks concern that AI models are becoming commodities",
+          "summary": "OpenClaw技术的崛起引发行业担忧，AI模型可能正在快速商品化，其独特性和技术壁垒正在降低。",
+          "comment": "AI模型的‘ChatGPT时刻’不断被新工具复现，这是否意味着单点模型技术的领先窗口期正在急剧缩短？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/21/openclaw-chatgpt-moment-sparks-concern-ai-models-becoming-commodities.html"
+        },
+        {
+          "title": "AI hallucinations haunt users more than job losses",
+          "summary": "Anthropic对8万名Claude用户的调查显示，相比工作被取代，用户更担忧AI的‘幻觉’问题，这提供了AI技术使用现状的详细快照。",
+          "comment": "当用户对AI‘幻觉’的担忧超过对失业的恐惧，这是否意味着建立可靠性和信任已成为AI普及比提升能力更紧迫的挑战？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/e074d3a9-7fd8-447d-ac0a-e0de756ac5c5"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "马斯克：‘Terafab’项目将落户奥斯汀，由特斯拉和SpaceX共同运营",
+          "summary": "马斯克宣布其旨在为机器人、AI和太空数据中心制造自有芯片的‘Terafab’项目将落户奥斯汀，由特斯拉和SpaceX共同运营，以应对未来巨大的芯片需求。",
+          "comment": "从电动汽车、火箭到AI芯片，马斯克构建垂直整合帝国的终极目标，是否是为了实现对AGI发展所需全部核心硬件的绝对控制？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3733739661950979?f=rss"
+        },
+        {
+          "title": "腾讯AI合二为一，姚顺雨第一个大模型混元3.0稳了？",
+          "summary": "腾讯调整AI组织架构，将相关实验室合并，标志着大厂AI研发从分散的实验室模式转向集中资源攻坚大模型等核心方向。",
+          "comment": "巨头纷纷整合内部AI研发力量，这是否预示着AI竞争已进入‘集团军作战’阶段，单点技术突破不再足以决定胜负？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7924258.html"
+        },
+        {
+          "title": "字节跳动超60亿美元出售沐瞳科技 战略收缩聚焦AI核心赛道",
+          "summary": "字节跳动以超60亿美元价格出售游戏子公司沐瞳科技，进行战略收缩以更聚焦于AI等核心赛道。",
+          "comment": "巨头出售非核心资产以‘聚焦AI’，这反映了一种怎样的战略判断？是AI的投入黑洞迫使它们集中弹药，还是看到了更确定的AI商业化前景？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120114.html"
+        },
+        {
+          "title": "OpenAI to double workforce as business push intensifies",
+          "summary": "OpenAI计划在2026年底前将员工人数翻倍至8000人，以加强其商业推进力度，缩小与竞争对手Anthropic的差距。",
+          "comment": "在追求AGI的同时大幅扩张商业团队，OpenAI是否正在复制传统科技巨头的成长路径，其‘非营利’初心将如何与商业野心共存？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/7ffea5b4-e8bc-47cd-adb4-257f84c8028b"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "阶跃星辰率先适配微信生态，StepClaw‘龙虾’即插即养即用",
+          "summary": "阶跃星辰的AI Agent产品StepClaw率先适配微信生态，实现了在微信环境中的即插即用，降低了用户使用门槛。",
+          "comment": "将AI Agent深度集成到微信这样的超级App中，是否会成为AI技术触达海量用户并实现商业化的最短路径？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/312332"
+        },
+        {
+          "title": "首款‘数据采集变现’AI眼镜开售，为具身智能贡献‘燃料’可赚金币",
+          "summary": "纵横物理公司发布第二代AI智能眼镜ACROSS，售价1699元，其特色是用户可通过贡献采集到的数据（为具身智能提供燃料）来获得奖励。",
+          "comment": "这种‘数据采集变现’的硬件商业模式，能否在保护用户隐私的前提下，为AI训练提供可持续的真实世界数据来源？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120117.html"
+        },
+        {
+          "title": "Mexico City's 'Xoli' Chatbot Will Help World Cup Tourists Navigate the City",
+          "summary": "墨西哥城推出名为Xoli的聊天机器人，旨在帮助2026年世界杯期间的游客导航城市，这是政府将世界杯转化为国家发展引擎的技术努力之一。",
+          "comment": "大型国际赛事正成为城市部署和展示其AI公共服务能力的舞台，这会对未来智慧城市的建设模式产生什么影响？",
+          "source": "WIRED",
+          "url": "https://www.wired.com/story/mexico-city-xoli-chatbot-world-cup-tourists/"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-22T18:32:40.472164+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
