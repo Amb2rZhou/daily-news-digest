@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-23",
+  "time_window": "2026-03-22 19:00 ~ 2026-03-23 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "会边走边做家务的机器人出现了，一镜到底收拾客厅刷屏海外",
+          "summary": "一款采用单一通用AI架构的机器人展示了连续完成多项家务任务的能力，预示着具身智能在家庭场景的实用化进展。",
+          "comment": "当机器人能自主完成复杂的物理世界任务时，人类与机器的协作关系将如何被重新定义？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1658666?utm_source=rss&utm_medium=rss&utm_campaign="
+        },
+        {
+          "title": "Meta已选定资助六所大学团队，推进sEMG肌电手环研发",
+          "summary": "Meta宣布资助六所大学的研究团队，以推进其基于表面肌电图（sEMG）的腕戴式神经接口技术，探索其在人机交互中的更广泛应用。",
+          "comment": "当我们的意图能被手腕的肌肉信号精准读取时，人机交互的隐私边界和安全挑战在哪里？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544912.html"
+        },
+        {
+          "title": "The Bay Area’s animal welfare movement wants to recruit AI",
+          "summary": "旧金山湾区的动物福利倡导者与AI研究者合作，探索利用人工智能技术来改善动物保护和福利。",
+          "comment": "AI在理解和关怀非人类生命体方面能走多远，这又将如何重塑我们对‘智能’和‘共情’的定义？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/03/23/1134491/the-bay-areas-animal-welfare-movement-wants-to-recruit-ai/"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "BlackRock’s Fink warns AI may intensify wealth inequality",
+          "summary": "贝莱德CEO拉里·芬克警告，人工智能的繁荣可能加剧财富不平等，除非更多个人能够分享市场收益。",
+          "comment": "在AI驱动的经济增长中，如何设计机制确保技术进步的红利能被社会广泛共享，而非加剧阶层固化？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/58602814-8138-4a14-a32e-d82dec2d472c"
+        },
+        {
+          "title": "在线音乐只顾着防御汽水，却快被AI‘抄家’了",
+          "summary": "文章指出，在线音乐行业在应对传统竞争时，可能低估了AI生成音乐对内容创作和消费模式的颠覆性影响。",
+          "comment": "当AI能够高效生成符合个人口味的音乐时，人类艺术家的独特价值和整个音乐产业的商业模式将如何演变？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7925736.html"
+        },
+        {
+          "title": "中信建投：技术成熟后AI眼镜有望替代智能手机成个人综合终端",
+          "summary": "中信建投分析师发布研报指出，随着技术突破，AI眼镜未来有望替代智能手机，成为全新的个人综合终端。",
+          "comment": "从‘手持’到‘穿戴’，下一代个人计算平台的切换将如何重塑我们的信息交互习惯和数字生活空间？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120146.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "独家丨华为具身智能‘1号员工’周顺波离职创业",
+          "summary": "华为云物理智能创新Lab负责人周顺波离职创业，其曾主导华为具身智能技术体系构建和产品原型开发。",
+          "comment": "大厂顶尖AI人才的持续流出创业，是加速了行业创新，还是预示着巨头在把握颠覆性技术浪潮时面临的结构性挑战？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/rFeuvZCYsc6GOqfn.html"
+        },
+        {
+          "title": "Cursor被抓包‘套壳’再反转：数百亿美元估值的美国AI独角兽，新底牌竟是Kimi",
+          "summary": "美国AI代码助手公司Cursor被曝其新模型基于中国月之暗面公司的Kimi模型构建，引发对AI模型‘自研’与‘集成’界限的讨论。",
+          "comment": "在全球AI竞赛中，‘集成创新’与‘原创研发’的边界日益模糊，这是否意味着未来的竞争将更侧重于工程化和生态构建能力？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7925673.html"
+        },
+        {
+          "title": "Elon Musk unveils chip manufacturing plans for SpaceX and Tesla",
+          "summary": "埃隆·马斯克公布了特斯拉和SpaceX合作建设芯片制造厂的雄心计划，旨在为旗下公司的AI和计算需求提供支撑。",
+          "comment": "当全球科技巨头纷纷下场自研芯片，这是否会重塑半导体产业的格局，并加剧AI基础设施的竞争？",
+          "source": "AI News & Artificial Intelligence | TechCrunch",
+          "url": "https://techcrunch.com/2026/03/22/elon-musk-unveils-chip-manufacturing-plans-for-spacex-and-tesla/"
+        },
+        {
+          "title": "OpenAI's data center pivot underscores Wall Street spending concerns ahead of IPO",
+          "summary": "据报道，OpenAI在IPO前调整了其数据中心战略，采取了更为温和的基础设施建设方式，反映出市场对其巨额支出的担忧。",
+          "comment": "在追求AGI的‘军备竞赛’中，如何平衡前沿研发的巨额投入与资本市场对盈利能力和可持续性的期待？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/22/openai-data-center-pivot-underscores-wall-street-ipo-concerns.html"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "阶跃星辰发布 Step Plan 包月订阅方案，主打 OpenClaw 场景！开发者社区半价大放送",
+          "summary": "阶跃星辰推出针对OpenClaw及AI编程场景的月度token订阅方案，旨在降低开发者使用AI Agent的成本。",
+          "comment": "按量付费转向订阅制，是否意味着AI模型服务正从‘技术工具’向‘生产力平台’演进，并开始培养用户粘性？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/69TcSsm0DfnOiBxY.html"
+        },
+        {
+          "title": "前华为自动驾驶核心成员创业，要做‘会走路’的情绪陪伴机器人",
+          "summary": "由前华为自动驾驶核心成员创立的青心意创完成Pre-A轮融资，专注于研发具备直膝行走和情绪步态生成能力的小型双足陪伴机器人。",
+          "comment": "将自动驾驶的‘大小脑协同’技术应用于陪伴机器人，能否真正解决情感交互中的‘具身性’难题，让机器人的陪伴更有温度？",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3735384009048325?f=rss"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "MiniMax上市61天市值越过百度，AI新贵掀翻旧牌桌",
+          "summary": "中国AI公司MiniMax上市后市值迅速超越百度，标志着AI新势力对传统互联网巨头格局的冲击。",
+          "comment": "资本市场用脚投票，将高估值赋予纯AI公司，这是否预示着以AI为核心驱动力的新一代科技巨头正在崛起？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7925749.html"
+        },
+        {
+          "title": "Bain Capital’s Bridge Data Centres Seeks Up to $6 Billion Loan",
+          "summary": "贝恩资本旗下的Bridge Data Centres正在寻求高达60亿美元的贷款，这可能是亚洲数据中心领域有史以来最大规模的融资之一。",
+          "comment": "AI算力需求激增正推动数据中心成为资本密集型基础设施，这是否会引发新一轮全球性的数字基建投资竞赛？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-23/bain-capital-s-bridge-data-centres-seeks-up-to-6-billion-loan"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-23T18:32:12.272632+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
