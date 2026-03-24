@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-24",
+  "time_window": "2026-03-23 19:00 ~ 2026-03-24 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "AI眼镜光学公司「至格科技」一年三轮亿级融资，年交付剑指百万片",
+          "summary": "国内AR光波导厂商至格科技近期完成新一轮亿元级融资，用于提升产能和研发。公司受益于AI眼镜消费热潮带来的衍射光波导需求爆发，年交付目标瞄准百万片级别。",
+          "comment": "AI眼镜的普及是否会像智能手机一样，催生出一个全新的上游光学供应链巨头？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544917.html"
+        },
+        {
+          "title": "海信旗下潮牌Vidda发布首款AI音频眼镜G11，主打轻薄设计与AI会议功能",
+          "summary": "海信旗下年轻科技潮牌Vidda发布了其首款AI音频眼镜G11，产品强调轻薄设计并集成了AI会议功能，旨在满足移动办公和日常娱乐需求。",
+          "comment": "当传统家电巨头跨界进入AI穿戴设备领域，它们能凭借供应链和渠道优势颠覆现有市场格局吗？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120174.html"
+        },
+        {
+          "title": "逸文科技Even G2：一副售价800美元的“减法”智能眼镜",
+          "summary": "初创公司逸文科技推出的第二代智能眼镜Even G2以约800美元的高端定价进入市场，其产品理念强调做‘减法’，在激烈的消费级AI眼镜竞争中走差异化路线。",
+          "comment": "在智能硬件同质化竞争中，‘做减法’的高端化策略能否成为初创公司突围的关键？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120159.html"
+        },
+        {
+          "title": "300余台人形机器人4月亦庄竞逐半马 多项创新打造科技体育盛宴",
+          "summary": "2026年北京亦庄半程马拉松将同期举办人形机器人半程马拉松，预计有超过300台人形机器人参与竞逐，旨在打造一场融合科技与体育的创新盛会。",
+          "comment": "人形机器人参与马拉松赛事，是有效的技术压力测试场，还是更多偏向于营销和公众展示？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120161.html"
+        },
+        {
+          "title": "Vention发布Rapid Operator AI以自动化深箱拣选",
+          "summary": "工业自动化平台Vention发布了Rapid Operator AI解决方案，旨在帮助中大型制造企业自动化复杂的深箱拣选任务，提升多班次生产设施的效率。",
+          "comment": "AI视觉与机器人结合的深箱拣选方案，能否成为破解制造业柔性自动化难题的通用钥匙？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/vention-releases-rapid-operator-ai-automate-deep-bin-picking/"
+        },
+        {
+          "title": "Palladyne AI与Draganfly在自主无人机蜂群集成上达成里程碑",
+          "summary": "Palladyne AI将其SwarmOS蜂群操作系统与Draganfly的无人机组件成功集成，并完成了飞行模拟测试，朝着下一代国防应用迈出了关键一步。",
+          "comment": "无人机蜂群技术的成熟，是否会重新定义未来低空域的安全防御与作战模式？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/palladyne-ai-draganfly-reach-integration-milestone-autonomous-drone-swarms/"
+        },
+        {
+          "title": "苹果官宣WWDC大会6月9日举行，有望发布visionOS 27",
+          "summary": "苹果正式宣布2026年全球开发者大会（WWDC 26）将于6月8日（新闻中另一处为9日）举行，预计将发布其空间计算头显Vision Pro的核心系统visionOS的下一个主要版本visionOS 27。",
+          "comment": "visionOS的年度大更新，是否会成为推动Apple Vision Pro从开发者工具走向大众消费市场的关键转折点？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/139015"
+        },
+        {
+          "title": "Meta收编AI智能体公司Dreamer，前Oculus VR负责人的雨果·巴拉回归",
+          "summary": "Meta收购了AI智能体初创公司Dreamer，曾担任Oculus VR负责人的雨果·巴拉随之回归Meta。此举是Meta全面拥抱AI、向‘AI原生’公司转型的一部分。",
+          "comment": "Meta收购AI智能体公司并召回VR老将，是否预示着其将在AI与元宇宙硬件的结合上推出更具颠覆性的产品？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/139017"
+        },
+        {
+          "title": "Meta已选定资助六所大学团队，推进sEMG肌电手环研发",
+          "summary": "Meta宣布资助全球六所大学的研究团队，每项资助15万美元，以共同推进其基于表面肌电图（sEMG）技术的腕带式神经接口研发，该技术是Meta Ray-Ban智能眼镜等设备的重要交互基础。",
+          "comment": "巨头资助高校进行前沿人机交互研究，这种模式能否有效加速脑机接口等‘黑科技’从实验室走向消费市场？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544912.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Anthropic推出Claude电脑控制功能，正式进军自主智能体领域",
+          "summary": "Anthropic宣布为旗下AI模型Claude推出电脑控制功能，允许其直接操作用户的Mac设备，标志着该公司正式进入AI Agent（自主智能体）领域的竞争。",
+          "comment": "当AI能够直接操控我们的电脑时，如何界定其权限边界以确保安全和隐私？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/312399"
+        },
+        {
+          "title": "腾讯元宝发布PrismAudio模型，高效实现视频与环境音的精准同步生成",
+          "summary": "腾讯元宝推出创新框架PrismAudio，致力于解决视频生成高保真环境音的难题，要求生成的声音在语义、时序、美学和空间四个维度上与视频内容严格对齐。",
+          "comment": "多模态生成模型在追求音画同步的极致体验时，是否会催生对高质量训练数据的全新定义和需求？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/312405"
+        },
+        {
+          "title": "美团LongCat开源数学定理证明大模型，AI严谨推理迈入新阶段",
+          "summary": "美团开源了专门用于数学形式化与定理证明的模型LongCat-Flash-Prover，旨在提升AI在数学等需要高度严谨性领域的推理能力。",
+          "comment": "当AI开始掌握形式化证明这类高度抽象的推理能力时，它离理解人类逻辑的深层本质还有多远？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/312398"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Meta招揽AI初创公司Dreamer团队",
+          "summary": "Meta已招揽人工智能智能体初创公司Dreamer的创始团队及全体员工，该团队将加入Meta超智能实验室部门，并授权其技术。",
+          "comment": "科技巨头通过收购顶尖团队而非公司来获取前沿技术，这是否会成为AI人才竞争的新常态？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3736784209248264?f=rss"
+        },
+        {
+          "title": "独家｜华为云新加坡总经理胡维琦将加入MiniMax，或向贠烨祎汇报",
+          "summary": "原华为云中国区副总裁、现华为云新加坡总经理胡维琦将加入AI公司MiniMax，预计将负责公司的B端业务及中国区市场，向COO贠烨祎汇报。",
+          "comment": "传统云巨头高管流向新兴AI独角兽，是否预示着AI基础设施的竞争重心正从资源规模转向应用生态？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/a6MRb7oWS3HKM9fh.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-24T18:32:07.381127+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
