@@ -397,7 +397,87 @@ def fetch_raw_news(cutoff: datetime = None, settings: dict = None, max_per_sourc
     source_counts.sort(key=lambda x: -x[1])
     print(f"  - Top sources: {source_counts[:10]}")
 
+    # Cluster by title similarity and annotate coverage
+    all_articles = _cluster_and_annotate(all_articles)
+
     return all_articles
+
+
+def _title_tokens(title: str) -> set:
+    """Normalize title into a set of tokens for similarity comparison."""
+    import re
+    # Remove punctuation, lowercase, split
+    title = re.sub(r'[^\w\s]', ' ', title.lower())
+    # Remove very short tokens (articles, prepositions)
+    return {t for t in title.split() if len(t) > 1}
+
+
+def _title_similarity(tokens_a: set, tokens_b: set) -> float:
+    """Jaccard similarity between two token sets."""
+    if not tokens_a or not tokens_b:
+        return 0.0
+    return len(tokens_a & tokens_b) / len(tokens_a | tokens_b)
+
+
+def _cluster_and_annotate(articles: list[dict]) -> list[dict]:
+    """Cluster articles by title similarity, annotate each with coverage info.
+
+    Articles covering the same event (from different sources) get:
+    - coverage_count: number of sources reporting this event
+    - coverage_sources: list of source names
+    - is_primary: True if this is the representative article for the cluster
+    """
+    if not articles:
+        return articles
+
+    # Build token sets for all titles
+    title_tokens = []
+    for a in articles:
+        title_tokens.append(_title_tokens(a.get("title", "")))
+
+    # Greedy clustering: assign each article to existing cluster or create new one
+    clusters = []  # list of lists of article indices
+    cluster_tokens = []  # representative tokens for each cluster
+    SIMILARITY_THRESHOLD = 0.35
+
+    for i, tokens in enumerate(title_tokens):
+        best_cluster = -1
+        best_sim = 0.0
+        for ci, ct in enumerate(cluster_tokens):
+            sim = _title_similarity(tokens, ct)
+            if sim > best_sim:
+                best_sim = sim
+                best_cluster = ci
+        if best_sim >= SIMILARITY_THRESHOLD:
+            clusters[best_cluster].append(i)
+            # Expand cluster tokens with new article's tokens
+            cluster_tokens[best_cluster] = cluster_tokens[best_cluster] | tokens
+        else:
+            clusters.append([i])
+            cluster_tokens.append(tokens)
+
+    # Annotate articles
+    for cluster in clusters:
+        sources = []
+        for idx in cluster:
+            src = articles[idx].get("source", "unknown")
+            if src not in sources:
+                sources.append(src)
+        count = len(sources)
+        for j, idx in enumerate(cluster):
+            articles[idx]["coverage_count"] = count
+            articles[idx]["coverage_sources"] = sources
+            articles[idx]["is_primary"] = (j == 0)  # first in cluster is primary
+
+    # Sort: higher coverage first, then by published time
+    articles.sort(key=lambda x: (-x.get("coverage_count", 1), x.get("published", "")), reverse=False)
+
+    multi = sum(1 for c in clusters if len(c) > 1)
+    if multi:
+        print(f"  - Event clustering: {len(clusters)} events from {len(articles)} articles, {multi} multi-source events")
+
+    return articles
+
 
 def apply_filters(articles: list[dict], settings: dict = None) -> list[dict]:
     """Apply blacklist/whitelist filters from settings to articles."""
@@ -496,8 +576,9 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 **数量要求**：选 7-10 条，不多不少。
 
 **筛选要求**：
+- ★ 标记的文章表示被多个来源报道，这些是热点事件，应优先选入
 - 去重：相同事件只保留最权威来源
-- 按重要性排序
+- 按重要性排序（多源覆盖 > 权威来源独家 > 单源报道）
 
 **来源权威性优先**：
 - 如果某条新闻来自小众来源（如 UploadVR, 93913, VR陀螺 等），检查是否有权威来源（The Verge, TechCrunch, Wired 等）报道了完全相同的事件
@@ -556,12 +637,13 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
 - 纯商业/金融新闻（除非直接涉及AI投资）
 
 **筛选要求**：
+- ★ 标记的文章表示被多个来源报道，这些是热点事件，应优先选入
 - 排除所有智能硬件设备新闻（AR/VR头显、智能眼镜、机器人等具体设备）
 - AI技术与产品：至少选 2 条
 - 巨头动向与行业观察：至少选 1 条
 - 两个分类合计最多 {max_items} 条
 - 去重：相同事件只保留最权威来源
-- 按重要性排序
+- 按重要性排序（多源覆盖 > 权威来源独家 > 单源报道）
 
 **来源权威性优先**：
 - 中文权威来源：36氪、机器之心、量子位、虎嗅、钛媒体、晚点LatePost、Founder Park
@@ -618,12 +700,13 @@ def get_prompt_for_mode(mode: str, articles_text: str, max_items: int, category_
    - 必须包含的：AI 模型发布/更新、AI 公司动态、AI 融资、AI 产品、AI 政策法规、AI 应用落地、大模型、机器学习、深度学习、AIGC、AGI、机器人、自动驾驶等
    - 必须排除的：与 AI 无关的普通科技新闻（如手机发布、游戏、电商促销、社交媒体八卦、纯硬件评测等）
    - 边界情况：如果一条新闻主要讲某科技公司但核心内容与 AI 无关，应排除
-2. 去重：相同事件的多篇报道只保留一条（保留最权威来源）
-3. **中外平衡**：如有国内大厂（字节跳动/豆包、阿里/通义千问、腾讯、百度/文心、华为、小米等）的 AI 相关新闻，至少选入 1 条，不要全是海外新闻
-4. 按重要性排序（全球影响 > 行业影响 > 区域影响）
-4. 为每条新闻写一个简短的中文摘要（1-2句话）
-5. **重要**：为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾），引导读者深入思考这条新闻的意义、影响或未来可能性
-6. 将新闻按以下类别分组：{category_names}
+2. **优先热点**：标有 ★ 的文章表示被多个来源报道，是热点事件，应优先选入
+3. 去重：相同事件的多篇报道只保留一条（保留最权威来源）
+4. **中外平衡**：如有国内大厂（字节跳动/豆包、阿里/通义千问、腾讯、百度/文心、华为、小米等）的 AI 相关新闻，至少选入 1 条，不要全是海外新闻
+5. 按重要性排序（多源覆盖 > 全球影响 > 行业影响 > 区域影响）
+6. 为每条新闻写一个简短的中文摘要（1-2句话）
+7. **重要**：为每条新闻添加一句 comment，必须是一个启发思考的问题（以？结尾），引导读者深入思考这条新闻的意义、影响或未来可能性
+8. 将新闻按以下类别分组：{category_names}
    - 每条新闻只归入一个最匹配的类别
    - 没有对应新闻的类别不要输出
 
@@ -845,11 +928,16 @@ def _format_articles_text(articles: list[dict]) -> str:
     """Format a list of article dicts into text for Claude prompts."""
     text = ""
     for i, article in enumerate(articles, 1):
+        coverage = article.get('coverage_count', 1)
+        coverage_line = ""
+        if coverage > 1:
+            sources = ", ".join(article.get('coverage_sources', []))
+            coverage_line = f"\nCoverage: {coverage} sources ({sources}) ★"
         text += f"""
 ---
 Article {i}:
 Title: {article.get('title', '')}
-Source: {article.get('source', '')}
+Source: {article.get('source', '')}{coverage_line}
 Published: {article.get('published', '')}
 Description: {article.get('description', '')}
 URL: {article.get('url', '')}
@@ -997,12 +1085,17 @@ def summarize_news_with_claude(anthropic_key: str, articles: list[dict], max_ite
     # Prepare articles for Claude
     articles_text = ""
     for i, article in enumerate(articles[:120], 1):  # Limit to 120 articles for diversity
+        coverage = article.get('coverage_count', 1)
+        coverage_line = ""
+        if coverage > 1:
+            sources = ", ".join(article.get('coverage_sources', []))
+            coverage_line = f"\nCoverage: {coverage} sources ({sources}) ★"
         articles_text += f"""
 ---
 Article {i}:
 Title: {article.get('title', '')}
 Source: {article.get('source', '')}
-Published: {article.get('published', '')}
+Published: {article.get('published', '')}{coverage_line}
 Description: {article.get('description', '')}
 URL: {article.get('url', '')}
 """
