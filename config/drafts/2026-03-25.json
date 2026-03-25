@@ -1,0 +1,125 @@
+{
+  "date": "2026-03-25",
+  "time_window": "2026-03-24 19:00 ~ 2026-03-25 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "三星年内推出Galaxy Glasses AR智能眼镜 搭载Android XR补齐空间计算版图",
+          "summary": "三星移动业务高管确认，首款搭载Android XR系统的AR智能眼镜Galaxy Glasses将于今年晚些时候推出，旨在与Galaxy XR头显形成场景互补，完善其空间计算硬件布局。",
+          "comment": "Android XR系统在AR眼镜上的首次落地，能否挑战苹果Vision Pro和Meta生态的现有格局？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120192.html"
+        },
+        {
+          "title": "豪鹏科技破解AI眼镜电池‘不可能三角’ 技术创新赋能万亿智能穿戴市场",
+          "summary": "豪鹏科技宣布通过底层材料和核心工艺的创新，为AI眼镜开发出兼顾高能量密度、快充和安全性的电池解决方案，旨在解决智能穿戴设备的续航痛点。",
+          "comment": "电池技术的突破是否是AI眼镜能否实现全天候佩戴和普及的关键瓶颈？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120170.html"
+        },
+        {
+          "title": "苹果WWDC 26定于6月8日举办，有望推出visionOS 27",
+          "summary": "苹果官方宣布2026年全球开发者大会（WWDC 26）将于6月8日举行，预计将发布Vision Pro头显的新一代操作系统visionOS 27。",
+          "comment": "visionOS的年度大更新，会为空间计算生态带来哪些开发者期待已久的新能力？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544923.html"
+        },
+        {
+          "title": "亚马逊收购人形机器人开发商Fauna Robotics",
+          "summary": "亚马逊宣布收购人形机器人公司Fauna Robotics，表示将采取‘深思熟虑和审慎的方法’来探索个人机器人如何改善客户生活。",
+          "comment": "亚马逊收购人形机器人公司，是否预示着消费级家庭服务机器人即将进入主流市场？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/amazon-acquires-humanoid-developer-fauna-robotics/"
+        },
+        {
+          "title": "FANUC America将投资9000万美元用于美国机器人制造",
+          "summary": "工业机器人巨头FANUC美国公司宣布将投资9000万美元扩大其在美国的机器人制造业务，并计划自2019年以来在美国招聘超过700名员工。",
+          "comment": "制造业回流背景下，工业机器人巨头的本地化投资是否会加速北美自动化进程？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/fanuc-america-invests-90m-u-s-robot-manufacturing/"
+        },
+        {
+          "title": "德州仪器与英伟达合作以加速机器人部署",
+          "summary": "德州仪器（TI）宣布与英伟达合作，旨在通过将英伟达的物理AI计算与TI在确定性控制、传感、电源和安全方面的技术相结合，加速机器人在现实世界中的应用部署。",
+          "comment": "芯片巨头与AI计算巨头的合作，能否解决机器人从实验室走向广泛应用的‘最后一公里’难题？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/ti-partners-with-nvidia-to-accelerate-robot-deployments/"
+        },
+        {
+          "title": "Russ Tedrake将在机器人峰会上揭晓其隐秘AI初创公司",
+          "summary": "MIT知名机器人专家Russ Tedrake将在机器人峰会上公布其隐秘的AI初创公司，并分享关于物理AI如何解锁跨行业更强大、适应性更强机器人的愿景。",
+          "comment": "顶尖学术领袖投身创业，其物理AI初创公司会为机器人行业带来颠覆性的新范式吗？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/russ-tedrake-to-unveil-stealth-ai-startup-at-robotics-summit/"
+        },
+        {
+          "title": "Ultrahuman Ring Pro获美国海关批准，将与Oura展开竞争",
+          "summary": "智能戒指品牌Ultrahuman宣布其新款Ring Pro已获得美国海关与边境保护局（CBP）的关键许可，将在美国市场开放预购，与Oura Ring展开正面竞争。",
+          "comment": "智能健康戒指市场迎来新的有力竞争者，这是否会推动该品类从健康监测向更主动的AI健康干预演进？",
+          "source": "Wareable",
+          "url": "https://www.wareable.com/wearable-tech/ultrahuman-ring-pro-approved-for-us-customs-mohit-kumar-exclusive"
+        },
+        {
+          "title": "苹果发布visionOS 26.4正式版，带来英伟达CloudXR 6.0串流支持",
+          "summary": "苹果向Vision Pro用户推送了visionOS 26.4正式版更新，其中包含了对英伟达CloudXR 6.0的串流支持，提升了PC VR内容在头显上的串流体验。",
+          "comment": "苹果Vision Pro对高端PC VR串流的官方支持增强，是否意味着其正在向更开放的混合现实平台演变？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/139048"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "Anthropic的Claude现在可以控制你的Mac，升级AI Agent能力之战",
+          "summary": "Anthropic为其Claude聊天机器人推出了研究预览功能，使其能够直接控制用户的Mac，点击按钮、打开应用、输入文本，在用户离开时代表用户操作软件。",
+          "comment": "当AI能够直接操作我们的个人设备时，如何界定其权限边界以确保安全和隐私？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropics-claude-can-now-control-your-mac-escalating-the-fight-to-build-ai"
+        },
+        {
+          "title": "Cloudflare的新Dynamic Workers抛弃容器，以100倍速度运行AI Agent代码",
+          "summary": "Cloudflare发布了Dynamic Workers的公开测试版，这是一个新的轻量级、基于隔离的沙盒系统，旨在变革企业部署AI代理的方式，启动时间以毫秒计，内存占用仅几兆字节。",
+          "comment": "这种极速、轻量的AI代理运行环境，是否会催生新一代实时、无处不在的AI应用？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/infrastructure/cloudflares-new-dynamic-workers-ditch-containers-to-run-ai-agent-code-100x"
+        },
+        {
+          "title": "千问AI打车来了：一句话，马上出发",
+          "summary": "阿里通义千问推出AI打车功能，用户只需用自然语言描述需求，系统即可自动完成叫车、匹配司机等全流程，并能理解个性化需求如“驾驶平稳”等。",
+          "comment": "自然语言交互能否成为下一代人机交互的主流范式，彻底改变我们使用各类服务的方式？",
+          "source": "爱范儿",
+          "url": "https://www.ifanr.com/1659693?utm_source=rss&utm_medium=rss&utm_campaign="
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "OpenAI关闭其强大的AI视频模型Sora及其应用和API",
+          "summary": "OpenAI宣布将关闭其独立的AI视频生成应用Sora及相关的社交网络，并停止通过API向开发者提供Sora 2视频模型系列，距其与迪士尼达成多年合作协议仅三个月。",
+          "comment": "即使是顶尖的AI产品，如果缺乏明确的用户需求和可持续的商业模式，是否也难以逃脱被关闭的命运？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openai-is-shutting-down-sora-its-powerful-ai-video-app"
+        },
+        {
+          "title": "Kleiner Perkins筹集35亿美元新资金，全力押注AI",
+          "summary": "知名风投机构Kleiner Perkins新筹集了35亿美元资金，其中10亿美元用于投资早期初创公司，25亿美元用于后期成长型企业，表明其全面押注人工智能领域的决心。",
+          "comment": "巨额资本涌入AI领域，是会加速颠覆性创新的诞生，还是可能催生新的估值泡沫？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/24/with-3-5b-in-fresh-capital-kleiner-perkins-is-going-all-in-on-ai/"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-25T18:31:45.173604+08:00"
+}

@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-25",
+  "time_window": "2026-03-24 19:00 ~ 2026-03-25 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "OpenAI is shutting down Sora, its powerful AI video model, app and API",
+          "summary": "OpenAI宣布将关闭其独立的AI视频生成应用Sora及相关的API服务，距其与迪士尼达成多年合作协议仅三个月。",
+          "comment": "Sora的关停是否预示着当前AI视频生成应用在商业模式和用户需求上遇到了瓶颈，未来的突破点会在哪里？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/openai-is-shutting-down-sora-its-powerful-ai-video-app"
+        },
+        {
+          "title": "Cloudflare’s new Dynamic Workers ditch containers to run AI agent code 100x faster",
+          "summary": "Cloudflare推出Dynamic Workers公测版，这是一种基于隔离的轻量级沙盒系统，旨在以比传统Linux容器快100倍的速度运行AI智能体代码。",
+          "comment": "这种极速启动的AI智能体运行环境，是否会彻底改变AI应用的部署和响应范式，催生全新的实时交互应用？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/infrastructure/cloudflares-new-dynamic-workers-ditch-containers-to-run-ai-agent-code-100x"
+        },
+        {
+          "title": "华为 unveils new Atlas 350 AI accelerator with 1.56 PFLOPS of FP4 compute and up to 112GB of HBM",
+          "summary": "华为发布新款Atlas 350 AI加速卡，基于昇腾950PR芯片，宣称其FP4计算性能是英伟达H20的2.8倍。",
+          "comment": "在国内AI算力需求激增的背景下，华为昇腾系列加速卡能否真正成为替代方案，构建起独立的AI硬件生态？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/gpus/huawei-unveils-new-atlas-350-ai-accelerator-with-1-56-pflops-of-fp4-compute-and-up-to-112gb-of-hbm-claims-2-8x-more-performance-than-nvidias-h20"
+        },
+        {
+          "title": "阿里巴巴达摩院发布新一代旗舰CPU玄铁C950，刷新全球RISC-V性能纪录",
+          "summary": "阿里巴巴达摩院发布基于RISC-V架构的新一代旗舰CPU玄铁C950，在性能和应用领域实现重大突破。",
+          "comment": "玄铁C950的性能突破，是否意味着RISC-V架构在数据中心和高性能计算领域已经准备好与Arm和x86正面竞争？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120181.html"
+        },
+        {
+          "title": "昆仑万维 Mureka V8 登顶 Artificial Analysis 双榜单第一",
+          "summary": "昆仑万维旗下AI音乐大模型Mureka V8在全球权威评测机构Artificial Analysis的人声和乐器双榜单中登顶，综合实力超越多个国际主流模型。",
+          "comment": "在Suno和Udio主导的AI音乐生成赛道，中国模型的后来居上，是否预示着全球AI应用创新格局正在发生区域性转移？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/414184"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Anthropic’s Claude can now control your Mac, escalating the fight to build AI agents that actually do work",
+          "summary": "Anthropic为其Claude聊天机器人推出新功能，使其能够直接控制用户的Mac电脑，点击按钮、打开应用、输入文本，代表用户执行任务。",
+          "comment": "当AI智能体能够直接操作我们的个人电脑时，如何在提升效率与保障隐私、安全之间找到新的平衡点？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropics-claude-can-now-control-your-mac-escalating-the-fight-to-build-ai"
+        },
+        {
+          "title": "Arm moves beyond IP with AGI CPU silicon — 136-core data center chip targets AI infrastructure with Meta as lead partner",
+          "summary": "Arm宣布推出其首款自研数据中心CPU AGI CPU，拥有多达136个核心，并已确定Meta为首个主要合作伙伴。",
+          "comment": "Arm从IP授权商转向芯片供应商，直接进军数据中心市场，这将对英特尔、AMD乃至整个服务器芯片格局产生何种冲击？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/semiconductors/arm-launches-its-first-data-center-cpu"
+        },
+        {
+          "title": "Microsoft and Nvidia launch AI partnership to speed up nuclear power plant permitting and construction",
+          "summary": "微软与英伟达合作，利用生成式AI、数字孪生仿真和Omniverse平台，旨在加速核电站从审批到建设的全过程，以满足AI数据中心激增的电力需求。",
+          "comment": "AI巨头开始亲自下场解决自身的能源瓶颈，这是否标志着科技行业将更深地卷入全球能源基础设施的重塑之中？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/microsoft-and-nvidia-launch-ai-tools-to-speed-up-nuclear-power-plant-permitting-and-construction"
+        },
+        {
+          "title": "Amazon acquires humanoid developer Fauna Robotics",
+          "summary": "亚马逊收购了开发儿童尺寸人形机器人的初创公司Fauna Robotics，这是其本月收购的第二家机器人公司。",
+          "comment": "亚马逊接连收购机器人公司，是否意味着其正在为未来面向家庭场景的消费级机器人产品进行秘密布局？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/amazon-acquires-humanoid-developer-fauna-robotics/"
+        },
+        {
+          "title": "AI战略全面重启，苹果版Siri‘小龙虾’要来了？",
+          "summary": "据报道，苹果正在加速其AI战略落地，计划将Siri从系统工具升级为独立App，并可能赋予其新的内部代号‘小龙虾’。",
+          "comment": "如果苹果将Siri彻底重构为独立的AI应用，它能否打破过往的桎梏，在生成式AI时代重新赢得用户？",
+          "source": "钛媒体：引领未来商业与生活新知",
+          "url": "https://www.tmtpost.com/7928307.html"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "US senators want to suspend Nvidia AI chip export licenses to China and its intermediaries",
+          "summary": "美国参议员致信商务部长，要求暂停所有向中国及其中间商出口英伟达AI芯片的许可证，称尽管黄仁勋保证，但最先进的AI GPU仍在流入中国。",
+          "comment": "地缘政治对AI芯片贸易的持续施压，是否会倒逼出两条完全独立、技术路线各异的全球AI算力发展路径？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/us-senators-want-to-suspend-nvidia-ai-chip-export-licenses-to-china-and-its-intermediaries-bipartisan-letter-to-commerce-dept-says-that-huangs-claims-of-no-chip-diversion-were-contradicted-by-reporting-available"
+        },
+        {
+          "title": "十五五末我国AI相关产业规模预计破10万亿元 多举措推动AI与实体经济深度融合",
+          "summary": "国家数据局局长表示，在技术创新与商业应用驱动下，预计到‘十五五’末，中国人工智能相关产业规模将突破10万亿元。",
+          "comment": "十万亿规模的AI产业蓝图，将如何具体地重塑中国的制造业、服务业乃至整个经济结构？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120186.html"
+        },
+        {
+          "title": "The AI Hype Index: AI goes to war",
+          "summary": "MIT科技评论的AI炒作指数指出，AI已卷入战争，包括 Anthropic与五角大楼的纠纷、OpenAI的军事合同以及伦敦爆发的大规模反AI抗议。",
+          "comment": "当AI技术不可逆转地深度融入军事和国家安全领域，社会应建立怎样的伦理与治理框架来应对随之而来的风险？",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/03/25/1134571/the-ai-hype-index-ai-goes-to-war/"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Claude Code 正式引入‘自动模式’：具备自主决策权限、动态平衡效率与安全",
+          "summary": "Claude Code正式上线‘自动模式’，允许AI在无需用户逐一批准每个操作的情况下自主完成编程任务，通过内置分类器动态平衡效率与安全。",
+          "comment": "赋予AI编码助手‘自动执行’的权限，是解放开发者生产力的终极形态，还是打开了潘多拉魔盒的第一步？",
+          "source": "OSCHINA 社区最新新闻",
+          "url": "https://www.oschina.net/news/414192"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-25T18:33:04.328249+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
