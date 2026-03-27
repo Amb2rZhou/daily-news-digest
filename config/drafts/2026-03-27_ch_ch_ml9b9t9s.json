@@ -1,0 +1,128 @@
+{
+  "date": "2026-03-27",
+  "time_window": "2026-03-26 19:00 ~ 2026-03-27 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "苹果推送visionOS 26.4更新，新增注视点流式传输等多项特性",
+          "summary": "苹果向Vision Pro用户推送了visionOS 26.4正式更新，核心新增‘注视点流式传输’技术，支持将PC或云端的VR游戏/应用串流至头显，并通过追踪注视区域优化传输质量与性能。",
+          "comment": "注视点流式传输技术能否成为解决VR头显无线串流性能瓶颈的通用方案，并推动云VR的普及？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544936.html"
+        },
+        {
+          "title": "瘫痪退伍军人通过Neuralink脑机接口实现‘双手自由’畅玩《魔兽世界》",
+          "summary": "一位英国陆军退伍军人分享了植入Neuralink脑机接口100天后的进展，他现在可以完全不使用双手，仅凭意念以‘全速’在《魔兽世界》中组队副本和探索艾泽拉斯。",
+          "comment": "脑机接口从医疗康复走向大众娱乐的边界在哪里，未来是否会催生全新的‘意念交互’游戏品类？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/big-tech/paralyzed-army-vet-can-now-play-world-of-warcraft-using-science-fiction-magic-brilliant-neuralink-brain-implant-im-now-raiding-and-exploring-azeroth-hands-free-at-full-speed"
+        },
+        {
+          "title": "Zoox为其机器人出租车设定新的地理里程碑和产品功能",
+          "summary": "亚马逊旗下的自动驾驶公司Zoox正在将其专门设计的机器人出租车服务扩展到旧金山、拉斯维加斯、奥斯汀和迈阿密，标志着其全国性推广的开始。",
+          "comment": "机器人出租车从封闭测试走向多城市开放运营，面临的最大挑战是技术迭代还是公众接受度与法规适应？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/zoox-sets-geographic-milestones-product-features-robotaxi/"
+        },
+        {
+          "title": "空间社交新物种：AuraTap登陆Apple Vision Pro，以Persona化身重构短视频通话",
+          "summary": "一款专为Apple Vision Pro打造的全新社交应用AuraTap即将上线，它依托苹果原生Persona虚拟化身系统，以轻量化短视频通话为核心，旨在为空间计算时代打造更真实的数字社交连接。",
+          "comment": "基于虚拟化身（Persona）的轻量化社交，能否比构建复杂虚拟世界更能吸引普通用户进入空间计算生态？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120264.html"
+        },
+        {
+          "title": "佐臻科技突破轻量化瓶颈50克以内 AR眼镜工程样机构建量产蓝图",
+          "summary": "AR/VR智能眼镜方案厂商佐臻科技宣布突破轻量化瓶颈，其AR眼镜工程样机重量已控制在50克以内，为未来量产奠定了基础。",
+          "comment": "当AR眼镜重量逼近普通眼镜，制约其普及的下一个关键因素会是电池续航、光学显示效果还是杀手级应用？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120266.html"
+        },
+        {
+          "title": "臣博视发布87英寸巨幕AR眼镜，目标2026年出货10万副",
+          "summary": "湖北臣博视人工智能科技有限公司宣布将于今年推出两款AI智能眼镜，并为其2026年市场表现设定了10万台出货量的目标，其中一款主打87英寸等效巨幕体验。",
+          "comment": "在巨头环伺的消费级AR市场，新入局者凭借‘巨幕’等单一差异化卖点，能否真正撼动现有格局并实现十万量级的出货目标？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120269.html"
+        },
+        {
+          "title": "Agile Robots将在其人形机器人上部署谷歌DeepMind基础模型",
+          "summary": "人形机器人公司Agile Robots宣布与谷歌DeepMind合作，将后者的基础模型部署在其人形机器人上，专注于高价值的工业应用场景。",
+          "comment": "将大型AI基础模型与人形机器人结合，是解决通用任务执行能力的捷径，还是会让机器人系统变得过于复杂和不可控？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/agile-robots-deploy-google-deepmind-foundation-models-humanoid/"
+        },
+        {
+          "title": "雷鸟创新×华纳兄弟重磅联名！雷鸟Air 4 Pro蝙蝠侠限定版首发",
+          "summary": "AR品牌雷鸟创新与华纳兄弟DC工作室联手，正式在国内发布雷鸟Air 4 Pro蝙蝠侠限定版AR眼镜，首发价1899元。",
+          "comment": "与顶级IP的联名合作，能否成为AR硬件破圈、吸引非科技爱好者购买的有效营销策略？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120280.html"
+        },
+        {
+          "title": "初创公司打造通过星链连接的急救无人机，实现八英里范围作业",
+          "summary": "一家初创公司推出了BRINC Guardian急救无人机，内置星链模块，可在超出基站和蜂窝网络范围后继续操作，续航超一小时并能自动更换电池。",
+          "comment": "卫星直连技术解决了无人机的超视距通信难题，这是否意味着全自主、大范围作业的无人机服务时代即将到来？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/startup-builds-first-responder-drone-connected-via-starlink-that-enables-eight-mile-range-uav-can-fly-for-over-an-hour-swap-batteries-automatically-and-carry-various-payloads"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "当数据库的主要用户不再是人类：我们在 AI Agent 场景下的架构实践与思考",
+          "summary": "TiDB Cloud 观察到超过 90% 的新数据库集群由 AI Agent 自动创建，这迫使行业重新审视围绕‘人类使用数据库’构建的传统假设，并分享了服务 AI 公司时遇到的真实挑战与架构决策。",
+          "comment": "当 AI Agent 成为数据库的主要用户和运维者，数据库设计的核心范式需要发生哪些根本性的转变？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/9OKvpT7uHXxYJBkKYyrf"
+        },
+        {
+          "title": "阿里QoderWork打通钉钉、微信、飞书，手机端可直接召唤桌面AI助手",
+          "summary": "阿里桌面Agent应用QoderWork全面打通主流IM，用户可在手机上调度桌面AI助手，远程完成文件整理、数据处理等任务，将任务执行环境部署在本地以保证数据隐私和安全。",
+          "comment": "将AI Agent的执行环境置于本地并与移动IM深度集成，能否成为解决企业数据安全与效率矛盾的关键路径？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/N2WTrd3mcXTQDy6e.html"
+        },
+        {
+          "title": "Intercom 新推出的后训练模型 Fin Apex 1.0 在客户服务解决率上击败 GPT-5.4 和 Claude Sonnet 4.6",
+          "summary": "老牌客户服务平台 Intercom 宣布自研小型专用 AI 模型 Fin Apex 1.0，声称在客户支持的关键指标上超越了 OpenAI 和 Anthropic 的领先前沿模型。",
+          "comment": "垂直领域的专用小模型在特定任务上超越通用大模型，是否预示着AI应用将进入‘小而精’的定制化时代？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/intercoms-new-post-trained-fin-apex-1-0-beats-gpt-5-4-and-claude-sonnet-4-6"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "腾讯云发布Agent产品全景图，升级全栈AI能力",
+          "summary": "腾讯云在上海峰会上首次发布涵盖基础设施、模型、生态到应用的Agent产品全景图，将MaaS平台升级为TokenHub，并宣布底层平台Cube开源，以夯实面向AI Agent时代的全栈工程能力。",
+          "comment": "巨头将AI基础设施平台化并开源核心组件，会如何重塑未来AI应用开发的生态格局与竞争门槛？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/GjY1dyeMjGRWx941.html"
+        },
+        {
+          "title": "Meta 将西得克萨斯州 AI 数据中心投资增加六倍以上至 100 亿美元",
+          "summary": "Meta 宣布将其在得克萨斯州埃尔帕索的一个数据中心投资从 15 亿美元大幅增加至 100 亿美元，以加速其在 AI 基础设施上的支出。",
+          "comment": "科技巨头在AI算力基础设施上的千亿美元级军备竞赛，是否会引发新一轮的能源与资源争夺战？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/26/meta-to-spend-10-billion-on-ai-data-center-in-el-paso-1gw-by-2028.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-27T18:31:46.187213+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}
