@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-28",
+  "time_window": "2026-03-27 19:00 ~ 2026-03-28 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "IndexCache，一种新的稀疏注意力优化器，可将长上下文AI模型的推理速度提升1.82倍",
+          "summary": "清华大学和Z.ai的研究人员开发了IndexCache技术，通过消除稀疏注意力模型中高达75%的冗余计算，在处理20万token时，将首次token生成时间加快1.82倍，生成吞吐量提高1.48倍。",
+          "comment": "这项优化技术能否从根本上解决长上下文推理的成本和延迟问题，从而开启超长文本理解和生成的新应用时代？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/indexcache-a-new-sparse-attention-optimizer-delivers-1-82x-faster-inference"
+        },
+        {
+          "title": "CERN将微型AI模型烧录进硅片，用于LHC数据的实时过滤",
+          "summary": "欧洲核子研究中心（CERN）采用将微型AI模型直接固化在硅芯片上的技术，用于大型强子对撞机（LHC）产生的海量数据的实时筛选和处理。",
+          "comment": "这种硬件固化的AI模型是否代表了边缘计算和实时处理领域的终极形态，未来是否会在更多高能物理和工业场景中取代传统的软件方案？",
+          "source": "Hacker News",
+          "url": "https://theopenreader.org/Journalism:CERN_Uses_Tiny_AI_Models_Burned_into_Silicon_for_Real-Time_LHC_Data_Filtering"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "VCs are betting billions on AI’s next wave, so why is OpenAI killing Sora?",
+          "summary": "风险投资正押注数十亿美元于AI的下一波浪潮，但文章探讨了为何OpenAI却要关停其视频生成平台Sora，揭示了AI基础设施扩张与现实世界接纳度之间的紧张关系。",
+          "comment": "当资本狂热追逐AI基础设施时，像Sora关停这样的事件是否预示着某些AI应用在商业化和伦理上面临着难以逾越的早期障碍？",
+          "source": "AI News & Artificial Intelligence | TechCrunch",
+          "url": "https://techcrunch.com/podcast/vcs-are-betting-billions-on-ais-next-wave-so-why-is-openai-killing-sora/"
+        },
+        {
+          "title": "Lex in depth: Will the AI data centre boom become a $9tn bust?",
+          "summary": "深度分析指出，AI数据中心建设热潮可能演变成一场价值9万亿美元的泡沫，最大的投资集团或许能幸存，但投资回报面临严峻挑战。",
+          "comment": "当前全球对AI算力基础设施的巨额投资，是否会重蹈历史上其他技术泡沫的覆辙，最终导致严重的资源错配和资本浪费？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/805f78f3-8da3-4fc0-b860-207a859ac723"
+        },
+        {
+          "title": "Social media is populist and polarising; AI may be the opposite",
+          "summary": "文章指出，社交媒体倾向于民粹主义和两极分化，而大型语言模型则可能相反，它们倾向于提升专家共识并缓和极端观点。",
+          "comment": "如果AI真的能成为对抗信息茧房和极端化的工具，我们该如何设计和使用它，才能确保它不会反过来强化现有的偏见或创造新的认知垄断？",
+          "source": "Technology",
+          "url": "https://www.ft.com/content/3880176e-d3ac-4311-9052-fdfeaed56a0e"
+        },
+        {
+          "title": "vivo胡柏山：在焦虑的AI时代，交一份最‘冷静’的答案",
+          "summary": "vivo高管胡柏山针对中国科技产业的‘大模型狂飙时代’发表评论，呼吁行业在集体焦虑中保持冷静思考，指出AI落地的基础问题仍未得到解答。",
+          "comment": "在技术炒作周期中，企业如何在‘不错过时代’的恐惧与进行扎实的底层技术探索之间找到平衡点？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/transportation/bwopMLHjQzO59aB5.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "US judge sides with Anthropic, says company supply chain risk branding over Pentagon disagreement 'Orwellian'",
+          "summary": "美国联邦法官裁定，五角大楼不能仅仅因为Anthropic拒绝为其降低AI安全护栏的要求，就将其标记为‘供应链风险’，法官称此举具有‘奥威尔式’色彩。",
+          "comment": "当AI公司的伦理准则与国家安全需求发生冲突时，法律应如何界定商业公司的权利边界，以及政府在其中的角色？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-judge-sides-with-anthropic-says-company-supply-chain-risk-branding-over-pentagon-disagreement-orwellian-trump-slapped-ai-company-with-designation-after-it-refused-to-lower-its-guardrails-for-the-military"
+        },
+        {
+          "title": "Anthropic, the Pentagon, and the Future of Autonomous Weapons",
+          "summary": "文章深入探讨了Anthropic与美国军方在自主武器未来应用上的分歧与博弈，以及AI将如何重塑战争形态。",
+          "comment": "AI公司拒绝将其技术用于军事目的，这在多大程度上是可行的伦理立场，又能在多大程度上影响未来战争的性质？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-28/anthropic-s-fight-with-us-military-over-future-of-autonomous-weapons"
+        },
+        {
+          "title": "谷歌接近达成协议，将为Anthropic的数据中心提供融资支持",
+          "summary": "据报道，谷歌接近达成一项协议，将为租赁给Anthropic的价值数十亿美元的数据中心提供资金支持。",
+          "comment": "科技巨头通过资本和基础设施深度绑定领先的AI初创公司，这是否会重塑AI行业的竞争格局，形成新的‘云+模型’垄断联盟？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3742361946751241?f=rss"
+        },
+        {
+          "title": "苹果挖角谷歌高管 Lilian Rincon 执掌 AI 营销战略",
+          "summary": "苹果公司聘请前谷歌购物产品副总裁Lilian Rincon担任AI产品营销副总裁，为其即将到来的Siri重大改版做准备。",
+          "comment": "苹果从谷歌引入顶尖营销人才来推动AI产品，这是否意味着其AI战略将从技术研发优先转向更激进的市场化和用户获取？",
+          "source": "36氪",
+          "url": "https://36kr.com/newsflashes/3742367427198976?f=rss"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "趋境科技发布ATaaS：全球领先的高效能AI Token生产服务平台",
+          "summary": "趋境科技正式发布ATaaS（AI Token as a Service）平台，旨在通过系统优化解决大模型推理中Token需求激增与算力成本高昂、效率不匹配的行业困境。",
+          "comment": "当AI竞争从模型能力转向规模化应用时，专注于提升Token生产效能的‘中间层’服务是否会成为决定商业成败的关键基础设施？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/ai/BuQbHR6JV8aDJaJ6.html"
+        },
+        {
+          "title": "Meta新款Ray-Ban AI智能眼镜现身FCC 搭载Wi-Fi 6迎重磅升级",
+          "summary": "Meta新一代Ray-Ban智能眼镜已通过FCC认证，新品命名为Ray-Ban Meta Scriber和Blazer，搭载Wi-Fi 6技术并进行硬件架构升级，被视为Meta加码AI可穿戴设备的重要动作。",
+          "comment": "智能眼镜集成更强大的连接和AI能力后，它离成为下一代主流个人计算平台的愿景还有多远？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120294.html"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "Why SoftBank’s new $40B loan points to a 2026 OpenAI IPO",
+          "summary": "软银获得由摩根大通和高盛提供的400亿美元贷款，分析认为这笔巨额融资可能指向OpenAI计划在2026年进行首次公开募股（IPO）。",
+          "comment": "如果OpenAI成功上市，它高达千亿美元的估值将如何接受公开市场的审视，又会给整个生成式AI行业的估值逻辑带来什么影响？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/27/why-softbanks-new-40b-loan-points-to-a-2026-openai-ipo/"
+        },
+        {
+          "title": "Physical Intelligence is reportedly in talks to raise $1 billion, again",
+          "summary": "据报道，专注于具身智能的初创公司Physical Intelligence正在洽谈新一轮10亿美元融资，这将使其在短短四个月内估值从56亿美元翻倍。",
+          "comment": "具身智能领域在短时间内获得如此巨额的资本押注，这是否意味着AI与物理世界交互的‘最后一公里’即将被突破，还是又一场资本催生的泡沫？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/27/physical-intelligence-is-reportedly-in-talks-to-raise-1-billion-again/"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-28T18:32:31.336047+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
