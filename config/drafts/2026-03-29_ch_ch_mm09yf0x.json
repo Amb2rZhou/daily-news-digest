@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-29",
+  "time_window": "2026-03-28 19:00 ~ 2026-03-29 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "Suno leans into customization with v5.5",
+          "summary": "AI音乐生成公司Suno发布v5.5大更新，重点增强用户控制力，新增Voices、My Taste和Custom Models三大功能，允许用户定制AI音乐风格。",
+          "comment": "当AI音乐创作工具从‘生成’走向‘定制’，这是否意味着艺术创作的主导权正在从人类创作者向AI工具和平台转移？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/entertainment/903056/suno-ai-music-v5-5-model"
+        },
+        {
+          "title": "Stanford study outlines dangers of asking AI chatbots for personal advice",
+          "summary": "斯坦福大学计算机科学家的一项新研究试图衡量AI聊天机器人在提供个人建议时的‘谄媚’倾向可能带来的危害。",
+          "comment": "如果AI为了取悦用户而提供不准确甚至有害的建议，我们该如何在‘人性化交互’与‘客观真实性’之间建立有效的技术护栏？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal-advice/"
+        },
+        {
+          "title": "IndexCache，一种新的稀疏注意力优化器，可将长上下文AI模型的推理速度提升1.82倍",
+          "summary": "一种名为IndexCache的新型稀疏注意力优化器被提出，它能显著提升处理长上下文AI模型的推理速度，最高可达1.82倍。",
+          "comment": "随着模型上下文窗口不断增长，此类推理优化技术是否会成为决定大模型实际应用成本和可行性的关键胜负手？",
+          "source": "已报道过，但作为技术进展的补充",
+          "url": "（来自昨日列表）"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Actors Union Is Bargaining for ‘Tilly Tax’ On AI Film Characters",
+          "summary": "好莱坞演员工会SAG-AFTRA正在就向AI生成的电影角色征收‘Tilly税’进行谈判，试图在AI技术快速应用但监管滞后的情况下，通过工会力量规范其使用。",
+          "comment": "当技术发展快于法律，行业工会的集体谈判能否成为规范AI应用、保护劳动者权益的有效‘次优解’？",
+          "source": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-28/sag-aftra-actors-union-bargaining-for-tilly-tax-on-ai-film-characters"
+        },
+        {
+          "title": "When AI turns software development inside-out: 170% throughput at 80% headcount",
+          "summary": "一位工程管理者分享其团队在过去六个月全面转向AI优先的开发模式后，实现了在80%人力下达到170%产出的经验。",
+          "comment": "当AI将软件开发效率提升到新高度，这是否会从根本上重塑软件公司的组织架构、人才需求和商业模式？",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/when-ai-turns-software-development-inside-out-170-throughput-at-80-headcount"
+        },
+        {
+          "title": "周鸿祎科幻大会对话刘慈欣，预判‘百亿智能体’新物种时代",
+          "summary": "在2026中国科幻大会上，360创始人周鸿祎与科幻作家刘慈欣探讨AI对人类文明的影响，周鸿祎预判未来将进入‘百亿智能体’时代，人类群体将因使用AI的能力出现分化。",
+          "comment": "如果未来社会由百亿个AI智能体与人类共同运转，人类文明的‘主体性’将如何定义，又由谁来定义？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/industrynews/GFbL4qkaBRfTyiQP.html"
+        },
+        {
+          "title": "The Pentagon-Anthropic dispute is a test of control",
+          "summary": "美国国防部与AI公司Anthropic之间的争议，核心在于私人公司是否有权为其开发的AI系统设定使用边界，尤其是在涉及国家安全的关键领域。",
+          "comment": "当私营企业开发的强大AI系统具备战略价值时，国家利益与公司伦理准则之间的冲突应如何调和与裁决？",
+          "source": "Financial Times",
+          "url": "https://www.ft.com/content/35e58efe-8601-4c33-af91-007659b679cc"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Meta to fund seven new natural gas power plants to fuel AI data centers",
+          "summary": "Meta将出资建造七座新的天然气发电厂，为其在路易斯安那州的大型AI数据中心供电，此举大幅扩张了支撑其AI发展的化石燃料基础设施。",
+          "comment": "科技巨头在竞逐AI算力的同时，大规模依赖化石能源，这是否意味着AI的‘绿色承诺’在现实商业压力面前不堪一击？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/meta-will-fund-seven-new-gas-plants-to-power-its-7gw-louisiana-data-center"
+        },
+        {
+          "title": "Meta加速转型‘AI原生’公司，设定明确指标推动员工深度使用AI工具",
+          "summary": "扎克伯格正全力推动Meta向‘AI原生’企业转型，并设定了明确的内部指标，以督促员工深度使用AI工具来完成工作。",
+          "comment": "当一家公司强制将AI使用率纳入考核，这是否能真正培育创新文化，还是可能催生形式主义并扼杀人类员工的创造性思考？",
+          "source": "93913",
+          "url": "https://www.93913.com/120349.html"
+        },
+        {
+          "title": "谷歌内部AI工具Agent Smith火爆致限流 编程自动化受员工热捧",
+          "summary": "谷歌内部推出的AI编程自动化工具Agent Smith因使用量激增导致系统过载，已被官方暂时限制访问权限。",
+          "comment": "连AI技术的领先开发者都在内部面临工具供不应求的局面，这是否揭示了当前AI赋能生产力的巨大潜力与基础设施瓶颈之间的尖锐矛盾？",
+          "source": "93913",
+          "url": "https://www.93913.com/120347.html"
+        },
+        {
+          "title": "腾讯的AI慢战略，能跑通吗？",
+          "summary": "文章分析了腾讯在AI大模型竞赛中采取的不卷低价、注重实效的‘慢战略’，并探讨其能否在激烈竞争中跑通。",
+          "comment": "在追求快速迭代和市场份额的AI竞赛中，‘慢战略’是深思熟虑的差异化路径，还是可能错失关键窗口期的风险选择？",
+          "source": "钛媒体",
+          "url": "https://www.tmtpost.com/7933507.html"
+        },
+        {
+          "title": "Elon Musk’s last co-founder reportedly leaves xAI",
+          "summary": "据报道，埃隆·马斯克AI公司xAI的最后一位联合创始人已于本周离职，至此11位联合创始人中仅剩2人仍在职。",
+          "comment": "核心创始团队接连离开，这是初创公司快速迭代中的正常阵痛，还是预示着xAI在战略或文化上遇到了深层挑战？",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/03/28/elon-musks-last-co-founder-reportedly-leaves-xai/"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "亮亮视野推出全球首创AR+AI会议翻译系统，部署中关村论坛",
+          "summary": "亮亮视野联合智谱AI推出全球首创的AR+AI会议翻译系统，并在中关村论坛部署，支持54种语言实时翻译，延迟小于1秒。",
+          "comment": "AR眼镜与大模型结合解决专业场景（如国际会议）的痛点，这是否预示着‘AI+AR’正从消费娱乐走向高价值的企业级应用深水区？",
+          "source": "36氪",
+          "url": "https://36kr.com/p/3743855989587971?f=rss"
+        },
+        {
+          "title": "Even G2智能眼镜迎重磅更新 全新Even Hub开发者平台上线",
+          "summary": "智能眼镜厂商Even Realities为Even G2推送重大更新，并推出Even Hub开发者平台，明确将产品定位为日常场景的轻量化AI助手，与苹果Vision Pro形成差异化。",
+          "comment": "在苹果定义的高性能‘空间计算’之外，专注于轻量化、场景化的AI眼镜，能否开辟出另一个更具普及潜力的智能穿戴市场？",
+          "source": "93913",
+          "url": "https://www.93913.com/120342.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-29T18:32:47.505560+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
