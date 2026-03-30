@@ -1,0 +1,121 @@
+{
+  "date": "2026-03-30",
+  "time_window": "2026-03-29 19:00 ~ 2026-03-30 18:59",
+  "categories": [
+    {
+      "name": "智能硬件",
+      "icon": "🥽",
+      "news": [
+        {
+          "title": "Meta即将推出两款专为处方眼镜佩戴者设计的雷朋智能眼镜新品",
+          "summary": "据彭博社报道，Meta即将发布两款专为近视人群设计的全新Ray-Ban智能眼镜，采用矩形和圆形镜框，将通过传统眼镜销售渠道推出。",
+          "comment": "针对特定视力人群定制智能眼镜，是否意味着AI可穿戴设备正从通用型向更精细化的细分市场渗透？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120369.html"
+        },
+        {
+          "title": "康耐特光学宣布1.8亿元参与Rokid新一轮融资",
+          "summary": "康耐特光学公告拟投资1.8亿元参与AR智能眼镜公司Rokid的最新一轮融资，以深化在智能眼镜领域的战略布局。",
+          "comment": "传统光学巨头投资AR公司，这是否预示着智能眼镜产业链上下游的整合正在加速？",
+          "source": "映维网资讯",
+          "url": "https://news.nweon.com/139160"
+        },
+        {
+          "title": "Shield AI raises $2B for defense drone development, to acquire Aechelon",
+          "summary": "Shield AI宣布完成20亿美元融资用于国防无人机开发，并计划收购提供高保真飞行模拟与飞行员训练服务的公司Aechelon。",
+          "comment": "巨额融资涌入军用AI无人机领域，这将对全球防务格局和AI硬件应用边界产生何种影响？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/shield-ai-raises-2b-defense-drones-acquire-aechelon/"
+        },
+        {
+          "title": "中国军方展示可进行集群作战的无人机狼群",
+          "summary": "中国解放军展示了其最新的无人机技术，包括可协同作战的武装机器狗集群，这些装备旨在部署于现代战场，特别是城市作战环境。",
+          "comment": "集群化、武装化的地面机器人投入战场，是否会彻底改变未来城市战的形态与伦理规则？",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/chinese-military-reveals-drone-wolf-pack-capable-of-swarm-operations-robot-dogs-can-be-equipped-with-grenade-launchers-and-machine-guns-for-urban-combat"
+        },
+        {
+          "title": "苹果智能眼镜新专利：具备场景感知能力",
+          "summary": "苹果公布一项智能眼镜专利，该设备可根据佩戴位置、方式等状态自动切换工作模式，实现从沉浸显示到传感器乃至防丢寻物器的无缝转换。",
+          "comment": "基于场景感知的自动模式切换，能否解决当前智能眼镜在‘全天候佩戴’用户体验上的核心痛点？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544948.html"
+        },
+        {
+          "title": "NIMO预告首款AI眼镜，无摄像头无扬声器",
+          "summary": "智能眼镜品牌NIMO预告其首款AI眼镜，采用单目单绿色光波导显示和体全息光学技术，特点是未配备摄像头和扬声器。",
+          "comment": "一款去除了摄像头和扬声器的AI眼镜，其核心交互与应用场景将如何重新定义？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544950.html"
+        },
+        {
+          "title": "江波龙发布全球最小尺寸eMMC与最薄ePOP5x，定义端侧AI穿戴存储新高度",
+          "summary": "江波龙发布了全球最小尺寸的eMMC存储芯片，其主板占用面积较上一代缩减约30%，旨在为AI穿戴设备等空间受限的终端释放宝贵内部空间。",
+          "comment": "存储芯片的微型化竞赛，是否正成为制约或推动下一代超轻薄AI可穿戴设备发展的关键因素？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120356.html"
+        },
+        {
+          "title": "visionOS 26.4正式发布：VR注视点串流上线，混合现实空间音频大幅升级",
+          "summary": "苹果为Apple Vision Pro推送visionOS 26.4系统更新，核心新增VR注视点渲染串流功能，并大幅优化了混合现实空间音频体验。",
+          "comment": "系统级注视点串流技术的落地，是否意味着Vision Pro的PC VR串流体验将迎来质变，从而拓宽其作为‘AI终端设备’的边界？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120373.html"
+        }
+      ]
+    },
+    {
+      "name": "AI技术与产品",
+      "icon": "🤖",
+      "news": [
+        {
+          "title": "OpenAI扩展Responses API，为自主智能体提供基础设施",
+          "summary": "OpenAI宣布扩展其Responses API，新增Shell工具、内置智能体执行循环、托管容器工作空间等功能，旨在降低开发者构建自主智能体工作流的门槛。",
+          "comment": "当AI智能体的开发门槛被大幅降低，我们是否准备好应对随之而来的自动化任务执行所带来的安全与伦理挑战？",
+          "source": "InfoQ",
+          "url": "https://www.infoq.cn/article/lrjJhCF8qHoQ1VbsacNz"
+        },
+        {
+          "title": "企业微信 CLI 正式开源，向AI开放消息、日程、文档等核心能力",
+          "summary": "腾讯企业微信正式开源其命令行工具（CLI），向AI智能体开放了消息、日程、文档等办公软件的核心能力，旨在促进办公软件与智能助理的协同。",
+          "comment": "当办公软件的核心能力向AI开放，这会催生出哪些超越传统工作流的全新协作范式？",
+          "source": "品玩",
+          "url": "https://www.pingwest.com/w/312560"
+        },
+        {
+          "title": "中山大学梁小丹团队论文：让视频生成从‘看起来真实’到‘物理上正确’",
+          "summary": "中山大学梁小丹团队的研究致力于解决当前AI视频生成模型缺乏物理规律理解能力的问题，旨在让生成的视频不仅在视觉上真实，更在物理过程和因果关系上正确。",
+          "comment": "当AI视频生成开始追求物理正确性，这是否意味着我们正在从“内容生成”迈向“世界模拟”？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/ai/oh7ZT7OUpf6PElPC.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向与行业观察",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "Mistral 筹集8.3亿美元债务融资以在欧洲建设AI数据中心",
+          "summary": "法国AI初创公司Mistral获得了8.3亿美元的债务融资，用于在欧洲建设由英伟达芯片驱动的AI数据中心集群，以满足市场对美国以外AI基础设施替代方案的需求。",
+          "comment": "欧洲本土AI基础设施的崛起，是否会改变全球AI算力格局和地缘技术竞争态势？",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/30/mistral-ai-paris-data-center-cluster-debt-financing.html"
+        },
+        {
+          "title": "韩国政府计划明年投入近800万亿韩元财政，旨在跻身全球三大AI强国",
+          "summary": "韩国政府宣布2027年将推行扩张性财政政策，预计支出规模接近800万亿韩元，以加速以人工智能为中心的产业转型，目标是推动韩国成为全球三大AI强国之一。",
+          "comment": "国家级别的巨额财政投入，是推动AI产业跨越式发展的必要条件，还是可能引发新一轮泡沫的风险信号？",
+          "source": "OSCHINA",
+          "url": "https://www.oschina.net/news/415739"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-30T18:31:23.855061+08:00",
+  "channel_id": "ch_ml9b9t9s",
+  "channel_name": "ai-interactive群",
+  "topic_mode": "focused"
+}

@@ -1,0 +1,140 @@
+{
+  "date": "2026-03-30",
+  "time_window": "2026-03-29 19:00 ~ 2026-03-30 18:59",
+  "categories": [
+    {
+      "name": "技术进展",
+      "icon": "🔬",
+      "news": [
+        {
+          "title": "New Cambridge human brain-inspired chip could slash AI energy use",
+          "summary": "剑桥大学研究人员开发出一种新型氧化铪忆阻器，其开关电流比传统器件低约一百万倍，有望大幅降低AI芯片能耗。",
+          "comment": "这种类脑芯片能否真正解决AI算力爆炸带来的能源危机，还是仅仅在特定应用场景中有效？",
+          "source": "Latest from Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/new-cambridge-human-brain-inspired-chip-could-slash-ai-energy-use"
+        },
+        {
+          "title": "中山大学梁小丹团队论文：让视频生成从‘看起来真实’到‘物理上正确’",
+          "summary": "该研究提出新方法，旨在解决当前AI视频生成模型缺乏物理规律理解的问题，让生成的视频过程更符合真实世界的因果逻辑。",
+          "comment": "当AI视频生成从‘形似’迈向‘神似’，即理解物理规律时，这是否意味着通用世界模型（World Model）的构建迈出了关键一步？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/ai/oh7ZT7OUpf6PElPC.html"
+        },
+        {
+          "title": "OpenAI扩展Responses API，为自主智能体提供基础设施",
+          "summary": "OpenAI扩展其Responses API，新增Shell工具、内置执行循环、托管工作空间等功能，旨在降低开发者构建自主智能体工作流的门槛。",
+          "comment": "OpenAI将智能体开发基础设施化，这会加速智能体应用的普及，还是会让开发者生态更加依赖单一平台？",
+          "source": "InfoQ 推荐",
+          "url": "https://www.infoq.cn/article/lrjJhCF8qHoQ1VbsacNz"
+        }
+      ]
+    },
+    {
+      "name": "行业观察",
+      "icon": "📊",
+      "news": [
+        {
+          "title": "Sora’s shutdown could be a reality check moment for AI video",
+          "summary": "OpenAI在Sora发布仅六个月后将其关闭，此举引发行业对AI生成视频商业化前景与数据伦理的重新审视。",
+          "comment": "Sora的关停是技术路线调整的信号，还是揭示了AI视频生成在用户需求与商业模式上尚未找到可持续的路径？",
+          "source": "AI News & Artificial Intelligence | TechCrunch",
+          "url": "https://techcrunch.com/2026/03/29/soras-shutdown-could-be-a-reality-check-moment-for-ai-video/"
+        },
+        {
+          "title": "Tech CEOs suddenly love blaming AI for mass job cuts. Why?",
+          "summary": "越来越多的科技公司CEO将大规模裁员归因于AI工具的应用，并以此为由寻求更多投资。",
+          "comment": "将裁员归咎于AI，是技术进步带来的必然阵痛，还是企业为优化财务表现和获取资本而寻找的便利借口？",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/cde5y2x51y8o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "刘慈欣2026中国科幻大会谈AI：AI时代世界将不再受人类绝对控制",
+          "summary": "科幻作家刘慈欣在2026中国科幻大会上发表观点，认为AI时代的世界将不再完全由人类掌控，并探讨了AI对人类社会与文明走向的深远影响。",
+          "comment": "当刘慈欣这样的科幻思想家预警AI的失控风险时，我们现有的技术伦理和治理框架是否足以应对一个‘非人类中心’的未来？",
+          "source": "93913-元宇宙&AI信息与产业服务",
+          "url": "https://www.93913.com/120361.html"
+        }
+      ]
+    },
+    {
+      "name": "巨头动向",
+      "icon": "🏢",
+      "news": [
+        {
+          "title": "企业微信 CLI 正式开源，向AI开放消息、日程、文档等核心能力",
+          "summary": "腾讯企业微信宣布开源其命令行工具，并向AI开放核心办公能力，旨在推动办公软件与智能助理的深度协同。",
+          "comment": "腾讯将企业办公生态的核心接口向AI开放，这会催生一批新的企业级AI应用，还是可能引发数据安全与生态控制权的新一轮竞争？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/312560"
+        },
+        {
+          "title": "上海AI实验室发布‘AGI4S珠穆朗玛计划’，构建中国科学智能创新中枢",
+          "summary": "上海人工智能实验室发布面向重大科学突破的AGI for Science计划，旨在构建算力、数据、自主实验一体化的科学智能基础设施。",
+          "comment": "由政府背景的实验室牵头构建国家级科学智能平台，能否有效整合资源、避免重复建设，真正加速基础科学研究的范式变革？",
+          "source": "雷峰网",
+          "url": "https://www.leiphone.com/category/ai/hCyDjKWtWsp2U9Rh.html"
+        },
+        {
+          "title": "击败谷歌！PaddleOCR成GitHub最受欢迎OCR项目，中国开源首度登顶",
+          "summary": "百度文心衍生的PaddleOCR项目在GitHub上的Star数超越谷歌的Tesseract OCR，成为全球最受关注的开源OCR项目。",
+          "comment": "PaddleOCR的登顶是否标志着中国在特定AI应用层的开源生态上开始具备全球影响力，这种影响力能否扩展到更基础的模型层？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/312577"
+        }
+      ]
+    },
+    {
+      "name": "产品发布",
+      "icon": "🚀",
+      "news": [
+        {
+          "title": "Bluesky’s new app is an AI for customizing your feed",
+          "summary": "Bluesky团队推出新应用Attie，这是一个基于Anthropic Claude构建的AI助手，允许用户自定义构建自己的信息流算法。",
+          "comment": "将信息流的控制权通过AI交还给用户，是解决算法偏见和‘信息茧房’的有效方案，还是会把用户推向更极端的自我验证循环？",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/903190/bluesky-attie-ai-custom-feeds"
+        },
+        {
+          "title": "Meta公司将推出面向近视眼镜佩戴者的全新AI眼镜",
+          "summary": "Meta即将发布两款专为近视人群设计的Ray-Ban AI智能眼镜新品，旨在拓展其在智能眼镜细分市场的覆盖范围。",
+          "comment": "Meta针对特定用户群体（近视者）推出定制化AI眼镜，这是否意味着消费级AI硬件开始从‘通用尝鲜’走向‘细分实用’阶段？",
+          "source": "VR陀螺",
+          "url": "https://www.vrtuoluo.cn/544951.html"
+        },
+        {
+          "title": "Runway推出Multi-Shot App，实现AI视频‘一键成片’",
+          "summary": "Runway发布里程碑式应用Multi-Shot App，标志着AI视频生成从单镜头制作迈向全场景自动设计与剪辑的新阶段。",
+          "comment": "当AI视频制作工具变得如此‘傻瓜化’，专业视频创作者的独特价值将更多体现在创意构思上，还是会被进一步边缘化？",
+          "source": "品玩 - 实时要闻",
+          "url": "https://www.pingwest.com/w/312571"
+        }
+      ]
+    },
+    {
+      "name": "投融资",
+      "icon": "💰",
+      "news": [
+        {
+          "title": "Shield AI raises $2B for defense drone development, to acquire Aechelon",
+          "summary": "专注于国防无人机开发的Shield AI公司完成20亿美元融资，并计划收购提供高保真飞行模拟的Aechelon公司。",
+          "comment": "巨额资本持续涌入国防AI领域，这是否会加速自主武器系统的竞赛，并使得相关的国际监管与伦理讨论变得更加紧迫和困难？",
+          "source": "The Robot Report",
+          "url": "https://www.therobotreport.com/shield-ai-raises-2b-defense-drones-acquire-aechelon/"
+        },
+        {
+          "title": "Mistral secures $830 million in debt融资 to fund AI data center",
+          "summary": "欧洲AI明星公司Mistral获得8.3亿美元债务融资，用于建设其AI数据中心集群，以应对不断增长的计算需求。",
+          "comment": "Mistral通过巨额债务而非股权融资来建设重资产的数据中心，这是欧洲AI公司应对美国巨头算力优势的务实选择，还是一场高风险赌注？",
+          "source": "Tech",
+          "url": "https://www.cnbc.com/2026/03/30/mistral-ai-paris-data-center-cluster-debt-financing.html"
+        }
+      ]
+    }
+  ],
+  "source": "scheduled",
+  "status": "pending_review",
+  "created_at": "2026-03-30T18:32:39.350548+08:00",
+  "channel_id": "ch_mm09yf0x",
+  "channel_name": "午休新频道",
+  "topic_mode": "broad"
+}
