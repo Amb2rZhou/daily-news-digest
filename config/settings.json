@@ -5,7 +5,7 @@
       "id": "email",
       "type": "email",
       "name": "邮件",
-      "enabled": true,
+      "enabled": false,
       "send_hour": 19,
       "send_minute": 0,
       "topic_mode": "focused",
