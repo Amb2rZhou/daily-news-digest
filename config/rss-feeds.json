@@ -1,0 +1,136 @@
+{
+  "_comment": "智能眼镜/AR 行业每日增量 RSS 订阅源。可随时手动增删。",
+  "_last_edited": "2026-04-16",
+
+  "feeds": [
+    {
+      "name": "36氪 - 快讯",
+      "url": "https://rsshub.app/36kr/newsflashes",
+      "category": "综合科技",
+      "weight": 3
+    },
+    {
+      "name": "36氪 - 最新",
+      "url": "https://rsshub.app/36kr/news/latest",
+      "category": "综合科技",
+      "weight": 3
+    },
+    {
+      "name": "IT之家",
+      "url": "https://www.ithome.com/rss/",
+      "category": "综合科技",
+      "weight": 3
+    },
+    {
+      "name": "PingWest 品玩",
+      "url": "https://rsshub.app/pingwest/status",
+      "category": "综合科技",
+      "weight": 2
+    },
+    {
+      "name": "爱范儿",
+      "url": "https://rsshub.app/ifanr/app",
+      "category": "综合科技",
+      "weight": 2
+    },
+    {
+      "name": "少数派 - 每日热榜",
+      "url": "https://sspai.com/feed",
+      "category": "综合科技",
+      "weight": 1
+    },
+    {
+      "name": "新浪科技",
+      "url": "https://rss.sina.com.cn/tech/rollnews.xml",
+      "category": "综合科技",
+      "weight": 2
+    },
+    {
+      "name": "机器之心",
+      "url": "https://rsshub.app/jiqizhixin/news",
+      "category": "AI垂直",
+      "weight": 2
+    },
+    {
+      "name": "雷科技",
+      "url": "https://rsshub.app/leikeji",
+      "category": "综合科技",
+      "weight": 1
+    },
+    {
+      "name": "钛媒体",
+      "url": "https://www.tmtpost.com/feed",
+      "category": "综合科技",
+      "weight": 2
+    },
+    {
+      "name": "华为 - 新闻中心",
+      "url": "https://rsshub.app/huawei/newsroom",
+      "category": "厂商官方",
+      "weight": 3
+    },
+    {
+      "name": "小米 - 新闻",
+      "url": "https://rsshub.app/mi/newsroom",
+      "category": "厂商官方",
+      "weight": 3
+    },
+    {
+      "name": "XREAL - 官方博客",
+      "url": "https://www.xreal.com/blog/feed/",
+      "category": "厂商官方",
+      "weight": 3
+    },
+    {
+      "name": "Road to VR",
+      "url": "https://www.roadtovr.com/feed/",
+      "category": "海外AR/VR",
+      "weight": 2
+    },
+    {
+      "name": "UploadVR",
+      "url": "https://www.uploadvr.com/rss/",
+      "category": "海外AR/VR",
+      "weight": 2
+    },
+    {
+      "name": "The Verge - AR/VR",
+      "url": "https://www.theverge.com/rss/ar-vr/index.xml",
+      "category": "海外AR/VR",
+      "weight": 2
+    }
+  ],
+
+  "keywords_product": [
+    "智能眼镜", "AI眼镜", "AR眼镜", "AR 眼镜",
+    "XREAL", "Nreal", "Rokid", "雷鸟", "RayNeo", "INMO", "影目",
+    "李未可", "Meta Lens", "LAWK", "魅族 MYVU", "MYVU", "StarV", "星纪魅族",
+    "ARknovv", "致敬未知", "VITURE", "INAIR", "未来之眼",
+    "闪极", "SHARGE", "loomos", "界环", "SUPERHEXA", "雷神 AURA",
+    "亮亮视野", "LLVISION", "Looktech", "Gyges Labs", "Mirron",
+    "小度眼镜", "千问眼镜", "豆包眼镜", "PICO 眼镜",
+    "华为眼镜", "小米眼镜", "OPPO Air Glass", "Vision Pro", "vivo Vision",
+    "荣耀观影", "联想 YOGA 眼镜", "ThinkReality",
+    "Even Realities", "Solos", "LUCI immers", "创维 XR",
+    "Meta Ray-Ban", "Ray-Ban Meta", "Galaxy XR", "Project Aura",
+    "Orion"
+  ],
+
+  "keywords_industry": [
+    "光波导", "衍射光波导", "刻蚀光波导", "树脂波导", "阵列光波导",
+    "Micro-OLED", "Micro-LED", "MicroLED", "JBD", "视涯", "珑璟光电",
+    "Lumus", "灰盖", "鲲游", "舜宇光学",
+    "AR1", "高通 AR", "AR芯片",
+    "歌尔股份", "歌尔光学", "立讯精密", "舜宇光学", "欧菲光",
+    "Birdbath", "Pancake", "电致变色", "近视调节",
+    "AR 融资", "AR 眼镜 融资", "AI眼镜 融资", "智能眼镜 融资",
+    "AR 上市", "AR 收购", "百镜大战"
+  ],
+
+  "filter_rules": {
+    "require_keyword_count_min": 1,
+    "exclude_if_title_contains": ["招聘", "招聘启事", "视频直播回放", "游戏攻略", "小说", "鸿蒙生态开发者"],
+    "require_recency_days": 3,
+    "dedup_by": "url"
+  }
+}
