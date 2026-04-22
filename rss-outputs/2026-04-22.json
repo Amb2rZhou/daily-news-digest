@@ -1,0 +1,107 @@
+{
+  "date": "2026-04-22",
+  "generated_at": "2026-04-22T11:45:14.568637+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 2
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "消除游戏卡顿：虚幻引擎 5 加速整合微软 DirectX 高级着色器交付功能",
+      "summary": "IT之家 4 月 22 日消息，技术程序员 Ondrej Hrušovský 昨日（4 月 21 日）在 X 平台发布推文，报道称微软 DirectX 团队的 Advanced Shader Delivery（高级着色器交付）功能正整合至 Unreal Engine 5（虚幻引擎 5），有望解决困扰 PC 玩家已久的着色器编译卡顿及加载时间过长问题。IT之家注：高级着色器交付是最初于 2025 年 Gamescom 亮相，由微软与 AMD 联合研发，主要解决游戏运行时的着色器编译卡顿问题。该功能通过优化着色器数据的传输与处理流程，减少因即时编译导致的画面冻结，从而缩短游戏加载时间并提升流畅度。技术落地方面，微软此前已发布 AgilitySDK 1.618，将该功能从预览版转为正式版，并率先应用于 ROG Xbox Ally 掌机及 Xbox PC 应用。Epic Games 渲染工程总监 Mihnea Balta 曾公开表示，团队正积极探索 SODB 与 PSDB 生成技术，以支持这一生态系统。",
+      "url": "https://www.ithome.com/0/941/966.htm",
+      "published": "2026-04-22T03:11:24"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "‘Star Wars’ Director Jon Favreau Used Vision Pro in Filming ‘Mandalorian & Grogu’",
+      "summary": "Veteran director and writer Jon Favreau revealed he fully integrated Apple Vision Pro into the production pipeline for his upcoming Star Wars film coming out this May, The Mandalorian and Grogu. Speaking to The Town&#8217;s Matt Belloni on stage at CinemaCon in Las Vegas this week, Favreau revealed he regularly used Vision Pro while filming The Mandalorian [&#8230;]\nThe post &#8216;Star Wars&#8217; Director Jon Favreau Used Vision Pro in Filming &#8216;Mandalorian &#038; Grogu&#8217; appeared fi",
+      "url": "https://www.roadtovr.com/star-wars-jon-favreau-apple-vision-pro/",
+      "published": "2026-04-21T14:36:19"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Apple’s New CEO Has a Background in VR Headsets, But is Reportedly Bearish on Vision Pro",
+      "summary": "Apple announced that CEO Tim Cook is stepping down, and John Ternus, a long-time Apple veteran, is set to take his place. As head of hardware engineering, Ternus oversaw the launch of Vision Pro in addition to a slew of core Apple products over the years, although the new CEO may have some reservations about [&#8230;]\nThe post Apple’s New CEO Has a Background in VR Headsets, But is Reportedly Bearish on Vision Pro appeared first on Road to VR.",
+      "url": "https://www.roadtovr.com/apple-new-ceo-bearish-on-vision-pro/",
+      "published": "2026-04-21T10:54:58"
+    }
+  ]
+}
