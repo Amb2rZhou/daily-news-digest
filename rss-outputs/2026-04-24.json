@@ -1,0 +1,107 @@
+{
+  "date": "2026-04-24",
+  "generated_at": "2026-04-24T11:54:57.777456+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 0
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 2
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "钛媒体",
+      "feed_category": "综合科技",
+      "feed_weight": 2,
+      "title": "硅谷极客的创业游戏，XREAL能否成为“智能眼镜第一股”？",
+      "summary": "小池子养不出大鱼。",
+      "url": "https://www.tmtpost.com/7965008.html",
+      "published": "2026-04-24T03:29:00"
+    },
+    {
+      "feed_name": "钛媒体",
+      "feed_category": "综合科技",
+      "feed_weight": 2,
+      "title": "市占率全球第一却持续亏损，XREAL上市能否破局？",
+      "summary": "何时才是AR眼镜的iPhone时刻？",
+      "url": "https://www.tmtpost.com/7965005.html",
+      "published": "2026-04-24T02:03:00"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Samsung Reportedly Working on More Advanced Smart Glasses, Possibly Including a Display",
+      "summary": "Samsung is reportedly working on a pair of smart glasses that could be more advanced than its forthcoming competitors to Ray-Ban Meta. Android Authority maintains it&#8217;s found evidence of a third pair of smart glasses in the source code of Samsung’s upcoming One UI 9 firmware, revealing a new model number: &#8216;SM-O500&#8217;, code named &#8216;Haean&#8217;. Notably, [&#8230;]\nThe post Samsung Reportedly Working on More Advanced Smart Glasses, Possibly Including a Display appeared first on",
+      "url": "https://www.roadtovr.com/samsung-display-smart-glasses-release-2027/",
+      "published": "2026-04-23T11:02:19"
+    }
+  ]
+}
