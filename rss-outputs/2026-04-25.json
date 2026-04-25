@@ -1,0 +1,98 @@
+{
+  "date": "2026-04-25",
+  "generated_at": "2026-04-25T11:36:49.400358+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "华为 AI 眼镜今日开售：支持 AI 快捷键一键唤醒、支付宝看一下支付等，2499 元起",
+      "summary": "IT之家 4 月 25 日消息，华为 AI 眼镜今日 10:08 正式开售，提供钛银灰、流光银、摩登黑三款配色，圆形、方形两种镜框样式，其中钛银灰及摩登黑售价为 2499 元，流光银售价 2899 元。据IT之家了解，华为 AI 眼镜采用了全新的轻量化新型材料和精密堆叠技术，镜腿薄至 6.25 毫米，镜架轻至 35.5 克，接近一副普通眼镜的重量。该眼镜内置华为自研 AI 眼镜芯片，号称秒级响应、即问即答，支持语音唤醒、AI 快捷键一键唤醒。功能上，其支持小艺看世界、支付宝看一下支付等。拍摄方面，这款眼镜配备 1/2.8'' 大底传感器，具备 AI RAW 域多帧融合算法，且支持 AI 构图智能矫正、第一人称视角视频直播。同时官宣的还有华为眼镜 App，支持快速配对连接、智慧播报、自动导入、手表协同等功能。续航方面，这款眼镜的综合续航可达 12 小时，支持连续 8 小时语音通话、连续 9 小时音乐播放。京东华为 AI 眼镜 2499 元起直达链接",
+      "url": "https://www.ithome.com/0/943/402.htm",
+      "published": "2026-04-25T01:51:08"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "天马发布三款“天轩”车载显示新品，包含 OLED、Micro LED 技术路线",
+      "summary": "IT之家 4 月 24 日消息，天马微电子 (TianMa) 今日在 2026（第十九届）北京国际汽车展览会上举办了“天轩”车载显示沟通会，并在会上全球首发了 3 款新品。17\" SPD AM-OLED 显示屏这款 OLED 产品搭载天马自研可切换隐私显示 (Switchable Privacy Display) 技术，支持“共享模式”与“隐私模式”自由切换，可对主驾席屏蔽副驾席显示内容，同时在夜间还可消除副驾屏幕产生的车窗倒影。17\" LCI AM-OLED 显示屏该产品则支持 LCI 智能光控算法，结合精细化膜层架构设计，可精准消除屏幕在挡风玻璃上的光影反射，有效解决夜间驾驶倒影眩光问题。12\" Micro-LED IRIS HUD这是全球最亮的同类全彩显示方案，最大亮度＞120K nits，强光下行车信息依然清晰可见，厚度仅有 2mm，无底部黑油遮挡，散热直接贴合 TFT 玻璃。",
+      "url": "https://www.ithome.com/0/943/366.htm",
+      "published": "2026-04-24T15:10:22"
+    }
+  ]
+}
