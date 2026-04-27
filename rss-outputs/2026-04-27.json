@@ -1,0 +1,107 @@
+{
+  "date": "2026-04-27",
+  "generated_at": "2026-04-27T12:03:22.259346+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 3
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 19,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "郭明錤：OpenAI 联手高通 & 联发科开发手机芯片，自研手机项目预计 2028 年量产",
+      "summary": "IT之家 4 月 27 日消息，天风国际分析师郭明錤刚刚发文称，根据其最新产业调查，OpenAI 正与联发科、高通合作开发手机芯片，立讯精密则作为独家系统联合设计和制造合作伙伴，预计该项目将于 2028 年进入量产阶段。郭明錤表示，AI 智能体将从根本上重新定义手机 —— 用户使用手机的目的不再是打开一堆 App，而是通过手机直接执行任务并满足各种需求，这彻底推翻了人们对现有手机的认知。郭明錤还给出了手机界面概念设计图，并与当前以 iPhone 为代表的手机进行了对比。他认为，OpenAI 之所以要自研手机，主要基于三点考量：其一，唯有完全掌控操作系统与硬件，才能提供全方位的 AI 智能体服务；其二，只有手机能够实时获取用户一切的“当下状态”，这是实时 AI 智能体推理服务最重要的输入信息；其三，在可预见的未来，手机仍是数量规模最大的终端设备。这一布局也侧面反映了 AI 原生硬件正在成为各大科技公司竞相角逐的新赛道，此前 OpenAI 已与前苹果设计总监 Jony Ive 合作开发 AI 可穿戴设备，并于 2025 年收购了后者创办的硬件公司 io Products。在技术架构方面，郭",
+      "url": "https://www.ithome.com/0/943/841.htm",
+      "published": "2026-04-27T03:06:59"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "雅达利收购 PS1/2 模拟器开发团队 Implicit Conversions，强化 32 位经典游戏保存与移植",
+      "summary": "IT之家 4 月 27 日消息，雅达利宣布已正式收购 Implicit Conversion 工作室，该工作室专注于移植 32 位时代游戏，特别是初代索尼 PlayStation 平台的模拟工作。IT之家注意到，此次收购使双方现有的合作关系在雅达利旗下永久化，但这并非雅达利与 Implicit Conversion 的首次合作。据 Implicit Conversions 的 Bill Litshauer 透露，该工作室此前已通过 Digital Eclipse 与雅达利在《真人快打：遗产合集》《雷曼》以及今年晚些时候公布的其他作品上展开合作。他将双方的关系形容为找到了失散已久的表亲。Implicit Conversions 表示，这一新关系将把更多复古游戏带到现代主机上。尽管未来可能会为雅达利扩展开发更多游戏，但工作室的核心重点仍然是开发用于 PS1 的 Pancake 模拟器，以及用于 PS2 的 Waffle 模拟器，并最终将注意力转向 PS3 模拟器。Litshauer 表示：“我们认为 Atari 非常合适 —— 他们与我们有着同样的热情，这为我们带来了大量新机会。与 Dig",
+      "url": "https://www.ithome.com/0/943/793.htm",
+      "published": "2026-04-27T01:58:53"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "今年首次将智能眼镜纳入补贴范围，重点企业销售量大涨 42.4%",
+      "summary": "IT之家 4 月 27 日消息，今日，商务部流通发展司负责人谈 2026 年一季度我国批发和零售业发展情况。据国家统计局数据，一季度，我国批发和零售业增加值 3.5 万亿元，同比增长 4.1%，占 GDP 比重为 10.5%。我国批发和零售业发展开局良好，为建设强大国内市场提供有力支撑。从批发业看，一季度，商务部重点联系商品市场成交额同比增长 8.6%，其中生产资料类、工业消费品类市场成交额同比分别增长 16.1%、10.7%。从零售业看，据国家统计局数据，一季度，商品零售额 11.3 万亿元，同比增长 2.2%。限额以上零售业单位中便利店、超市、专业店零售额同比分别增长 8.3%、5.1%、0.5%。绿色消费市场规模持续扩容。据有关行业协会测算，一季度，我国绿色家居市场规模约 5000 亿元；二手车交易额达 3128.82 亿元，同比增长 4.7%。以旧换新政策持续发力。截至目前，消费者购买 6 大类家电产品 2799.9 万台，带动销售 1149.8 亿元；购买数码和智能产品 4206.3 万件，同比增长 32.8%，带动销售 1251.27 亿元，同比增长 37.4%。IT之家注",
+      "url": "https://www.ithome.com/0/943/784.htm",
+      "published": "2026-04-27T01:29:34"
+    }
+  ]
+}
