@@ -1,0 +1,89 @@
+{
+  "date": "2026-04-28",
+  "generated_at": "2026-04-28T12:10:20.764256+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 0
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "VITURE’s Widest Field-of-view XR Glasses are Now Available at Amazon & Best Buy",
+      "summary": "XR glasses maker VITURE announced the launch of VITURE Beast, its third-gen flagship XR glasses that release today, priced at $549. Targeting casual content consumption and productivity, the Beast offers up a 3DOF-tracked virtual screen estimated to be 174 inches when viewed at 4 meters, which connects via USB-C to PCs, phones and portable game [&#8230;]\nThe post VITURE&#8217;s Widest Field-of-view XR Glasses are Now Available at Amazon &#038; Best Buy appeared first on Road to VR.",
+      "url": "https://www.roadtovr.com/vitures-widest-field-of-view-ar-glasses-are-now-available-at-amazon-best-buy/",
+      "published": "2026-04-27T13:36:57"
+    }
+  ]
+}
