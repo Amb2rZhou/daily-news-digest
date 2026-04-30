@@ -1,0 +1,98 @@
+{
+  "date": "2026-04-30",
+  "generated_at": "2026-04-30T12:09:06.758401+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "国家发改委：2026 年第二批 915 亿元超长期特别国债支持设备更新资金已经下达",
+      "summary": "IT之家 4 月 30 日消息，国家发展改革委今日发布公告称，近日，2026 年第二批 915 亿元“两新”设备更新项目清单和资金安排已经下达，支持工业、能源电力、电子信息、交通运输、物流、教育、文旅、医疗、设施农业、粮油加工、住宅老旧电梯、安全生产、消防救援、检验检测、节能降碳环保、回收循环利用等 16 个领域超过 6700 个项目，带动总投资超过 3800 亿元；同时，继续支持老旧营运货车、新能源城市公交车、老旧农机报废更新。加上此前已下达的 936 亿元，今年已累计安排“两新”设备更新资金 1851 亿元，占全年 2000 亿元的 92%。IT之家注：“两新”是指推动新一轮大规模设备更新和消费品以旧换新，其中的消费品以旧换新补贴政策就包含我们常说的“国补”。在设备更新政策带动下，一季度设备工器具购置投资同比增长 13.9%，增速比 1—2 月份加快 2.4 个百分点，拉动全部投资增长 2.3 个百分点。下一步，国家发展改革委将会同有关部门，持续做好跟踪督促，强化资金全链条闭环监管，加快项目建设和资金支付使用，推动形成更多实物工作量，更好发挥“两新”资金使用效益。2026 年优化实",
+      "url": "https://www.ithome.com/0/945/299.htm",
+      "published": "2026-04-30T02:41:12"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "三星 Galaxy Glasses 智能眼镜曝光：骁龙 AR1 芯片、1200 万像素相机、重约 50 克",
+      "summary": "IT之家 4 月 30 日消息，科技媒体 SamMobile 昨日（4 月 29 日）发布博文，在 11.1.23.4 版本 Nearby Device Scanning 应用更新日志中，发现三星智能眼镜的踪迹，该产品上市后将叫“Galaxy Glasses”。根据更新日志内容，不仅确认三星智能眼镜名为 Galaxy Glasses，而确认该智能眼镜可以像 Galaxy Buds、Galaxy Watch 一样，支持快速配对及查询剩余电量。IT之家此前报道，这款眼镜外观方面，采用类似太阳镜设计，并可能配备光致变色镜片。硬件配置上，眼镜一侧设有 1200 万像素前置摄像头，另一侧配有 LED 指示灯，同时内置麦克风、扬声器及触控感应区。硬件规格上，Galaxy Glasses 大概率不会配备内置显示屏，而是专注于音频与 AI 体验。这款眼镜搭载高通骁龙 AR1 处理器，配备 1200 万像素索尼 IMX681 传感器，具备 Wi-Fi、蓝牙 5.3 等无线技术，重量大约为 50 克。具备定向扬声器、骨传导技术，自带 155mAh 电池。系统方面，该眼镜预计搭载 Android XR 操作",
+      "url": "https://www.ithome.com/0/945/274.htm",
+      "published": "2026-04-30T01:35:28"
+    }
+  ]
+}
