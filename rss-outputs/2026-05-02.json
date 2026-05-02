@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-02",
+  "generated_at": "2026-05-02T11:55:44.846182+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "闪极随行 Mini Flow 移动电源发售：1C+1A，10000mAh 售 188 元",
+      "summary": "IT之家 5 月 1 日消息，闪极旗下随行 Mini Flow 自带线移动电源现已在京东开售，其采用 1C+ 1A 设计，内置 10000mAh 电芯，定价为 188 元，部分地区国补后低至 165.44 元。这款移动电源尺寸为 80x28.5x60mm，重量 200g，采用多彩半透明上盖及冰感下壳，顶部带有“星轨电量指示灯”，其一侧提供 1 个 USB-C 20W 接口、一侧提供 1 个 USB-A 20W 接口，双口共用时输出功率至高 15W。IT之家附产品参数：京东闪极随行 Mini Flow 移动电源 188 元直达链接",
+      "url": "https://www.ithome.com/0/945/904.htm",
+      "published": "2026-05-01T14:03:06"
+    }
+  ]
+}
