@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-08",
+  "generated_at": "2026-05-08T11:56:52.135657+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 0
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 19,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "TCL Shows Off New High PPI OLED and Micro-LED Displays for XR",
+      "summary": "TCL has revealed its latest OLED and micro-LED displays aimed at AR and VR headsets. The company claims to have achieved new benchmarks for pixel density. Shown off at the SID Display Week event, TCL&#8217;s new 2.24-inch display is claimed to be the &#8220;highest pixel density real RGB G-OLED display,&#8221; at 1,700 PPI (pixels per-inch), [&#8230;]\nThe post TCL Shows Off New High PPI OLED and Micro-LED Displays for XR appeared first on Road to VR.",
+      "url": "https://www.roadtovr.com/tcl-oled-micro-led-display-xr-sid-display-week-2026/",
+      "published": "2026-05-07T15:39:23"
+    }
+  ]
+}
