@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-09",
+  "generated_at": "2026-05-09T12:00:59.278636+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "追觅 Aurora Lux 系列手机展示：29 种奢华设计",
+      "summary": "IT之家 5 月 9 日消息，科技媒体 The Verge 于 5 月 7 日发布博文，报道称追觅于 4 月 27 日至 30 日，在旧金山举办为期 4 天的 Dreame Next 2026 发布活动，展示手机、概念电动车等，并邀请苹果联合创始人史蒂夫 · 沃兹尼亚克（Steve Wozniak）等名流到场。Dreame Aurora Lux 手机宣传图IT之家援引博文介绍，在本次展示活动中，现场展示了模块化手机、镶金镶宝石手机、智能戒指、智能眼镜、手表、带机械臂冰箱、洗衣机器人、带机械臂电视，以及概念电动车。在手机部分，最受关注的是 Aurora Nex LS1，支持模块化扩展，可连接 115mm 等效长焦镜头、运动相机、风扇、卫星通信模块和“AI 智能体模块”。而另一款 Aurora Nex 手机号称提供 29 种不同奢华设计，不同版本有各自命名，比如 Axiom Shield、Luxe Loop Sanctuary 和 Golden Age。有的像给机身裹上蛇纹外衣，有的把大圆形相机模组做成镶宝石的装饰环，还有的直接把镜头区域改成金色模拟时钟。",
+      "url": "https://www.ithome.com/0/948/019.htm",
+      "published": "2026-05-09T00:45:42"
+    }
+  ]
+}
