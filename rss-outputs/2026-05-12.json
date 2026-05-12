@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-12",
+  "generated_at": "2026-05-12T12:11:27.217895+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "苹果连发 3 项 AI 研究，推进空间计算与 Vision Pro 头显方向",
+      "summary": "IT之家 5 月 12 日消息，科技媒体 Appleinsider 昨日（5 月 11 日）发布博文，报道称基于最新公开的 3 项研究，苹果仍在积极推进空间计算和 Vision Pro 头显。IT之家 4 月援引 MacRumors 媒体报道，苹果公司内部已搁置研发新款 Vision Pro，团队重心转向 Siri 和 AI 智能眼镜。但从最新公示的研究论文来看，苹果公司并未放弃 Vision Pro 头显项目，本轮公开了 3 项研究，分别涉及多模态大模型空间推理评测、美式手语视频标注，以及 3D 头部重建。其中最直接的一项，是苹果在机器学习博客发布的《From Where Things Are to What They’re For：Benchmarking Spatial-Functional Intelligence for Multimodal LLMs》。这篇论文提出 SFI-Bench，用来测试多模态大模型是否既看懂空间布局，也理解物体“能做什么”。原文提到，这套视频基准包含 134 段室内视频扫描，并整理出 1555 道专家标注问题。SFI-Bench 不只问模型“这是什",
+      "url": "https://www.ithome.com/0/949/069.htm",
+      "published": "2026-05-12T00:54:47"
+    }
+  ]
+}
