@@ -1,0 +1,116 @@
+{
+  "date": "2026-05-21",
+  "generated_at": "2026-05-21T12:49:57.661790+08:00",
+  "item_count": 4,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 2
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "苹果明日为 Vision Pro 头显放送《皇家马德里：伟大的重量》沉浸式视频",
+      "summary": "IT之家 5 月 21 日消息，苹果公司昨日（5 月 20 日）预告，将于 5 月 22 日面向 Vision Pro 头显，放送《皇家马德里：伟大的重量》（Real Madrid：The Weight of Greatness）沉浸式视频。IT之家注：沉浸式视频是苹果专为 VR／MR 设备设计的内容形式，通常采用 180 度或 360 度立体拍摄，并配合高分辨率与高帧率呈现。在 Vision Pro 上，这类内容是展示设备空间体验的关键载体。苹果公司为迎接世界杯（6 月 11 日至 7 月 19 日），预告推出《皇家马德里：伟大的重量》沉浸式视频，将全方位幕后直击皇家马德里（Real Madrid）俱乐部内部，以前所未有的方式深入体验皇家马德里欧冠比赛日。该沉浸式视频将带领观众，从第一人称视角感受航空公司通道、球场边线，身临其境地感受伯纳乌球场数万名会员的澎湃咆哮。",
+      "url": "https://www.ithome.com/0/953/127.htm",
+      "published": "2026-05-21T01:32:07"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Gracia&#x27;s Moving Volumetric Captures Are Now Streamable",
+      "summary": "Gracia's moving fully volumetric captures can now be streamed, including to mixed reality on Quest 3, with no app or content download required — and an Apple Vision Pro app is coming soon.",
+      "url": "https://www.uploadvr.com/gracia-moving-volumetric-captures-now-streamable/",
+      "published": "2026-05-19T23:11:11"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "First AR Glasses Running Android XR Confirmed for 2026 Launch",
+      "summary": "XREAL today confirmed it&#8217;s launching Project Aura sometime this year, making them the first pair of AR glasses running Google&#8217;s Android XR operating system. Xreal and Google showcased Project Aura at Google I/O today, further confirming the wired AR glasses are set to launch globally in 2026. On stage, Project Aura was shown off running [&#8230;]\nThe post First AR Glasses Running Android XR Confirmed for 2026 Launch appeared first on Road to VR.",
+      "url": "https://www.roadtovr.com/first-android-xr-glasses-2026-launch/",
+      "published": "2026-05-19T17:59:44"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Google Announces New Android XR Developer Program with AR Glasses Dev Kits",
+      "summary": "Google today announced at its I/O developer conference that it&#8217;s launching a new Android XR developer program, which will include XREAL&#8217;s upcoming AR glasses. Called the &#8216;Android XR Developer Catalyst Program&#8217;, Google and AR hardware partner Xreal say they&#8217;ll be seeding program applicants with Project Aura dev kits, as well as tools and additional resources [&#8230;]\nThe post Google Announces New Android XR Developer Program with AR Glasses Dev Kits appeared first o",
+      "url": "https://www.roadtovr.com/google-android-xr-developer-program-free-ar-glasses/",
+      "published": "2026-05-19T17:59:07"
+    }
+  ]
+}
