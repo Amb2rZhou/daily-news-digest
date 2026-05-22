@@ -1,0 +1,98 @@
+{
+  "date": "2026-05-22",
+  "generated_at": "2026-05-22T12:40:24.067001+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 0
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Android XR Got Auto-Spatialization, Window Wall Pinning &amp; Hand Occlusion",
+      "summary": "Android XR's major update brought an AI feature to make any windowed content 3D, hand occlusion in the home space, and the ability to pin windows to your walls to Samsung Galaxy XR.",
+      "url": "https://www.uploadvr.com/google-android-xr-2026-update-samsung-galaxy-xr/",
+      "published": "2026-05-21T22:51:35"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "‘Avatar: Fire and Ash’ and ‘Super Mario Galaxy Movie’ Head to Vision Pro in 3D",
+      "summary": "Vision Pro is steadily becoming the premier destination for 3D theatrical releases to reach home audiences. The latest 3D movies headed to Vision Pro include The Super Mario Galaxy Movie (2026) and Avatar: Fire and Ash (2025). The News Apple has confirmed two new 3D movies headed to Vision Pro. The Super Mario Galaxy Movie (2026) is available to buy [&#8230;]\nThe post &#8216;Avatar: Fire and Ash&#8217; and &#8216;Super Mario Galaxy Movie&#8217; Head to Vision Pro in 3D appeared first on Road to ",
+      "url": "https://www.roadtovr.com/avatar-fire-ash-super-mario-galaxy-movie-3d-release-vision-pro/",
+      "published": "2026-05-21T15:41:37"
+    }
+  ]
+}
