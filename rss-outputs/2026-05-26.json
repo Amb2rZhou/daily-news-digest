@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-26",
+  "generated_at": "2026-05-26T12:39:31.723950+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "思特威、紫光展锐联手布局 MicroLED 高速光互连，打造国产化 AI 算力集群短距高速互连方案",
+      "summary": "IT之家 5 月 26 日消息，思特威与紫光展锐今日宣布达成战略合作，双方将联合布局 MicroLED 高速光互连领域，围绕光互连芯片设计与系统解决方案落地展开深度协同，为 AI 算力集群短距高速互连场景，提供高带宽、低功耗、高集成、高可靠的国产化核心解决方案。作为国内的 CMOS 图像传感器（CIS）企业，思特威构建了覆盖安防、车载、智能手机、机器视觉的完整产品矩阵。依托高速成像、异质集成工艺、微纳光学设计、高速电路设计等核心技术，思特威在 MicroLED 光互连领域具备技术同源优势，并设立专属事业群推进收发一体化系统的研发，涵盖 TX 驱动阵列、PD 探测阵列及 RX 信号处理阵列三大模块。紫光展锐是国内全域芯片设计企业，聚焦“低功耗底座 + 自然交互引擎 + AI 内核”核心战略，产品应用于智能终端、汽车电子、工业控制等场景，具备完整的芯片设计、规模化量产与产业生态整合能力。此次合作，紫光展锐将输出 AI 计算、高速 SerDes 接口、系统级功耗优化等核心技术，与思特威光电技术形成深度互补，打通“光互连芯片 - 算力芯片 - 应用场景”的全链路技术壁垒。随着 AI 算力与数据",
+      "url": "https://www.ithome.com/0/955/169.htm",
+      "published": "2026-05-26T02:23:37"
+    }
+  ]
+}
