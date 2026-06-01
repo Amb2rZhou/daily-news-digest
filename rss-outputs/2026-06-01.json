@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T13:21:53.323621+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "华为 AI 眼镜“钛丝半框光学镜方形款”今日开售：钛银灰配色，2499 元",
+      "summary": "IT之家 6 月 1 日消息，华为 AI 眼镜“钛丝半框光学镜方形款”将于今日 10:08 开售，采用钛银灰配色，价格为 2499 元。京东华为 AI 眼镜“钛丝半框光学镜方形款”2499 元直达链接据IT之家此前报道，华为 AI 眼镜采用了全新的轻量化新型材料和精密堆叠技术，镜腿薄至 6.25 毫米，镜架轻至 35.5 克，接近一副普通眼镜的重量。该眼镜内置华为自研 AI 眼镜芯片，号称秒级响应、即问即答，支持语音唤醒、AI 快捷键一键唤醒。功能上，其支持小艺看世界、支付宝看一下支付等。拍摄方面，这款眼镜配备 1/2.8'' 大底传感器，具备 AI RAW 域多帧融合算法，且支持 AI 构图智能矫正、第一人称视角视频直播。同时官宣的还有华为眼镜 App，支持快速配对连接、智慧播报、自动导入、手表协同等功能。续航方面，这款眼镜的综合续航可达 12 小时，支持连续 8 小时语音通话、连续 9 小时音乐播放。京东 618 无门槛红包 面额至高 26618 元，每天抽 3 次：点此抽红包淘宝 618 无门槛红包 面额至高 26888 元，每天抽 1 次：点此抽红包",
+      "url": "https://www.ithome.com/0/957/965.htm",
+      "published": "2026-06-01T01:55:21"
+    }
+  ]
+}
