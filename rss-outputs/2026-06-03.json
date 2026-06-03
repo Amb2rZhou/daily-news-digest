@@ -1,0 +1,116 @@
+{
+  "date": "2026-06-03",
+  "generated_at": "2026-06-03T13:21:24.704590+08:00",
+  "item_count": 4,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 1
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 2
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "眼镜要摘下检查、智能眼镜带入考场就算作弊，2026 高考多地安检新变化",
+      "summary": "IT之家 6 月 3 日消息，广东省教育考试院 6 月 2 日发布 2026 年普通高考温馨提醒，其中提及：考生进入考场安检时，佩戴（携带）的眼镜须在视频监控下自行摘下，放在台面上，由监考员实施专项检查。截至目前，已有多个省份的教育考试机构发出通知，进考场前将对考生佩戴（携带）的眼镜进行查验。上海：上海市教育考试院发布考生注意事项，考生佩戴框架眼镜的，应配合监考员接受查验。福建：福建省普通高考考务工作培训视频会议透露，今年将强化入场安检，确保作弊设备带不进、用不了、传不出。今年的考务培训强调对新型智能眼镜的防范，考务人员会重点关注考生佩戴眼镜的大小、形状等。内蒙古：内蒙古自治区教育考试院提醒考生：如生活学习中佩戴智能眼镜，考试前需准备好适合的普通光学眼镜。高考期间，考点不受理戴智能眼镜代替光学眼镜参加考试的申请，由此引发的影响考试作答等结果，责任将由考生本人自负。河北：河北省教育考试院发布提示，平时生活学习佩戴智能眼镜的考生，需提前备好普通光学眼镜。高考不受理智能眼镜代替普通光学眼镜参加考试的申请。教育部 6 月 2 日发出高考预警信息，提醒考生诚信参考，无论何种理由、无论是否使用，携",
+      "url": "https://www.ithome.com/0/959/256.htm",
+      "published": "2026-06-03T05:20:59"
+    },
+    {
+      "feed_name": "钛媒体",
+      "feed_category": "综合科技",
+      "feed_weight": 2,
+      "title": "影目科技：两副眼镜，一场赌局",
+      "summary": "谁才是真正的用户？",
+      "url": "https://www.tmtpost.com/8011963.html",
+      "published": "2026-06-03T03:23:00"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Valve Released A (Flatscreen) 4K Steam Link visionOS App",
+      "summary": "Valve released a native visionOS client for the flatscreen version of Steam Link, with 4K 120FPS support, replacing the need to use the iPad app on Apple Vision Pro.",
+      "url": "https://www.uploadvr.com/valve-released-visionos-steam-link-app-flatscreen/",
+      "published": "2026-06-02T22:44:51"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "KRVR Supports Apple Vision Pro&#x27;s Foveated Streaming For SteamVR Games",
+      "summary": "KRVR, a $15 visionOS app, lets you play any SteamVR game from your PC on Apple Vision Pro with foveated streaming.",
+      "url": "https://www.uploadvr.com/krvr-supports-apple-vision-pros-foveated-streaming-for-steamvr-games/",
+      "published": "2026-06-02T22:26:52"
+    }
+  ]
+}
