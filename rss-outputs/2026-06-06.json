@@ -1,0 +1,98 @@
+{
+  "date": "2026-06-06",
+  "generated_at": "2026-06-06T12:31:57.719317+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 19,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "前《极限竞速：地平线》创意总监出品，开放世界竞速游戏《Clutch》首支预告公开",
+      "summary": "IT之家 6 月 6 日消息，游戏媒体 VGC 今天（6 月 6 日）发布博文，报道称在 2026 夏日游戏节上，Maverick Games 公开赛车新作游戏《Clutch》首支完整预告。 IT之家注：Maverick Games 由多名前《极限竞速：地平线》游戏开发者创立，核心成员包括创意总监迈克 · 布朗（Mike Brown）。 游戏剧情方面，《Clutch》把舞台放在法国里维埃拉，整体结构采用“白天正规赛事＋夜晚地下街头赛车”的双线设计。玩家将跟随 Theo 与 Cass Martial 的故事推进剧情，白天参与知名赛事 Riviera 1000，夜晚则卷入名为 Midnight Collective 的地下赛车圈。角色设定方面，《Clutch》不只想做一款单纯拼速度的赛车游戏。Theo 和 Cass 在英国经历坎坷成长后，被前 R1K 明星车手 Ludo Martial 收养，并最终拿到 R1K 参赛席位。官方提到，游戏内可探索“数千英里”道路与地形，覆盖海岸公路、城市街道等多样区域，此外支持叠加追逐、逃脱、车辆技术和深度改装等系统。IT之家附上相关游戏图片如下：技术表现是",
+      "url": "https://www.ithome.com/0/960/767.htm",
+      "published": "2026-06-05T23:44:57"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "腾讯代理发行《穿越火线：潜伏》实机首曝，第三人称射击单机游戏",
+      "summary": "IT之家 6 月 6 日消息，今日，由 Smilegate 授权，That's No Moon 工作室打造，腾讯代理发行的单机新作《穿越火线：潜伏》已于夏日游戏节（Summer Game Fest）上正式全球首曝。无法彼此信任的同盟，难以孤身抗衡的绝境。对抗未知感染据官方介绍，这是以叙事驱动的第三人称战术潜行射击单机游戏，实机演示视频今日与大家见面。游戏基于 Unreal Engine5 开发，视频内容由游戏内实机操作和过场动画录制构成。IT之家注意到，故事设定围绕两名敌对阵营的特工莱拉（Layla）与克罗斯（Cross）展开，二人深陷致命生存威胁，被迫缔结临时同盟，共同面对重重生死考验。《穿越火线：潜伏》计划登陆 WeGame、Steam、Epic 游戏商城，PlayStation 及 Xbox Series X|S 平台，目前已开启预约，发售日期暂未公布。",
+      "url": "https://www.ithome.com/0/960/754.htm",
+      "published": "2026-06-05T22:20:56"
+    }
+  ]
+}
