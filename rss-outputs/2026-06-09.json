@@ -1,0 +1,98 @@
+{
+  "date": "2026-06-09",
+  "generated_at": "2026-06-09T12:41:21.109831+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 19,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "苹果 visionOS 27 为 Vision Pro 带来冰岛高地沉浸式场景，可欣赏极光美景",
+      "summary": "IT之家 6 月 9 日消息，尽管在今日的苹果全球开发者大会（WWDC）主题演讲中亮相时间不长，但 visionOS 27 还是为苹果 Vision Pro 头显带来了多项新功能，其中就包括一款取材自冰岛高地的全新沉浸式场景（Environment）。在本次 WWDC 主题演讲中，苹果数次提及 visionOS 27 系统，还宣布用户可将空间照片转化为空间场景。不过本次并未现场介绍的一项新内容，是即将登陆苹果 Vision Pro 的全新沉浸式场景 —— 索斯默克（Thórsmörk）。苹果介绍，沉浸式场景功能“能将你所处的现实环境切换至别样景致，比如优胜美地、胡德山或是月球。你在使用邮件、Safari 浏览器等各类应用时，都可以启用该功能。”IT之家注意到，去年推出的 visionOS 26 系统，就联合美国国家航空航天局（NASA）上线了木星主题场景，能带领用户来到木星内侧卫星之一的木卫五表面。升级至 visionOS 27 后，Vision Pro 用户便可开启索斯默克场景，置身冰岛高地之中，还能欣赏到极光美景。这款全新的索斯默克场景以群山环抱的湖泊为主体。用户播放视频时（开启深",
+      "url": "https://www.ithome.com/0/961/813.htm",
+      "published": "2026-06-09T02:56:36"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Apple Enables Third-party Motion Controllers & Tracked Accessories in visionOS 27",
+      "summary": "With the introduction of visionOS 27, Apple is opening the door for third parties to make their own high performance tracked controllers and accessories for Vision Pro. The News VisionOS 27, available to developers starting today, adds new support for actively-tracked accessories like motion controllers, which Apple is calling &#8216;spatial accessories&#8217;. Prior updates to visionOS [&#8230;]\nThe post Apple Enables Third-party Motion Controllers &amp; Tracked Accessories in visionOS 27 appea",
+      "url": "https://roadtovr.com/apple-enables-third-party-motion-controllers-tracked-accessories-in-visionos-27/",
+      "published": "2026-06-09T02:19:58"
+    }
+  ]
+}
