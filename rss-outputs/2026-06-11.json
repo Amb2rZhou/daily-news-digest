@@ -1,0 +1,125 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "2026-06-11T13:04:01.725484+08:00",
+  "item_count": 5,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 19,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 2
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "三星给献血者佩戴 Galaxy XR 头显：沉浸式冥想，缓解紧张情绪",
+      "summary": "IT之家 6 月 11 日消息，三星电子今日宣布与全球医疗公司雅培携手，利用 Galaxy XR 头显将沉浸式扩展现实（XR）体验带入献血现场，使献血过程更加舒适和富有吸引力。6 月 2 日，三星和雅培与韩国红十字会合作，在水原三星数字城举办了韩国首个 XR 驱动的献血活动。在纪念世界献血者日的活动中，三星员工在献血时体验了沉浸式冥想内容。IT之家从三星公告获悉，佩戴 Galaxy XR 后，献血者会进入一个宁静、禅意花园风格的环境。他们仅通过眼神注视进行互动 —— 没有控制器，没有手势 —— 仅凭观察就能种下虚拟花种。三到五分钟内，花朵会在他们周围盛开，背景音乐由芝加哥交响乐团合作创作。三星电子全球移动 B2B 团队副总裁 James Pak 表示：“随着现实世界与数字世界的界限不断模糊，献血不再是压力山大的经历。通过这一举措，我们希望展示 Galaxy XR 如何超越娱乐和生产力，创造持久的社会价值。”继韩国 XR 驱动献血活动后，三星和雅培正准备通过在美国和马来西亚的大型全球活动中推广该项目。这些努力旨在将 Galaxy XR 捐献体验带给更多捐献者、医疗专业人员和血库利益相关者",
+      "url": "https://www.ithome.com/0/962/778.htm",
+      "published": "2026-06-11T02:14:38"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Arm 宣布游戏《Neural Dawn》：秀移动端光照与 GPU 神经图形能力",
+      "summary": "IT之家 6 月 11 日消息，Arm 美国当地时间本月 10 日宣布，由其与 Sumo Digital 工作室合作开发的移动端游戏《Neural Dawn》预计将于 2026 年晚些时候在搭载新一代 Mali GPU 的 Android 设备上独家发布。《Neural Dawn》并不是传统的商业游戏，更多意义上是 Arm 的“技术秀场”：其基于 Unreal &nbsp;5.6.1 引擎，是首款使用 MegaLights 技术的移动游戏，拥有复杂的直接光照和光线追踪阴影，还降低了开发者的工作负担。在移动设备上实现这种级别的光照效果历来都会压榨 GPU 性能，造成严重发热。而 Arm 的下一代 Mali GPU IP 支持先进的神经图形技术，可通过超分辨率和帧生成降低实际计算负载，从而在移动端实现“桌面级”沉浸式视觉效果并保持电池续航。IT之家了解到，本作游戏时长约 2 小时，包含四个关卡，讲述了一位身处洞穴网络中的研究科学家在光线的指引下，揭开一个正在崩塌的文明背后的真相、首席科学家的秘密计划以及他自身与这一切的联系。Sumo Digital 的 17 人团队用时 18 个月完成了这",
+      "url": "https://www.ithome.com/0/962/743.htm",
+      "published": "2026-06-11T01:52:28"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Google Gemini Smart Glasses Launching In Fall To Take On Meta",
+      "summary": "Google-powered smart glasses from Warby Parker and Gentle Monster are launching this fall to take on Ray-Ban Meta.",
+      "url": "https://www.uploadvr.com/gemini-smart-glasses-are-launching-in-fall-to-take-on-ray-ban-meta/",
+      "published": "2026-06-11T00:38:01"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Amplium Makes Room For A Wider Range Of Apple Immersive Video On Vision Pro",
+      "summary": "Amplium is a dedicated destination for immersive video on Apple Vision Pro, offering a curated mix ranging from short immersive documentaries to music experiences.",
+      "url": "https://www.uploadvr.com/amplium-makes-room-for-a-wider-range-of-apple-immersive-video-on-vision-pro/",
+      "published": "2026-06-10T16:41:31"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Siri on Vision Pro is Getting Eye-tracked Activation and Visual Awareness Alongside New AI Features",
+      "summary": "Apple spent a major portion of its WWDC 2026 keynote this week talking about new AI features that are part of an enhanced version of Siri. While most of the features will be accessible across devices, Siri on visionOS 27 has some unique touches that take advantage of Vision Pro. The News An overhauled version [&#8230;]\nThe post Siri on Vision Pro is Getting Eye-tracked Activation and Visual Awareness Alongside New AI Features appeared first on Road to VR.",
+      "url": "https://roadtovr.com/siri-on-vision-pro-is-getting-eye-tracked-activation-and-visual-awareness-alongside-new-ai-features/",
+      "published": "2026-06-09T17:50:47"
+    }
+  ]
+}
