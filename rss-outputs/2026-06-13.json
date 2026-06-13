@@ -1,0 +1,107 @@
+{
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T12:55:48.850976+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "苹果 Vision Pro 头显成最大功臣：助力迪士尼改造乐园项目，献礼美国 250 周年",
+      "summary": "IT之家 6 月 13 日消息，科技媒体 Appleinsider 昨日（6 月 12 日）发布博文，报道称迪士尼为迎接美国建国 250 周年，借助苹果 Vision Pro 头显，改造 EPCOT 经典飞行项目 Soarin，并将其更名为 Soarin' Across America，带领游客飞跃美国标志性景观。IT之家注：EPCOT 位于佛罗里达 Walt Disney World，于 1982 年开放，设有众多未来科技主题项目与文化展馆，是迪士尼四大主题乐园之一。迪士尼 Disney Unscripted 昨日放出幕后花絮视频，展示了团队如何在项目工期紧张的情况下，通过苹果 Vision Pro 头显改造该项目。IT之家附上相关视频如下： 迪士尼高级音效编辑 Megan Duncan 透露，音频团队借助 Vision Pro 头显搭建虚拟数字工作空间，替代实体脚手架与额外设备。整套工作流仅需 Vision Pro、连接飞行模拟座椅的自定义桌面及少量音频混音设备。设计师在虚拟环境中完成音乐与音效混音，大幅提升协作效率。",
+      "url": "https://www.ithome.com/0/963/750.htm",
+      "published": "2026-06-13T00:10:46"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "支持离线运行，苹果 iPhone 17 Pro 等升级 iOS 27 后支持 AI 高级听写功能",
+      "summary": "IT之家 6 月 13 日消息，科技媒体 9to5Mac 昨日（6 月 12 日）发布博文，在 iOS 27 Beta 1 更新中，用户可以手动启用“高级听写预览”功能，支持离线运行。功能方面，苹果公司表示升级 AI 听写技术，显著提升准确率，不仅能更精确地转写语音内容，还能实时处理大写字母与标点符号。操作方面，该功能默认处于禁用状态，用户需要进入到设置应用中，依次选择“通用 → 键盘”，下滑至“听写”区域，开启“高级听写预览”开关。启用后，新听写功能将在系统全局生效，覆盖所有使用系统键盘的语音转文字场景，并提升 Siri AI 的使用体验。由于完全依赖本地模型运算，用户在无网络连接的环境下也能获得一致的转写质量。适配机型方面，该功能仅适用于 iPhone 17 Pro、iPhone Air、第二代 Vision Pro（M5 芯片）、搭载 M4 芯片及以上的 iPad（需 12GB 内存）、搭载 M3 芯片及以上的 Mac（需 12GB 内存）。IT之家附上相关适配机型如下：",
+      "url": "https://www.ithome.com/0/963/743.htm",
+      "published": "2026-06-12T23:17:53"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Developers Are Building Impressive Apps For Meta Ray-Ban Display&#x27;s HUD &amp; Neural Band",
+      "summary": "Meta rolled out the ability to develop visual apps for Meta Ray-Ban Display, controlled by Meta Neural Band, and developers are already building interesting things.",
+      "url": "https://www.uploadvr.com/meta-ray-ban-display-amazing-hud-apps/",
+      "published": "2026-06-11T23:21:27"
+    }
+  ]
+}
