@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-14",
+  "generated_at": "2026-06-14T13:12:52.009893+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Steam 喜加一：原价 37 元益智解谜游戏《Eets》免费领",
+      "summary": "IT之家 6 月 14 日消息，由知名生存游戏《Don't Starve》的开发商 Klei Entertainment 打造的益智解谜游戏《Eets》目前正在 Steam 平台开启限时免费领取“喜加一”活动，玩家可以在北京时间 6 月 16 日凌晨 1 点前领取这款价值 37 元的游戏，IT之家附 Steam 商品页（https://store.steampowered.com/app/6100/Eets/）。《Eets》最早于 2006 年推出，是 Klei Entertainment 的出道作品。这次免费赠送活动，也是官方为了纪念工作室成立 20 周年而特别举办。游戏玩法与传统平台动作游戏不同，玩家并不能直接通过手柄或键盘控制主角“小怪兽”Eets 的行动，而是需要在关卡场景中摆放各种机关与道具，通过制造连锁反应来影响环境，整体玩法有些类似“间接控制型”物理解谜游戏，更强调机关组合与环境互动。虽然《Eets》已经是一款近 20 年前的老游戏，但也能看出 Klei Entertainment 早期在创意玩法与美术风格上的设计思路，对喜欢独立解谜游戏的玩家来说，算是一部颇具纪念意义的",
+      "url": "https://www.ithome.com/0/964/012.htm",
+      "published": "2026-06-14T00:56:21"
+    }
+  ]
+}
