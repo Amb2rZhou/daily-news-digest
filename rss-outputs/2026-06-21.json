@@ -1,0 +1,107 @@
+{
+  "date": "2026-06-21",
+  "generated_at": "2026-06-21T13:22:35.957538+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "字节跳动 Pico“Project Swan”头显设计曝光：背面头带类似苹果 Vision Pro、正面酷似三星 Galaxy XR",
+      "summary": "IT之家 6 月 21 日消息，据外媒 UploadVR 报道，字节跳动旗下 Pico 下一代头显“Project Swan”的演示视频已意外从公开 SDK 中曝光。从演示视频来看，这款头显后部头带几乎和 Vision Pro 的单圈编织头带一模一样，而前部遮光垫以及额头缓冲垫部分则明显类似三星 Galaxy XR。▲ Pico 新头显的头带▲ 苹果 Vision Pro 的单圈编织头带▲ Pico 新头显的前部设计▲ 三星 Galaxy XR 的正面设计视频中还展示了头显随附的外接模块，相应模块设计风格类似苹果 Vision Pro 的电池单元，不过目前暂不知悉其用途，既有可能是电池组，也可能包含了计算单元。视频还展示了这款头显配备带有追踪功能的控制器，外观与 Pico 4 Ultra 的控制器类似，并支持 Quest 绘制边界区域，不过目前还不清楚这些控制器是否会随包装附送。此外，官方还在视频中详细介绍了 Pico OS 6 中大量类似 visionOS 的功能，以及类似 RealityKit 的 Pico Spatial Engine。此前消息显示，这款 Pico“Project",
+      "url": "https://www.ithome.com/0/966/627.htm",
+      "published": "2026-06-21T03:23:32"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "高通 CEO 安蒙：智能眼镜市场有望比肩手机",
+      "summary": "IT之家 6 月 20 日消息，当地时间 19 日，据美国 CNBC 报道，高通 CEO 安蒙认为，AI 智能体将改变人们使用应用和电子设备的方式。高通的芯片广泛用于各类消费电子设备，安蒙设想的未来入口之一，是内置摄像头和显示屏的智能眼镜。比如，用户走在路上时突然想起需要预订餐厅，不必再拿出手机搜索推荐地点，只需告诉数字助理自己的需求。数字助理随后调用餐厅预订、支付和电子邮件等多个应用，完成预订并发送确认信息。安蒙认为，AI 智能体可以协调不同应用完成整个流程。应用本身不会消失但会发生变化，智能体将成为新的应用。多年来，智能手机不断进化，不仅出现折叠屏形态，摄像头性能也越来越强。不过，苹果 Siri、三星 Bixby 等数字助理始终没有完全兑现最初的设想。随着 AI 模型持续进步，数字助理的能力与日俱增。安蒙表示，未来的手机和新型设备都会围绕 AI 智能体重新设计，“手机将围绕智能体打造，各类新设备也会围绕智能体打造。”AI 智能体还可能推动新一轮硬件创新。安蒙表示，高通目前正在参与 40 多种 AI 设备的设计，其中涵盖了智能首饰、带摄像头的耳机、智能胸针和手表。“基本原则是，设备要",
+      "url": "https://www.ithome.com/0/966/548.htm",
+      "published": "2026-06-20T12:11:52"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "The Longest Day Explores New Paths for Immersive Sports Stories",
+      "summary": "The Longest Day is now available free in the Amplium and Theater apps for Apple Vision Pro. The 7-minute documentary follows triathlete Jules Wagner as he trains for an Ironman.",
+      "url": "https://www.uploadvr.com/the-longest-day-explores-new-paths-for-immersive-sports-stories/",
+      "published": "2026-06-19T21:06:08"
+    }
+  ]
+}
