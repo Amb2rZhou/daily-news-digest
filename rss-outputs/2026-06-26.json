@@ -1,0 +1,125 @@
+{
+  "date": "2026-06-26",
+  "generated_at": "2026-06-26T12:46:45.753063+08:00",
+  "item_count": 5,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 20,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 3
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "苹果回应 Mac / iPad 等 14 款产品涨价：消费电子行业正面临前所未有的挑战",
+      "summary": "IT之家 6 月 26 日消息，苹果公司回应昨日（6 月 25 日）上调 14 款产品价格，指出涨价 AI 数据中心扩张推高内存与存储芯片需求，导致 RAM 和 SSD 成本快速上涨。IT之家昨日报道，苹果公司上调 Mac、iPad、Vision Pro、HomePod 等 14 款产品，本轮调价暂未覆盖 iPhone、Apple Watch 和 AirPods 产品线。在通过科技媒体 MacRumors 发布的声明中，苹果公司表示本轮涨价主要受内存 RAM 和存储 SSD 元件影响：消费电子行业正面临前所未有的挑战，人工智能数据中心的快速扩张导致内存和存储需求激增。我们从未见过如此大幅度、如此迅速的元器件价格上涨。我们此前一直内部消化元件成本上涨压力，尽力避免冲击波及我们的客户。包括今天 iPad 和 Mac 等产品的涨价在内，现在我们不得不开始提高部分产品的价格。我们知道这对大家来说并非好消息，我们正在竭尽全力寻找解决方案。苹果首席执行官蒂姆 · 库克上周已表示，涨价“无法避免”。而苹果此次声明中提到“开始”涨价，也意味着后续仍可能有进一步调价空间。",
+      "url": "https://www.ithome.com/0/968/757.htm",
+      "published": "2026-06-26T01:12:45"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Apple Raises Price Of Many Products, Including Vision Pro",
+      "summary": "Apple Vision Pro now starts at $3700. Tim Cook blames the global memory crisis, calling it unlike anything he's ever seen.",
+      "url": "https://www.uploadvr.com/apple-raises-the-price-of-most-products-including-vision-pro/",
+      "published": "2026-06-25T17:00:00"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Apple Raises Price of Vision Pro by $200 Amid RAM & Storage Shortage",
+      "summary": "Apple is hiking the price of essentially all of its devices, which includes the already very pricy Vision Pro standalone mixed reality headset. The News As reported by 9to5Mac, a host of Apple devices have just gotten significant price increases. The company previously confirmed this would be the case in response to the ongoing RAM [&#8230;]\nThe post Apple Raises Price of Vision Pro by $200 Amid RAM &amp; Storage Shortage appeared first on Road to VR.",
+      "url": "https://roadtovr.com/apple-raises-price-of-vision-pro-by-200-amid-ram-storage-shortage/",
+      "published": "2026-06-25T14:48:29"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Starvault Review: Outstanding MOBA Blasts Its Way Onto Steam",
+      "summary": "With a diverse roster of playable heroes, gameplay packed with strategic depth and a thriving online community, first-person VR MOBA Starvault offers something genuinely worth playing.",
+      "url": "https://www.uploadvr.com/starvault-review-vr-moba-blasts-its-way-onto-steam/",
+      "published": "2026-06-25T12:00:04"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Meta Launches Cheaper Smart Glasses Without Ray-Ban Branding",
+      "summary": "Meta launched a range of cheaper smart glasses featuring the same technology as Ray-Ban Meta but without the branding, and with a compact folding case.",
+      "url": "https://www.uploadvr.com/meta-launches-cheaper-smart-glasses-without-ray-ban-branding/",
+      "published": "2026-06-24T23:55:34"
+    }
+  ]
+}
