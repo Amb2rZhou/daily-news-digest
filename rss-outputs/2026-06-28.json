@@ -1,0 +1,107 @@
+{
+  "date": "2026-06-28",
+  "generated_at": "2026-06-28T12:56:40.930813+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 19,
+      "matched": 1
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "消息称追觅超 200 个业务单元整合为四大板块，估算人员优化约 2400 人",
+      "summary": "IT之家 6 月 28 日消息，据中国经营网今日报道，近日，追觅系各大业务单元（BU）正在收缩和调整，将旗下超过 200 个业务单元（BU）大幅收缩整合为四大主营业务板块，并同步启动人员优化。追觅相关业务负责人接受《中国经营报》记者采访时表示，近期，追觅科技完成新一轮核心战略调整，正式锁定智能家庭、户外庭院、智能出行、具身智能四大核心赛道，对旗下业务体系进行系统性梳理与优化。此次战略迭代是企业发展逻辑的深度重塑，全面回归硬核科技研发与技术落地的核心赛道。报道提到，与业务调整同步进行的是人员优化，这也是追觅成立以来最大规模的组织人事精简。据悉，此次公司总体裁撤比例约为 12%。据估算，目前追觅体系（不含一线工厂员工）总人数约 2 万人，此次优化涉及人数约 2400 人。这一比例略高于追觅科技每年年中考核约 10% 的常态化淘汰比例。在合并过程中，多数技能可复用的职能人员（财务、法务、市场等）及研发、销售人员可转到其他业务。针对被裁撤员工，公司将会根据不同业务线及员工情况给予 0.5 至 N+1 不等的赔付方案。IT之家查询公开信息获悉，自去年下半年以来，追觅已先后入局牙刷、显示器、汽车、",
+      "url": "https://www.ithome.com/0/969/579.htm",
+      "published": "2026-06-28T03:18:17"
+    },
+    {
+      "feed_name": "钛媒体",
+      "feed_category": "综合科技",
+      "feed_weight": 2,
+      "title": "Rokid发布智能眼镜AIOS YodaOS，称行业尚处“BlackBerry时代”",
+      "summary": "摒弃App概念，以Agent为核心",
+      "url": "https://www.tmtpost.com/8044056.html",
+      "published": "2026-06-28T02:23:55"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "SpatialGen Zeus Streams Live Immersive Video To Apple Vision Pro",
+      "summary": "SpatialGen Zeus is a rack-mounted system that can stream live Apple Immersive Video to Apple Vision Pro headsets for sports and other events.",
+      "url": "https://www.uploadvr.com/spatialgen-zeus-streams-live-immersive-video-to-apple-vision-pro/",
+      "published": "2026-06-26T22:08:17"
+    }
+  ]
+}
