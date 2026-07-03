@@ -1,0 +1,98 @@
+{
+  "date": "2026-07-03",
+  "generated_at": "2026-07-03T12:13:57.717665+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 20,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "三星首款 AI 眼镜 Galaxy Glasses 爆料：1200 万摄像头、光致变色镜片",
+      "summary": "IT之家 7 月 3 日消息，科技媒体 Android Authority 昨日（7 月 2 日）发布博文，分享了一段渲染视频，展示了三星首款 AI 眼镜 Galaxy Glasses，其整体风格接近于 Meta x Ray-Ban 智能眼镜。IT之家附上演示视频如下：外观方面，三星 Galaxy Glasses 采用简约镜框，大部分元件集中在厚镜腿部分，整体佩戴体验更接近于传统太阳镜。系统方面，三星 Galaxy Glasses 运行谷歌 Android XR 系统，并深度集成谷歌的 Gemini AI 模型，核心功能围绕免提 AI 交互展开，包括拍照、录像、语音问答、实时翻译、音乐播放及导航。在硬件规格方面，该眼镜预计搭载一颗 12MP 摄像头、内置麦克风与扬声器、支持触控操作。此外为适合不同使用场景，光致变色镜片可随环境光线自动调节。相关阅读：《三星首款 AI 眼镜 Galaxy Glasses 曝光：支持 Ring 戒指手势控制》",
+      "url": "https://www.ithome.com/0/972/090.htm",
+      "published": "2026-07-03T03:29:55"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "国家发改委：今年 2000 亿元超长期特别国债支持“两新”设备更新资金已全部下达",
+      "summary": "IT之家 7 月 3 日消息，国家发展改革委今日官宣，今年 2000 亿元超长期特别国债支持“两新”设备更新资金已全部下达。按照党中央和国务院决策部署，优化实施“两新”政策，2026 年安排 2000 亿元超长期特别国债资金支持设备更新。近日，国家发展改革委已经下达今年第三批设备更新项目清单和资金安排，支持能源电力、物流、教育、养老机构、线下消费商业设施、老旧营运货车、住宅老旧电梯等领域设备更新和老旧小区加装电梯。今年以来，国家发展改革委会同有关部门，优化支持范围，完善申报流程，强化审核把关，加快工作节奏，分三批下达设备更新资金。目前，全年 2000 亿元设备更新资金总额已下达完毕，共支持 22 个领域约 1.1 万个项目，对加快产业升级、促进绿色发展、改善民生福祉、强化安全保障提供有力支撑。今年 1—5 月，设备工器具购置投资同比增长 9.3%，占全部投资的比重为 17.5%，比上年同期提高 2.2 个百分点。下一步，国家发展改革委将会同有关部门，督促指导各方抓紧推进项目建设，强化全过程闭环管理，加快形成更多实物工作量，充分发挥中央资金使用效益。IT之家注：“两新”是指推动新一轮大规",
+      "url": "https://www.ithome.com/0/972/033.htm",
+      "published": "2026-07-03T02:21:12"
+    }
+  ]
+}
