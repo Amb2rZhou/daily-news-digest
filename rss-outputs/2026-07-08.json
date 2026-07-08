@@ -1,0 +1,98 @@
+{
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T11:51:13.632372+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 20,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "欧菲光创始人蔡荣军企业新菲光满产扩产：800G 光模块月产 10 万只，目标三年产值 400 亿元",
+      "summary": "IT之家 7 月 8 日消息，据界面新闻今日报道，总部位于深圳的光模块企业新菲光通信技术有限公司（IT之家以下简称“新菲光”）当前正处于产能全面饱和的状态，并已启动大规模扩产计划。据介绍，该公司光明工厂的 800G 光模块产品月产能已达到 10 万只，1.6T 光模块月产能约为 4 万只；其位于美国得克萨斯州的北美工厂 1.6T 光模块月产能则为 1 万只左右。新菲光方面对此表示，公司已获得北美头部客户的供货资格，当前正急于扩大产能以承接更多订单。一位新菲光工厂负责人透露，公司计划立即在现有厂房楼上增设一条新的生产线，目标是在三年左右实现年产值 400 亿元。据接近新菲光的人士介绍，该公司 1.6T 产品已完成研发并正全面推向市场，目前供应北美客户的产品以 1.6T 为主。公开资料显示，新菲光由欧菲光集团创始人蔡荣军于 2020 年发起设立。公司总部位于深圳光明区，拥有超过 3 万平方米的产业园区，并在美国加州设有销售与技术支持中心、在得州建有规模化制造基地。经过近六年发展，新菲光已进入北美多个头部数据中心客户的供应链，同时与国内多家头部通信硬件厂商建立了合作关系。新菲光内部一位高管表",
+      "url": "https://www.ithome.com/0/973/860.htm",
+      "published": "2026-07-08T01:33:55"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Smart Contact Lenses Move Closer to Reality as XPANCEO Expands JBD Display Partnership",
+      "summary": "Dubai-based smart contact lenses startup XPANCEO announced it&#8217;s expanding a partnership with China&#8217;s JBD to co-develop a new micro-display designed specifically for smart contact lenses. Previously, the companies co-developed a printed circuit board with integrated micro-display, as well as a unique optical system capable of forming a near-eye image for easy focus. Now XPANCEO is deepening [&#8230;]\nThe post Smart Contact Lenses Move Closer to Reality as XPANCEO Expands JBD Display P",
+      "url": "https://roadtovr.com/smart-contact-lens-xpanceo-jbd-display-partnership/",
+      "published": "2026-07-07T13:09:34"
+    }
+  ]
+}
