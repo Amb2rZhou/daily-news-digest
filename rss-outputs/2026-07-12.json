@@ -1,0 +1,98 @@
+{
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12T12:04:08.990355+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "彭博社揭秘苹果起诉 OpenAI 内幕：前员工一句“哈哈”成窃密关键",
+      "summary": "IT之家 7 月 12 日消息，据彭博社昨天报道，当 iPhone 工程师 Chang Liu 离开苹果，加入 OpenAI 硬件部门时，他带走的不只是多年以来累计的工作经验。根据苹果昨天提起的诉讼，Chang Liu 离职时带走了三样东西：一台始终未归还的 MacBook 工作机、一名可以持续分享内情的苹果员工，以及一项软件漏洞，让他可以在离开苹果后继续访问公司内网服务器。Chang Liu 发现漏洞后，与他的同事 Alyssa Peng 分享道：“哈哈（LOL），我发现我还能访问网络存储，太搞笑了”。而 Alyssa Peng 则是回复道：“我准备好了”，并利用自己的电脑帮助 Chang Liu 获取更多机密信息。本次诉讼发生以前，苹果与 OpenAI 的关系就趋于紧张。两家公司本来是合作伙伴，如今却希望捷足先登 AI 硬件市场而成为竞争对手，意图重新定义消费者如何使用电子产品。据悉，双方矛盾的核心人物是前苹果高管 Tang Tan。该人曾负责设计 iPhone、Apple Watch 等多款产品，并在 2023 年底告知管理层即将离职，后来成为 OpenAI 首席硬件官。IT之家",
+      "url": "https://www.ithome.com/0/975/634.htm",
+      "published": "2026-07-11T23:21:57"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Apple Publishes Detailed Technical Specifications for Third-party Vision Pro Motion Controllers",
+      "summary": "Following Apple&#8217;s announcement that VisionOS 27 will support third-party motion controllers for Vision Pro, the company has published a set of technical specifications and requirements for third-parties building such controllers. Published in the latest version of Apple&#8217;s Accessory Design Guidelines for Apple Devices, a new section called Spatial Accessories offers an in-depth technical explanation of [&#8230;]\nThe post Apple Publishes Detailed Technical Specifications for Third-part",
+      "url": "https://roadtovr.com/apple-publishes-detailed-technical-specifications-for-third-party-vision-pro-motion-controllers/",
+      "published": "2026-07-10T19:41:13"
+    }
+  ]
+}
