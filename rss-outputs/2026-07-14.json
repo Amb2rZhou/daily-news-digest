@@ -1,0 +1,89 @@
+{
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T11:41:15.741509+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "国产动画电影《八仙！》宣布提档至 7 月 18 日上映",
+      "summary": "IT之家 7 月 14 日消息，国产动画电影《八仙！》今日发布乘风破浪版海报，并宣布提档至 7 月 18 日上映（原定 7 月 24 日）。影片以传统八仙故事为灵感，讲述在蓬莱仙境内，八个凡人为闯入只有神仙可以通行的藏宝阁，假扮神仙瞒天过海，面对阁中“十辈子花不完”的泼天富贵，众人一拍即合，“草台班子”就地成立，一起踏上寻宝求财路。《八仙！》为四川省电影局支持项目，由成都画梦成帧影视文化传媒有限公司、上海华人影业有限公司、天津猫眼文化传媒有限公司、儒意电影娱乐股份有限公司、上海儒意影视制作有限公司、中国电影产业集团股份有限公司出品，影片跳出传统神话叙事视角，将镜头对准八位神仙尚未得道的凡人阶段，讲述一群普通人机缘巧合结伴、假扮神仙闯荡世间的趣味故事。根据官方介绍，《八仙！》由全本土制作班底打造，包括《哪吒》系列电影的配音导演陈浩、《捕风追影》的动作指导苏杭等。IT之家查询猫眼专业版获悉，该电影目前已开启超前点映，票房达 1747.7 万元，今日票房位列国内第二。",
+      "url": "https://www.ithome.com/0/976/319.htm",
+      "published": "2026-07-14T02:19:12"
+    }
+  ]
+}
