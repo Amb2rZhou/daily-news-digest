@@ -1,0 +1,116 @@
+{
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T11:41:25.167750+08:00",
+  "item_count": 4,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 4
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "星纪魅族中国区 CMO 万志强官宣离职，将做“有趣且有意义”的事",
+      "summary": "IT之家 7 月 15 日消息，今天（15 日）上午，星纪魅族中国区 CMO 万志强 @一匹老万 在微博发布了一篇长文，宣布自己来到了“毕业的时刻”。万志强透露，接下来自己将和一群志同道合的伙伴去做一件“有趣且有意义”的事。IT之家附万志强发布的长文如下：好久没有和大家打招呼了。转眼间，在魅族度过了近二十年时光。从青涩的初代魅友，到大伙儿 @的一匹老万，纵有万般不舍，还是来到了毕业的时刻。很幸运，追随一个我爱的品牌，经历了从音乐播放器、智能手机、移动互联网、AIOT、汽车智能化到 AI 浪潮的每个行业周期。很感动，和无数满怀热爱的少年心气一起，实践并激扬于中国用户体验、设计审美和科技创新的觉醒时刻。很难忘，与追求理想的前辈、同朋、新同学一道，见证了中国品牌从筚路蓝缕、开山辟路，到挥斥方遒、踏浪开疆。魅族，于所有同行者和挚爱者而言，永远都是令人骄傲的名字，未来仍有无尽的可能。魅族，于我而言，是授业的母校，是守望的麦田，也是一个完整的世界。感恩公司对我长期的培养和历练。感谢领导、团队、行业伙伴、无数良师益友的鞭策包容和真诚支持。二十年职业生涯，能与一代代同事并肩追梦，和万千魅友相逢相知，是",
+      "url": "https://www.ithome.com/0/976/827.htm",
+      "published": "2026-07-15T02:24:32"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "支付宝 OPPO 宣布达成智能体跨端互联合作，一句话充话费、买电影票、点外卖、查社保公积金",
+      "summary": "IT之家 7 月 15 日消息，支付宝与 OPPO 宣布正式达成智能体跨端互联合作。即日起，OPPO 手机用户可通过系统级 AI 助手“小布”，以自然语言指令直接调用支付宝 AI 助手“阿宝”所整合的近 200 项生活服务，涵盖电影购票、外卖点餐、社保公积金查询等日常场景。此次合作基于双方此前共建的 AHA（Agent Hub Access，多智能体互联协同方案）协议。该方案于 2025 年 10 月在 OPPO 开发者大会上首次亮相，旨在实现 OPPO 系统级 AI 与支付宝智能体的高效协同，覆盖出行、政务、医疗健康、物流快递、餐饮外卖、生活缴费等多类智慧场景。2026 年 7 月 7 日，支付宝正式上线 AI 开放平台，商家完成一次 AI 化接入后，可通过标准化 AHA 互联协议跨端分发至手机 AI 助手、智能车机、AI 眼镜、IoT 硬件等各类终端。OPPO 成为首批通过该协议接入支付宝 AI 生态的手机厂商之一。用户使用这一功能只需三步：首先对小布说出服务需求，随后阿宝匹配并调取相应服务，最后用户完成授权或付款确认即可。部分服务支持后台静默运行，办理完成后主动通知用户，无需持续",
+      "url": "https://www.ithome.com/0/976/823.htm",
+      "published": "2026-07-15T02:10:51"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "继 iPhone 后欧盟新增条款：欧版 Apple Watch 等智能手表豁免可拆卸电池",
+      "summary": "IT之家 7 月 15 日消息，科技媒体 9to5Mac 最新报道称在美国施压下，欧盟于昨日（7 月 14 日）公告修订《便携式电池可拆卸性规则》，豁免智能手表、健身追踪器和电动玩具等 6 个类别，不用强制采用可拆卸电池设计。根据欧洲议会和理事会于 2023 年 7 月 28 日公示的 2023/1542 号条例，产品中内置的便携式电池通常必须是可拆卸的，并且用户在设备的整个使用寿命期间都可以更换电池。IT之家此前报道称，苹果 iPhone 符合豁免条例，而在昨日发布的公告中，欧盟再次让步豁免 6 类设备，涵盖智能手表（如 Apple Watch 等）、智能眼镜、健身追踪器和其他小型可穿戴设备。欧盟委员会公告显示：该授权法案经委员会通过后，将提交欧洲议会和欧盟理事会审查。如欧洲议会或理事会未提出异议，该法案将在欧盟官方公报上公布 20 天后生效。消息称这项变更源于美国驻欧盟大使对电池规定的批评，不过在接受 Politico 采访时，欧盟委员会发言人驳斥了欧盟屈服于压力的说法：欧盟委员会发言人在一份声明中表示，委员会“没有屈服于任何人的压力”，并补充说，其提案“是在与消费者协会、行业利益",
+      "url": "https://www.ithome.com/0/976/817.htm",
+      "published": "2026-07-15T01:54:14"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "华硕将独立发售 OLED 屏幕版 ROG Ally 掌机",
+      "summary": "IT之家 7 月 15 日消息，据外媒 The Verge 当地时间昨日报道，华硕 (ASUS) 发言人 Anthony Spence 向其确认，华硕将独立推出搭载 OLED 屏幕的新款 ROG Ally 掌机，“我们正在积极商讨新款 Ally 独立版的发布计划，请持续关注后续公告”。作为玩家国度 (ROG) 二十周年纪念产品的一部分，华硕在 COMPUTEX 2026 上推出了 ROG XBOX Ally X20 Bundle，将升级版 ROG XBOX Ally X 掌机与 ROG XREAL R1 Edition 20 AR 游戏眼镜相捆绑。ROG XBOX Ally X (2026) 搭载了一块 7.4\" FHD 120Hz 抗反射 OLED 面板，支持十点触控，SDR 峰值亮度 600nits、HDR 峰值亮度 1400nits，色域 100% DCI-P3，获得 AMD FreeSync Premium Pro、Pantone Validated、Dolby Vision 认证。在依旧搭载 AMD 锐龙 AI Z2 Extreme 处理器的同时，新版掌机进一步精修非对称配置",
+      "url": "https://www.ithome.com/0/976/795.htm",
+      "published": "2026-07-15T00:37:35"
+    }
+  ]
+}
