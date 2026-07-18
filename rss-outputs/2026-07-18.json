@@ -1,0 +1,89 @@
+{
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T11:38:55.998191+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "英伟达 NVIDIA App 升级 11.0.8：支持 ShadowPlay 240 FPS 录制视频",
+      "summary": "IT之家 7 月 18 日消息，英伟达昨日（7 月 17 日）更新 NVIDIA App 应用，升级至最新 11.0.8.299 版本，面向 GeForce RTX 50 系列和 RTX 40 系列显卡，带来了 240 FPS 的 ShadowPlay 录制功能。IT之家附上更新日志内容如下：最新更新：ShadowPlay 240 FPS 录制视频NVIDIA App 现可为 GeForce RTX50 和 40 系列 GPU 提供 240FPSShadowPlay 录制支持，为竞技游戏玩家和创作者提供超流畅、高分辨率的源视频片段。通过 AIt+Z&gt;“设置”&gt;“视频截取”进行配置控制面板更新新增功能：可让用户将任务栏限制在单个显示器上，还支持窗口最大化至三联屏整体画面。玩家可通过系统 &gt; 显示器 &gt; Surround 进行设置。新增游戏支持 DLSS 优设，具体包括：‘83活性物质（Active Matter）Bus Bound“克苏鲁：恐怖深渊（Cthulhu: The Cosmic Abyss）”“反抗黎明（Dawn of Defiance）”“遥遥西土（F",
+      "url": "https://www.ithome.com/0/978/389.htm",
+      "published": "2026-07-18T03:03:40"
+    }
+  ]
+}
