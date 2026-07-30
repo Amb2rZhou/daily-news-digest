@@ -1,0 +1,98 @@
+{
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30T11:38:27.412587+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Meta 扎克伯格：五年后，全球数十亿人将有专属的个人 AI 智能体",
+      "summary": "IT之家 7 月 30 日消息，据外媒 TechCrunch 今天（30 日）报道，Meta 创始人兼 CEO 马克 · 扎克伯格正在向投资者描绘一幅未来图景：五年后，全球将有数十亿人拥有专属的个人 AI 智能体。扎克伯格在财报电话会议上大胆预测：“无论把时间范围设定为五年还是其他期限，我都认为，未来没有数十亿人使用个人智能体的可能性极低。个人智能体能够理解你的目标，全天候为你工作，帮助你在任何看重的领域实现目标。”扎克伯格补充道，个人 AI 智能体可以协助用户处理财务、健康、人际关系和家庭管理等事务。“未来每个人都会同时与多个智能体互动，WhatsApp 和 Meta 旗下其他通信产品的重要性也会随之不断提升。”他还指出，WhatsApp 已经成为用户与 Meta AI 互动的首要平台。然而，Meta 仍在持续向前景不明的创新项目投入巨额资金，公布今年第二季度财报后，股价下跌近 10%。负责 AR 眼镜、VR 头显和配套软件的 Meta Reality Labs 亏损约 46 亿美元（IT之家注：现汇率约合 311.59 亿元人民币），与 2021 年以来的季度亏损水平基本相当，累计",
+      "url": "https://www.ithome.com/0/983/404.htm",
+      "published": "2026-07-30T01:25:11"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "‘VRChat’ Competitor ‘Somnium Space’ Releases Biggest Update Yet Ahead of Return to Steam",
+      "summary": "Social VR platform Somnium Space is rolling out its biggest update yet, which aims to bring major improvements across the entire platform ahead of its planned release on Steam Frame and Apple Vision Pro. The News Somnium Space&#8217;s v3.1.6 update is slated to rollout today, bringing to the social VR platform a number of quality of [&#8230;]\nThe post &#8216;VRChat&#8217; Competitor &#8216;Somnium Space&#8217; Releases Biggest Update Yet Ahead of Return to Steam appeared first on Road to VR.",
+      "url": "https://roadtovr.com/somnium-space-mainstream-push-steam-release/",
+      "published": "2026-07-29T14:00:00"
+    }
+  ]
+}
