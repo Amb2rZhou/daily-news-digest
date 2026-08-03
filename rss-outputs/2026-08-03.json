@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T12:03:10.963808+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "魅族追梦人打造“追求源于热爱”公司亮相，8 月 5 日举行创业发布会",
+      "summary": "IT之家 8 月 3 日消息，“追求源于热爱”公司今日官宣亮相，将于 8 月 5 日 19:30 举行创业发布会：“一群魅族追梦人携初心再出发，所有沉淀于心的理想、故事和新产品，发布会揭晓。曾因热爱相聚的人，大概率在这里再次相逢。”微博简介显示：“这是一群魅族毕业生集结开启的新地图。这里有好产品、好创意、好故事。曾因热爱相聚的人，大概率在这里再次相逢。”IT之家注意到，魅族科技官方微博、原星纪魅族中国区 CMO 万志强也对该团队的预热内容进行了转发，目前尚不清楚两者的具体联系。万志强今年 7 月宣布从魅族离职，并发文称将和一群志同道合的伙伴去做一件“有趣且有意义”的事。",
+      "url": "https://www.ithome.com/0/984/888.htm",
+      "published": "2026-08-03T02:26:13"
+    }
+  ]
+}
