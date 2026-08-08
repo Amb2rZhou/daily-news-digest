@@ -1,0 +1,107 @@
+{
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T10:25:31.994706+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 3
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 14,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "万志强：PANDAER LOGO 不会改，DreamGoGo 是公司和平台 LOGO",
+      "summary": "IT之家 8 月 8 日消息，8 月 6 日，“追求源于热爱”公司创始人万志强回应网友疑问，确认 PANDAER 品牌 LOGO 将不会改动；DreamGoGo 为公司及平台 LOGO，和 PANDAER 用途不同。万志强表示，初代星环熊猫 PANDAER LOGO 由其手绘初稿、设计师深化落地，将作为长期视觉符号保留。据IT之家此前报道，“追求源于热爱”公司已于 8 月 3 日官宣亮相。官方介绍如下：一群魅族追梦人携初心再出发，所有沉淀于心的理想、故事和新产品，发布会揭晓。曾因热爱相聚的人，大概率在这里再次相逢。在 8 月 5 日的“追求源于热爱”团队创业发布会上，前星纪魅族中国区 CMO 万志强介绍了公司的核心团队，包括原魅族核心工程师和设计师、PANDAER 创世团队、2026 届毕业生和魅族校园实习生等。他还宣布，“追求源于热爱”公司将成为魅族品牌战略合作方。",
+      "url": "https://www.ithome.com/0/987/232.htm",
+      "published": "2026-08-07T23:52:41"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "EA《麦登橄榄球 27》登陆 Apple Arcade，支持苹果 iPhone、iPad、Mac 及 Apple TV",
+      "summary": "IT之家 8 月 7 日消息，《麦登橄榄球 27》（Madden NFL 27）是由 EA Sports 斥资打造的年度美式橄榄球大作，将于 2026 年 8 月 13 日正式发售，登陆 PS5、XSX|S、PC 及任天堂 Switch 2，即日开启 7 天抢先体验及 10 小时的免费试玩。在那之前，《Madden NFL 27 Arcade Edition》已于当地时间 8 月 6 日率先登陆 Apple Arcade 平台，成为该订阅服务的（暂时）独占游戏，无内购、无广告。《Madden NFL 27 Arcade Edition》支持玩家选择当前 NFL 球队，并带领球队完成完整赛季。游戏提供生涯经营模式（Franchise）和快速比赛（Quick Play）两种玩法，玩家可以根据游玩时间选择不同体验。游戏还会根据现实 NFL 赛季中的球员表现动态调整球员评分，让游戏内阵容变化与现实赛事保持关联。同时，作品加入了新手引导教程，帮助首次接触美式橄榄球游戏的玩家了解操作方式。由于该作品面向苹果多设备生态开发，因此针对触控屏进行了专门优化。玩家可以通过滑动和点击操作完成传球、跑动等比赛",
+      "url": "https://www.ithome.com/0/987/206.htm",
+      "published": "2026-08-07T14:31:26"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Caviar 推出 24K 镀金版 Meta 雷朋智能眼镜 Odyssey，售价 6130 美元限量 24 副",
+      "summary": "IT之家 8 月 7 日消息，奢侈定制品牌 Caviar 昨日推出了一款基于 Meta Ray-Ban 智能眼镜的限量定制版产品，命名为“Odyssey”（奥德赛）。该系列提供 24K 金和 925 银两种装饰版本，售价分别为 6,130 美元（现汇率约合 41,460 元人民币）和 6,840 美元（现汇率约合 46,262 元人民币）。该系列限量发售 24 副（对应荷马史诗《奥德赛》的卷数）。Caviar 还提供实心贵金属定制服务。Odyssey 系列以 Meta 与 EssilorLuxottica 合作推出的 Ray-Ban Wayfarer 智能眼镜为原型，由 Caviar 珠宝工匠手工打造。24K 金版本在顶部镜框、镜腿末端、铰链及拍摄按键上采用黄金镀层装饰，铰链旁饰有希腊风格金银丝细工玫瑰花图案，并手工填充黑色珐琅。镜腿和鼻梁处带有浮雕雕刻。925 银版本采用相同的黑色 Wayfarer 框架，将金色装饰替换为银质。两种版本均附带天然鳄鱼皮充电盒，盒扣饰有 Caviar 珐琅徽章。在功能方面，Odyssey 保留了原版 Ray-Ban Meta 智能眼镜的全部特性，包括用",
+      "url": "https://www.ithome.com/0/987/202.htm",
+      "published": "2026-08-07T14:09:50"
+    }
+  ]
+}
