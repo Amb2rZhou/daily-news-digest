@@ -1,0 +1,98 @@
+{
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T10:31:53.126282+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 0
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Apple Vision Pro Owners Can Soon Watch Live Immersive Friday Night Baseball",
+      "summary": "Live Friday Night Baseball is coming to Apple Immersive later this month, bringing MLB to Apple Vision Pro users with an Apple TV subscription.",
+      "url": "https://www.uploadvr.com/apple-expands-friday-night-baseball-with-live-immersive-access-on-vision-pro/",
+      "published": "2026-08-10T15:47:09"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Apple Brings Live MLB Games to Vision Pro Starting August 28",
+      "summary": "Apple and Major League Baseball (MLB) announced they&#8217;re bringing a handful of live baseball games to Vision Pro, with livestreamed games starting on August 28th. When Apple initially announced the number of games it had licensed in the August baseball schedule, it wasn&#8217;t clear whether Apple TV subscribers would get any immersive games to round [&#8230;]\nThe post Apple Brings Live MLB Games to Vision Pro Starting August 28 appeared first on Road to VR.",
+      "url": "https://roadtovr.com/apple-mlb-live-immersive-games-schedule-2026/",
+      "published": "2026-08-10T14:59:00"
+    }
+  ]
+}
