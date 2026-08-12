@@ -1,0 +1,98 @@
+{
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T11:00:46.489493+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 0
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 1
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "钛媒体",
+      "feed_category": "综合科技",
+      "feed_weight": 2,
+      "title": "被指实控人掏空上市资产，250亿光学巨头辟谣报案",
+      "summary": "欧菲光陷入实控人“掏空”公司资产疑云。",
+      "url": "https://www.tmtpost.com/8099439.html",
+      "published": "2026-08-12T02:02:00"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Apple Vision Pro Owners Can Soon Watch Live Immersive Friday Night Baseball",
+      "summary": "Live Friday Night Baseball is coming to Apple Immersive later this month, bringing MLB to Apple Vision Pro users with an Apple TV subscription.",
+      "url": "https://www.uploadvr.com/apple-expands-friday-night-baseball-with-live-immersive-access-on-vision-pro/",
+      "published": "2026-08-10T15:47:09"
+    }
+  ]
+}
