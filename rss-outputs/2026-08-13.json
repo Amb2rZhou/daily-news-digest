@@ -1,0 +1,98 @@
+{
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T11:04:01.005308+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "德国人权组织对 Meta 提起刑事诉讼，指控其智能眼镜违反隐私法规",
+      "summary": "IT之家 8 月 13 日消息，随着围绕 Meta 智能眼镜的隐私争议不断升级，一家非营利组织决定采取行动。德国人权组织 HateAid 已对 Meta 提起刑事投诉。简单来说，该组织认为把隐蔽的摄像头装在人们脸上，可能并非明智之举。HateAid 指控 Meta 的智能眼镜违反德国隐私法律，具体涉及《电信、数字服务和数据保护法》（Telecommunications, Digital Services and Data Protection Act）。该组织认为，由于这些设备具备隐蔽录制能力，销售这类产品本身就可能构成刑事犯罪。HateAid 还希望对智能眼镜可以进行录制的场所加以限制，类似于目前针对行车记录仪和执法人员随身摄像机的相关规定。此次投诉的对象包括 Meta、眼镜合作伙伴 Ray-Ban 和 Oakley，以及多家零售商。Meta 一名发言人向 Politico EU 表示，Meta 的智能眼镜“从设计之初就融入了隐私保护措施，其保护程度超过任何智能手机所能提供的水平”。这些眼镜确实配备了一个 LED 指示灯，在设备进行录制时会闪烁。同时，如果软件检测到有人试图通过胶带等",
+      "url": "https://www.ithome.com/0/989/044.htm",
+      "published": "2026-08-13T01:23:24"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "上线仅两个月，捉迷藏游戏《超级变色龙》销量突破 2000 万份",
+      "summary": "IT之家 8 月 13 日消息，日本独立开发者 lemorion_1224 昨日在 X 平台宣布，其开发的多人捉迷藏游戏《MECCHA CHAMELEON》（超级变色龙）全球累计销量已突破 2000 万份。IT之家注：《超级变色龙》是一款将“捉迷藏”与“涂鸦伪装”完美结合的爆款多人休闲游戏。玩家需化身纯白小人，利用画笔和创意将自己伪装成场景中的物品，躲避追捕者的搜查。《超级变色龙》于 2026 年 6 月 10 日正式上线，目前国区 Steam 售价 26 元，该作发售 2 天就突破 50 万份，4 天达成 100 万份，16 天突破 1000 万份。 目前《超级变色龙》仍在持续更新，开发者已于此前为游戏陆续追加了新地图、新动作等内容。本作此前在 Steam 上创下了 34 万的玩家峰值记录，目前在该平台上已有的 7.3 万篇玩家评测中，好评率为 87%。",
+      "url": "https://www.ithome.com/0/989/012.htm",
+      "published": "2026-08-12T23:23:36"
+    }
+  ]
+}
