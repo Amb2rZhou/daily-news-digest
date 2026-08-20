@@ -1,0 +1,116 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T09:55:30.708771+08:00",
+  "item_count": 4,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "CounterPoint 称智能眼镜、智能戒指和智能吊坠将成可穿戴设备增长最快品类",
+      "summary": "IT之家 8 月 20 日消息，市场调查机构 CounterPoint Research 昨日（8 月 19 日）发布博文，预估 2026~2032 年全球消费级可穿戴设备累计营收将超过 1 万亿美元（IT之家注：现汇率约合 6.75 万亿元人民币），营收年复合增长率为 12%。该机构首席分析师 Anshika Jain 认为，可穿戴设备的应用正从健身延伸至预防性医疗，越来越多的消费者愿意支付更高价格，购买可持续监测健康状况的设备，推动营收增速高于出货量增速。在品类方面，智能眼镜到 2032 年的营收预计达到 440 亿美元（现汇率约合 2,968.27 亿元人民币），约占可穿戴设备营收的 1/5。相机、麦克风、扬声器和显示屏可支持通信、翻译、导航与实时辅助，减少用户频繁查看智能手机的需求。无显示屏人工智能眼镜将凭借熟悉的外观、较低价格及相机和音频应用拉动出货量；增强现实显示眼镜则通过面向生产力、导航、培训和娱乐的数字叠加内容获取更高价值。智能吊坠、智能戒指和智能眼镜将成为增长最快的品类，其中智能吊坠的增长起点较低。机构称，隐蔽外形、持续在线辅助与精确传感能力将带动智能吊坠和智能戒指增",
+      "url": "https://www.ithome.com/0/991/889.htm",
+      "published": "2026-08-20T00:25:19"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "古尔曼：苹果带摄像头的 AirPods Pro 3 增强版耳机延至 2027 年发布",
+      "summary": "IT之家 8 月 20 日消息，彭博社的马克 · 古尔曼（Mark Gurman）今天（8 月 20 日）在 X 平台发布推文，带摄像头的 AirPods 耳机内部代号为 B790，苹果公司计划在 2027 年发布。古尔曼在博文中认为，苹果公司目前正在研发 B790 和 B798 两款耳机。其中 B790 就是带摄像头的 AirPod Pro 3 增强版，而 B798 是带有摄像头的 AirPods Pro 4 耳机，扩展传感器与 AI 功能。IT之家附上相关截图如下：发布日期方面，此前消息称苹果公司计划 2026 年发布带摄像头的 AirPod Pro 3 增强版，不过最新消息称苹果公司遇到量产挑战，发布计划延后到 2027 年。古尔曼透露产品于 2026 年春季让苹果员工开展高级测试（advanced testing），在今年夏季尝试启动生产时遭遇供应链和软件障碍，随后将发布时间推迟至 2027 年。实现原理方面，该耳机将依托 Visual Intelligence，通过摄像头识别现实环境中的物品，并触发相应操作。知情人士称，耳机不以拍摄照片或视频为目标，搭载的是低分辨率传感器，其",
+      "url": "https://www.ithome.com/0/991/874.htm",
+      "published": "2026-08-19T23:26:42"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Pico’s Vision Pro Competitor Gets Official Name and Debut Date",
+      "summary": "Pico&#8217;s Vision Pro competitor is set to debut at a special event in Beijing early next month, which is now officially named Pico Space Pro. As first reported by Chinese outlet Nweon, Pico Space Pro is suspected to be the company&#8217;s Project Swan standalone VR headset, which the company first teased in March. While Pico [&#8230;]\nThe post Pico’s Vision Pro Competitor Gets Official Name and Debut Date appeared first on Road to VR.",
+      "url": "https://roadtovr.com/picos-vision-pro-competitor-release-date-pricr-name/",
+      "published": "2026-08-19T19:06:50"
+    },
+    {
+      "feed_name": "少数派 - 每日热榜",
+      "feed_category": "综合科技",
+      "feed_weight": 1,
+      "title": "派早报：iQOO 发布手机新品、闪极举行 Loomos AI 眼镜发布会等",
+      "summary": "Spotify 上线「播放列表备注」功能、Windows Server 2022 即将结束主流更新等。查看全文",
+      "url": "https://sspai.com/post/113607",
+      "published": "2026-08-19T00:30:54"
+    }
+  ]
+}
