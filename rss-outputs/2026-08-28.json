@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T19:33:00.513565+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "丹麦政府推出紧急方案引导学生合理使用 AI，遏制“AI 作弊”行为",
+      "summary": "IT之家 8 月 28 日消息，据 CCTV 国际时讯报道，在今年夏天的考试季，丹麦多所高中 AI 作弊案例明显增多。随着生成式人工智能（AI）进入校园，学生利用 AI 完成作业甚至在考试中作弊的问题，给传统教育和考试制度带来新挑战。为此，丹麦政府日前推出紧急方案，通过增加口头答辩、监控学生考试电脑屏幕等方式，遏制 AI 作弊。根据方案，每年约有 9000 名学生除了完成专业书面作业外，还将增加口头答辩。同时政府还呼吁在笔试期间对学生电脑屏幕进行监控，通过网络过滤限制访问未经允许的内容。此外，政府还鼓励学生在校内受控环境下完成书面作业。虽然 AI 用于“作弊”给学校带来了挑战，但是不管是学校本身，还是学生和家长，他们仍然认为，不能简单地将 AI“赶出学校”，而是应该找到更加合理利用 AI 的方式。据IT之家此前报道，今年早些时候，澳大利亚高校也开始加快调整考试和评估方式，以维护学位的公信力，并重新拥抱口试和线下考试。此外，韩国首尔也在今年 6 月发布公报，向该市中小学校及辖区教育部门下发通知，禁止考生戴 AI 智能眼镜参加期末考试。相关阅读：《为防 AI 作弊，澳大利亚高校重新拥抱口试",
+      "url": "https://www.ithome.com/0/995/684.htm",
+      "published": "2026-08-28T09:04:03"
+    }
+  ]
+}
