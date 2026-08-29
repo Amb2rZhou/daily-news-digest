@@ -1,0 +1,89 @@
+{
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T15:11:37.663035+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 19,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "全球首例：武汉大学人民医院实现眼球植入半侵入式视网膜脑机接口，患者重见光明",
+      "summary": "IT之家 8 月 29 日消息，据武汉大学人民医院消息，因视网膜色素变性，60 岁的邱先生已彻底失明 4 年。今年 7 月 8 日，武汉大学人民医院（湖北省人民医院）眼耳鼻喉医院院长肖璇教授团队，在不穿透他眼球的前提下，将一枚刺激芯片植入了他的眼白（巩膜）。术后一个多月，系统开机，他不仅辨认出了数字 1 到 10，更亲手写了下来。截至 8 月 26 日，开机仅一周，他已能辨认和书写汉字、英文字母，用手抓取物品，甚至仅靠智能眼镜独立走路。官方表示，经公开文献检索，这是全球首例“高分辨率半侵入式视网膜脑机接口”临床应用获得安全有效成果的病例。视网膜脑机接口，通俗称为“电子视网膜”。人类的视觉系统非常精密，光线穿透眼底到达视网膜感光细胞层，在这里被转化为电信号，反向传输到视网膜最内层的神经节细胞，再经由视神经传至大脑，最终整合成图像。视网膜色素变性等疾病会摧毁感光细胞以及部分节细胞，导致失明。但不少患者视神经这条“信号线缆”依然完好，这为人工重建视觉留下了一扇窗。过去国内外少量已报道的临床试验，多采用“全侵入”方案：打开眼球，将电极植入视网膜下方或上面，紧贴神经细胞刺激。但这个方案需要穿透眼",
+      "url": "https://www.ithome.com/0/995/870.htm",
+      "published": "2026-08-29T02:09:56"
+    }
+  ]
+}
