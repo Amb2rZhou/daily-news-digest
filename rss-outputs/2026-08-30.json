@@ -1,0 +1,98 @@
+{
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T13:33:17.791306+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "库克卸任倒计时，新任 CEO 特努斯签名苹果员工 5 周年纪念牌",
+      "summary": "IT之家 8 月 30 日消息，近日，有多名网友晒出苹果入职五周年纪念牌，其中部分采用了新任 CEO 约翰 · 特努斯的签名，这也意味着蒂姆 · 库克卸任进入倒计时。官方资料显示，蒂姆 · 库克于 1998 年加入苹果，2011 年成为 CEO。在他的领导下，苹果推出了众多产品和服务，包括 Apple Watch、AirPods、Apple Vision Pro 等新品类，以及 iCloud、Apple Pay、Apple TV、Apple Music 等服务。约翰 · 特努斯出生于 1975 年，于 2001 年加入苹果产品设计团队、2013 年晋升为硬件工程副总裁，后于 2021 年加入高管团队，担任硬件工程高级副总裁。在苹果任职期间，特努斯负责了多个品类中众多突破性产品的硬件工程工作。他在 iPad、AirPods 等新产品线以及 iPhone、Mac、Apple Watch 多代产品的推出中发挥了关键作用。2026 年 4 月 20 日，苹果宣布特努斯将从 9 月 1 日起接任库克，成为公司首席执行官。IT之家注意到，苹果将于当地时间 9 月 9 日（北京时间 9 月 10 日",
+      "url": "https://www.ithome.com/0/996/094.htm",
+      "published": "2026-08-30T02:34:40"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "苹果首款 AI 眼镜有望 2027 年亮相：首代无显示屏，瞄准语音与视觉识别",
+      "summary": "IT之家 8 月 30 日消息，科技媒体 9to5Mac 昨日（8 月 29 日）报道，苹果计划最早 2027 年推出其首款 AI 智能眼镜，预估会在 2027 年全球开发者大会（WWDC27）上面向开发者公布，并在当年晚些时候出货。发布节奏方面，该媒体梳理现有爆料信息，认为苹果公司可能会在明年 6 月召开的 WWDC27 期间，面向开发者推出其首款 AI 智能眼镜，邀请开发者提前适配相关软件与服务，产品最早可能于 2027 年 9 月发售。定位方面，该产品并非增强现实（AR）眼镜，预估不带镜片显示系统，因此不会在用户视野中直接叠加数字画面。该产品会配备摄像头，摄像头将用于获取现实环境信息，Siri 可据此回答用户问题、提供场景说明及翻译现实中的标识文字。功能方面，报道显示，用户可借助 Siri 对眼前环境提问、获取情境信息，并翻译现实中的标识文字；系统还可能支持记录特定物体或画面，并在后续按提醒调取。设备预计搭载扬声器，可用于音乐和其他音频内容播放，产品形态也将具备开放式耳机的部分特征。外观方面，苹果据称正在开发 4 类镜框方案，已披露的方案包括大型矩形框、纤细矩形框、较大椭圆或圆形",
+      "url": "https://www.ithome.com/0/996/053.htm",
+      "published": "2026-08-29T22:44:37"
+    }
+  ]
+}
