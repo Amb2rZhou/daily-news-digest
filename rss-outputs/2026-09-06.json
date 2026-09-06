@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-06",
+  "generated_at": "2026-09-06T12:50:42.222703+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "V 社有望为 Steam Frame 头显引入彩色透视模块，作为升级套件单独发售",
+      "summary": "IT之家 9 月 6 日消息，尽管 V 社旗下 Steam Frame VR 头显目前仍未正式上市，不过负责该头显内置摄像头追踪系统的供应商 Komodo Station 近日已经开始生产一款彩色透视模块，暗示V社未来有望将相应模块作为 Steam Frame 升级套件单独发售。根据 Reddit 用户“gogodboss”保存的泄露页面信息，这款彩色透视模块配备两颗 3200 万像素传感器，支持 10bit HDR 拍摄，采用 64mm 瞳距（IPD）设计、双目视场角（FOV）可达到 125°×105°，其原生支持 5K 分辨率（4928×2464 像素）拍摄，在双目模式下每只眼睛的分辨率为 2464×2464，原生帧率可达到 60 FPS，最高可超频至 144 FPS。这款模块的作用也不只是让用户看到彩色现实世界。根据泄露页面介绍，它还支持实时环境建图、空间视频录制以及 Gaussian Splatting（高斯泼溅）等功能，并提供相应工具。值得注意的是，64mm 瞳距接近普通人的平均双眼间距，因此该摄像头可以以立体 3D 方式捕捉现实环境，结合软件实现类似苹果 Vision Pr",
+      "url": "https://www.ithome.com/0/998/904.htm",
+      "published": "2026-09-06T03:05:07"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "微星推出 PRO COREFROZR AR15 风冷散热器：配备 5 根 6 mm 热管，160 元",
+      "summary": "IT之家 9 月 6 日消息，微星现已在京东上架 PRO COREFROZR AR15 风冷散热器，将于 9 月 13 日开启首销，首发价 160 元。京东微星 PRO COREFROZR AR15 CPU 风冷散热器 160 元直达链接该散热器尺寸为 155 mmx 120 mm x 58 mm，主体设计紧凑，顶部采用全黑哑光顶盖，结合纵向纹理与 MSI 标志呈现极简风格，风扇支持 MSI Mystic Light ARGB 灯效。该散热器配备 5 根 6 mm 铜制热管，通过直触设计与 CPU 直接接触。搭配 48 片高密度鳍片与低风阻风道，集中风压并有效控制运行噪音。标配的 120 x 120 x 25 mm 来福轴承风扇支持 PWM 模式，转速在 510 至 2100 RPM 之间，风量达 59.97 CFM，风压 2.03 mmH2O，噪音 29.95 dBA。线缆长 300 mm，40°C 下寿命达 40,000 小时。该散热器内附双平台套件，支持 Intel LGA 1700 与 1851 及 AMD AM4 与 AM5 插槽。其弹簧螺丝设计可简化安装步骤。IT之家附产品",
+      "url": "https://www.ithome.com/0/998/887.htm",
+      "published": "2026-09-06T01:54:33"
+    }
+  ]
+}
