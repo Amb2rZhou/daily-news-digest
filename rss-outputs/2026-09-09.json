@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T12:54:22.117704+08:00",
+  "item_count": 4,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 0
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 3
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Fovii Showcases Immersive Videos And Their Creators On Apple Vision Pro",
+      "summary": "The Fovii app on Apple Vision Pro offers a new platform to experience 180-degree immersive videos and discover the creators behind them.",
+      "url": "https://www.uploadvr.com/fovii-showcases-immersive-videos-and-their-creators-on-apple-vision-pro/",
+      "published": "2026-09-08T14:00:00"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Pico Space Pro Clears FCC Following Cancelled September Reveal",
+      "summary": "Pico&#8217;s upcoming Apple Vision Pro competitor, Space Pro, was initially meant to debut earlier this month, although the ByteDance subsidiary cancelled the event and postponed its reveal and release date. Now, the company&#8217;s next flagship standalone XR headset just cleared the FCC. Previously known as &#8216;Project Swan’, Pico Space Pro has now surfaced in FCC [&#8230;]\nThe post Pico Space Pro Clears FCC Following Cancelled September Reveal appeared first on Road to VR.",
+      "url": "https://roadtovr.com/pico-space-pro-fcc-cert-reveal-cancelled/",
+      "published": "2026-09-08T10:10:58"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "FunFitLand Brings Live Heart Rate Tracking Into VR With New Phone App",
+      "summary": "FunFitLand's new smartphone app brings live heart rate data from compatible wearables directly into your VR workouts on Quest and Apple Vision Pro.",
+      "url": "https://www.uploadvr.com/funfitland-brings-live-heart-rate-tracking-into-vr-with-new-phone-app/",
+      "published": "2026-09-08T02:00:00"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Museas &amp; Astronoma On Apple Vision Pro Support Curiosity &amp; Discovery",
+      "summary": "What makes exploring art and science in spatial apps so compelling? We look at Apple Vision Pro apps Museas and Astronoma to learn how to design for curiosity and discovery.",
+      "url": "https://www.uploadvr.com/museas-astronoma-on-apple-vision-pro-support-curiosity-discovery/",
+      "published": "2026-09-07T23:28:57"
+    }
+  ]
+}
