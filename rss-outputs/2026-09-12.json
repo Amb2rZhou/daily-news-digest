@@ -1,0 +1,107 @@
+{
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T12:45:30.904449+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Bigscreen 宣布永久下调 Beyond 2 系列 PC VR 头显售价：起售价 1019 美元 → 959 美元",
+      "summary": "IT之家 9 月 12 日消息，Bigscreen 宣布永久下调 Beyond 2 系列 PC VR 头显售价，其中 Beyond 2 起售价降至 959 美元（IT之家注：现汇率约合 6,450 元人民币），较此前的 1,019 美元（现汇率约合 6,853 元人民币）降低 60 美元（现汇率约合 403.5 元人民币）；支持内置眼动追踪的 Beyond 2e 售价从 1,219 美元（现汇率约合 8,198 元人民币）降至 1,159 美元（现汇率约合 7,795 元人民币）。除了降价外，Bigscreen 还宣布此前延期已久的 Halo Mount 头戴支架已经恢复生产。该配件最初因测试者反馈不佳而在去年年底进行重新设计，今年 6 月又因生产问题进一步延期。该产品主要用于分配 Beyond 2 头显重量，从而提升佩戴舒适度。不过，Bigscreen 同时提醒称，近期需求增加以及一批货运延迟导致 Beyond 2 和 Beyond 2e 目前库存“非常低”。部分订单仍可在下单当天发货，但部分订单可能需要等待最多两周。公司预计将在 9 月 14 日前恢复正常的 1 至 2 个工作日发",
+      "url": "https://www.ithome.com/1/001/529.htm",
+      "published": "2026-09-12T02:47:05"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Meta 首款轻量化 VR 高端头显 Phoenix 外观渲染图现身系统固件，使用外置计算模块方案",
+      "summary": "IT之家 9 月 12 日消息，外媒 UploadVR 在挖掘 Meta Horizon OS 固件时发现了 Meta 下一代高端混合现实头显“Phoenix”的清晰外观素材，该头显定位高端，主打轻量化、开放式设计，使用外置计算模块方案。参考IT之家先前报道，该机预计将提供独立镜片间距调节功能，拥有可拆卸式鼻托设计，内置眼球追踪功能（提供了类似苹果 Vision Pro 的校准步骤）。而此次曝光的视觉素材则进一步展示了产品外观以及处方镜片的安装、拆卸和配对方式。从曝光图片来看，Phoenix 采用了类似眼镜的轻薄设计，并没有传统 VR 头显常见的贴脸式面罩，而是使用类似眼镜鼻托的结构。设备两侧以及镜腿下方可以看到多个传感器。其中一张素材还展示了处方镜片的二维码扫描过程，用户需要将镜片附带的二维码对准头显进行扫描。图片同时展示了设备背面，可以看到外置计算模块的连接线从头显左侧镜腿末端引出。随着 Meta Connect 2026 临近，Meta 公布的活动日程中出现了一场名为“A practical guide to controller-free interaction”（无控制器交互",
+      "url": "https://www.ithome.com/1/001/490.htm",
+      "published": "2026-09-11T23:30:17"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "iPhone Duo Seemingly Can&#x27;t Capture Spatial Photos Or Video",
+      "summary": "Apple's $2000 iPhone Duo has two rear cameras, but seemingly can't capture spatial photos or video for viewing on Apple Vision Pro.",
+      "url": "https://www.uploadvr.com/iphone-duo-seemingly-cant-capture-spatial-photos-or-video/",
+      "published": "2026-09-11T21:15:11"
+    }
+  ]
+}
