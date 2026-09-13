@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T13:00:08.490794+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Meta 为 Quest 头显引入苹果 Vision Pro 同款“看向 Mac 即可快速建立远程连接”功能",
+      "summary": "IT之家 9 月 13 日消息，Meta 现已悄悄为 Quest 系列头显引入苹果 Vision Pro 同款的“看向 Mac 建立远程连接”功能，用户直接注视实体 Mac 后，屏幕上会浮现“Connect to view in headset（连接并在头显中查看）”按钮，之后点击按钮即可快速连接设备，打开虚拟桌面。IT之家注意到，Meta 此前已于 2024 年底为 Windows PC 加入类似功能。Quest 头显能够识别用户正在注视的 Windows 电脑，并弹出快速连接按钮，目前这一交互方式也已经支持 Mac。具体来看，用户将自己的 macOS 版 Meta Quest Virtual Display 客户端升级至 104.0.0.1.109 及后续版本即可获得相应功能（支持 ARM Mac 和英特尔 Mac ），用户连接 Mac 后可以选择超宽（Ultrawide）模式，以类似带鱼屏显示风格查看桌面，用户亦可开启大字体（Larger text）模式改善文字可读性。除此之外，用户可以通过 Quest 头显的 Touch 手柄移动鼠标指针，如果用户直接将蓝牙键盘和鼠标连接到头显",
+      "url": "https://www.ithome.com/1/001/712.htm",
+      "published": "2026-09-13T01:46:33"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "iPhone Duo Seemingly Can&#x27;t Capture Spatial Photos Or Video",
+      "summary": "Apple's $2000 iPhone Duo has two rear cameras, but seemingly can't capture spatial photos or video for viewing on Apple Vision Pro.",
+      "url": "https://www.uploadvr.com/iphone-duo-seemingly-cant-capture-spatial-photos-or-video/",
+      "published": "2026-09-11T21:15:11"
+    }
+  ]
+}
