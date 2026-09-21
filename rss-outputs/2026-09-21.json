@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T13:09:01.061685+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "秋水半导体 8 英寸 Micro LED 混合键合量产线全面通线投产",
+      "summary": "IT之家 9 月 21 日消息，Micro LED 显示微芯片企业秋水半导体 (QSSemi) 宣布，其位于宁波的 8 英寸 Micro LED 混合键合量产线已于 9 月 19 日全面通线投产。这条生产线达产后可实现每月产出千片 8 英寸晶圆 (1K WPM)，对应年产千万颗以上 Micro LED 芯片的稳定量产交付能力。IT之家了解到，秋水半导体采用 Fab-lite 模式，已完成 0.61\" &nbsp;Micro LED 四万像素车灯模组客户送样验证，近期实现红光光效的创纪录提升。相关阅读：《秋水半导体发布全球首个量产型 8 英寸红光 Micro LED 芯片，面向 AR 眼镜等场景》",
+      "url": "https://www.ithome.com/1/005/068.htm",
+      "published": "2026-09-21T02:02:42"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Rokid 新一代乐奇 AI 眼镜 9 月 24 日数贸会发布",
+      "summary": "IT之家 9 月 21 日消息，Rokid（乐奇）昨日宣布，新一代乐奇 AI 眼镜将于 9 月 24 日 14:00 在中国浙江杭州举行的第五届全球数字贸易博览会现场发布，口号为 \"Less tool. More human\"“不是工具，是感官的延伸”。IT之家了解到，初代乐奇 AI 眼镜基于高通 AR1 SoC，采用 Micro LED + 衍射光波导的双目显示方案，分辨率 480×640、亮度 1500nits、视场角 30°，配备 3024×4032 摄像头，内置 2 扬声器 4 麦克风。",
+      "url": "https://www.ithome.com/1/005/042.htm",
+      "published": "2026-09-21T00:48:02"
+    }
+  ]
+}
