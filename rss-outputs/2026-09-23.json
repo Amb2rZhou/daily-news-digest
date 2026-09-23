@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T12:54:43.076233+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 2
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 20,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "高通：手机仍占个人交互 C 位，应用正从 APP 时代迈向 AI 智能体时代",
+      "summary": "IT之家 9 月 23 日消息，夏威夷时间 9 月 22 日 9 点（北京时间 9 月 23 日 3 点）召开的 2026 骁龙峰会上，高通公司高级副总裁兼手机业务总经理克里斯 · 帕特里克（Chris Patrick）表示，在可以预见的未来，智能手机依然扮演个人计算核心角色。帕特里克表示伴随着 AI 智能体的日趋成熟，智能眼镜、智能戒指等新产品形态涌现，但智能手机仍将充当个人计算与设备连接的核心中枢。帕特里克表示用户仍需要一类设备汇聚其他终端，该设备需配备电池、存储、Wi‑Fi 与足够的计算能力，即便未来几年手机形态和名称可能发生变化，但它依然会占据“个人交互 C 位”。帕特里克以导航为例，用户向系统提出寻找星巴克的请求后，手机屏幕可呈现系统选定的门店，便于用户核对位置、街道等信息。IT之家附上帕特里克相关讲话内容如下：手机是体验融合、情境汇集的地方，也是让 AI 智能体验变得最具个性化的地方。智能手机是智能体时代的控制中心。当智能手机与智能体和创新相结合时，全新体验便成为可能。我们已经开始看到这样的体验出现在现实世界中。其中一个例子来自我们的合作伙伴 — 荣耀。荣耀 AI Robo",
+      "url": "https://www.ithome.com/1/006/201.htm",
+      "published": "2026-09-23T04:36:01"
+    },
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "苹果新任 CEO 特努斯：说出“One more thing”的感觉很奇妙",
+      "summary": "IT之家 9 月 23 日消息，苹果公司新任首席执行官约翰 · 特努斯（John Ternus）在 9 月 1 日上任后，首次接受 Clique TV 主持人 Mouloud Achour 采访深度采访，公开谈到了 AI 等话题。IT之家附上相关采访视频如下：1、说出“One more thing”的感受Achour 指出特努斯上任后的第一条推文是“Hello”，并询问他第一次以苹果 CEO 身份说出“One more thing”是什么感觉。特努斯对此表示：“这个感觉非常奇妙，尤其是这句话由我的前任们（包括乔布斯和库克）说过、用过。”2、Vision Pro：是失败吗？Achour 询问苹果 Vision Pro 是“测试、失败，还是下一代计算的起点”？特努斯表示：“对我来说，Vision Pro 是一台惊人的设备…… 但我把它看作电脑的早期阶段，这是一场漫长旅程的开端。”3、iPhone Duo 为什么做成这样？难点在哪？Achour 询问苹果为什么等到 2026 年才推出折叠机？特努斯表示苹果公司不会盲目跟风，推出的产品始终围绕着用户需求，强调体验优先：“我们不想简单把两部手机拼",
+      "url": "https://www.ithome.com/1/006/092.htm",
+      "published": "2026-09-23T02:37:04"
+    }
+  ]
+}
