@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T13:04:47.474127+08:00",
+  "item_count": 4,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 2
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "《真・三国无双 2 with 猛将传 Remastered》体验版上架 Steam：免费试玩",
+      "summary": "IT之家 9 月 24 日消息，光荣特库摩经典三国题材动作游戏重制版《真・三国无双 2 with 猛将传 Remastered》的免费体验版现已登陆 PS5、Nintendo Switch 2、Xbox Series X|S 及 Steam 平台，支持完整简体中文界面、字幕与音频，正式版将于 2026 年 10 月 1 日发售。IT之家附 Steam 商品页：https://store.steampowered.com/app/4995490/2_with__Remastered/?l=schinese&amp;cc=cn。本次推出的体验版为免费游玩，玩家可选择赵云、关羽、夏侯惇、甄姬、周瑜与孙尚香共 6 名武将，体验体验版专属的特别版“虎牢关之战”，还可调整难度设置。官方提示，体验版内容与正式版可能存在差异，且存档无法继承至正式版。《真・三国无双 2 with 猛将传 Remastered》基于 Unreal Engine 5 引擎重制，对原作进行了画质升级，同时优化了战斗手感，操作更易上手、战斗更爽快。本作完整收录 2001 年发售的《真・三国无双 2》以及资料片《真・三国无双 2",
+      "url": "https://www.ithome.com/1/006/551.htm",
+      "published": "2026-09-24T01:14:31"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Meta VR Glasses Officially Announced, Shipping Spring 2027 For $1300",
+      "summary": "Meta VR Glasses have 2.4K micro-OLED displays, weigh 100 grams, and are powered by a tethered puck with Qualcomm's Snapdragon Reality Elite chipset.",
+      "url": "https://www.uploadvr.com/meta-vr-glasses-officially-announced-connect-2026/",
+      "published": "2026-09-23T23:42:03"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Meta VR Glasses Hands-on: What Apple Vision Pro Probably Should Have Been",
+      "summary": "Meta has finally unveiled its next-gen mixed reality headset, Meta VR Glasses. While they could technically fit somewhere in its Quest lineup, Meta seems to be making a concerted effort to bridge the gap between its experimental augmented reality projects, like Orion, and its much bulkier Quest gaming platform. Previously known as &#8216;Project Phoenix&#8217;, Meta [&#8230;]\nThe post Meta VR Glasses Hands-on: What Apple Vision Pro Probably Should Have Been appeared first on Road to VR.",
+      "url": "https://roadtovr.com/meta-vr-glass-hands-onconnect-2026/",
+      "published": "2026-09-23T22:02:00"
+    },
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Meta Ray-Ban Display is Finally Rolling Out Internationally Starting Today",
+      "summary": "Meta Ray-Ban Display has been a US-only device since launch last year, but now the company announced at Connect 2026 that it&#8217;s coming to international markets starting today. Meta Ray-Ban Display is a pair of $800 smart glasses that comes with a single waveguide display in the right eye and an EMG-powered &#8216;Neural&#8217; wristband for [&#8230;]\nThe post Meta Ray-Ban Display is Finally Rolling Out Internationally Starting Today appeared first on Road to VR.",
+      "url": "https://roadtovr.com/meta-ray-ban-display-int-launch-connect-2026/",
+      "published": "2026-09-23T22:00:00"
+    }
+  ]
+}
