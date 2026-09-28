@@ -1,0 +1,107 @@
+{
+  "date": "2026-09-28",
+  "generated_at": "2026-09-28T13:35:57.238382+08:00",
+  "item_count": 3,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 2
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "Meta 公布“Hologram”全新拟真虚拟形象，今年秋季陆续上线雷朋 Display 智能眼镜 / 全新轻薄型头显",
+      "summary": "IT之家 9 月 28 日消息，Meta 宣布将于今年秋季起陆续为旗下雷朋 Display 智能眼镜 / Quest 头显及全新轻薄型头显上线“Hologram”全新虚拟形象功能，这项技术类似苹果 Vision Pro 的 Persona，能够通过生成式 AI 打造与真人外观高度接近的虚拟形象。事实上，Meta 早在 7 年前就展示了名为 Codec Avatars 的拟真虚拟形象项目，不过目前消费者可以买到的 Meta VR 产品仍主要使用较为卡通化的自定义形象角色。按照目前的规划，后续 Meta 会逐步将用户的自定义形象角色从卡通化转向拟真写实化。据介绍，用户首次使用 Hologram 时，需要打开手机上的 Meta AI 应用，并按照提示转动头部、微笑等。随后系统会提出一些开放式问题，用户需要进行较长时间的回答。在回答过程中，系统会采集用户的面部表情和说话状态，用于训练和调整 Hologram 模型，同时还会记录用户的服装和背景。整个创建过程只需几分钟，完成服务器端处理后即可生成 Hologram。之后，当用户佩戴 Meta 雷朋 Display 眼镜接听或拨打 WhatsApp",
+      "url": "https://www.ithome.com/1/007/767.htm",
+      "published": "2026-09-28T04:31:04"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Ray-Ban Meta Audio Drops The Camera For A Lighter, Socially Acceptable Design",
+      "summary": "Ray-Ban Meta Audio drops the camera for a lighter and sleeker design that's likely to be more socially acceptable amid the public privacy backlash.",
+      "url": "https://www.uploadvr.com/ray-ban-meta-audio-glasses-no-camera/",
+      "published": "2026-09-28T03:17:01"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Meta Ray-Ban Display Gets New Features, Online Ordering &amp; International Launch",
+      "summary": "Meta Ray-Ban Display is now available in the UK and Canada, and will be available in France, Italy and Germany next month. It's also getting new features and updates.",
+      "url": "https://www.uploadvr.com/meta-ray-ban-display-gets-new-features-online-ordering-international-launch/",
+      "published": "2026-09-28T01:07:44"
+    }
+  ]
+}
