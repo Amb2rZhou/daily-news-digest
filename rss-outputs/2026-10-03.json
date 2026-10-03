@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-03",
+  "generated_at": "2026-10-03T13:29:57.276084+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "重塑智能眼镜光学方案：TDK 展示全球首款超构光学镜 DRP 显示屏",
+      "summary": "IT之家 10 月 3 日消息，日本电子元器件厂商 TDK 昨日（10 月 2 日）发布公告，展示了全球首款采用超构光学镜（Meta-Optic Mirror）的直接视网膜投影（DRP）智能眼镜显示屏。全球智能眼镜出货量预计将快速增长，到 2030 年将达到 8,300 万台。（来源：富士奇美拉研究所《2025 年 XR 相关光学元件市场最新趋势》）IT之家援引博文介绍，超构光学镜是 TDK 研发的超薄平面反射元件，通过“负反射角”改变光线方向，在 150 纳米厚的平面结构中复现传统曲面镜功能。而直接视网膜投影是一种将激光光线直接投射到眼内视网膜的显示技术。与传统在眼前形成图像的方式相比，DRP 可在不同视力条件下呈现清晰图像，并减少图像向周围环境泄漏。该反射镜可嵌入眼镜镜片，可见光透过率达 80%。TDK 表示，其设计可避免波导显示常见的彩虹状“眼球发光”图案，并减少投影图像向外界泄漏。传统波导方案依赖镜片内导光层，光学组件复杂，制造难度与成本较高。DRP 方案将激光投射至视网膜，图像清晰且泄漏较少，但此前需要厚重曲面镜，导致镜片前方出现明显凸起。传统智能眼镜显示屏依靠波导或曲面镜，",
+      "url": "https://www.ithome.com/1/009/434.htm",
+      "published": "2026-10-03T05:11:04"
+    }
+  ]
+}
