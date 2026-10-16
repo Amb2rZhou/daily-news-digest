@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T12:44:42.351628+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 0
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "Road to VR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "XREAL Announces ‘1 Pro+’ Flagship AR Glasses, Now Available & Priced at $599",
+      "summary": "XREAL today announced XREAL 1 Pro+, a hardware refresh of its One Pro flagship AR glasses. Launching today at $599, Xreal 1 Pro+ includes a modest set of improvements over the original One Pro, which launched in early 2025. Principally, Xreal 1 Pro+ includes brighter displays, as well as improvements to spatial viewing and comfort. [&#8230;]\nThe post XREAL Announces &#8216;1 Pro+&#8217; Flagship AR Glasses, Now Available &amp; Priced at $599 appeared first on Road to VR.",
+      "url": "https://roadtovr.com/xreal-1-pro-plus-release-date-price/",
+      "published": "2026-10-15T12:59:00"
+    },
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "You Can Get Inside Hollywood&#x27;s Exclusive Magic Castle On Apple Vision Pro",
+      "summary": "Hollywood's Magic Castle is an exclusive club, but the 'You Are Here' immersive video for Apple Vision Pro lets you step inside to witness the magic up close.",
+      "url": "https://www.uploadvr.com/you-can-get-inside-hollywoods-exclusive-magic-castle-on-apple-vision-pro/",
+      "published": "2026-10-15T00:26:39"
+    }
+  ]
+}
