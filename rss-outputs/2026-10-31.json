@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T13:58:30.118464+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "腾讯地图公布 Agent 能力全景图，元宝、微信小微、OPPO 小布助手等已接入",
+      "summary": "IT之家 10 月 31 日消息，10 月 30 日，2026 腾讯全球数字生态大会在深圳举行。在腾讯地图产业应用专场上，腾讯正式对外公布 Agent 能力全景图，面向产业客户、智能硬件及开发者全面开放地图 Agent 能力。IT之家获悉，目前，元宝、微信小微、OPPO 小布助手、乐奇 AI 眼镜、光帆 AI 全感穿戴设备等已经接入腾讯地图的 Agent 能力。在元宝里，一句话就能调用地图完成路线规划，一句话打车服务也即将上线。通过小微，用户能在视频号、聊天等各个场景里获取 AI + 地图的原生体验。比如在视频号里刷到店铺的种草视频，一句话就能查到线下店在哪里。在汽车端，腾讯打造的车图 Agent，由出行规划、地图渲染、生态内容、智能领航、停车攻略五个 Agent 协同工作。可以一句话帮用户排好多天跨城的家庭行程，并按用户口味推荐周边餐厅，还能结合车端感知和车道级数据，对复杂车流给出实时判断。智能穿戴设备端，腾讯地图与乐奇 Rokid 推出行业首个 AI 眼镜原生打车服务。用户不用掏手机，通过对话就能完成叫车、选车到支付的全流程。同样的打车能力也已经在光帆 AI 耳机上实现。多端协同上",
+      "url": "https://www.ithome.com/1/020/457.htm",
+      "published": "2026-10-31T04:41:10"
+    },
+    {
+      "feed_name": "少数派 - 每日热榜",
+      "feed_category": "综合科技",
+      "feed_weight": 1,
+      "title": "派早报：全球首款 Android XR 有线眼镜 XREAL AURA 发售等",
+      "summary": "腾讯与 Visa 签署合作备忘录，Bose 有线消噪耳塞国行上市等。查看全文",
+      "url": "https://sspai.com/post/117827",
+      "published": "2026-10-30T00:13:38"
+    }
+  ]
+}
