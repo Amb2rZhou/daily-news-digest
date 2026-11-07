@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T14:15:31.604104+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 16,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "部分用户反馈 YouTube 等应用不兼容苹果 iOS 27 外接 HDMI 播放，锁屏即中断输出",
+      "summary": "IT之家 11 月 7 日消息，科技媒体 GSMArena 今天（11 月 7 日）发布博文，报道称多名 iPhone 用户反馈升级 iOS 27 以及后续版本后，通过 HDMI 连接外部显示设备播放视频时，一旦锁屏，外接设备上的播放就会中断。该媒体指出在此前版本中，用户关闭手机屏幕后，仍可继续在外接屏幕上观看视频。该媒体测试表示该问题并非影响所有应用，目前已确认 YouTube 和 Netflix 会复现该问题，而 VLC 播放器在锁屏后仍能正常输出视频。该媒体推测认为问题可能与系统的权限机制调整有关。据报道，iOS 27 要求应用显式注册某些外部显示视频会话，而此前相关权限由系统自动提供。临时应对方式是让 iPhone 始终保持解锁，并调低屏幕亮度以减少耗电。不过，手机持续亮屏也带来误触风险，尤其会影响连接 AR 眼镜观看视频的使用体验。报道指出相关反馈最早随 iOS 27 于 9 月发布时出现，截至报道发布，iOS 27.2 似乎仍未解决问题。由于不同应用表现不一，目前尚不能将其概括为所有 iPhone 或所有 HDMI 视频输出场景均受影响，也没有明确的统一修复时间表。IT之家",
+      "url": "https://www.ithome.com/1/023/679.htm",
+      "published": "2026-11-07T06:00:55"
+    }
+  ]
+}
