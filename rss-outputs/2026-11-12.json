@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T15:26:57.941094+08:00",
+  "item_count": 2,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "fail",
+      "error": "<unknown>:4:72: mismatched tag"
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 1
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 17,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 1
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "UploadVR",
+      "feed_category": "海外AR/VR",
+      "feed_weight": 2,
+      "title": "Experience Audi&#x27;s Journey To F1 On Apple Vision Pro",
+      "summary": "Entering Formula 1 Racing takes you behind the scenes of Audi's journey to its F1 debut in a new immersive documentary on Apple Vision Pro.",
+      "url": "https://www.uploadvr.com/6af314c933c4610001083e4d/",
+      "published": "2026-11-11T18:00:00"
+    },
+    {
+      "feed_name": "少数派 - 每日热榜",
+      "feed_category": "综合科技",
+      "feed_weight": 1,
+      "title": "派早报：700 号段保护服务试点获批、Claude Code 设置文件泄露凭据等",
+      "summary": "卫星导航基准站网安全国标发布，影目召回 4701 副 AIR3 眼镜等。查看全文",
+      "url": "https://sspai.com/post/118905",
+      "published": "2026-11-11T00:26:34"
+    }
+  ]
+}
