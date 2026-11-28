@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T16:09:05.865934+08:00",
+  "item_count": 1,
+  "feed_stats": {
+    "36氪 - 快讯": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "36氪 - 最新": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "IT之家": {
+      "status": "ok",
+      "total": 60,
+      "matched": 1
+    },
+    "PingWest 品玩": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "爱范儿": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "少数派 - 每日热榜": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "新浪科技": {
+      "status": "ok",
+      "total": 15,
+      "matched": 0
+    },
+    "机器之心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "雷科技": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "钛媒体": {
+      "status": "ok",
+      "total": 18,
+      "matched": 0
+    },
+    "华为 - 新闻中心": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "小米 - 新闻": {
+      "status": "fail",
+      "error": "<unknown>:2:0: syntax error"
+    },
+    "XREAL - 官方博客": {
+      "status": "fail",
+      "error": "text/html; charset=utf-8 is not an XML media type"
+    },
+    "Road to VR": {
+      "status": "ok",
+      "total": 10,
+      "matched": 0
+    },
+    "UploadVR": {
+      "status": "ok",
+      "total": 64,
+      "matched": 0
+    },
+    "The Verge - AR/VR": {
+      "status": "ok",
+      "total": 0,
+      "matched": 0
+    }
+  },
+  "items": [
+    {
+      "feed_name": "IT之家",
+      "feed_category": "综合科技",
+      "feed_weight": 3,
+      "title": "AR 眼镜关键部件发现新材料，有望薄至石英方案的 1/120",
+      "summary": "IT之家 11 月 28 日消息，科技媒体 Android Headline 昨日（11 月 27 日）发布博文，报道称韩国研究人员发现铜铝氧化物（CuAlO₂）控制光线的效率远高于目前常用的石英材料，有望让 AR 眼镜关键部件半波片（half-wave plate）变薄至 120 分之一。IT之家查询公开资料，在 AR 眼镜中，半波片负责调整光的偏振状态，让显示光线按设计路径传播并进入人眼。目前主流厂商都依赖该光学元件，调整偏振和引导光路，让进入眼睛的光更多，画面更亮。在材质方面，半波片目前主要用石英制成。石英的双折射较弱，要达到半波相位差，就必须做得比较厚，因此会占用镜片和镜框的空间。最新研究由韩国科学技术院（KAIST）、蔚山科学技术大学（UNIST）和釜山国立大学的研究人员发现，铜铝氧化物具有双折射特性，对紫光的双折射强度约为石英的 120 倍。在理想状态下，可以将半波片的厚度减薄至 120 分之一。据估算，用这种材料制成的半波片，厚度仅为 173 纳米，并且对可见光的损耗相对较小。双折射是指光进入某些材料后，被分成两束偏振方向互相垂直的光，两束光的折射率不同。普通玻璃是各向同",
+      "url": "https://www.ithome.com/1/033/828.htm",
+      "published": "2026-11-28T04:41:33"
+    }
+  ]
+}
